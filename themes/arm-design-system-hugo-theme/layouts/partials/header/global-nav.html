@@ -1,0 +1,109 @@
+
+<ads-global-navigation id="global-nav-example-default" sr-label="default navigation">
+    <!-- Slotted Flyout Content -->
+    <div slot="tab-content" id="category1" aria-labelledby="global-nav-example-default:tab:category1" role="tabpanel" tabindex="0">
+      <span class="u-color-white">Slotted Content Example</span>
+    </div>
+    <div slot="tab-content" id="category2" aria-labelledby="global-nav-example-default:tab:category2" role="tabpanel" tabindex="0">
+      <span class="u-color-white">Slotted Content Example</span>
+    </div>
+
+    <!-- Slotted Action Content -->
+    <div slot="action-content" id="mobile-search" aria-labelledby="global-nav-example-default:tab:mobile-search" role="tabpanel" tabindex="0">
+      <span>Example Mobile Search</span>
+      <ads-search has-search-button />
+    </div>
+    <div slot="action-content" id="account-view" aria-labelledby="global-nav-example-default:tab:account-view" role="tabpanel" tabindex="0">
+      <span>Example Action Content</span>
+    </div>
+  </ads-global-navigation>
+
+
+
+
+  <script>
+    (() => {
+      const logo = {
+        src: '/logo.svg',
+        link: '#',
+        alt: 'Arm developer logo',
+      };
+  
+      const actions = [
+        {
+          id: 'theme',
+          type: 'button',
+          icon: 'fas fa-lightbulb',
+          title: 'theme',
+          link: 'changeTheme()',
+        },
+      ];
+  
+      const contextualData = [
+        {
+          id: 'category1',
+          slotId: 'category1',
+          label: 'Flyout Item',
+          link: 'https://www.arm.com/architectures',
+        },
+        {
+          id: 'category2',
+          slotId: 'category2',
+          label: 'Flyout Item',
+          items: [
+            {
+              id: 'category2-subitem',
+              label: 'Sub Item',
+              link: '#',
+            },
+          ],
+        },
+      ];
+  
+      const data = [
+        {
+          id: 'example-link',
+          label: 'Link',
+          link: 'https://www.arm.com',
+        },
+        {
+          id: 'example-dropdown',
+          label: 'Dropdown',
+          items: [
+            {
+              id: 'example-dropdown__item-1',
+              label: 'Dropdown item',
+              link: 'https://www.arm.com',
+            },
+            {
+              id: 'example-dropdown__item-2',
+              label: 'Dropdown item',
+              link: 'https://www.arm.com',
+            },
+          ],
+        },
+      ];
+  
+      const globalNav = document.getElementById('global-nav-example-default');
+      globalNav.globalData = data;
+      globalNav.contextualData = contextualData;
+      globalNav.actions = actions;
+      globalNav.logo = logo;
+      globalNav.highlightedTabId = 'example-link';
+    })();
+
+  </script>
+
+
+
+<script language="javascript" type="text/javascript">
+    function changeTheme() {
+        const current_theme = document.documentElement.getAttribute('theme');
+        console.log(current_theme);
+        if (current_theme == 'dark') {
+            document.documentElement.setAttribute('theme','light');
+        } else {
+            document.documentElement.setAttribute('theme','dark')
+        }
+    }
+</script>
