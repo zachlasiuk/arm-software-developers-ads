@@ -1,11 +1,14 @@
 
-<ads-global-navigation id="global-nav-example-default" sr-label="default navigation">
+<ads-global-navigation theme="dark" breakpoint="md" id="global-nav-example-default" sr-label="default navigation">
     <!-- Slotted Flyout Content -->
     <div slot="tab-content" id="category1" aria-labelledby="global-nav-example-default:tab:category1" role="tabpanel" tabindex="0">
-      <span class="u-color-white">Slotted Content Example</span>
+      <a href="https://developer.arm.com/"><span class="u-color-white">View on Developer.Arm.com</span></a>
     </div>
     <div slot="tab-content" id="category2" aria-labelledby="global-nav-example-default:tab:category2" role="tabpanel" tabindex="0">
-      <span class="u-color-white">Slotted Content Example</span>
+      <a href="https://developer.arm.com/"><span class="u-color-white">View on Developer.Arm.com</span></a>
+    </div>
+    <div slot="tab-content" id="category3" aria-labelledby="global-nav-example-default:tab:category2" role="tabpanel" tabindex="0">
+      <a href="https://developer.arm.com/"><span class="u-color-white">View on Developer.Arm.com</span></a>
     </div>
 
     <!-- Slotted Action Content -->
@@ -35,52 +38,35 @@
           type: 'button',
           icon: 'fas fa-lightbulb',
           title: 'theme',
-          link: 'changeTheme()',
         },
       ];
-  
+
       const contextualData = [
         {
           id: 'category1',
           slotId: 'category1',
-          label: 'Flyout Item',
-          link: 'https://www.arm.com/architectures',
+          label: 'Developing on Arm',
+          link: 'https://developer.arm.com/',
         },
         {
           id: 'category2',
           slotId: 'category2',
-          label: 'Flyout Item',
-          items: [
-            {
-              id: 'category2-subitem',
-              label: 'Sub Item',
-              link: '#',
-            },
-          ],
+          label: 'Architecture and Processors',
+          link: 'https://developer.arm.com/',
+        },
+        {
+          id: 'category3',
+          slotId: 'category3',
+          label: 'Tools and Software',
+          link: 'https://developer.arm.com/',
         },
       ];
   
       const data = [
         {
           id: 'example-link',
-          label: 'Link',
+          label: 'Learn',
           link: 'https://www.arm.com',
-        },
-        {
-          id: 'example-dropdown',
-          label: 'Dropdown',
-          items: [
-            {
-              id: 'example-dropdown__item-1',
-              label: 'Dropdown item',
-              link: 'https://www.arm.com',
-            },
-            {
-              id: 'example-dropdown__item-2',
-              label: 'Dropdown item',
-              link: 'https://www.arm.com',
-            },
-          ],
         },
       ];
   
@@ -90,20 +76,21 @@
       globalNav.actions = actions;
       globalNav.logo = logo;
       globalNav.highlightedTabId = 'example-link';
+
+      globalNav.actionSelectHandler = (evt) => {
+        if (evt.action === 'theme') {
+            const currentTheme = document.querySelector('html').getAttribute("theme");
+            let newTheme = "dark"
+            if(currentTheme === "dark") {
+              newTheme = "light"
+            }
+            document.querySelector('html').setAttribute('theme', newTheme);
+        }
+      };
+
     })();
 
   </script>
 
 
 
-<script language="javascript" type="text/javascript">
-    function changeTheme() {
-        const current_theme = document.documentElement.getAttribute('theme');
-        console.log(current_theme);
-        if (current_theme == 'dark') {
-            document.documentElement.setAttribute('theme','light');
-        } else {
-            document.documentElement.setAttribute('theme','dark')
-        }
-    }
-</script>
