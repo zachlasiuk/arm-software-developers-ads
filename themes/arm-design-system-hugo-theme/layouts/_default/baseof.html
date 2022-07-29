@@ -7,9 +7,10 @@
     <body>
         {{partial "header/global-nav.html" .}}
         {{partial "header/breadcrumbs.html" .}}
-        <div id="content">
+        <div id="all-content" style="min-height: 500px;">
         {{block "main" . }}{{end}}
         </div>
-        {{partial "footer.html" .}}
+        {{partial "footer/footer.html" .}}
     </body>
 </html>
+
