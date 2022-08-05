@@ -1,1 +1,4 @@
-cloud default page
+---
+title: "Cloud"
+---
+Cloud.md -> Context setting info for cloud.
