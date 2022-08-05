@@ -1,7 +1,9 @@
-<!-- Breadcrumb navigation (to change to ADS)-->
-<ads-breadcrumbs>
-  {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
-</ads-breadcrumbs>
+<ads-masthead>
+  <ads-breadcrumbs slot="breadcrumbs" sr-label="Breadcrumbs">
+      {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+  </ads-breadcrumbs>
+  <h1 slot="heading"><span>{{.Title}}</span></h1>
+</ads-masthead>
 
 {{ define "breadcrumbnav" }}
 {{ if .p1.Parent }}

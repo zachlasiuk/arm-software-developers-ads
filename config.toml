@@ -2,3 +2,8 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "arm-design-system-hugo-theme"
+
+[taxonomies]
+    skilllevel = "skilllevels"
+    tool = "tools"
+    software = "software"

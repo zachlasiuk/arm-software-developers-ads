@@ -1,7 +1,79 @@
 {{ define "main" }}
+<!-- Defines homepage layout-->
 
-<div id="homepage-content">
-    {{.Content}}
+<!-- List of Learning Path Topics -->
+<div class="c-row">
+    <div class="c-col">
+        <div class="u-display-grid u-gap-1 md:u-grid-columns-2 xl:u-grid-columns-3 u-margin-top-1">
+
+            <!-- Cloud -->
+            <ads-card has-hover-effect class="path-card" link="/learning-paths#clouds">
+                <ads-card-content slot="content">
+                    <h4 class="u-color-arm-blue u-margin-top-1/2 u-margin-bottom-1/2 u-text-bold">Cloud</h4>
+                    <p>Description of path (auto-retrieve)</p>
+                </ads-card-content>   
+            </ads-card>
+
+            <!-- IoT -->
+            <ads-card has-hover-effect class="path-card" link="{{.Permalink}}">
+                <ads-card-content slot="content">
+                    <h4 class="u-color-arm-blue u-margin-top-1/2 u-margin-bottom-1/2 u-text-bold">IoT</h4>
+                    <p>Description of path (auto-retrieve)</p>
+                </ads-card-content>   
+            </ads-card>
+
+            <!-- Bare-metal -->
+            <ads-card has-hover-effect class="path-card" link="{{.Permalink}}">
+                <ads-card-content slot="content">
+                    <h4 class="u-color-arm-blue u-margin-top-1/2 u-margin-bottom-1/2 u-text-bold">Bare-metal</h4>
+                    <p>Description of path (auto-retrieve)</p>
+                </ads-card-content>   
+            </ads-card>
+        </div>
+    </div>
 </div>
-  
+
+
+<!-- Getting Started Footer -->
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    ads-tag.path-card-tag.Introductory {
+        --ads-tag-border-color: var(--arm-green);
+        --ads-tag-border-color-hover: var(--arm-green);
+    }
+    ads-tag.path-card-tag.Experienced  {
+        --ads-tag-border-color: var(--arm-orange);
+        --ads-tag-border-color-hover: var(--arm-orange);
+    }
+
+    ads-card.path-card {
+        --ads-card-border-radius: 10px;
+        --ads-card-border-width: 2px;
+        --ads-card-border-color-hover: var(--arm-blue);
+
+        --ads-card-border-color: var(--arm-light-grey-alt-2);
+        --ads-card-background-color-hover: var(--arm-light-grey-alt);
+        --ads-card-box-shadow-hover: 0 1px 3px 3px rgba(0,0,0,0.25);
+
+    }
+    html[theme='dark'] ads-card.path-card {
+        --ads-card-border-color: var(--arm-black);
+        --ads-card-background-color-hover: var(--black);
+        --ads-card-box-shadow-hover: 0 1px 3px 3px rgba(255, 255, 255, 0.25);
+    }
+</style>
+
+
+
+
 {{ end }}
