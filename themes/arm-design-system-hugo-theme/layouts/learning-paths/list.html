@@ -1,17 +1,24 @@
 {{define "main"}}
-<!-- This file is themes/layouts/_default/list.html-->
+<!-- This file is themes/layouts/learning-paths/list.html-->
 
+{{ $current_title := .Page.Title}}
 
-<div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-2-1/2 u-padding-bottom-2-1/2">
+<div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1">
     <!-- Category filter -->
-    <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 320px;">
-        <ads-checkbox name="labelled">Cloud</ads-checkbox>
-        <ads-checkbox name="labelled">IoT</ads-checkbox>
-        <ads-checkbox name="labelled">Bare-metal</ads-checkbox>
-        <ads-checkbox name="labelled">Other1</ads-checkbox>
-        <ads-checkbox name="labelled">Other2</ads-checkbox>
-        <ads-checkbox name="labelled">Other3</ads-checkbox>
+    <div class="c-col u-padding-top-2 u-hide u-flex-shrink-0 u-display-grid u-gap-1 lg:u-grid-columns-2" style="width: 320px;">
+        <!-- Make range of just learning path pages 'cloud' 'iot' etc. -->
+        {{ range where .Site.Pages "Params.maintopic" true}}
+            <ads-button level= {{ if eq $current_title .Title }} "primary" {{else}} "tertiary" {{end}}
+                        style="width: 150px;" 
+                        name="{{.Title}}" 
+                        class="main-topic-btn" 
+                        onclick="location.href='{{.Permalink}}';">
+                {{.Title}}
+            </ads-button>
+        {{end}}
     </div>
+    
+
 
     <!-- Top level context for this learning path-->
     <div class="c-col c-col-12">
@@ -21,16 +28,10 @@
         <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
         {{.Content}} 
     </div>
-
-
-
 </div>
 
 
-
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-2-1/2 u-padding-bottom-2-1/2">
-
-
     <!-- Filter bar on left -->
     <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 320px;">
         <ads-expansion-panel is-default-expanded>
@@ -67,7 +68,7 @@
         <!-- List of learning paths on right -->
         <div class="c-row">
             <div class="c-col c-col-12">
-                <div class="u-display-grid u-gap-1 md:u-grid-columns-2 xl:u-grid-columns-3 xxl:u-grid-columns-4 u-margin-top-1">
+                <div class="u-display-grid u-gap-1 md:u-grid-columns-2 xl:u-grid-columns-3  u-margin-top-1">
                     {{ range .Pages }}
                     <ads-card has-hover-effect class="path-card" link="{{.Permalink}}">
                         <ads-card-content slot="content">
@@ -93,6 +94,12 @@
 
 
 
+<style>
+ads-card-image {
+    --ads-card-image-min-height: 40px;
+}
+</style>
+
 
 <style>
     ads-tag.path-card-tag.Introductory {
@@ -112,7 +119,6 @@
         --ads-card-border-color: var(--arm-light-grey-alt-2);
         --ads-card-background-color-hover: var(--arm-light-grey-alt);
         --ads-card-box-shadow-hover: 0 1px 3px 3px rgba(0,0,0,0.25);
-
     }
     html[theme='dark'] ads-card.path-card {
         --ads-card-border-color: var(--arm-black);

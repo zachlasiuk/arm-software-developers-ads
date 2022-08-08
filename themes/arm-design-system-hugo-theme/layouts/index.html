@@ -6,29 +6,15 @@
     <div class="c-col">
         <div class="u-display-grid u-gap-1 md:u-grid-columns-2 xl:u-grid-columns-3 u-margin-top-1">
 
-            <!-- Cloud -->
-            <ads-card has-hover-effect class="path-card" link="/learning-paths#clouds">
-                <ads-card-content slot="content">
-                    <h4 class="u-color-arm-blue u-margin-top-1/2 u-margin-bottom-1/2 u-text-bold">Cloud</h4>
-                    <p>Description of path (auto-retrieve)</p>
-                </ads-card-content>   
-            </ads-card>
-
-            <!-- IoT -->
+            {{ range where .Site.Pages "Params.maintopic" true}}
             <ads-card has-hover-effect class="path-card" link="{{.Permalink}}">
                 <ads-card-content slot="content">
-                    <h4 class="u-color-arm-blue u-margin-top-1/2 u-margin-bottom-1/2 u-text-bold">IoT</h4>
-                    <p>Description of path (auto-retrieve)</p>
+                    <h4 class="u-color-arm-blue u-margin-top-1/2 u-margin-bottom-1/2 u-text-bold">{{.Title}}</h4>
+                    <p>{{.Description}}</p>
                 </ads-card-content>   
             </ads-card>
+            {{ end }}
 
-            <!-- Bare-metal -->
-            <ads-card has-hover-effect class="path-card" link="{{.Permalink}}">
-                <ads-card-content slot="content">
-                    <h4 class="u-color-arm-blue u-margin-top-1/2 u-margin-bottom-1/2 u-text-bold">Bare-metal</h4>
-                    <p>Description of path (auto-retrieve)</p>
-                </ads-card-content>   
-            </ads-card>
         </div>
     </div>
 </div>

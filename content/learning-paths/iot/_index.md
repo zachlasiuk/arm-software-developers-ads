@@ -1,5 +1,7 @@
 ---
 title: "IoT"
+maintopic: true
+
 description: >
     This is the description of this IOT learning path
 ---
