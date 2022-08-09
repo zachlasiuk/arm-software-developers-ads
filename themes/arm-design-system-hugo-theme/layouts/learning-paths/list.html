@@ -61,7 +61,7 @@
 
         <!-- Current tag bar -->
         <div id="current-tag-bar" class="c-row">
-            {{ partial "filtering/filter-tag.html" (dict "context" . "tagname" "Neoverse" )}}
+            <!-- Filled dynamically by javascript & checkboxes-->
         </div>
 
 
@@ -71,19 +71,20 @@
             <div class="c-col c-col-12">
                 <div class="u-display-grid u-gap-1 md:u-grid-columns-2 xl:u-grid-columns-3  u-margin-top-1">
                     {{ range .Pages }}
-                    <ads-card   has-hover-effect  link="{{.Permalink}}"
-                                class='path-card 
-                                    {{ with .Params.armips }}tag-{{ delimit . " tag-"}}{{ end }}
-                                    {{ with .Params.toolsother }}tag-{{ delimit . " tag-"}}{{ end }}
-                                    {{ with .Params.toolsarm }}tag-{{ delimit . " tag-"}}{{ end }}
-                                    {{ with .Params.softwaresother }}tag-{{ delimit . " tag-"}}{{ end }}
-                                    {{ with .Params.softwaresarm }}tag-{{ delimit . " tag-"}}{{ end }}'>
-                        <ads-card-content slot="content">
-                            <ads-tag class="path-card-tag {{.Params.skillLevel}}" text="{{.Params.skillLevel}}"></ads-tag>
-                            <h4 class="u-color-arm-blue u-margin-top-1/2 u-margin-bottom-1/2 u-text-bold">{{.Title}}</h4>
-                            <p>{{.Description}}</p>
-                        </ads-card-content>   
-                    </ads-card>
+                    <div class='path-div
+                                {{ with .Params.armips }}tag-{{ delimit . " tag-"}}{{ end }}
+                                {{ with .Params.toolsother }}tag-{{ delimit . " tag-"}}{{ end }}
+                                {{ with .Params.toolsarm }}tag-{{ delimit . " tag-"}}{{ end }}
+                                {{ with .Params.softwaresother }}tag-{{ delimit . " tag-"}}{{ end }}
+                                {{ with .Params.softwaresarm }}tag-{{ delimit . " tag-"}}{{ end }}'>
+                        <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card'>
+                            <ads-card-content slot="content">
+                                <ads-tag class="path-card-tag {{.Params.skillLevel}}" text="{{.Params.skillLevel}}"></ads-tag>
+                                <h4 class="u-color-arm-blue u-margin-top-1/2 u-margin-bottom-1/2 u-text-bold">{{.Title}}</h4>
+                                <p>{{.Description}}</p>
+                            </ads-card-content>   
+                        </ads-card>
+                    </div>
                     {{ end }}
                 </div>
             </div>
@@ -99,6 +100,7 @@
 </div> <!-- End of left-right divide -->
 
 
+{{ partial "filtering/filter-tag.html" . }}
 
 
 <style>

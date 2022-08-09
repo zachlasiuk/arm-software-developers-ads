@@ -14,7 +14,7 @@ toolsArm:
 softwaresother:
 - Linux
 - Java
-- MongoDB
+- Vectorscan
 softwaresArm:
 ---
 

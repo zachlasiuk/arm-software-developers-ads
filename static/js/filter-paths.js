@@ -44,9 +44,20 @@ function addTag(tag) {
             </span>
         </ads-tag>
         `
-    )
+    );
+
+
     // Filter paths by tag (hide if don't have tag and currently active) 
+    let all_path_cards = document.querySelectorAll('div.path-div');
+    for (let card of all_path_cards) {
+        if (!card.classList.contains(tag)) { // if a card doesn't contain this tag, hide
+            card.setAttribute('hidden',true);
+        }
+    }
 }
+
+
+
 
 
 function removeTag(tag) {
@@ -54,15 +65,45 @@ function removeTag(tag) {
     if (!document.getElementById('filter-'+tag)) {
         return
     }
+
+    // Check if checkbox is now unchecked. If not, uncheck it.
+    // get status of checkbox (true for checked, false for unchecked)
+    const checkbox_element = document.querySelectorAll('ads-checkbox.'+tag)[0]
+    checkbox_element.value().then((value) => { 
+        if (value === true) {
+            // uncheck it. NOT WORKING EXACTLY, but close enough.
+            console.log('influencing child dom '+checkbox_element.shadowRoot.querySelector('.c-checkbox__box'));
+
+            let box_ele = checkbox_element.shadowRoot.querySelector('.c-checkbox__box');
+            box_ele.classList.remove("is-checked")
+            box_ele.setAttribute('aria-checked',false)
+
+        }
+    });
+
+
+
     console.log("removing tag: "+tag);
     
     // Hide tag in 'current-tag-bar'
     document.getElementById('filter-'+tag).remove();
 
     // Re-show paths with tag if currently hidden 
-}
+    let all_path_cards = document.querySelectorAll('div.path-div');
+    for (let card of all_path_cards) {
+        if (!card.classList.contains(tag)) { // if a card doesn't contain this tag, hide
+            card.removeAttribute('hidden');
+        }
+    }
 
-function removeRow(tag) {
-    tag.parentNode.remove(); // best option! Only works with 'this' though, not the tag itself.
-    document.getElementById('current-tag-bar').removeChild(input.parentNode);
+    // Filter paths by tag (hide if don't have tag and currently active) 
+    /*
+    let all_path_cards = document.querySelectorAll('div.path-div');
+    for (let card of all_path_cards) {
+        if (!card.classList.contains(tag)) { // if a card doesn't contain this tag, hide
+            card.setAttribute('hidden',true);
+        }
+    }
+    */
+    
 }
