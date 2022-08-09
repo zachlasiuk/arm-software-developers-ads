@@ -3,7 +3,7 @@
     <div slot="content">
         <div class="u-flex u-flex-column">
             {{ range .tagname }}
-                <ads-checkbox class="tag-{{.Page.Title}}">
+                <ads-checkbox class="tag-{{.Page.Title}}" onclick="filterPaths(this)">
                     <a href="{{ .Page.Permalink }}">
                         {{ replace .Page.Title "_" " " }}
                     </a>

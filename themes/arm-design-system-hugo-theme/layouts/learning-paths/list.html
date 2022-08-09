@@ -1,6 +1,10 @@
 {{define "main"}}
 <!-- This file is themes/layouts/learning-paths/list.html-->
 
+<!-- Include javascript to filter -->
+<script src="/js/filter-paths.js"></script>
+
+
 {{ $current_title := .Page.Title}}
 
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1">
@@ -46,7 +50,7 @@
     <!-- Search & Results on Right -->
     <div class="c-col c-col-12">
 
-        
+        <!-- Search bar (and hidden filters on mobile)-->
         <div class="c-row u-flex">
             <ads-search has-search-button class="u-width-100%"></ads-search>
         </div>
@@ -54,6 +58,12 @@
         <ads-button level="tertiary" size="default" class="lg:u-hide u-position-relative">
             <i class="fal fa-filter"></i>
         </ads-button>
+
+        <!-- Current tag bar -->
+        <div id="current-tag-bar" class="c-row">
+            {{ partial "filtering/filter-tag.html" (dict "context" . "tagname" "Neoverse" )}}
+        </div>
+
 
 
         <!-- List of learning paths on right -->
