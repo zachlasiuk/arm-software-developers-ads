@@ -1,0 +1,14 @@
+<ads-expansion-panel is-default-expanded class="u-padding-bottom-1">
+    <span slot="toggle">{{.displayname}}</span>
+    <div slot="content">
+        <div class="u-flex u-flex-column">
+            {{ range .tagname }}
+                <ads-checkbox class="tag-{{.Page.Title}}">
+                    <a href="{{ .Page.Permalink }}">
+                        {{ replace .Page.Title "_" " " }}
+                    </a>
+                </ads-checkbox>
+            {{end}}
+        </div>
+    </div>
+</ads-expansion-panel>

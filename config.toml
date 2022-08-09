@@ -4,6 +4,9 @@ title = 'My New Hugo Site'
 theme = "arm-design-system-hugo-theme"
 
 [taxonomies]
-    skilllevel = "skilllevels"
-    tool = "tools"
-    software = "software"
+    skilllevel      = "skilllevels"
+    armip           = "armips"
+    toolother      = "toolsother"
+    toolArm        = "toolsArm"
+    softwareother  = "softwaresother"
+    softwareArm    = "softwaresArm"

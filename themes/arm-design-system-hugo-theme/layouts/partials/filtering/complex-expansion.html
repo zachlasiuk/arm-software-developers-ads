@@ -1,0 +1,9 @@
+<ads-expansion-panel is-default-expanded  class="u-padding-bottom-1">
+    <span slot="toggle">{{.displayname}}</span>
+    <div slot="content">
+        <div class="u-flex u-flex-column">
+            {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Arm" "tagname" .tagnameone)}}
+            {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Ecosystem" "tagname" .tagnametwo)}}
+        </div>
+    </div>
+</ads-expansion-panel>

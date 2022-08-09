@@ -5,11 +5,11 @@
 
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1">
     <!-- Category filter -->
-    <div class="c-col u-padding-top-2 u-hide u-flex-shrink-0 u-display-grid u-gap-1 lg:u-grid-columns-2" style="width: 320px;">
+    <div class="c-col u-padding-top-2 u-hide u-flex-shrink-0 u-display-grid u-gap-1 lg:u-grid-columns-1" style="width: 320px;">
         <!-- Make range of just learning path pages 'cloud' 'iot' etc. -->
         {{ range where .Site.Pages "Params.maintopic" true}}
             <ads-button level= {{ if eq $current_title .Title }} "primary" {{else}} "tertiary" {{end}}
-                        style="width: 150px;" 
+                        style="width: 300px;" 
                         name="{{.Title}}" 
                         class="main-topic-btn" 
                         onclick="location.href='{{.Permalink}}';">
@@ -23,7 +23,7 @@
     <!-- Top level context for this learning path-->
     <div class="c-col c-col-12">
         <header>
-            <h1>{{.Title}}</h1>
+            <h2>{{.Params.subtitle}}</h2>
         </header>
         <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
         {{.Content}} 
@@ -34,21 +34,12 @@
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-2-1/2 u-padding-bottom-2-1/2">
     <!-- Filter bar on left -->
     <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 320px;">
-        <ads-expansion-panel is-default-expanded>
-            <span slot="toggle">Filter 1</span>
-            <div slot="content">Lorem ipsum dolor sit amet.</div>
-        </ads-expansion-panel>
-        <ads-expansion-panel is-default-expanded>
-            <span slot="toggle">Filter 1</span>
-            <div slot="content">
-                <div class="u-flex u-flex-column">
-                    <ads-checkbox name="labelled">Label 1</ads-checkbox>
-                    <ads-checkbox name="labelled">Label 2</ads-checkbox>
-                    <ads-checkbox name="labelled">Label 3</ads-checkbox>
-                    <ads-checkbox name="labelled">Label 4</ads-checkbox>
-                </div>
-            </div>
-        </ads-expansion-panel>
+        <!-- Arm IP-->
+        {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Arm IP" "tagname" .Site.Taxonomies.armips)}}
+        <!-- Software -->
+        {{ partial "filtering/complex-expansion.html" (dict "context" . "displayname" "Software" "tagnameone" .Site.Taxonomies.softwaresarm "tagnametwo" .Site.Taxonomies.softwaresother)}}
+        <!-- Tools -->
+        {{ partial "filtering/complex-expansion.html" (dict "context" . "displayname" "Tools" "tagnameone" .Site.Taxonomies.toolsarm "tagnametwo" .Site.Taxonomies.toolsother)}}
     </div>
 
 
@@ -70,7 +61,13 @@
             <div class="c-col c-col-12">
                 <div class="u-display-grid u-gap-1 md:u-grid-columns-2 xl:u-grid-columns-3  u-margin-top-1">
                     {{ range .Pages }}
-                    <ads-card has-hover-effect class="path-card" link="{{.Permalink}}">
+                    <ads-card   has-hover-effect  link="{{.Permalink}}"
+                                class='path-card 
+                                    {{ with .Params.armips }}tag-{{ delimit . " tag-"}}{{ end }}
+                                    {{ with .Params.toolsother }}tag-{{ delimit . " tag-"}}{{ end }}
+                                    {{ with .Params.toolsarm }}tag-{{ delimit . " tag-"}}{{ end }}
+                                    {{ with .Params.softwaresother }}tag-{{ delimit . " tag-"}}{{ end }}
+                                    {{ with .Params.softwaresarm }}tag-{{ delimit . " tag-"}}{{ end }}'>
                         <ads-card-content slot="content">
                             <ads-tag class="path-card-tag {{.Params.skillLevel}}" text="{{.Params.skillLevel}}"></ads-tag>
                             <h4 class="u-color-arm-blue u-margin-top-1/2 u-margin-bottom-1/2 u-text-bold">{{.Title}}</h4>

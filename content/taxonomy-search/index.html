@@ -1,0 +1,15 @@
+<p>hi</p>
+{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+
+<ul>
+    {{ range $key, $value := $taxonomy }}
+    <li> {{ $key }} </li>
+          <ul>
+          {{ range $value.Pages }}
+              <li><a href="{{ .Permalink}}"> {{ .Title }} </a> </li>
+          {{ end }}
+          </ul>
+    {{ end }}
+  </ul>
+
+{{end}}
