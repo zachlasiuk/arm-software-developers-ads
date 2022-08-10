@@ -72,12 +72,12 @@ function removeTag(tag) {
     checkbox_element.value().then((value) => { 
         if (value === true) {
             // uncheck it. NOT WORKING EXACTLY, but close enough.
-            console.log('influencing child dom '+checkbox_element.shadowRoot.querySelector('.c-checkbox__box'));
+            checkbox_element.setAttribute('checked',false);
 
-            let box_ele = checkbox_element.shadowRoot.querySelector('.c-checkbox__box');
-            box_ele.classList.remove("is-checked")
-            box_ele.setAttribute('aria-checked',false)
-
+            //console.log('influencing child dom '+checkbox_element.shadowRoot.querySelector('.c-checkbox__box'));
+            //let box_ele = checkbox_element.shadowRoot.querySelector('.c-checkbox__box');
+            //box_ele.classList.remove("is-checked")
+            //box_ele.setAttribute('aria-checked',false)
         }
     });
 
@@ -95,15 +95,5 @@ function removeTag(tag) {
             card.removeAttribute('hidden');
         }
     }
-
-    // Filter paths by tag (hide if don't have tag and currently active) 
-    /*
-    let all_path_cards = document.querySelectorAll('div.path-div');
-    for (let card of all_path_cards) {
-        if (!card.classList.contains(tag)) { // if a card doesn't contain this tag, hide
-            card.setAttribute('hidden',true);
-        }
-    }
-    */
     
 }

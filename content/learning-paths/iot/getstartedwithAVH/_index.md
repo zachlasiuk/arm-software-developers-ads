@@ -3,6 +3,7 @@ title: "Getting Started with Arm Virtual Hardware"
 linkTitle: "Getting Started with Arm Virtual Hardware"
 description: >
     Learn how work iwth AVH
+layout: "path"
 
 # Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevel: Experienced

@@ -3,6 +3,10 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "arm-design-system-hugo-theme"
 
+[frontmatter]
+    lastmod = [ "lastmod", ":git", "date", "publishDate" ]
+
+
 [taxonomies]
     skilllevel      = "skilllevels"
     armip           = "armips"

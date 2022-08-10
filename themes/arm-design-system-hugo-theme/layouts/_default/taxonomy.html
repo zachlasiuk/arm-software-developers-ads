@@ -1,8 +1,15 @@
-{{define "main"}}
-<hr>
-<p>_default Taxonomy page</p>
-<hr>
-{{ with .Content }}
-{{ . }}
-{{ end }}
-{{end}}
+{{ define "main" }}
+
+<div>
+  <h1>All posts for {{ .Data.Singular }} "{{ .Title }}"</h1>
+
+  <ul>
+    {{ range .Data.Pages }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end}}
+

@@ -60,7 +60,7 @@
         </ads-button>
 
         <!-- Current tag bar -->
-        <div id="current-tag-bar" class="c-row">
+        <div id="current-tag-bar" class="c-row" style="min-height: 30px;">
             <!-- Filled dynamically by javascript & checkboxes-->
         </div>
 
@@ -81,6 +81,7 @@
                             <ads-card-content slot="content">
                                 <ads-tag class="path-card-tag {{.Params.skillLevel}}" text="{{.Params.skillLevel}}"></ads-tag>
                                 <h4 class="u-color-arm-blue u-margin-top-1/2 u-margin-bottom-1/2 u-text-bold">{{.Title}}</h4>
+                                <p class="u-font-size-75%" style="color: var(--arm-dark-grey);">Updated {{ .Lastmod.UTC.Format "Jan 2, 2006" }}</p>
                                 <p>{{.Description}}</p>
                             </ads-card-content>   
                         </ads-card>
