@@ -3,6 +3,8 @@ languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "arm-design-system-hugo-theme"
 
+enableGitInfo = true
+
 [frontmatter]
     lastmod = [ "lastmod", ":git", "date", "publishDate" ]
 

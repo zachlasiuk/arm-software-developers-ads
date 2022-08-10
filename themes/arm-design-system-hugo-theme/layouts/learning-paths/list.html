@@ -1,9 +1,6 @@
 {{define "main"}}
 <!-- This file is themes/layouts/learning-paths/list.html-->
 
-<!-- Include javascript to filter -->
-<script src="/js/filter-paths.js"></script>
-
 
 {{ $current_title := .Page.Title}}
 
@@ -52,7 +49,7 @@
 
         <!-- Search bar (and hidden filters on mobile)-->
         <div class="c-row u-flex">
-            <ads-search has-search-button class="u-width-100%"></ads-search>
+            <ads-search id="search-box" class="u-width-100%"></ads-search>
         </div>
 
         <ads-button level="tertiary" size="default" class="lg:u-hide u-position-relative">
@@ -80,9 +77,9 @@
                         <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card'>
                             <ads-card-content slot="content">
                                 <ads-tag class="path-card-tag {{.Params.skillLevel}}" text="{{.Params.skillLevel}}"></ads-tag>
-                                <h4 class="u-color-arm-blue u-margin-top-1/2 u-margin-bottom-1/2 u-text-bold">{{.Title}}</h4>
-                                <p class="u-font-size-75%" style="color: var(--arm-dark-grey);">Updated {{ .Lastmod.UTC.Format "Jan 2, 2006" }}</p>
-                                <p>{{.Description}}</p>
+                                <h4 class="card-title u-margin-top-1/2 u-margin-bottom-1/2">{{.Title}}</h4>
+                                <p class="card-date">Updated {{ .Lastmod.UTC.Format "Jan 2, 2006" }} by {{.GitInfo.AuthorName}}</p>
+                                <p class="card-description">{{.Description}}</p>
                             </ads-card-content>   
                         </ads-card>
                     </div>
@@ -102,39 +99,10 @@
 
 
 {{ partial "filtering/filter-tag.html" . }}
+{{ partial "ads-cards/ads-card-style.html" . }}
 
+<!-- Include javascript to filter -->
+<script src="/js/filter-paths.js"></script>
 
-<style>
-ads-card-image {
-    --ads-card-image-min-height: 40px;
-}
-</style>
-
-
-<style>
-    ads-tag.path-card-tag.Introductory {
-        --ads-tag-border-color: var(--arm-green);
-        --ads-tag-border-color-hover: var(--arm-green);
-    }
-    ads-tag.path-card-tag.Experienced  {
-        --ads-tag-border-color: var(--arm-orange);
-        --ads-tag-border-color-hover: var(--arm-orange);
-    }
-
-    ads-card.path-card {
-        --ads-card-border-radius: 10px;
-        --ads-card-border-width: 2px;
-        --ads-card-border-color-hover: var(--arm-blue);
-
-        --ads-card-border-color: var(--arm-light-grey-alt-2);
-        --ads-card-background-color-hover: var(--arm-light-grey-alt);
-        --ads-card-box-shadow-hover: 0 1px 3px 3px rgba(0,0,0,0.25);
-    }
-    html[theme='dark'] ads-card.path-card {
-        --ads-card-border-color: var(--arm-black);
-        --ads-card-background-color-hover: var(--black);
-        --ads-card-box-shadow-hover: 0 1px 3px 3px rgba(255, 255, 255, 0.25);
-    }
-</style>
 
 {{end}}
