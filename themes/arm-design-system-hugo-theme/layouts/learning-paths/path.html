@@ -1,8 +1,45 @@
 {{define "main"}}
-<hr>
-<p>themes/layouts/learning-paths/path.html</p>
-<hr>
-{{ with .Content }}
-{{ . }}
-{{ end }}
+
+<div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1">
+    <div class="card-tab-col c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 160px;">
+        <!-- Title always top left -->
+        <p>{{.Title}}</p>
+
+        <!-- Fixed, intro card for this section-->     
+        <div class="card-tab-row c-row">
+            <ads-card class="card-tab active" orientation="horizontal">
+                <ads-card-content slot="content">
+                <h6 class="">Introduction</h6>
+                </ads-card-content>
+            </ads-card>
+        </div>
+
+        <!-- Dynamic, content ordered by weight-->
+        {{ $thisdir := .File.Dir }}
+        {{ range .Site.RegularPages }}
+            {{ if (eq .File.Dir $thisdir)}}
+                <div class="card-tab-row c-row">
+                    <ads-card link="{{.Permalink}}" class="card-tab inactive" orientation="horizontal">
+                        <ads-card-content slot="content">
+                        <h6 class="">{{.Title}}</h6>
+                        </ads-card-content>
+                    </ads-card>
+                </div>
+            {{ end }}
+        {{end}}      
+    </div>
+
+    
+    <div class="c-col c-col-12">
+        {{ with .Content }}
+        <!-- Display content -->
+        {{ . }}
+        {{ end }}
+    </div>
+
+</div>
+
+{{ partial "ads-cards/custom-tabs-style.html" . }}
+
+
 {{end}}
