@@ -28,3 +28,10 @@ softwaresArm:
 
 ## Detailed Steps
 xyz
+
+## Test of div
+outside div
+::: alert red
+inside div
+:::
+outside again

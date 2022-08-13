@@ -31,13 +31,93 @@
 
     
     <div class="c-col c-col-12">
-        {{ with .Content }}
-        <!-- Display content -->
-        {{ . }}
-        {{ end }}
+        <!-- Markdown metadata -->
+        <div class="content-box">
+            <h2>About this Learning Path</h2>
+            <!-- First row of info-->
+            <div class="c-row">
+                <div class="c-col">
+                    <div class="u-display-grid u-gap-1 md:u-grid-columns-3 u-margin-top-1">
+                        <div class="metadata-col-1">
+                            <p>Reading time: xyz</p>
+                        </div>
+                        <div class="metadata-col-2">
+                            <p>Last updated: abc</p>
+                        </div>
+                        <div class="metadata-col-3">
+                            <p>Author: This Person</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Second row of info-->
+            <div class="c-row">
+                <div class="c-col">
+                    <div class="u-display-grid u-gap-1 md:u-grid-columns-3 u-margin-top-1">
+                        <div class="metadata-col-1">
+                            <p><b>Arm IP</b></p>
+                            {{ range .Params.armips }}
+                                <ads-tag text="{{.}}"></ads-tag>
+                            {{ end }}
+                        </div>
+                        <div class="metadata-col-2">
+                            <p><b>Software</b></p>
+                            {{ range .Params.softwaresarm }}
+                                <ads-tag text="{{.}}"></ads-tag>
+                            {{ end }}
+                            {{ range .Params.softwaresother }}
+                                <ads-tag text="{{.}}"></ads-tag>
+                            {{ end }}
+                        </div>
+                        <div class="metadata-col-3">
+                            <p><b>Tools</b></p>
+                            {{ range .Params.toolsarm }}
+                                <ads-tag text="{{.}}"></ads-tag>
+                            {{ end }}
+                            {{ range .Params.toolsother }}
+                                <ads-tag text="{{.}}"></ads-tag>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+        <!-- Markdown content -->
+        <div class="content-box">
+            {{ with .Content }}
+                {{ . }}
+            {{ end }}
+        </div>
+
     </div>
 
 </div>
+
+<style>
+    div.content-box {
+        /*box-sizing: border-box;*/
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        margin-top: 16px;
+
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+
+        border-color: var(--arm-dark-grey);
+    }
+
+    html[theme='dark'] div.content-box {
+        border-color: var(--arm-light-grey);
+    }
+
+
+</style>
+
 
 {{ partial "ads-cards/custom-tabs-style.html" . }}
 
