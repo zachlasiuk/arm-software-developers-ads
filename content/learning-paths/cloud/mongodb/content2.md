@@ -1,10 +1,11 @@
 ---
 # User change
 title: "Content2"
-weight: 2 # 1 is first, 2 is second, etc.
+weight: 3 # 1 is first, 2 is second, etc.
 
 # Do not modify these elements
-layout: "content"
+layout: "learningpathall"
 ---
 
-## Content2
+## This is the first of the contetn titles 2
+paragraph and such....

@@ -1,0 +1,78 @@
+{{define "main"}}
+
+<!-- Define variables for dynamic creation-->
+{{ $thisdir := .File.Dir }}
+{{ $thisfile:= .File.TranslationBaseName}}
+
+<div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1">
+    <div class="card-tab-col c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 160px;">
+        <!-- Title of _index.md always top left -->
+        {{ with .Site.GetPage $thisdir}}
+            <p>{{ .Params.Title }}</p>
+        {{ end }}
+
+        <!-- Dynamic, content ordered by weight-->
+
+        {{ range .Site.Pages }}
+            {{ if (eq .File.Dir $thisdir)}}
+                <div class="card-tab-row c-row">
+                    <ads-card link="{{.Permalink}}" orientation="horizontal" 
+                    class="card-tab {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
+                        <ads-card-content slot="content">
+                            <!-- Set if statement to make title 'Introduction' if _index.md-->
+                        <h6 class="">
+                            {{ if eq .File.TranslationBaseName "_index" }} Introduction {{else}} {{.Title}} {{ end }}
+                        </h6>
+                        </ads-card-content>
+                    </ads-card>
+                </div>
+            {{ end }}
+        {{end}}      
+    </div>
+
+    
+    <div class="c-col c-col-12">
+        <!-- Custom content layout depending on type -->
+        {{ if eq .File.TranslationBaseName "_index" }}
+            {{partial "learning-paths/introduction" .  }}
+        {{else if eq .File.TranslationBaseName "review"}}
+            {{partial "learning-paths/review" .  }}
+        {{else if eq .File.TranslationBaseName "next-steps"}}
+            {{partial "learning-paths/next-steps" .  }}
+        {{ else }}
+            {{partial "learning-paths/content" .  }}
+        {{ end }}
+
+    </div>
+
+</div>
+
+<style>
+    div.content-box {
+        /*box-sizing: border-box;*/
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        margin-top: 16px;
+
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+
+        border-color: var(--arm-dark-grey);
+    }
+
+    html[theme='dark'] div.content-box {
+        border-color: var(--arm-light-grey);
+    }
+
+
+</style>
+
+
+{{ partial "ads-cards/custom-tabs-style.html" . }}
+
+
+{{end}}

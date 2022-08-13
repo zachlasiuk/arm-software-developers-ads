@@ -1,10 +1,11 @@
 ---
 title: "Run MongoDB on Arm"
 linkTitle: "Run MongoDB on Arm"
+weight: 1 # 1 is first, 2 is second, etc.
 
 description: >
     Learn how to install and run MongoDB Community Edition on differet flavors of AWS EC2 instances powered by Arm64 achitecture.
-layout: "path"
+layout: "learningpathall"
 
 # Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevel: Introductory
@@ -29,9 +30,5 @@ softwaresArm:
 ## Detailed Steps
 xyz
 
-## Test of div
-outside div
-::: alert red
-inside div
-:::
-outside again
+## Test heading
+paaragraph!
