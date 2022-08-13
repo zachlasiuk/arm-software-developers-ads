@@ -1,16 +1,36 @@
 
 
-<!-- Markdown metadata -->
-<div class="content-box">
-    Congratulations! 
-</div>
+<!-- Short info up top -->
+<p>Congratulations! </p>
 
-<!-- Markdown content -->
-<div class="content-box">
-    {{ with .Content }}
-        {{ . }}
-    {{ end }}
-</div>
+Recommended path: 
+{{ with .Site.GetPage .Params.recommended_path}}
+    <a href="{{.Permalink}}"><p style="color: var(--arm-blue);">{{ .Title }}</p></a>
+{{ end }}
+
+
+<!-- 3 columns of helpful hints-->
+<div class="c-row">
+    <div class="c-col">
+        <div class="u-display-grid u-gap-1 md:u-grid-columns-3 u-margin-top-1">
+            <div class="content-box">
+                <h4>Recommended Learning Paths</h4>
+                <p>placeholder</p>
+            </div>
+            <div class="content-box">
+                <h4>Explore Tags</h4>
+                <p>placeholder</p>
+            </div>
+            <div class="content-box">
+                <h4>Further Readings</h4>
+                {{ range .Params.further_reading }}
+                    <li>{{.resource}}</li>
+                {{ end}}
+            </div>
+        </div>
+    </div>
+</div>  
+
 
 <!-- CTA buttons -->
 <ads-link>Back to all __ learning paths</ads-link>
