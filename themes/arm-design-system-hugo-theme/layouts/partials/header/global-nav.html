@@ -45,6 +45,12 @@
           icon: 'fas fa-text-width',
           title: 'width',
         },
+        {
+          id: 'height',
+          type: 'button',
+          icon: 'fas fa-text-height',
+          title: 'height',
+        },
       ];
 
       const contextualData = [
@@ -81,7 +87,6 @@
       globalNav.contextualData = contextualData;
       globalNav.actions = actions;
       globalNav.logo = logo;
-      globalNav.highlightedTabId = 'example-link';
 
       globalNav.actionSelectHandler = (evt) => {
         if (evt.action === 'theme') {
@@ -101,11 +106,31 @@
               document.getElementById("all-content-div").classList.add("is-full-width");
             }
         };
+        if (evt.action === 'height') {
+          const navDisplaySetting = window.getComputedStyle(document.getElementById("expanded-masthead")).display;
+          if (navDisplaySetting === "none") {
+            globalNav.contextualData = contextualData;  // Show seoncary nav on Global Nav         
+            document.getElementById("expanded-masthead").removeAttribute('hidden'); // Show title
+
+          }
+          else {
+          globalNav.contextualData = [];  // Hide seoncary nav on Global Nav         
+          document.getElementById("expanded-masthead").setAttribute('hidden',true); // Hide title
+
+          }
+
+        };
+
       };
 
     })();
 
   </script>
+
+
+
+
+
 
 
 
