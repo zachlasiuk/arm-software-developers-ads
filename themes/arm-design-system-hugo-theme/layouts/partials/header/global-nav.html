@@ -39,6 +39,12 @@
           icon: 'fas fa-lightbulb',
           title: 'theme',
         },
+        {
+          id: 'width',
+          type: 'button',
+          icon: 'fas fa-text-width',
+          title: 'width',
+        },
       ];
 
       const contextualData = [
@@ -85,7 +91,16 @@
               newTheme = "light"
             }
             document.querySelector('html').setAttribute('theme', newTheme);
-        }
+        };
+        if (evt.action === 'width') {
+            const isCurrentlyFullWidth = document.getElementById("all-content-div").classList.contains("is-full-width");
+            if ( isCurrentlyFullWidth ) {
+              document.getElementById("all-content-div").classList.remove("is-full-width");
+            }
+            else {
+              document.getElementById("all-content-div").classList.add("is-full-width");
+            }
+        };
       };
 
     })();

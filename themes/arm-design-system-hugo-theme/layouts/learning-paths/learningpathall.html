@@ -10,7 +10,7 @@
     <div class="card-tab-col c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 160px;">
         <!-- Title of _index.md always top left -->
         {{ with .Site.GetPage $thisdir}}
-            <p>{{ .Params.Title }}</p>
+            <p class="u-margin-left-1">{{ .Params.Title }}</p>
         {{ end }}
 
         <!-- Dynamic, content ordered by weight-->
@@ -46,6 +46,9 @@
         {{ else }}
             {{partial "learning-paths/content" (dict "context" . "learningpathfiles" $learningpathfiles)  }}
         {{ end }}
+
+        <!-- Next steps for buttons -->
+        {{partial "learning-paths/nav-buttons" (dict "context" . "learningpathfiles" $learningpathfiles)  }}
 
     </div>
 

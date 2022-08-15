@@ -54,12 +54,14 @@
 
 <!-- Markdown content -->
 <div class="content-box">
-    {{ with .Content }}
-        {{ . }}
-    {{ end }}
+    <h2>Who is this for?</h2>
+        <p class="u-margin-left-1">{{ .Params.who_is_this_for }}</p>
+    <h2 class="u-margin-top-2">What will you learn?</h2>
+        {{ range .Params.learning_objectives }}
+            <li class="u-margin-left-2">{{.}}</li>
+        {{ end }}  
+    <h2 class="u-margin-top-2">Prerequisites</h2>
+        {{ range .Params.prerequisites }}
+            <li class="u-margin-left-2">{{.}}</li>
+        {{ end }}        
 </div>
-
-<!-- CTA buttons -->
-{{ range first 1 .Pages.ByWeight }}
-    <ads-button level="primary" onclick="window.location.href={{.Permalink}}">Next</ads-button>
-{{end}}
