@@ -4,7 +4,7 @@
 <p>Congratulations! </p>
 
 Recommended path: 
-{{ with .Site.GetPage .Params.recommended_path}}
+{{ with .context.Site.GetPage .context.Params.recommended_path}}
     <a href="{{.Permalink}}"><p style="color: var(--arm-blue);">{{ .Title }}</p></a>
 {{ end }}
 
@@ -34,5 +34,14 @@ Recommended path:
 
 <!-- CTA buttons -->
 <ads-link>Back to all __ learning paths</ads-link>
-<ads-button level="tertiary">Back</ads-button>
 
+<!-- CTA buttons -->
+{{ $counter := 0 }}                     <!-- Counter to track index-->
+{{ range .learningpathfiles }}
+    {{ if eq .Title $.context.Title}}   <!-- This file in ordered array -->
+        <!-- $counter is now index of current file in .learningpathfiles -->
+        {{ $backlink := (index $.learningpathfiles (sub $counter 1)).Permalink }}
+        <ads-button onclick="window.location.href={{$backlink}}" level="tertiary">Back</ads-button>
+    {{end}}
+    {{ $counter = add $counter 1 }}
+{{end}}

@@ -60,4 +60,6 @@
 </div>
 
 <!-- CTA buttons -->
-<ads-button level="primary">Next</ads-button>
+{{ range first 1 .Pages.ByWeight }}
+    <ads-button level="primary" onclick="window.location.href={{.Permalink}}">Next</ads-button>
+{{end}}

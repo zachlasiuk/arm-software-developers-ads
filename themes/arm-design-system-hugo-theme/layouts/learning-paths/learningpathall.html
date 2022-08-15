@@ -3,6 +3,8 @@
 <!-- Define variables for dynamic creation-->
 {{ $thisdir := .File.Dir }}
 {{ $thisfile:= .File.TranslationBaseName}}
+{{ $learningpathfiles := slice }}
+
 
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1">
     <div class="card-tab-col c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 160px;">
@@ -12,9 +14,11 @@
         {{ end }}
 
         <!-- Dynamic, content ordered by weight-->
-
-        {{ range .Site.Pages }}
+        {{ range .Site.Pages.ByWeight }}
             {{ if (eq .File.Dir $thisdir)}}
+
+              {{ $learningpathfiles = $learningpathfiles | append . }}
+
                 <div class="card-tab-row c-row">
                     <ads-card link="{{.Permalink}}" orientation="horizontal" 
                     class="card-tab {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
@@ -36,11 +40,11 @@
         {{ if eq .File.TranslationBaseName "_index" }}
             {{partial "learning-paths/introduction" .  }}
         {{else if eq .File.TranslationBaseName "review"}}
-            {{partial "learning-paths/review" .  }}
+            {{partial "learning-paths/review" (dict "context" . "learningpathfiles" $learningpathfiles)  }}
         {{else if eq .File.TranslationBaseName "next-steps"}}
-            {{partial "learning-paths/next-steps" .  }}
+            {{partial "learning-paths/next-steps" (dict "context" . "learningpathfiles" $learningpathfiles)  }}
         {{ else }}
-            {{partial "learning-paths/content" .  }}
+            {{partial "learning-paths/content" (dict "context" . "learningpathfiles" $learningpathfiles)  }}
         {{ end }}
 
     </div>

@@ -9,12 +9,22 @@
 <!-- Markdown content -->
 <div class="content-box">
     <h2>What you've learned (make the same as learning objectives</h2>          
-    {{ with .Content }}
+    {{ with .context.Content }}
         {{ . }}
     {{ end }}
 </div>
 
 <!-- CTA buttons -->
-<ads-button level="tertiary">Back</ads-button>
+{{ $counter := 0 }}                     <!-- Counter to track index-->
+{{ range .learningpathfiles }}
+    {{ if eq .Title $.context.Title}}   <!-- This file in ordered array -->
+        <!-- $counter is now index of current file in .learningpathfiles -->
+        {{ $backlink := (index $.learningpathfiles (sub $counter 1)).Permalink }}
+        {{ $nextlink := (index $.learningpathfiles (add $counter 1)).Permalink }}
 
-<ads-button level="primary">Next</ads-button>
+        <ads-button onclick="window.location.href={{$backlink}}" level="tertiary">Back</ads-button>
+        <ads-button onclick="window.location.href={{$nextlink}}" level="primary">Next</ads-button>
+        
+    {{end}}
+    {{ $counter = add $counter 1 }}
+{{end}}
