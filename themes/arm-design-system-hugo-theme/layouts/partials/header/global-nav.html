@@ -111,14 +111,11 @@
           if (navDisplaySetting === "none") {
             globalNav.contextualData = contextualData;  // Show seoncary nav on Global Nav         
             document.getElementById("expanded-masthead").removeAttribute('hidden'); // Show title
-
           }
           else {
-          globalNav.contextualData = [];  // Hide seoncary nav on Global Nav         
-          document.getElementById("expanded-masthead").setAttribute('hidden',true); // Hide title
-
+            globalNav.contextualData = [];  // Hide seoncary nav on Global Nav         
+            document.getElementById("expanded-masthead").setAttribute('hidden',true); // Hide title
           }
-
         };
 
       };
