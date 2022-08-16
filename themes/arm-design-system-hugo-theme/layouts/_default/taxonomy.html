@@ -4,9 +4,26 @@
 <div>
   <h1>All posts for {{ .Data.Singular }} "{{ .Title }}"</h1>
 
-        <!-- List of learning paths on right -->
         <div class="c-row">
             <div class="c-col c-col-12">
+                <!-- Sorting functionality -->
+                <div class="c-horizontal-rule">
+                    <div id="sort-div" >
+                        <span id="sort-by-date">
+                            Date
+                        </span>
+                        <span id="date-chevron" class="far fa-chevron-down"></span>
+
+                        <span id="sort-by-path">
+                            Learning Path
+                        </span>
+                        <span id="learning-path-chevron" class="far fa-chevron-down"></span>
+                    </div>
+                </div>
+
+
+
+                <!-- Display Learning Paths -->
                 <div class="u-display-grid u-gap-1 md:u-grid-columns-2 xl:u-grid-columns-3  u-margin-top-1">
                     {{ range .Data.Pages }}
                     <div class='path-div'>
