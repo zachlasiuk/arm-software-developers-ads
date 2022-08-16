@@ -22,107 +22,115 @@
   </ads-global-navigation>
 
 
+<script>
+(() => {
+    const logo = {
+      src: '/img/logo.svg',
+      link: '/',
+      alt: 'Arm developer logo',
+    };
 
+    const actions = [
+      {
+        id: 'theme',
+        type: 'button',
+        icon: 'fas fa-lightbulb',
+        title: 'theme',
+      },
+      {
+        id: 'width',
+        type: 'button',
+        icon: 'fas fa-text-width',
+        title: 'width',
+      },
+      {
+        id: 'height',
+        type: 'button',
+        icon: 'fas fa-text-height',
+        title: 'height',
+      },
+    ];
 
-  <script>
-    (() => {
-      const logo = {
-        src: '/img/logo.svg',
-        link: '/',
-        alt: 'Arm developer logo',
+    const contextualData = [
+      {
+        id: 'category1',
+        slotId: 'category1',
+        label: 'Developing on Arm',
+        link: 'https://developer.arm.com/',
+      },
+      {
+        id: 'category2',
+        slotId: 'category2',
+        label: 'Architecture and Processors',
+        link: 'https://developer.arm.com/',
+      },
+      {
+        id: 'category3',
+        slotId: 'category3',
+        label: 'Tools and Software',
+        link: 'https://developer.arm.com/',
+      },
+    ];
+
+    const data = [
+      {
+        id: 'example-link',
+        label: 'Learn',
+        link: 'https://www.arm.com',
+      },
+    ];
+
+    const globalNav = document.getElementById('global-nav-example-default');
+    globalNav.globalData = data;
+    globalNav.contextualData = contextualData;
+    globalNav.actions = actions;
+    globalNav.logo = logo;
+
+    globalNav.actionSelectHandler = (evt) => {
+      if (evt.action === 'theme') {
+          const currentTheme = document.querySelector('html').getAttribute("theme");
+          let newTheme = "dark"
+          localStorage.removeItem('lightMode');
+          if(currentTheme === "dark") {
+            newTheme = "light"
+            localStorage.setItem('lightMode', 'true');      //Save user preference in storage
+          }
+          document.querySelector('html').setAttribute('theme', newTheme);
       };
-  
-      const actions = [
-        {
-          id: 'theme',
-          type: 'button',
-          icon: 'fas fa-lightbulb',
-          title: 'theme',
-        },
-        {
-          id: 'width',
-          type: 'button',
-          icon: 'fas fa-text-width',
-          title: 'width',
-        },
-        {
-          id: 'height',
-          type: 'button',
-          icon: 'fas fa-text-height',
-          title: 'height',
-        },
-      ];
-
-      const contextualData = [
-        {
-          id: 'category1',
-          slotId: 'category1',
-          label: 'Developing on Arm',
-          link: 'https://developer.arm.com/',
-        },
-        {
-          id: 'category2',
-          slotId: 'category2',
-          label: 'Architecture and Processors',
-          link: 'https://developer.arm.com/',
-        },
-        {
-          id: 'category3',
-          slotId: 'category3',
-          label: 'Tools and Software',
-          link: 'https://developer.arm.com/',
-        },
-      ];
-  
-      const data = [
-        {
-          id: 'example-link',
-          label: 'Learn',
-          link: 'https://www.arm.com',
-        },
-      ];
-  
-      const globalNav = document.getElementById('global-nav-example-default');
-      globalNav.globalData = data;
-      globalNav.contextualData = contextualData;
-      globalNav.actions = actions;
-      globalNav.logo = logo;
-
-      globalNav.actionSelectHandler = (evt) => {
-        if (evt.action === 'theme') {
-            const currentTheme = document.querySelector('html').getAttribute("theme");
-            let newTheme = "dark"
-            if(currentTheme === "dark") {
-              newTheme = "light"
-            }
-            document.querySelector('html').setAttribute('theme', newTheme);
-        };
-        if (evt.action === 'width') {
-            const isCurrentlyFullWidth = document.getElementById("all-content-div").classList.contains("is-full-width");
-            if ( isCurrentlyFullWidth ) {
-              document.getElementById("all-content-div").classList.remove("is-full-width");
-            }
-            else {
-              document.getElementById("all-content-div").classList.add("is-full-width");
-            }
-        };
-        if (evt.action === 'height') {
-          const navDisplaySetting = window.getComputedStyle(document.getElementById("expanded-masthead")).display;
-          if (navDisplaySetting === "none") {
-            globalNav.contextualData = contextualData;  // Show seoncary nav on Global Nav         
-            document.getElementById("expanded-masthead").removeAttribute('hidden'); // Show title
+      if (evt.action === 'width') {
+          const isCurrentlyFullWidth = document.getElementById("all-content-div").classList.contains("is-full-width");
+          if ( isCurrentlyFullWidth ) {
+            localStorage.removeItem('fullWidth');
+            document.getElementById("all-content-div").classList.remove("is-full-width");
           }
           else {
-            globalNav.contextualData = [];  // Hide seoncary nav on Global Nav         
-            document.getElementById("expanded-masthead").setAttribute('hidden',true); // Hide title
+            localStorage.setItem('fullWidth', 'true');      //Save user preference in storage
+            document.getElementById("all-content-div").classList.add("is-full-width");
           }
-        };
-
+      };
+      if (evt.action === 'height') {
+        const navDisplaySetting = window.getComputedStyle(document.getElementById("expanded-masthead")).display;
+        if (navDisplaySetting === "none") {
+          localStorage.removeItem('fullHeight');
+          globalNav.contextualData = contextualData;  // Show seoncary nav on Global Nav         
+          document.getElementById("expanded-masthead").removeAttribute('hidden'); // Show title
+          document.getElementById("arm-footer").removeAttribute('hidden');      // Show footer
+        }
+        else {
+          localStorage.setItem('fullHeight', 'true');      //Save user preference in storage
+          globalNav.contextualData = [];  // Hide seoncary nav on Global Nav         
+          document.getElementById("expanded-masthead").setAttribute('hidden',true); // Hide title
+          document.getElementById("arm-footer").setAttribute('hidden',true); // Hide footer
+        }
       };
 
-    })();
+    };
+  })();
 
-  </script>
+
+
+</script>
+
 
 
 
