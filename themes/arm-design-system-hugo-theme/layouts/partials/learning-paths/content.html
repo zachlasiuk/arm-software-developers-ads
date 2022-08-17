@@ -1,9 +1,24 @@
 <!-- Content just displays content raw. -->
 
 <!-- Markdown content -->
-<div class="content-box">
+<div class="content-box markdown-content-div">
     {{ with .context.Content }}
         {{ . }}
     {{ end }}
 </div>
 
+
+
+<style>
+    .markdown-content-div p {
+        margin-left: 16px;
+    }
+    .markdown-content-div ul {
+        margin-left: 32px;
+        margin-bottom: 16px;
+    }
+
+    .markdown-content-div h1,h2,h3,h4,h5,h6 {
+        margin-top: 32px;
+    }
+</style>

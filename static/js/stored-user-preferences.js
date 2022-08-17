@@ -7,6 +7,7 @@
 
 	if (localStorage.getItem('lightMode')) {
         document.querySelector('html').setAttribute('theme', 'light');
+        document.getElementById('prism-code-theme').href='/css/prism-light.css';
 	} 
   if (localStorage.getItem('fullWidth')) {
         document.getElementById("all-content-div").classList.add("is-full-width");
@@ -14,7 +15,6 @@
   if (localStorage.getItem('fullHeight')) {
     document.getElementById('global-nav-example-default').contextualData = []; // Hide seoncary nav on Global Nav         
     document.getElementById("expanded-masthead").setAttribute('hidden',true);  // Hide title
-    document.getElementById("arm-footer").setAttribute('hidden',true);         // Hide footer
   } 
 
 

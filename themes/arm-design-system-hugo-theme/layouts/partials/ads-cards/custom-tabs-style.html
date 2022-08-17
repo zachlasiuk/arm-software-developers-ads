@@ -1,18 +1,42 @@
 <style>
+    /* Tab color on left */
+    .tab-row {
+        background-color: grey;
+    }
+    html[theme='dark'] .tab-row {
+        background-color: var(--arm-color-overlay-light);
+    }   
+    html[theme='dark'] .tab-row.active {
+        background-color: var(--arm-blue);
+    }  
 
-    div.card-tab-row {
+
+    /* Tab Content on right */
+    .tab-right-card {
+        border-style: solid;
+        border-width: 1px;
+        width: 100%;
+        margin-left: 10px;
+
+        border-color: grey;
+        background-color: white;
+        color: white;
     }
-    ads-card.card-tab {
-        width: 160px;
+    .tab-right-card > h6 {
+        color: white;
     }
-    ads-card.active {
-        --ads-card-border-color: var(--arm-blue);
-        --ads-card-border-color-hover: var(--arm-blue);
-        --ads-card-border-width: 5px;
+
+    html[theme='dark'] .tab-right-card {
+        border-color: var(--arm-color-overlay-light);
+        background-color: var(--arm-color-surface);
     }
-    ads-card.inactive {
-        --ads-card-border-color: var(--arm-light-grey);
-        --ads-card-border-color-hover: var(--arm-orange);
-        --ads-card-border-width: 1px;
+    html[theme='dark'] .tab-right-card.active {
+        border-color: var(--arm-blue);
+        background-color: var(--arm-color-surface);
     }
+
+    html[theme='dark'] .tab-right-card > h6 {
+        color: white;
+    }
+
 </style>

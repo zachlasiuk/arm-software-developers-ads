@@ -7,7 +7,9 @@
 
 
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1">
-    <div class="card-tab-col c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 160px;">
+    <!-- Left pane, filters-->
+    <div class="c-col c-col-2 u-hide lg:u-display-block u-flex-shrink-0 card-tab-col">
+
         <!-- Title of _index.md always top left -->
         {{ with .Site.GetPage $thisdir}}
             <p class="u-margin-left-1">{{ .Params.Title }}</p>
@@ -19,29 +21,39 @@
 
               {{ $learningpathfiles = $learningpathfiles | append . }}
 
-                <div class="card-tab-row c-row">
-                    <ads-card link="{{.Permalink}}" orientation="horizontal" 
-                    class="card-tab {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
-                        <ads-card-content slot="content">
-                            <!-- Set if statement to make title 'Introduction' if _index.md-->
-                        <h6 class="">
+              <a href="{{.Permalink}}">
+                <div class="c-row tab-row {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
+                    <div class="tab-right-card
+                        {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
+                        <h6 style="margin-left: 10px; margin-right: 10px">
                             {{ if eq .File.TranslationBaseName "_index" }} Introduction {{else}} {{.Title}} {{ end }}
                         </h6>
-                        </ads-card-content>
-                    </ads-card>
+                    </div>
                 </div>
+              </a>
             {{ end }}
         {{end}}      
     </div>
 
-    
-    <div class="c-col c-col-12">
+    <!-- 
+    <ads-card link="{{.Permalink}}" orientation="horizontal" 
+    class="card-tab {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
+        <ads-card-content slot="content">
+        <h6 class="">
+            {{ if eq .File.TranslationBaseName "_index" }} Introduction {{else}} {{.Title}} {{ end }}
+        </h6>
+        </ads-card-content>
+    </ads-card>
+    -->
+
+    <!-- Right pane, content-->
+    <div class="c-col c-col-10">
         <!-- Custom content layout depending on type -->
         {{ if eq .File.TranslationBaseName "_index" }}
             {{partial "learning-paths/introduction" .  }}
-        {{else if eq .File.TranslationBaseName "review"}}
+        {{else if eq .File.TranslationBaseName "_review"}}
             {{partial "learning-paths/review" (dict "context" . "learningpathfiles" $learningpathfiles)  }}
-        {{else if eq .File.TranslationBaseName "next-steps"}}
+        {{else if eq .File.TranslationBaseName "_next-steps"}}
             {{partial "learning-paths/next-steps" (dict "context" . "learningpathfiles" $learningpathfiles)  }}
         {{ else }}
             {{partial "learning-paths/content" (dict "context" . "learningpathfiles" $learningpathfiles)  }}
@@ -74,7 +86,6 @@
     html[theme='dark'] div.content-box {
         border-color: var(--arm-light-grey);
     }
-
 
 </style>
 
