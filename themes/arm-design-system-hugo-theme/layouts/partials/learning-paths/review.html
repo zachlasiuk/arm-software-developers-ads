@@ -1,8 +1,51 @@
+<script type="text/javascript">      
+  
+    function handleIt() {
+      // Hide all info_texts by default to clear them.
+        const help_text = document.querySelectorAll('.info_text');
+
+        help_text.forEach(text => {
+            text.removeAttribute('hidden');
+        });
+
+
+      // Use logic per Question to determine correct or incorrect show.    
+      console.log('hi');
+  
+    }
+  </script>
+
 
 
 <!-- Markdown metadata -->
 <div class="content-box">
-    <h2>Knowledge Check</h2>          
+    <h2>Knowledge Check</h2>  
+    
+    <form action="javascript:handleIt()">
+            {{range $index, $q := .context.Params.review}}
+                {{$q_num := (add $index 1)}}
+                {{ with $q.questions}}
+                        <!-- Questions -->
+                        <h5>{{.question}}</h5>
+                        <div id="Q{{$q_num}}-explination" class="info_text" hidden>
+                            <p>{{.explination}}</p>
+                        </div>
+        
+                        {{ range $a_num, $answer := .answers }}
+                        <!-- id = q_num-a_num-->
+                        <!-- name = question-q_num-->
+                            <input type="radio" id="answer-{{$q_num}}-{{$a_num}}" name="question-{{$q_num}}">
+                            <label for="answer-{{$q_num}}-{{$a_num}}">{{.}}</label>
+                            <br>
+                        {{end}}
+
+                        <!-- End of Questions-->
+                {{end}}
+            {{end}} 
+
+
+    <input type="submit" value="Check">
+    </form>      
 </div>
 
 <!-- Markdown content -->
@@ -13,3 +56,11 @@
     {{end}}
 </div>
 
+<!-- <p>{{.question}}</p>
+{{ range .answers }}
+    <label for="child">
+        <input type="radio" id="child" name="age" value="child">
+        {{.}}
+    </label><br>
+{{end}}
+-->
