@@ -1,10 +1,14 @@
 <style>
     /* Tab color on left */
     .tab-row {
-        background-color: grey;
+        background-color: var(--arm-dark-grey);
     }
     html[theme='dark'] .tab-row {
         background-color: var(--arm-color-overlay-light);
+    }
+
+    .tab-row.active {
+        background-color: var(--arm-light-blue);
     }   
     html[theme='dark'] .tab-row.active {
         background-color: var(--arm-blue);
@@ -18,17 +22,26 @@
         width: 100%;
         margin-left: 10px;
 
-        border-color: grey;
-        background-color: white;
-        color: white;
+        border-color: var(--arm-dark-grey);
+        background-color: var(--arm-black);
     }
+
+    .tab-right-card.active {
+        border-color: var(--arm-light-blue);
+        background-color: white;
+    }
+
     .tab-right-card > h6 {
         color: white;
     }
 
+    .tab-right-card.active > h6 {
+        color: black;
+    }
+
     html[theme='dark'] .tab-right-card {
         border-color: var(--arm-color-overlay-light);
-        background-color: var(--arm-color-surface);
+        background-color: var(--arm-color-overlay-dark);
     }
     html[theme='dark'] .tab-right-card.active {
         border-color: var(--arm-blue);
@@ -38,5 +51,19 @@
     html[theme='dark'] .tab-right-card > h6 {
         color: white;
     }
+
+
+
+
+    /* hover effects */
+    a:hover {
+        text-decoration: none; }
+    .tab-row.inactive:hover {
+        background-color: var(--arm-orange); }
+    .tab-row.inactive:hover .tab-right-card {
+        background-color: var(--arm-color-surface); }
+    .tab-row.inactive:hover h6 {
+        color: var(--arm-orange); }
+
 
 </style>

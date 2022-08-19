@@ -9,27 +9,35 @@
         <div class="u-display-grid u-gap-1 md:u-grid-columns-2 u-margin-top-1">
 
             <div class="c-col">
-                        <p>Reading time: xyz</p>
-                        <p>Last updated: abc</p>
-                        <p>Author: This Person</p>
+                <h6>Reading time:
+                    <span><i class="fa-solid fa-clock"></i></span>
+                    {{.Params.minutes_to_complete}} minutes
+                </h6>
+                <h6>Last updated:
+                    <span><i class="fa-solid fa-calendar-days"></i></span>
+                    {{ .Lastmod.UTC.Format "Jan 2, 2006" }}
+                </h6>                         
             </div>
             <div class="c-col u-flex-grow-1">
-                <h6>Tags:</h6>
-                {{ range .Params.armips }}
-                    <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
-                {{ end }}
-                {{ range .Params.softwaresarm }}
-                    <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
-                {{ end }}
-                {{ range .Params.softwaresother }}
-                    <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
-                {{ end }}
-                {{ range .Params.toolsarm }}
-                    <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
-                {{ end }}
-                {{ range .Params.toolsother }}
-                    <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
-                {{ end }}
+                <h6>Tags:
+                    <span>
+                        {{ range .Params.armips }}
+                            <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
+                        {{ end }}
+                        {{ range .Params.softwaresarm }}
+                            <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
+                        {{ end }}
+                        {{ range .Params.softwaresother }}
+                            <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
+                        {{ end }}
+                        {{ range .Params.toolsarm }}
+                            <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
+                        {{ end }}
+                        {{ range .Params.toolsother }}
+                            <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
+                        {{ end }}
+                    </span>
+                </h6>
             </div>
         </div>
     </div>            

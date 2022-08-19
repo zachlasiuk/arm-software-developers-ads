@@ -4,11 +4,13 @@
 ############################################
 
 ##### High-level info
-title: "Run MongoDB on Arm"
+title: "Learn about MongoDB on Arm servers"
 description: >
     Learn how to install and run MongoDB Community Edition on differet flavors of AWS EC2 instances powered by Arm64 achitecture.
 
 ##### Introduction to learning path
+minutes_to_complete: 20   # Always measured in minutes. Should be an integer, to complete the learning path (not just read it)
+
 who_is_this_for: >
     Learning path for software developers using MongoDB as their database for mobile, IoT applications, content management or real-time analytics running on Arm servers.
 
