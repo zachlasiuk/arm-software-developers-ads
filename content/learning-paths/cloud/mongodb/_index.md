@@ -33,16 +33,14 @@ prerequisites:
 skilllevel: Introductory
 armips:
     - Neoverse
-toolsother:
+tools:
     - AWS_EC2
     - cbuild
     - GCC
     - Snort
-toolsArm:
-softwaresother:
+softwares:
     - Linux
     - MongoDB
-softwaresArm:
 
 
 
@@ -50,5 +48,6 @@ softwaresArm:
 # FIXED, do not modify
 ############################################
 weight: 1                   # _index.md always has weight of 1
+learning_path_main_page: "yes"             # indicates this should be surfaced when looking for related content. Only set for _index.md of learning path content.
 layout: "learningpathall"   # All files under learning paths have this same wrapper
 ---

@@ -10,18 +10,19 @@ skilllevel: Experienced
 armips:
 - Neoverse
 - Cortex-M
-toolsother:
+tools:
 - AWS_EC2
 - VS_Code
 - VNC
 - GitHub
 - cbuild
-toolsArm:
 - Arm_DS
 - AVH
-softwaresother:
+softwares:
 - TFlite-micro
-softwaresArm:
+
+learning_path_main_page: "yes"             # indicates this should be surfaced when looking for related content. Only set for _index.md of learning path content.
+
 ---
 
 # Getting Started with AVH learnin gpath

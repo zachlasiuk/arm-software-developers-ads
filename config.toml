@@ -12,7 +12,22 @@ enableGitInfo = true
 [taxonomies]
     skilllevel      = "skilllevels"
     armip           = "armips"
-    toolother      = "toolsother"
-    toolArm        = "toolsArm"
-    softwareother  = "softwaresother"
-    softwareArm    = "softwaresArm"
+    tool            = "tools"
+    software        = "softwares"
+
+[related]
+    threshold = 0 
+    includeNewer = true
+    toLower = false
+
+    [[related.indices]]
+        name = "software"
+        weight = 100
+
+    [[related.indices]]
+        name = "tools"
+        weight = 80
+    
+    [[related.indices]]
+        name = "armips"
+        weight = 50

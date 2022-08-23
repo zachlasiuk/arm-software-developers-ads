@@ -38,9 +38,9 @@
         <!-- Arm IP-->
         {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Arm IP" "tagname" .Site.Taxonomies.armips)}}
         <!-- Software -->
-        {{ partial "filtering/complex-expansion.html" (dict "context" . "displayname" "Software" "tagnameone" .Site.Taxonomies.softwaresarm "tagnametwo" .Site.Taxonomies.softwaresother)}}
+        {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Software" "tagname" .Site.Taxonomies.softwares)}}
         <!-- Tools -->
-        {{ partial "filtering/complex-expansion.html" (dict "context" . "displayname" "Tools" "tagnameone" .Site.Taxonomies.toolsarm "tagnametwo" .Site.Taxonomies.toolsother)}}
+        {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Tools" "tagname" .Site.Taxonomies.tools)}}
     </div>
 
 
@@ -70,10 +70,8 @@
                     {{ range .Pages }}
                     <div class='path-div
                                 {{ with .Params.armips }}tag-{{ delimit . " tag-"}}{{ end }}
-                                {{ with .Params.toolsother }}tag-{{ delimit . " tag-"}}{{ end }}
-                                {{ with .Params.toolsarm }}tag-{{ delimit . " tag-"}}{{ end }}
-                                {{ with .Params.softwaresother }}tag-{{ delimit . " tag-"}}{{ end }}
-                                {{ with .Params.softwaresarm }}tag-{{ delimit . " tag-"}}{{ end }}'>
+                                {{ with .Params.tools }}tag-{{ delimit . " tag-"}}{{ end }}
+                                {{ with .Params.softwares }}tag-{{ delimit . " tag-"}}{{ end }}'>
                         <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card'>
                             <ads-card-content slot="content">
                                 <ads-tag class="path-card-tag {{.Params.skillLevel}}" text="{{.Params.skillLevel}}"></ads-tag>

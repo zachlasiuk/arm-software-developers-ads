@@ -30,10 +30,7 @@
                         <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card'>
                         <ads-card-content slot="content">
                             <ads-tag class="path-card-tag {{.Params.skillLevel}}" text="{{.Params.skillLevel}}"></ads-tag>
-                                <!-- Processing to get variable of correct section: -->
-                                {{ $elements := index (split .CurrentSection "/") }}
-                                {{ $section := index $elements (sub (len $elements) 3) }}
-                            <ads-tag class="path-card-section" text="{{$section}}"></ads-tag>
+                            <ads-tag class="path-card-section" text="{{.Parent.Title}}"></ads-tag>
                             <h4 class="card-title u-margin-top-1/2 u-margin-bottom-1/2">{{.Title}}</h4>
                             <p class="card-date">Updated {{ .Lastmod.UTC.Format "Jan 2, 2006" }}</p>
                             <p class="card-description">{{.Description}}</p>
@@ -45,8 +42,9 @@
             </div>
         </div>
 
+    </div>
 
-</div>
+
 
 {{ partial "ads-cards/ads-card-style.html" . }}
 

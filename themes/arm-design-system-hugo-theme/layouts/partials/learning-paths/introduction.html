@@ -1,14 +1,16 @@
 
-
-
 <!-- Markdown metadata -->
 <div class="content-box">
     <h2>About this Learning Path</h2>
     <!-- First row of info-->
     <div class="c-row">
-        <div class="u-display-grid u-gap-1 md:u-grid-columns-2 u-margin-top-1">
+        <div class="u-display-grid u-gap-1 md:u-grid-columns-2">
 
             <div class="c-col">
+                <ads-tag class="path-card-tag {{.Params.skillLevel}}" text="{{.Params.skillLevel}}"></ads-tag>
+                <ads-tag class="path-card-section" text="{{.Parent.Title}}"></ads-tag>
+                {{ partial "ads-cards/ads-card-style.html" . }}
+
                 <h6>Reading time:
                     <span><i class="fa-solid fa-clock"></i></span>
                     {{.Params.minutes_to_complete}} minutes
@@ -18,24 +20,29 @@
                     {{ .Lastmod.UTC.Format "Jan 2, 2006" }}
                 </h6>                         
             </div>
-            <div class="c-col u-flex-grow-1">
-                <h6>Tags:
-                    <span>
+            <div class="c-col u-flex-grow-1 u-margin-top-3">
+                <span>
                         {{ range .Params.armips }}
-                            <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
-                        {{ end }}
-                        {{ range .Params.softwaresarm }}
-                            <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
-                        {{ end }}
-                        {{ range .Params.softwaresother }}
-                            <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
-                        {{ end }}
-                        {{ range .Params.toolsarm }}
-                            <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
-                        {{ end }}
-                        {{ range .Params.toolsother }}
-                            <ads-tag text='{{ replace . "_" " " }}'></ads-tag>
-                        {{ end }}
+                        <ads-tag    href='{{ "/" | relLangURL}}armips/{{. | urlize}}'>
+                            <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                            <span class="fa-solid fa-tag"></span>
+                            {{ replace . "_" " " }}
+                        </ads-tag>
+                    {{ end }}
+                    {{ range .Params.softwares }}
+                        <ads-tag    href='{{ "/" | relLangURL}}softwares/{{. | urlize}}'>
+                            <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                            <span class="fa-solid fa-tag"></span>
+                            {{ replace . "_" " " }}
+                        </ads-tag>
+                    {{ end }}
+                    {{ range .Params.tools }}
+                        <ads-tag    href='{{ "/" | relLangURL}}tools/{{. | urlize}}'>
+                            <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                            <span class="fa-solid fa-tag"></span>
+                            {{ replace . "_" " " }}
+                        </ads-tag>
+                    {{ end }}
                     </span>
                 </h6>
             </div>
@@ -45,65 +52,6 @@
 
 
 
-
-
-
-
-
-
-
-<!-- Markdown metadata -->
-<!--
-<div class="content-box">
-    <h2>About this Learning Path</h2>
-    <div class="c-row">
-        <div class="c-col">
-            <div class="u-display-grid u-gap-1 md:u-grid-columns-3 u-margin-top-1">
-                <div class="metadata-col-1">
-                    <p>Reading time: xyz</p>
-                </div>
-                <div class="metadata-col-2">
-                    <p>Last updated: abc</p>
-                </div>
-                <div class="metadata-col-3">
-                    <p>Author: This Person</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="c-row">
-        <div class="c-col">
-            <div class="u-display-grid u-gap-1 md:u-grid-columns-3 u-margin-top-1">
-                <div class="metadata-col-1">
-                    <p><b>Arm IP</b></p>
-                    {{ range .Params.armips }}
-                        <ads-tag text="{{.}}"></ads-tag>
-                    {{ end }}
-                </div>
-                <div class="metadata-col-2">
-                    <p><b>Software</b></p>
-                    {{ range .Params.softwaresarm }}
-                        <ads-tag text="{{.}}"></ads-tag>
-                    {{ end }}
-                    {{ range .Params.softwaresother }}
-                        <ads-tag text="{{.}}"></ads-tag>
-                    {{ end }}
-                </div>
-                <div class="metadata-col-3">
-                    <p><b>Tools</b></p>
-                    {{ range .Params.toolsarm }}
-                        <ads-tag text="{{.}}"></ads-tag>
-                    {{ end }}
-                    {{ range .Params.toolsother }}
-                        <ads-tag text="{{.}}"></ads-tag>
-                    {{ end }}
-                </div>
-            </div>
-        </div>
-    </div>            
-</div>
--->
 
 <!-- Markdown content -->
 <div class="content-box">
@@ -118,3 +66,4 @@
             <li class="u-margin-left-2">{{.}}</li>
         {{ end }}        
 </div>
+

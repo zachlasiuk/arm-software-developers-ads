@@ -1,33 +1,98 @@
 
 
 <!-- Short info up top -->
-<p>Congratulations! </p>
+<div class="u-margin-3">
+    <p>Congratulations! You have successfully completed this learning path -> {{ (index .learningpathfiles 0).Title }}: {{(index .learningpathfiles 0).Description}} </p>
 
-Recommended path: 
-{{ with .context.Site.GetPage .context.Params.recommended_path}}
-    <a href="{{.Permalink}}"><p style="color: var(--arm-blue);">{{ .Title }}</p></a>
-{{ end }}
+    <p>{{.context.Params.next_step_guidance}}</p>
+    
+    {{ with .context.Site.GetPage .context.Params.recommended_path}}
+        <ads-cta-link link='{{.Permalink}}'>
+            <span>{{.Title}}</span>
+        </ads-cta-link>
+    {{ end }}
+</div>
+
 
 
 <!-- 3 columns of helpful hints-->
 <div class="c-row">
     <div class="c-col">
-        <div class="u-display-grid u-gap-1 md:u-grid-columns-3 u-margin-top-1">
+        <div class="u-display-grid u-gap-1 sm:u-grid-columns-1 lg:u-grid-columns-2 xl:u-grid-columns-3 u-margin-top-1">
             <div class="content-box">
-                <h4>Recommended Learning Paths</h4>
-                <p>placeholder</p>
+                <h4>Similar Learning Paths</h4>
+                <p>To learn about topics related to this one.</p>
+                <div class="c-row">
+                    <div class="c-col">
+                        <div class="u-display-grid u-gap-1 u-grid-columns-1">
+                            {{$related := (where (.context.Site.Pages.Related (index .learningpathfiles 0) ) "Params.learning_path_main_page" "yes") }}
+                            {{range $related}}
+                            <ads-card has-hover-effect  link="{{.RelPermalink}}" class='path-card'>
+                                <ads-card-content slot="content">
+                                    <ads-tag class="path-card-tag {{.Params.skillLevel}}" text="{{.Params.skillLevel}}"></ads-tag>
+                                    <h6 class="card-title u-margin-top-1/2 u-margin-bottom-1/2 ">{{.Title}}</h6>
+                                    <p class="card-description u-font-size-75%">{{.Description}}</p>
+                                </ads-card-content>   
+                            </ads-card>        
+                            {{end}}                            
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="content-box">
                 <h4>Explore Tags</h4>
-                <p>placeholder</p>
+                <p>Look at more learning paths under these tags.</p>
+                    {{ range (index .learningpathfiles 0).Params.armips }}
+                        <ads-tag    href='{{ "/" | relLangURL}}armips/{{. | urlize}}'>
+                            <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                            <span class="fa-solid fa-tag"></span>
+                            {{ replace . "_" " " }}
+                        </ads-tag>
+                        <br>
+                    {{ end }}
+                    {{ range (index .learningpathfiles 0).Params.softwares }}
+                        <ads-tag    href='{{ "/" | relLangURL}}softwares/{{. | urlize}}'>
+                            <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                            <span class="fa-solid fa-tag"></span>
+                            {{ replace . "_" " " }}
+                        </ads-tag>
+                        <br>
+                    {{ end }}
+                    {{ range (index .learningpathfiles 0).Params.tools }}
+                        <ads-tag    href='{{ "/" | relLangURL}}tools/{{. | urlize}}'>
+                            <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                            <span class="fa-solid fa-tag"></span>
+                            {{ replace . "_" " " }}
+                        </ads-tag>
+                        <br>
+                    {{ end }}
             </div>
             <div class="content-box">
                 <h4>Further Readings</h4>
-                {{ range .Params.further_reading }}
-                    <li>{{.resource}}</li>
-                {{ end}}
+                <p>With more information on topics in this learning path.</p>
+                {{ range $index, $r := .context.Params.further_reading }}
+                    {{ with $r.resource}}
+                        <i class='u-margin-right-1 fa-solid 
+                                    {{if eq .type "blog" }}
+                                        fa-pen-to-square' title='Blog'
+                                    {{ else if eq .type "website" }}
+                                        fa-browser' title='External website'
+                                    {{else if eq .type "documentation" }}
+                                        fa-book' title='Documentation'
+                                    {{else}}
+                                        fa-book' title='Reference'
+                                    {{end}}
+                                ></i>
+                        <a href="{{ .link }}" target="_blank">{{ .title }}</a>
+                        <br>
+                        <!--
+                            <li class="u-margin-left-1"><a href="{{ .link }}" target="_blank">{{ .title }}</a></li>
+                        -->
+                    {{end}}
+                {{end}}
             </div>
         </div>
     </div>
 </div>  
 
+{{ partial "ads-cards/ads-card-style.html" . }}
