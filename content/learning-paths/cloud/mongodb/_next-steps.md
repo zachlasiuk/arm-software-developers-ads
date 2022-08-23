@@ -11,17 +11,22 @@ recommended_path: "/learning-paths/cloud/hyperscan/"
 
 further_reading:
     - resource:
-        title: Documentation on this
-        link: https://www.google.com
-        type: documentation
-    - resource:
-        title: Reference on that
-        link: www.bing.com
+        title: Creating an AWS account
+        link: https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html
         type: website
     - resource:
-        title: Blog about this
-        link: www.cnn.com
+        title: Get started with Amazon EC2 Linux instances
+        link: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EC2_GetStarted.html
+        type: website
+    - resource:
+        title: MongoDB Manual
+        link: https://www.mongodb.com/docs/manual/
+        type: documentation
+    - resource:
+        title: Compare performance of MongoDB on Arm vs Intel
+        link: https://community.arm.com/arm-community-blogs/b/operating-systems-blog/posts/mongodb-performance-on-aws-with-the-arm-graviton2
         type: blog
+
 
 ######################
 # FIXED, do not modify
