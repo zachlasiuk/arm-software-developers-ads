@@ -1,0 +1,73 @@
+{{define "main"}}
+
+<ads-search class="u-margin-top-2" has-search-button id="search-box" placeholder="Search by tool name"></ads-search>
+
+<div class="c-row">
+    <div class="c-col">
+        <div class="u-display-grid u-gap-1 xs:u-grid-columns-1 sm:u-grid-columns-2 md:u-grid-columns-3 lg:u-grid-columns-4 xl:u-grid-columns-5 u-margin-top-1">
+            {{ range where .Site.Pages "Params.tool_install" true}}
+            <div class='search-div'> <!-- Used for search hiding-->
+                <ads-card has-hover-effect class="tool-card" link="{{.Permalink}}">
+                    <ads-card-content class="tool-card-content u-margin-top-0 u-margin-bottom-0" slot="content">
+                        <p class="search-title u-margin-top-0 u-margin-bottom-0 u-font-size-125%">{{.Title}}</p>
+                    </ads-card-content>   
+                </ads-card>
+            </div>
+            {{end}}
+        </div>
+    </div>
+</div>
+
+<script src="/js/search-behavior.js"></script>
+
+
+
+
+<style>
+
+    ads-card.tool-card {
+        height: 112px;
+        --ads-card-border-width: 1px;
+        --ads-card-border-color: var(--arm-black);
+        --ads-card-border-color-hover: var(--arm-orange);
+    }
+
+    ads-card-content.tool-card-content::before {
+        background-color: var(--arm-web-safe-blue);
+        content: '';
+        height: calc(100% + 2px);
+        left: -1px;
+        position: absolute;
+        top: -1px;
+        transition: background-color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+        width: 12px;
+      }
+
+    
+
+      ads-card.tool-card:hover ads-card-content.tool-card-content::before {
+        background-color: var(--arm-orange);
+      }
+      ads-card.tool-card,p {
+        color: var(--arm-web-safe-blue);
+        margin-left: 8px;
+        transition: color;
+
+        transition: margin-left;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in-out;
+      }
+      ads-card.tool-card:hover p {
+        color:var(--arm-orange);
+        margin-left: 16px;
+      }
+    
+    </style>
+
+
+
+
+
+{{end}}

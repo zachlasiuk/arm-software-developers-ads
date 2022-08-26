@@ -1,8 +1,7 @@
 ---
-title: "Download and Install Arm Compiler for Embedded"
-linkTitle: "Installing the Arm Compiler for Embedded"
-description: >-
-     This article describes how to download and install appropriate versions of the Arm Compiler for Embedded and Arm Compiler for Embedded FuSa
+title: "Arm Compiler for Embedded"
+
+tool_install: true
 ---
 
 ## Introduction
