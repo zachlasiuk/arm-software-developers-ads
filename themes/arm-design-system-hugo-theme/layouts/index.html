@@ -25,18 +25,35 @@
     <div class="c-col">
         <p>Looking for quick install instructions for a particular tool?</p>
         
-        <span>
-            <ads-search has-search-button id="search-box" placeholder="Search by tool name" class="u-width-max-content"></ads-search>
+        <span style="display:inline-block;">
+            <ads-search has-search-button id="search-box" placeholder="Search by tool name" class="u-width-auto"></ads-search>
         </span>
-        <span>
+        <span style="display:inline-block;" class="u-margin-left-1">
             <ads-cta-link link='/install-guides'><span>See all</span></ads-cta-link>
         </span>
     </div>
 </div>
 
+<style>
+
+</style>
 
 
+<script>
+// ==========================================================
+//                  Search Submit
+// ==========================================================
+    // Assign this handler on page load
+    (() => {
 
+        const search_box = document.getElementById('search-box');
+        search_box.searchSubmitHandler = (evt) => {
+            const formatted_search_string = evt.value.replace(' ','+')
+            // Redirect to Tools page with this search string
+            window.location.href = "install-guides/?search="+formatted_search_string;
+        }
+    })();
+</script>
 
 
 {{ partial "ads-cards/ads-card-style.html" . }}
