@@ -1,6 +1,60 @@
 {{ define "main" }}
 <!-- Defines homepage layout-->
 
+
+<!-- List of Learning Path Topics, by Hardware -> Software -->
+<div class="c-row">
+    <div class="c-col">
+        <div class="u-display-grid u-gap-2 lg:u-grid-columns-1 xl:u-grid-columns-2 u-margin-top-1">
+            
+            {{ range where .Site.Pages "Params.hardware" "!=" nil}}
+            <div class="c-row topic-wrapper">
+                <div class="c-col">
+                    <div class="u-display-grid u-gap-0 u-grid-columns-1">
+                        <!-- Picture, Header, Description -->
+                        <div class="u-flex"> 
+                            <div class="main-topic-picture u-margin-right-1">
+                                <i class='fa-light {{.Params.icon}}' style="position:relative; top: calc(80% - 75px); font-size: 75px;"></i>
+                            </div>
+                            <div class="main-topic-header u-flex-grow-1">
+                                <h2 class="u-margin-bottom-1/2">{{.Params.hardware}}</h2>
+                                <p class="u-font-size-90%">{{.Description}}</p>
+                            </div>
+                        </div>
+                        <!-- Subheaders -->
+                        <div class="subtopics u-display-grid u-gap-1/2 u-grid-columns-2">
+                            {{ range .Pages}}
+                            <a class="subtopic-wrapper" href="{{.Permalink}}">
+                                <h5 class="u-margin-left-1 u-margin-top-1/2 u-margin-bottom-0 u-text-bold">{{.Params.software}}
+                                    <span><i class="fa-regular fa-chevron-right"></i></span>
+                                </h5>
+                                <p class="u-margin-left-1 u-margin-bottom-1/2 u-font-size-90%">{{.Description}}</p>
+                            </a>
+
+                            <!--
+                                <ads-card has-hover-effect class="subtopic-card" link="{{.Permalink}}">
+                                    <ads-card-content slot="content" class="">
+                                        <h4 class="u-color-arm-blue u-text-bold u-margin-0">{{.Params.software}}</h4>
+                                        <p class="u-margin-0 u-font-size-90%">{{.Description}}</p>
+                                    </ads-card-content>   
+                                </ads-card>        
+                            -->
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{ end }}
+          
+
+        </div>
+    </div>
+</div>
+
+<hr class="u-margin-3">
+
+
 <!-- List of Learning Path Topics -->
 <div class="c-row">
     <div class="c-col">
@@ -57,10 +111,6 @@
 
 
 {{ partial "ads-cards/ads-card-style.html" . }}
-
-
-
-
-
+{{ partial "main-page/topics.html" . }}
 
 {{ end }}

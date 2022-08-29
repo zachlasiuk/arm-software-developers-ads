@@ -2,8 +2,8 @@
 
 
 <div>
-  <h1>All learning paths tagged with "{{ .Title }}"</h1>
-    <p>The learnings paths are sorted into topic areas, ordered by most recent. You can expand and contract the main topics by clicking on them.</p>
+  <h1>Learning paths with "{{ .Title }}" tag</h1>
+    <!-- <p>The learnings paths are sorted into topic areas, ordered by most recent. You can expand and contract the main topics by clicking on them.</p> -->
         <div class="c-row">
             <div class="c-col c-col-12">
                 {{range $index, $element := where .Site.Pages "Params.maintopic" true}}
