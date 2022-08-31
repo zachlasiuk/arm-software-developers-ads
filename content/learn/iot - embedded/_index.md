@@ -1,5 +1,5 @@
 ---
-title: "IoT / Embedded"
+title: "Title IoT / Embedded"
 description: >
     IoT Hardware definition, quick explination for this hardware grouping. Should be approximatly this long to allow for proper reading.
 

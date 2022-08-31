@@ -1,0 +1,96 @@
+{{define "main"}}
+
+<!-- Define variables for dynamic creation-->
+{{ $thisdir := .File.Dir }}
+{{ $thisfile:= .File.TranslationBaseName}}
+{{ $learningpathfiles := slice }}
+
+
+<div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1">
+    <!-- Left pane, filters-->
+    <div class="c-col c-col-2 u-hide lg:u-display-block u-flex-shrink-0 card-tab-col">
+
+        <!-- Title of _index.md always top left -->
+        {{ with .Site.GetPage $thisdir}}
+            <p class="u-margin-left-1">{{ .Params.Title }}</p>
+        {{ end }}
+
+        <!-- Dynamic, content ordered by weight-->
+        {{ range .Site.Pages.ByWeight }}
+            {{ if (eq .File.Dir $thisdir)}}
+
+              {{ $learningpathfiles = $learningpathfiles | append . }}
+
+              <a class="a-tab" href="{{.Permalink}}">
+                <div class="c-row tab-row {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
+                    <div class="tab-right-card
+                        {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
+                        <h6 style="margin-left: 10px; margin-right: 10px; margin-top: 15px; margin-bottom: 15px;">
+                            {{ if eq .File.TranslationBaseName "_index" }} Introduction {{else}} {{.Title}} {{ end }}
+                        </h6>
+                    </div>
+                </div>
+              </a>
+            {{ end }}
+        {{end}}      
+    </div>
+
+    <!-- 
+    <ads-card link="{{.Permalink}}" orientation="horizontal" 
+    class="card-tab {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
+        <ads-card-content slot="content">
+        <h6 class="">
+            {{ if eq .File.TranslationBaseName "_index" }} Introduction {{else}} {{.Title}} {{ end }}
+        </h6>
+        </ads-card-content>
+    </ads-card>
+    -->
+
+    <!-- Right pane, content-->
+    <div class="c-col c-col-10">
+        <!-- Custom content layout depending on type -->
+        {{ if eq .File.TranslationBaseName "_index" }}
+            {{partial "learning-paths/introduction" .  }}
+        {{else if eq .File.TranslationBaseName "_review"}}
+            {{partial "learning-paths/review" (dict "context" . "learningpathfiles" $learningpathfiles)  }}
+        {{else if eq .File.TranslationBaseName "_next-steps"}}
+            {{partial "learning-paths/next-steps" (dict "context" . "learningpathfiles" $learningpathfiles)  }}
+        {{ else }}
+            {{partial "learning-paths/content" (dict "context" . "learningpathfiles" $learningpathfiles)  }}
+        {{ end }}
+
+        <!-- Next steps for buttons -->
+        {{partial "learning-paths/nav-buttons" (dict "context" . "learningpathfiles" $learningpathfiles)  }}
+
+    </div>
+
+</div>
+
+<style>
+    div.content-box {
+        /*box-sizing: border-box;*/
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        margin-top: 16px;
+
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 5px;
+
+        border-color: var(--arm-dark-grey);
+    }
+
+    html[theme='dark'] div.content-box {
+        border-color: var(--arm-light-grey);
+    }
+
+</style>
+
+
+{{ partial "ads-cards/custom-tabs-style.html" . }}
+
+
+{{end}}

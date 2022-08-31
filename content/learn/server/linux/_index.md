@@ -1,5 +1,6 @@
 ---
-title: "Title Linux"
+title: "Server: Linux"
+subtitle: "Optimize Linux servers with Arm" 
 description: >
     One line description at most.
 

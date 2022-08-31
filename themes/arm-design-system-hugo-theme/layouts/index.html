@@ -13,7 +13,7 @@
                     <div class="u-display-grid u-gap-0 u-grid-columns-1">
                         <!-- Picture, Header, Description -->
                         <div class="u-flex"> 
-                            <div class="main-topic-picture u-margin-right-1">
+                            <div class="main-topic-picture u-margin-right-2">
                                 <i class='fa-light {{.Params.icon}}' style="position:relative; top: calc(80% - 75px); font-size: 75px;"></i>
                             </div>
                             <div class="main-topic-header u-flex-grow-1">
@@ -52,7 +52,22 @@
     </div>
 </div>
 
-<hr class="u-margin-3">
+
+<!-- Quick start for tools -->
+<div class="c-row u-margin-top-3">
+    <div class="c-col">
+        <p>Looking for quick install instructions for a particular tool?</p>
+        
+        <span style="display:inline-block;">
+            <ads-search has-search-button id="search-box" placeholder="Search by tool name" class="u-width-auto"></ads-search>
+        </span>
+        <span style="display:inline-block;" class="u-margin-left-1">
+            <ads-cta-link link='/install-guides'><span>See all</span></ads-cta-link>
+        </span>
+    </div>
+</div>
+
+<div class="u-margin-5"></div>
 
 
 <!-- List of Learning Path Topics -->
@@ -72,25 +87,6 @@
         </div>
     </div>
 </div>
-
-
-<!-- Quick start for tools -->
-<div class="c-row u-margin-top-5">
-    <div class="c-col">
-        <p>Looking for quick install instructions for a particular tool?</p>
-        
-        <span style="display:inline-block;">
-            <ads-search has-search-button id="search-box" placeholder="Search by tool name" class="u-width-auto"></ads-search>
-        </span>
-        <span style="display:inline-block;" class="u-margin-left-1">
-            <ads-cta-link link='/install-guides'><span>See all</span></ads-cta-link>
-        </span>
-    </div>
-</div>
-
-<style>
-
-</style>
 
 
 <script>
