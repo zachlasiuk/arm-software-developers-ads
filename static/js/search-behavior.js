@@ -50,7 +50,7 @@ function implementSearch(search_string) {
             search_str = search_str.replace('?','').replace('search=','').replace('+',' ')
                         
             // Apply search
-            search_box.setAttribute('searchValue',search_str);
+            search_box.setAttribute('search-value',search_str);
             implementSearch(search_str);
         }
     })();
