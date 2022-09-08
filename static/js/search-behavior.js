@@ -22,7 +22,6 @@ function implementSearch(search_string) {
         var serach_match = search_word_array.every(item => card_title.includes(item));
         if (!serach_match) {
             // hide card
-            console.log('hiding: '+card_title)
             card.setAttribute('hidden',true);
         }
         else {
@@ -47,8 +46,10 @@ function implementSearch(search_string) {
             let search_str = url_params[url_params.findIndex(e => e.includes("search="))];
             
             // Remove '?', 'search=', and replace '+' with spaces leaving just the string.
-            search_str = search_str.replace('?','').replace('search=','').replace('+',' ')
-                        
+            search_str = search_str.replaceAll('?','').replace('search=','').replaceAll('+',' ');
+            // Again, for safety, strip all non numbers and letters
+            search_str = search_str.replaceAll(/[^a-z A-Z 0-9]+/g, "");
+
             // Apply search
             search_box.setAttribute('search-value',search_str);
             implementSearch(search_str);

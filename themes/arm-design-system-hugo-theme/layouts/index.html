@@ -98,9 +98,11 @@
 
         const search_box = document.getElementById('search-box');
         search_box.searchSubmitHandler = (evt) => {
-            const formatted_search_string = evt.value.replace(' ','+')
+            const safe_search_string = evt.value.replaceAll(/[^a-z A-Z 0-9]+/g, "");
+            // eliminate special characters
+            const safe_formatted_search_string = safe_search_string.replaceAll(' ','+');
             // Redirect to Tools page with this search string
-            window.location.href = "install-guides/?search="+formatted_search_string;
+            window.location.href = "install-guides/?search="+safe_formatted_search_string;
         }
     })();
 </script>
