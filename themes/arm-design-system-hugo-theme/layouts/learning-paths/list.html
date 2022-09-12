@@ -5,22 +5,23 @@
 {{ $current_title := .Page.Title}}
 
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1">
+
     <!-- Category filter -->
-    <div class="c-col u-padding-top-2 u-hide u-flex-shrink-0 u-display-grid u-gap-1 lg:u-grid-columns-1" style="width: 320px;">
-        <!-- Make range of just learning path pages 'cloud' 'iot' etc. -->
-        {{ range where .Site.Pages "Params.maintopic" true}}
-            <ads-button level= {{ if eq $current_title .Title }} "primary" {{else}} "tertiary" {{end}}
-                        style="width: 300px;" 
-                        name="{{.Title}}" 
-                        class="main-topic-btn" 
-                        onclick="location.href='{{.Permalink}}';">
-                {{.Title}}
-            </ads-button>
-        {{end}}
+    <div class="c-col u-hide lg:u-display-block u-flex-shrink-0 u-margin-top-2" style="width: 320px;">
+        <div class="u-display-grid u-gap-1/2 lg:u-grid-columns-2">
+
+            <!-- Make range of just learning path pages 'cloud' 'iot' etc. -->
+            {{ range where .Site.Pages "Params.maintopic" true}}
+            <a href="{{.Permalink}}" style="text-decoration: none; cursor: pointer;">
+                <div class="maintopic-list-div {{ if eq $current_title .Title }} active {{else}} inactive {{end}}">
+                    {{.Title}}
+                </div>
+            </a>
+            {{end}}
+        </div>
+
     </div>
     
-
-
     <!-- Top level context for this learning path-->
     <div class="c-col c-col-12">
         <header>
@@ -32,7 +33,7 @@
 </div>
 
 
-<div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-2-1/2 u-padding-bottom-2-1/2">
+<div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1 u-padding-bottom-2-1/2">
     <!-- Filter bar on left -->
     <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 320px;">
         <!-- Arm IP-->
@@ -96,12 +97,12 @@
 </div> <!-- End of left-right divide -->
 
 
+
 {{ partial "filtering/filter-tag.html" . }}
 {{ partial "ads-cards/ads-card-style.html" . }}
 
 <!-- Include javascript to filter and search -->
 <script src="/js/filter-paths.js"></script>
 <script src="/js/search-behavior.js"></script>
-
 
 {{end}}

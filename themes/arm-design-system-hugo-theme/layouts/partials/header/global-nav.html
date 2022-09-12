@@ -19,7 +19,7 @@
     <div slot="action-content" id="account-view" aria-labelledby="global-nav-example-default:tab:account-view" role="tabpanel" tabindex="0">
       <span>Example Action Content</span>
     </div>
-  </ads-global-navigation>
+</ads-global-navigation>
 
 
 <script>
@@ -104,12 +104,16 @@
       if (evt.action === 'width') {
           const isCurrentlyFullWidth = document.getElementById("all-content-div").classList.contains("is-full-width");
           if ( isCurrentlyFullWidth ) {
-            localStorage.removeItem('fullWidth');
+            localStorage.setItem('smallerWidth', 'true');  //Save user preference in storage
             document.getElementById("all-content-div").classList.remove("is-full-width");
+            document.getElementById("all-content-div-margined").classList.remove("u-margin-left-2");
+            document.getElementById("all-content-div-margined").classList.remove("u-margin-right-2");
           }
           else {
-            localStorage.setItem('fullWidth', 'true');      //Save user preference in storage
+            localStorage.removeItem('smallerWidth');     
             document.getElementById("all-content-div").classList.add("is-full-width");
+            document.getElementById("all-content-div-margined").classList.add("u-margin-left-2");
+            document.getElementById("all-content-div-margined").classList.add("u-margin-right-2");
           }
       };
       if (evt.action === 'height') {

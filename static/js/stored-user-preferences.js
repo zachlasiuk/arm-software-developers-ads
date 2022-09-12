@@ -9,8 +9,10 @@
         document.querySelector('html').setAttribute('theme', 'light');
         document.getElementById('prism-code-theme').href='/css/prism-light.css';
 	} 
-  if (localStorage.getItem('fullWidth')) {
-        document.getElementById("all-content-div").classList.add("is-full-width");
+  if (localStorage.getItem('smallerWidth')) {
+        document.getElementById("all-content-div").classList.remove("is-full-width");
+        document.getElementById("all-content-div-margined").classList.remove("u-margin-left-2");
+        document.getElementById("all-content-div-margined").classList.remove("u-margin-right-2");
 	} 
   if (localStorage.getItem('fullHeight')) {
     document.getElementById('global-nav-example-default').contextualData = []; // Hide seoncary nav on Global Nav         

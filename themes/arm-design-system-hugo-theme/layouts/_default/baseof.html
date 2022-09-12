@@ -7,8 +7,10 @@
     <body>
         {{partial "header/global-nav.html" .}}
         {{partial "header/breadcrumbs.html" .}}
-        <div id="all-content-div" class="c-container" style="min-height: 250px;">
-        {{block "main" . }}{{end}}
+        <div id="all-content-div" class="c-container is-full-width" style="min-height: 250px;">
+            <div id="all-content-div-margined" class="u-margin-left-2 u-margin-right-2">
+                {{block "main" . }}{{end}}
+            </div>
         </div>
         {{partial "footer/footer.html" .}}
     </body>
