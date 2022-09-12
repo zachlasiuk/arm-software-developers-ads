@@ -72,8 +72,8 @@
         <!-- List of learning paths on right -->
         <div class="c-row">
             <div class="c-col c-col-12">
-                <div class="u-display-grid u-gap-1 md:u-grid-columns-2 xl:u-grid-columns-3  u-margin-top-1">
-                    {{ range .Pages }}
+                <div class="u-display-grid u-gap-1 lg:u-grid-columns-1 xl:u-grid-columns-2 xxl:u-grid-columns-3 xxxl:u-grid-columns-4 u-margin-top-1">
+                    {{ range (.Pages).ByDate }}
                     <div class='path-div search-div
                                 {{ with .Params.armips }}tag-{{ delimit . " tag-"}}{{ end }}
                                 {{ with .Params.tools }}tag-{{ delimit . " tag-"}}{{ end }}
@@ -85,7 +85,7 @@
                             <ads-card-content slot="content">
                                 <ads-tag class="path-card-tag {{.Params.skillLevel}}" text="{{.Params.skillLevel}}"></ads-tag>
                                 <h4 class="search-title card-title u-margin-top-1/2 u-margin-bottom-1/2">{{.Title}}</h4>
-                                <p class="card-date">Updated {{ .Lastmod.UTC.Format "Jan 2, 2006" }}</p>
+                                <p class="card-date">Updated: {{ .Lastmod.UTC.Format "January 2, 2006" }}</p>
                                 <p class="card-description">{{.Description}}</p>
                             </ads-card-content>   
                         </ads-card>

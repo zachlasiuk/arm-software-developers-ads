@@ -25,7 +25,7 @@
                 <div class="c-row">
                     <div class="c-col">
                         <div class="u-display-grid u-gap-1 u-grid-columns-1">
-                            {{$related := (where (.context.Site.Pages.Related (index .learningpathfiles 0) ) "Params.learning_path_main_page" "yes") }}
+                            {{$related := (where (.context.Site.Pages.Related (index .learningpathfiles 0) ) "Params.learning_path_main_page" "yes") | first 2 }}
                             {{range $related}}
                             <ads-card has-hover-effect  link="{{.RelPermalink}}" class='path-card'>
                                 <ads-card-content slot="content">
