@@ -76,7 +76,7 @@ layout: "learningpathall"
 #```
 ---
 
-## Pre-requisites
+## Get set up
 
 * MongoDB installed and running on your 64-bit Arm Linux machine or AWS EC2 instance. Follow the steps outlined [here](/cloud/mongodb/mongodb).
 * Java 1.8 or newer installed on your 64-bit Arm Linux machine or AWS EC2 instance.
@@ -85,13 +85,11 @@ layout: "learningpathall"
     hello world
 ```
 
-## Detailed Steps
-
 To measure the performance of MongoDB, we use the [MongoDB performance test tool](https://github.com/idealo/mongodb-performance-test).
 
 This is an open sourced java application that tests the MongoDB performance, such as latency and throughput, by running one or more threads executing either all the same or different database operations, such as Inserts, Updates, Deletes, Counts or Finds until a defined number of operations is executed or a defined maximum runtime is reached.
 
-### Setup the MongoDB performance test tool
+## Setup the MongoDB performance test tool
 
 On your 64-bit Arm Linux EC2 Instance that is running MongoDB, clone the project
 
