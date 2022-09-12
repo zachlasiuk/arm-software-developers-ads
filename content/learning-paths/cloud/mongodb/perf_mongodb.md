@@ -133,7 +133,7 @@ java -jar $jarfile -m update_one -d 3600 -t 10 20 30 -db test -c perf
 
 During each test, statistics over the last second are printed every second in the console. Shown below is the output from the end of running Insert test
 
-```
+``` output
 -- Timers ----------------------------------------------------------------------
 stats-per-run-INSERT
 2022-07-05 19:14:45,894 [main] INFO  d.i.mongodb.perf.MongoDbAccessor - <<< closeConnections localhost:27017
