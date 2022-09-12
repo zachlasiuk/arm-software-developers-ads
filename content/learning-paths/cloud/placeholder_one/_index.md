@@ -1,33 +1,23 @@
 ---
-title: "Use Hyperscan on Arm servers" 
-linkTitle: "Use Hyperscan on Arm servers"
+title: "Learn about Large System Extensions (LSE)" 
+linkTitle: "Learn about Large System Extensions (LSE)"
 description: >
-    Learn how to install and run Use Hyperscan on Arm servers, and more stuff to pad out this description properly.
+    Learn about Large System Extensions (LSE) and identify the right tools and check if applications use LSE.
 layout: "path"
 
 
 # Tags. No whitespace. An underscore will be visually replaced with whitespace.
-skilllevel: Getting-Started
+skilllevel: Experienced
 armips:
     - Neoverse
 tools:
-    - YCSB
 softwares:
-    - Java
-    - Vectorscan
 operatingsystems:
     # Just filling out for example purposes
     - Linux
-    - Windows
 
 subjects:
     # Unique list per main topic. Select from existing list.
-    - Databases
-    - Storage
-    - Containers_and_Virtualization
-    - Web_Front-end
-    - Web_Back-end
-    - Networking
     - Performance_and_Architecture
 developerprograms:
 

@@ -1,20 +1,19 @@
 ---
-title: "Use Hyperscan on Arm servers" 
-linkTitle: "Use Hyperscan on Arm servers"
+title: "Learn how to use Docker" 
+linkTitle: "Learn how to use Docker"
 description: >
-    Learn how to install and run Use Hyperscan on Arm servers, and more stuff to pad out this description properly.
+    Warm up with a simple docker build for any machine, then use Docker buildx for multi-architecture builds and install binfmt to use buildx sucessfully on Linux without Docker Desktop.
 layout: "path"
 
 
 # Tags. No whitespace. An underscore will be visually replaced with whitespace.
-skilllevel: Getting-Started
+skilllevel: Introductory
 armips:
     - Neoverse
 tools:
-    - YCSB
+    - buildx
 softwares:
-    - Java
-    - Vectorscan
+    - Docker
 operatingsystems:
     # Just filling out for example purposes
     - Linux
@@ -22,13 +21,8 @@ operatingsystems:
 
 subjects:
     # Unique list per main topic. Select from existing list.
-    - Databases
-    - Storage
     - Containers_and_Virtualization
-    - Web_Front-end
-    - Web_Back-end
-    - Networking
-    - Performance_and_Architecture
+
 developerprograms:
 
 

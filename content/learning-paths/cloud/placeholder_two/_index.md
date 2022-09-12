@@ -1,33 +1,25 @@
 ---
-title: "Use Hyperscan on Arm servers" 
-linkTitle: "Use Hyperscan on Arm servers"
+title: "Port Architecture Specific Intrinsics" 
+linkTitle: "Port Architecture Specific Intrinsics"
 description: >
-    Learn how to install and run Use Hyperscan on Arm servers, and more stuff to pad out this description properly.
+    Understand options to port intrinsics to Arm Neoverse and find intrinsics in project source code.
 layout: "path"
 
 
 # Tags. No whitespace. An underscore will be visually replaced with whitespace.
-skilllevel: Getting-Started
+skilllevel: Experienced
 armips:
     - Neoverse
 tools:
-    - YCSB
 softwares:
-    - Java
-    - Vectorscan
+    - Intrinsics
+
 operatingsystems:
     # Just filling out for example purposes
     - Linux
-    - Windows
 
 subjects:
     # Unique list per main topic. Select from existing list.
-    - Databases
-    - Storage
-    - Containers_and_Virtualization
-    - Web_Front-end
-    - Web_Back-end
-    - Networking
     - Performance_and_Architecture
 developerprograms:
 

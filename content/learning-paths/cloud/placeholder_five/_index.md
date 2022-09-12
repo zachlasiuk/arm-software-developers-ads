@@ -1,8 +1,8 @@
 ---
-title: "Use Hyperscan on Arm servers" 
-linkTitle: "Use Hyperscan on Arm servers"
+title: "Run memcached on Arm servers" 
+linkTitle: "Run memcached on Arm servers"
 description: >
-    Learn how to install and run Use Hyperscan on Arm servers, and more stuff to pad out this description properly.
+        Learn how to install memcached and see how to measure memcached performance.
 layout: "path"
 
 
@@ -11,24 +11,17 @@ skilllevel: Getting-Started
 armips:
     - Neoverse
 tools:
-    - YCSB
 softwares:
-    - Java
-    - Vectorscan
+    - memcached
 operatingsystems:
     # Just filling out for example purposes
     - Linux
-    - Windows
 
 subjects:
     # Unique list per main topic. Select from existing list.
-    - Databases
     - Storage
-    - Containers_and_Virtualization
-    - Web_Front-end
     - Web_Back-end
-    - Networking
-    - Performance_and_Architecture
+
 developerprograms:
 
 

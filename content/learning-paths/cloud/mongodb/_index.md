@@ -43,7 +43,7 @@ skilllevel: Introductory
 # Options:
     # Getting-Started   (for a basic overview of certain tools/softwares/topics)
     # Introductory      (the next stage up from getting started)
-    # Advanced          (for topics that require a fair amount of background knowledge in tools/softwares/topics to complete)
+    # Experienced       (for topics that require a fair amount of background knowledge in tools/softwares/topics to complete)
 
 armips:
     # Groups of IP      (Cortex-M, Cortex-A, Neoverse, System IP)

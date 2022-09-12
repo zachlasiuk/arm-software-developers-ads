@@ -1,33 +1,28 @@
 ---
-title: "Use Hyperscan on Arm servers" 
-linkTitle: "Use Hyperscan on Arm servers"
+title: "Measure performance of compression libraries on Arm servers" 
+linkTitle: "Measure performance of compression libraries on Arm servers"
 description: >
-    Learn how to install and run Use Hyperscan on Arm servers, and more stuff to pad out this description properly.
+    Install lzbench to benchmark performance of compression libraries, and learn to use lzbench with snappy and zstd.
 layout: "path"
 
 
 # Tags. No whitespace. An underscore will be visually replaced with whitespace.
-skilllevel: Getting-Started
+skilllevel: Introductory
 armips:
     - Neoverse
 tools:
-    - YCSB
+    - lzbench
+    - snappy
+    - zstd
+    - gdb
 softwares:
-    - Java
-    - Vectorscan
+    - docker
 operatingsystems:
     # Just filling out for example purposes
     - Linux
-    - Windows
 
 subjects:
     # Unique list per main topic. Select from existing list.
-    - Databases
-    - Storage
-    - Containers_and_Virtualization
-    - Web_Front-end
-    - Web_Back-end
-    - Networking
     - Performance_and_Architecture
 developerprograms:
 
