@@ -2,10 +2,13 @@
 maintopic: true  # only true for main segmentation on homepage
 
 title: "Embedded"
-cardimage: img/embedded.jpg
+cardimage: img/main-topic-backgrounds/embedded.jpg
 key_ip: 
     - Cortex-A
     - Cortex-R
+key_ip_icons:
+    - img/ip-icons/Arm_Cortex-A.png
+    - img/ip-icons/Arm_Cortex-R.png
 
 differentiating_info:
     - Automotive

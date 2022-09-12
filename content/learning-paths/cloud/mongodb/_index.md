@@ -62,12 +62,20 @@ tools:
     - Snort
 
 softwares:
-    # OSes              (Linux, Windows, Mac, FreeRTOS, Bare-metal)
     # Languages         (Python, Go, MongoDB, Assembly, Java)
-    - Linux
     - MongoDB
 
+operatingsystems:
+    # OSes              (Linux, Windows, Mac, FreeRTOS, Bare-metal)
+    - Linux
 
+subjects:
+    # Unique list per main topic. Select from existing list.
+    - Databases
+    - Web_Back-end
+
+developerprograms:
+    - Amazon_Community_Builders
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

@@ -2,10 +2,13 @@
 maintopic: true  # only true for main segmentation on homepage
 
 title: "Mobile"
-cardimage: img/mobile.jpg
+cardimage: img/main-topic-backgrounds/mobile.jpg
 key_ip: 
     - Cortex-A
     - Mali GPU
+key_ip_icons:
+    - img/ip-icons/Arm_Cortex-A.png
+    - img/ip-icons/Arm_Mali_GPU.png
 
 differentiating_info:
     - Android

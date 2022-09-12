@@ -39,7 +39,7 @@ function addTag(tag) {
     console.log("adding tag: "+tag);
 
     // Display tag in 'current-tag-bar'
-    display_tag = tag.replace('tag-','')
+    display_tag = tag.replace('tag-','').replaceAll('_', ' ');
     document.querySelector('#current-tag-bar').insertAdjacentHTML(
         'afterbegin',
         `

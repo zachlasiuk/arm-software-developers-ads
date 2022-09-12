@@ -37,7 +37,12 @@
     <!-- Filter bar on left -->
     <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 320px;">
         <!-- Arm IP-->
-        {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Arm IP" "tagname" .Site.Taxonomies.armips)}}
+        <!-- {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Arm IP" "tagname" .Site.Taxonomies.armips)}} -->
+
+        <!-- Subjects -->
+        {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Subjects" "tagname" .Site.Taxonomies.subjects)}}
+        <!-- Operating Systems -->
+        {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "OS" "tagname" .Site.Taxonomies.operatingsystems)}}
         <!-- Software -->
         {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Software" "tagname" .Site.Taxonomies.softwares)}}
         <!-- Tools -->
@@ -72,7 +77,10 @@
                     <div class='path-div search-div
                                 {{ with .Params.armips }}tag-{{ delimit . " tag-"}}{{ end }}
                                 {{ with .Params.tools }}tag-{{ delimit . " tag-"}}{{ end }}
-                                {{ with .Params.softwares }}tag-{{ delimit . " tag-"}}{{ end }}'>
+                                {{ with .Params.softwares }}tag-{{ delimit . " tag-"}}{{ end }}
+                                {{ with .Params.operatingsystems }}tag-{{ delimit . " tag-"}}{{ end }}
+                                {{ with .Params.developerprograms }}tag-{{ delimit . " tag-"}}{{ end }}
+                                {{ with .Params.subjects }}tag-{{ delimit . " tag-"}}{{ end }}'>
                         <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card'>
                             <ads-card-content slot="content">
                                 <ads-tag class="path-card-tag {{.Params.skillLevel}}" text="{{.Params.skillLevel}}"></ads-tag>

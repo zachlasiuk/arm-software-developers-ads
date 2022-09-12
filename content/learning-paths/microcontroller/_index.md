@@ -2,10 +2,12 @@
 maintopic: true  # only true for main segmentation on homepage
 
 title: "Microcontroller"
-cardimage: img/microcontroller.jpg
+cardimage: img/main-topic-backgrounds/microcontroller.jpg
 key_ip: 
     - Cortex-M
-    
+key_ip_icons:
+    - img/ip-icons/Arm_Cortex-M.png
+
 differentiating_info:
     - Bare-metal and RTOS IoT devices
     - tinyML

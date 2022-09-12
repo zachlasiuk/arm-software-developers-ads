@@ -2,20 +2,25 @@
 <!-- Defines homepage layout-->
 
 <!-- List of Learning Path Topics -->
-<div class="c-row">
+<div class="c-row u-margin-top-1">
     <div class="c-col">
         <div class="u-display-grid u-gap-2 md:u-grid-columns-2 xl:u-grid-columns-2 xxl:u-grid-columns-3 u-margin-top-1">
 
             {{ range (where .Site.Pages "Params.maintopic" true).ByWeight}}
             <ads-card has-hover-effect class="path-card" link="{{.Permalink}}">
-                <ads-card-image slot="image" src="{{.Params.cardimage}}" class="u-bg-position-center"></ads-card-image>
+                <ads-card-image slot="image" src="{{.Params.cardimage}}" class="u-bg-position-top"></ads-card-image>
                 <ads-card-content slot="content">
                     <h1 class="u-color-arm-blue u-margin-top-1/2 u-margin-bottom-1/2">{{.Title}}</h1>
+                    <!-- 
                     <p class="card-date">
                         {{range .Params.key_ip}}
                         {{.}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         {{end}}
                     </p>
+                    -->
+                    {{range .Params.key_ip_icons}}
+                    <img src="{{.}}" width="100px;">&nbsp;&nbsp;
+                    {{end}}
                     <p>
                         {{range .Params.differentiating_info}}
                         {{.}}.&nbsp;&nbsp;&nbsp; 
@@ -27,7 +32,7 @@
             {{ end }}
 
             <ads-card class="path-card">
-                <ads-card-image slot="image" src="/img/tools.jpg" class="u-bg-position-center"></ads-card-image>
+                <ads-card-image slot="image" src="/img/main-topic-backgrounds/tools.jpg" class="u-bg-position-center"></ads-card-image>
                 <ads-card-content slot="content">
                     <p>Looking for quick install instructions for a particular tool?</p>
                         <ads-search has-search-button id="search-box" placeholder="Search by tool name" class="u-width-auto"></ads-search>

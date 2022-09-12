@@ -2,9 +2,11 @@
 maintopic: true  # only true for main segmentation on homepage
 
 title: "Server & Cloud"
-cardimage: img/server-and-cloud.jpg
+cardimage: img/main-topic-backgrounds/server-and-cloud.jpg
 key_ip: 
     - Neoverse
+key_ip_icons:
+    - img/ip-icons/Arm_Neoverse.png
 
 differentiating_info: 
     - Web

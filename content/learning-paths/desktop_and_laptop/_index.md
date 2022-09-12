@@ -2,9 +2,11 @@
 maintopic: true  # only true for main segmentation on homepage
 
 title: "Desktop & Laptop"
-cardimage: img/desktop-and-laptop.jpg
+cardimage: img/main-topic-backgrounds/desktop-and-laptop.jpg
 key_ip: 
     - Cortex-A
+key_ip_icons:
+    - img/ip-icons/Arm_Cortex-A.png
 
 differentiating_info:
     - Windows on Arm
