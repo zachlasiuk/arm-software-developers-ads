@@ -1,24 +1,57 @@
 
-<ads-global-navigation theme="dark" breakpoint="md" id="global-nav-example-default" sr-label="default navigation">
+<ads-global-navigation theme="dark" breakpoint="lg" id="global-nav-example-default" sr-label="default navigation">
     <!-- Slotted Flyout Content -->
-    <div slot="tab-content" id="category1" aria-labelledby="global-nav-example-default:tab:category1" role="tabpanel" tabindex="0">
-      <a href="https://developer.arm.com/"><span class="u-color-white">View on Developer.Arm.com</span></a>
-    </div>
-    <div slot="tab-content" id="category2" aria-labelledby="global-nav-example-default:tab:category2" role="tabpanel" tabindex="0">
-      <a href="https://developer.arm.com/"><span class="u-color-white">View on Developer.Arm.com</span></a>
-    </div>
-    <div slot="tab-content" id="category3" aria-labelledby="global-nav-example-default:tab:category2" role="tabpanel" tabindex="0">
-      <a href="https://developer.arm.com/"><span class="u-color-white">View on Developer.Arm.com</span></a>
+    <div slot="tab-content" id="category1" role="tabpanel" tabindex="0">
+        <div class="flyout-content-container c-container u-padding-top-2 u-padding-bottom-5">
+
+          <div class="c-row">
+            <div class="c-col c-col-12">
+              <h2 class="u-color-arm-light-grey u-font-weight-300 u-margin-top-0 u-margin-bottom-2">Software Development Areas</h2>
+            </div>
+          </div>
+
+          <div class="c-row">
+            <div class="c-col c-col-12">
+              <div class="u-display-grid u-gap-2 sm:u-grid-columns-1 md:u-grid-columns-2 lg:u-grid-columns-3 xl:u-grid-columns-3 xxl:u-grid-columns-4">
+                {{ range (where .Site.Pages "Params.maintopic" true).ByWeight}}
+                  <ads-card has-hover-effect class="path-card" link="{{.Permalink}}">
+                    <ads-card-image slot="image" src="/{{.Params.cardimage}}" class="u-bg-position-top" style="max-height: 75px;"></ads-card-image>
+                    <ads-card-content slot="content">
+                        <h4 class="u-color-arm-blue u-margin-top-0 u-margin-bottom-0">{{.Title}}</h4>
+                    </ads-card-content>   
+                </ads-card>
+                {{end}}
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
 
-    <!-- Slotted Action Content -->
-    <div slot="action-content" id="mobile-search" aria-labelledby="global-nav-example-default:tab:mobile-search" role="tabpanel" tabindex="0">
-      <span>Example Mobile Search</span>
-      <ads-search has-search-button />
-    </div>
-    <div slot="action-content" id="account-view" aria-labelledby="global-nav-example-default:tab:account-view" role="tabpanel" tabindex="0">
-      <span>Example Action Content</span>
-    </div>
+
+    <!-- Slotted Flyout Content -->
+    <div slot="tab-content" id="category2" role="tabpanel" tabindex="1">
+      <div class="flyout-content-container c-container u-padding-top-2 u-padding-bottom-5">
+
+        <div class="c-row">
+          <div class="c-col c-col-12">
+            <h2 class="u-color-arm-light-grey u-font-weight-300 u-margin-top-0 u-margin-bottom-2">Tool Install Guides</h2>
+          </div>
+        </div>
+
+        <div class="c-row u-margin-top-1 u-margin-left-2">
+          <div class="c-col">
+            <p>Looking for quick install instructions for a particular tool?</p>
+            
+            <span style="display:inline-block;">
+                <ads-search has-search-button id="search-box" placeholder="Search by tool name" class="u-width-auto"></ads-search>
+            </span>
+            <span style="display:inline-block;" class="u-margin-left-1">
+                <ads-cta-link link='/install-guides'><span>See all</span></ads-cta-link>
+            </span>
+          </div>
+        </div>
+      </div>
+  </div>
 </ads-global-navigation>
 
 
@@ -55,29 +88,56 @@
       {
         id: 'category1',
         slotId: 'category1',
-        label: 'Developing on Arm',
-        link: 'https://developer.arm.com/',
+        label: 'Software Development Areas',
+        items: [
+          {
+            label: 'Server & Cloud',
+            link: '/learning-paths/server_and_cloud/',
+          },
+          {
+            label: 'Desktop & Laptop',
+            link: '/learning-paths/desktop_and_laptop/',
+          },
+          {
+            label: 'Mobile',
+            link: '/learning-paths/mobile/',
+          },
+          {
+            label: 'Embedded',
+            link: '/learning-paths/embedded/',
+          },
+          {
+            label: 'Microcontroller',
+            link: '/learning-paths/microcontroller/',
+          },
+        ],
       },
       {
         id: 'category2',
         slotId: 'category2',
-        label: 'Architecture and Processors',
-        link: 'https://developer.arm.com/',
-      },
-      {
-        id: 'category3',
-        slotId: 'category3',
-        label: 'Tools and Software',
-        link: 'https://developer.arm.com/',
+        label: 'Tool Install Guides',
+        link: '/install-guides/',
       },
     ];
 
     const data = [
       {
-        id: 'example-link',
-        label: 'Learn',
-        link: 'https://www.arm.com',
+        id: 'example-dropdown',
+        label: 'Arm Developer Community Sites',
+        items: [
+          {
+            id: 'example-dropdown__item-1',
+            label: 'Discord Server',
+            link: 'https://www.arm.com',
+          },
+          {
+            id: 'example-dropdown__item-2',
+            label: 'Other',
+            link: 'https://www.arm.com',
+          },
+        ],
       },
+      
     ];
 
     const globalNav = document.getElementById('global-nav-example-default');
