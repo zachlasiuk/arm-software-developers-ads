@@ -1,11 +1,6 @@
-<div id="expanded-masthead">
-  <ads-masthead theme="dark">
-    <ads-breadcrumbs theme="dark" slot="breadcrumbs" sr-label="Breadcrumbs">
-        {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
-    </ads-breadcrumbs>
-      <h1 id="ads-masthead-title" slot="heading"><span>{{.Title}}</span></h1>
-  </ads-masthead>
-</div>
+<ads-breadcrumbs theme="dark" slot="breadcrumbs" sr-label="Breadcrumbs">
+    {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+</ads-breadcrumbs>
 
 
 
@@ -15,5 +10,15 @@
 {{ else if not .p1.IsHome }}
 {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
 {{ end }}
-<ads-breadcrumb slot="breadcrumb" label="{{ .p1.Permalink }}" link="{{ .p1.Permalink }}"  {{ if eq .p1 .p2 }} current="true"{{ end }}>{{ .p1.Title }}</ads-breadcrumb>
+    <!-- Filter out breadcrumbs we don't want to show: taxonomy pages and the 'learning-path' routing page -->
+        {{ if and (ne .p1.Title "Learning-paths") (ne .p1.Kind "taxonomy") }}
+            {{ if ne .p1.Kind "term"}}
+                <!-- Normal breadcrumb-->
+                <ads-breadcrumb slot="breadcrumb" label="{{ .p1.Permalink }}" link="{{ .p1.Permalink }}"  {{ if eq .p1 .p2 }} current="true"{{ end }}>{{ replace .p1.Title "_" " " }}</ads-breadcrumb>
+            {{else}}
+                <!-- With tag -->
+                <ads-breadcrumb slot="breadcrumb" label="{{ .p1.Permalink }}" link="{{ .p1.Permalink }}"  {{ if eq .p1 .p2 }} current="true"{{ end }}>Tag: {{ replace .p1.Title "_" " " }}</ads-breadcrumb>
+            {{end}}
+        {{end}}
+
 {{ end }}

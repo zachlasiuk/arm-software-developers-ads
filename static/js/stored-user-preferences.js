@@ -18,6 +18,7 @@
     document.getElementById('global-nav-example-default').contextualData = []; // Hide seoncary nav on Global Nav         
     document.getElementById("expanded-masthead").setAttribute('hidden',true);  // Hide title
     document.getElementById("arm-footer").setAttribute('hidden',true);      // Hide footer
+    document.getElementById("only-breadcrumb-masthead").removeAttribute('hidden'); // Show just breadcrumbs
   } 
 
 

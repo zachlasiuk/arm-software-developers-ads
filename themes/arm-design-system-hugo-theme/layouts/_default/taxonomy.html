@@ -2,14 +2,35 @@
 
 
 <div>
-  <h1>Learning paths with "{{ .Title }}" tag</h1>
-    <!-- <p>The learnings paths are sorted into topic areas, ordered by most recent. You can expand and contract the main topics by clicking on them.</p> -->
+    <h3>Tagged learning paths</h3>
+    <ads-tag class="u-margin-bottom-1/2">
+        <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+        <span class="fa-solid fa-tag"></span>
+        {{ replace .Title "_" " " }}
+    </ads-tag>
+    <!-- <p>The learnings paths are sorted into topic areas, ordered by most recent. You can expand and contract the main topics by clicking on them.</p>    -->
+    <div class="c-row u-gap-1/2 u-flex-nowrap">
+        <div class="c-col u-display-block" style="max-width:fit-content;">
+            <p> Jump to a topic:</p>
+        </div>
+        <div class="c-col u-display-block">
+            <div class="u-display-grid u-gap-1/2 xs:u-grid-columns-2 sm:u-grid-columns-2 md:u-grid-columns-3 lg:u-grid-columns-5 xl:u-grid-columns-7">
+                {{ range where .Site.Pages "Params.maintopic" true}}
+                    {{ partial "ads-cards/main-topic-buttons.html" (dict "context" . "current_title" "nothing" "link_to" (printf "#%s" .Title) )}}
+                {{end}}
+            </div>
+        </div>
+    </div>
+
+
+
+
         <div class="c-row">
             <div class="c-col c-col-12">
                 {{range $index, $element := where .Site.Pages "Params.maintopic" true}}
 
                     <!-- Topic Header -->
-                    <div class="topic-header" name="{{$index}}" onclick="expandAndContract(this)">
+                    <div id="{{$element.Title}}" class="topic-header" name="{{$index}}" onclick="expandAndContract(this)">
                         <h4>
                             {{$element.Title}}
                             <span name="{{$index}}" class="far fa-chevron-down" style="float:right;"></span>
@@ -18,13 +39,13 @@
                     <hr>
 
                     <!-- Display Learning Paths -->
-                    <div name="{{$index}}" id="grid-div-for-{{$index}}" class="u-margin-bottom-4 u-display-grid u-gap-1 sm:u-grid-columns-1 md:u-grid-columns-2 xl:u-grid-columns-3 xxl:u-grid-columns-4  u-margin-top-1">
+                    <div name="{{$index}}" id="grid-div-for-{{$index}}" class="u-margin-left-2 u-display-grid u-gap-1 sm:u-grid-columns-1 md:u-grid-columns-2 xl:u-grid-columns-3 xxl:u-grid-columns-4  u-margin-top-1">
                         {{ range (sort .Data.Pages ".Lastmod").Reverse }}
                         <div class='path-div learning-path-div-for-{{$index}}'>
                             <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card'>
                             <ads-card-content slot="content">
                                 <ads-tag class="path-card-tag {{.Params.skillLevel}}" text="{{.Params.skillLevel}}"></ads-tag>
-                                <ads-tag class="path-card-section" text="{{.Parent.Title}}"></ads-tag>
+                                <!-- <ads-tag class="path-card-section" text="{{.Parent.Title}}"></ads-tag> -->
                                 <h4 class="card-title u-margin-top-1/2 u-margin-bottom-1/2">{{.Title}}</h4>
                                 <p class="card-date">Updated {{ .Lastmod.UTC.Format "Jan 2, 2006" }}</p>
                                 <p class="card-description">{{.Description}}</p>
@@ -67,11 +88,11 @@
             console.log(learning_path_divs[i]);
             if (learning_path_divs[i].getAttribute('hidden')) {
                 learning_path_divs[i].removeAttribute('hidden');
-                learning_path_grid.classList.add('u-margin-bottom-4');
+                //learning_path_grid.classList.add('u-margin-bottom-4');
             }
             else {
                 learning_path_divs[i].setAttribute('hidden',true);
-                learning_path_grid.classList.remove('u-margin-bottom-4');
+                //learning_path_grid.classList.remove('u-margin-bottom-4');
             }
         }
     }

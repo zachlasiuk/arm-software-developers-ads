@@ -4,7 +4,7 @@
 
 {{ $current_title := .Page.Title}}
 
-<div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1">
+<div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap">
 
     <!-- Category filter -->
     <div class="c-col u-hide lg:u-display-block u-flex-shrink-0 u-margin-top-2" style="width: 320px;">
@@ -12,11 +12,7 @@
 
             <!-- Make range of just learning path pages 'cloud' 'iot' etc. -->
             {{ range where .Site.Pages "Params.maintopic" true}}
-            <a href="{{.Permalink}}" style="text-decoration: none; cursor: pointer;">
-                <div class="maintopic-list-div {{ if eq $current_title .Title }} active {{else}} inactive {{end}}">
-                    {{.Title}}
-                </div>
-            </a>
+                {{ partial "ads-cards/main-topic-buttons.html" (dict "context" . "current_title" $current_title "link_to" .Permalink )}}
             {{end}}
         </div>
 
@@ -67,20 +63,41 @@
             <!-- Filled dynamically by javascript & checkboxes-->
         </div>
 
-
+        <!-- Create empty arrays to save taxonomies from this page to display on filters -->
+        {{ $armip_tags := slice}}
+        {{ $tool_tags := slice}}
+        {{ $software_tags := slice}}
+        {{ $operatingsystem_tags := slice}}
+        {{ $developerprogram_tags := slice}}
+        {{ $subject_tags := slice}}
 
         <!-- List of learning paths on right -->
         <div class="c-row">
             <div class="c-col c-col-12">
                 <div class="u-display-grid u-gap-1 lg:u-grid-columns-1 xl:u-grid-columns-2 xxl:u-grid-columns-3 xxxl:u-grid-columns-4 u-margin-top-1">
                     {{ range (.Pages).ByDate }}
+                    <!-- Assign tags for the path-div AND for the filter later -->
                     <div class='path-div search-div
-                                {{ with .Params.armips }}tag-{{ delimit . " tag-"}}{{ end }}
-                                {{ with .Params.tools }}tag-{{ delimit . " tag-"}}{{ end }}
-                                {{ with .Params.softwares }}tag-{{ delimit . " tag-"}}{{ end }}
-                                {{ with .Params.operatingsystems }}tag-{{ delimit . " tag-"}}{{ end }}
-                                {{ with .Params.developerprograms }}tag-{{ delimit . " tag-"}}{{ end }}
-                                {{ with .Params.subjects }}tag-{{ delimit . " tag-"}}{{ end }}'>
+                                {{ with .Params.armips }}
+                                    tag-{{ delimit . " tag-"}} 
+                                    {{ $armip_tags = . | append $armip_tags }} 
+                                {{ end }}
+                                {{ with .Params.tools }}
+                                    tag-{{ delimit . " tag-"}}
+                                    {{ $tool_tags = . | append $tool_tags }} 
+                                {{ end }}
+                                {{ with .Params.softwares }}
+                                    tag-{{ delimit . " tag-"}}
+                                {{ end }}
+                                {{ with .Params.operatingsystems }}
+                                    tag-{{ delimit . " tag-"}}
+                                {{ end }}
+                                {{ with .Params.developerprograms }}
+                                    tag-{{ delimit . " tag-"}}
+                                {{ end }}
+                                {{ with .Params.subjects }}
+                                    tag-{{ delimit . " tag-"}}
+                                {{ end }}'>
                         <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card'>
                             <ads-card-content slot="content">
                                 <ads-tag class="path-card-tag {{.Params.skillLevel}}" text="{{.Params.skillLevel}}"></ads-tag>
@@ -89,7 +106,8 @@
                                 <p class="card-description">{{.Description}}</p>
                             </ads-card-content>   
                         </ads-card>
-                    </div>
+                    </div>           
+
                     {{ end }}
                 </div>
             </div>
@@ -98,12 +116,11 @@
     </div>
 
 
-
-
-
-
 </div> <!-- End of left-right divide -->
 
+{{ range $tool_tags }}
+<h4>{{.}}</h4>
+{{end}}
 
 
 {{ partial "filtering/filter-tag.html" . }}
