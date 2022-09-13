@@ -1,4 +1,149 @@
 
+<ads-global-navigation id="global-nav-example-custom-slotted" sr-label="global-nav-example-custom-slotted navigation">
+  <div slot="top-bar-content-start" class="u-padding-left-1">
+    <span class="u-color-white">Example Custom Content</span>
+  </div>
+  <!-- Slotted Flyout Content -->
+  <div slot="tab-content" id="category1" aria-labelledby="global-nav-example-custom-slotted:tab:category1" role="tabpanel" tabindex="0">
+    <span class="u-color-white">Slotted Content Example</span>
+  </div>
+  <div slot="tab-content" id="category2" aria-labelledby="global-nav-example-custom-slotted:tab:category2" role="tabpanel" tabindex="0">
+    <span class="u-color-white">Slotted Content Example</span>
+  </div>
+  <!-- Slotted Action Content -->
+  <div slot="action-content" id="mobile-search" aria-labelledby="global-nav-example-custom-slotted:tab:mobile-search" role="tabpanel" tabindex="0">
+    <span>Example Mobile Search</span>
+    <ads-search has-search-button />
+  </div>
+  <div slot="action-content" id="account-view" aria-labelledby="global-nav-example-custom-slotted:tab:account-view" role="tabpanel" tabindex="0">
+    <span>Example Action Content</span>
+  </div>
+  <div slot="top-bar-content-end">
+    <ads-cta-button level="primary" size="small" text="Custom Content" sr-label="Example slotted content for global navigation"></ads-cta-button>
+  </div>
+</ads-global-navigation>
+<script>
+  (() => {
+    const logo = {
+      src: 'https://media.designsystem.arm.com/images/assets/logo.svg',
+      link: '#',
+      alt: 'Arm developer logo',
+    };
+
+    const actions = [
+      {
+        id: 'account-view',
+        type: 'slot',
+        slotId: 'account-view',
+        icon: 'fal fa-user',
+        title: 'Account',
+      },
+      {
+        id: 'google',
+        type: 'link',
+        icon: 'fab fa-google',
+        title: 'google',
+        link: 'http://google.com',
+      },
+      {
+        id: 'dropdown',
+        type: 'dropdown',
+        icon: 'fas fa-chevron-circle-down',
+        title: 'dropdown',
+        data: [
+          {
+            type: 'action',
+            icon: 'fab fa-google',
+            text: 'dropdown link',
+            value: 'link-1',
+            link: 'http://google.com',
+          },
+          {
+            type: 'action',
+            icon: 'far fa-globe',
+            text: 'dropdown disabled action',
+            value: 'action-1',
+            disabled: true,
+          },
+          {
+            type: 'divider',
+          },
+          {
+            type: 'action',
+            icon: 'far fa-cog',
+            text: 'dropdown action',
+            value: 'action-2',
+          },
+        ],
+      },
+    ];
+
+    const search = {};
+
+    const contextualData = [
+      {
+        id: 'category1',
+        slotId: 'category1',
+        label: 'Flyout Item',
+        link: 'https://www.arm.com/architectures',
+      },
+      {
+        id: 'category2',
+        slotId: 'category2',
+        label: 'Flyout Item',
+        items: [
+          {
+            id: 'category2-subitem',
+            label: 'Sub Item',
+            link: '#',
+          },
+        ],
+      },
+    ];
+
+    const data = [
+      {
+        id: 'example-link',
+        label: 'Link',
+        link: 'https://www.arm.com',
+      },
+      {
+        id: 'example-dropdown',
+        label: 'Dropdown',
+        items: [
+          {
+            id: 'example-dropdown__item-1',
+            label: 'Dropdown item',
+            link: 'https://www.arm.com',
+          },
+          {
+            id: 'example-dropdown__item-2',
+            label: 'Dropdown item',
+            link: 'https://www.arm.com',
+          },
+        ],
+      },
+    ];
+
+    const globalNav = document.getElementById('global-nav-example-custom-slotted');
+    globalNav.contextualData = contextualData;
+    globalNav.actions = actions;
+    globalNav.logo = logo;
+    globalNav.search = search;
+
+    globalNav.actionSelectHandler = (evt) => {
+      if (evt.action === 'search-view' || evt.action === 'mobile-search' || globalNav.actions.find(action => action.id === evt.action && action.type === 'slot')) {
+        globalNav.activeActionSlotId = evt.action === globalNav.activeActionSlotId ? undefined : evt.action;
+      } else if (globalNav.actions.find(action => action.id === evt.action && action.type === 'dropdown')) {
+        globalNav.activeActionSlotId = undefined;
+      }
+    };
+  })();
+</script>
+
+
+
+
 <ads-global-navigation theme="dark" breakpoint="lg" id="global-nav-example-default" sr-label="default navigation">
     <!-- Slotted Flyout Content -->
     <div slot="tab-content" id="category1" role="tabpanel" tabindex="0">
@@ -40,10 +185,10 @@
 
         <div class="c-row u-margin-top-1 u-margin-left-2">
           <div class="c-col">
-            <p>Looking for quick install instructions for a particular tool?</p>
+            <p theme="dark">Looking for quick install instructions for a particular tool?</p>
             
             <span style="display:inline-block;">
-                <ads-search has-search-button id="search-box" placeholder="Search by tool name" class="u-width-auto"></ads-search>
+                <ads-search theme="dark" has-search-button id="search-box" placeholder="Search by tool name" class="u-width-auto"></ads-search>
             </span>
             <span style="display:inline-block;" class="u-margin-left-1">
                 <ads-cta-link link='/install-guides'><span>See all</span></ads-cta-link>
@@ -51,6 +196,10 @@
           </div>
         </div>
       </div>
+  </div>
+
+  <div slot="top-bar-content-end">
+    <ads-cta-button level="tertiary" theme="dark" size="small" text="Contribute"></ads-cta-button>
   </div>
 </ads-global-navigation>
 
