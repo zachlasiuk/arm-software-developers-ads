@@ -47,7 +47,7 @@
 
 
     <!-- Search & Results on Right -->
-    <div class="c-col c-col-12">
+    <div class="c-col">
 
         <!-- Search bar (and hidden filters on mobile)-->
         <div class="c-row u-flex">
@@ -76,27 +76,63 @@
             <div class="c-col c-col-12">
                 <div class="u-display-grid u-gap-1 lg:u-grid-columns-1 xl:u-grid-columns-2 xxl:u-grid-columns-3 xxxl:u-grid-columns-4 u-margin-top-1">
                     {{ range (.Pages).ByDate }}
-                    <!-- Assign tags for the path-div AND for the filter later -->
+                    <!-- This div does two things, iterating over each tag in the taxonomy:
+                        1) Assign tags for filtering the learning path cards 
+                        2) Keeps track of unique tags to generate the filter column  -->
                     <div class='path-div search-div
                                 {{ with .Params.armips }}
-                                    tag-{{ delimit . " tag-"}} 
-                                    {{ $armip_tags = . | append $armip_tags }} 
+                                    {{range .}}
+                                        tag-{{.}}
+
+                                        {{ if not (in $armip_tags .) }}
+                                            {{ $armip_tags = $armip_tags | append . }} 
+                                        {{end}}
+                                    {{end}}
                                 {{ end }}
                                 {{ with .Params.tools }}
-                                    tag-{{ delimit . " tag-"}}
-                                    {{ $tool_tags = . | append $tool_tags }} 
+                                    {{ range .}}
+                                        tag-{{.}}
+
+                                        {{ if not (in $tool_tags .) }}
+                                            {{ $tool_tags = $tool_tags | append . }} 
+                                        {{end}}
+                                    {{end}}
                                 {{ end }}
                                 {{ with .Params.softwares }}
-                                    tag-{{ delimit . " tag-"}}
+                                    {{ range .}}
+                                        tag-{{.}}
+
+                                        {{ if not (in $software_tags .) }}
+                                            {{ $software_tags = $software_tags | append . }} 
+                                        {{end}}
+                                    {{end}}
                                 {{ end }}
                                 {{ with .Params.operatingsystems }}
-                                    tag-{{ delimit . " tag-"}}
+                                    {{ range .}}
+                                        tag-{{.}}
+
+                                        {{ if not (in $operatingsystem_tags .) }}
+                                            {{ $operatingsystem_tags = $operatingsystem_tags | append . }} 
+                                        {{end}}
+                                    {{ end }}
                                 {{ end }}
                                 {{ with .Params.developerprograms }}
-                                    tag-{{ delimit . " tag-"}}
+                                    {{ range .}}
+                                        tag-{{.}}
+
+                                        {{ if not (in $developerprogram_tags .) }}
+                                            {{ $developerprogram_tags = $developerprogram_tags | append . }} 
+                                        {{end}}
+                                    {{ end }}
                                 {{ end }}
                                 {{ with .Params.subjects }}
-                                    tag-{{ delimit . " tag-"}}
+                                    {{ range .}}
+                                        tag-{{.}}
+
+                                        {{ if not (in $subject_tags .) }}
+                                            {{ $subject_tags = $subject_tags | append . }} 
+                                        {{end}}
+                                    {{ end }}
                                 {{ end }}'>
                         <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card'>
                             <ads-card-content slot="content">
@@ -118,8 +154,13 @@
 
 </div> <!-- End of left-right divide -->
 
-{{ range $tool_tags }}
-<h4>{{.}}</h4>
+<!-- TEMPORARY: Test to ensure we can properly source tags from only pages in this section -->
+<h4>test for filtering:</h4>
+{{range $tool_tags}}
+    {{ $tool_url := (printf "/tools/%s" (lower .) ) }}
+    <a href='{{$tool_url}}'>{{$tool_url}}</a>
+
+    <br>
 {{end}}
 
 

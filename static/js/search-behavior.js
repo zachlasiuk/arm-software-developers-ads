@@ -16,6 +16,7 @@ function implementSearch(search_string) {
 
     // iterate over all cards, get titles
     for (let card of all_path_cards) {
+        //
         let card_title = card.querySelector('.search-title').innerHTML.toLowerCase();
 
         // Returns true if card_title includes all search terms in any order
