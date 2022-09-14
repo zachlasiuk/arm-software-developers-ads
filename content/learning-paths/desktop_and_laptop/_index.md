@@ -1,7 +1,7 @@
 ---
 maintopic: true  # only true for main segmentation on homepage
 
-title: "Desktop & Laptop"
+title: "Desktop and Laptop"
 cardimage: img/main-topic-backgrounds/desktop-and-laptop.jpg
 key_ip: 
     - Cortex-A

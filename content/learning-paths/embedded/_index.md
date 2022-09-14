@@ -11,8 +11,8 @@ key_ip_icons:
     - img/ip-icons/Arm_Cortex-R.png
 
 differentiating_info:
+    - Linux IoT
     - Automotive
-    - Linux IoT devices
     - Storage
 
 weight: 4  # Decides order of main topics on homepage

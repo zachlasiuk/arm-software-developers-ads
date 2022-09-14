@@ -5,7 +5,8 @@ title: "Mobile"
 cardimage: img/main-topic-backgrounds/mobile.jpg
 key_ip: 
     - Cortex-A
-    - Mali GPU
+    - Mali 
+    - Immortalis
 key_ip_icons:
     - img/ip-icons/Arm_Cortex-A.png
     - img/ip-icons/Arm_Mali_GPU.png
@@ -13,9 +14,7 @@ key_ip_icons:
 differentiating_info:
     - Android
     - Gaming
-    - AR/XR/VR
     - Graphics
-    - Smartphones
 
 weight: 3  # Decides order of main topics on homepage
 

@@ -1,7 +1,7 @@
 ---
 maintopic: true  # only true for main segmentation on homepage
 
-title: "Server & Cloud"
+title: "Server and Cloud"
 cardimage: img/main-topic-backgrounds/server-and-cloud.jpg
 key_ip: 
     - Neoverse
@@ -10,10 +10,8 @@ key_ip_icons:
 
 differentiating_info: 
     - Web
-    - Cloud service providers
     - Linux
     - HPC
-    - Networking
 
 weight: 1  # Decides order of main topics on homepage
 

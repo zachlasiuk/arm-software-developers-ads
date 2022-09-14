@@ -9,7 +9,7 @@ key_ip_icons:
     - img/ip-icons/Arm_Cortex-M.png
 
 differentiating_info:
-    - Bare-metal and RTOS IoT devices
+    - Bare-metal and RTOS IoT
     - tinyML
 
 weight: 5  # Decides order of main topics on homepage

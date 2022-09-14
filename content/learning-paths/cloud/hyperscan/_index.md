@@ -7,7 +7,7 @@ layout: "path"
 
 
 # Tags. No whitespace. An underscore will be visually replaced with whitespace.
-skilllevel: Getting-Started
+skilllevels: Getting-Started
 armips:
     - Neoverse
 tools:
