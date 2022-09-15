@@ -5,6 +5,13 @@ theme = "arm-design-system-hugo-theme"
 
 enableGitInfo = true
 
+[deployment]
+[[deployment.targets]]
+name = "aws"
+URL = "s3://armswdev.tk?region=us-east-1"
+cloudFrontDistributionID = "E1KJFR5JSKYU64"
+
+
 [frontmatter]
     lastmod = [ "lastmod", ":git", "date", "publishDate" ]
 

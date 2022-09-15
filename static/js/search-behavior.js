@@ -3,7 +3,7 @@
 // ==========================================================
 // SEARCHING
 function implementSearch(search_string) {
-    console.log('hi');
+    console.log('in implementSearch');
     console.log(search_string);
 
     // HANDLE if coming from search box (event) or URL (string)
@@ -34,7 +34,7 @@ function implementSearch(search_string) {
 
     // Assign this handler on page load
     (() => {
-
+        console.log('loading search-behavior.js');
         const search_box = document.getElementById('search-box');
         search_box.inputChangeHandler = implementSearch;
 

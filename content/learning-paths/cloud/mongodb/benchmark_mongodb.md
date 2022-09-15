@@ -2,7 +2,7 @@
 # User change
 title: "Benchmark MongoDB on Arm with Yahoo Cloud Serving Benchmark (YCSB)"
 
-weight: 4 # 1 is first, 2 is second, etc.
+weight: 4 # (intro is 1), 2 is first, 3 is second, etc.
 
 # Do not modify these elements
 layout: "learningpathall"

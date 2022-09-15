@@ -46,8 +46,8 @@ skilllevels: Introductory
     # Experienced       (for topics that require a fair amount of background knowledge in tools/softwares/topics to complete)
 
 armips:
-    # Groups of IP      (Cortex-M, Cortex-A, Neoverse, System IP)
-    # or Specific IP    (Cortex-M7, Neoverse-N1, AHB_Cache)
+    # Groups of IP      (Cortex-M, Cortex-A, Cortex-R, Neoverse, GPU, System IP, etc.)
+    # or Specific IP    (Cortex-M7, Neoverse-N1, AHB_Cache, etc.)
     - Neoverse
 
 tools:
@@ -66,7 +66,7 @@ softwares:
     - MongoDB
 
 operatingsystems:
-    # OSes              (Linux, Windows, Mac, FreeRTOS, Bare-metal)
+    # OSes              (Linux, Windows, macOS, FreeRTOS, Bare-metal)
     - Linux
 
 subjects:
@@ -75,7 +75,7 @@ subjects:
     - Web_Back-end
 
 developerprograms:
-    - Amazon_Community_Builders
+    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
