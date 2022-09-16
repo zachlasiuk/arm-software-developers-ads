@@ -7,23 +7,36 @@
         <div class="u-display-grid u-gap-1 md:u-grid-columns-2">
 
             <div class="c-col">
-                <ads-tag class="path-card-tag {{.Params.skillLevel}}" text="{{.Params.skillLevel}}"></ads-tag>
-                <ads-tag class="path-card-section" text="{{.Parent.Title}}"></ads-tag>
+                <!-- Tags to the left, essential -->
+                <ads-tag class="path-card-tag {{.Params.skillLevels}}" text="{{.Params.skillLevels}}"></ads-tag>
+                <!-- <ads-tag class="path-card-section" text="{{.Parent.Title}}"></ads-tag> -->
                 {{ partial "ads-cards/ads-card-style.html" . }}
 
-                <h6>Reading time:
+
+                <p class="u-margin-top-1/2 u-margin-bottom-0">Reading time:
                     <span><i class="fa-solid fa-clock"></i></span>
                     {{.Params.minutes_to_complete}} minutes
-                </h6>
-                <h6>Last updated:
+                </p>
+                <p class="u-margin-bottom-0">Last updated:
                     <span><i class="fa-solid fa-calendar-days"></i></span>
                     {{ .Lastmod.UTC.Format "Jan 2, 2006" }}
-                </h6>                         
+                </p>         
+                <p class="u-font-style-light">Arm IP: 
+                    <span><i class="fa-solid fa-microchip"></i></span>
+                    {{ range .Params.armips }}<span><a href="https://developer.arm.com/Processors#q={{.}}" target="_blank" style="text-decoration: none;">{{.}}&nbsp;&nbsp;&nbsp;</a></span>{{end}}    
+                </p>                
             </div>
-            <div class="c-col u-flex-grow-1 u-margin-top-3">
+            <div class="c-col u-flex-grow-1 u-margin-top-2">
                 <span>
-                        {{ range .Params.armips }}
-                        <ads-tag    href='{{ "/" | relLangURL}}armips/{{. | urlize}}'>
+                    {{ range .Params.subjects }}
+                        <ads-tag    href='{{ "/" | relLangURL}}subjects/{{. | urlize}}'>
+                            <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                            <span class="fa-solid fa-tag"></span>
+                            {{ replace . "_" " " }}
+                        </ads-tag>
+                    {{ end }}
+                    {{ range .Params.operatingsystems }}
+                        <ads-tag    href='{{ "/" | relLangURL}}operatingsystems/{{. | urlize}}'>
                             <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                             <span class="fa-solid fa-tag"></span>
                             {{ replace . "_" " " }}
