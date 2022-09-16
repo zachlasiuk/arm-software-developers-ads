@@ -1,8 +1,20 @@
 {{define "main"}}
-<!-- This file is themes/layouts/learning-paths/list.html-->
 
-
+<!-- Hugo variable setting -->
 {{ $current_title := .Page.Title}}
+
+<!-- Hugo processing to get current tags for this learning path area only -->
+
+        <!-- Create empty arrays to save taxonomies from this page to display on filters -->
+        {{ $armip_tags := slice}}
+        {{ $tool_tags := slice}}
+        {{ $software_tags := slice}}
+        {{ $operatingsystem_tags := slice}}
+        {{ $developerprogram_tags := slice}}
+        {{ $subject_tags := slice}}
+
+   
+
 
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap">
 
@@ -32,8 +44,6 @@
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1 u-padding-bottom-2-1/2">
     <!-- Filter bar on left -->
     <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="max-width: 320px;">
-        <!-- Arm IP-->
-        <!-- {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Arm IP" "tagname" .Site.Taxonomies.armips)}} -->
 
         <!-- Subjects -->
         {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Subjects" "tagname" .Site.Taxonomies.subjects)}}
@@ -61,17 +71,9 @@
         </ads-button>
 
         <!-- Current tag bar -->
-        <div id="current-tag-bar" class="c-row" style="min-height: 30px;">
+        <div id="current-tag-bar" class="c-row u-margin-top-1/2" style="min-height: 30px;">
             <!-- Filled dynamically by javascript & checkboxes-->
         </div>
-
-        <!-- Create empty arrays to save taxonomies from this page to display on filters -->
-        {{ $armip_tags := slice}}
-        {{ $tool_tags := slice}}
-        {{ $software_tags := slice}}
-        {{ $operatingsystem_tags := slice}}
-        {{ $developerprogram_tags := slice}}
-        {{ $subject_tags := slice}}
 
         <!-- List of learning paths on right -->
         <div class="c-row">
@@ -145,7 +147,6 @@
                             </ads-card-content>   
                         </ads-card>
                     </div>           
-
                     {{ end }}
                 </div>
             </div>
@@ -155,6 +156,8 @@
 
 
 </div> <!-- End of left-right divide -->
+
+
 
 <!-- TEMPORARY: Test to ensure we can properly source tags from only pages in this section -->
 <h4>test for filtering:</h4>

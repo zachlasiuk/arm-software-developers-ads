@@ -41,9 +41,9 @@ function addTag(tag) {
     // Display tag in 'current-tag-bar'
     display_tag = tag.replace('tag-','').replaceAll('_', ' ');
     document.querySelector('#current-tag-bar').insertAdjacentHTML(
-        'afterbegin',
+        'beforeend',
         `
-        <ads-tag href="#" class="filter-facet" id="filter-${tag}">
+        <ads-tag href="#" class="filter-facet u-margin-left-1/2" id="filter-${tag}">
             <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                 ${display_tag}
                 <a onclick="removeTag('${tag}')">

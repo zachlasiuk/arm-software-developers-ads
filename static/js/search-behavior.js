@@ -36,11 +36,13 @@ function implementSearch(search_string) {
     (() => {
         console.log('loading search-behavior.js');
         const search_box = document.getElementById('search-box');
+
         search_box.inputChangeHandler = implementSearch;
 
         // Call implementSearch function if URL has parameters
         let url_str = window.location.search;
 
+        
         if (url_str.includes('search=')) {
             // Split by & and get element that has 'search='
             let url_params = url_str.split('&');
@@ -55,4 +57,6 @@ function implementSearch(search_string) {
             search_box.setAttribute('search-value',search_str);
             implementSearch(search_str);
         }
+        
+
     })();
