@@ -16,10 +16,8 @@ learning_objectives:
 prerequisites:
     - An [Arm based instance](/cloud/platforms) from an appropriate cloud service provider.
 
-    This learning path has been verified on AWS EC2 and Oracle cloud services.
 
-
-# Tags. No whitespace. An underscore will be visually replaced with whitespace.
+## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Introductory
 armips:
     - Neoverse
@@ -29,8 +27,9 @@ softwares:
 operatingsystems:
     - Linux
 subjects:
-    - Web
+    - Web_Front-End
 developerprograms:
+    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

@@ -1,6 +1,6 @@
 ---
 # User change
-title: "Install and run Memcached on Arm servers"
+title: "Run Memcached on Arm servers"
 
 weight: 2 
 
