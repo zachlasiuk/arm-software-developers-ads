@@ -1,13 +1,31 @@
 {{define "main"}}
-<!-- themes/layouts/install-guides/single.html-->
-<a href="https://www.w3schools.com" target="_blank"><p class="u-margin-top-1/2 u-margin-bottom-0 u-margin-left-0" style="color: var(--arm-blue); text-decoration: none;"><span><img style="vertical-align: middle; width: 20px;" class="github-svg" src="/img/github.svg"/>&nbsp;&nbsp;Log an issue</p></span></a>
-        <a href="https://www.w3schools.com" target="_blank"><p class="u-margin-top-0 u-margin-left-0" style="color: var(--arm-blue); text-decoration: none;"><span><img style="vertical-align: middle; width: 20px;" class="github-svg" src="/img/github.svg"/>&nbsp;&nbsp;View page source</p></span></a>
 
-<div class="content-box">
+    <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1">
+        <!-- Left pane -->
+        <div class="c-col lg:c-col-3 xl:c-col-2 u-hide lg:u-display-block u-flex-shrink-0 card-tab-col">
+            <!-- Title top left -->
+            <h6 class="u-margin-top-1/2">{{ .Params.Title }}</h6>
+            
+            <!-- GitHub links to edit / log an issue -->
+            {{partial "github/github-links.html" .  }}
+        </div>
 
-</div>
-{{ with .Content }}
-{{ . }}
-{{ end }}
+        <!-- Right pane, content-->
+        <div class="c-col lg:c-col-9 xl:c-col-10">
+            <div class="content-box">
+                <!-- Clickable tag -->
+                <ads-tag    href='{{ "/" | relLangURL}}tools/{{.Title | urlize}}'>
+                        <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                        <span class="fa-solid fa-tag"></span>
+                        {{.Title}}
+                </ads-tag>
+
+                <!-- Content -->
+                {{ with .Content }}
+                {{ . }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
 
 {{end}}

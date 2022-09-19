@@ -12,6 +12,7 @@ armips:
     - Neoverse
 tools:
     - buildx
+    - Arm_Compiler_for_Embedded
 softwares:
     - Docker
 operatingsystems:
