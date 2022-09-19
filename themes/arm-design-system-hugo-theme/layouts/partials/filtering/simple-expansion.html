@@ -5,7 +5,7 @@
             {{ range .tagname }}
                 <ads-checkbox class="tag-{{.Page.Title}}" onclick="filterPaths(this)">
                     <a href="{{ .Page.Permalink }}">
-                        {{ replace .Page.Title "_" " " }}
+                        {{ .Page.Title }}
                     </a>
                 </ads-checkbox>
                 {{ $num_of_tags = add $num_of_tags 1 }}

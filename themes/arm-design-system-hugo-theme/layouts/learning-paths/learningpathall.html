@@ -11,38 +11,87 @@
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1">
     <!-- Left pane, filters-->
     <div class="c-col lg:c-col-3 xl:c-col-2 u-hide lg:u-display-block u-flex-shrink-0 card-tab-col">
+        
+            <div style="position:sticky; top:5px;">
 
-        <!-- Title of _index.md always top left -->
-        {{ with .Site.GetPage $thisdir}}
-            <h6 class="u-margin-top-1/2">{{ .Params.Title }}</h6>
-        {{ end }}
 
-        <!-- Dynamic, content ordered by weight-->
-        {{ range .Site.Pages.ByWeight }}
-            {{ if (eq .File.Dir $thisdir)}}
+                <!-- Title of _index.md always top left -->
+                {{ with .Site.GetPage $thisdir}}
+                    <h6 class="u-margin-top-1/2" style="font-size:1rem; font-weight: bold;">{{ .Params.Title }}</h6>
+                {{ end }}
 
-              {{ $learningpathfiles = $learningpathfiles | append . }}
 
-              <a class="a-tab" href="{{.Permalink}}">
-                <div class="c-row tab-row {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
-                    <div class="tab-right-card
-                        {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
-                        <h6 style="margin-left: 10px; margin-right: 10px; margin-top: 15px; margin-bottom: 15px;">
-                            {{ if eq .File.TranslationBaseName "_index" }} Introduction {{else}} {{.Title}} {{ end }}
-                        </h6>
+            <!-- Dynamic, content ordered by weight-->
+            {{ range .Site.Pages.ByWeight }}
+                {{ if (eq .File.Dir $thisdir)}}
+
+                {{ $learningpathfiles = $learningpathfiles | append . }}
+
+                <a class="a-tab" href="{{.Permalink}}">
+                    <div class="c-row tab-row {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
+                        <div class="tab-right-card
+                            {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
+                            <h6 style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size:1rem;">
+                                {{ if eq .File.TranslationBaseName "_index" }} Introduction {{else}} {{.Title}} {{ end }}
+                            </h6>
+                        </div>
                     </div>
-                </div>
-              </a>
-            {{ end }}
-        {{end}} 
+                </a>
+                {{ end }}
+            {{end}} 
 
-        <!-- GitHub links to edit / log an issue -->
-        {{partial "github/github-links.html" .  }}
-
+            <!-- GitHub links to edit / log an issue -->
+            {{partial "github/github-links.html" .  }}
+        </div>
     </div>
 
     <!-- Right pane, content-->
     <div class="c-col lg:c-col-9 xl:c-col-10">
+        <!-- Sticky Header, only on mobile -->
+        <div class="content-header-mobile lg:u-hide">
+            <ads-button is-circular="" class="content-header-btn-mobile" level="tertiary" size="default">
+                <i class="fas fa-list" style="color:white;"></i>
+            </ads-button>
+    
+            {{ with .Site.GetPage $thisdir}}
+                <h6 class="u-margin-top-1/2 content-header-txt-mobile">&nbsp;&nbsp;{{ .Params.Title }}</h6>
+            {{ end }}
+        </div>
+
+        <style>
+            div.content-header-mobile {
+                position:sticky; 
+                top:5px;
+                z-index: 1000;
+
+                padding-left: 8px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+
+                border-style: solid;
+                border-width: 1px;
+                border-radius: 5px;
+                border-color: var(--arm-dark-grey);
+
+                background-color: var(--arm-light-grey);
+            }
+            html[theme='dark'] div.content-header-mobile {
+                background-color: var(--arm-color-overlay-light);
+            }
+
+            .content-header-btn-mobile {
+                display: inline-block;
+                --ads-button-background-color-tertiary: var(--arm-blue);
+                cursor: pointer;
+            }
+            .content-header-txt-mobile {
+                display: inline-block;
+                font-weight: bold;
+            }
+
+
+        </style>
+
         <!-- Custom content layout depending on type -->
         {{ if eq .File.TranslationBaseName "_index" }}
             {{partial "learning-paths/introduction" .  }}

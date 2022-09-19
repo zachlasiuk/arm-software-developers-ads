@@ -14,10 +14,10 @@
         {{ if and (ne .p1.Title "Learning-paths") (ne .p1.Kind "taxonomy") }}
             {{ if ne .p1.Kind "term"}}
                 <!-- Normal breadcrumb-->
-                <ads-breadcrumb slot="breadcrumb" label="{{ .p1.Permalink }}" link="{{ .p1.Permalink }}"  {{ if eq .p1 .p2 }} current="true"{{ end }}>{{ replace .p1.Title "_" " " }}</ads-breadcrumb>
+                <ads-breadcrumb slot="breadcrumb" label="{{ .p1.Permalink }}" link="{{ .p1.Permalink }}"  {{ if eq .p1 .p2 }} current="true"{{ end }}>{{.p1.Title}}</ads-breadcrumb>
             {{else}}
                 <!-- With tag -->
-                <ads-breadcrumb slot="breadcrumb" label="{{ .p1.Permalink }}" link="{{ .p1.Permalink }}"  {{ if eq .p1 .p2 }} current="true"{{ end }}>Tag: {{ replace .p1.Title "_" " " }}</ads-breadcrumb>
+                <ads-breadcrumb slot="breadcrumb" label="{{ .p1.Permalink }}" link="{{ .p1.Permalink }}"  {{ if eq .p1 .p2 }} current="true"{{ end }}>Tag: {{.p1.Title}}</ads-breadcrumb>
             {{end}}
         {{end}}
 

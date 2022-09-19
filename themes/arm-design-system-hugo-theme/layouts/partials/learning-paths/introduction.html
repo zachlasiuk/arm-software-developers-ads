@@ -32,28 +32,28 @@
                         <ads-tag    href='{{ "/" | relLangURL}}subjects/{{. | urlize}}'>
                             <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                             <span class="fa-solid fa-tag"></span>
-                            {{ replace . "_" " " }}
+                            {{ . }}
                         </ads-tag>
                     {{ end }}
                     {{ range .Params.operatingsystems }}
                         <ads-tag    href='{{ "/" | relLangURL}}operatingsystems/{{. | urlize}}'>
                             <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                             <span class="fa-solid fa-tag"></span>
-                            {{ replace . "_" " " }}
+                            {{ . }}
                         </ads-tag>
                     {{ end }}
                     {{ range .Params.softwares }}
                         <ads-tag    href='{{ "/" | relLangURL}}softwares/{{. | urlize}}'>
                             <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                             <span class="fa-solid fa-tag"></span>
-                            {{ replace . "_" " " }}
+                            {{ . }}
                         </ads-tag>
                     {{ end }}
                     {{ range .Params.tools }}
                         <ads-tag    href='{{ "/" | relLangURL}}tools/{{. | urlize}}'>
                             <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                             <span class="fa-solid fa-tag"></span>
-                            {{ replace . "_" " " }}
+                            {{ . }}
                         </ads-tag>
                     {{ end }}
                     </span>
