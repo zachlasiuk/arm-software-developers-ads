@@ -47,50 +47,36 @@
 
     <!-- Right pane, content-->
     <div class="c-col lg:c-col-9 xl:c-col-10">
-        <!-- Sticky Header, only on mobile -->
-        <div class="content-header-mobile lg:u-hide">
-            <ads-button is-circular="" class="content-header-btn-mobile" level="tertiary" size="default">
-                <i class="fas fa-list" style="color:white;"></i>
-            </ads-button>
-    
-            {{ with .Site.GetPage $thisdir}}
-                <h6 class="u-margin-top-1/2 content-header-txt-mobile">&nbsp;&nbsp;{{ .Params.Title }}</h6>
-            {{ end }}
+        <!-- MOBILE ONLY -->
+        <!---------------------------------------------->
+        <div class="content-head-container-mobile lg:u-hide" id="content-head-container-mobile-id">
+            <!-- Sticky Header -->
+            {{ $mobile_expanded_id := "content-table-of-contents-mobile" }}
+            <div class="content-header-mobile">
+                <ads-button is-circular="" class="content-header-btn-mobile" level="tertiary" size="default" onclick="showMobileTableOfContents('{{$mobile_expanded_id}}')">
+                    <i class="fas fa-list" style="color:white;"></i>
+                </ads-button>
+        
+                {{ with .Site.GetPage $thisdir}}
+                    <h6 class="u-margin-top-1/2 content-header-txt-mobile">&nbsp;&nbsp;{{ .Params.Title }}</h6>
+                {{ end }}
+
+            </div>
+            <!-- Table of contents -->
+            <div id="{{$mobile_expanded_id}}" hidden="true">
+                {{range $learningpathfiles}}
+                    <a href="{{.Permalink}}" class="content-individual-a-mobile">
+                        <div class="content-individual-mobile {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
+                            <p class="content-individual-txt-mobile {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
+                                {{ if eq .File.TranslationBaseName "_index" }} Introduction {{else}} {{.Title}} {{ end }}
+                            </p>
+                        </div>
+                    </a>
+                {{end}}
+            </div>
+
         </div>
-
-        <style>
-            div.content-header-mobile {
-                position:sticky; 
-                top:5px;
-                z-index: 1000;
-
-                padding-left: 8px;
-                padding-top: 4px;
-                padding-bottom: 4px;
-
-                border-style: solid;
-                border-width: 1px;
-                border-radius: 5px;
-                border-color: var(--arm-dark-grey);
-
-                background-color: var(--arm-light-grey);
-            }
-            html[theme='dark'] div.content-header-mobile {
-                background-color: var(--arm-color-overlay-light);
-            }
-
-            .content-header-btn-mobile {
-                display: inline-block;
-                --ads-button-background-color-tertiary: var(--arm-blue);
-                cursor: pointer;
-            }
-            .content-header-txt-mobile {
-                display: inline-block;
-                font-weight: bold;
-            }
-
-
-        </style>
+        <!---------------------------------------------->
 
         <!-- Custom content layout depending on type -->
         {{ if eq .File.TranslationBaseName "_index" }}
@@ -113,4 +99,24 @@
 {{ partial "ads-cards/custom-tabs-style.html" . }}
 
 
+<script>
+    function showMobileTableOfContents(mobile_div_to_affect__id) {
+        console.log(mobile_div_to_affect__id)
+        const div_to_affect = document.getElementById(mobile_div_to_affect__id);
+
+        if (div_to_affect.getAttribute('hidden')) {
+            div_to_affect.removeAttribute('hidden');
+            document.getElementById('content-head-container-mobile-id').classList.add("open");
+        }
+        else {
+            div_to_affect.setAttribute('hidden',true);
+            document.getElementById('content-head-container-mobile-id').classList.remove("open");
+        }
+
+    }
+
+</script>
+
+
 {{end}}
+

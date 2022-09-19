@@ -22,3 +22,69 @@ div.content-box {
 
 
 
+/*****************************************************************/
+/*
+*       Mobile styling                                                            
+*/                  
+/*****************************************************************/
+
+/* List pages table of contents view */
+div.content-head-container-mobile {
+    position:sticky; 
+    top:0px;
+    z-index: 1000;
+    width: 100%;
+}
+
+div.content-head-container-mobile.open {
+    height:100vh;  /* to debug, could work */
+    overflow-y: scroll;
+}
+
+div.content-header-mobile {
+    display: flex;
+
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: var(--arm-dark-grey);
+
+    background-color: var(--arm-light-grey);
+}
+html[theme='dark'] div.content-header-mobile {
+    background-color: var(--arm-color-overlay-light);
+}
+
+.content-header-btn-mobile {
+    --ads-button-background-color-tertiary: var(--arm-blue);
+    cursor: pointer;
+}
+.content-header-txt-mobile {
+    font-weight: bold;
+}
+
+.content-individual-mobile {
+    padding-left: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: var(--arm-dark-grey);
+
+    background-color: var(--arm-light-grey-alt-2);
+}
+html[theme='dark'] .content-individual-mobile {
+    background-color: var(--arm-dark-grey-alt);
+}
+
+#content-table-of-contents-mobile.inactive:hover { border-color: var(--arm-orange); }
+.content-individual-txt-mobile { margin: 0px; }
+.content-individual-txt-mobile.active { color: var(--arm-light-blue); cursor: default ;}
+.content-individual-txt-mobile.inactive:hover { color: var(--arm-orange);} /* change color on inactive only */

@@ -23,7 +23,7 @@ operatingsystems:
 
 subjects:
     # Unique list per main topic. Select from existing list.
-    - Performance_and_Architecture
+    - Performance and Architecture
 developerprograms:
 
 

@@ -57,7 +57,7 @@ tools:
     # IDEs              (Arm Development Studio, VS_Code)
     # Online tools      (GitHub, Jenkins)
     # General tools     (cbuild)
-    - AWS_EC2
+    - AWS EC2
     - cbuild
     - GCC
     - Snort
@@ -73,7 +73,7 @@ operatingsystems:
 subjects:
     # Unique list per main topic. Select from existing list.
     - Databases
-    - Web_Back-end
+    - Web Back-end
 
 developerprograms:
     - 
