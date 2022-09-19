@@ -2,7 +2,10 @@
 # User change
 title: "Run Memcached on Arm servers"
 
-weight: 2 
+weight: 2
+
+layout: "learningpathall"
+ 
 
 ---
 
