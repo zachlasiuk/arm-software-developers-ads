@@ -1,3 +1,3 @@
 ---
-title: "Install Tools"
+title: "Install tools"
 ---
