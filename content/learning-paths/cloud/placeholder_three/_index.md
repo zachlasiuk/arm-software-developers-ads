@@ -11,9 +11,9 @@ skilllevels: Experienced
 armips:
     - Neoverse
 tools:
-    - AWS_EC2
-    - AWS_ECR
-    - Docker_Hub
+    - AWS EC2
+    - AWS ECR
+    - Docker Hub
 
 softwares:
     - Docker
@@ -23,7 +23,7 @@ operatingsystems:
 
 subjects:
     # Unique list per main topic. Select from existing list.
-    - Containers_and_Virtualization
+    - Containers and Virtualization
 developerprograms:
 
 

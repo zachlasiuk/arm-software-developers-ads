@@ -12,7 +12,7 @@ armips:
     - Neoverse
 tools:
     - buildx
-    - Arm_Compiler_for_Embedded
+    - Arm Compiler for Embedded
 softwares:
     - Docker
 operatingsystems:
@@ -22,7 +22,7 @@ operatingsystems:
 
 subjects:
     # Unique list per main topic. Select from existing list.
-    - Containers_and_Virtualization
+    - Containers and Virtualization
 
 developerprograms:
 

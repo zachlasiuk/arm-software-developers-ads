@@ -24,11 +24,11 @@ subjects:
     # Unique list per main topic. Select from existing list.
     - Databases
     - Storage
-    - Containers_and_Virtualization
-    - Web_Front-end
-    - Web_Back-end
+    - Containers and Virtualization
+    - Web Front-end
+    - Web Back-end
     - Networking
-    - Performance_and_Architecture
+    - Performance and Architecture
 developerprograms:
 
 

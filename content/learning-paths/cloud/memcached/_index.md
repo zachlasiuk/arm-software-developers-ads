@@ -27,7 +27,7 @@ softwares:
 operatingsystems:
     - Linux
 subjects:
-    - Web_Front-End
+    - Web Front-End
 developerprograms:
     - 
 
