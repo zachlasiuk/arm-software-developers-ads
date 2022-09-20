@@ -1,5 +1,5 @@
 ---
-title: "Install GFortran on Arm Linux"
+title: "GFortran on Arm Linux"
 
 tool_install: true
 ---

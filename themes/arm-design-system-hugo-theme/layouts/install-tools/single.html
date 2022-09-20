@@ -12,9 +12,9 @@
 
         <!-- Right pane, content-->
         <div class="c-col lg:c-col-9 xl:c-col-10">
-            <div class="content-box">
+            <div class="content-box markdown-content-div">
                 <!-- Clickable tag -->
-                <ads-tag    href='{{ "/" | relLangURL}}tools/{{.Title | urlize}}'>
+                <ads-tag    href='{{ "/" | relLangURL}}tools/{{.Title | urlize}}' class="u-margin-top-1 u-margin-bottom-1">
                         <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                         <span class="fa-solid fa-tag"></span>
                         {{.Title}}
@@ -27,5 +27,4 @@
             </div>
         </div>
     </div>
-
 {{end}}

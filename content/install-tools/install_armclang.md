@@ -1,5 +1,5 @@
 ---
-title: "Install Arm Compiler for Embedded"
+title: "Arm Compiler for Embedded"
 
 tool_install: true
 ---

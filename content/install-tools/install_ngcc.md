@@ -1,5 +1,5 @@
 ---
-title: "Install GCC on Arm Linux"
+title: "GCC on Arm Linux"
 
 tool_install: true
 ---
