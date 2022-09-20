@@ -15,7 +15,7 @@ learning_objectives:
     - Run Snort3 with Vectorscan on capture files and and measure performance.
 
 prerequisites:
-    - An appropriate [cloud service](/learning-paths/cloud/providers) account.
+    - An appropriate cloud service account. Refer to the getting started instructions [here](/learning-paths/cloud/providers).
 
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
