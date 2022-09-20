@@ -26,7 +26,7 @@ softwares:
 operatingsystems:
     - Linux
 subjects:
-    - Performance_and_Architecture
+    - Performance and Architecture
 developerprograms:
     - 
 
