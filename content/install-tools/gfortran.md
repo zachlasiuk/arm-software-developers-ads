@@ -1,14 +1,16 @@
 ---
-title: "GCC on Arm Linux"
+title: "GFortran"
 
 tool_install: true
 ---
 
-GCC, the GNU Compiler Collection, is available on all Linux distributions and can be installed using the package manager.
+[GNU Fortran](https://gcc.gnu.org/fortran/) is the Fortran compiler front end and run-time libraries for GCC, the GNU Compiler Collection.
+
+GFortran is available on all Linux distributions and can be installed using the package manager.
 
 ## Introduction
 
-Follow the instructions below to install and use GCC on an Arm Linux distribution. This covers gcc and g++ for compiling C and C++
+Follow the instructions below to install and use gfortran on an Arm Linux distribution.
 
 Confirm you are using an Arm machine by running:
 
@@ -34,13 +36,7 @@ Use the `apt` command to install software packages on any Debian based Linux dis
 
 ```console
 sudo apt update
-sudo apt install gcc g++ -y
-```
-
-Another meta-package on Ubuntu is ``build-essential``. This will install the most common tools libraries with a single command.
-
-```console
-sudo apt install -y build-essential
+sudo apt install gfortran -y
 ```
 
 ### Installing on Red Hat / Fedora / Amazon Linux
@@ -70,32 +66,29 @@ Arm GNU Toolchain is open source and freely available for use. No licenses need 
 To confirm the installation is complete run:
 
 ```console
-gcc --version
+gfortran --version
 ```
 
-To compile an example program, create a text file named hello-world.c with the contents below.
+To compile an example program, create a text file named hello-world.f90 with the contents below.
 
-```C
-#include <stdio.h>
-
-int main()
-{
-    printf("Hello, Arm World!\n");
-    return 0;
-}
+```fortran
+program hello
+  ! This is a comment line; it is ignored by the compiler
+  print *, 'Hello, Arm world!'
+end program hello
 ```
 
 To compile the hello-world program use:
 
 ```console
-gcc -o hello-world hello-world.c
+gfortran hello.f90 -o hello
 ```
 
 To run the application enter:
 
 ```console
-./hello-world
+./hello
 ```
 
-The program will print the string in the printf() statement.
+The program will print the string specified in the print statement.
 
