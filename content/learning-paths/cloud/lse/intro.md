@@ -9,9 +9,10 @@ layout: "learningpathall"
 
 ---
 
-Large System Extensions (LSE) improve the performance of atomic operations in systems with many processors. Understanding LSE helps developers port software applications to Arm servers running Neoverse processors.
 
-### Introduction
+## Introduction
+
+Large System Extensions (LSE) improve the performance of atomic operations in systems with many processors. Understanding LSE helps developers port software applications to Arm servers running Neoverse processors.
 
 In programming, when multiple processors or threads access shared data, and at least one is writing, the operations must be atomic. This means the data accesses must be treated as a single operation relative to the other processors to avoid data race conditions. Microprocessors are designed to treat sequences such as read-modify-write and memory-register exchange as single operations, even when they create multiple accesses to memory. This hardware makes programming easier. 
 
@@ -44,7 +45,7 @@ Atomic instructions work better in situations such as networking software where 
 
 With this introduction, let’s see how this applies to Arm Neoverse processors. 
 
-### LSE in Neoverse Processors
+## LSE in Neoverse Processors
 
 AWS currently offers three generations of Graviton processors. The first instance type is A1, and was announced in 2018. Announced in 2019, Graviton2 processors provide a significant performance uplift from A1. The Graviton2 instance types are M6g, T4g, C6g, and R6g. C7g instances, powered by the AWS Graviton3 processors, were announced in 2021.
 
