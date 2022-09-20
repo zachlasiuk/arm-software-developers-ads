@@ -1,6 +1,6 @@
 ---
 # User change
-title: "Run Docker images for Arm from Docker Hub and AWS Elastic Container Regitry (ECR)"
+title: "Run Docker images for Arm from Docker Hub and AWS Elastic Container Registry (ECR)"
 
 weight: 3 # 1 is first, 2 is second, etc.
 

@@ -14,7 +14,6 @@ learning_objectives:
     - Find out if an application is using Large System Extensions
 
 prerequisites:
-    - 
 
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
@@ -23,8 +22,7 @@ armips:
     - Neoverse
 tools:
     - gcc
-softwares:
-    - 
+softwares: 
 operatingsystems:
     - Linux
 subjects:
