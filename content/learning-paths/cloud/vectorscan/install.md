@@ -11,14 +11,14 @@ layout: "learningpathall"
 
 ## Pre-requisites
 
-* An [Arm based instance](/cloud/providers) from an appropriate cloud service provider
+* An [Arm based instance](/learning-paths//cloud/providers) from an appropriate cloud service provider
 * Vectorscan is known to work on the following Linux distributions. 
    * RHEL/CentOS 8
    * Ubuntu Versions - 22.04, 20.04, 18.04
 
 The instructions provided below have been tested on an Ubuntu 22.04 AWS 64-bit Arm EC2 instance (C6g.xlarge) and Ubuntu 20.04 Oracle Ampere A1 instance.
 
-* GCC for your Arm Linux distribution. Install using the steps [here](/compilers/install_ngcc).
+* GCC for your Arm Linux distribution. Install using the steps [here](/install-tools/gcc/#native).
 * [cmake](https://cmake.org/) - used here as the build system:
 ```console
 sudo apt install cmake

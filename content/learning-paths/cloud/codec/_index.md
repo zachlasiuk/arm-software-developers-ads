@@ -1,21 +1,20 @@
 ---
-title: "Install Vectorscan (Hyperscan on Arm) and use it with Snort3" 
+title: "Build and run x265 (H.265 codec) on Arm servers" 
 
 description: >
-    Learn how to install Vectorscan on Arm servers and use it with Snort3.
+    Learn how to build and run x265 on Arm servers.
 
-minutes_to_complete: 15
+minutes_to_complete: 10
 
 who_is_this_for: >
-     Learning path for software developers using Hyperscan optimized for Arm with deep packet inspection applications like Snort on Arm servers.
+    A guide for software developers to build and run x265 codec on Arm servers and measure performance
 
 learning_objectives:
-    - Install and run Vectorscan on an Arm-based instance
-    - Install and run Snort3 on your instance
-    - Run Snort3 with Vectorscan on capture files and and measure performance.
+    - Build x265 codec on Arm server
+    - Run x265 codec on Arm server with the same video of various resolutions and encoding presets to measure the performance impact
 
 prerequisites:
-    - An appropriate cloud service account. Refer to the getting started instructions [here](/learning-paths/cloud/providers).
+    - An [Arm based instance](/learning-paths/cloud/providers) from an appropriate cloud service provider.
 
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
@@ -24,11 +23,11 @@ armips:
     - Neoverse
 tools:
 softwares:
-    - Vectorscan
+    - x265
 operatingsystems:
     - Linux
 subjects:
-    - Networking
+    - Libraries
 developerprograms:
     - 
 
