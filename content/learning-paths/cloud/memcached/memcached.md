@@ -12,7 +12,7 @@ layout: "learningpathall"
 
 ## Pre-requisites
 
-* An [Arm based instance](/cloud/providers) from an appropriate cloud service provider running `Ubuntu Linux 20.04`.
+* An [Arm based instance](/learning-paths//cloud/providers) from an appropriate cloud service provider running `Ubuntu Linux 20.04`.
 
 This learning path has been tested on AWS and Oracle platforms.
 
@@ -21,7 +21,7 @@ This learning path has been tested on AWS and Oracle platforms.
 
 Launch an Arm-based instance running `Ubuntu 20.04`.
 
-Install `gcc` on your instance following the steps [here](/compilers/install_ngcc).
+Install `gcc` on your instance following the steps [here](/install-tools/gcc/#native).
 
 Install [libevent](https://libevent.org/):
 ```console
