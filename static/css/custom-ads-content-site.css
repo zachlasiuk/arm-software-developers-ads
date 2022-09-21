@@ -35,6 +35,20 @@ div.markdown-content-div h5,
 div.markdown-content-div h6 {
     margin-top: 32px;
 }
+/* Increase h3 font weight to normal to make more readable for regular reading */
+div.markdown-content-div h3 {
+    font-weight: 400;
+}
+
+/* Increase table font */
+table {
+    font-size: var(--ads-font-size-small);
+}
+@media (min-width: 576px) {
+    table {
+        font-size: var(--ads-font-size-large);
+    }
+}
 
 
 /*****************************************************************/

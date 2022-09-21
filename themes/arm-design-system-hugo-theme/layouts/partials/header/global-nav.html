@@ -54,7 +54,8 @@
   </div>
 
   <div slot="top-bar-content-end">
-    <ads-cta-button level="tertiary" theme="dark" size="small" text="Contribute"></ads-cta-button>
+    {{ $gh_repo := ($.Param "github_repo") -}}
+    <ads-cta-button level="tertiary" theme="dark" size="small" text="Contribute" onclick="location.href={{$gh_repo}};"></ads-cta-button>
   </div>
 </ads-global-navigation>
 

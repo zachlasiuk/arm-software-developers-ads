@@ -1,7 +1,24 @@
 ---
 title: "Docker"
 
-tool_install: true
+multi_install:         # True only for tools that have multiple options to install them (like Docker Engine vs Desktop). can be deleted if this does not apply.
+    - install:
+        name: "xyz"
+        page_link: "#docker-engine"
+        explination: >
+            MongoDB is fully supported on 64-bit Arm servers running Linux.
+
+    - questions:
+        question: >
+            Can you test MongoDB performance by running multiple threads executing different operation types?
+        answers:
+            - "Yes"
+            - "No"
+        correct_answer: 0                     
+        explination: >
+            You can run multiple threads executing either all the same or different database operations.
+               
+tool_install: true         # DO NOT MODIFY. Always true for tool installs
 ---
 
 # Installing Docker {#top}
