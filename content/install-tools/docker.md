@@ -19,9 +19,13 @@ multi_install:         # True only for tools that have multiple options to insta
             You can run multiple threads executing either all the same or different database operations.
                
 tool_install: true         # DO NOT MODIFY. Always true for tool installs
+
+additional_search_terms:
+  - container
+
 ---
 
-# Installing Docker {#top}
+# Install Docker {#top}
 
 Docker containers are widely used, primarily because they run the same everywhere. Containers are used on all operating systems, on all computing architectures to build, share, and run software.
 

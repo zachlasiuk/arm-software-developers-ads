@@ -2,9 +2,13 @@
 title: "GCC"
 
 tool_install: true
+
+additional_search_terms:
+  - compiler
+
 ---
 
-# GCC for the Arm Architecture {#top}
+# Install GCC for the Arm Architecture {#top}
 
 There are mulitple flavors of [GCC, the GNU Compiler Collection](https://gcc.gnu.org/), for the Arm architecture. To know which compiler you need consider the variables below.
 
