@@ -26,10 +26,9 @@ further_reading:
         link: https://community.arm.com/arm-community-blogs/b/infrastructure-solutions-blog/posts/ampere-altra-max-delivers-sustainable-high-resolution-h-265-video-encoding-without-compromise
         type: blog
     - resource:
-	title: OCI Ampere A1 Compute instances can significantly reduce video encoding costs versus modern CPUs
-	link: https://community.arm.com/arm-community-blogs/b/operating-systems-blog/posts/oracle-cloud-infrastructure-arm-based-a1
-	type: blog
-
+        title: OCI Ampere A1 Compute instances can significantly reduce video encoding costs versus modern CPUs
+        link: https://community.arm.com/arm-community-blogs/b/operating-systems-blog/posts/oracle-cloud-infrastructure-arm-based-a1
+        type: blog
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
