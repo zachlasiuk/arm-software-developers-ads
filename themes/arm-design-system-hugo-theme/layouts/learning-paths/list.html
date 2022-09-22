@@ -12,6 +12,7 @@
         {{ $operatingsystem_tags := slice}}
         {{ $developerprogram_tags := slice}}
         {{ $subject_tags := slice}}
+        {{ $skilllevel_tags := slice}}
 
    
 
@@ -84,9 +85,16 @@
                         1) Assign tags for filtering the learning path cards 
                         2) Keeps track of unique tags to generate the filter column  -->
                     <div class='path-div search-div
+                                {{ with .Params.skillLevels }}
+                                    tag-{{. | urlize}}
+
+                                    {{ if not (in $skilllevel_tags .) }}
+                                        {{ $skilllevel_tags = $skilllevel_tags | append . }} 
+                                    {{end}}
+                                {{ end }}
                                 {{ with .Params.armips }}
                                     {{range .}}
-                                        tag-{{.}}
+                                        tag-{{. | urlize}}
 
                                         {{ if not (in $armip_tags .) }}
                                             {{ $armip_tags = $armip_tags | append . }} 
@@ -95,7 +103,7 @@
                                 {{ end }}
                                 {{ with .Params.tools }}
                                     {{ range .}}
-                                        tag-{{.}}
+                                        tag-{{. | urlize}}
 
                                         {{ if not (in $tool_tags .) }}
                                             {{ $tool_tags = $tool_tags | append . }} 
@@ -104,7 +112,7 @@
                                 {{ end }}
                                 {{ with .Params.softwares }}
                                     {{ range .}}
-                                        tag-{{.}}
+                                        tag-{{. | urlize}}
 
                                         {{ if not (in $software_tags .) }}
                                             {{ $software_tags = $software_tags | append . }} 
@@ -113,7 +121,7 @@
                                 {{ end }}
                                 {{ with .Params.operatingsystems }}
                                     {{ range .}}
-                                        tag-{{.}}
+                                        tag-{{. | urlize}}
 
                                         {{ if not (in $operatingsystem_tags .) }}
                                             {{ $operatingsystem_tags = $operatingsystem_tags | append . }} 
@@ -122,7 +130,7 @@
                                 {{ end }}
                                 {{ with .Params.developerprograms }}
                                     {{ range .}}
-                                        tag-{{.}}
+                                        tag-{{. | urlize}}
 
                                         {{ if not (in $developerprogram_tags .) }}
                                             {{ $developerprogram_tags = $developerprogram_tags | append . }} 
@@ -131,7 +139,7 @@
                                 {{ end }}
                                 {{ with .Params.subjects }}
                                     {{ range .}}
-                                        tag-{{.}}
+                                        tag-{{. | urlize}}
 
                                         {{ if not (in $subject_tags .) }}
                                             {{ $subject_tags = $subject_tags | append . }} 
