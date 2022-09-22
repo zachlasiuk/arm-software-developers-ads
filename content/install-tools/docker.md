@@ -1,7 +1,14 @@
 ---
 title: "Docker"
 
-multi_install:         # True only for tools that have multiple options to install them (like Docker Engine vs Desktop). can be deleted if this does not apply.
+tool_install: true         # DO NOT MODIFY. Always true for tool installs
+
+# True only for tools that have multiple options to install them (like Docker Engine vs Desktop). Should be deleted if this does not apply.
+multi_install_context: >
+   Docker containers are widely used, primarily because they run the same everywhere. Containers are used on all operating systems, on all computing architectures to build, share, and run software.
+   The operating system of the computer and the architecture (x86 or Arm) will determine how to install Docker.
+
+multi_install:        
     - install:
         name: "xyz"
         page_link: "#docker-engine"
@@ -16,9 +23,7 @@ multi_install:         # True only for tools that have multiple options to insta
             - "No"
         correct_answer: 0                     
         explination: >
-            You can run multiple threads executing either all the same or different database operations.
-               
-tool_install: true         # DO NOT MODIFY. Always true for tool installs
+            You can run multiple threads executing either all the same or different database operations.               
 ---
 
 # Installing Docker {#top}
