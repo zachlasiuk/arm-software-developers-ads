@@ -2,10 +2,11 @@
 title: "GCC"
 
 tool_install: true
+
+additional_search_terms:
+  - compiler
+
 ---
-
-# GCC for the Arm Architecture {#top}
-
 There are mulitple flavors of [GCC, the GNU Compiler Collection](https://gcc.gnu.org/), for the Arm architecture. To know which compiler you need consider the variables below.
 
 - Target environment where you want the compiled software to run: bare metal or real time operating system (RTOS), Linux kernel and applications, Android applications, or Windows applications.
@@ -25,8 +26,7 @@ Use this option to install GCC using the Linux package manager and build applica
 Use this option to install GCC using the Linux package manager and build bare metal applications by cross compiling them for the Arm architecture from an x86 or Arm Linux host machine. Also, use this option to install and compile Linux applications from an x86 host for an Arm target. 
 
 - [GCC from the Arm GNU Toolchain](#Arm-GNU)  
-Use this option to download an install a version of GCC produced by Arm. It is available from the Arm Developer website and works on Linux, Windows, and macOS host machines. It supports bare-meatal and Linux targets. 
-
+Use this option to download an install a version of GCC produced by Arm. It is available from the Arm Developer website and works on Linux, Windows, and macOS host machines. It supports bare-metal and Linux targets. 
 
 # GCC as a native compiler on Arm Linux {#native}
 
@@ -127,7 +127,7 @@ The program will print the string in the printf() statement.
 
 [Return to the top](#top)
 
-# Install GCC as a Cross-compiler {#cross}
+# Install GCC as a cross-compiler {#cross}
 
 GCC is available on all Linux distributions and can be installed using the package manager. 
 
