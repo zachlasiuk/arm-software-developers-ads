@@ -3,7 +3,8 @@
         <div class="u-flex u-flex-column">
             {{ $num_of_tags := 0 }}
             {{ range .tagname }}
-                <ads-checkbox class="tag-{{.Page.Title | urlize}}" id="{{.Page.Title}}" onclick="filterPaths(this)">
+                <!-- filterPaths-->
+                <ads-checkbox class="tag-{{.Page.Title | urlize}}" id="{{.Page.Title}}" onclick="filterHandler_LearningPaths(this)">
                     <a href="{{ .Page.Permalink }}">
                         {{ .Page.Title }}
                     </a>

@@ -181,7 +181,32 @@
 {{ partial "ads-cards/ads-card-style.html" . }}
 
 <!-- Include javascript to filter and search -->
-<script src="/js/filter-paths.js"></script>
-<script src="/js/search-behavior.js"></script>
+<script src="/js/search-and-filter/filter-learning-paths.js"></script>
+<script src="/js/search-and-filter/search-shared.js"></script>
+<script src="/js/search-and-filter/search-learning-paths.js"></script>
+
+
+
+
+
+
+
+<script>
+    (() => {
+        // Assign inputChangeHandler to search box
+        const search_box = document.getElementById('search-box');
+        search_box.inputChangeHandler = searchHandler_LearningPaths;
+
+        // Handle search term from URL
+        let url_str = window.location.search;
+        if (url_str.includes('search=')) {
+            let search_string = parseParamsFromURL(url_str);
+
+            // Call search handler to execute
+            search_box.setAttribute('search-value',search_string);
+            searchHandler_LearningPaths(search_string);
+        }
+    })();
+</script>
 
 {{end}}

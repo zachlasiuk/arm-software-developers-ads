@@ -39,4 +39,8 @@ layout: "learningpathall"       # All files under learning paths have this same 
 learning_path_main_page: "yes"  # Indicates this should be surfaced when looking for related content. Only set for _index.md of learning path content.
 
 ---
-
+# Prerequisites
+- An [Arm based instance](/learning-paths/cloud/providers) from an appropriate cloud service provider.
+- 
+- 
+ 
