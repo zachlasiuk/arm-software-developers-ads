@@ -29,6 +29,8 @@ Arm Development Studio is license managed. License setup instructions are availa
 
 When you launch the IDE for the first time, you may be prompted to select the Development Studio Edition in `Help` > `Arm License Manager`.
 
+A free 30 day evaluation license for Arm Development Studio is also available. You can generate this in `Help` > `Arm License Manager` (requires Arm login).
+
 ## Get started {#start}
 
 To verify everything is installed correctly and to get started with your first project, follow the [Hello World Tutorial](https://developer.arm.com/documentation/101469/latest/Tutorials/Tutorial--Hello-World).

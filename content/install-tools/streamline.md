@@ -32,8 +32,14 @@ Arm Development Studio, as well as Arm Mobile Studio [Professional Edition](http
 
 ## Get started
 
+To configure your target and/or application for Streamline, follow the appropriate instructions below depending on your use case:
+
+ - [Android](https://developer.arm.com/documentation/101813)
+ - [Linux](https://developer.arm.com/documentation/101814)
+ - [Bare-metal (and RTOS)](https://developer.arm.com/documentation/101815)
+
 Depending on your type of application, choose the appropriate guide below to get started with profiling your application using Streamline.
 
-[Profile your Android Application](https://developer.arm.com/documentation/101816/latest/Getting-started-with-Streamline/Profile-your-Android-application)
-[Profile your Linux Application](https://developer.arm.com/documentation/101816/latest/Getting-started-with-Streamline/Profile-your-Linux-application)
-[Profile your bare-metal Application](https://developer.arm.com/documentation/101816/latest/Getting-started-with-Streamline/Profile-your-bare-metal-application)
+- [Profile your Android Application](https://developer.arm.com/documentation/101816/latest/Getting-started-with-Streamline/Profile-your-Android-application)
+- [Profile your Linux Application](https://developer.arm.com/documentation/101816/latest/Getting-started-with-Streamline/Profile-your-Linux-application)
+- [Profile your bare-metal Application](https://developer.arm.com/documentation/101816/latest/Getting-started-with-Streamline/Profile-your-bare-metal-application)

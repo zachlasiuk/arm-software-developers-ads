@@ -41,6 +41,12 @@ To verify everything is working OK, you can build one of the many example projec
  - Once built, click `Run` and select `ISIM system` before launching the virtual platform.
    - If a suitable program image is available (such as the `startup_Cortex-M3_AC6.axf` example from [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio)), you can load this with the `-a` option.
 
+## Fixed Virtual Platforms {#fvp}
+
+Arm supplies a library of ready made [Fixed Virtual Platforms (FVP)](https://developer.arm.com/Tools%20and%20Software/Fixed%20Virtual%20Platforms) that can be used without Arm Fast Models installed. A number of these FVPs are also provided as components of [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio).
+
+Arm Fixed Virtual Platforms are [license managed](../license).
+
 ## Further Reading
 
    [Get started with Arm Fast Models](https://developer.arm.com/documentation/102441)
