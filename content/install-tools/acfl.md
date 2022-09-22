@@ -7,9 +7,6 @@ additional_search_terms:
   - armclang
   - compiler
 ---
-
-# Install Arm Compiler for Linux
-
 [Arm Compiler for Linux](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Linux) is tailored to the development of High Performance Computing (HPC) applications. Arm Compiler for Linux is a combination of Arm C/C++ Compiler (armclang), Arm Fortran Compiler (armflang), and Arm Performance Libraries (ArmPL).
 
 ## Pre-requisites
@@ -32,21 +29,20 @@ You must have at least 2 GB of free hard disk space to both download and unpack 
 The Arm Compiler for Linux package for your Linux distribution can be downloaded [here](https://developer.arm.com/downloads/-/arm-compiler-for-linux).
 The packages contain Arm C/C++/Fortran Compiler and Arm Performance Libraries.
 
-Individual packages for just the Arm Performance Libraries can be also be downloaded from the [Product Downloads](https://developer.arm.com/downloads/-/arm-compiler-for-linux) section of the Arm website.
+Individual packages for just the Arm Performance Libraries (ArmPL) can be also be downloaded.
 
-## Setting up product license {#license}
+## Setting up product license
 
 You do not require a license to use Arm Compiler for Linux.
 
-## Installation {#install}
+## Installation
 
 To install the Arm Compiler for Linux package on your 64-bit Linux Arm machine, follow the instructions [here](https://developer.arm.com/documentation/102621/0100/Install?lang=en).
 
-## Get started {#start}
+## Get started
 
 To get started with the [Arm Fortran Compiler](https://developer.arm.com/Tools%20and%20Software/Arm%20Fortran%20Compiler) and learn how to use it to compile Fortran source into an executable binary, follow the procedure [here](https://developer.arm.com/documentation/101380/2202/Get-started/Get-started-with-Arm-Fortran-Compiler).
 
 To get started with the [Arm C/C++ Compiler](https://www.arm.com/products/development-tools/server-and-hpc/allinea-studio/cpp-compiler#:~:text=Arm%20C%2FC%2B%2B%20Compiler%20provides,C%2B%2B%2014%20and%20prior%20standards.&text=Our%20commercial%20compiler%20is%20based,by%20Arm%20for%20our%20architecture) and learn how to use it to compile C/C++ source into an executable binary, follow the procedure [here](https://developer.arm.com/documentation/101458/2202/Get-started/Get-started-with-Arm-C-C---Compiler).
 
 To get started with the [Arm Performance Libraries](https://developer.arm.com/Tools%20and%20Software/Arm%20Performance%20Libraries) and learn how to select the optimal library for your system, follow the guide [here](https://developer.arm.com/documentation/102574/0100).
-

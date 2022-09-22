@@ -3,9 +3,6 @@ title: "Arm Socrates"
 
 tool_install: true
 ---
-
-# Install Arm Socrates
-
 [Arm Socrates](https://developer.arm.com/Tools%20and%20Software/Socrates) is a tool used to select, configure and create Arm IP for easy and error free integration into a System on Chip(SoC). 
 
 This article discusses how to download, install and get started with Socrates.
@@ -14,7 +11,7 @@ This article discusses how to download, install and get started with Socrates.
 
 Arm Socrates tooling requires a Linux host machine. Full specifications are given in section 3.2 of the [Installation Guide](https://developer.arm.com/documentation/101400)
 
-## Download installer packages {#download}
+## Download installer packages
 
 Socrates is a component of [Arm Hardware Success Kits](https://www.arm.com/products/development-tools/success-kits). It is available to download via the [Arm Product Download Hub](https://developer.arm.com/downloads). You will need to set up an account for this system to be able to download. It may be that only certain contacts within your organization have such access. If you are unsure, please contact your Arm account manager for assistance.
 
@@ -22,13 +19,15 @@ You can download Socrates as an individual standalone component, or you can down
 
 Full installation instructions are provided [here](https://developer.arm.com/documentation/101400).
 
-## Setting up product license {#license}
+## Setting up product license
 
-Arm Socrates Tool is license managed, and is enabled by a [Hardware Success Kit](https://www.arm.com/products/development-tools/success-kits) license. Configuration of some Arm IP products require a corresponding license for that IP.
+Arm Socrates Tool is license managed. License setup instructions are available [here](../license).
 
-You will need to set the environment variable `ARMLMD_LICENSE_FILE` to an appropriate license server. Full details for this are provided in Section 5 "Setting up the License" of the [Installation Guide](https://developer.arm.com/documentation/101400).
+Configuration of some Arm IP products require a corresponding license for that IP.
 
-## Get started {#start}
+Full details are provided in Section 5 "Setting up the License" of the [Installation Guide](https://developer.arm.com/documentation/101400).
+
+## Get started
 
 To check Socrates has installed correctly, use the socrates.sh command or double‑click the Socrates™ icon to start Socrates™.
 You can run socrates.sh directly from the installation location, through an alias to the installation location, or you can add the installation location to your path variable.

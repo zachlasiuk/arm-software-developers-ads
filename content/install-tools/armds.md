@@ -3,46 +3,31 @@ title: "Arm Development Studio"
 
 tool_install: true
 ---
-
-# Install Arm Development Studio
-
 [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio) is the most comprehensive embedded C/C++ dedicated software development solution. It is used for validation of SoC debug through emulation, simulation, FPGA, and silicon bring-up design and verification stages. It has the earliest support for all Arm CPUs and interconnects.
 
 ## Pre-requisites
 
-Arm Development Studio supports the following host platforms:
+Full host platform requirements are given in the [Getting Started Guide](https://developer.arm.com/documentation/101469/2022-0/Installing-and-configuring-Arm-Development-Studio/Hardware-and-host-platform-requirements).
 
-  * Windows 10
-  * Red Hat Enterprise Linux 7 Workstation
-  * Ubuntu Desktop Edition 18.04 LTS
-  * Ubuntu Desktop Edition 20.04 LTS
+## Download installer packages
 
-Full host platform requirements are given in the [Getting Started Guide](https://developer.arm.com/documentation/101469/2022-0/Installing-and-configuring-Arm-Development-Studio/Hardware-and-host-platform-requirements)
+The installer will depend on the [edition](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio#Editions) of Development Studio that you are entitled to. 
 
-## Download installer packages {#download}
+Gold, Silver, and Bronze editions are one installer, with available features defined by the license. The version is denoted by `year.index`, where `index` is a number (for example `2022.0`).
 
-You can download the Development Studio installer and examples suite from the [Product Downloads section]((https://developer.arm.com/downloads/-/arm-development-studio-downloads)) of the Arm website. Linux and Windows hosts are supported.
+Development Studio Platinum Edition has its own installation package. The version is denoted by `year.index`, where `index` is a letter (for example `2022.a`).
+
+You can download the Development Studio installer from the [Product Download Hub](https://developer.arm.com/downloads).
 
 For Windows hosts, follow the installation instructions provided [here](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio/Installing-on-Windows).
 
 For Linux hosts, follow the installation instructions provided [here](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio/Installing-on-Linux). Note also [additional Linux libraries](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio/Additional-Linux-libraries) are required.
 
+## Setting up license
 
-## Setting up product license {#license}
+Arm Development Studio is license managed. License setup instructions are available [here](../license).
 
-Arm Development Studio is license managed. The licenses are enabled by a [Success Kit](https://www.arm.com/products/development-tools/success-kits).
-
-Since Arm Development Studio version 2022.0 and 2022.a, Arm User-based licensing (UBL) is supported. To check if you have such a license enabled, use the
-```console
-armlm inspect
-```
-command. If a license is reported, then you are ready to use Arm Development Studio (and other Arm tools).
-
-If no license is listed, you must [activate](https://developer.arm.com/documentation/102516/latest/Using-user-based-licensing) your license appropriately.
-
-If using earlier versions or if no UBL license is available, you will need to set the environment variable `ARMLMD_LICENSE_FILE` is set to an appropriate license server.
-
-Full license setup instructions are available [here](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio/Licensing-Arm-Development-Studio)
+When you launch the IDE for the first time, you may be prompted to select the Development Studio Edition in `Help` > `Arm License Manager`.
 
 ## Get started {#start}
 

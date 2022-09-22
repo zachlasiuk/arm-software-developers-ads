@@ -7,9 +7,6 @@ additional_search_terms:
   - compiler
 
 ---
-
-# Install GFortran
-
 [GNU Fortran](https://gcc.gnu.org/fortran/) is the Fortran compiler front end and run-time libraries for GCC, the GNU Compiler Collection.
 
 GFortran is available on all Linux distributions and can be installed using the package manager.
