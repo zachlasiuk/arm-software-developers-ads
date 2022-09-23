@@ -7,7 +7,7 @@ additional_search_terms:
   - compiler
 
 ---
-All Arm tools are license managed. Arm is migrating to a User Based Licensing (UBL) system which greatly simplifies license configuration. It is available for [Arm Success Kits](../successkits).
+All Arm tools are license managed. Arm is migrating to a User Based Licensing (UBL) system which greatly simplifies license configuration. It is available for [Arm Success Kits](../successkits/).
 
 With a UBL license you have unlimited access to all components within the success kit you have enabled. The license is cached locally for up to 7 days, enabling remote or traveling users to have access to tools without connecting to their internal network.
 

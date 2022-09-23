@@ -28,7 +28,7 @@ Windows users, once installed, open the System Canvas IDE, and select File > Pre
 
 ## Setting up product license
 
-Arm Fast Models are license managed. License setup instructions are available [here](../license).
+Arm Fast Models are license managed. License setup instructions are available [here](../license/).
 
 ## Get started
 
@@ -45,7 +45,7 @@ To verify everything is working OK, you can build one of the many example projec
 
 Arm supplies a library of ready made [Fixed Virtual Platforms (FVP)](https://developer.arm.com/Tools%20and%20Software/Fixed%20Virtual%20Platforms) that can be used without Arm Fast Models installed. A number of these FVPs are also provided as components of [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio).
 
-Arm Fixed Virtual Platforms are [license managed](../license).
+Arm Fixed Virtual Platforms are [license managed](../license/).
 
 ## Further Reading
 

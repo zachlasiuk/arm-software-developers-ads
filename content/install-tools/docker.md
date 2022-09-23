@@ -1,23 +1,33 @@
 ---
 title: "Docker"
 
-multi_install:         # True only for tools that have multiple options to install them (like Docker Engine vs Desktop). can be deleted if this does not apply.
+tool_install: true         # DO NOT MODIFY. Always true for tool installs
+
+# True only for tools that have multiple options to install them (like Docker Engine vs Desktop). Should be deleted if this does not apply.
+multi_install_context: >
+   Docker containers are widely used, primarily because they run the same everywhere. Containers are used on all operating systems, on all computing architectures to build, share, and run software.
+   The operating system of the computer and the architecture (x86 or Arm) will determine how to install Docker.
+
+multi_install:        
     - install:
-        name: "xyz"
+        name: "Docker Engine on Linux"
         page_link: "#docker-engine"
         explination: >
-            MongoDB is fully supported on 64-bit Arm servers running Linux.
+            Docker Engine for Linux runs on a variety of Linux distributions and architectures, including arm and arm64 (aarch64). Use these instructions for Linux and Chrome OS (using the Linux feature).
 
-    - questions:
-        question: >
-            Can you test MongoDB performance by running multiple threads executing different operation types?
-        answers:
-            - "Yes"
-            - "No"
-        correct_answer: 0                     
+    - install:
+        name: "Docker Desktop"
+        page_link: "#docker-desktop"
         explination: >
-            You can run multiple threads executing either all the same or different database operations.
-               
+            Docker Desktop is the easiest way to install Docker on Windows and macOS. The macOS version supports both Intel and Apple Silicon. The Windows version does not support Windows on Arm.
+            There is also a new Docker Desktop for Linux available if the machine has KVM support and is running a KDE or Gnome desktop environment.    
+
+    - install:
+        name: "Docker on Windows on Arm"
+        page_link: "#docker-woa"
+        explination: >
+            Docker can be run on Windows on Arm machines using the Windows Subsystem for Linux 2 (WSL2). There is no Docker Desktop for Windows on Arm, [please show your support by asking for it](https://github.com/docker/roadmap/issues/91)
+
 tool_install: true         # DO NOT MODIFY. Always true for tool installs
 
 additional_search_terms:
@@ -252,8 +262,9 @@ There is no Docker Desktop for Windows on Arm, [please show your support by aski
 
 ### Example Windows on Arm computers
 
-- [Lenovo Thinkpad X13s](https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadx/thinkpad-x13s-(13-inch-snapdragon)/len101t0019)
-- [Microsoft Surface Pro X](https://www.microsoft.com/en-us/d/surface-pro-x/8xtmb6c575md?activetab=pivot%3aoverviewtab)
+- Lenovo Thinkpad X13s
+- Microsoft Surface Pro X
+- Samsung Galaxy Book S
 
 ### Install and test Docker Engine
 

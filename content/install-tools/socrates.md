@@ -21,7 +21,7 @@ Full installation instructions are provided [here](https://developer.arm.com/doc
 
 ## Setting up product license
 
-Arm Socrates Tool is license managed. License setup instructions are available [here](../license).
+Arm Socrates Tool is license managed. License setup instructions are available [here](../license/).
 
 Configuration of some Arm IP products require a corresponding license for that IP.
 

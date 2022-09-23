@@ -28,12 +28,12 @@ For more information, see the [Product Download Hub Getting Started Guide](https
 
 ## Component installation and setup
 
-[Install Arm Development Studio](../armds)
+[Install Arm Development Studio](../armds/)
 
-[Install Arm Compiler for Embedded](../armclang)
+[Install Arm Compiler for Embedded](../armclang/)
 
-[Install Arm Fast Models](../fm)
+[Install Arm Fast Models](../fm/)
 
-[Install Arm Socrates](../socrates)
+[Install Arm Socrates](../socrates/)
 
-[User license setup](../license)
+[User license setup](../license/)

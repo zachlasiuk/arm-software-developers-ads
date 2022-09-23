@@ -11,7 +11,7 @@ additional_search_terms:
 
 A safety qualified branch of Arm Compiler for Embedded, known as [Arm Compiler for Embedded FuSa](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Embedded%20FuSa), is available for safety critical applications.
 
-Arm Compiler for Embedded and Arm Compiler for Embedded FuSa are [license managed](../license).
+Arm Compiler for Embedded and Arm Compiler for Embedded FuSa are [license managed](../license/).
 
 ## Use compiler supplied with Arm Development Studio / Keil MDK
 
@@ -76,7 +76,7 @@ Further installation instructions are given in the [documentation](https://devel
 
 ## Setting up product license
 
-Arm Compiler for Embedded and Arm Compiler for Embedded FuSa are license managed. License setup instructions are available [here](../license).
+Arm Compiler for Embedded and Arm Compiler for Embedded FuSa are license managed. License setup instructions are available [here](../license/).
 
 ## Get started
 
