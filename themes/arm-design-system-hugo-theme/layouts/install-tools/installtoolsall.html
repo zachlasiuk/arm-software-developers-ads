@@ -64,18 +64,37 @@
                 {{ . }}
                 {{ end }}
 
+            </div>
+
+            <div class="content-box markdown-content-div">
                 <!-- Multi-tool easy routing to new pages, ONLY for main multi_install page -->
-                {{if and (.Params.multi_install)}}
-                    {{ with .Params.multi_install}}
-                        {{.}}
-                    {{end}}
+                {{if .Params.multi_install}}
+                    <div class="c-row">
+                        <div class="c-col">
+                            <h3>Select a specific version of {{.Title}} to install:</h3>
+                            <div class="u-display-grid u-gap-1 md:u-grid-columns-2 lg:u-grid-columns-2 xl:u-grid-columns-3 xxl:u-grid-columns-3 u-margin-top-1">
+                                {{range $index, $multi := $toolfiles}}
+                                    {{ if ne .File.TranslationBaseName "_index" }} 
+                                        <ads-card has-hover-effect class="path-card" link="{{.Permalink}}">
+                                            <ads-card-image slot="image" style="max-height: 75px;" src="/img/tool-install-card-imgs/tool-color-{{mod $index 6}}.jpg" class="u-bg-position-center"></ads-card-image>
+                                            <ads-card-content slot="content">
+                                                <h3 class="u-color-arm-blue u-margin-top-1/2 u-margin-bottom-1/2">{{.Title}}</h3>
+                                            </ads-card-content>   
+                                        </ads-card>
+                                    {{end}}
+                                {{end}}
+                            </div>
+                        </div>
+                    </div>
                 {{end}}
 
             </div>
+
 
         </div>
     </div>
 
 {{ partial "ads-cards/custom-tabs-style.html" . }}
+{{ partial "ads-cards/ads-card-style.html" . }}
 
 {{end}}

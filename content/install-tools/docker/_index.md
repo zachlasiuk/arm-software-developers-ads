@@ -1,22 +1,7 @@
 ---
 title: "Docker"
 
-multi_install:        
-    - install:
-        name: "Docker Engine on Linux"
-        page_link: "#docker-engine"
-
-    - install:
-        name: "Docker Desktop"
-        page_link: "#docker-desktop"
-
-
-    - install:
-        name: "Docker on Windows on Arm"
-        page_link: "#docker-woa"
-
-
-
+multi_install: true             # DO NOT MODIFY. Always true for the main multi-install page
 tool_install: true              # DO NOT MODIFY. Always true for tool installs
 layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 weight: 1                       # DO NOT MODIFY. Always 1 for this page
