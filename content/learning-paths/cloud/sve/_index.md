@@ -63,6 +63,8 @@ tools:
 
 softwares:
     # Languages         (Python, Go, MongoDB, Assembly, Java)
+    - C
+    - Assembly
 
 operatingsystems:
     # OSes              (Linux, Windows, macOS, FreeRTOS, Bare-metal)
@@ -71,6 +73,8 @@ operatingsystems:
 subjects:
     # Unique list per main topic. Select from existing list.
     - HPC
+    - ML
+    - DSP
 
 developerprograms:
     - 

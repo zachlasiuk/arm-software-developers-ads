@@ -22,7 +22,7 @@ review:
             SVE and SVE2 do not define the size of the vector registers, but constrains it to a range of possible values, from a minimum of 128 bits up to a maximum of 2048 in 128-bit wide units.
     - questions:
         question: >
-            The size of the predicate register is...
+            Complete the sentence: the size of the predicate register is...
         answers:
             - "1/8th the size of SVE registers"
             - "the same as the vector register"

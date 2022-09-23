@@ -4,9 +4,11 @@
 # ================================================================================
 
 next_step_guidance: >
-    To go further, you may be interested in development tools for SVE. 
-    - Debugging: [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio) or [Arm DDT, part of Arm Forge](https://developer.arm.com/Tools%20and%20Software/Arm%20Forge)
-    - Profiling: [Arm Streamline](https://developer.arm.com/Tools%20and%20Software/Streamline%20Performance%20Analyzer) or [Arm MAP, part of Arm Forge](https://developer.arm.com/Tools%20and%20Software/Arm%20Forge)
+    To go further, you may be interested in development tools for SVE:
+
+    - For debugging: [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio) or [Arm DDT, part of Arm Forge](https://developer.arm.com/Tools%20and%20Software/Arm%20Forge)
+
+    - For profiling: [Arm Streamline](https://developer.arm.com/Tools%20and%20Software/Streamline%20Performance%20Analyzer) or [Arm MAP, part of Arm Forge](https://developer.arm.com/Tools%20and%20Software/Arm%20Forge)
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
 recommended_path: ""
