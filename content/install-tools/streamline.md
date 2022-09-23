@@ -20,7 +20,7 @@ Download the appropriate package from the [Product Download Hub](https://develop
 
 Install Arm Mobile Studio using these [instructions](https://developer.arm.com/documentation/102526).
 
-Install Arm Development Studio using the instructions in the [Arm Development Studio Getting Started Guide](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio). See also [this article](../armds).
+Install Arm Development Studio using the instructions in the [Arm Development Studio Getting Started Guide](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio). See also [this article](../armds/).
 
 If using an Android target, you must install Android Debug Bridge(adb) available with [Android SDK platform tools](https://developer.android.com/studio/releases/platform-tools). Add the path to the downloaded Android SDK platform tools directory to your `PATH` environment variable.
 
@@ -28,7 +28,7 @@ If using an Android target, you must install Android Debug Bridge(adb) available
 
 Arm Mobile Studio includes a free starter edition license which is automatically configured.
 
-Arm Development Studio, as well as Arm Mobile Studio [Professional Edition](https://developer.arm.com/Tools%20and%20Software/Arm%20Mobile%20Studio#Editions), is license managed. License setup instructions are available [here](../license).
+Arm Development Studio, as well as Arm Mobile Studio [Professional Edition](https://developer.arm.com/Tools%20and%20Software/Arm%20Mobile%20Studio#Editions), is license managed. License setup instructions are available [here](../license/).
 
 ## Get started
 

@@ -25,7 +25,7 @@ For Linux hosts, follow the installation instructions provided [here](https://de
 
 ## Setting up license
 
-Arm Development Studio is license managed. License setup instructions are available [here](../license).
+Arm Development Studio is license managed. License setup instructions are available [here](../license/).
 
 When you launch the IDE for the first time, you may be prompted to select the Development Studio Edition in `Help` > `Arm License Manager`.
 

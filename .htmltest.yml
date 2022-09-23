@@ -1,0 +1,3 @@
+DirectoryPath: "public"
+IgnoreURLs:
+- "fonts.gstatic.com"

@@ -262,8 +262,9 @@ There is no Docker Desktop for Windows on Arm, [please show your support by aski
 
 ### Example Windows on Arm computers
 
-- [Lenovo Thinkpad X13s](https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadx/thinkpad-x13s-(13-inch-snapdragon)/len101t0019)
-- [Microsoft Surface Pro X](https://www.microsoft.com/en-us/d/surface-pro-x/8xtmb6c575md?activetab=pivot%3aoverviewtab)
+- Lenovo Thinkpad X13s
+- Microsoft Surface Pro X
+- Samsung Galaxy Book S
 
 ### Install and test Docker Engine
 

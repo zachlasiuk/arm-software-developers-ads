@@ -10,9 +10,9 @@ layout: "learningpathall"
 
 ## Pre-requisites
 
-It is assumed you have installed Arm Development Studio and configured your license. For full instructions see [here](/install-tools/armds).
+It is assumed you have installed Arm Development Studio and configured your license. For full instructions see [here](/install-tools/armds/).
 
-Alternatively you can install [Arm Compiler for Embedded](/install-tools/armclang) and [Arm Fixed Virtual Platforms](/install-tools/fm#fvp) individually.
+Alternatively you can install [Arm Compiler for Embedded](/install-tools/armclang/) and [Arm Fixed Virtual Platforms](/install-tools/fm#fvp/) individually.
 
 We shall use the `FVP_Base_Cortex-A73x2-A53x4` platform, which is a complex system, containing two processor clusters.
 
