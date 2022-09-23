@@ -76,7 +76,7 @@
         {{ end }}  
     <h2 class="u-margin-top-2">Prerequisites</h2>
         {{ range .Params.prerequisites }}
-            <li class="u-margin-left-2">{{.}}</li>
+            <li class="u-margin-left-2">{{. | markdownify}}</li>
         {{ end }}        
 </div>
 
