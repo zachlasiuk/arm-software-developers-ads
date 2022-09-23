@@ -1,7 +1,8 @@
 ---
 title: "Arm Development Studio"
 
-tool_install: true
+tool_install: true              # DO NOT MODIFY. Always true for tool installs
+layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
 [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio) is the most comprehensive embedded C/C++ dedicated software development solution. It is used for validation of SoC debug through emulation, simulation, FPGA, and silicon bring-up design and verification stages. It has the earliest support for all Arm CPUs and interconnects.
 

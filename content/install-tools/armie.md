@@ -1,8 +1,8 @@
 ---
 title: "Arm Instruction Emulator"
 
-tool_install: true
-
+tool_install: true              # DO NOT MODIFY. Always true for tool installs
+layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
 [Arm Instruction Emulator](https://developer.arm.com/Tools%20and%20Software/Arm%20Instruction%20Emulator) is a software tool that runs on 64-bit Arm platforms and emulates [Scalable Vector Extension(SVE)](https://developer.arm.com/documentation/102476/latest/instructions). This tool allows you to run your compiled SVE application binaries on hardware that is not SVE-enabled.
 

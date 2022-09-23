@@ -1,7 +1,8 @@
 ---
 title: "Arm Streamline"
 
-tool_install: true
+tool_install: true              # DO NOT MODIFY. Always true for tool installs
+layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
 [Arm Streamline Performance Analyzer](https://developer.arm.com/Tools%20and%20Software/Streamline%20Performance%20Analyzer) is an application profiler for Android, Linux and bare-metal applications. This tool helps you optimize your software written for devices with Arm processors.
 

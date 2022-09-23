@@ -1,0 +1,81 @@
+{{define "main"}}
+
+<!-- Define variables for dynamic creation-->
+{{ $thisdir := .File.Dir }}
+{{ $thisfile:= .File.TranslationBaseName}}
+{{ $toolfiles := slice }}
+
+
+
+
+    <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1">
+        <!-- Left pane -->
+        <div class="c-col lg:c-col-3 xl:c-col-2 u-hide lg:u-display-block u-flex-shrink-0 card-tab-col">
+            <div style="position:sticky; top:5px;">
+
+                <!-- Title top left -->
+                {{if or (.Params.multi_install) (.Params.multitool_install_part)}}
+                    {{ with .Site.GetPage $thisdir}}
+                        <h6 class="u-margin-top-1/2" style="font-size:1em; font-weight: normal;">{{ .Params.Title }}</h6>
+                    {{ end }}             
+                {{else}}
+                    <h6 class="u-margin-top-1/2" style="font-size:1em; font-weight: normal;">{{ .Params.Title }}</h6>
+                {{end}}
+
+                <!-- If Multi_install, create dynamic nav menu, content ordered by weight-->
+                {{if or (.Params.multi_install) (.Params.multitool_install_part)}}
+                    {{ range .Site.Pages.ByWeight }}
+                        {{ if (eq .File.Dir $thisdir)}}
+
+                            {{ $toolfiles = $toolfiles | append . }}
+
+                            <!-- Call partial to fill out navigation tabs -->
+                            {{partial "ads-cards/custom-content-navs.html" (dict "context" . "thisfile" $thisfile)  }}
+
+                        {{ end }}
+                    {{end}} 
+                {{end}}
+
+
+                <!-- GitHub links to edit / log an issue -->
+                {{partial "github/github-links.html" .  }}
+            </div>
+        </div>
+
+        <!-- Right pane, content-->
+        <div class="c-col lg:c-col-9 xl:c-col-10">
+
+            <!-- if multi-tool, Mobile only shown navigation - sticky header -->
+            {{if or (.Params.multi_install) (.Params.multitool_install_part)}}
+                {{partial "ads-cards/custom-content-navs-mobile.html" (dict "context" .    "thisfile" $thisfile    "thisdir" $thisdir    "filesindir" $toolfiles)  }}
+            {{end}}
+
+            <!-- Main content display!-->
+            <div class="content-box markdown-content-div">
+                <!-- Clickable tag -->
+                <ads-tag    href='{{ "/" | relLangURL}}tools/{{.Title | urlize}}' class="u-margin-top-1 u-margin-bottom-1">
+                        <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                        <span class="fa-solid fa-tag"></span>
+                        {{.Title}}
+                </ads-tag>
+
+                <!-- Content -->
+                {{ with .Content }}
+                {{ . }}
+                {{ end }}
+
+                <!-- Multi-tool easy routing to new pages, ONLY for main multi_install page -->
+                {{if and (.Params.multi_install)}}
+                    {{ with .Params.multi_install}}
+                        {{.}}
+                    {{end}}
+                {{end}}
+
+            </div>
+
+        </div>
+    </div>
+
+{{ partial "ads-cards/custom-tabs-style.html" . }}
+
+{{end}}

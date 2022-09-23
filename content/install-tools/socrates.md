@@ -1,7 +1,8 @@
 ---
 title: "Arm Socrates"
 
-tool_install: true
+tool_install: true              # DO NOT MODIFY. Always true for tool installs
+layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
 [Arm Socrates](https://developer.arm.com/Tools%20and%20Software/Socrates) is a tool used to select, configure and create Arm IP for easy and error free integration into a System on Chip(SoC). 
 

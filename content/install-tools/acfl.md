@@ -1,11 +1,13 @@
 ---
 title: "Arm Compiler for Linux"
 
-tool_install: true
-
 additional_search_terms:
   - armclang
   - compiler
+
+
+tool_install: true              # DO NOT MODIFY. Always true for tool installs
+layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
 [Arm Compiler for Linux](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Linux) is tailored to the development of High Performance Computing (HPC) applications. Arm Compiler for Linux is a combination of Arm C/C++ Compiler (armclang), Arm Fortran Compiler (armflang), and Arm Performance Libraries (ArmPL).
 

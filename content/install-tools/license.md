@@ -1,11 +1,11 @@
 ---
 title: "User license setup"
 
-tool_install: true
-
 additional_search_terms:
   - compiler
 
+tool_install: true              # DO NOT MODIFY. Always true for tool installs
+layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
 All Arm tools are license managed. Arm is migrating to a User Based Licensing (UBL) system which greatly simplifies license configuration. It is available for [Arm Success Kits](../successkits/).
 
