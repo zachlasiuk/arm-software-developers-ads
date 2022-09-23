@@ -14,10 +14,6 @@ learning_objectives:
     - Install and run Snort3 on your instance
     - Run Snort3 with Vectorscan on capture files and and measure performance.
 
-prerequisites:
-    - An appropriate cloud service account. Refer to the getting started instructions [here](/learning-paths/cloud/providers).
-
-
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Introductory
 armips:
@@ -38,6 +34,8 @@ developerprograms:
 weight: 1                       # _index.md always has weight of 1 to order correctly
 layout: "learningpathall"       # All files under learning paths have this same wrapper
 learning_path_main_page: "yes"  # Indicates this should be surfaced when looking for related content. Only set for _index.md of learning path content.
+# ================================================================================
 
+# Prereqs
 ---
-
+- An appropriate cloud service account. Refer to the getting started instructions [here](/learning-paths/cloud/providers).
