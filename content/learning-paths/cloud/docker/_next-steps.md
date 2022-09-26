@@ -29,7 +29,7 @@ further_reading:
         title: Docker mainfest documentation
         link: https://docs.docker.com/engine/reference/commandline/manifest
         type: documentation
-     - resource:
+    - resource:
         title: Blog by Docker on buildx
         link: https://www.docker.com/blog/how-to-rapidly-build-multi-architecture-images-with-buildx
         type: blog
