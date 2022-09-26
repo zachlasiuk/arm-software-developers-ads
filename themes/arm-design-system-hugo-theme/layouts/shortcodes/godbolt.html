@@ -1,17 +1,25 @@
 <!-- 
     Uses Godbolt to compile C code with aarch64 GCC 12
     Usage:
-    - src="": Input source code
+    - width=""
+    - height=""
+    - src="": Input source code in clear text. Use \n to jump to line
     - type="diff" -lopt="X" -ropt="Y": Displays assembly and compares when compiled with options X (left) and Y (right)
+    OR
     - type="output" -opt="X" Displays assembly and compiler output when compiled with options X
 -->
 
 <!-- Global variables -->
-{{ $root := "https://godbolt.org/e?hideEditorToolbars=true#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:14,fontUsePx:'0',j:1,lang:___c,source:'" }}
-{{ $editor := "'),l:'5',n:'0',o:'C+source+%231',t:'0')),k:31.22715404699739,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:carm64g1210,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:14,fontUsePx:'0',j:1,lang:___c,libs:!(),options:'" }}
-{{ $assembly := "',source:1,tree:'1'),l:'5',n:'0',o:'ARM64+gcc+12.1+(C,+Editor+%231,+Compiler+%231)',t:'0'),(h:compiler,i:(compiler:carm64g1210,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:14,fontUsePx:'0',j:2,lang:___c,libs:!(),options:'" }}
-{{ $diff := "',source:1,tree:'1'),l:'5',n:'0',o:'ARM64+gcc+12.1+(C,+Editor+%231,+Compiler+%232)',t:'0'),(h:diff,i:(fontScale:14,fontUsePx:'0',lhs:2,lhsdifftype:0,rhs:1,rhsdifftype:0),l:'5',n:'0',o:'Diff+Viewer+ARM64+gcc+12.1+vs+ARM64+gcc+12.1',t:'0')),k:68.77284595300262,l:'4',n:'0',o:'',s:2,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4" }}
-{{ $output := "',source:1,tree:'1'),l:'5',n:'0',o:'ARM64+gcc+12.1+(C,+Editor+%231,+Compiler+%231)',t:'0')),k:34.72584856396866,l:'4',n:'0',o:'',s:0,t:'0'),(g:!((h:output,i:(compilerName:'ARM64+gcc+12.1',editorid:1,fontScale:14,fontUsePx:'0',j:1,wrap:'0'),l:'5',n:'0',o:'Output+of+ARM64+gcc+12.1+(Compiler+%231)',t:'0')),k:34.72584856396866,l:'4',n:'0',o:'',s:0,t:'0')),l:'2',n:'0',o:'',t:'0')),version:4" }}
+{{ $root       := "https://godbolt.org/" }}
+{{ $editor1    := "e?hideEditorToolbars=true#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:14,fontUsePx:'0',j:1,lang:___c,source:'" }}
+{{ $editor2    := "'),l:'5',n:'0',o:'C+source+%231',t:'0')" }}
+{{ $assemblya1 := ",(g:!((h:compiler,i:(compiler:carm64g1210,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:14,fontUsePx:'0',j:1,lang:___c,libs:!(),options:'" }}
+{{ $assemblya2 := "',source:1,tree:'1'),l:'5',n:'0',o:'ARM64+gcc+12.1+(C,+Editor+%231,+Compiler+%231)',t:'0')" }}
+{{ $assemblyb1 := ",(h:compiler,i:(compiler:carm64g1210,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:14,fontUsePx:'0',j:2,lang:___c,libs:!(),options:'" }}
+{{ $assemblyb2 := "',source:1,tree:'1'),l:'5',n:'0',o:'ARM64+gcc+12.1+(C,+Editor+%231,+Compiler+%232)',t:'0')" }}
+{{ $diff       := ",(h:diff,i:(fontScale:14,fontUsePx:'0',lhs:2,lhsdifftype:0,rhs:1,rhsdifftype:0),l:'5',n:'0',o:'Diff+Viewer+ARM64+gcc+12.1+vs+ARM64+gcc+12.1',t:'0')" }}
+{{ $output     := ",(g:!((h:output,i:(compilerName:'ARM64+gcc+12.1',editorid:1,fontScale:14,fontUsePx:'0',j:1,wrap:'0'),l:'5',n:'0',o:'Output+of+ARM64+gcc+12.1+(Compiler+%231)',t:'0'))" }}
+{{ $end        := ",l:'2',n:'0',o:'',t:'0')),version:4" }}
 
 <!-- Get arguments -->
 {{ $w := (.Get "width") }}
@@ -26,12 +34,20 @@
 <!-- Special character "\n" allow to jump to line -->
 {{ $source := replace $source "%5Cn" "%0A" }}
 
+{{ $editor := printf "%s" $editor2 | printf "%s%s" $source | printf "%s%s" $editor1 | printf "%s" }}
+
 <!-- 
     diff: compares assembly side to side
 -->
 {{ with (eq $seltype "diff") }}   
     <!-- concatenate strings -->
-    {{ $url := printf "%s" $diff | printf "%s%s" $ropt | printf "%s%s" $assembly | printf "%s%s" $lopt | printf "%s%s" $editor | printf "%s%s" $source | printf "%s%s" $root | printf "%s" }}
+    <!-- adjust k variable below for size -->
+    {{ $editor    := printf "%s" "),k:34,l:'4',n:'0',o:'',s:0,t:'0')" | printf "%s%s" $editor | printf "%s" }}
+    {{ $assemblya := printf "%s" $assemblya2 | printf "%s%s" $lopt | printf "%s%s" $assemblya1 | printf "%s" }}
+    {{ $assemblyb := printf "%s" $assemblyb2 | printf "%s%s" $ropt | printf "%s%s" $assemblyb1 | printf "%s" }}
+    <!-- adjust k variable below for size -->
+    {{ $diff      := printf "%s" "),k:66,l:'4',n:'0',o:'',s:2,t:'0'))" | printf "%s%s" $diff | printf "%s" }}
+    {{ $url       := printf "%s" $end | printf "%s%s" $diff | printf "%s%s" $assemblyb | printf "%s%s" $assemblya | printf "%s%s" $editor | printf "%s%s" $root | printf "%s" }}
     <iframe width="{{ $w }}" height="{{ $h }}" src="{{ $url }}"></iframe>
 {{ end }}
 
@@ -40,13 +56,31 @@
 -->
 {{ with (eq $seltype "output") }}   
     <!-- concatenate strings -->
-    {{ $url := printf "%s" $output | printf "%s%s" $assembly | printf "%s%s" $opt | printf "%s%s" $editor | printf "%s%s" $source | printf "%s%s" $root | printf "%s" }}
+    <!-- adjust k variable below for size -->
+    {{ $editor    := printf "%s" "),k:34,l:'4',n:'0',o:'',s:0,t:'0')" | printf "%s%s" $editor | printf "%s" }}
+    {{ $assemblya := printf "%s" $assemblya2 | printf "%s%s" $opt | printf "%s%s" $assemblya1 | printf "%s" }}
+    {{ $assemblya := printf "%s" "),k:33,l:'4',n:'0',o:'',s:0,t:'0')" | printf "%s%s" $assemblya | printf "%s" }}
+    {{ $url := printf "%s" $end | printf "%s%s" ",k:33,l:'4',n:'0',o:'',s:0,t:'0'))" | printf "%s%s" $output | printf "%s%s" $assemblya | printf "%s%s" $editor | printf "%s%s" $root | printf "%s" }}
+    <iframe width="{{ $w }}" height="{{ $h }}" src="{{ $url }}"></iframe>
+{{ end }}
+
+<!-- 
+    output: display compiler output
+-->
+{{ with (eq $seltype "assembly") }}   
+    <!-- concatenate strings -->
+    <!-- adjust k variable below for size -->
+    {{ $editor    := printf "%s" "),k:50,l:'4',n:'0',o:'',s:0,t:'0')" | printf "%s%s" $editor | printf "%s" }}
+    {{ $assemblya := printf "%s" $assemblya2 | printf "%s%s" $opt | printf "%s%s" $assemblya1 | printf "%s" }}
+    <!-- adjust k variable below for size -->
+    {{ $assemblya := printf "%s" "),k:50,l:'4',n:'0',o:'',s:0,t:'0')" | printf "%s%s" $assemblya | printf "%s" }}
+    {{ $url := printf "%s" $end | printf "%s%s" ")" | printf "%s%s" $assemblya | printf "%s%s" $editor | printf "%s%s" $root | printf "%s" }}
     <iframe width="{{ $w }}" height="{{ $h }}" src="{{ $url }}"></iframe>
 {{ end }}
 
 <!-- 
     catch invalid options
 -->
-{{ with and (ne $seltype "diff") (ne $seltype "output") }}    
+{{ with and (and (ne $seltype "diff") (ne $seltype "output")) (ne $seltype "assembly") }}    
     <p>[Godbolt shortcode ERROR: invalid type]</p>
 {{ end }}
