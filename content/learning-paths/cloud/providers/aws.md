@@ -29,7 +29,7 @@ AWS offers a wide range of instance types, covering all performance (and pricing
 
 You then select an `instance size`, which will be one of a number of pre-defined configurations of a number of processors and available memory. If you are unsure what your compute needs are, don't worry, you can easily experiment with different configurations.
 
-## Create your EC2 instance
+## Create your EC2 instance {#create}
 
 The easiest way to launch your instance is via the [AWS Console](https://console.aws.amazon.com).
 
@@ -39,7 +39,7 @@ Navigate to `EC2 dashboard`, either by searching (`Alt+S`) for `EC2`, else via `
 
 Use the `Launch Instance` pulldown to get to the `Launch an instance` dialog.
 
-### Name your instance
+### Name your instance {#name}
 
 Give your instance a meaningful, but arbitrary, name. This is particularly useful when creating multiple instances in parallel.
 

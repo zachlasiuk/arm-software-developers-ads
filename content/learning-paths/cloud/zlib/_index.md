@@ -1,28 +1,33 @@
 ---
-title: "Get started with Arm-based cloud service platforms" 
+title: "Learn how to build and use Cloudflare zlib on Arm servers" 
 
 description: >
-    Learn how to get started with Arm-based cloud service platforms.
+    Learn how to build and use Cloudflare zlib on on Arm servers.
 
-minutes_to_complete: 30
+minutes_to_complete: 10
 
 who_is_this_for: >
-    Learning path for software developers interested in using Arm-based cloud service platforms.
+    A guide for software developers to build and use Cloudflare zlib on Arm servers
 
 learning_objectives:
-    - Learn how to start an instance on an Arm-based cloud server
+    - Build zlib-cloudflare on an Arm server
+    - Run example applications using zlib
+    - Measure and analyze performance to see improvements
 
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
-skilllevels: Getting-Started
+skilllevels: Introductory
 armips:
     - Neoverse
 tools:
 softwares:
+    - zlib
 operatingsystems:
     - Linux
 subjects:
+    - Libraries
 developerprograms:
+    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
@@ -34,4 +39,5 @@ learning_path_main_page: "yes"  # Indicates this should be surfaced when looking
 
 # Prereqs
 ---
-- An account with the Arm-based cloud service provider of choice.
+- An [Arm based instance](/learning-paths/cloud/providers) from an appropriate cloud service provider running `Ubuntu 20.04` or `Ubuntu 22.04`.
+

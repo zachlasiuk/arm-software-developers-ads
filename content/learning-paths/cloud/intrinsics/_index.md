@@ -1,28 +1,31 @@
 ---
-title: "Get started with Arm-based cloud service platforms" 
+title: "Porting Architecture Specific Intrinsics" 
 
 description: >
-    Learn how to get started with Arm-based cloud service platforms.
+    Learn how to port architecture intrinsics to Arm Neoverse processors.
 
-minutes_to_complete: 30
+minutes_to_complete: 20
 
 who_is_this_for: >
-    Learning path for software developers interested in using Arm-based cloud service platforms.
+    Learning path for developers interesed in porting architecture specific intrinics to Arm Neoverse processors
 
 learning_objectives:
-    - Learn how to start an instance on an Arm-based cloud server
-
+    - Understand what intrinsics are and how to find them in code
+    - Evaluate options and use header-only libraries to port architecture specific intrinics to Arm Neoverse
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
-skilllevels: Getting-Started
+skilllevels: Experienced
 armips:
     - Neoverse
 tools:
 softwares:
+    - 
 operatingsystems:
     - Linux
 subjects:
+    - Performance and Architecture
 developerprograms:
+    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
@@ -34,4 +37,6 @@ learning_path_main_page: "yes"  # Indicates this should be surfaced when looking
 
 # Prereqs
 ---
-- An account with the Arm-based cloud service provider of choice.
+- Access to an Arm Neoverse machine running Linux. Free tier machines are available in Amazon Web Services (AWS) and Oracle Cloud (OCI)
+
+
