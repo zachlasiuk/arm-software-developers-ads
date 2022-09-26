@@ -34,4 +34,4 @@ learning_path_main_page: "yes"  # Indicates this should be surfaced when looking
 
 # Prereqs
 ---
-- An AWS user account.
+- An account with the Arm-based cloud service provider of choice.
