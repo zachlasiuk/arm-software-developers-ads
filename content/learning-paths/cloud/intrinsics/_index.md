@@ -14,7 +14,7 @@ learning_objectives:
     - Evaluate options and use header-only libraries to port architecture specific intrinics to Arm Neoverse
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
-skilllevels: Introductory
+skilllevels: Experienced
 armips:
     - Neoverse
 tools:
