@@ -1,0 +1,14 @@
+
+{{ $dict_of_name_links := dict }} <!--[ "name": "link"   "name": "link"  ] -->
+
+
+{{ $routing := .routing }}
+{{ range .tagnames }}
+    {{ $dict_of_name_links = merge $dict_of_name_links (dict .  (printf "/%s/%s" $routing (. | urlize)) ) }}
+{{end}}
+
+<!-- Send in names from previous file and links generated from the routing name and the tag -->
+{{ partial "filtering/simple-expansion.html" (dict "dict_of_name_links" $dict_of_name_links "displayname" .displayname)}}
+
+
+

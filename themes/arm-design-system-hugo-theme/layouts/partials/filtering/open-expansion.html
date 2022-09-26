@@ -1,0 +1,14 @@
+{{ $counter := 0 }}
+{{ range .tags}}
+    {{$counter = add $counter 1}}
+    {{.}}
+{{end}}
+
+<ads-expansion-panel is-default-expanded class="u-padding-bottom-1">
+    <span slot="toggle">{{.displayname}}</span>
+    <div slot="content">
+        <div class="u-flex u-flex-column">
+            <p>Use the search bar to search these numerous entries.</p>
+        </div>
+    </div>
+</ads-expansion-panel>

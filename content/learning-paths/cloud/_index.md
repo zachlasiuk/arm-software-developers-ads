@@ -17,6 +17,19 @@ weight: 1  # Decides order of main topics on homepage
 
 # Shown when listing learning paths in this category:
 subtitle: "Create cloud native software" # used as header for learning path to avoid duplicaiton
+
+#####################################
+# CLOSED filters
+#####################################
+subjects:
+    - Datafiled
+    - Web
+    - Another Subject
+
+oses:
+    - Linux
+    - Windows
+
 ---
 Develop cloud native applications on the Arm architecture for best performance and lowest cost. Learn how to build and run applications on Arm servers and Arm-based cloud services, and utilize Arm-based cloud services for software development.
 
