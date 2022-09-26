@@ -15,9 +15,6 @@ cloudFrontDistributionID = "E1KJFR5JSKYU64"
 [frontmatter]
     lastmod = [ "lastmod", ":git", "date", "publishDate" ]
 
-[markup.goldmark.renderer]
-    unsafe = true
-
 [taxonomies]
     skilllevel          = "skilllevels"
     armip               = "armips"
