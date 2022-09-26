@@ -83,4 +83,66 @@ This command will launch a GUI. Control options enable to run the application an
 
 To fix the application, you can apply the following patch.
 
-<script src="https://gist.github.com/armflorentlebeau/18e09268480a1453c0f31609138eae0b.js"></script>
+```patch
+--- ./src/C/mmult.c
++++ ./src/C/mmult.c
+@@ -64,7 +64,7 @@
+ 
+       for(int k=0; k<sz; k++)
+       {
+-        res += A[i*sz+k]*B[k*sz*j];
++        res += A[i*sz+k]*B[k*sz+j];
+       }
+ 
+       C[i*sz+j] += res;
+
+
+--- ./src/F90/mmult.F90
++++ ./src/F90/mmult.F90
+@@ -174,7 +174,7 @@
+       do j=1,sz
+         res=0.0
+         do k=1,sz
+-         res=A(k,i)*B(j,k+res)
++         res=A(k,i)*B(j,k)+res
+         end do
+         C(j,i)=res+C(j,i)
+       end do
+
+
+--- ./src/make.def
++++ ./src/make.def
+@@ -18,6 +18,6 @@
+ FC = mpif90
+
+ # Define additional compilation flags
+-CFLAGS =
++CFLAGS = -O0 -g
+ LFLAGS =
+
+
+--- ./src/Py/F90/mmult.F90
++++ ./src/Py/F90/mmult.F90
+@@ -30,7 +30,7 @@
+       do j=1,sz
+         res=0.0
+         do k=1,sz
+-         res=A(k,i)*B(j,k+res)
++         res=A(k,i)*B(j,k)+res
+         end do
+         C(j,i)=res+C(j,i)
+       end do
+
+
+--- ./src/Py/C/mmult.c
++++ ./src/Py/C/mmult.c
+@@ -29,7 +29,7 @@
+
+       for(int k=0; k<sz; k++)
+       {
+-        res += A[i*sz+k]*B[k*sz*j];
++        res += A[i*sz+k]*B[k*sz+j];
+       }
+
+       C[i*sz+j] += res;
+```

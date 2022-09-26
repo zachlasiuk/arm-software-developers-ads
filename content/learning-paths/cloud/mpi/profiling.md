@@ -96,7 +96,69 @@ perf report
 
 This patch will help the application benefit from the CPU caches:
 
-<script src="https://gist.github.com/armflorentlebeau/6d630e1e2ef44a6fa024c29ec8ecb00e.js"></script>
+```patch
+--- ./src/C/mmult.c
++++ ./src/C/mmult.c
+@@ -64,7 +64,7 @@
+ 
+       for(int k=0; k<sz; k++)
+       {
+-        res += A[i*sz+k]*B[k*sz*j];
++        res += A[i*sz+k]*B[k*sz+j];
+       }
+ 
+       C[i*sz+j] += res;
+
+
+--- ./src/F90/mmult.F90
++++ ./src/F90/mmult.F90
+@@ -174,7 +174,7 @@
+       do j=1,sz
+         res=0.0
+         do k=1,sz
+-         res=A(k,i)*B(j,k+res)
++         res=A(k,i)*B(j,k)+res
+         end do
+         C(j,i)=res+C(j,i)
+       end do
+
+
+--- ./src/make.def
++++ ./src/make.def
+@@ -18,6 +18,6 @@
+ FC = mpif90
+
+ # Define additional compilation flags
+-CFLAGS =
++CFLAGS = -O0 -g
+ LFLAGS =
+
+
+--- ./src/Py/F90/mmult.F90
++++ ./src/Py/F90/mmult.F90
+@@ -30,7 +30,7 @@
+       do j=1,sz
+         res=0.0
+         do k=1,sz
+-         res=A(k,i)*B(j,k+res)
++         res=A(k,i)*B(j,k)+res
+         end do
+         C(j,i)=res+C(j,i)
+       end do
+
+
+--- ./src/Py/C/mmult.c
++++ ./src/Py/C/mmult.c
+@@ -29,7 +29,7 @@
+
+       for(int k=0; k<sz; k++)
+       {
+-        res += A[i*sz+k]*B[k*sz*j];
++        res += A[i*sz+k]*B[k*sz+j];
+       }
+
+       C[i*sz+j] += res;
+```
 
 ## Use optimized routines
 
@@ -108,7 +170,55 @@ sudo apt-get install libblas-dev
 
 And apply this patch to use the optimized routine instead of the hand-written matrix multiplication.
 
-<script src="https://gist.github.com/armflorentlebeau/3513eddcb67baaca8b930182c09fb88e.js"></script>
+```patch
+--- ./src/C/mmult.c
++++ ./src/C/mmult.c
+@@ -20,6 +20,7 @@
+ #include <string.h>
+ #include <mpi.h>
+ #include <math.h>
++#include <cblas.h>
+ 
+ #define DEFAULT_FN "res_C.mat"
+ #define DEFAULT_SIZE 64
+@@ -161,7 +161,7 @@
+ 
+   printf("%d: Processing...\n", mr);
+   
+-  mmult(sz, nproc, mat_a, mat_b, mat_c);
++  cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, sz/nproc, sz, sz, 1.0, mat_a, sz, mat_b, sz, 1.0, mat_c, sz);
+   
+   if(mr == 0)
+   {
+
+
+--- ./src/F90/mmult.F90
++++ ./src/F90/mmult.F90
+@@ -107,7 +107,10 @@
+
+   print *,mr,": Processing..."
+
+-  call mmult(sz, nproc, mat_a, mat_b, mat_c)
++  call DGEMM('N','N', sz, sz/nproc, sz, 1.0D0, &
++             mat_b, sz, &
++             mat_a, sz, 1.0D0, &
++             mat_c, sz)
+
+   if(mr==0) then
+     print *,mr,": Receiving result matrix..."
+
+
+--- ./src/make.def
++++ ./src/make.def
+@@ -18,6 +18,6 @@
+ FC = mpif90
+
+ # Define additional compilation flags
+-CFLAGS = -Ofast -g
+-LFLAGS =
++CFLAGS = -Ofast -g -I/usr/include/aarch64-linux-gnu
++LFLAGS = -L/usr/lib/aarch64-linux-gnu/blas -lblas -Wl,-rpath=/usr/lib/aarch64-linux-gnu/blas
+```
 
 ### Use Arm Performance Library
 
