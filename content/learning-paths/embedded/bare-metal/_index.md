@@ -24,15 +24,6 @@ learning_objectives:
     - Extend example to use different I/O mechanisms
 # 2-5 bullet points, one sentance each. Should start with a verb (Deploy, Measure) and indicate the value of the objective if possible.
 
-prerequisites:
-    - Some familiarity with embedded programing is assumed
-# List any prereqs needed before this learning path can be completed. Can include:
-    # Online service accounts                                   (An Amazon Web Services account)
-    # Prior knowledge                                           (Some familiarity with embedded programing)
-    # Previous learning paths                                   (The Learning Path: Getting Started with Arm Virtual Hardware)
-    # Particular tools/environments already being initialized   (An EC2 instance with AVH installed)
-
-
 ##### Tags
 # Don't enter whitespace. An underscore will be visually replaced with whitespace.
 
@@ -79,4 +70,8 @@ developerprograms:
 weight: 1                       # _index.md always has weight of 1 to order correctly
 layout: "learningpathall"       # All files under learning paths have this same wrapper
 learning_path_main_page: "yes"  # Indicates this should be surfaced when looking for related content. Only set for _index.md of learning path content.
+# ================================================================================
+
+# Prereqs
 ---
+- Some familiarity with embedded programing is assumed

@@ -1,11 +1,11 @@
 ---
 title: "GFortran"
 
-tool_install: true
-
 additional_search_terms:
   - compiler
 
+tool_install: true              # DO NOT MODIFY. Always true for tool installs
+layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
 [GNU Fortran](https://gcc.gnu.org/fortran/) is the Fortran compiler front end and run-time libraries for GCC, the GNU Compiler Collection.
 

@@ -1,7 +1,8 @@
 ---
 title: "Arm Success Kits"
 
-tool_install: true
+tool_install: true              # DO NOT MODIFY. Always true for tool installs
+layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
 Arm Development tools are packaged as [Arm Success Kits](https://www.arm.com/products/development-tools/success-kits). These come in two forms:
 

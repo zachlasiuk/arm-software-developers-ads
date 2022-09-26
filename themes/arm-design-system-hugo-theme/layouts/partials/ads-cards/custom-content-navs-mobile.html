@@ -1,0 +1,50 @@
+<!-- MOBILE ONLY -->
+<!---------------------------------------------->
+{{$thisfile:=.thisfile}}
+
+<div class="content-head-container-mobile lg:u-hide" id="content-head-container-mobile-id">
+    <!-- Sticky Header -->
+    {{ $mobile_expanded_id := "content-table-of-contents-mobile" }}
+    <div class="content-header-mobile">
+        <ads-button is-circular="" class="content-header-btn-mobile" level="tertiary" size="default" onclick="showMobileTableOfContents('{{$mobile_expanded_id}}')">
+            <i class="fas fa-list" style="color:white;"></i>
+        </ads-button>
+
+        {{ with .context.Site.GetPage .thisdir}}
+            <h6 class="u-margin-top-1/2 content-header-txt-mobile">&nbsp;&nbsp;{{ .Params.Title }}</h6>
+        {{ end }}
+
+    </div>
+    <!-- Table of contents -->
+    <div id="{{$mobile_expanded_id}}" hidden="true">
+        {{range .filesindir}}
+            <a href="{{.Permalink}}" class="content-individual-a-mobile">
+                <div class="content-individual-mobile {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
+                    <p class="content-individual-txt-mobile {{ if eq .File.TranslationBaseName $thisfile}} active {{else}} inactive {{ end }}">
+                        {{ if eq .File.TranslationBaseName "_index" }} Introduction {{else}} {{.Title}} {{ end }}
+                    </p>
+                </div>
+            </a>
+        {{end}}
+    </div>
+
+</div>
+
+
+
+<script>
+    function showMobileTableOfContents(mobile_div_to_affect__id) {
+        console.log(mobile_div_to_affect__id)
+        const div_to_affect = document.getElementById(mobile_div_to_affect__id);
+
+        if (div_to_affect.getAttribute('hidden')) {
+            div_to_affect.removeAttribute('hidden');
+            document.getElementById('content-head-container-mobile-id').classList.add("open");
+        }
+        else {
+            div_to_affect.setAttribute('hidden',true);
+            document.getElementById('content-head-container-mobile-id').classList.remove("open");
+        }
+
+    }
+</script>
