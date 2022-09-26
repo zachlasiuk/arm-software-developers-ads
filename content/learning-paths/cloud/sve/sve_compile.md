@@ -27,7 +27,7 @@ With GCC autovectorization is enabled with the `-03` option. To disable autovect
 
 Compare the output with autovectorization (left) and without (right):
 
-{{< godbolt width="100%" height="400px" type="diff" lopt="-O3 -march=armv8-a -fno-tree-vectorize" ropt="-O3 -march=armv8-a+sve" src="int fun(double * restrict a, double * restrict b, int size)\n{\n  for (int i=0; i < size; ++i)\n  {\n    b[i] += a[i];\n  }\n}" >}}
+{{< godbolt width="100%" height="400px" mode="diff" lopt="-O3 -march=armv8-a -fno-tree-vectorize" ropt="-O3 -march=armv8-a+sve" src="int fun(double * restrict a, double * restrict b, int size)\n{\n  for (int i=0; i < size; ++i)\n  {\n    b[i] += a[i];\n  }\n}" >}}
 
 Note the use of double-word register _d0_, _d1_ when disabling vectorization instead of SVE registers _z0.d_ and _z1_.
 
@@ -35,7 +35,7 @@ Note the use of double-word register _d0_, _d1_ when disabling vectorization ins
 
 With GCC, the option `-fopt-info-vec` returns what loops were vectorized. To return what loop failed to vectorize, use `-fopt-info-vec-missed`.
 
-{{< godbolt width="100%" height="400px" type="output" opt="-O3 -march=armv8-a+sve -fopt-info-vec" src="int fun(double * restrict a, double * restrict b, int size)\n{\n  for (int i=0; i < size; ++i)\n  {\n    b[i] += a[i];\n  }\n}" >}}
+{{< godbolt width="100%" height="400px" mode="output" opt="-O3 -march=armv8-a+sve -fopt-info-vec" src="int fun(double * restrict a, double * restrict b, int size)\n{\n  for (int i=0; i < size; ++i)\n  {\n    b[i] += a[i];\n  }\n}" >}}
 
 Note that the compiler reports the vectorization of the loop line 3.
 

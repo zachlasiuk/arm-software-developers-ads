@@ -41,7 +41,7 @@ SVE is a predicate-centric architecture with:
 
 Here is an example code compiled for SVE (left) and for NEON (right):
 
-{{< godbolt width="100%" height="700px" type="diff" lopt="-O3 -march=armv8-a" ropt="-O3 -march=armv8-a+sve" src="int fun(double * restrict a, double * restrict b, int size)\n{\n  for (int i=0; i < size; ++i)\n  {\n    b[i] += a[i];\n  }\n}" >}}
+{{< godbolt width="100%" height="700px" mode="diff" lopt="-O3 -march=armv8-a" ropt="-O3 -march=armv8-a+sve" src="int fun(double * restrict a, double * restrict b, int size)\n{\n  for (int i=0; i < size; ++i)\n  {\n    b[i] += a[i];\n  }\n}" >}}
 
 Note how small the SVE assembly is in comparison to NEON. This is due to the predicate behaviour which avoids generating assembly for remainder loops (scalar operations performed when the iteration domain is not a multiple of the vector length). The following describes the behaviour of the SVE assembly. 
 

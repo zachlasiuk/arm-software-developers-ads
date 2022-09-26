@@ -4,9 +4,12 @@
     - width=""
     - height=""
     - src="": Input source code in clear text. Use \n to jump to line
-    - type="diff" -lopt="X" -ropt="Y": Displays assembly and compares when compiled with options X (left) and Y (right)
-    OR
-    - type="output" -opt="X" Displays assembly and compiler output when compiled with options X
+    3 modes available:
+        - mode="diff" -lopt="X" -ropt="Y": Displays assembly and compares when compiled with options X (left) and Y (right)
+        OR
+        - mode="output" -opt="X" Displays assembly and compiler output when compiled with options X
+        OR
+        - mode="assembly" -opt="X" Displays assembly when compiled with options X
 -->
 
 <!-- Global variables -->
@@ -17,14 +20,14 @@
 {{ $assemblya2 := "',source:1,tree:'1'),l:'5',n:'0',o:'ARM64+gcc+12.1+(C,+Editor+%231,+Compiler+%231)',t:'0')" }}
 {{ $assemblyb1 := ",(h:compiler,i:(compiler:carm64g1210,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:14,fontUsePx:'0',j:2,lang:___c,libs:!(),options:'" }}
 {{ $assemblyb2 := "',source:1,tree:'1'),l:'5',n:'0',o:'ARM64+gcc+12.1+(C,+Editor+%231,+Compiler+%232)',t:'0')" }}
-{{ $diff       := ",(h:diff,i:(fontScale:14,fontUsePx:'0',lhs:2,lhsdifftype:0,rhs:1,rhsdifftype:0),l:'5',n:'0',o:'Diff+Viewer+ARM64+gcc+12.1+vs+ARM64+gcc+12.1',t:'0')" }}
+{{ $diff       := ",(h:diff,i:(fontScale:14,fontUsePx:'0',lhs:2,lhsdiffmode:0,rhs:1,rhsdiffmode:0),l:'5',n:'0',o:'Diff+Viewer+ARM64+gcc+12.1+vs+ARM64+gcc+12.1',t:'0')" }}
 {{ $output     := ",(g:!((h:output,i:(compilerName:'ARM64+gcc+12.1',editorid:1,fontScale:14,fontUsePx:'0',j:1,wrap:'0'),l:'5',n:'0',o:'Output+of+ARM64+gcc+12.1+(Compiler+%231)',t:'0'))" }}
 {{ $end        := ",l:'2',n:'0',o:'',t:'0')),version:4" }}
 
 <!-- Get arguments -->
 {{ $w := (.Get "width") }}
 {{ $h := (.Get "height") }}
-{{ $seltype := .Get "type" }}
+{{ $selmode := .Get "mode" }}
 {{ $opt := urlquery (.Get "opt") }}
 {{ $lopt := urlquery (.Get "lopt") }}
 {{ $ropt := urlquery (.Get "ropt") }}
@@ -39,7 +42,7 @@
 <!-- 
     diff: compares assembly side to side
 -->
-{{ with (eq $seltype "diff") }}   
+{{ with (eq $selmode "diff") }}   
     <!-- concatenate strings -->
     <!-- adjust k variable below for size -->
     {{ $editor    := printf "%s" "),k:34,l:'4',n:'0',o:'',s:0,t:'0')" | printf "%s%s" $editor | printf "%s" }}
@@ -54,7 +57,7 @@
 <!-- 
     output: display compiler output
 -->
-{{ with (eq $seltype "output") }}   
+{{ with (eq $selmode "output") }}   
     <!-- concatenate strings -->
     <!-- adjust k variable below for size -->
     {{ $editor    := printf "%s" "),k:34,l:'4',n:'0',o:'',s:0,t:'0')" | printf "%s%s" $editor | printf "%s" }}
@@ -67,7 +70,7 @@
 <!-- 
     output: display compiler output
 -->
-{{ with (eq $seltype "assembly") }}   
+{{ with (eq $selmode "assembly") }}   
     <!-- concatenate strings -->
     <!-- adjust k variable below for size -->
     {{ $editor    := printf "%s" "),k:50,l:'4',n:'0',o:'',s:0,t:'0')" | printf "%s%s" $editor | printf "%s" }}
@@ -81,6 +84,6 @@
 <!-- 
     catch invalid options
 -->
-{{ with and (and (ne $seltype "diff") (ne $seltype "output")) (ne $seltype "assembly") }}    
-    <p>[Godbolt shortcode ERROR: invalid type]</p>
+{{ with and (and (ne $selmode "diff") (ne $selmode "output")) (ne $selmode "assembly") }}    
+    <p>[Godbolt shortcode ERROR: invalid mode]</p>
 {{ end }}
