@@ -35,7 +35,7 @@ prerequisites:
 ##### Tags
 # Don't enter whitespace. An underscore will be visually replaced with whitespace.
 
-skilllevels: Getting-Started
+skilllevels: Getting Started
 # Options:
     # Getting-Started   (for a basic overview of certain tools/softwares/topics)
     # Introductory      (the next stage up from getting started)
@@ -52,8 +52,8 @@ tools:
     # IDEs              (Arm Development Studio, VS_Code)
     # Online tools      (GitHub, Jenkins)
     # General tools     (cbuild)
-    - Arm_Development_Studio
-    - Arm_Compiler_for_Embedded
+    - Arm Development Studio
+    - Arm Compiler for Embedded
     - Arm Fast Models
     - DSTREAM
 

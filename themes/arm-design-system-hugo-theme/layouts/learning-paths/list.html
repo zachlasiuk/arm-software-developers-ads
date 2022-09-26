@@ -33,9 +33,9 @@
     <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="max-width: 320px;">
 
         <!-- Subjects, CLOSED SCHEMA -->
-        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Subjects" "routing" "subjects" "tagnames" .Params.subjects)}} 
+        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Subjects" "routing" "subjects" "tagnames" .Params.subjects_closed_schema:)}} 
         <!-- Operating Systems, CLOSED SCHEMA -->
-        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "OS" "routing" "operatingsystems" "tagnames" .Params.oses)}} 
+        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "OS" "routing" "operatingsystems" "tagnames" .Params.oses_closed_schema)}} 
         <!-- Skill level, CLOSED SCHEMA -->
         {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Skill Level" "routing" "skilllevels" "tagnames" (slice "Getting Started" "Introductory" "Experienced"))}}
         <!-- Software -->

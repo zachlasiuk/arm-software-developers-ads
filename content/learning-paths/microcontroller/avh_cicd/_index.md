@@ -34,7 +34,7 @@ prerequisites:
 ##### Tags
 # Don't enter whitespace. An underscore will be visually replaced with whitespace.
 
-skilllevels: Getting-Started
+skilllevels: Getting Started
 # Options:
     # Getting-Started   (for a basic overview of certain tools/softwares/topics)
     # Introductory      (the next stage up from getting started)
@@ -51,9 +51,9 @@ tools:
     # IDEs              (Arm Development Studio, VS_Code)
     # Online tools      (GitHub, Jenkins)
     # General tools     (cbuild)
-    - Arm_Virtual_Hardware
+    - Arm Virtual Hardware
     - GitHub
-    - AWS_EC2
+    - AWS EC2
 
 
 softwares:
@@ -67,10 +67,8 @@ operatingsystems:
 
 subjects:
     # Unique list per main topic. Select from existing list.
-    - 
 
 developerprograms:
-    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
