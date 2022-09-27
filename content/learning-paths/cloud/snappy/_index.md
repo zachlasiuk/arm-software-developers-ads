@@ -1,28 +1,31 @@
 ---
-title: "Get started with Arm-based cloud service platforms" 
+title: "Measure performance of compression libraries on Arm servers" 
 
 description: >
-    Learn how to get started with Arm-based cloud service platforms.
+    Learn how to install and measure the performance of compression libraries on Arm servers.
 
-minutes_to_complete: 30
+minutes_to_complete: 10
 
 who_is_this_for: >
-    Learning path for software developers interested in using Arm-based cloud service platforms.
+    Learning path for software developers using compression libraries running on Arm servers.
 
 learning_objectives:
-    - Learn how to start an instance on an Arm-based cloud server.
-
+    - Install and run lzbench with snappy and zstd
+    - Measure compression library performance running on 64-bit Arm AWS EC2 instance
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
-skilllevels: Getting Started
+skilllevels: Introductory
 armips:
     - Neoverse
 tools:
 softwares:
+    - snappy
 operatingsystems:
     - Linux
 subjects:
+    - Libraries
 developerprograms:
+    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
@@ -34,4 +37,5 @@ learning_path_main_page: "yes"  # Indicates this should be surfaced when looking
 
 # Prereqs
 ---
-- An account with the Arm-based cloud service provider of choice.
+- An [Arm based instance](/learning-paths/cloud/providers) from an appropriate cloud service provider.
+

@@ -7,10 +7,9 @@ weight: 4 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
+[Google Cloud](https://cloud.google.com/) is a mature cloud computing platform. An overview of their services is described [here](https://cloud.google.com/why-google-cloud).
 
-## What is Google Cloud?
-
-[Google Cloud](https://cloud.google.com/) is a mature cloud computing platform. An overview of their services is described [here](https://cloud.google.com/why-google-cloud). As with most cloud service providers, Google Cloud offers a pay-as-you-use [pricing policy](https://cloud.google.com/pricing), including a number of [free](https://cloud.google.com/free/docs/free-cloud-features) services.
+As with most cloud service providers, Google Cloud offers a pay-as-you-use [pricing policy](https://cloud.google.com/pricing), including a number of [free](https://cloud.google.com/free/docs/free-cloud-features) services.
 
 This guide is to help you get started with [Google Cloud Compute Engine](https://cloud.google.com/compute) compute services, using Arm-based [Tau T2A](https://cloud.google.com/tau-vm) Virtual Machines. This is a general purpose compute platform, essentially your own personal computer in the cloud.
 
@@ -18,7 +17,7 @@ Detailed instructions are available in the Google Cloud [documentation](https://
 
 ## Create an account
 
-Creating a personal account is straight forward. Click on [Get started for free](https://cloud.google.com/), and follow the on-screen instructions to register.
+Creating a personal account is straight forward. Click on [Get started for free](https://cloud.google.com/), and follow the on-screen instructions to register. You can use an existing Google account if you have one.
 
 If using an organization's account, you will likely need to consult with your internal administrator. See [this guide](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_create.html) for additional information.
 
@@ -69,7 +68,7 @@ Once running, the IP addresse will be displayed, and you are able to connect to 
 Select `Open in browser window` to open an SSH shell directly.
 
 If an SSH key pair was set, connect to the instance with your preferred SSH client. For example if using `ubuntu` image:
-```
+```console
 ssh -i <private_key> ubuntu@<public_ip_address>
 ```
 Terminal applications such as [PuTTY](https://www.putty.org/), [MobaXterm](https://mobaxterm.mobatek.net/) and similar can be used.
@@ -86,7 +85,7 @@ will identify the host machine as `aarch64`.
 
 ### hello world
 
-Install the `gcc` compiler. Assuming you are using `Ubuntu`, use the following, else see [here](/compilers/install_ngcc/):
+Install the `gcc` compiler. Assuming you are using `Ubuntu`, use the following, else see [here](/install-tools/gcc):
 ```console
 sudo apt-get update
 sudo apt install -y gcc
@@ -114,6 +113,4 @@ You are now ready to get started with any of the learning paths [here](/cloud/#a
 | Type          | Content             |
 | ---           | ---                 |
 | Documentation | [Virtual machine instances](https://cloud.google.com/compute/docs/instances) |
-| Documentation | [training and tutorials](https://cloud.google.com/compute/docs#training-and-tutorials) |
-
-
+| Documentation | [Training and tutorials](https://cloud.google.com/compute/docs#training-and-tutorials) |

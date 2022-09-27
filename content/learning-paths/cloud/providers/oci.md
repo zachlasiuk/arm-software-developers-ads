@@ -7,10 +7,9 @@ weight: 6 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
+[Oracle Cloud Infrastructure (OCI)](https://oracle.com/cloud/) is a mature cloud computing platform. An overview of their services is described [here](https://www.oracle.com/cloud/why-oci/).
 
-## What is Oracle OCI?
-
-[Oracle Cloud Infrastructure (OCI)](https://oracle.com/cloud/) is a mature cloud computing platform. An overview of their services is described [here](https://www.oracle.com/cloud/why-oci/). As with most cloud service providers, OCI offers a pay-as-you-use [pricing policy](https://www.oracle.com/cloud/pricing/), including a number of [free](https://www.oracle.com/cloud/free/) services.
+As with most cloud service providers, OCI offers a pay-as-you-use [pricing policy](https://www.oracle.com/cloud/pricing/), including a number of [free](https://www.oracle.com/cloud/free/) services.
 
 This guide is to help you get started with [compute services](https://www.oracle.com/cloud/compute/), using Arm-based [Ampere](https://www.oracle.com/cloud/compute/arm/) processors. This is a general purpose compute platform, essentially your own personal computer in the cloud.
 
@@ -76,7 +75,7 @@ When all options are set, click `Create` to get started. Your compute instance w
 ## Connect to your instance
 
 You can connect to the instance with your preferred SSH client. For example if using `ubuntu` image:
-```
+```console
 ssh -i <private_key> ubuntu@<public_ip_address>
 ```
 Terminal applications such as [PuTTY](https://www.putty.org/), [MobaXterm](https://mobaxterm.mobatek.net/) and similar can be used.
@@ -95,7 +94,7 @@ will identify the host machine as `aarch64`.
 
 ### hello world
 
-Install the `gcc` compiler. Assuming you are using `Ubuntu`, use the following, else see [here](/compilers/install_ngcc/):
+Install the `gcc` compiler. Assuming you are using `Ubuntu`, use the following, else see [here](/install-tools/gcc):
 ```console
 sudo apt-get update
 sudo apt install -y gcc
@@ -126,5 +125,3 @@ You are now ready to get started with any of the learning paths [here](/cloud/#a
 | Documentation | [Launching your first Linux instance](https://docs.oracle.com/en-us/iaas/Content/GSG/Reference/overviewworkflow.htm) |
 | YouTube       | [Oracle Learning](https://www.youtube.com/user/OracleLearning) |
 | Misc          | [Oracle Developer Resource Center](https://developer.oracle.com/arm/) |
-
-

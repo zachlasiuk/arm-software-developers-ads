@@ -3,20 +3,6 @@
 <!-- Hugo variable setting -->
 {{ $current_title := .Page.Title}}
 
-<!-- Hugo processing to get current tags for this learning path area only -->
-
-        <!-- Create empty arrays to save taxonomies from this page to display on filters -->
-        {{ $armip_tags := slice}}
-        {{ $tool_tags := slice}}
-        {{ $software_tags := slice}}
-        {{ $operatingsystem_tags := slice}}
-        {{ $developerprogram_tags := slice}}
-        {{ $subject_tags := slice}}
-        {{ $skilllevel_tags := slice}}
-
-   
-
-
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap">
 
     <!-- Category filter -->
@@ -41,23 +27,21 @@
     </div>
 </div>
 
-
-<div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1 u-padding-bottom-2-1/2">
-    <!-- Filter bar on left -->
-    <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="max-width: 320px;">
-
-        <!-- Subjects -->
-        {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Subjects" "tagname" .Site.Taxonomies.subjects)}}
-        <!-- Skill level -->
-        {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Skill Level" "tagname" .Site.Taxonomies.skilllevels)}}
-        <!-- Operating Systems -->
-        {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "OS" "tagname" .Site.Taxonomies.operatingsystems)}}
-        <!-- Software -->
-        {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Software" "tagname" .Site.Taxonomies.softwares)}}
-        <!-- Tools -->
-        {{ partial "filtering/simple-expansion.html" (dict "context" . "displayname" "Tools" "tagname" .Site.Taxonomies.tools)}}
-    </div>
-
+    <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1 u-padding-bottom-2-1/2">
+        <!-- Filter bar on left -->
+        <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="max-width: 320px;">
+    
+            <!-- Subjects, CLOSED SCHEMA -->
+            {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Subjects" "routing" "subjects" "tagnames" .Params.subjects_closed_schema)}} 
+            <!-- Operating Systems, CLOSED SCHEMA -->
+            {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "OS" "routing" "operatingsystems" "tagnames" .Params.oses_closed_schema)}} 
+            <!-- Skill level, CLOSED SCHEMA -->
+            {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Skill Level" "routing" "skilllevels" "tagnames" (slice "Getting Started" "Introductory" "Experienced"))}}
+            <!-- Software -->
+            {{ partial "filtering/open-expansion.html" (dict "context" . "displayname" "Software")}}
+            <!-- Tools -->
+            {{ partial "filtering/open-expansion.html" (dict "context" . "displayname" "Tools")}}
+        </div>
 
     <!-- Search & Results on Right -->
     <div class="c-col">
@@ -87,63 +71,35 @@
                     <div class='path-div search-div
                                 {{ with .Params.skillLevels }}
                                     tag-{{. | urlize}}
-
-                                    {{ if not (in $skilllevel_tags .) }}
-                                        {{ $skilllevel_tags = $skilllevel_tags | append . }} 
-                                    {{end}}
                                 {{ end }}
                                 {{ with .Params.armips }}
                                     {{range .}}
                                         tag-{{. | urlize}}
-
-                                        {{ if not (in $armip_tags .) }}
-                                            {{ $armip_tags = $armip_tags | append . }} 
-                                        {{end}}
                                     {{end}}
                                 {{ end }}
                                 {{ with .Params.tools }}
                                     {{ range .}}
                                         tag-{{. | urlize}}
-
-                                        {{ if not (in $tool_tags .) }}
-                                            {{ $tool_tags = $tool_tags | append . }} 
-                                        {{end}}
                                     {{end}}
                                 {{ end }}
                                 {{ with .Params.softwares }}
                                     {{ range .}}
                                         tag-{{. | urlize}}
-
-                                        {{ if not (in $software_tags .) }}
-                                            {{ $software_tags = $software_tags | append . }} 
-                                        {{end}}
                                     {{end}}
                                 {{ end }}
                                 {{ with .Params.operatingsystems }}
                                     {{ range .}}
                                         tag-{{. | urlize}}
-
-                                        {{ if not (in $operatingsystem_tags .) }}
-                                            {{ $operatingsystem_tags = $operatingsystem_tags | append . }} 
-                                        {{end}}
                                     {{ end }}
                                 {{ end }}
                                 {{ with .Params.developerprograms }}
                                     {{ range .}}
                                         tag-{{. | urlize}}
-
-                                        {{ if not (in $developerprogram_tags .) }}
-                                            {{ $developerprogram_tags = $developerprogram_tags | append . }} 
-                                        {{end}}
                                     {{ end }}
                                 {{ end }}
                                 {{ with .Params.subjects }}
                                     {{ range .}}
                                         tag-{{. | urlize}}
-
-                                        {{ if not (in $subject_tags .) }}
-                                            {{ $subject_tags = $subject_tags | append . }} 
-                                        {{end}}
                                     {{ end }}
                                 {{ end }}'>
                         <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card'>
@@ -164,18 +120,6 @@
 
 
 </div> <!-- End of left-right divide -->
-
-
-
-<!-- TEMPORARY: Test to ensure we can properly source tags from only pages in this section -->
-<h4>test for filtering:</h4>
-{{range $tool_tags}}
-    {{ $tool_url := (printf "/tools/%s" (lower .) ) }}
-    <a href='{{$tool_url}}'>{{$tool_url}}</a>
-
-    <br>
-{{end}}
-
 
 {{ partial "filtering/filter-tag.html" . }}
 {{ partial "ads-cards/ads-card-style.html" . }}

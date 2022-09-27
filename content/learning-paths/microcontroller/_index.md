@@ -16,6 +16,21 @@ weight: 5  # Decides order of main topics on homepage
 
 # Shown when listing learning paths in this category:
 subtitle: "Build secure, connected, smart IoT devices" # used as header for learning path to avoid duplicaiton
+
+#####################################
+# CLOSED filters
+#####################################
+subjects_closed_schema:
+    - ML
+    - CI/CD
+    - Performance and Architecture
+    - Cloud Connection
+    - Security
+    - Virtual Hardware
+
+oses_closed_schema:
+    - Baremetal
+    - RTOS
 ---
 IoT endpoints are computing devices that are connected to the edge of the network. They typically collect and serve data by communicating with central or cloud resources.
 

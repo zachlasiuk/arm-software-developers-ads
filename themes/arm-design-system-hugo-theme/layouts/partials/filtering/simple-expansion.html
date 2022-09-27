@@ -1,18 +1,14 @@
 <ads-expansion-panel is-default-expanded class="u-padding-bottom-1">
+    <span slot="toggle">{{.displayname}}</span>
     <div slot="content">
         <div class="u-flex u-flex-column">
-            {{ $num_of_tags := 0 }}
-            {{ range .tagname }}
-                <!-- filterPaths-->
-                <ads-checkbox class="tag-{{.Page.Title | urlize}}" id="{{.Page.Title}}" onclick="filterHandler_LearningPaths(this)">
-                    <a href="{{ .Page.Permalink }}">
-                        {{ .Page.Title }}
-                    </a>
-                </ads-checkbox>
-                {{ $num_of_tags = add $num_of_tags 1 }}
+            {{- range $name, $link := .dict_of_name_links -}}
+                    <ads-checkbox class="tag-{{$name | urlize}}" id="{{$name}}" onclick="filterHandler_LearningPaths(this)">
+                        <a href="{{ $link }}">
+                            {{ $name }}
+                        </a>
+                    </ads-checkbox>
             {{end}}
         </div>
     </div>
-    <!-- Header name still goes on top with the slot, but it uses a counter from the 'tagname' loop -->
-    <span slot="toggle">{{.displayname}}&nbsp;&nbsp;</span><span slot="toggle" style="color: var(--arm-dark-grey);">({{$num_of_tags}})</span>
 </ads-expansion-panel>

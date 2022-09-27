@@ -7,11 +7,9 @@ weight: 3 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
+[Amazon Web Services (AWS)](https://aws.amazon.com/) is a mature cloud computing platform. An overview of their services is described [here](https://aws.amazon.com/what-is-aws/).
 
-
-## What is AWS?
-
-[Amazon Web Services (AWS)](https://aws.amazon.com/) is a mature cloud computing platform. An overview of their services is described [here](https://aws.amazon.com/what-is-aws/). As with most cloud service providers, AWS offers a pay-as-you-use [pricing policy](https://aws.amazon.com/pricing/), including a number of [free](https://aws.amazon.com/free/) services.
+As with most cloud service providers, AWS offers a pay-as-you-use [pricing policy](https://aws.amazon.com/pricing/), including a number of [free](https://aws.amazon.com/free/) services.
 
 This guide is to help you get started with [Amazon Elastic Compute Cloud (EC2)](https://aws.amazon.com/ec2/) compute services, using Arm-based [Graviton](https://aws.amazon.com/ec2/graviton/) processors. This is a general purpose compute platform, essentially your own personal computer in the cloud.
 
@@ -84,7 +82,7 @@ Full documentation available [here](https://docs.aws.amazon.com/AWSEC2/latest/Us
 You can connect to the instance with your preferred SSH client. In the `Instance summary` view, click `Connect`, and select the `SSH client` tab to see the command line to launch the native SSH client.
 
 For example if using `ubuntu` image:
-```
+```console
 ssh -i <private_key> ubuntu@<public_ip_address>
 ```
 Terminal applications such as [PuTTY](https://www.putty.org/), [MobaXterm](https://mobaxterm.mobatek.net/) and similar can be used.
@@ -103,7 +101,7 @@ will identify the host machine as `aarch64`.
 
 ### hello world
 
-Install the `gcc` compiler. Assuming you are using `Ubuntu`, use the following, else see [here](/compilers/install_ngcc/):
+Install the `gcc` compiler. Assuming you are using `Ubuntu`, use the following, else see [here](/install-tools/gcc):
 ```console
 sudo apt-get update
 sudo apt install -y gcc
