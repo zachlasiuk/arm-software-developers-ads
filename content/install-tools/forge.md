@@ -1,14 +1,16 @@
 ---
 title: "Arm Forge"
 
-tool_install: true
-
 additional_search_terms:
   - forge
   - ddt
   - map
   - performance_reports
   - allinea_studio
+  
+
+tool_install: true              # DO NOT MODIFY. Always true for tool installs
+layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
 
 [Arm Forge](https://developer.arm.com/Tools%20and%20Software/Arm%20Forge) combines Arm DDT for parallel high-performace application debugging, Arm MAP for performance profiling and optimization advice, and Arm Performance Reports for summarizing and characterizing both scalar and MPI application performance.

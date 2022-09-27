@@ -4,7 +4,7 @@
 <div class="u-margin-3">
     <p>Congratulations! You have successfully completed this learning path -> {{ (index .learningpathfiles 0).Title }}: {{(index .learningpathfiles 0).Description}} </p>
 
-    <p>{{.context.Params.next_step_guidance}}</p>
+    <p>{{.context.Params.next_step_guidance  | markdownify}}</p>
     
     {{ with .context.Site.GetPage .context.Params.recommended_path}}
         <ads-cta-link link='{{.Permalink}}'>
