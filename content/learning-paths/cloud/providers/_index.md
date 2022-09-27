@@ -10,7 +10,7 @@ who_is_this_for: >
     Learning path for software developers interested in using Arm-based cloud service platforms.
 
 learning_objectives:
-    - Learn how to start an instance on an Arm-based cloud server
+    - Learn how to start an instance on an Arm-based cloud server.
 
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.

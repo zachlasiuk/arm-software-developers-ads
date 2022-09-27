@@ -27,23 +27,21 @@
     </div>
 </div>
 
-
-<div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1 u-padding-bottom-2-1/2">
-    <!-- Filter bar on left -->
-    <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="max-width: 320px;">
-
-        <!-- Subjects, CLOSED SCHEMA -->
-        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Subjects" "routing" "subjects" "tagnames" .Params.subjects_closed_schema:)}} 
-        <!-- Operating Systems, CLOSED SCHEMA -->
-        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "OS" "routing" "operatingsystems" "tagnames" .Params.oses_closed_schema)}} 
-        <!-- Skill level, CLOSED SCHEMA -->
-        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Skill Level" "routing" "skilllevels" "tagnames" (slice "Getting Started" "Introductory" "Experienced"))}}
-        <!-- Software -->
-        {{ partial "filtering/open-expansion.html" (dict "context" . "displayname" "Software")}}
-        <!-- Tools -->
-        {{ partial "filtering/open-expansion.html" (dict "context" . "displayname" "Tools")}}
-    </div>
-
+    <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1 u-padding-bottom-2-1/2">
+        <!-- Filter bar on left -->
+        <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="max-width: 320px;">
+    
+            <!-- Subjects, CLOSED SCHEMA -->
+            {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Subjects" "routing" "subjects" "tagnames" .Params.subjects_closed_schema)}} 
+            <!-- Operating Systems, CLOSED SCHEMA -->
+            {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "OS" "routing" "operatingsystems" "tagnames" .Params.oses_closed_schema)}} 
+            <!-- Skill level, CLOSED SCHEMA -->
+            {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Skill Level" "routing" "skilllevels" "tagnames" (slice "Getting Started" "Introductory" "Experienced"))}}
+            <!-- Software -->
+            {{ partial "filtering/open-expansion.html" (dict "context" . "displayname" "Software")}}
+            <!-- Tools -->
+            {{ partial "filtering/open-expansion.html" (dict "context" . "displayname" "Tools")}}
+        </div>
 
     <!-- Search & Results on Right -->
     <div class="c-col">

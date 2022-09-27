@@ -7,7 +7,7 @@ title: "Get started with Trusted Firmware-M"
 # Should start with a verb, have no adjectives (amazing, cool, etc.), and be as concise as possible.
 
 description: >
-    build and run TF-M tests with Arm Virtual Hardware.
+    Build TF-M tests and run on Arm Virtual Hardware.
 # One sentance, is a quick summary of this learning path, viewable when searching through all learning paths. 
 
 minutes_to_complete: 15

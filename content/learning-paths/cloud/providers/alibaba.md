@@ -7,14 +7,13 @@ weight: 2 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
+[Alibaba Cloud](https://www.alibabacloud.com/) is a mature cloud computing platform. An overview of their services is described [here](https://www.alibabacloud.com/about).
 
-## What is Alibaba Cloud?
-
-[Alibaba Cloud](https://www.alibabacloud.com/) is a mature cloud computing platform. An overview of their services is described [here](https://www.alibabacloud.com/about). As with most cloud service providers, Alibaba Cloud offers a pay-as-you-use [pricing policy](https://www.alibabacloud.com/pricing), including a number of [free](https://www.alibabacloud.com/free) services.
+As with most cloud service providers, Alibaba Cloud offers a pay-as-you-use [pricing policy](https://www.alibabacloud.com/pricing), including a number of [free](https://www.alibabacloud.com/free) services.
 
 This guide is to help you get started with their [Elastic Compute Service (ECS)](https://www.alibabacloud.com/product/ecs), using [Arm-based](https://www.alibabacloud.com/product/ecs/g8m) processors. This is a general purpose compute platform, essentially your own personal computer in the cloud.
 
-Detailed instructions are available in the Alibaba Cloud [documentation](https://www.alibabacloud.com/help/en/elastic-compute-service), as well as their [ECS Learning Path](https://www.alibabacloud.com/getting-started/learningpath/ecs)
+Detailed instructions are available in the Alibaba Cloud [documentation](https://www.alibabacloud.com/help/en/elastic-compute-service), as well as their [ECS Learning Path](https://www.alibabacloud.com/getting-started/learningpath/ecs).
 
 ## Create an account
 
@@ -42,7 +41,7 @@ Use the `Create ECS Instance` button to get started. Select `Custom Launch` conf
 
 ### Select Instance Type
 
-using the `Type-based Selection` tab, set `Architecture` as `ARM`, and `Category` as `General Purpose`, to see the available instance types. If you already know the desired instance type, yo can enter this in the filter.
+Using the `Type-based Selection` tab, set `Architecture` as `ARM`, and `Category` as `General Purpose`, to see the available instance types. If you already know the desired instance type, yo can enter this in the filter.
 
 ### Select OS image
 
@@ -71,7 +70,7 @@ There are a number of different [Connection methods](https://www.alibabacloud.co
 Connecting by [SSH Key Pair](https://www.alibabacloud.com/help/en/elastic-compute-service/latest/connect-to-a-linux-instance-by-using-an-ssh-key-pair) is likely the most convenient.
 
 For example if using `ubuntu` image:
-```
+```console
 ssh -i <private_key> ubuntu@<public_ip_address>
 ```
 Terminal applications such as [PuTTY](https://www.putty.org/), [MobaXterm](https://mobaxterm.mobatek.net/) and similar can be used.
@@ -88,7 +87,7 @@ will identify the host machine as `aarch64`.
 
 ### hello world
 
-Install the `gcc` compiler. Assuming you are using `Ubuntu`, use the following, else see [here](/compilers/install_ngcc/):
+Install the `gcc` compiler. Assuming you are using `Ubuntu`, use the following, else see [here](/install-tools/gcc):
 ```console
 sudo apt-get update
 sudo apt install -y gcc

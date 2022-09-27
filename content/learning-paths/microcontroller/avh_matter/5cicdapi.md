@@ -13,7 +13,7 @@ Applications to interface with the API can be written in JavaScript, Python, or 
 
 We shall extend the workflow from the previous section to automatically transmit the `chip-tool` commands.
 
-## Set up API Token as GitHb secret
+## Set up API Token as GitHub secret
 
 In either `Arm Virtual Hardware` browser, navigate to `Profile` > `API`.
 

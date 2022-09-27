@@ -20,14 +20,14 @@ The easiest way to access the Arm Compiler for Embedded is to use the version pr
 
 Cortex-M users can also use the compiler as provided with [Keil MDK](https://www2.keil.com/mdk5).
 
-Note that Arm Compiler for Embedded FuSa is not _installed_ as part of Arm Development Studio or Keil MDK, and must be downloaded seperately.
+Note that Arm Compiler for Embedded FuSa is not _installed_ as part of Arm Development Studio or Keil MDK, and must be downloaded separately.
 
 ## Download standalone compiler packages {#download}
 
 Individual compiler packages for all supported host platforms can be downloaded from the Product Downloads section of the Arm website.
 
-[Arm Compiler for Embedded](https://developer.arm.com/downloads/view/ACOMPE)
-[Arm Compiler for Embedded FuSa](https://developer.arm.com/downloads/view/ACOMP616)
+- [Arm Compiler for Embedded](https://developer.arm.com/downloads/view/ACOMPE)
+- [Arm Compiler for Embedded FuSa](https://developer.arm.com/downloads/view/ACOMP616)
 
 [What should I do if I want to download a legacy release of Arm Compiler?](https://developer.arm.com/documentation/ka005184)
 
