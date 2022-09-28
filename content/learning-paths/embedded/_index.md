@@ -35,6 +35,6 @@ subjects_closed_schema:
 oses_closed_schema:
     - Linux
 ---
-IoT endpoints are computing devices that are connected to the edge of the network. They typically collect and serve data by communicating with central or cloud resources.
+Industrial modernization and the shift to smart manufacturing has sparked innovations in automation, robotics and the industrial internet of things (IIoT). Introducing artificial intelligence (AI), interoperability and secure connectivity enables real-time monitoring, control and optimization of processes, resources and systems – all of which can lead to greater productivity, increased safety and reduced costs.
 
-Cortex-M and Cortex-A devices are used in IoT endpoints and there are numerous software building blocks which are useful for IoT software developers. The information below helps developers learn how to use existing software and development tools in IoT projects.
+Arm’s scalable solutions and strong ecosystem of partners allow our customers to operate seamlessly across a single architecture from sensor to cloud, whilst addressing varied performance, real-time, functional safety and security needs.

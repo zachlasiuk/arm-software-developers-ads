@@ -11,9 +11,7 @@ layout: "learningpathall"
 
 ## Pre-requisites
 
-* AWS Account
-* AWS EC2 instance running AVH AMI. Use the instructions [here](iot/avh/launch)
-
+* AWS EC2 instance running AVH AMI. Use the instructions [here](/install-tools/avh#corstone)
 
 ## Build the CMSIS-DSP tests
 
@@ -33,7 +31,6 @@ Next, clone the CMSIS-DSP git repository and switch to the latest working branch
 git clone https://github.com/ARM-software/CMSIS-DSP/
 git checkout -b a973e9e
 ```
-
 Now, build the test framework and generate all the C files needed using the steps below
 
 ```console

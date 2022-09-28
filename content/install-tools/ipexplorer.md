@@ -1,5 +1,5 @@
 ---
-title: "IP Explorer"
+title: "Arm IP Explorer"
 
 tool_install: true              # DO NOT MODIFY. Always true for tool installs
 layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs

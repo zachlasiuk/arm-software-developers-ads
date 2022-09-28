@@ -36,6 +36,6 @@ oses_closed_schema:
     - Android
     - Linux
 ---
-IoT endpoints are computing devices that are connected to the edge of the network. They typically collect and serve data by communicating with central or cloud resources.
+As mobile computing expands into every aspect of our lives, new, more compute-intensive use cases and visual experiences on top consumer devices are rising every year, performing tasks we could only dream of in the past.
 
-Cortex-M and Cortex-A devices are used in IoT endpoints and there are numerous software building blocks which are useful for IoT software developers. The information below helps developers learn how to use existing software and development tools in IoT projects.
+Learn how to develop and optimize Android applications using latest Arm technologies.

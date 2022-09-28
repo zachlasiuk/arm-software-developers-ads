@@ -31,6 +31,6 @@ oses_closed_schema:
     - Linux
     - Windows
 ---
-IoT endpoints are computing devices that are connected to the edge of the network. They typically collect and serve data by communicating with central or cloud resources.
+Laptop users increasingly demand a more mobile experience with always-on, always-connected 5G, and multiday battery life. Through engineering, technology, and security innovations, Arm-based laptops deliver the mobile experience users need in today’s constantly connected digital world.
 
-Cortex-M and Cortex-A devices are used in IoT endpoints and there are numerous software building blocks which are useful for IoT software developers. The information below helps developers learn how to use existing software and development tools in IoT projects.
+Learn how to port applications to Windows-on-Arm for best performance and lowest cost.

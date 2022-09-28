@@ -36,5 +36,6 @@ oses_closed_schema:
     - Linux
     - Windows
 ---
-Develop cloud native applications on the Arm architecture for best performance and lowest cost. Learn how to build and run applications on Arm servers and Arm-based cloud services, and utilize Arm-based cloud services for software development.
+Arm Neoverse technology gives chip designers, cloud providers, and software developers the freedom to optimize technology for cloud and edge workloads that improves application performance, lowers energy consumption, and reduces total cost of ownership.
 
+Develop cloud native applications on the Arm architecture for best performance and lowest cost. Learn how to build and run applications on Arm servers and Arm-based cloud services, and utilize Arm-based cloud services for software development.
