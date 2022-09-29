@@ -1,8 +1,8 @@
 ---
-title: "Get started with Geekbench on Arm-based cloud service platforms" 
+title: "Get started with benchmarking on an Arm-based server" 
 
 description: >
-    Run Geekbench benchmark on Arm-based cloud server.
+    Learn how to run Geekbench 5 benchmark on Arm-based server.
 
 minutes_to_complete: 15
 
