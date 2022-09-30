@@ -20,7 +20,7 @@ More information is given in [the documentation](https://developer.arm.com/docum
 
 ## Download installer packages
 
-You can download the Fast Models installer from the [Product Download Hub]((https://developer.arm.com/downloads). Linux and Windows hosts are supported.
+You can download the Fast Models installer from the [Product Download Hub](https://developer.arm.com/downloads/view/FM000A). Linux and Windows hosts are supported.
 
 Full installation instructions are provided [here](https://developer.arm.com/documentation/100965/latest/Installing-Fast-Models/Installation).
 
@@ -44,6 +44,8 @@ To verify everything is working OK, you can build one of the many example projec
 ## Fixed Virtual Platforms {#fvp}
 
 Arm supplies a library of ready made [Fixed Virtual Platforms (FVP)](https://developer.arm.com/Tools%20and%20Software/Fixed%20Virtual%20Platforms) that can be used without Arm Fast Models installed. A number of these FVPs are also provided as components of [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio).
+
+The FVP library can also be downloaded from the [Product Download Hub](https://developer.arm.com/downloads/view/FM000A).
 
 Arm Fixed Virtual Platforms are [license managed](../license/).
 
