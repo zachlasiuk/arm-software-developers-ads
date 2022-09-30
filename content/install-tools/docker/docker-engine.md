@@ -20,6 +20,11 @@ For information about starting the docker daemon on WSL refer to the section on 
 
 ```console
 curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
+```
+
+Add the user to the docker group. The newgrp command avoids the need to logout and back in.
+
+```console
 sudo usermod -aG docker $USER ; newgrp docker
 ```
 

@@ -47,14 +47,14 @@ ARG ACfE=ARMCompiler6.18_standalone_linux-x86_64.tar.gz
 ARG FVP=FVP_ARM_Std_Library_11.19_14_Linux64.tgz
 ARG ARCH=x86_64
 
-ENV USER=ubuntu 
+ENV USER=ubuntu
 
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
-RUN apt-get update 
+RUN apt-get update
 RUN apt-get install -y --no-install-recommends apt-utils
 RUN apt-get -y upgrade
 
-RUN apt-get install nano
+RUN apt-get install -y nano sudo ca-certificates git make cmake lsb-core libx11-dev libxext6 libsm6 libxcursor1 libxft2 libxrandr2 libxt6 libxinerama1 libz-dev lsb xterm telnet dos2unix
 
 # Setup default user
 RUN useradd --create-home -s /bin/bash -m $USER && echo "$USER:$USER" | chpasswd && adduser $USER sudo
@@ -80,15 +80,17 @@ RUN /home/$USER/tmp/FVP_ARM_Std_Library.sh --i-agree-to-the-contained-eula --no-
 
 RUN rm -rf /home/$USER/tmp
 RUN rm $FVP
-ENV PATH "/home/$USER/FVP/bin:$PATH"
+ENV PATH "/home/$USER/FVP/bin:/home/$USER/FVP/FVP_Base:/home/$USER/FVP/FVP_MPS2:/home/$USER/FVP/FVP_VE:/home/$USER/FVP/FVP_BaseR:$PATH"
 
 # License configuration
 # Uncomment and modify below as appropriate
 #
-# armlm activate --code <activation-code>
+# RUN armlm activate --code <activation-code>
 #   or
 # ENV ARMLMD_LICENSE_FILE "port@server"
 ```
+
+
 ## Build docker image
 Use the command:
 ```console
@@ -102,7 +104,7 @@ docker build --build-arg ARCH=aarch64 --build-arg AC6=ARMCompiler6.18_standalone
 ```
 After a few minutes the docker image will be built and be ready for use. You can see all availalbe images with the command:
 ```console
-docker images ls
+docker images
 ```
 ## Access the docker image
 To interact with your docker image, enter the command:
