@@ -104,7 +104,7 @@ After a few minutes the docker image will be built and be ready for use. You can
 ```console
 docker images ls
 ```
-## Access wthe docker image
+## Access the docker image
 To interact with your docker image, enter the command:
 ```console
 docker run -i -t arm-environment /bin/bash
@@ -117,4 +117,4 @@ Congratulations. You have a docker environment containing the Arm Compiler for E
 
 ## Next step
 
-Why not try to [Build and run your first embedded image](../bare-metal/) in your docker environment.
+Why not try to [Build and run your first embedded image](../../bare-metal/) in your docker environment.
