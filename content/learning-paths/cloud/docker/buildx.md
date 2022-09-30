@@ -11,7 +11,7 @@ layout: "learningpathall"
 
 ## Pre-requisites
 
-* Docker should be installed before starting. To install Docker follow refer to [Installing Docker](/install-tools/docker).
+* Docker should be installed before starting. To install Docker follow refer to [Installing Docker](/install-tools/docker/).
 * Test docker using the hello-world image
 ```console
 docker run hello-world

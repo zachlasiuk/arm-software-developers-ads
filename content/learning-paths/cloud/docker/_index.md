@@ -41,5 +41,5 @@ learning_path_main_page: "yes"  # Indicates this should be surfaced when looking
 
 # Prereqs
 ---
-- Docker is installed on the machines being used. For information about the installation refer to [Installing Docker](/install-tools/docker)
+- Docker is installed on the machines being used. For information about the installation refer to [Installing Docker](/install-tools/docker/)
 

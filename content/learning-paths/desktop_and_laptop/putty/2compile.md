@@ -9,7 +9,7 @@ layout: "learningpathall"
 ---
 ## Pre-requisites
 
-You will need a Windows on Arm device with appropriate build software installed. For full instructions see [here](/install-tools/woa).
+You will need a Windows on Arm device with appropriate build software installed. For full instructions refer to [Windows on Arm native build tools](/install-tools/woa/).
 
 Additionally, you will need:
 - [Perl](https://www.linaro.org/windows-on-arm/perl/) environment

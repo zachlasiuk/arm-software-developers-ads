@@ -11,7 +11,7 @@ layout: "learningpathall"
 
 ## Pre-requisites
 
-* Docker should be installed before starting. To install Docker follow refer to [Installing Docker](/install-tools/docker).
+* Docker should be installed before starting. To install Docker follow refer to [Installing Docker](/install-tools/docker/).
 * Test docker using the hello-world image
 ```console
 docker run hello-world
@@ -30,7 +30,7 @@ This information is only for machines WITHOUT Docker Desktop.
 
 ## Detailed Steps
 
-The multi-architecture features demonstrated in [Docker buildx for multi-architecture builds](../buildx) work with Docker Desktop. For Linux machines without Docker Desktop extra software is required to build and run images for different architectures.
+The multi-architecture features demonstrated in [Docker buildx for multi-architecture builds](../buildx/) work with Docker Desktop. For Linux machines without Docker Desktop extra software is required to build and run images for different architectures.
 
 ## Build a simple Dockerfile to print the machine architecture
 

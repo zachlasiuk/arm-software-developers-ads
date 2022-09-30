@@ -7,7 +7,9 @@ additional_search_terms:
 tool_install: true              # DO NOT MODIFY. Always true for tool installs
 layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
-There are multiple flavors of [GCC, the GNU Compiler Collection](https://gcc.gnu.org/), for the Arm architecture. To know which compiler you need consider the variables below.
+## GCC {#top}
+
+There are multiple flavors of [GCC, the GNU Compiler Collection](https://gcc.gnu.org/), for the Arm architecture. To know which compiler you need consider the variables below. 
 
 - Target environment where you want the compiled software to run: bare metal or real time operating system (RTOS), Linux kernel and applications, Android applications, or Windows applications.
 

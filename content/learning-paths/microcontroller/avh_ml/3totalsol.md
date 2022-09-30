@@ -15,7 +15,7 @@ The [Arm Open-IoT-SDK](https://github.com/ARM-software/open-iot-sdk) provides a 
 
 A valid [AWS](https://aws.amazon.com/) account is required.
 
-Launch the Arm Virtual Hardware AMI. For full instructions see [here](/install-tools/avh#corstone).
+Launch the Arm Virtual Hardware AMI. For full instructions see [here](/install-tools/avh/#corstone).
 
 ## Clone the example repository
 
