@@ -18,8 +18,8 @@ recommended_path: ""
 
 further_reading:
     - resource:
-        title: TODO
-        link: link
+        title: Parallel Programming for Science Engineering by Victor Eijkhout
+        link: https://theartofhpc.com/pcse/
         type: website
 
 
