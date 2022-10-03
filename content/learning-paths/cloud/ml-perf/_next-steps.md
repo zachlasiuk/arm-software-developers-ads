@@ -26,7 +26,7 @@ further_reading:
         link: https://github.com/mlcommons/inference/blob/master/vision/classification_and_detection/GettingStarted.ipynb
         type: documentation
     - resource:
-        title: Machine Learning Inference on AWS Garviton3
+        title: Machine Learning Inference on AWS Graviton3
         link: https://community.arm.com/arm-community-blogs/b/infrastructure-solutions-blog/posts/machine-learning-inference-on-aws-graviton3
         type: blog
 
