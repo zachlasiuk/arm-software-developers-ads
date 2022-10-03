@@ -13,8 +13,8 @@ You can connect the [Arm Development Studio](https://developer.arm.com/Tools%20a
 
 ## Pre-requisites
 
-It is assumed you have installed Arm Development Studio and configured your license. For full instructions see [here](/install-tools/armds).
-It is assumed you have installed Arm Fast Models and configured your license and build tools. For full instructions see [here](/install-tools/fm).
+It is assumed you have installed Arm Development Studio and configured your license. For full instructions see [here](/install-tools/armds/).
+It is assumed you have installed Arm Fast Models and configured your license and build tools. For full instructions see [here](/install-tools/fm/).
 
 If you do not have Fast Models, you can still learn how to connect to a custom virtual platform.
 

@@ -15,7 +15,7 @@ Linux users may need to preceed the `docker` commands below with `sudo`, as the 
 
 ## Pre-requisites
 
-Download and [install](/install-tools/docker) the appropriate Docker environment for your host platform.
+Download and [install](/install-tools/docker/) the appropriate Docker environment for your host platform.
 
 ## Prepare files to copy to image
 
@@ -35,25 +35,28 @@ Using a text editor, reate a text file named exactly `Dockerfile` containing the
 
 This file copies the above installers to the Docker image. Note that your installers may have different filenames. Edit the Dockerfile as necessary (`ACfE` and `FVP` arguments therein), else edit on the build command line (see later).
 
-Whilst installing the [compiler](/install-tools/armclang) and [FVP library](/install-tools/fm#fvp), the EULA(s) are silently accepted. Be sure that this is satisfactory for you.
+Whilst installing the [compiler](/install-tools/armclang/) and [FVP library](/install-tools/fm#fvp/), the EULA(s) are silently accepted. Be sure that this is satisfactory for you.
 
-You will need to edit the licensing portion of the file to match your internal license setup. See [Arm user license setup](/install-tools/license) for more information.
+You will need to edit the licensing portion of the file to match your internal license setup. See [Arm user license setup](/install-tools/license/) for more information.
 
 ## Dockerfile {#dockerfile}
 ```Dockerfile
 FROM ubuntu:20.04 as base
 
+# Install packages: update filenames if necessary
 ARG ACfE=ARMCompiler6.18_standalone_linux-x86_64.tar.gz
 ARG FVP=FVP_ARM_Std_Library_11.19_14_Linux64.tgz
 ARG ARCH=x86_64
 
 ENV USER=ubuntu
 
+# Update Host OS
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends apt-utils
 RUN apt-get -y upgrade
 
+# Install necessary dependencies
 RUN apt-get install -y nano sudo ca-certificates git make cmake lsb-core libx11-dev libxext6 libsm6 libxcursor1 libxft2 libxrandr2 libxt6 libxinerama1 libz-dev lsb xterm telnet dos2unix
 
 # Setup default user
@@ -77,7 +80,6 @@ COPY $FVP /home/$USER
 RUN mkdir /home/$USER/tmp
 RUN tar xvfz $FVP  -C /home/$USER/tmp
 RUN /home/$USER/tmp/FVP_ARM_Std_Library.sh --i-agree-to-the-contained-eula --no-interactive -q -f -d /home/$USER/FVP
-
 RUN rm -rf /home/$USER/tmp
 RUN rm $FVP
 ENV PATH "/home/$USER/FVP/bin:/home/$USER/FVP/FVP_Base:/home/$USER/FVP/FVP_MPS2:/home/$USER/FVP/FVP_VE:/home/$USER/FVP/FVP_BaseR:$PATH"
@@ -85,20 +87,20 @@ ENV PATH "/home/$USER/FVP/bin:/home/$USER/FVP/FVP_Base:/home/$USER/FVP/FVP_MPS2:
 # License configuration
 # Uncomment and modify below as appropriate
 #
+# ENV ARMLM_ONDEMAND_ACTIVATION=HWSKT-STD0@https://internal.ubl.server
+#   or
 # RUN armlm activate --code <activation-code>
 #   or
 # ENV ARMLMD_LICENSE_FILE "port@server"
 ```
-
-
 ## Build docker image
 Use the command:
 ```console
 docker build -t arm-environment .
 ```
-to build an image named `arm-environment`. This name is arbitrary, and can be changed if you wish.
+to build a docker image named `arm-environment`. This name is arbitrary, and can be changed if you wish.
 
-To change `Dockerfile` arguments from the command line, use the `--build-arg` option, for example if using an Arm-based docker image:
+To change `Dockerfile` arguments from the command line, use the `--build-arg` option. For example to build an Arm-based docker image:
 ```console
 docker build --build-arg ARCH=aarch64 --build-arg AC6=ARMCompiler6.18_standalone_linux-aarch64.tar.gz -t arm-environment:aarch64 .
 ```

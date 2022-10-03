@@ -12,15 +12,17 @@ layout: "learningpathall"
 
 It is assumed you have installed Arm Development Studio and configured your license. For full instructions see [here](/install-tools/armds/).
 
-Alternatively you can install [Arm Compiler for Embedded](/install-tools/armclang/) and [Arm Fixed Virtual Platforms](/install-tools/fm#fvp/) individually.
+Alternatively you can install [Arm Compiler for Embedded](/install-tools/armclang/) and [Arm Fixed Virtual Platforms (FVP)](/install-tools/fm#fvp/) individually.
 
-We shall use the `FVP_Base_Cortex-A73x2-A53x4` platform, which is a complex system, containing two processor clusters.
+See [Prepare Docker image for Arm embedded development](/learning-paths/embedded/docker/) for an example Docker image.
+
+We shall use the `FVP_Base_Cortex-A73x2-A53x4` platform, which is a complex FVP system, containing two processor clusters.
 
 ## "Hello World!"
 
 Let's start with a simple C program, and use the `armclang` compiler and `armlink` linker tools to compile and generate an executable image.
 
-In your command-line terminal, use your favorite editor, to create a new file called `hello_world.c` with the following contents:
+In your command-line terminal, use your favorite editor to create a new file called `hello_world.c` with the following contents:
 ```C
 #include <stdio.h>
 
