@@ -21,7 +21,7 @@ Download and [install](/install-tools/docker/) the appropriate Docker environmen
 
 Download the installation packages for Arm Compiler for Embedded and the FVP library from the [Product Download Hub](https://developer.arm.com/downloads).
 
-Create a temporary directory, and copy the compiler and FVP library installers here. 
+Create a (temporary) directory, and copy the compiler and FVP library installers here. 
 
 Note that the exact file names are dependent on the versions used - you may need to update the below `Dockerfile` as necessary.
 
@@ -29,7 +29,7 @@ Note that the exact file names are dependent on the versions used - you may need
 
 A [Dockerfile](https://docs.docker.com/engine/reference/builder/) is a text file containing all the instructions to build your docker image.
 
-Using a text editor, reate a text file named exactly `Dockerfile` containing the [below](#dockerfile).
+In the same directory, create a text file named exactly `Dockerfile` containing the [below](#dockerfile).
 
 ### Notes regarding Dockerfile
 
@@ -87,7 +87,7 @@ ENV PATH "/home/$USER/FVP/bin:/home/$USER/FVP/FVP_Base:/home/$USER/FVP/FVP_MPS2:
 # License configuration
 # Uncomment and modify below as appropriate
 #
-# ENV ARMLM_ONDEMAND_ACTIVATION=HWSKT-STD0@https://internal.ubl.server
+# ENV ARMLM_ONDEMAND_ACTIVATION=product_code@https://internal.ubl.server
 #   or
 # RUN armlm activate --code <activation-code>
 #   or
