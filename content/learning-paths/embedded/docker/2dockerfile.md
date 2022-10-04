@@ -1,6 +1,6 @@
 ---
 # User change
-title: "Create Dockerfile and build image"
+title: "Create Dockerfile and build docker image"
 
 weight: 2 # 1 is first, 2 is second, etc.
 
@@ -17,7 +17,7 @@ Linux users may need to preceed the `docker` commands below with `sudo`, as the 
 
 Download and [install](/install-tools/docker/) the appropriate Docker environment for your host platform.
 
-## Prepare files to copy to image
+## Prepare files to copy into image
 
 Download the installation packages for Arm Compiler for Embedded and the FVP library from the [Product Download Hub](https://developer.arm.com/downloads).
 
@@ -50,7 +50,7 @@ ARG ARCH=x86_64
 
 ENV USER=ubuntu
 
-# Update Host OS
+# Update docker image OS
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends apt-utils
@@ -104,7 +104,7 @@ To change `Dockerfile` arguments from the command line, use the `--build-arg` op
 ```console
 docker build --build-arg ARCH=aarch64 --build-arg AC6=ARMCompiler6.18_standalone_linux-aarch64.tar.gz -t arm-environment:aarch64 .
 ```
-After a few minutes the docker image will be built and be ready for use. You can see all availalbe images with the command:
+After a few minutes the docker image will be built and be ready for use. You can see all available images with the command:
 ```console
 docker images
 ```
@@ -113,7 +113,7 @@ To interact with your docker image, enter the command:
 ```console
 docker run -i -t arm-environment /bin/bash
 ```
-and you will enter a terminal of the docker image. Verify everything is working correctly with, for example:
+and you will enter the terminal of the docker image. Verify everything is working correctly with, for example:
 ```console
 armclang --version
 ```

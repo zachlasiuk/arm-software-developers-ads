@@ -27,9 +27,9 @@ If using an Android target, you must install Android Debug Bridge(adb) available
 
 ## Setting up product license
 
-Arm Mobile Studio includes a free starter edition license which is automatically configured.
+Arm Mobile Studio is available as a free starter edition which is not license managed. If using [Professional Edition](https://developer.arm.com/Tools%20and%20Software/Arm%20Mobile%20Studio#Editions), see the supplied readme for license setup instructions.
 
-Arm Development Studio, as well as Arm Mobile Studio [Professional Edition](https://developer.arm.com/Tools%20and%20Software/Arm%20Mobile%20Studio#Editions), is license managed. License setup instructions are available [here](../license/).
+Arm Development Studio is license managed. License setup instructions are available [here](../license/).
 
 ## Get started
 
