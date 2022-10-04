@@ -21,7 +21,7 @@ To see your changes, run the website locally.
 
 ## Running the website locally
 
-Building and running the site locally requires the **extended version** of [Hugo](https://gohugo.io).
+Building and running the site locally requires the **extended version** of [Hugo](https://gohugo.io). From the Hugo releases page [here](https://github.com/gohugoio/hugo/releases) make sure to download the latest **extended version**.
 
 You will also need to install npm, golang, PostCSS and Node.js. Follow the installation instructions [here](https://www.docsy.dev/docs/get-started/docsy-as-module/installation-prerequisites/)
 
