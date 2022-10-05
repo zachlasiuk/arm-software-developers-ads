@@ -11,7 +11,7 @@ All Arm tools are license managed. Arm is migrating to a user-based licensing (U
 
 With a UBL license you have unlimited access to all components within the success kit you have enabled. The license is cached locally for up to 7 days, enabling remote or traveling users to have access to tools without connecting to their internal network.
 
-Using any component whilst connected to the network will renew the 7 days of license. This check is performed once per day upon the first use of the tools that day, and so there is very little network traffic associated with UBL licensing.
+Using any component whilst connected to the network will renew the 7 days of license. This renewal is performed once per 24 hours.
 
 If the license is not renewed within 7 days, it is automatically returned to the pool of available licenses. When you next use a UBL licensed tool, it will automatically attempt to check out a new license, which will require network connectivity to the UBL server.
 
