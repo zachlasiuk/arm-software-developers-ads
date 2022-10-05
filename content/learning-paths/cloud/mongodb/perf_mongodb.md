@@ -91,42 +91,14 @@ This is an open sourced java application that tests the MongoDB performance, suc
 
 ## Setup the MongoDB performance test tool
 
-
-
-
-On your 64-bit Arm Linux EC2 Instance that is running MongoDB, clone the project
-
-{{< tabpane>}}
-  {{< tab header="x86_64" highlight_lines=2 >}}
-mkdir tmp
-mv ARMCompiler6.18_standalone_linux-x86_64.tar.gz tmp
-cd tmp
-tar xvfz ARMCompiler6.18_standalone_linux-x86_64.tar.gz
-./install_x86_64.sh --i-agree-to-the-contained-eula --no-interactive -d /home/$USER/ArmCompilerforEmbedded6.18
-{{< /tab >}}
-{{< tab header="aarch64" >}}
-mkdir tmp
-mv ARMCompiler6.18_standalone_linux-aarch64.tar.gz tmp
-cd tmp
-tar xvfz ARMCompiler6.18_standalone_linux-aarch64.tar.gz
-./install_aarch64.sh --i-agree-to-the-contained-eula --no-interactive -d /home/$USER/ArmCompilerforEmbedded6.18
-{{< /tab >}}
-{{< /tabpane >}}
+On your instance running MongoDB (you may need to start a new terminal), clone the `MongoDB performance test tool` project:
 
 ```console
 git clone https://github.com/idealo/mongodb-performance-test.git
+
 ```
 
-{{< tabpane >}}
-  {{< tab header="x86_64" highlight_lines=2 >}}
-hello
-  {{< /tab >}}
-  {{< tab header="aarch64" >}}
-world
-  {{< /tab >}}
-{{< /tabpane >}}
-
-Now cd into project folder and execute the jar file
+Now `cd` into project folder and execute the `jar` file
 
 ```console
 cd mongodb-performance-test
