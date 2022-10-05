@@ -21,14 +21,12 @@ malioc --list --core <GPU_name>
 ```
 ## Compile your shader
 
-You can compile OpenGL ES (`--opengles`) and Vulkan (`--vulkan`) shader programs, as well as Open GL (`--opengl <version>`) C kernels (Linux only).
+You can compile OpenGL ES (`--opengles`) and Vulkan (`--vulkan`) shader programs, as well as Open GL (`--opengl <version>`) C kernels (Linux only). A performance report will be generated.
 
 The available options are documented in the [User Guide](https://developer.arm.com/documentation/101863/latest/Using-Mali-Offline-Compiler), else can be seen with:
 ```console
 malioc --help
 ```
-which will generate a performance report for that shader.
-
 # Analyze the report
 
 The report will provide an approximate cycle cost breakdown for the major functional units in the design. Use this information to optimize your shader.

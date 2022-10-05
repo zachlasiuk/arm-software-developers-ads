@@ -7,7 +7,7 @@ weight: 4 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
-Performance Advisor is a reporting tool that provides a report showing how your Android application performs on a mobile device.
+Performance Advisor is a tool that provides a report showing how your Android application performs on a mobile device.
 
 ## Pre-requisites
 
