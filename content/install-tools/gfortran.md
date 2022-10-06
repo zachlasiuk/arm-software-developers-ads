@@ -17,13 +17,8 @@ Follow the instructions below to install and use gfortran on an Arm Linux distri
 
 Confirm you are using an Arm machine by running:
 
-```console
+```bash { command_line="user@localhost | 2" }
 uname -m
-```
-
-The output should be:
-
-```console
 aarch64
 ```
 
@@ -37,7 +32,7 @@ The Linux package manager downloads the required files so there are no special i
 
 Use the `apt` command to install software packages on any Debian based Linux distribution, including Ubuntu.
 
-```console
+```bash { command_line="user@localhost" }
 sudo apt update
 sudo apt install gfortran -y
 ```
@@ -68,7 +63,7 @@ Arm GNU Toolchain is open source and freely available for use. No licenses need 
 
 To confirm the installation is complete run:
 
-```console
+```bash { command_line="user@localhost" }
 gfortran --version
 ```
 
@@ -83,13 +78,13 @@ end program hello
 
 To compile the hello-world program use:
 
-```console
+```bash { command_line="user@localhost" }
 gfortran hello.f90 -o hello
 ```
 
 To run the application enter:
 
-```console
+```bash { command_line="user@localhost" }
 ./hello
 ```
 
