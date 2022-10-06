@@ -24,12 +24,19 @@ def report(period):
     for d in dname:
         l = os.listdir(d)
         for i in l:
+            logging.debug("Checking {}...".format(d+"/"+i))
+
             date = subprocess.run(["git", "log", "-1" ,"--format=%cs", d +"/" + i], stdout=subprocess.PIPE)
-            date = datetime.strptime(date.stdout.rstrip().decode("utf-8"), "%Y-%m-%d")
-            # check if article is older than the period
-            if date < datetime.now() - timedelta(days = period):
-                # strip out '\n' and decode byte to string
-                result[d + "/" + i] = date
+            date = date.stdout.rstrip().decode("utf-8")
+            logging.debug(date)
+
+            # if empty, this is a temporary file which is not part of the repo
+            if(date != ""):
+                date = datetime.strptime(date, "%Y-%m-%d")
+                # check if article is older than the period
+                if date < datetime.now() - timedelta(days = period):
+                    # strip out '\n' and decode byte to string
+                    result[d + "/" + i] = date
 
     fn="outdated_files.csv"
     fields=["File", "Last updated"]

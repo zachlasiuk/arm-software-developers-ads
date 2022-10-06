@@ -45,19 +45,42 @@ def check(json_file):
         t = data["{}".format(i)]
         for j in range(0, t["ncmd"]):
             c = t["{}".format(j)]
+
             # Check type
             if t["type"] == "bash":
                 cmd = ["docker exec -u user -w /home/user test {}".format(c)]
             elif t["type"] == "fortran":
                 fn = "hello.f90"
                 cmd = ["docker exec -u user -w /home/user test bash -c \"echo '{}' >> {}\"".format(c.replace('\'','\\\"'), fn)]
-            logging.debug(cmd)
-            p = subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-            if p.returncode == 0:
-                print("ok")
             else:
-                print("ERROR")
+                cmd = []
 
+            logging.debug(cmd)
+
+            if cmd != []:
+                if "expected" in t.keys():
+                    # Do not run output commands
+                    if j == int(t["expected"])-1:
+                        logging.debug("Don't run command")
+                        break
+                    else:
+                        p = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+                else:
+                    p = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+
+                # if success
+                if p.returncode == 0:
+                    # check with expected result if any
+                    if "expected" in t.keys():
+                        exp = t["{}".format(int(t["expected"])-1)]
+                        if exp == p.stdout:
+                            logging.info("{}: ok".format(cmd))
+                        else:
+                            logging.info("{}: ERROR (unexpected output. Expected {} but got {})".format(cmd, exp, p.stdout))
+                    else:
+                        logging.info("{}: ok".format(cmd))
+                else:
+                    logging.info("{}: ERROR (command failed)".format(cmd))
 
     # Stop instance
     cmd = ["docker stop test"]
