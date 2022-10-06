@@ -1,39 +1,87 @@
-# Prototype site for Arm Software Developers
+# Arm Software Developers (prototype project)
 
-This prototype site uses a custom Arm Design System theme with [Hugo](https://gohugo.io/), providing easy site navigation and structure for learning-based technical content.
+This prototype site uses a custom Arm theme for [Hugo](https://gohugo.io/) to create a static website with easy navigation and structure for learning-based technical content for Arm software developers. The content is created in markdown and stored on GitHub. GitHub Actions are used to update the website automatically when changes are made.
 
+The project is open to anyone who wishes to improve or create content for other Arm software developers.
 
 ## Getting started
 
-To work on the project start by cloning the project and run locally.
+There are two ways to create new content or make changes to the existing content.
+- Run hugo on your local computer (or a remote server you control via ssh)
+- Use Gitpod for cloud development
+
+For local operation, make sure you have [git installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and start by cloning the project.
+
+If you are planning to make a contribution you should fork the repository first to your GitHub account and then clone your fork. 
+
+After the changes are completed use a pull request to submit the proposed changes.
+
+Substitute your GitHub account name if you are cloning a fork.
 
 ```bash
-git clone --recurse-submodules https://github.com/zachlas/arm-software-developers-ads
+git clone https://github.com/zachlas/arm-software-developers-ads
 ```
 
-```bash
-npm install
-```
+You can now edit and create new content.
 
-You can now edit your own versions of the site’s source files. 
-
-To see your changes, run the website locally.
+To see how your changes look, run the website locally.
 
 ## Running the website locally
 
-Building and running the site locally requires the **extended version** of [Hugo](https://gohugo.io). From the Hugo releases page [here](https://github.com/gohugoio/hugo/releases) make sure to download the latest **extended version**.
+Building and running the site locally requires [Hugo](https://gohugo.io). Download and install Hugo from the Hugo releases page [here](https://github.com/gohugoio/hugo/releases). Any recent version of Hugo will work. The **extended version of Hugo is not needed**. Hugo works on all major operating systems and architectures.
 
-You will also need to install npm, golang, PostCSS and Node.js. Follow the installation instructions [here](https://www.docsy.dev/docs/get-started/docsy-as-module/installation-prerequisites/)
+You can also install Hugo on Linux using a package manager. 
 
-With all the pre-requisites installed, you can now run the command below to launch the website locally on your machine
+For Debian/Ubuntu use:
+
+```bash
+sudo apt install hugo
+```
+
+For even more ways to install Hugo [check the documentation](https://gohugo.io/getting-started/installing).
+
+To see the version of Hugo:
+
+```bash
+hugo version
+```
+
+If Hugo is installed on a remote Linux machine and you are using ssh to connect, forward port 1313.
+
+```bash
+ssh -L 1313:localhost:1313 user@ip-address
+```
+
+With the pre-requisites installed, you can now run hugo to launch the website on your machine.
 
 ```bash
 hugo server
 ```
 
+Hugo server will print a message to connect to port 1313
+
+```console
+Web Server is available at //localhost:1313/ (bind address 127.0.0.1)
+```
+
+Open a browser and go to http://localhost:1313 
+
+
+## Develop using [Gitpod](https://www.gitpod.io/)
+
+Instead of installing tools on your local machine, you can create and modify content directly in Gitpod.
+
+Install the [Gitpod Chrome Extension](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki) which installs a Gitpod button in the GitHub project. You can also prefix the URL for the GitHub project (or your fork of the project) with gitpod.io/#
+
+[Open this repository in Gitpod](https://gitpod.io/#github.com/zachlas/arm-software-developers-ads)
+
+You can use your GitHub credentials to login to Gitpod and use the Free plan which offers up to 50 hours per month.
+
 ## Adding new learning-paths to the website
 
-Start by forking the repository. To add new learning paths to the website, navigate to the appropriate directory under content/learning-paths in your fork
+Start by forking and cloning the repository. 
+
+To add new learning paths, navigate to the appropriate directory under content/learning-paths in your fork.
 
 There are 5 different areas into which you can contribute content
 
@@ -70,9 +118,8 @@ cp -r cp -r ../../../../learning-path_templates/* .
 
 ## Submit your changes to the website
 
-After adding a new learning path and completing all your changes, you can run the website locally by running `hugo server` and check if everything looks good.
-To submit your changes to the website, follow the GitHub Fork-and-Pull approach and submit the Pull request with your changes to be reviewed/merged by the Admin
+After adding a new learning path and completing your changes, you can run the website locally by running `hugo server` and check that everything looks good.
 
+Commit your changes using git.
 
-
-
+To submit your changes for review, follow the GitHub Fork-and-Pull approach and submit the Pull request with your changes to be reviewed and merged.
