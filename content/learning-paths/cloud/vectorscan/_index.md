@@ -1,5 +1,5 @@
 ---
-title: "Install Vectorscan (Hyperscan on Arm) and use it with Snort3" 
+title: "Run Vectorscan (Hyperscan on Arm) and use it with Snort3" 
 
 description: >
     Learn how to install Vectorscan on Arm servers and use it with Snort3.
@@ -13,6 +13,9 @@ learning_objectives:
     - Install and run Vectorscan on an Arm-based instance
     - Install and run Snort3 on your instance
     - Run Snort3 with Vectorscan on capture files and and measure performance.
+
+prerequisites:
+    - An [Arm based instance](/learning-paths/cloud/providers) from an appropriate cloud service provider.
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Introductory
@@ -36,6 +39,4 @@ layout: "learningpathall"       # All files under learning paths have this same 
 learning_path_main_page: "yes"  # Indicates this should be surfaced when looking for related content. Only set for _index.md of learning path content.
 # ================================================================================
 
-# Prereqs
 ---
-- An appropriate cloud service account. Refer to the getting started instructions [here](/learning-paths/cloud/providers).
