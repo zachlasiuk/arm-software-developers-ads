@@ -14,7 +14,7 @@ learning_objectives:
     - Run x265 codec on Arm server with the same video of various resolutions and encoding presets to measure the performance impact
 
 prerequisites:
-    - An ![Arm based instance](/learning-paths/cloud/providers) from an appropriate cloud service provider.
+    - An [Arm based instance](/learning-paths/cloud/providers) from an appropriate cloud service provider.
 
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
