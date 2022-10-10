@@ -4,10 +4,11 @@
 # ================================================================================
 
 next_step_guidance: >
-    We recommend you continue learning about porting cloud applications to the Arm architecture for increased performance and cost savings. The learning path on MongoDB is a great next step.
+    We recommend you continue learning about porting cloud applications to the Arm architecture for increased performance and cost savings. The learning path on intrinsics is a great next step.
+
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/cloud/mongodb/"
+recommended_path: "/learning-paths/cloud/intrinsics/"
 # Link to the next learning path being recommended.
 
 
@@ -18,13 +19,13 @@ recommended_path: "/learning-paths/cloud/mongodb/"
 
 further_reading:
     - resource:
-        title: Memcached Wiki
-        link: https://github.com/memcached/memcached/wiki
+        title: AWS documentation
+        link: https://docs.aws.amazon.com/codebuild/latest/userguide/sample-docker.html
         type: documentation
     - resource:
-        title: Benchmarking memcached performance on AWS Graviton2 servers
-        link: https://community.arm.com/arm-community-blogs/b/tools-software-ides-blog/posts/memcached-benchmarking-aws-graviton2-50-p-p-gains
-        type: blog
+        title: AWS CodeBuild curated Docker images
+        link: https://github.com/aws/aws-codebuild-docker-images 
+        type: website
 
 
 # ================================================================================

@@ -10,22 +10,13 @@ layout: "learningpathall"
 
 ## Install Docker
 
-Install Docker on any Arm machine you want to run the images created in the previous article. 
+[Install Docker](/install-tools/docker/) on any Arm machine you want to run the images created in the previous article. 
 
 For Linux, confirm the architecture is Arm AArch64. 
 
 ```console
 $ uname -m
 aarch64
-```
-
-Here are the installation instructions for Linux. 
-
-```console
-sudo apt update
-sudo apt upgrade -y
-curl -fsSL get.docker.com -o get-docker.sh && sh get-docker.sh
-sudo usermod -aG docker $USER ; newgrp docker
 ```
 
 ## Pull and Run
