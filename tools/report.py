@@ -14,6 +14,8 @@ List pages older than a period in days
 def report(period):
     global verbosity, level
 
+    logging.info("Checking articles older than {} days...".format(period))
+
     orig = os.path.abspath(os.getcwd())
 
     # chdir to the root folder
@@ -27,6 +29,7 @@ def report(period):
             logging.debug("Checking {}...".format(d+"/"+i))
 
             date = subprocess.run(["git", "log", "-1" ,"--format=%cs", d +"/" + i], stdout=subprocess.PIPE)
+            # strip out '\n' and decode byte to string
             date = date.stdout.rstrip().decode("utf-8")
             logging.debug(date)
 
@@ -35,8 +38,7 @@ def report(period):
                 date = datetime.strptime(date, "%Y-%m-%d")
                 # check if article is older than the period
                 if date < datetime.now() - timedelta(days = period):
-                    # strip out '\n' and decode byte to string
-                    result[d + "/" + i] = date
+                    result[d + "/" + i] = "{} days ago".format((datetime.now() - date).days)
 
     fn="outdated_files.csv"
     fields=["File", "Last updated"]
