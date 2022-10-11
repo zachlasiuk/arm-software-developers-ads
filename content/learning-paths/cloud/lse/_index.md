@@ -13,6 +13,8 @@ learning_objectives:
     - Understand what Large System Extensions are
     - Find out if an application is using Large System Extensions
 
+prerequisites:
+    - An [AWS account](/learning-paths/cloud/providers/aws/) to use for accessing different AWS Graviton instance types. Other Arm Linux machines can be substituted as needed.
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Introductory
@@ -36,6 +38,5 @@ layout: "learningpathall"       # All files under learning paths have this same 
 learning_path_main_page: "yes"  # Indicates this should be surfaced when looking for related content. Only set for _index.md of learning path content.
 # ================================================================================
 
-# Prereqs
 ---
 

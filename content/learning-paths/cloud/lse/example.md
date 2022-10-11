@@ -1,19 +1,15 @@
 ---
 # User change
 title: "Large System Extensions (LSE) Example"
-
 weight: 3
 
 layout: "learningpathall"
-
 
 ---
 
 ## Try out Large System Extensions (LSE) using an example C program
 
-**How do I know if my compiler is generating LSE instructions?**
-
-Let’s take a look at an example to get more understanding. 
+Let’s take a look at an example to learn more and find out if the compiler is generating LSE instructions. 
 
 Here is an [example program from cppreference.com](https://en.cppreference.com/w/c/language/atomic):
 
@@ -50,11 +46,11 @@ The atomic_int C data type is used to indicate that accesses to the acnt variabl
 
 Let’s start on an AWS A1 instance. This is Cortex-A72, without LSE. This can also be done on any Cortex-A53 or Cortex-A72 system. 
 
-**A1 Instance**
+#### **A1 Instance**
 
 On Ubuntu 20.04 the default gcc version is 9.4.0:
 
-```console
+```bash
 gcc --version
 ```
 
@@ -69,7 +65,7 @@ warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 Save the above C program as atomic.c and compile the application:
 
-```console
+```bash
 gcc -g atomic.c -o a1 -march=armv8-a -lpthread
 objdump -S a1 > a1.dis
 ```
@@ -93,11 +89,11 @@ Here is the disassembly:
 
 Now let’s move to a T4g instance with Graviton2.
 
-**T4g Instance**
+#### **T4g Instance**
 
 Compile the application. This is Neoverse-N1 with LSE. Similar machines with Neoverse-N1 can also be used.
  
-```console
+```bash
 gcc -g atomic.c -o t4g -march=armv8.2-a -lpthread
 objdump -S t4g > t4g.dis
 ```
@@ -146,7 +142,7 @@ The code for both the load exclusive sequence and the atomic instruction are pre
 
 As a final check, move back to the A1 instance and compile for armv8.2-a. The atomic instruction is illegal on the Cortex-A72 and fails.
 
-```console
+```bash
 gcc -g atomic.c -o a1 -march=armv8.2-a -lpthread
 ./a1
 ```
@@ -157,11 +153,11 @@ The result is:
 Illegal instruction (core dumped)
 ```
 
-**How can I find out if my application has atomic instructions?**
+#### **How can I find out if my application has atomic instructions?**
 
 To check for atomic instructions in applications run objdump on the T4g executable:
 
-```console
+```bash
 objdump -d t4g | grep -i 'cas\|casp\|swp\|ldadd\|stadd\|ldclr\|stclr\|ldeor\|steor\|ldset\|stset\|ldsmax\|stsmax\|ldsmin\|stsmin\|ldumax\|stumax\|ldumin\|stumin' | wc -l
 ```
 
@@ -169,14 +165,14 @@ The above command will report a count of 1 instruction, the ldaddal we looked at
 
 To check whether applications contain load exclusives and store exclusives run this command on the A1 executable. It will report a count of 2.
 
-```console
+```bash
 objdump -d a1 | grep -i 'ldxr\|ldaxr\|stxr\|stlxr' | wc -l
 ```
 
 Running on the t4g.outline executable which supports both architectures will report both types of instructions. 
 
 Another way to confirm an executable supports both architectures is to run the command:
-```console
+```bash
 nm t4g.outline | grep __aarch64_have_lse_atomics | wc -l
 ```
 
