@@ -9,7 +9,7 @@ layout: "learningpathall"
 ---
 ## Pre-requisites
 
-A user account for [Arm Virtual Hardware 3rd Party Hardware](https://avh.arm.com/). For full instructions see [here](/install-tools/avh#third).
+A user account for [Arm Virtual Hardware 3rd Party Hardware](https://avh.arm.com/). For full instructions refer to [Arm Virtual Hardware](/install-tools/avh) in the install tools area.
 
 A valid [GitHub](https://github.com) account.
 

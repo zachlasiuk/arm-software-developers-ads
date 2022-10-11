@@ -115,7 +115,8 @@ Build and run the application:
 gcc hello.c -o hello
 ./hello
 ```
-You are now ready to get started with any of the learning paths [here](/cloud/#application-specific-learning-paths).
+
+You are now ready to get started with the [Server and Cloud learning paths](/learning-paths/cloud/).
 
 ## Other resources
 

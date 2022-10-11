@@ -10,7 +10,7 @@ layout: "learningpathall"
 
 ## Pre-requisites
 
-* MongoDB installed and running on your 64-bit Arm Linux machine or AWS EC2 instance. Follow the steps outlined [here](/cloud/mongodb/mongodb).
+* MongoDB installed and running on your 64-bit Arm Linux machine or AWS EC2 instance. Follow the steps outlined [here](/learning-paths/cloud/mongodb/run_mongodb).
 * Java 1.8 or newer installed on your 64-bit Arm Linux machine or AWS EC2 instance.
 ```console
 sudo apt install default-jre

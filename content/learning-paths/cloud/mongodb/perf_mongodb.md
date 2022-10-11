@@ -78,7 +78,7 @@ layout: "learningpathall"
 
 ## Get set up
 
-* MongoDB installed and running on your 64-bit Arm Linux machine or AWS EC2 instance. Follow the steps outlined [here](/cloud/mongodb/mongodb).
+* MongoDB installed and running on your 64-bit Arm Linux machine or AWS EC2 instance. Follow the steps outlined [here](/learning-paths/cloud/mongodb/run_mongodb).
 * Java 1.8 or newer installed on your 64-bit Arm Linux machine or AWS EC2 instance.
 
 To measure the performance of MongoDB, we use the [MongoDB performance test tool](https://github.com/idealo/mongodb-performance-test).

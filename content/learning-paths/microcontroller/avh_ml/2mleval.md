@@ -90,4 +90,4 @@ and specify with:
 VHT_Corstone_SSE-300_Ethos-U55 -a ethos-u-kws.axf -f options.txt
 ```
 ## Next steps
-The ML Evaluation Kit provides some stand alone examples. These building blocks have been integrated into complete software stacks in the [Open-IoT-SDK](/iot/total-solutions/total-iot).
+The ML Evaluation Kit provides some stand alone examples. These building blocks have been integrated into complete software stacks in the [Open-IoT-SDK](https://github.com/ARM-software/open-iot-sdk).

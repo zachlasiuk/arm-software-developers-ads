@@ -182,5 +182,3 @@ If it returns a 1 then it was compiled with outline-atomics.
 
 Large System Extensions introduce atomic instructions to improve performance for Arm systems with many processors. When migrating applications to Neoverse it helps to have an understanding of compilers, compiler options, and libraries. Also, think about the strategy for an application supporting only Neoverse or also including support for processors which don't include LSE.
 
-[<-- Return to Learning Path](/cloud/lse/#sections)
-
