@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 
 
 '''
-
+Recursive content search in d. Update list of articles older than period. Returns count of articles found
 '''
 def content_parser(d, period):
     count = 0
@@ -51,7 +51,6 @@ def report(period):
 
     # chdir to the root folder
     os.chdir(os.path.dirname(os.path.abspath(__file__)) + "/..")
-    #dname = ["content/install-tools", "content/learning-paths"]
     dname = ["content/install-tools",
              "content/learning-paths/cloud",
              "content/learning-paths/desktop_and_laptop",
