@@ -13,7 +13,6 @@ Parse commands in markdown article and return list of commands
 def parse(article):
     global verbosity, level
 
-    # TODO check if article is a csv file corresponding to a file list
     with open(article) as file:
         content = file.read()
         cmd = []

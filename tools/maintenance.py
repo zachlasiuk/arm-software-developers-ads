@@ -38,14 +38,25 @@ def main():
     logging.debug("Verbosity level is set to " + level[verbosity])
 
     if args.check:
-        logging.debug("Checking " + args.check)
+        logging.info("Checking " + args.check)
         check.check(args.check)
     elif args.parse:
-        logging.debug("Parsing " + args.parse)
-        cmd = parse.parse(args.parse)
-        parse.save(args.parse, cmd)
+        # check if article is a csv file corresponding to a file list
+        if args.parse.endswith(".csv"):
+            logging.info("Parsing CSV " + args.parse)
+            with open(args.parse) as f:
+                next(f)
+                for line in f:
+                    fn = line.split(",")[0]
+                    logging.debug("Parsing " + fn)
+                    cmd = parse.parse(fn)
+                    parse.save(fn, cmd)
+        else:
+            logging.info("Parsing " + args.parse)
+            cmd = parse.parse(args.parse)
+            parse.save(args.parse, cmd)
     elif args.report:
-        logging.debug("Creating report of articles older than {} days".format(args.report))
+        logging.info("Creating report of articles older than {} days".format(args.report))
         report.report(args.report)
 
 

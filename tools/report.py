@@ -9,23 +9,15 @@ from datetime import datetime, timedelta
 
 
 '''
-List pages older than a period in days
+
 '''
-def report(period):
-    global verbosity, level
-
-    logging.info("Checking articles older than {} days...".format(period))
-
-    orig = os.path.abspath(os.getcwd())
-
-    # chdir to the root folder
-    os.chdir(os.path.dirname(os.path.abspath(__file__)) + "/..")
-    dname = ["content/install-tools", "content/learning-paths"]
+def content_parser(d, period):
+    count = 0
     result = {}
-
-    for d in dname:
-        l = os.listdir(d)
-        for i in l:
+    l = os.listdir(d)
+    for i in l:
+        if i.endswith(".md") and not i.startswith("_"):
+            count = count + 1
             logging.debug("Checking {}...".format(d+"/"+i))
 
             date = subprocess.run(["git", "log", "-1" ,"--format=%cs", d +"/" + i], stdout=subprocess.PIPE)
@@ -39,6 +31,39 @@ def report(period):
                 # check if article is older than the period
                 if date < datetime.now() - timedelta(days = period):
                     result[d + "/" + i] = "{} days ago".format((datetime.now() - date).days)
+
+        # if this is a folder, let's get down one level deeper
+        elif os.path.isdir(d + "/" + i):
+            res, c = content_parser(d + "/" + i, period)
+            result.update(res)
+            count = count + c
+
+    return [result, count]
+
+
+'''
+List pages older than a period in days
+'''
+def report(period):
+    global verbosity, level
+
+    orig = os.path.abspath(os.getcwd())
+
+    # chdir to the root folder
+    os.chdir(os.path.dirname(os.path.abspath(__file__)) + "/..")
+    #dname = ["content/install-tools", "content/learning-paths"]
+    dname = ["content/install-tools",
+             "content/learning-paths/cloud",
+             "content/learning-paths/desktop_and_laptop",
+             "content/learning-paths/embedded",
+             "content/learning-paths/microcontroller",
+             "content/learning-paths/mobile"]
+
+    result = {}
+
+    for d in dname:
+        result, count = content_parser(d, period)
+        logging.info("Found {} articles in {}".format(count, d))
 
     fn="outdated_files.csv"
     fields=["File", "Last updated"]
