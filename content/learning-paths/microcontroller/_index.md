@@ -1,15 +1,19 @@
 ---
 maintopic: true  # only true for main segmentation on homepage
 
-title: "Microcontroller"
-cardimage: img/main-topic-backgrounds/microcontroller.jpg
+title: "IoT"
+cardimage: img/main-topic-backgrounds/iot.jpg
 key_ip: 
+    - Cortex-A
+    - Cortex-R
     - Cortex-M
 key_ip_icons:
+    - img/ip-icons/Arm_Cortex-A.png
+    - img/ip-icons/Arm_Cortex-R.png
     - img/ip-icons/Arm_Cortex-M.png
 
 differentiating_info:
-    - Bare-metal and RTOS IoT
+    - Linux, RTOS, Baremetal devices
     - tinyML
 
 weight: 5  # Decides order of main topics on homepage
@@ -26,10 +30,13 @@ subjects_closed_schema:
     - Performance and Architecture
     - Cloud Connection
     - Security
+    - Storage
+    - Embedded Linux
     - Virtual Hardware
 
 oses_closed_schema:
     - Baremetal
+    - Linux
     - RTOS
 ---
 IoT endpoints are computing devices that are connected to the edge of the network. They typically collect and serve data by communicating with central or cloud resources.
