@@ -19,7 +19,7 @@ review:
             - "No"
         correct_answer: 0                     
         explination: >
-            That's right! Check the Flags output and look for atomics to be listed.
+            Yes, SIMD Everywhere can port AVX512 to NEON. 
 
     - questions:
         question: >
@@ -29,7 +29,7 @@ review:
             - "False"
         correct_answer: 1                     
         explination: >
-            That's right! Some Armv8-A processors such as the Cortex-A72 do not support LSE.
+            False, there is no need to re-write intrinsics. 
                
 
 # ================================================================================

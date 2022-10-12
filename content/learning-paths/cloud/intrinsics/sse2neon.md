@@ -1,15 +1,15 @@
 ---
 # User change
-title: "Use sse2neon to port intrinsics to Neoverse"
+title: "Using sse2neon to port intrinsics to Neoverse"
 
-weight: 3
+weight: 4
 
 layout: "learningpathall"
 
 
 ---
 
-## Use sse2neon 
+## Using sse2neon 
 
 The [sse2neon project](https://github.com/DLTcollab/sse2neon) is a quick way to get C/C++ applications compiling and running on Neoverse. The sse2neon header file provides NEON implementations for x64 intrinsics so no source code changes are needed. 
 
@@ -17,9 +17,9 @@ Each function call (intrinsic) is simply replaced with NEON instructions and wil
 
 To make this application compile and run on Neoverse there are three steps.
 
-1. Adjust the SSE specific header file usage for the Arm architecture
-2. Include sse2neon.h to map the intrinsics to NEON instructions
-3. Change the g++ compiler flags for the Arm architecture
+- Adjust the SSE specific header file usage for the Arm architecture
+- Include sse2neon.h to map the intrinsics to NEON instructions
+- Change the g++ compiler flags for the Arm architecture
 
 Here is the new program. The only change is related to the include files.
 

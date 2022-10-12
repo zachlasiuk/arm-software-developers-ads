@@ -29,7 +29,7 @@ review:
             - "No"
         correct_answer: 1                     
         explination: >
-            No. Most containers are multi-architecture images and run on Arm, but not all. Check your containers for Arm support
+            No. Most containers are multi-architecture images and run on Arm, but not all. Check your containers for Arm support.
                
 
 # ================================================================================

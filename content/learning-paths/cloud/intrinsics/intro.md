@@ -6,12 +6,12 @@ weight: 2
 
 layout: "learningpathall"
 
-
 ---
 
+## Migration 
 Migrating C/C++ applications from x64 to Arm requires recompiling the source code for the Arm architecture. The marketing message of a “simple recompile” works much of the time, but not always. SIMD extensions are one of the common barriers encountered when porting C/C++ applications from x64 to Arm. This article is a short background on intrinsics and how to identify them in code. This learning path presents options for how to get the code compiled and running on Arm Neoverse. 
 
-## **What are intrinsics?**
+## Intrinsics
 
 Intrinsics are functions which are built into the compiler and not part of a library. They look like function calls, but don’t require an actual function call. When the compiler encounters intrinsics it directly substitutes a sequence of instructions. Intrinsics are often used to access special instructions that don’t have a direct mapping from C/C++ or when performance optimization is needed. 
 
@@ -21,11 +21,11 @@ Intel Streaming SIMD Extensions (SSE) and [Arm NEON](https://developer.arm.com/d
 
 If you are not familiar with SIMD instructions there are numerous tutorials available. There are generally 3 ways to program SIMD hardware:
 
-1. The C/C++ compiler recognizes opportunities to use SIMD instructions and inserts them automatically (with or without some guidance)
-2. Intrinsics to access SIMD instructions directly from C/C++ source code
-3. Assembly programming 
+- The C/C++ compiler recognizes opportunities to use SIMD instructions and inserts them automatically (with or without some guidance)
+- Intrinsics to access SIMD instructions directly from C/C++ source code
+- Assembly programming 
 
-## **Source code example**
+## Source code example
 
 Below is a small example which demonstrates an application with intrinsics in it. The source code comes from a [short course titled Efficient Vectorisation with C++](https://chryswoods.com/vector_c++/emmintrin.html) and is copyright (C) Christopher Woods, 2006-2015 and is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 

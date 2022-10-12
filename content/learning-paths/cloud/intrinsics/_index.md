@@ -13,6 +13,9 @@ learning_objectives:
     - Understand what intrinsics are and how to find them in code
     - Evaluate options and use header-only libraries to port architecture specific intrinics to Arm Neoverse
 
+prerequisites:
+    - An [Arm based instance](/learning-paths/cloud/providers) from an appropriate cloud service provider.
+
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Experienced
 armips:
@@ -35,8 +38,6 @@ layout: "learningpathall"       # All files under learning paths have this same 
 learning_path_main_page: "yes"  # Indicates this should be surfaced when looking for related content. Only set for _index.md of learning path content.
 # ================================================================================
 
-# Prereqs
 ---
-- Access to an Arm Neoverse machine running Linux. Free tier machines are available in Amazon Web Services (AWS) and Oracle Cloud (OCI)
 
 
