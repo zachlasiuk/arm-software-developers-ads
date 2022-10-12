@@ -7,14 +7,14 @@ title: "Get started with CI/CD and Arm Virtual Hardware"
 # Should start with a verb, have no adjectives (amazing, cool, etc.), and be as concise as possible.
 
 description: >
-    Learn about how to get started integrating Arm Virtual Hardware into a GitHub CI/CD development flow.
+    Get started integrating Arm Virtual Hardware into a GitHub CI/CD development flow.
 # One sentance, is a quick summary of this learning path, viewable when searching through all learning paths. 
 
-minutes_to_complete: 30   
+minutes_to_complete: 45
 # Always measured in minutes. Should be an integer, to complete the learning path (not just read it).
 
 who_is_this_for: >
-    Learning path for embedded software developers new to Arm Virtual Hardware to get familiar with main features.
+    Embedded software developers new to Arm Virtual Hardware to get familiar with main features.
 # One sentence that should indicate exactly who the target audience is (developers in X industries using Y tools/software for Z use-case).
 
 learning_objectives: 
@@ -34,7 +34,7 @@ prerequisites:
 ##### Tags
 # Don't enter whitespace. An underscore will be visually replaced with whitespace.
 
-skilllevels: Getting-Started
+skilllevels: Introductory
 # Options:
     # Getting-Started   (for a basic overview of certain tools/softwares/topics)
     # Introductory      (the next stage up from getting started)
@@ -51,7 +51,7 @@ tools:
     # IDEs              (Arm Development Studio, VS_Code)
     # Online tools      (GitHub, Jenkins)
     # General tools     (cbuild)
-    - Arm Virtual Hardware
+    - Arm_Virtual_Hardware
     - GitHub
     - AWS EC2
 
@@ -80,4 +80,3 @@ learning_path_main_page: "yes"  # Indicates this should be surfaced when looking
 
 # Prereqs
 ---
-- Some familiarity with embedded programing is assumed

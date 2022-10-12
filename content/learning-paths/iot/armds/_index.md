@@ -14,7 +14,7 @@ minutes_to_complete: 30
 # Always measured in minutes. Should be an integer, to complete the learning path (not just read it).
 
 who_is_this_for: >
-    Learning path for embedded software developers new to Arm Development Studio to get familiar with main features.
+    Embedded software developers new to Arm Development Studio to get familiar with main features.
 # One sentence that should indicate exactly who the target audience is (developers in X industries using Y tools/software for Z use-case).
 
 learning_objectives: 
@@ -44,7 +44,10 @@ skilllevels: Getting-Started
 armips:
     # Groups of IP      (Cortex-M, Cortex-A, Cortex-R, Neoverse, GPU, System IP, etc.)
     # or Specific IP    (Cortex-M7, Neoverse-N1, AHB_Cache, etc.)
-    - All
+    - Cortex-A
+    - Cortex-R
+    - Cortex-M
+    - Neoverse
 
 tools:
     # Environments      (AWS_EC2)
@@ -52,9 +55,9 @@ tools:
     # IDEs              (Arm Development Studio, VS_Code)
     # Online tools      (GitHub, Jenkins)
     # General tools     (cbuild)
-    - Arm Development Studio
-    - Arm Compiler for Embedded
-    - Arm Fast Models
+    - Arm_Development_Studio
+    - Arm_Compiler_for_Embedded
+    - Arm_Fast_Models
     - DSTREAM
 
 softwares:
@@ -82,4 +85,4 @@ learning_path_main_page: "yes"  # Indicates this should be surfaced when looking
 
 # Prereqs
 ---
-- Some familiarity with embedded programing is assumed
+

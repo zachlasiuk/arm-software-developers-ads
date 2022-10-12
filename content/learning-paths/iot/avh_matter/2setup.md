@@ -9,7 +9,7 @@ layout: "learningpathall"
 ---
 ## Pre-requisites
 
-A user account for [Arm Virtual Hardware 3rd Party Hardware](https://avh.arm.com/). For full instructions refer to [Arm Virtual Hardware](/install-tools/avh) in the install tools area.
+A user account for [Arm Virtual Hardware 3rd Party Hardware](https://avh.arm.com/). Refer to [Arm Virtual Hardware](/install-tools/avh#thirdparty) in the install tools area.
 
 A valid [GitHub](https://github.com) account.
 
@@ -75,8 +75,3 @@ sudo apt-get update
 sudo apt-get install -y git gcc g++ python pkg-config libssl-dev libdbus-1-dev libglib2.0-dev libavahi-client-dev ninja-build python3-venv python3-dev python3-pip unzip libgirepository1.0-dev libcairo2-dev libreadline-dev
 ```
 This will also verify that your instances are working correctly.
-
-## (Optional) Compare with real hardware
-
-If you wish to explore how closely the Virtual Hardware models real hardware, please see [this article](https://dev.to/aws-builders/welcome-to-the-virtual-raspberry-pi-4-running-on-aws-graviton-processors-2o8e).
-

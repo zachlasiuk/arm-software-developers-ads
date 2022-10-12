@@ -14,7 +14,7 @@ minutes_to_complete: 30
 # Always measured in minutes. Should be an integer, to complete the learning path (not just read it).
 
 who_is_this_for: >
-    Learning path for embedded software developers new to Docker.
+    Embedded software developers new to Docker
 # One sentence that should indicate exactly who the target audience is (developers in X industries using Y tools/software for Z use-case).
 
 learning_objectives: 
@@ -26,7 +26,7 @@ learning_objectives:
 ##### Tags
 # Don't enter whitespace. An underscore will be visually replaced with whitespace.
 
-skilllevels: Getting-Started
+skilllevels: Introductory
 # Options:
     # Getting-Started   (for a basic overview of certain tools/softwares/topics)
     # Introductory      (the next stage up from getting started)
@@ -35,7 +35,10 @@ skilllevels: Getting-Started
 armips:
     # Groups of IP      (Cortex-M, Cortex-A, Cortex-R, Neoverse, GPU, System IP, etc.)
     # or Specific IP    (Cortex-M7, Neoverse-N1, AHB_Cache, etc.)
-    - All
+    - Cortex-A
+    - Cortex-R
+    - Cortex-M
+    - Neoverse
 
 tools:
     # Environments      (AWS_EC2)
@@ -43,6 +46,7 @@ tools:
     # IDEs              (Arm Development Studio, VS_Code)
     # Online tools      (GitHub, Jenkins)
     # General tools     (cbuild)
+    - Docker
     - Arm_Development_Studio
     - Arm_Compiler_for_Embedded
     - Arm Fast Models
@@ -73,4 +77,3 @@ learning_path_main_page: "yes"  # Indicates this should be surfaced when looking
 
 # Prereqs
 ---
-- None

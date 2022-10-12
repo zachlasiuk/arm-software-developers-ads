@@ -18,7 +18,3 @@ Arm Mobile Studio is available in a free-to-use Starter Edition, or Professional
 
 For basic instructions on launching the components and license setup, see the supplied readme. No license setup is required for the Starter Edition.
 
-## Other resources
-
-- [Optimization advice for graphics content on mobile devices](https://developer.arm.com/documentation/102643)
-- [Arm GPU Best Practices Developer Guide](https://developer.arm.com/documentation/101897)

@@ -7,7 +7,7 @@ weight: 2 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
-[Trusted Firmware-M](https://www.trustedfirmware.org/projects/tf-m/) (TF-M) implements the Secure Processing Environment (SPE) for Armv8-M, Armv8.1-M architectures. It is the platform security architecture reference implementation aligning with PSA Certified guidelines, enabling chips, Real Time Operating Systems and devices to become PSA Certified.
+[Trusted Firmware-M](https://www.trustedfirmware.org/projects/tf-m/) (TF-M) implements the Secure Processing Environment (SPE) for Armv8-M, Armv8.1-M architectures. It is the platform security architecture reference implementation aligning with [PSA Certified](https://www.psacertified.org/) guidelines.
 
 We shall build the reference examples, and run them on [Arm Virtual Hardware](https://www.arm.com/products/development-tools/simulation/virtual-hardware).
 

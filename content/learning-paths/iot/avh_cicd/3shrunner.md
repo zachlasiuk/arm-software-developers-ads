@@ -1,6 +1,6 @@
 ---
 # User change
-title: "Building Open-IoT-SDK examples"
+title: "Self-hosted runner"
 
 weight: 3 # 1 is first, 2 is second, etc.
 
@@ -19,7 +19,7 @@ Navigate to `Actions`. If prompted that `workflows` have been disabled, click th
 
 Navigate to the repository `Settings` > `Actions` > `Runners`, and click on `New self-hosted runner`.
 
-Set `Runner image` as `Linux`, and `Architecture` as `x64`. A set of commands will be displayed to run to prepare the runner. These commands will be unique for your account and repository.
+Set `Runner image` as `Linux`, and `Architecture` as `x64` (matching the AWS instance). A set of commands will be displayed to run to prepare the runner. These commands will be unique for your account and repository.
 
 Create a Virtual Hardware terminal copy and paste these commands to launch the runner. When configuring, you can select the default options when prompted.
 

@@ -14,7 +14,7 @@ minutes_to_complete: 15
 # Always measured in minutes. Should be an integer, to complete the learning path (not just read it).
 
 who_is_this_for: >
-    Learning path for embedded software developers new to Arm Virtual Hardware to get familiar with main features.
+    Embedded software developers new to Arm Virtual Hardware to get familiar with main features.
 # One sentence that should indicate exactly who the target audience is (developers in X industries using Y tools/software for Z use-case).
 
 learning_objectives: 
@@ -33,7 +33,7 @@ prerequisites:
 ##### Tags
 # Don't enter whitespace. An underscore will be visually replaced with whitespace.
 
-skilllevels: Getting-Started
+skilllevels: Introductory
 # Options:
     # Getting-Started   (for a basic overview of certain tools/softwares/topics)
     # Introductory      (the next stage up from getting started)
@@ -80,4 +80,3 @@ learning_path_main_page: "yes"  # Indicates this should be surfaced when looking
 
 # Prereqs
 ---
-- Some familiarity with embedded programing is assumed

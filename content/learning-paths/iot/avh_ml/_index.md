@@ -34,7 +34,7 @@ prerequisites:
 ##### Tags
 # Don't enter whitespace. An underscore will be visually replaced with whitespace.
 
-skilllevels: Getting-Started
+skilllevels: Introductory
 # Options:
     # Getting-Started   (for a basic overview of certain tools/softwares/topics)
     # Introductory      (the next stage up from getting started)
@@ -54,7 +54,6 @@ tools:
     - Arm_Virtual_Hardware
     - Arm_Compiler_for_Embedded
     - AWS_EC2
-
 
 softwares:
     # Languages         (Python, Go, MongoDB, Assembly, Java)
@@ -81,4 +80,3 @@ learning_path_main_page: "yes"  # Indicates this should be surfaced when looking
 
 # Prereqs
 ---
-- Some familiarity with embedded programing is assumed

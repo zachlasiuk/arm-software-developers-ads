@@ -118,7 +118,3 @@ and you will enter the terminal of the docker image. Verify everything is workin
 armclang --version
 ```
 Congratulations. You have a docker environment containing the Arm Compiler for Embedded and the FVP library, which you can share and replicate as needed.
-
-## Next step
-
-Why not try to [Build and run your first embedded image](../../bare-metal/) in your docker environment.

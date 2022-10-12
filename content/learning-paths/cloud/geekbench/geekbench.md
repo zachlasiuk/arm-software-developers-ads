@@ -37,8 +37,6 @@ It will run a number of single-core and multi-core tests. When complete, it will
 
 You can browse other platform scores, or repeat your test with other cloud configurations to see how they compare. We also encourage you to compare against servers build with other architectures.
 
-Please also see any of the [application specific examples](/learning-paths/cloud/) we have prepared.
-
 ## Other resources
 
 | Type          | Content             |

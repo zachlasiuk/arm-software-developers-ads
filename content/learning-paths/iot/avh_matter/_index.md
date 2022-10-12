@@ -10,7 +10,7 @@ description: >
     Learn how to build reference Matter examples and run on Arm Virtual Hardware.
 # One sentance, is a quick summary of this learning path, viewable when searching through all learning paths. 
 
-minutes_to_complete: 30   
+minutes_to_complete: 60
 # Always measured in minutes. Should be an integer, to complete the learning path (not just read it).
 
 who_is_this_for: >
@@ -36,7 +36,7 @@ prerequisites:
 ##### Tags
 # Don't enter whitespace. An underscore will be visually replaced with whitespace.
 
-skilllevels: Getting-Started
+skilllevels: Introductory
 # Options:
     # Getting-Started   (for a basic overview of certain tools/softwares/topics)
     # Introductory      (the next stage up from getting started)
@@ -82,4 +82,3 @@ learning_path_main_page: "yes"  # Indicates this should be surfaced when looking
 
 # Prereqs
 ---
-- Some familiarity with embedded programing is assumed

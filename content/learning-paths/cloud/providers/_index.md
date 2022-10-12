@@ -7,11 +7,10 @@ description: >
 minutes_to_complete: 30
 
 who_is_this_for: >
-    Learning path for software developers interested in using Arm-based cloud service platforms.
+    Software developers new to using cloud service platforms.
 
 learning_objectives:
-    - Learn how to start an instance on an Arm-based cloud server.
-
+    - Start an instance on an Arm-based cloud server.
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Getting-Started

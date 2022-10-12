@@ -74,7 +74,7 @@ For a full list of the available parameters, launch the executable with the `--l
 VHT_Corstone_SSE-300_Ethos-U55 --list-params > parameters.txt
 ```
 ### Set parameters
-Parameters can be set with the `-C` command option. For example, to put the Ethos-U component into fast execution mode:
+Individual parameters can be set with the `-C` command option. For example, to put the Ethos-U component into fast execution mode:
 ```console
 VHT_Corstone_SSE-300_Ethos-U55 -a ethos-u-kws.axf -C ethosu.extra_args="--fast"
 ```

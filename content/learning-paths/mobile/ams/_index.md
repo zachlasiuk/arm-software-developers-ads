@@ -10,15 +10,16 @@ description: >
     Get started with the various components of Arm Mobile Studio.
 # One sentance, is a quick summary of this learning path, viewable when searching through all learning paths. 
 
-minutes_to_complete: 15
+minutes_to_complete: 60
 # Always measured in minutes. Should be an integer, to complete the learning path (not just read it).
 
 who_is_this_for: >
-    Learning path for Android application and games developers new to Arm Mobile Studio.
+    Android application and games developers new to Arm Mobile Studio.
 # One sentence that should indicate exactly who the target audience is (developers in X industries using Y tools/software for Z use-case).
 
 learning_objectives: 
-    - Get started with each component of Arm Mobile Studio.
+    - Learn the basic features of each component of Arm Mobile Studio.
+    - Get started profiling and optimizing your application.
 # 2-5 bullet points, one sentance each. Should start with a verb (Deploy, Measure) and indicate the value of the objective if possible.
 
 prerequisites:
