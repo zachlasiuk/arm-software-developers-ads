@@ -1,0 +1,71 @@
+# This workflow build the Docker image with the application 
+
+name: C Tests Debugging
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  report:
+    # The type of runner that the job will run on
+    runs-on: self-hosted
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Check out repo
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      # Report outdated files and store result as artifact
+      - name: Report outdated files of more than 20 days
+        run: |
+           python3 tools/maintenance.py -r 20
+
+      # Upload report as artifact
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: outdated
+          path: outdated_files.csv
+
+   test:    
+     # The type of runner that the job will run on
+     runs-on: self-hosted
+     # Depends on report generated in previous step
+     needs: report
+
+     # Steps represent a sequence of tasks that will be executed as part of the job
+     steps:
+       # Run tests
+       - name: Parse gfortran installation tutorial for commands
+         run: |
+           python3 tools/maintenance.py -p content/install-tools/gfortran.md
+           
+       # Run tests
+       - name: Test gfortran installation tutorial commands and output report
+         run: |
+           python3 tools/maintenance.py -c content/install-tools/gfortran.md_cmd.json
+           
+      # Upload test report as artifact
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: results
+          path: check_results.xml
+           
+       # Publish Junit report
+       - name: Publish Test Report
+         id: junit
+         uses: mikepenz/action-junit-report@v3
+         if: always() # always run even if the previous step fails
+         with:
+           report_paths: '**/check_results.xml'
