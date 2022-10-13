@@ -24,7 +24,9 @@ jobs:
     steps:
       # Check out repo
       - name: Check out repository code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          ref: dev
 
       # Report outdated files and store result as artifact
       - name: Report outdated files of more than 20 days
