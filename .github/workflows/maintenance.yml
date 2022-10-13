@@ -22,11 +22,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Check out repo, main branch
+      # Check out repo, main branch and the whole history
       - name: Check out repository code
         uses: actions/checkout@v3
         with:
           ref: main
+          fetch-depth: 0
 
       # Report outdated files and store result as artifact
       - name: Report outdated files of more than 20 days
