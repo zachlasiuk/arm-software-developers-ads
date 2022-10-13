@@ -1,6 +1,6 @@
-# This workflow build the Docker image with the application 
+# This workflow check instructions in articles
 
-name: C Tests Debugging
+name: Maintenance workflow
 
 # Controls when the action will run. 
 on:
@@ -15,6 +15,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  # Generate report of outdated articles
   report:
     # The type of runner that the job will run on
     runs-on: self-hosted
@@ -36,7 +37,8 @@ jobs:
         with:
           name: outdated
           path: outdated_files.csv
-          
+
+  # Test content of outdated articles
   test:
      # The type of runner that the job will run on
      runs-on: self-hosted
@@ -45,7 +47,7 @@ jobs:
 
      # Steps represent a sequence of tasks that will be executed as part of the job
      steps:
-       # Run tests
+       # Run tests on gfortran article for now
        - name: Parse gfortran installation tutorial for commands
          run: |
            python3 tools/maintenance.py -p content/install-tools/gfortran.md
