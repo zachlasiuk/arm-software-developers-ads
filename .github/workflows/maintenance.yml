@@ -6,9 +6,9 @@ name: Maintenance workflow
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ dev ]
+    branches: [ main ]
   pull_request:
-    branches: [ dev ]
+    branches: [ main ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,11 +22,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Check out repo
+      # Check out repo, main branch
       - name: Check out repository code
         uses: actions/checkout@v3
         with:
-          ref: dev
+          ref: main
 
       # Report outdated files and store result as artifact
       - name: Report outdated files of more than 20 days
