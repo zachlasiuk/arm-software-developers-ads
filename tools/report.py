@@ -63,7 +63,7 @@ def report(period):
     for d in dname:
         res, count = content_parser(d, period)
         result.update(res)
-        logging.info("Found {} articles in {}".format(count, d))
+        logging.info("Found {} articles in {}. {} of them are outdated.".format(count, d, len(res)))
 
     fn="outdated_files.csv"
     fields=["File", "Last updated"]
