@@ -7,7 +7,7 @@ description: >
 minutes_to_complete: 15
 
 who_is_this_for: >
-    Learning path for developers interested comparing performance of Arm-based cloud instances.
+    Developers interested comparing performance of Arm-based cloud instances.
 
 learning_objectives:
     - Learn how to install and run Geekbench benchmark.
@@ -35,4 +35,4 @@ learning_path_main_page: "yes"  # Indicates this should be surfaced when looking
 
 # Prereqs
 ---
-- An account with the Arm-based cloud service provider of choice.
+- An account with the Arm-based cloud service [provider](../providers/) of choice.

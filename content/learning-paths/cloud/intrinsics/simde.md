@@ -1,15 +1,15 @@
 ---
 # User change
-title: "Use SIMD Everywhere to port intrinsics to Neoverse"
+title: "Using SIMD Everywhere to port intrinsics to Neoverse"
 
-weight: 4
+weight: 5
 
 layout: "learningpathall"
 
 
 ---
 
-## Use SIMD Everywhere
+## Using SIMD Everywhere
 
 The [SIMD Everywhere](https://github.com/simd-everywhere/simde) is another way to get C/C++ applications with intrinsics running on Arm Neoverse. Like sse2neon it is a header-only library which makes porting code to other architectures easy. 
 
@@ -19,10 +19,10 @@ To make the example application compile and run on Neoverse there are three step
 
 The matching header file for emmintrin.h in SIMDe file is simde/x86/sse2.h
 
-1. Identify the appropriate header file from SIMDe 
-2. Include the header file to map the intrinsics to NEON instructions 
-3. Use the SIMDE_ENABLE_NATIVE_ALIASES to enable original _mm intrinsics to be recognized
-4. Change the g++ compiler flags for the Arm architecture
+- Identify the appropriate header file from SIMDe 
+- Include the header file to map the intrinsics to NEON instructions 
+- Use the SIMDE_ENABLE_NATIVE_ALIASES to enable original _mm intrinsics to be recognized
+- Change the g++ compiler flags for the Arm architecture
 
 Here is the new program. The only change is related to the include files.
 

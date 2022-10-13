@@ -18,12 +18,12 @@ recommended_path: "/learning-paths/cloud/lse/"
 
 further_reading:
     - resource:
-        title: Creating an AWS account
-        link: https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-creating.html
+        title: Port with SSE2Neon and SIMDe
+        link: https://developer.arm.com/documentation/102581/0200/Port-with-SSE2Neon-and-SIMDe
         type: documentation
     - resource:
-        title: Arm-Based Compute on OCI
-        link: https://docs.oracle.com/en-us/iaas/Content/Compute/References/arm.htm
+        title: Porting SSE to Neon, Are libraries the way forward?
+        link: https://community.arm.com/arm-community-blogs/b/ai-and-ml-blog/posts/porting-sse-to-neon-are-libraries-the-way-forward
         type: blog
 
 

@@ -1,15 +1,15 @@
 ---
 # User change
-title: "Find Non-Portable Code"
+title: "Finding Non-Portable Code"
 
-weight: 2
+weight: 3
 
 layout: "learningpathall"
 
 
 ---
 
-## Use aarch64 Porting Advisor
+## Porting Advisor
 
 A tool which may be useful is [aarch64 Porting Advisor](https://github.com/arm-hpc/porting-advisor). It is a quick way to identify architecture specific code. Porting Advisor is not needed for the simple example presented above, but if there are architecture specific intrinsics hiding deep in a larger project it can help find them. 
 

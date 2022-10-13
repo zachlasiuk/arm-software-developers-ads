@@ -17,7 +17,7 @@ If the license is not renewed within 7 days, it is automatically returned to the
 
 ## User-based license setup
 
-The most common deployment method is via a UBL server within your organization. To automatically check out such a license, set the following environment variable:
+The most common deployment method is via a UBL server within your organization. To automatically check out such a license, set the `ARMLM_ONDEMAND_ACTIVATION` environment variable:
 
 {{< tabpane code=true >}}
   {{< tab header="HSK" >}}
@@ -43,7 +43,7 @@ To confirm you have enabled the license, enter the command:
 ```console
 armlm inspect
 ```
-The license can also be activated in the [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio) IDE, via `Help` > `Arm License Manager` > `Manage Arm User-Based Licenses`
+The license can also be activated in the [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio) IDE, via `Help` > `Arm License Manager` > `Manage Arm User-Based Licenses`.
 
 You now have access to all components within the success kit you have enabled. Note that HSK is a super-set of SSK. If you only require access to the components of SSK, it is strongly recommended that you only use an SSK license.
 
