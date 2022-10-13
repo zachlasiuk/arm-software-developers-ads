@@ -40,13 +40,8 @@ Follow the instructions below to install GCC on an Arm Linux distribution. This 
 
 Confirm you are using an Arm machine by running:
 
-```console
+```bash { command_line="user@localhost | 2" }
 uname -m
-```
-
-The output should be:
-
-```console
 aarch64
 ```
 
@@ -60,14 +55,14 @@ The Linux package manager downloads the required files so there are no special i
 
 Use the `apt` command to install software packages on any Debian based Linux distribution, including Ubuntu.
 
-```console
+```bash
 sudo apt update
 sudo apt install gcc g++ -y
 ```
 
 Another meta-package on Ubuntu is ``build-essential``. This will install the most common tools libraries with a single command.
 
-```console
+```bash
 sudo apt install -y build-essential
 ```
 
@@ -97,7 +92,7 @@ GCC is open source and freely available for use.
 
 To confirm the installation is complete run:
 
-```console
+```bash
 gcc --version
 ```
 
@@ -115,14 +110,15 @@ int main()
 
 To compile the hello-world program use:
 
-```console
+```bash
 gcc -o hello-world hello-world.c
 ```
 
 To run the application enter:
 
-```console
+```bash { command_line="user@localhost | 2" }
 ./hello-world
+Hello, Arm World!
 ```
 
 The program will print the string in the printf() statement.
@@ -157,7 +153,7 @@ The Linux package manager will download the required files so there are no speci
 
 Use the `apt` command to install software packages on any Debian based Linux distribution.
 
-```console
+```bash
 sudo apt update
 sudo apt install gcc-arm-none-eabi
 sudo apt install gcc-arm-linux-gnueabihf
@@ -195,7 +191,7 @@ GCC is open source and freely available for use.
 
 To confirm the installation is successful, enter:
 
-```console
+```bash
 arm-none-eabi-gcc --version
 ```
 
@@ -213,19 +209,19 @@ int main()
 
 To compile hello-world as a bare-metal application:
 
-```console
+```bash
 arm-none-eabi-gcc --specs=rdimon.specs hello-world.c -o hello-world.elf
 ```
 
 To cross-compile hello-world as a 32-bit Linux application.
 
-```console
+```bash
 arm-linux-gnueabihf-gcc  hello-world.c -o hello-world.elf
 ```
 
 To cross-compile hello-world as a 64-bit Linux application.
 
-```console
+```bash
 aarch64-linux-gnu-gcc hello-world.c -o hello-world.elf
 ```
 
