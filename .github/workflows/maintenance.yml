@@ -36,8 +36,8 @@ jobs:
         with:
           name: outdated
           path: outdated_files.csv
-
-   test:    
+          
+  test:
      # The type of runner that the job will run on
      runs-on: self-hosted
      # Depends on report generated in previous step
@@ -55,12 +55,12 @@ jobs:
          run: |
            python3 tools/maintenance.py -c content/install-tools/gfortran.md_cmd.json
            
-      # Upload test report as artifact
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: results
-          path: check_results.xml
+       # Upload test report as artifact
+       - name: Upload artifact
+         uses: actions/upload-artifact@v3
+         with:
+           name: results
+           path: check_results.xml
            
        # Publish Junit report
        - name: Publish Test Report
