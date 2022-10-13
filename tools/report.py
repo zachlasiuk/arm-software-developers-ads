@@ -52,10 +52,10 @@ def report(period):
     # chdir to the root folder
     os.chdir(os.path.dirname(os.path.abspath(__file__)) + "/..")
     dname = ["content/install-tools",
+             "content/learning-paths/auto",
              "content/learning-paths/cloud",
              "content/learning-paths/desktop_and_laptop",
-             "content/learning-paths/embedded",
-             "content/learning-paths/microcontroller",
+             "content/learning-paths/iot",
              "content/learning-paths/mobile"]
 
     result = {}
