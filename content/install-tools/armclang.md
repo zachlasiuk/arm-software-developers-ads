@@ -37,22 +37,22 @@ To install on Windows, unzip the downloaded package, launch the installer, and f
 ```console
 win-x86_64\setup.exe
 ```
-To automate installation of a standalone compiler package on Linux which has been downloaded in the current directory:
+To install on Linux hosts, untar, then run the install script (note the exact filenames are version and host dependent). For example:
 
 {{< tabpane code=true >}}
   {{< tab header="x86_64" >}}
 mkdir tmp
-mv ARMCompiler6.18_standalone_linux-x86_64.tar.gz tmp
+mv ARMCompiler6.19_standalone_linux-x86_64.tar.gz tmp
 cd tmp
-tar xvfz ARMCompiler6.18_standalone_linux-x86_64.tar.gz
-./install_x86_64.sh --i-agree-to-the-contained-eula --no-interactive -d /home/$USER/ArmCompilerforEmbedded6.18
+tar xvfz ARMCompiler6.19_standalone_linux-x86_64.tar.gz
+./install_x86_64.sh --i-agree-to-the-contained-eula --no-interactive -d /home/$USER/ArmCompilerforEmbedded6.19
 {{< /tab >}}
 {{< tab header="aarch64" >}}
 mkdir tmp
-mv ARMCompiler6.18_standalone_linux-aarch64.tar.gz tmp
+mv ARMCompiler6.19_standalone_linux-aarch64.tar.gz tmp
 cd tmp
-tar xvfz ARMCompiler6.18_standalone_linux-aarch64.tar.gz
-./install_aarch64.sh --i-agree-to-the-contained-eula --no-interactive -d /home/$USER/ArmCompilerforEmbedded6.18
+tar xvfz ARMCompiler6.19_standalone_linux-aarch64.tar.gz
+./install_aarch64.sh --i-agree-to-the-contained-eula --no-interactive -d /home/$USER/ArmCompilerforEmbedded6.19
 {{< /tab >}}
 {{< /tabpane >}}
 
@@ -66,10 +66,10 @@ Add the `bin` directory of the installation to the `PATH` and confirm `armclang`
 
 {{< tabpane code=true >}}
   {{< tab header="bash" >}}
-export PATH=/home/$USER/ArmCompilerforEmbedded6.18/bin:$PATH
+export PATH=/home/$USER/ArmCompilerforEmbedded6.19/bin:$PATH
 {{< /tab >}}
   {{< tab header="csh/tcsh" >}}
-set path=(/home/$USER/ArmCompilerforEmbedded6.18/bin $path)
+set path=(/home/$USER/ArmCompilerforEmbedded6.19/bin $path)
 {{< /tab >}}
 {{< /tabpane >}}
 
