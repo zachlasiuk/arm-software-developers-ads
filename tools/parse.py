@@ -34,7 +34,7 @@ def save(article, cmd):
     global verbosity, level
 
     # TODO: set default Docker image for now, but we can add a field in the .md file
-    content = { "image": "ubuntu:22.04"}
+    content = { "image": ["ubuntu:latest", "fedora:latest"]}
 
     logging.debug(content)
 
@@ -43,10 +43,22 @@ def save(article, cmd):
         # if bash type, check fo arguments
         if "bash" in l[0]:
             content[i_idx] = {"type": "bash"}
+            # check target
+            if "target" in l[0]:
+                tgt = l[0].split("target=\"")[1].split("\"")[0]
+                content[i_idx].update({"target": tgt })
             # check if any expected result
             if "|" in l[0]:
                 expected_result = l[0].split("| ")[1].split("\"")[0]
                 content[i_idx].update({"expected": expected_result })
+        # if bash type, check fo arguments
+        elif "C" in l[0] or "fortran" in l[0]:
+            content[i_idx] = {"type": l[0].split()[0]}
+            # check file name
+            if "file_name" in l[0]:
+                fn = l[0].split("file_name=\"")[1].split("\"")[0]
+                content[i_idx].update({"file_name": fn })
+
         # no expected argument for other types
         else:
             content[i_idx] = {"type": l[0]}

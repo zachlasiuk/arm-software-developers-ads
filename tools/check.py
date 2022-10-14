@@ -63,7 +63,7 @@ def check(json_file):
             # Check if a target is specified
             if "target" in t:
                 # get element index of instance
-                idx = data.index([t["target"]])
+                idx = data["image"].index(t["target"])
                 inst = range(idx, idx+1)
             else:
                 inst = range(0, len(data["image"]))
@@ -73,11 +73,14 @@ def check(json_file):
                 if t["type"] == "bash":
                     cmd = ["docker exec -u user -w /home/user test_{} {}".format(k, c)]
                 elif t["type"] == "fortran":
-                    # TODO filename should probably read from the markdown files
-                    fn = "hello.f90"
+                    # Get file name
+                    if "file_name" in t:
+                        fn = t["file_name"]
                     cmd = ["docker exec -u user -w /home/user test_{} bash -c \"echo '{}' >> {}\"".format(k, c.replace('\'','\\\"'), fn)]
                 elif t["type"] == "C":
-                    fn = "hello-world.c"
+                    # Get file name
+                    if "file_name" in t:
+                        fn = t["file_name"]
                     cmd = ["docker exec -u user -w /home/user test_{} bash -c \"echo '{}' >> {}\"".format(k, c.replace('\'','\\\"').replace('\"','\\\"'), fn)]
                 else:
                     logging.debug("Omitting type: {}".format(t["type"]))
