@@ -7,8 +7,8 @@ additional_search_terms:
 # Maintenance settings
 maintain: true                  # Enables maintenance tests on article
 docker_images:                  # List Docker images to run instructions on
-  - ubuntu:22.04
-  - redhat/ubi8
+  - ubuntu:latest
+  - fedora:latest
 
 tool_install: true              # DO NOT MODIFY. Always true for tool installs
 layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
@@ -52,17 +52,13 @@ These Linux distributions use `yum` as the package manager.
 
 To install the most common development tools use the commands below. If the machine has `sudo` you can use it.
 
-```console { target="redhat/ubi8" }
+```console { target="fedora:latest" }
 sudo yum update
-sudo yum groupinstall 'Development Tools'
+sudo yum groupinstall gcc-gfortran -y
 ```
 
 If `sudo` is not available become _root_ and omit the `sudo`.
 
-```console { target="redhat/ubi8" }
-yum update
-yum groupinstall 'Development Tools'
-```
 
 ## Setting up product license {#license}
 
