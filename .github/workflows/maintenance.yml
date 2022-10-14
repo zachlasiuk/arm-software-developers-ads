@@ -46,7 +46,7 @@ jobs:
           git config user.email github-actions@github.com
           git add content/stats/data.json
           git pull
-          if git commit -m "Update badges"; then
+          if git commit -m "Update stats"; then
             git push
           fi
 
