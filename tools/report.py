@@ -5,6 +5,7 @@ import logging
 import os
 import subprocess
 import csv
+import json
 from datetime import datetime, timedelta
 
 
@@ -60,10 +61,36 @@ def report(period):
 
     result = {}
 
-    for d in dname:
+    # Opening JSON file
+    f = open('content/stats/data.json', 'r')
+    # returns JSON object as a dictionary
+    data = json.load(f)
+
+    total=0
+    for d_idx, d in enumerate(dname):
         res, count = content_parser(d, period)
         result.update(res)
         logging.info("Found {} articles in {}. {} of them are outdated.".format(count, d, len(res)))
+        # Date
+        data["data"][d_idx]["x"].append(datetime.now().strftime("%Y-%b-%d %H:%M"))
+        # Articles counted in category
+        data["data"][d_idx]["y"].append(count)
+        total += count
+
+    logging.info("Total number of articles is {}.".format(total))
+    # Day
+    data["data"][len(dname)]["x"].append(datetime.now().strftime("%Y-%b-%d %H:%M"))
+    # Articles counted in category
+    data["data"][len(dname)]["y"].append(total)
+
+    # Closing JSON file
+    f.close()
+
+    f = open('content/stats/data.json', 'w')
+    # Write results to file
+    json.dump(data, f)
+    # Closing JSON file
+    f.close()
 
     fn="outdated_files.csv"
     fields=["File", "Last updated"]
