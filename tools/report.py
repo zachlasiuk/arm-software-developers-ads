@@ -6,6 +6,7 @@ import os
 import subprocess
 import csv
 import json
+from pathlib import Path
 from datetime import datetime, timedelta
 
 
@@ -61,10 +62,70 @@ def report(period):
 
     result = {}
 
-    # Opening JSON file
-    f = open('content/stats/data.json', 'r')
-    # returns JSON object as a dictionary
-    data = json.load(f)
+    # If file exists, load data. Create structure otherwise
+    if os.path.exists('content/stats/data.json'):
+        # Opening JSON file
+        f = open('content/stats/data.json', 'r')
+        # returns JSON object as a dictionary
+        data = json.load(f)
+        # Closing JSON file
+        f.close()
+    else:
+        # Create dict
+        data = { 
+            "data": [
+                {
+                    "x": [],
+                    "y": [],
+                    "type": "bar",
+                    "name": "install-tools"
+                },
+                {
+                    "x": [],
+                    "y": [],
+                    "type": "bar",
+                    "name": "learning-paths/auto"
+                },
+                {
+                    "x": [],
+                    "y": [],
+                    "type": "bar",
+                    "name": "learning-paths/cloud"
+                },
+                {
+                    "x": [],
+                    "y": [],
+                    "type": "bar",
+                    "name": "learning-paths/desktop_and_laptop"
+                },
+                {
+                    "x": [],
+                    "y": [],
+                    "type": "bar",
+                    "name": "learning-paths/iot"
+                },
+                {
+                    "x": [],
+                    "y": [],
+                    "type": "bar",
+                    "name": "learning-paths/mobile"
+                },
+                {
+                    "x": [],
+                    "y": [],
+                    "type": "bar",
+                    "name": "learning-paths/total"
+                }
+            ],
+            "layout":
+            {
+                "title": "Number of articles timeline",
+                "xaxis": {
+                    "tickangle": -45
+                    },
+                "barmode": "group"
+            }
+        }
 
     total=0
     for d_idx, d in enumerate(dname):
@@ -83,9 +144,7 @@ def report(period):
     # Articles counted in category
     data["data"][len(dname)]["y"].append(total)
 
-    # Closing JSON file
-    f.close()
-
+    # Save data in json file
     f = open('content/stats/data.json', 'w')
     # Write results to file
     json.dump(data, f)
