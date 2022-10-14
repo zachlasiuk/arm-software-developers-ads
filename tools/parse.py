@@ -4,6 +4,7 @@ import argparse
 import logging
 import subprocess
 import json
+import yaml
 import os
 
 
@@ -11,8 +12,6 @@ import os
 Parse commands in markdown article and return list of commands
 '''
 def parse(article):
-    global verbosity, level
-
     with open(article) as file:
         content = file.read()
         cmd = []
@@ -28,13 +27,44 @@ def parse(article):
 
 
 '''
+Parse header to check file or not
+'''
+def header(article):
+    with open(article) as file:
+        content = file.read()
+        header = []
+        for i in content:
+            start = content.find("---") + 3
+            end = content.find("---", start)
+            if end == start-3:
+                # No header
+                return header
+            else:
+                header = content[start:end]
+                data = yaml.safe_load(header, )
+                # Should we test this file?
+                if "maintain" in data.keys() and "docker_images" in data.keys():
+                    return [data["maintain"], data["docker_images"]]
+                elif "maintain" in data.keys() and not "docker_images" in data.keys():
+                    logging.error("\"maintain: true\" requires a list of docker_images to run on")
+                    return [False, -1]
+                else:
+                    logging.debug("File {} maintenance is turned off. Add or set \"maintain: true\" otherwise.".format(article))
+                    return [False, -1]
+
+
+'''
 Save list of command in json file
 '''
 def save(article, cmd):
-    global verbosity, level
+    # Parse file header
+    maintain, img = header(article)
 
-    # TODO: set default Docker image for now, but we can add a field in the .md file
-    content = { "image": ["ubuntu:latest", "fedora:latest"]}
+    if not maintain:
+        logging.info("File {} settings don't enable parsing.".format(article))
+        return
+
+    content = { "image": img}
 
     logging.debug(content)
 

@@ -45,8 +45,6 @@ def content_parser(d, period):
 List pages older than a period in days
 '''
 def report(period):
-    global verbosity, level
-
     orig = os.path.abspath(os.getcwd())
 
     # chdir to the root folder
