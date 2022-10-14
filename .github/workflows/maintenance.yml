@@ -20,11 +20,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Check out repo, stats branch and the whole history
+      # Check out repo and the whole history
       - name: Check out repository code
         uses: actions/checkout@v3
         with:
-          ref: stats
           fetch-depth: 0
 
       # Report outdated files, store result as artifact and updates stats
@@ -59,11 +58,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Check out repo, stats branch
+      # Check out repo
       - name: Check out repository code
         uses: actions/checkout@v3
-        with:
-          ref: stats
 
       # Download list of outdated files to test
       - name: Download a single artifact
