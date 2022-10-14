@@ -53,8 +53,12 @@ def check(json_file):
 
     logging.info("Container(s) initialization completed")
 
-    # Run bash commands
+    # Create 1 test suite for each image
     test_cases= []
+    for img in data["image"]:
+        test_cases.append([])
+
+    # Run bash commands
     for i in range(0, data["ntests"]):
         t = data["{}".format(i)]
         for j in range(0, t["ncmd"]):
@@ -99,7 +103,7 @@ def check(json_file):
                         p = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
                     # create test case
-                    test_cases.append(TestCase("{}_test-{}.{}".format(data["image"][k], i,j), c, 0, p.stdout.rstrip().decode("utf-8"), ''))
+                    test_cases[k].append(TestCase("{}_test-{}.{}".format(data["image"][k], i,j), c, 0, p.stdout.rstrip().decode("utf-8"), ''))
 
                     # if success
                     if p.returncode == 0:
@@ -111,12 +115,12 @@ def check(json_file):
                                 msg = "Test passed"
                             else:
                                 msg = "ERROR (unexpected output. Expected {} but got {})".format(exp, p.stdout.rstrip().decode("utf-8"))
-                                test_cases[-1].add_failure_info(msg)
+                                test_cases[k][-1].add_failure_info(msg)
                         else:
                             msg = "Test passed"
                     else:
                         msg = "ERROR (command failed. Return code is {})".format(p.returncode)
-                        test_cases[-1].add_failure_info(msg)
+                        test_cases[k][-1].add_failure_info(msg)
 
                     logging.debug(msg)
                     logging.info("{:.0f}% of all tests completed on instance test_{}".format(i/data["ntests"]*100, k))
@@ -124,11 +128,14 @@ def check(json_file):
     logging.info("100% of all tests completed")
 
     # add to test suite and write junit results
-    ts = [TestSuite(json_file, test_cases)]
-    with open(r'check_results.xml', mode='w') as lFile:
+    ts = []
+    for k in range(0, len(data["image"])):
+        ts.append(TestSuite("{} {}".format(json_file,data["image"][k]), test_cases[k]))
+
+    with open(json_file.replace(".json", ".xml"), mode='w') as lFile:
         TestSuite.to_file(lFile, ts, prettyprint=True)
         lFile.close()
-        logging.info("Results written in check_results.xml")
+        logging.info("Results written in {}".format(json_file.replace(".json", ".xml")))
 
     # Stop instance
     logging.info("Terminating container(s)...")
