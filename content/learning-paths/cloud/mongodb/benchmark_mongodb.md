@@ -7,15 +7,16 @@ weight: 4 # (intro is 1), 2 is first, 3 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
+To further measure the performance of MongoDB, we will run the [Yahoo Cloud Serving Benchmark](http://github.com/brianfrankcooper/YCSB).
 
-## Pre-requisites
+[YCSB](https://research.yahoo.com/news/yahoo-cloud-serving-benchmark/) is an open sourced project which provides the framework and common set of workloads to evaluate the performance of different "key-value" and "cloud" serving stores. Here we will list out the steps to run YCSB to evalute the performance of MongoDB running on 64-bit Arm machine.
 
-* MongoDB installed and running on your 64-bit Arm Linux machine or AWS EC2 instance. Follow the steps outlined [here](/learning-paths/cloud/mongodb/run_mongodb).
-* Java 1.8 or newer installed on your 64-bit Arm Linux machine or AWS EC2 instance.
-```console
-sudo apt install default-jre
-```
-* Maven 3 installed on your 64-bit Arm Linux machine or AWS EC2 instance. Run the following commands to install Maven 3
+## Additional software packages
+
+To run YCSB, additional software packages are required, [Apache Maven](https://maven.apache.org/), and [Python](https://www.python.org) 2.7.
+
+Apache Maven:
+
 ```console
    wget http://ftp.heanet.ie/mirrors/www.apache.org/dist/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz
    sudo tar xzf apache-maven-*-bin.tar.gz -C /usr/local
@@ -25,31 +26,30 @@ sudo apt install default-jre
    export M2_HOME=/usr/local/maven
    export PATH=${M2_HOME}/bin:${PATH}
 ```
+Python 2.7
 
-* Python 2.7
-```console
+{{< tabpane code=true >}}
+  {{< tab header="Ubuntu" >}}
 sudo apt-get update
 sudo apt install python
-```
+{{< /tab >}}
+{{< tab header="RHE/Amazon" >}}
+sudo yum check-update
+sudo yum install python
+{{< /tab >}}
+{{< /tabpane >}}
 
-## Detailed Steps
+## Setup YCSB 
 
-To measure the performance of MongoDB running on Arm, we will run the [Yahoo Cloud Serving Benchmark](http://github.com/brianfrankcooper/YCSB).
-
-[YCSB](https://research.yahoo.com/news/yahoo-cloud-serving-benchmark/) is an open sourced project which provides the framework and common set of workloads to evaluate the performance of different "key-value" and "cloud" serving stores. Here we will list out the steps to run YCSB to evalute the performance of MongoDB running on 64-bit Arm machine.
-
-### Setup YCSB 
-
-On your 64-bit Arm Linux EC2 Instance that is running MongoDB, download the latest released YCSB zip file and uncompress
+Download the latest released YCSB zip file and uncompress
 
 ```console
 mkdir ~/ycsb && cd ~/ycsb
 curl -O --location https://github.com/brianfrankcooper/YCSB/releases/download/0.17.0/ycsb-0.17.0.tar.gz
 tar xfvz ycsb-0.17.0.tar.gz
-
 ```
 
-Now cd into project folder and run the executable to print a description of how to use the benchmark
+Now `cd` into project folder and run the executable to print a description of how to use the benchmark.
 
 ```console
 cd ycsb-0.17.0
@@ -58,7 +58,7 @@ bin/ycsb
 ```
 
 
-### Load/Insert Test on MongoDB
+## Load/Insert Test on MongoDB
 
 To test the performance of loading data(INSERT) into default database `ycsb` at `localhost:27017` where MongoDB is running using the asynchronous driver run the following command:
 
@@ -77,7 +77,7 @@ To load/insert data using the synchronous driver instead run the following comma
 
 
 
-### Update/Read/Read Modify Write Test on MongoDB
+## Update/Read/Read Modify Write Test on MongoDB
 
 To test the performance of executing a workload which includes running UPDATE, Read Modify Write(RMW) and/or READ operations on the data using 10 threads for example, use the following command:
 
@@ -91,7 +91,7 @@ To run the same command using the asynchronous driver change `mongodb` in the ab
 
 For more detailed information on all the parameters for running a workload refer to [this section](https://github.com/brianfrankcooper/YCSB/wiki/Running-a-Workload).
 
-### View the results
+## View the results
 
 At the end of each test, statistics are printed to the console. Shown below is the output from the end of Load/Insert test
 
@@ -124,7 +124,7 @@ At the end of each test, statistics are printed to the console. Shown below is t
 
 ```
 
-### Further Reading
+## Further Reading
 
 For instructions on running any other tests or more details on the metrics reported, refer to the [github project for the YCSB](https://github.com/brianfrankcooper/YCSB/wiki/).
 
