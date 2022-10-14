@@ -29,6 +29,7 @@ jobs:
       # Report outdated files, store result as artifact and updates stats
       - name: Report outdated files of more than 20 days
         run: |
+           pip install junit-xml
            python3 tools/maintenance.py -r 20
 
       # Upload report as artifact
