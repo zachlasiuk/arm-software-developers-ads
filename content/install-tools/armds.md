@@ -14,11 +14,11 @@ Full host platform requirements are given in the [Getting Started Guide](https:/
 
 The installer will depend on the [edition](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio#Editions) of Development Studio that you are entitled to. 
 
-Gold, Silver, and Bronze editions are one installer, with available features defined by the license. The version is denoted by `year.index`, where `index` is a number (for example `2022.0`).
+Gold, Silver, and Bronze editions are one installer, with available features defined by the license. The version is denoted by `year.index`, where `index` is a number (for example `2022.1`).
 
-Development Studio Platinum Edition has its own installation package. The version is denoted by `year.index`, where `index` is a letter (for example `2022.a`).
+Development Studio Platinum Edition has its own installation package. The version is denoted by `year.index`, where `index` is a letter (for example `2022.b`).
 
-You can download the Development Studio installer from the [Product Download Hub](https://developer.arm.com/downloads).
+You can download the Development Studio installer from the [Product Download Hub](https://developer.arm.com/downloads). For more information on the Download Hub, see [here](../pdh).
 
 For Windows hosts, follow the installation instructions provided [here](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio/Installing-on-Windows).
 
@@ -37,4 +37,3 @@ A free 30 day evaluation license for Arm Development Studio is also available. Y
 To verify everything is installed correctly and to get started with your first project, follow the [Hello World Tutorial](https://developer.arm.com/documentation/101469/latest/Tutorials/Tutorial--Hello-World).
 
 A number of [example projects](https://developer.arm.com/documentation/101469/latest/Projects-and-examples-in-Arm-Development-Studio/Examples-provided-with-Arm-Development-Studio) are also provided.
-

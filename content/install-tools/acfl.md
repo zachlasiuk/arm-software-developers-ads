@@ -39,7 +39,7 @@ You do not require a license to use Arm Compiler for Linux.
 
 ## Installation
 
-To install the Arm Compiler for Linux package on your 64-bit Linux Arm machine, follow the instructions [here](https://developer.arm.com/documentation/102621/0100/Install?lang=en).
+To install the Arm Compiler for Linux package on your 64-bit Linux Arm machine, follow the instructions [here](https://developer.arm.com/documentation/102621/0100/Install).
 
 ## Get started
 

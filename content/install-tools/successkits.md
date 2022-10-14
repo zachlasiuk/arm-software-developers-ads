@@ -17,15 +17,13 @@ Arm Success Kits are a component of [Arm Flexible Access](https://www.arm.com/en
 
 ## Downloading Success Kit components
 
-All downloads are provided via the [Arm Product Download Hub](https://developer.arm.com/downloads). You will need to set up an account for this system to be able to download. It may be that only certain contacts within your organization have such access. If you are unsure, please contact your Arm account manager for assistance.
+All downloads are provided via the [Arm Product Download Hub](https://developer.arm.com/downloads).
 
-You can download individual components, or the complete success kits. Bundles are provided for Windows, Linux, or Mac OS. Note that not all components are supported on all hosts.
+For more information on the Download Hub, see [here](../pdh).
 
-The Product Download Hub uses [IBM Aspera Connect](https://www.ibm.com/aspera/connect/) to enable high-speed download of IP bundles. If prompted, follow on-screen instructions to install Aspera to your browser.
+You can download individual components, or the complete Success Kits.
 
-Once downloaded, you can untar the bundles, and install the necessary components.
-
-For more information, see the [Product Download Hub Getting Started Guide](https://developer.arm.com/documentation/107572).
+Bundles are provided for Windows, Linux, or Mac OS. Not all components are supported on all hosts.
 
 ## Component installation and setup
 
