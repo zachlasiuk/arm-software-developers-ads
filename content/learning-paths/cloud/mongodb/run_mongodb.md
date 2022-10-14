@@ -11,9 +11,9 @@ layout: "learningpathall"
 
 The latest released version of MongoDB Community Edition (5.0) is supported on the following Linux distributions:
 
-* Amazon Linux 2
-* RHEL/CentOS 8
 * Ubuntu Versions - 20.04, 18.04
+* RHEL/CentOS 8
+* Amazon Linux 2
 
 Refer to this [page](https://www.mongodb.com/docs/manual/administration/production-notes/#platform-support-matrix) for the complete platform support matrix.
 
@@ -21,13 +21,13 @@ Refer to this [page](https://www.mongodb.com/docs/manual/administration/producti
 
 Launch an [Arm based instance](/learning-paths/cloud/providers) running either Ubuntu versions 20.04 or 18.04.
 
-Then run through [these steps](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/) on your chosen instance.
+Then run through [these steps](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/) to install and run MongoDB on your instance.
 
 ## Install and Run MongoDB on Red Hat
 
 Launch an [Arm based instance](/learning-paths/cloud/providers) running RHEL8.
 
-Then run through [these steps](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/) on your chosen instance.
+Then run through [these steps](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-red-hat/) to install and run MongoDB on your instance.
 
 ## Install and Run MongoDB on Amazon Linux 2
 
