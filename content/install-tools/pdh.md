@@ -26,7 +26,11 @@ Assuming you have access to the product, you will be able to download directly f
 
 The portal uses [IBM Aspera](https://www.ibm.com/products/aspera) to enable high speed, secure, download. If it is your first time using the portal, you may be prompted to install the `IBM Aspera Connect` browser extension. This only has to be done once.
 
-It is also possible to download without the use of Aspera if you prefer.
+It is also possible to download without the use of Aspera if you prefer, but this will be slower, especially for large download sizes.
+
+## Updates
+
+You will automatically be notified by the system when updates become available for any products that you have downloaded.
 
 ## Further Reading
 

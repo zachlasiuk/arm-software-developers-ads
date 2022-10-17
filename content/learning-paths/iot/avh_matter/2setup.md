@@ -26,7 +26,7 @@ git config --global user.email YOUR_EMAIL_ADDRESS
 ```
 ## Login to Arm Virtual Hardware console
 
-Open your browser, and navigate to Arm Virtual Hardware console:
+Open your browser, and navigate to Arm Virtual Hardware dashboard:
 ```console
 https://app.avh.arm.com/
 ```
@@ -46,7 +46,7 @@ Open each instance in its own browser pane.
 
 ## Login to virtual Raspberry Pi instances
 
-When your instances are created, select the `CONSOLE` tab, and log into each Raspberry Pi 4 instance.
+When your instances are created, select the `Console` tab, and log into each Raspberry Pi 4 instance.
 
 - Username: `pi`
 - Password: `raspberry`
@@ -57,15 +57,15 @@ It is also possible to log in via the CLCD window view. However it is easier to 
 
 ## (Optional) Connect via SSH
 
-The `CONSOLE` view within the browser will suffice.
+The `Console` view within the browser will suffice to complete this learning path.
 
 If you wish to connect via `SSH` (rather than `Console`), it is easiest to download and install the appropriate [OpenVPN Community](https://openvpn.net/community-downloads) version for your host.
 
-In the Arm Virtual Hardware `CONNECT` tab, and scroll to the `Connect via VPN` section. Click on `DOWNLOAD OVPN FILE`.
+In the Arm Virtual Hardware `Connect` tab, Click on `DOWNLOAD OVPN FILE` within the `Connect via VPN` section.
 
-In OpenVPN, select `Import` > `Import file...` and browse to the downloaded `OVPN FILE`. Click `Connect`.
+In the `OpenVPN` GUI, select `Import` > `Import file...` and browse to the downloaded `OVPN file`. Click `Connect`.
 
-On your host, open terminal(s), and connect to the virtual hardware instance(s) with the command shown in the `CONNECT` tab, or use your preferred terminal application.
+On your host, open terminal(s), and connect to the virtual hardware instance(s) with the command shown in the `Connect` tab, or use your preferred terminal application.
 
 ## Install necessary software components
 

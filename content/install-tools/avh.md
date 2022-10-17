@@ -19,13 +19,13 @@ Arm Virtual Hardware (AVH) is available as an Amazon Machine Instance (AMI) on [
 
 A `c5.large` instance type is recommended for AVH.
 
-Information on launching an AWS instance is available [here](/learning-paths/cloud/providers/aws/).
+Further information on launching an AWS instance is available [here](/learning-paths/cloud/providers/aws/).
 
 ### Connect to instance terminal via SSH
 
-On your local machine, run the following command to connect to the instance (with user name `ubuntu`).
+On your local machine, run the following command to connect to the instance (with user name `ubuntu`) with SSH Key `your_key.pem`.
 ```console
-ssh  -i <path>/your_key.pem ubuntu@<Public IPv4 address>
+ssh  -i <path_to>/your_key.pem ubuntu@<Instance_IP_address>
 ```
 ### Verify instance has launched successfully
 
