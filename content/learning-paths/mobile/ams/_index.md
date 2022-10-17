@@ -23,8 +23,6 @@ learning_objectives:
 # 2-5 bullet points, one sentance each. Should start with a verb (Deploy, Measure) and indicate the value of the objective if possible.
 
 prerequisites:
-    - An appropriate Android device
-    - Some familiarity with general Android application development is assumed
 # List any prereqs needed before this learning path can be completed. Can include:
     # Online service accounts                                   (An Amazon Web Services account)
     # Prior knowledge                                           (Some familiarity with embedded programing)
