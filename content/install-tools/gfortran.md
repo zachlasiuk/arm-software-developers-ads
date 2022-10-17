@@ -14,7 +14,7 @@ tool_install: true              # DO NOT MODIFY. Always true for tool installs
 layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
 
-![ubuntu:22.04](https://img.shields.io/badge/ubuntu:22.04-passed-green) ![redhat/ubi8](https://img.shields.io/badge/redhat/ubi8-failed-red)
+{{< test >}}
 
 [GNU Fortran](https://gcc.gnu.org/fortran/) is the Fortran compiler front end and run-time libraries for GCC, the GNU Compiler Collection.
 
