@@ -41,7 +41,7 @@ The Linux package manager downloads the required files so there are no special i
 
 Use the `apt` command to install software packages on any Debian based Linux distribution, including Ubuntu.
 
-```bash { command_line="user@localhost", target="ubuntu:latest" }
+```bash { target="ubuntu:latest" }
 sudo apt update
 sudo apt install gfortran -y
 ```
@@ -59,6 +59,11 @@ sudo yum install gcc-gfortran -y
 
 If `sudo` is not available become _root_ and omit the `sudo`.
 
+```console
+sudo yum update -y
+sudo yum install gcc-gfortran -y
+```
+
 
 ## Setting up product license {#license}
 
@@ -68,7 +73,7 @@ Arm GNU Toolchain is open source and freely available for use. No licenses need 
 
 To confirm the installation is complete run:
 
-```bash { command_line="user@localhost" }
+```bash
 gfortran --version
 ```
 
@@ -83,7 +88,7 @@ end program hello
 
 To compile the hello-world program use:
 
-```bash { command_line="user@localhost" }
+```bash
 gfortran hello.f90 -o hello
 ```
 
