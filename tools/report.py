@@ -113,7 +113,6 @@ def report(period):
                 {
                     "x": [],
                     "y": [],
-                    "type": "bar",
                     "name": "learning-paths/total"
                 }
             ],
