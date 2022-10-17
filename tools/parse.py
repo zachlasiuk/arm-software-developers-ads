@@ -4,6 +4,7 @@ import argparse
 import logging
 import subprocess
 import json
+import yaml
 import os
 
 
@@ -11,8 +12,6 @@ import os
 Parse commands in markdown article and return list of commands
 '''
 def parse(article):
-    global verbosity, level
-
     with open(article) as file:
         content = file.read()
         cmd = []
@@ -28,13 +27,44 @@ def parse(article):
 
 
 '''
+Parse header to check file or not
+'''
+def header(article):
+    with open(article) as file:
+        content = file.read()
+        header = []
+        for i in content:
+            start = content.find("---") + 3
+            end = content.find("---", start)
+            if end == start-3:
+                # No header
+                return header
+            else:
+                header = content[start:end]
+                data = yaml.safe_load(header, )
+                # Should we test this file?
+                if "maintain" in data.keys() and "docker_images" in data.keys():
+                    return [data["maintain"], data["docker_images"]]
+                elif "maintain" in data.keys() and not "docker_images" in data.keys():
+                    logging.error("\"maintain: true\" requires a list of docker_images to run on")
+                    return [False, -1]
+                else:
+                    logging.debug("File {} maintenance is turned off. Add or set \"maintain: true\" otherwise.".format(article))
+                    return [False, -1]
+
+
+'''
 Save list of command in json file
 '''
 def save(article, cmd):
-    global verbosity, level
+    # Parse file header
+    maintain, img = header(article)
 
-    # TODO: set default Docker image for now, but we can add a field in the .md file
-    content = { "image": "ubuntu:22.04"}
+    if not maintain:
+        logging.info("File {} settings don't enable parsing.".format(article))
+        return
+
+    content = { "image": img}
 
     logging.debug(content)
 
@@ -43,10 +73,22 @@ def save(article, cmd):
         # if bash type, check fo arguments
         if "bash" in l[0]:
             content[i_idx] = {"type": "bash"}
+            # check target
+            if "target" in l[0]:
+                tgt = l[0].split("target=\"")[1].split("\"")[0]
+                content[i_idx].update({"target": tgt })
             # check if any expected result
             if "|" in l[0]:
                 expected_result = l[0].split("| ")[1].split("\"")[0]
                 content[i_idx].update({"expected": expected_result })
+        # if bash type, check fo arguments
+        elif "C" in l[0] or "fortran" in l[0]:
+            content[i_idx] = {"type": l[0].split()[0]}
+            # check file name
+            if "file_name" in l[0]:
+                fn = l[0].split("file_name=\"")[1].split("\"")[0]
+                content[i_idx].update({"file_name": fn })
+
         # no expected argument for other types
         else:
             content[i_idx] = {"type": l[0]}

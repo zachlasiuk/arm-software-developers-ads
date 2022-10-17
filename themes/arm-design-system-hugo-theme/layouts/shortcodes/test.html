@@ -1,0 +1,33 @@
+<!-- 
+    Publishes test result with a badge
+    Usage: in article header
+    # Maintenance settings
+    maintain: true                  # Enables maintenance tests on article
+    docker_images:                  # List Docker images to run instructions on
+        - ubuntu:latest
+        - fedora:latest
+    run: https://github.com/USERNAME/arm-software-developers-ads/actions/runs/123456789
+    status:
+        - passed
+        - failed
+-->
+
+<!-- if maintenance mode is enabled -->
+{{ if eq true $.Page.Params.maintain }}
+    {{ range $idx, $el := $.Page.Params.docker_images }}
+        {{ if $.Page.Params.run }}
+        <a href="{{ $.Page.Params.run }}">
+        {{ end }}
+        {{ if $.Page.Params.status }}
+            {{ $st := (index $.Page.Params.status $idx) }}
+            {{ if eq "passed" $st }}
+                <img alt="{{ $el }}" src="https://img.shields.io/badge/{{ $el }}-passed-green">
+            {{ else }}
+                <img alt="{{ $el }}" src="https://img.shields.io/badge/{{ $el }}-failed-red">
+            {{ end }}
+        {{ end }}
+        {{if $.Page.Params.run }}
+        </a>
+        {{ end }}
+    {{ end }}
+{{ end }}

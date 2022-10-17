@@ -2,6 +2,7 @@
 
 import argparse
 import logging
+import os
 # Local import
 import report
 import parse
@@ -26,7 +27,7 @@ def main():
 
     arg_group = arg_parser.add_mutually_exclusive_group()
     arg_group.add_argument('-p', '--parse', metavar='FILE', action='store', type=str, help='Parse console commands in FILE. FILE can be a CSV file with the list of file or a markdown file. Output a JSON file.')
-    arg_group.add_argument('-c', '--check', metavar='JSON', action='store', type=str, help='Check command from JSON file produced by the --parse switch')
+    arg_group.add_argument('-c', '--check', metavar='DEST', action='store', type=str, help='DEST can be a JSON file or a folder. Check commands produced by the --parse switch. Output an Junit XML file with test results.')
     arg_group.add_argument('-r', '--report', metavar='DAYS', action='store', type=int, default=1, help='List articles older than a period in days (default is 1). Output a CSV file. This option is used by default.')
 
     args = arg_parser.parse_args()
@@ -38,8 +39,18 @@ def main():
     logging.debug("Verbosity level is set to " + level[verbosity])
 
     if args.check:
-        logging.info("Checking " + args.check)
-        check.check(args.check)
+        if args.check.endswith(".json"):
+            logging.info("Checking " + args.check)
+            check.check(args.check)
+        elif os.path.isdir(args.check):
+            logging.info("Checking folder for _cmd.json files" + args.check)
+            l = os.listdir(args.check)
+            for i in l:
+                if i.endswith("_cmd.json"):
+                    logging.info("Found json. Checking " + i)
+                    check.check(args.check + "/" + i)
+        else:
+            logging.error("Parsing expects a .md file or a .csv list of files")
     elif args.parse:
         # check if article is a csv file corresponding to a file list
         if args.parse.endswith(".csv"):
@@ -51,10 +62,12 @@ def main():
                     logging.debug("Parsing " + fn)
                     cmd = parse.parse(fn)
                     parse.save(fn, cmd)
-        else:
+        elif args.parse.endswith(".md"):
             logging.info("Parsing " + args.parse)
             cmd = parse.parse(args.parse)
             parse.save(args.parse, cmd)
+        else:
+            logging.error("Parsing expects a .md file or a .csv list of files")
     elif args.report:
         logging.info("Creating report of articles older than {} days".format(args.report))
         report.report(args.report)

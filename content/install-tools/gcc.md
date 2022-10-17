@@ -4,6 +4,12 @@ title: "GCC"
 additional_search_terms:
   - compiler
 
+# Maintenance settings
+maintain: true                  # Enables maintenance tests on article
+docker_images:                  # List Docker images to run instructions on
+  - ubuntu:latest
+  - fedora:latest
+
 tool_install: true              # DO NOT MODIFY. Always true for tool installs
 layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
@@ -55,15 +61,15 @@ The Linux package manager downloads the required files so there are no special i
 
 Use the `apt` command to install software packages on any Debian based Linux distribution, including Ubuntu.
 
-```bash
+```bash { target="ubuntu:latest" }
 sudo apt update
 sudo apt install gcc g++ -y
 ```
 
 Another meta-package on Ubuntu is ``build-essential``. This will install the most common tools libraries with a single command.
 
-```bash
-sudo apt install -y build-essential
+```bash { target="ubuntu:latest" }
+sudo apt install build-essential -y
 ```
 
 ### Installing on Red Hat / Fedora / Amazon Linux
@@ -72,16 +78,16 @@ These Linux distributions use `yum` as the package manager.
 
 To install the most common development tools use the commands below. If the machine has `sudo` you can use it.
 
-```console
-sudo yum update
-sudo yum groupinstall 'Development Tools'
+```bash { target="fedora:latest" }
+sudo yum update -y
+sudo yum groupinstall 'Development Tools' -y
 ```
 
 If `sudo` is not available become _root_ and omit the `sudo`.
 
 ```console
 yum update
-yum groupinstall 'Development Tools'
+yum groupinstall 'Development Tools' -y
 ```
 
 ## Setting up product license
@@ -98,7 +104,7 @@ gcc --version
 
 To compile an example program, create a text file named hello-world.c with the contents below.
 
-```C
+```C { file_name="hello-world.c" }
 #include <stdio.h>
 
 int main()
@@ -153,11 +159,11 @@ The Linux package manager will download the required files so there are no speci
 
 Use the `apt` command to install software packages on any Debian based Linux distribution.
 
-```bash
+```bash { target="ubuntu:latest" }
 sudo apt update
-sudo apt install gcc-arm-none-eabi
-sudo apt install gcc-arm-linux-gnueabihf
-sudo apt install gcc-aarch64-linux-gnu 
+sudo apt install gcc-arm-none-eabi -y
+sudo apt install gcc-arm-linux-gnueabihf -y
+sudo apt install gcc-aarch64-linux-gnu -y
 ```
 
 ### Installing on Red Hat / Fedora / Amazon Linux
@@ -166,21 +172,20 @@ These Linux distributions use `yum` as the package manager.
 
 To install the most common development tools use the commands below. If the machine has `sudo` you can use it or run `yum` as _root_.
 
-```console
-sudo yum update
-sudo yum -y install arm-none-eabi-gcc-cs
-sudo yum -y install gcc-aarch64-linux-gnu
-sudo yum -y install gcc-arm-linux-gnu
-
+```bash { target="fedora:latest" }
+sudo yum update -y
+sudo yum install arm-none-eabi-gcc-cs -y
+sudo yum install gcc-aarch64-linux-gnu -y
+sudo yum install gcc-arm-linux-gnu -y
 ```
 
 If `sudo` is not available become _root_ and omit the `sudo`.
 
 ```console
 yum update
-yum install -y arm-none-eabi-gcc-cs
-yum -y install gcc-aarch64-linux-gnu
-yum -y install gcc-arm-linux-gnu
+yum install arm-none-eabi-gcc-cs -y
+yum install gcc-aarch64-linux-gnu -y
+yum install gcc-arm-linux-gnu -y
 ```
 
 ## Setting up product license {#license}
@@ -197,7 +202,7 @@ arm-none-eabi-gcc --version
 
 To compile an example program, create a text file named hello-world.c with the contents below.
 
-```C
+```C { file_name="hello-world-embedded.c" }
 #include <stdio.h>
 
 int main()
@@ -210,19 +215,19 @@ int main()
 To compile hello-world as a bare-metal application:
 
 ```bash
-arm-none-eabi-gcc --specs=rdimon.specs hello-world.c -o hello-world.elf
+arm-none-eabi-gcc --specs=rdimon.specs hello-world-embedded.c -o hello-world.elf
 ```
 
 To cross-compile hello-world as a 32-bit Linux application.
 
 ```bash
-arm-linux-gnueabihf-gcc  hello-world.c -o hello-world.elf
+arm-linux-gnueabihf-gcc  hello-world-embedded.c -o hello-world.elf
 ```
 
 To cross-compile hello-world as a 64-bit Linux application.
 
 ```bash
-aarch64-linux-gnu-gcc hello-world.c -o hello-world.elf
+aarch64-linux-gnu-gcc hello-world-embedded.c -o hello-world.elf
 ```
 
 
