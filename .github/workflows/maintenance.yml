@@ -4,9 +4,9 @@ name: Maintenance workflow
 
 # Controls when the action will run. 
 on:
-  # Triggers the workflow on the 1st and 15th every month
-  schedule:
-    - cron: '* * 1,15 * *'
+  # Triggers the workflow on the 1st every month. Disable for now
+  #schedule:
+  #  - cron: '* * 1 * *'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
