@@ -5,7 +5,53 @@ import logging
 import os
 import subprocess
 import json
+import yaml
 from junit_xml import TestSuite, TestCase
+
+
+'''
+Parse header and patch file with test results
+'''
+def patch(article, results, lk):
+    with open(article, mode='r') as f:
+        content = f.read()
+        f.close()
+        header = []
+        for i in content:
+            start = content.find("---") + 3
+            end = content.find("---", start)
+            if end == start-3:
+                # No header
+                logging.debug("No header found in {}".format(article))
+                return
+            else:
+                header = content[start:end]
+                markdown = content[end+3:-1]
+                data = yaml.safe_load(header, )
+                # Update status or create section
+                arr = []
+                for res in data['docker_images']:
+                    if results[res] == 0:
+                        arr.append("passed")
+                    else:
+                        arr.append("failed")
+
+                data["status"] = arr
+
+                data["link"] = lk
+
+    # update markdown files with test results
+    with open(article, mode='w') as f:
+        f.write("---\n")
+        yaml.dump(data, f)
+        f.write("---")
+        f.close()
+
+    # write the rest of the content
+    with open(article, mode='a') as f:
+        for i in markdown:
+            f.write(i)
+        f.close()
 
 
 '''
@@ -57,6 +103,11 @@ def check(json_file):
     test_cases= []
     for img in data["image"]:
         test_cases.append([])
+
+    # Create array to store test result
+    results = {}
+    for img in data["image"]:
+        results[img] = 0
 
     # Run bash commands
     for i in range(0, data["ntests"]):
@@ -116,11 +167,13 @@ def check(json_file):
                             else:
                                 msg = "ERROR (unexpected output. Expected {} but got {})".format(exp, p.stdout.rstrip().decode("utf-8"))
                                 test_cases[k][-1].add_failure_info(msg)
+                                results[data["image"][k]] = results[data["image"][k]]+1
                         else:
                             msg = "Test passed"
                     else:
                         msg = "ERROR (command failed. Return code is {})".format(p.returncode)
                         test_cases[k][-1].add_failure_info(msg)
+                        results[data["image"][k]] = results[data["image"][k]]+1
 
                     logging.debug(msg)
                     logging.info("{:.0f}% of all tests completed on instance test_{}".format(i/data["ntests"]*100, k))
@@ -143,4 +196,8 @@ def check(json_file):
         cmd = ["docker stop test_{}".format(i)]
         logging.debug(cmd)
         subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+
+    print (results)
+
+    return results
 

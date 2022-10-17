@@ -38,7 +38,8 @@ def header(article):
             end = content.find("---", start)
             if end == start-3:
                 # No header
-                return header
+                logging.debug("No header found in {}".format(article))
+                return [False, -1]
             else:
                 header = content[start:end]
                 data = yaml.safe_load(header, )

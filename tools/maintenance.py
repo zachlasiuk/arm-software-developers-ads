@@ -24,6 +24,7 @@ def main():
     arg_parser = argparse.ArgumentParser(description='Maintenance tool.', prefix_chars='-')
     arg_parser.add_argument('-v', '--version', action='version', version='Maintenance toolkit version 0.1', help='Display software version')
     arg_parser.add_argument('-d', '--debug', action='store_true', help='Enable debugging messages')
+    arg_parser.add_argument('-l', '--link', metavar='URL', action='store', type=str, help='URL to github actions report. Used wen patching sources files with --check')
 
     arg_group = arg_parser.add_mutually_exclusive_group()
     arg_group.add_argument('-p', '--parse', metavar='FILE', action='store', type=str, help='Parse console commands in FILE. FILE can be a CSV file with the list of file or a markdown file. Output a JSON file.')
@@ -39,16 +40,21 @@ def main():
     logging.debug("Verbosity level is set to " + level[verbosity])
 
     if args.check:
-        if args.check.endswith(".json"):
+        if args.check.endswith("_cmd.json"):
             logging.info("Checking " + args.check)
-            check.check(args.check)
+            #res = check.check(args.check)
+            res = {'ubuntu:latest': 1, 'fedora:latest': 1}
+            logging.info("Patching " + args.check.replace("_cmd.json", "") + " with test results")
+            check.patch(args.check.replace("_cmd.json", ""), res, args.link)
         elif os.path.isdir(args.check):
             logging.info("Checking folder for _cmd.json files" + args.check)
             l = os.listdir(args.check)
             for i in l:
                 if i.endswith("_cmd.json"):
                     logging.info("Found json. Checking " + i)
-                    check.check(args.check + "/" + i)
+                    res = check.check(args.check + "/" + i)
+                    logging.info("Patching " + i.replace("_cmd.json", "") + " with test results")
+                    check.patch(i.replace("_cmd.json", ""), res, args.link)
         else:
             logging.error("Parsing expects a .md file or a .csv list of files")
     elif args.parse:
