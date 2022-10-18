@@ -177,6 +177,7 @@ To install the most common development tools use the commands below. If the mach
 ```bash { target="fedora:latest" }
 sudo yum update -y
 sudo yum install arm-none-eabi-gcc-cs -y
+sudo yum install arm-none-eabi-newlib -y
 sudo yum install gcc-aarch64-linux-gnu -y
 sudo yum install gcc-arm-linux-gnu -y
 ```
@@ -186,6 +187,7 @@ If `sudo` is not available become _root_ and omit the `sudo`.
 ```console
 yum update
 yum install arm-none-eabi-gcc-cs -y
+yum install arm-none-eabi-newlib -y
 yum install gcc-aarch64-linux-gnu -y
 yum install gcc-arm-linux-gnu -y
 ```
@@ -220,15 +222,15 @@ To compile hello-world as a bare-metal application:
 arm-none-eabi-gcc --specs=rdimon.specs hello-world-embedded.c -o hello-world.elf
 ```
 
-To cross-compile hello-world as a 32-bit Linux application.
+To cross-compile hello-world as a 32-bit Linux application. On Fedora, only building kernels is currently supported. Support for cross-building user space programs is not currently provided as that would massively multiply the number of packages.
 
-```bash
+```bash { target="ubuntu:latest" }
 arm-linux-gnueabihf-gcc  hello-world-embedded.c -o hello-world.elf
 ```
 
-To cross-compile hello-world as a 64-bit Linux application.
+To cross-compile hello-world as a 64-bit Linux application. On Fedora, only building kernels is currently supported. Support for cross-building user space programs is not currently provided as that would massively multiply the number of packages.
 
-```bash
+```bash { target="ubuntu:latest" }
 aarch64-linux-gnu-gcc hello-world-embedded.c -o hello-world.elf
 ```
 
