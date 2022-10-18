@@ -5,8 +5,8 @@ additional_search_terms:
   - compiler
 
 # Maintenance settings
-maintain: true                  # Enables maintenance tests on article
-docker_images:                  # List Docker images to run instructions on
+test_maintenance: true          # Enables maintenance tests on article
+test_images:                    # List Docker images to run instructions on
   - ubuntu:latest
   - fedora:latest
 

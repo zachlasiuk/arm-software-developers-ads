@@ -2,31 +2,31 @@
     Publishes test result with a badge
     Usage: in article header
     # Maintenance settings
-    maintain: true                  # Enables maintenance tests on article
-    docker_images:                  # List Docker images to run instructions on
+    test_maintenance: true        # Enables maintenance tests on article
+    test_images:                  # List Docker images to run instructions on
         - ubuntu:latest
         - fedora:latest
-    run: https://github.com/USERNAME/arm-software-developers-ads/actions/runs/123456789
-    status:
+    test_link: https://github.com/USERNAME/arm-software-developers-ads/actions/runs/123456789
+    test_status:
         - passed
         - failed
 -->
 
 <!-- if maintenance mode is enabled -->
-{{ if eq true $.Page.Params.maintain }}
-    {{ range $idx, $el := $.Page.Params.docker_images }}
-        {{ if $.Page.Params.run }}
-        <a href="{{ $.Page.Params.run }}">
+{{ if eq true $.Page.Params.test_maintenance }}
+    {{ range $idx, $el := $.Page.Params.test_images }}
+        {{ if $.Page.Params.test_link }}
+        <a href="{{ $.Page.Params.test_link }}">
         {{ end }}
-        {{ if $.Page.Params.status }}
-            {{ $st := (index $.Page.Params.status $idx) }}
+        {{ if $.Page.Params.test_status }}
+            {{ $st := (index $.Page.Params.test_status $idx) }}
             {{ if eq "passed" $st }}
                 <img alt="{{ $el }}" src="https://img.shields.io/badge/{{ $el }}-passed-green">
             {{ else }}
                 <img alt="{{ $el }}" src="https://img.shields.io/badge/{{ $el }}-failed-red">
             {{ end }}
         {{ end }}
-        {{if $.Page.Params.run }}
+        {{if $.Page.Params.test_link }}
         </a>
         {{ end }}
     {{ end }}

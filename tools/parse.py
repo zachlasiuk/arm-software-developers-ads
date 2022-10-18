@@ -44,13 +44,13 @@ def header(article):
                 header = content[start:end]
                 data = yaml.safe_load(header, )
                 # Should we test this file?
-                if "maintain" in data.keys() and "docker_images" in data.keys():
-                    return [data["maintain"], data["docker_images"]]
-                elif "maintain" in data.keys() and not "docker_images" in data.keys():
-                    logging.error("\"maintain: true\" requires a list of docker_images to run on")
+                if "test_maintenance" in data.keys() and "test_images" in data.keys():
+                    return [data["test_maintenance"], data["test_images"]]
+                elif "test_maintenance" in data.keys() and not "test_images" in data.keys():
+                    logging.error("\"test_maintenance: true\" requires a list of test_images to run on")
                     return [False, -1]
                 else:
-                    logging.debug("File {} maintenance is turned off. Add or set \"maintain: true\" otherwise.".format(article))
+                    logging.debug("File {} maintenance is turned off. Add or set \"test_maintenance: true\" otherwise.".format(article))
                     return [False, -1]
 
 

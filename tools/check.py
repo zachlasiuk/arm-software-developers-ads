@@ -30,15 +30,15 @@ def patch(article, results, lk):
                 data = yaml.safe_load(header, )
                 # Update status or create section
                 arr = []
-                for res in data['docker_images']:
+                for res in data['test_images']:
                     if results[res] == 0:
                         arr.append("passed")
                     else:
                         arr.append("failed")
 
-                data["status"] = arr
+                data["test_status"] = arr
 
-                data["link"] = lk
+                data["test_link"] = lk
 
     # update markdown files with test results
     with open(article, mode='w') as f:

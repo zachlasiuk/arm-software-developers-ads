@@ -24,7 +24,7 @@ def main():
     arg_parser = argparse.ArgumentParser(description='Maintenance tool.', prefix_chars='-')
     arg_parser.add_argument('-v', '--version', action='version', version='Maintenance toolkit version 0.1', help='Display software version')
     arg_parser.add_argument('-d', '--debug', action='store_true', help='Enable debugging messages')
-    arg_parser.add_argument('-l', '--link', metavar='URL', action='store', type=str, help='URL to github actions report. Used wen patching sources files with --check')
+    arg_parser.add_argument('-l', '--link', metavar='URL', action='store', type=str, help='Specify URL to github actions report. Added wen patching sources files with --check')
 
     arg_group = arg_parser.add_mutually_exclusive_group()
     arg_group.add_argument('-p', '--parse', metavar='FILE', action='store', type=str, help='Parse console commands in FILE. FILE can be a CSV file with the list of file or a markdown file. Output a JSON file.')
