@@ -17,28 +17,33 @@ def patch(article, results, lk):
         content = f.read()
         f.close()
         header = []
-        for i in content:
-            start = content.find("---") + 3
-            end = content.find("---", start)
-            if end == start-3:
-                # No header
-                logging.debug("No header found in {}".format(article))
-                return
-            else:
-                header = content[start:end]
-                markdown = content[end+3:-1]
-                data = yaml.safe_load(header, )
-                # Update status or create section
-                arr = []
-                for res in data['test_images']:
-                    if results[res] == 0:
-                        arr.append("passed")
-                    else:
-                        arr.append("failed")
 
-                data["test_status"] = arr
+    for i in content:
+        start = content.find("---") + 3
+        end = content.find("---", start)
+        
+        if end == start-3:
+            # No header
+            logging.debug("No header found in {}".format(article))
+            return
+        else:
+            header = content[start:end]
+            markdown = content[end+3:-1]
+            data = yaml.safe_load(header, )
 
-                data["test_link"] = lk
+    # Update status or create section
+    arr = []
+    for res in data['test_images']:
+        if results[res] == 0:
+            logging.debug("Status on {}: passed".format(res))
+            arr.append("passed")
+        else:
+            logging.debug("Status on {}: FAILED".format(res))
+            arr.append("failed")
+
+    data["test_status"] = arr
+
+    data["test_link"] = lk
 
     # update markdown files with test results
     with open(article, mode='w') as f:
@@ -197,7 +202,4 @@ def check(json_file):
         logging.debug(cmd)
         subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
 
-    print (results)
-
     return results
-

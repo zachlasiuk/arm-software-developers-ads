@@ -14,16 +14,19 @@ Parse commands in markdown article and return list of commands
 def parse(article):
     with open(article) as file:
         content = file.read()
-        cmd = []
-        for i in content:
-            start = content.find("```") + 3
-            end = content.find("```", start)
-            if end == start-3:
-                # No code section left
-                return cmd
-            else:
-                cmd.append(content[start:end])
-                content = content[end+3:-1]
+        file.close()
+
+    cmd = []
+    for i in content:
+        start = content.find("```") + 3
+        end = content.find("```", start)
+
+        if end == start-3:
+            # No code section left
+            return cmd
+        else:
+            cmd.append(content[start:end])
+            content = content[end+3:-1]
 
 
 '''

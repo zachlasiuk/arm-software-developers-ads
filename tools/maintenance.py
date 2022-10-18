@@ -43,7 +43,6 @@ def main():
         if args.check.endswith("_cmd.json"):
             logging.info("Checking " + args.check)
             res = check.check(args.check)
-            res = {'ubuntu:latest': 1, 'fedora:latest': 1}
             logging.info("Patching " + args.check.replace("_cmd.json", "") + " with test results")
             check.patch(args.check.replace("_cmd.json", ""), res, args.link)
         elif os.path.isdir(args.check):

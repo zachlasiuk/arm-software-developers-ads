@@ -13,6 +13,8 @@ test_images:                    # List Docker images to run instructions on
 tool_install: true              # DO NOT MODIFY. Always true for tool installs
 layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
+{{< test >}}
+
 ## GCC {#top}
 
 There are multiple flavors of [GCC, the GNU Compiler Collection](https://gcc.gnu.org/), for the Arm architecture. To know which compiler you need consider the variables below. 
