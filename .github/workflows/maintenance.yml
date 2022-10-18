@@ -95,3 +95,6 @@ jobs:
         if: always() # always run even if the previous step fails
         with:
           report_paths: '**/content/install-tools/*_cmd.xml'
+          detailed_summary: true
+          annotate_notice: true
+          include_passed: true
