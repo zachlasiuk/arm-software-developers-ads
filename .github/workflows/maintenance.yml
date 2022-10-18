@@ -79,7 +79,7 @@ jobs:
       # Run tests
       - name: Test gfortran and gcc installation tutorial commands and output reports
         run: |
-          python3 tools/maintenance.py -c content/install-tools/
+          python3 tools/maintenance.py -c content/install-tools/ -l ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
            
       # Upload test reports as artifact
       - name: Upload artifacts
