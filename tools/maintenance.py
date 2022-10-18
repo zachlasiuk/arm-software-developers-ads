@@ -52,8 +52,8 @@ def main():
                 if i.endswith("_cmd.json"):
                     logging.info("Found json. Checking " + i)
                     res = check.check(args.check + "/" + i)
-                    logging.info("Patching " + i.replace("_cmd.json", "") + " with test results")
-                    check.patch(i.replace("_cmd.json", ""), res, args.link)
+                    logging.info("Patching " + args.check + "/" + i.replace("_cmd.json", "") + " with test results")
+                    check.patch(args.check + "/" + i.replace("_cmd.json", ""), res, args.link)
         else:
             logging.error("Parsing expects a .md file or a .csv list of files")
     elif args.parse:
