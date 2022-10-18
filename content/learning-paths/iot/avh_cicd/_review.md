@@ -13,7 +13,7 @@
 review:
     - questions:
         question: >
-            Arm Virtual Hardware can be used in CI/CD workflows
+            Arm Virtual Hardware can be used in CI/CD workflows.
         answers:
             - "True"
             - "False"

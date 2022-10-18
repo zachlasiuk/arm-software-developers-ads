@@ -21,8 +21,7 @@ learning_objectives:
     - Instantiate Arm Virtual Hardware instances
     - Build and run Matter examples on Arm Virtual Hardware
     - Demonstrate communication between two virtual hardware targets
-    - Use GitHub Actions to manage ongoing development
-    - Automated CI/CD workflow
+    - Use GitHub Actions to manage ongoing development in a CI/CD workflow
 # 2-5 bullet points, one sentance each. Should start with a verb (Deploy, Measure) and indicate the value of the objective if possible.
 
 prerequisites:
@@ -60,6 +59,7 @@ tools:
 softwares:
     # Languages         (Python, Go, MongoDB, Assembly, Java)
     - C
+    - JavaScript
 
 operatingsystems:
     # OSes              (Linux, Windows, macOS, FreeRTOS, Bare-metal)

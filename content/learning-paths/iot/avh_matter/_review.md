@@ -24,7 +24,7 @@ review:
 
     - questions:
         question: >
-            Applications to interface with Arm Virtual Hardware API can be written in Python
+            Applications to interface with Arm Virtual Hardware API can be written in Python.
         answers:
             - "True"
             - "False"

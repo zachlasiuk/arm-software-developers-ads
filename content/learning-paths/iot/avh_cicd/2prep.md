@@ -11,7 +11,9 @@ You will learn how to prepare a GitHub repository to be used in a CI/CD developm
 
 ## Pre-requisites
 
-A valid [GitHub](https://github.com) account. GitHub requires that a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) be set. If you do not have this on your account already, navigate to `Settings` > `Developer Settings` > `Personal Access Tokens`, click on `Generate new token`, and save the token locally.
+A valid [GitHub](https://github.com) account.
+
+GitHub requires that a [Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) be set. If you do not have this on your account already, navigate to `Settings` > `Developer Settings` > `Personal Access Tokens`, click on `Generate new token`, and save the token locally.
 
 A valid [AWS](https://aws.amazon.com/) account is required. Launch the Arm Virtual Hardware AMI. For full instructions see [here](/install-tools/avh#corstone).
 

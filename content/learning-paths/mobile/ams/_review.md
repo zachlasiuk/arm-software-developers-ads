@@ -33,11 +33,11 @@ review:
                
     - questions:
         question: >
-            Mali Offline Compiler can analyze Vulkan API shaders.
+            Mali Offline Compiler can only analyze OpenGL ES shaders.
         answers:
             - "True"
             - "False"
-        correct_answer: 0
+        correct_answer: 1
         explination: >
             You can compile OpenGL ES and Vulkan shader programs.
 

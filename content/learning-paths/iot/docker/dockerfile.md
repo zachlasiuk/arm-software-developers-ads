@@ -33,13 +33,13 @@ In the same directory, create a text file named exactly `Dockerfile` containing 
 
 ### Notes regarding Dockerfile
 
-This file copies the above installers to the Docker image. The exact filename(s) will depend on the versions used.
+This file copies the installers to the Docker image. The exact filename(s) will depend on the versions used.
 
 Edit the Dockerfile as necessary (`ACfE` and `FVP` arguments therein), else edit on the build command line (see later).
 
 Whilst installing the [compiler](/install-tools/armclang/) and [FVP library](/install-tools/fm#fvp), the EULA(s) are silently accepted. Be sure that this is satisfactory for you.
 
-You will need to edit the licensing portion of the file to match your internal license setup. See [Arm user license setup](/install-tools/license/) for more information.
+You will need to edit the licensing portion of the file to match your internal license setup. See [Arm User-Based Licenses](/install-tools/license/) for more information.
 
 ## Dockerfile {#dockerfile}
 ```Dockerfile

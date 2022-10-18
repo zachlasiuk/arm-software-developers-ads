@@ -21,7 +21,7 @@ review:
             - "Arm Streamline"
         correct_answer: 1
         explination: >
-            Arm Fast Models is a seperate tool, enabling you to build virtual representations of real hardware. The supplied FVPs are (pre-)built with Fast Model technology.
+            Arm Fast Models is a separate tool, enabling you to build virtual representations of real hardware. The supplied FVPs are (pre-)built with Fast Model technology.
 
     - questions:
         question: >

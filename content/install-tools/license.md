@@ -68,11 +68,11 @@ export FLEXNETLS_BASEURL=http://localhost:7070/api/1.0/instances/~
 ```
 ### Set administrator password
 
-The first time you use start the LLS server, you must set an appropriate password so as to be able to configure it. Use the following command:
+The first time you install the LLS server, you must set an appropriate password so as to be able to configure it. Use the following command:
 ```console
 armlm_change_admin_password
 ```
-### Verify server hostid
+### Verify server hostid (optional)
 
 The default `hostid` was selected by the license server installer. To view the selected hostid use:
 ```console
@@ -84,7 +84,7 @@ If you wish to change the selected hostid, edit the `/server/local-configuration
 
 ### Register license server with Arm
 
-Create a license server identify file, which is used when generating licenses on the online portal.
+Create a license server identity file (`identity.bin`) using:
 ```console
 armlm_generate_server_identity --identity-file identity.bin
 ```
