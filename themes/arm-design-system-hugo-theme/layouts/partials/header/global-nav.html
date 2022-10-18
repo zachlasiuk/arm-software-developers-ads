@@ -51,7 +51,7 @@
           </div>
         </div>
       </div>
-  </div>
+    </div>
 
   <div slot="top-bar-content-end">
     {{ $gh_repo := ($.Param "github_repo") -}}
@@ -143,6 +143,11 @@
             link: 'https://www.arm.com',
           },
         ],
+      },
+      {
+        id: 'stats-link',
+        label: 'Stats',
+        link: '/stats/'
       },
       
     ];

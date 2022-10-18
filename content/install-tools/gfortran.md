@@ -4,9 +4,18 @@ title: "GFortran"
 additional_search_terms:
   - compiler
 
+# Maintenance settings
+test_maintenance: true          # Enables maintenance tests on article
+test_images:                    # List Docker images to run instructions on
+  - ubuntu:latest
+  - fedora:latest
+
 tool_install: true              # DO NOT MODIFY. Always true for tool installs
 layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
+
+{{< test >}}
+
 [GNU Fortran](https://gcc.gnu.org/fortran/) is the Fortran compiler front end and run-time libraries for GCC, the GNU Compiler Collection.
 
 GFortran is available on all Linux distributions and can be installed using the package manager.
@@ -17,13 +26,8 @@ Follow the instructions below to install and use gfortran on an Arm Linux distri
 
 Confirm you are using an Arm machine by running:
 
-```console
+```bash { command_line="user@localhost | 2" }
 uname -m
-```
-
-The output should be:
-
-```console
 aarch64
 ```
 
@@ -37,7 +41,7 @@ The Linux package manager downloads the required files so there are no special i
 
 Use the `apt` command to install software packages on any Debian based Linux distribution, including Ubuntu.
 
-```console
+```bash { target="ubuntu:latest" }
 sudo apt update
 sudo apt install gfortran -y
 ```
@@ -48,17 +52,18 @@ These Linux distributions use `yum` as the package manager.
 
 To install the most common development tools use the commands below. If the machine has `sudo` you can use it.
 
-```console
-sudo yum update
-sudo yum groupinstall 'Development Tools'
+```bash { target="fedora:latest" }
+sudo yum update -y
+sudo yum install gcc-gfortran -y
 ```
 
 If `sudo` is not available become _root_ and omit the `sudo`.
 
 ```console
-yum update
-yum groupinstall 'Development Tools'
+sudo yum update -y
+sudo yum install gcc-gfortran -y
 ```
+
 
 ## Setting up product license {#license}
 
@@ -68,13 +73,13 @@ Arm GNU Toolchain is open source and freely available for use. No licenses need 
 
 To confirm the installation is complete run:
 
-```console
+```bash
 gfortran --version
 ```
 
-To compile an example program, create a text file named hello-world.f90 with the contents below.
+To compile an example program, create a text file named hello.f90 with the contents below.
 
-```fortran
+```fortran { file_name="hello.f90" }
 program hello
   ! This is a comment line; it is ignored by the compiler
   print *, 'Hello, Arm world!'
@@ -83,13 +88,13 @@ end program hello
 
 To compile the hello-world program use:
 
-```console
+```bash
 gfortran hello.f90 -o hello
 ```
 
 To run the application enter:
 
-```console
+```bash { command_line="user@localhost" }
 ./hello
 ```
 
