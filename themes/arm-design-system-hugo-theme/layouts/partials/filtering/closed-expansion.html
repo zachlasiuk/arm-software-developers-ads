@@ -4,7 +4,10 @@
 
 {{ $routing := .routing }}
 {{ range .tagnames }}
-    {{ $dict_of_name_links = merge $dict_of_name_links (dict .  (printf "/%s/%s" $routing (. | urlize)) ) }}
+    {{ $link := printf "/%s/%s" $routing (. | urlize)}}
+    {{ $dict_of_name_links = merge $dict_of_name_links (dict . $link ) }}
+    
+
 {{end}}
 
 <!-- Send in names from previous file and links generated from the routing name and the tag -->
