@@ -6,7 +6,7 @@ name: Stats workflow
 on:
   # Triggers the workflow on the 19th every month
   schedule:
-    - cron: '* * 19 * *'
+    - cron: '0 1 19 0 0'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
