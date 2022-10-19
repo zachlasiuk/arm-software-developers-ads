@@ -126,11 +126,9 @@ Open the VNC client and enter localhost:5901 for the VNC server.
 
 You will be prompted for the password created earlier with vncpasswd.
 
-A remote Linux Desktop should appear on your local computer. 
+A remote Linux Desktop should appear on your local computer. Make sure to close the VNC client first and then exit the SSH connection. 
 
-Make sure to close the VNC client first and then exit the SSH connection. 
-
-<!--- ![Example image](/install-tools/images/xfce4.png) ---!>
+![Linux desktop](/install-tools/images/xfce4.png) ---
 
 
 
