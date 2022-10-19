@@ -13,22 +13,32 @@ function applySearchAndFilters(all_path_cards, search_string, page) {
     let results_to_hide = [];
 
     for (let card of all_path_cards) {
+        ////////////////////////////////////////////////////////////////
+        // SEARCH
         if (!skip_search) {
-        ///////////////
-        // To search on:
-            // Title of learning path --> title must include ALL search terms (any order or case)
-            if (searchByTitle(card,search_word_array)) { 
-                results_to_hide.push(card); // set card to be hidden
-            }
-        }
-
-        ///////////////
-        // To filter on current applied filters
             if (page=='paths') {
-                if (filter_LearningPath_card(card)) { // if we get back non-null from function, the card should be hidden
+                if (searchByTitle(card,search_word_array)) { 
                     results_to_hide.push(card); // set card to be hidden
                 }
             }
+
+
+            // Tool-based search only
+            if (page=='tools') {
+                                              
+                if (searchByTitle(card,search_word_array) && searchByAdditionalSearchTerm(card,search_word_array)) { 
+                    results_to_hide.push(card); // set card to be hidden
+                }
+            }
+        }
+
+        ////////////////////////////////////////////////////////////////
+        // FILTER
+        if (page=='paths') {
+            if (filter_LearningPath_card(card)) { // if we get back non-null from function, the card should be hidden
+                results_to_hide.push(card); // set card to be hidden
+            }
+        }
 
     }
     return results_to_hide

@@ -1,4 +1,5 @@
 function searchByTitle(card,search_word_array) {
+    // Title of learning path --> title must include ALL search terms (any order or case)
     let card_title = card.querySelector('.search-title').innerHTML.toLowerCase();
     var title_serach_match = search_word_array.every(item => card_title.includes(item));
     if (!title_serach_match) {
@@ -8,6 +9,23 @@ function searchByTitle(card,search_word_array) {
         return false // show it
     }
 }
+
+function searchByAdditionalSearchTerm(card,search_word_array) {
+    let card_classes = card.classList;
+    card_classes.forEach(function (term, i) {
+        console.log(term);
+        if (term.startsWith('term-')) {
+            // now iterate through this
+            var additional_search_match = search_word_array.every(item => term.includes(item));
+            if (additional_search_match) {
+                console.log('keep shown!')
+                return false // show it
+            }
+        }
+    });
+    return true
+}
+
 
 function parseParamsFromURL(url_str) {
         // Split by & and get element that has 'search='
