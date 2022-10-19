@@ -65,22 +65,13 @@
 -->
 
 
-<script>
-// ==========================================================
-//                  Search Submit
-// ==========================================================
-    // Assign this handler on page load
-    (() => {
-        console.log('In auto-page load');
-        const search_box = document.querySelector('#search-box');
 
-        search_box.searchSubmitHandler = (evt) => {
-            console.log('in the submit handler');
-            const safe_search_string = evt.value.replaceAll(/[^a-z A-Z 0-9]+/g, "");
-            const safe_formatted_search_string = safe_search_string.replaceAll(' ','+');
-            window.location.href = "install-tools/?search="+safe_formatted_search_string;
-        }
-    })();
+<!-- Search Submit handling -->
+<script src="/js/search-and-filter/search-handling.js"></script>
+<script>
+      (() => { 
+          document.querySelector('#search-box').searchSubmitHandler = searchSubmit_Tools;
+      })();
 </script>
 
 

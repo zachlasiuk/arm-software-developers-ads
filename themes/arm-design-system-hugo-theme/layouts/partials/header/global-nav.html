@@ -217,7 +217,10 @@
 
 
 
-
-
-
-
+<!-- Search Submit handling -->
+<script src="/js/search-and-filter/search-handling.js"></script>
+<script>
+      (() => { 
+          document.querySelector('#search-box-tools-global-nav').searchSubmitHandler = searchSubmit_Tools;
+      })();
+</script>
