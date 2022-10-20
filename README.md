@@ -116,6 +116,31 @@ cd <new-learning-path>
 cp -r cp -r ../../../../learning-path_templates/* .
 ```
 
+## Adding images 
+
+To add images to your content use markdown syntax.
+
+```console
+![alt tex](image-name)
+```
+
+For learning paths put the images in the same directory as your learning path. 
+
+For tool installs, put the images in the _images/ directory. For example, 
+```console
+![my image](/install-tools/_images/my-image.png)
+```
+
+## Adding YouTube videos
+
+To add YouTube videos use the following shortcode.
+
+Find the YouTube ID in the URL for by clicking Share in YouTube and copying the ID.
+
+```console
+{{< youtube-nocookie _PKNbBeAB2M>}}
+```
+
 ## Submit your changes to the website
 
 After adding a new learning path and completing your changes, you can run the website locally by running `hugo server` and check that everything looks good.

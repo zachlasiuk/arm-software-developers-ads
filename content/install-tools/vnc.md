@@ -130,13 +130,3 @@ A remote Linux Desktop should appear on your local computer. Make sure to close 
 
 ![Linux desktop](/install-tools/_images/xfce4.png)
 
-
-
-jf
-sjfkjkeaf
-jeaifjaief
-ajief
-
-![Linux desktop](/install-tools/_images/small.png)
-
-{{< youtube-nocookie pEhfguZoIwo >}}
