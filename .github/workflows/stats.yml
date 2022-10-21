@@ -25,6 +25,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          persist-credentials: false
+          token: ${{ secrets.MY_GH_TOKEN }}
 
       # Report outdated files, store result as artifact and updates stats
       - name: Generate stat report
@@ -32,13 +34,17 @@ jobs:
            pip install -r tools/requirements.txt
            python3 tools/maintenance.py
 
-      # Commit and push stats
-      - name: Update stats
+      # Commit stats
+      - name: Commit stats
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add content/stats/data.json
           git pull
-          if git commit -m "Update stats"; then
-            git push
-          fi
+          git commit -m "Update stats"
+          
+      # Push stats
+      - name: Push stats
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.MY_GH_TOKEN }}
