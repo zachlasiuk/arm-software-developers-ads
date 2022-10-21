@@ -17,7 +17,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                   
         explination: >
             Java does run on Arm servers, use a recent version such ask JDK 11 to get the best performance.
 
@@ -27,7 +27,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 1                     
+        correct_answer: 2                     
         explination: >
             No. Most containers are multi-architecture images and run on Arm, but not all. Check your containers for Arm support.
                

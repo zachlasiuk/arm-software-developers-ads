@@ -17,7 +17,7 @@ review:
         answers:
             - "-d"
             - "-g"
-        correct_answer: 1                     
+        correct_answer: 2                     
         explination: >
             The -g option produces debugging information for debugging tools like GDB.
             
@@ -29,7 +29,7 @@ review:
             - "Out-of-bounds memory accesses"
             - "Race conditions"
             - "All of the above"
-        correct_answer: 3                     
+        correct_answer: 4                    
         explination: >
             Deadlocks and race conditions are specific to parallel behaviour but parallel debuggers can help with memory issues too! 
     - questions:
@@ -38,7 +38,7 @@ review:
         answers:
             - "Using -fopt-info-vec with GNU Compilers and -Rpass=vector with Arm Compiler for Linux"
             - "Using -fvectorization with GNU Compilers and -Rvectorization with Arm Compiler for Linux"
-        correct_answer: 0                     
+        correct_answer: 1                   
         explination: >
             The -fopt-info-vec with GNU Compilers and -Rpass=vector with Arm Compiler for Linux will ask the compiler to report on vectorized loops. You can ask the compiler to specifically report which loop failed to vectorize with -fopt-info-vec-missed and -Rpass-missed=vector.       
 

@@ -17,7 +17,7 @@ review:
         answers:
             - "True"
             - "False"
-        correct_answer: 1                     
+        correct_answer: 2                  
         explination: >
             You can use lzbench to measure either snappy or zstd performance
 
@@ -27,9 +27,9 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                     
         explination: >
-            That's right! Both the compression libraries run on Arm servers
+            The answer is Yes: Both the compression libraries run on Arm servers
                
 
 # ================================================================================

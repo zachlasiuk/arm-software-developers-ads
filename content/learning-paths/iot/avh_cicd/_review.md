@@ -17,7 +17,7 @@ review:
         answers:
             - "True"
             - "False"
-        correct_answer: 0
+        correct_answer: 1
         explination: >
             CI/CD automated workflows are the primary use case for Arm Virtual Hardware.
 
@@ -28,7 +28,7 @@ review:
             - "As a tarball to be installed locally"
             - "Arm Virtual Hardware must be directly licensed from Arm"
             - "As an AWS Machine Instance (AMI)"
-        correct_answer: 2
+        correct_answer: 3
         explination: >
             Arm Virtual Hardware is provided as an AMI on AWS Marketplace.
 

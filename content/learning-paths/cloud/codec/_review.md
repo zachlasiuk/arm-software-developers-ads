@@ -17,7 +17,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                     
         explination: >
             x265 codec is fully supported on 64-bit Arm servers running Linux.
 
@@ -27,7 +27,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                   
         explination: >
             Yes. You can vary the preset settings on the different resolution images and measure the impact on performance.
                

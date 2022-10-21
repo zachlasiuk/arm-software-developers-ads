@@ -17,7 +17,7 @@ review:
         answers:
             - "True"
             - "False"
-        correct_answer: 0
+        correct_answer: 1
         explination: >
             True. Use "--toolchain arm" when building the application(s).
 
@@ -28,7 +28,7 @@ review:
             - "-C mps3_board.visualisation.disable-visualisation=1"
             - "--fastmode"
             - "-C ethosu.extra_args=\"--fast\""
-        correct_answer: 2
+        correct_answer: 3
         explination: >
             When used in this mode, the execution performance is improved, but any timing information output should be ignored.
 

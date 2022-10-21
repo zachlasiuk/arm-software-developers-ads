@@ -17,7 +17,7 @@ review:
         answers:
             - "True"
             - "False"
-        correct_answer: 0                     
+        correct_answer: 1                  
         explination: >
             TF-M is the platform security architecture reference implementation aligning with PSA Certified guidelines.
 

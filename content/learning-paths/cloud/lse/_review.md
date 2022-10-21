@@ -17,7 +17,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                   
         explination: >
             Check the Flags output and look for atomics to be listed.
 
@@ -27,7 +27,7 @@ review:
         answers:
             - "True"
             - "False"
-        correct_answer: 1                     
+        correct_answer: 2                    
         explination: >
             Some Armv8-A processors such as the Cortex-A72 do not support LSE.
                

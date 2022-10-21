@@ -17,7 +17,7 @@ review:
         answers:
             - "128 bits"
             - "Any vector length from 128 to 2048 bits"
-        correct_answer: 1                     
+        correct_answer: 2                   
         explination: >
             SVE and SVE2 do not define the size of the vector registers, but constrains it to a range of possible values, from a minimum of 128 bits up to a maximum of 2048 in 128-bit wide units.
     - questions:
@@ -27,7 +27,7 @@ review:
             - "1/8th the size of SVE registers"
             - "the same as the vector register"
             - "128 bits"
-        correct_answer: 0                     
+        correct_answer: 1                    
         explination: >
             SVE is vector-length agnostic and a predicate-centric architecture with vector registers and predicate registers. Predicate registers are 1/8th the size of SVE registers (1 bit/byte). 
     - questions:
@@ -36,7 +36,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 1                     
+        correct_answer: 2                
         explination: >
             Not all Arm v8-A processors support SVE instructions. However, they can still run SVE applications using the Arm Instruction Emulator. Armv9-A builds on SVE with the SVE2 extension.
 

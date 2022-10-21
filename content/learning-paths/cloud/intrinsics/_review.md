@@ -17,7 +17,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                  
         explination: >
             Yes, SIMD Everywhere can port AVX512 to NEON. 
 
@@ -27,7 +27,7 @@ review:
         answers:
             - "True"
             - "False"
-        correct_answer: 1                     
+        correct_answer: 2                    
         explination: >
             False, there is no need to re-write intrinsics. 
                

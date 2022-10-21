@@ -17,7 +17,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 1
+        correct_answer: 2
         explination: >
             Clickbench can be used to measure the performance of many different Database Management systems running on different architectures.
 
@@ -28,9 +28,9 @@ review:
             - "One"
             - "Two"
             - "Three"
-        correct_answer: 2
+        correct_answer: 3
         explination: >
-            Correct, each query is run three times.
+            Each query is run three times.
 
 
 # ================================================================================

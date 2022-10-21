@@ -18,7 +18,7 @@ review:
             - "Because fastest is best"
             - "To select an appropriate configuration for your workload"
             - "To verify the server is working correctly"
-        correct_answer: 1
+        correct_answer: 2
         explination: >
             Cloud based server instances are provided with a number of configuration options. It is best to select an appropriate configuration to balance operating cost and necessary performance.
 
@@ -29,7 +29,7 @@ review:
             - "A cross-platform benchmark"
             - "Only suitable for Arm platforms"
             - "Only suitable for single CPU systems"
-        correct_answer: 0
+        correct_answer: 1
         explination: >
             Geekbench is a cross-platform benchmark, and can be used on single and multi-core systems.
                
@@ -39,7 +39,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 1
+        correct_answer: 2
         explination: >
             Though useful, Geekbench is only one of a number of available benchmarks. See other learning paths to see how to run and benchmark other applications.
 

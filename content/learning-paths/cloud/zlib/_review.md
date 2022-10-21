@@ -17,7 +17,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1               
         explination: >
             Most Linux distributions include a generic zlib which is not optimized for Arm.
 
@@ -27,7 +27,7 @@ review:
         answers:
             - "Data compression"
             - "Atomic operations"
-        correct_answer: 0                     
+        correct_answer: 1                     
         explination: >
             Data compression functions in any application may benefit.
                

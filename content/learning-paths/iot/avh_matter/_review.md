@@ -17,7 +17,7 @@ review:
         answers:
             - "True"
             - "False"
-        correct_answer: 1                     
+        correct_answer: 1                
         explination: >
             For the latest Matter updates, go to buildwithmatter.com
 
@@ -28,7 +28,7 @@ review:
         answers:
             - "True"
             - "False"
-        correct_answer: 0                     
+        correct_answer: 1                  
         explination: >
             The example used here is written in Javascript. The API also supports C and Python.
 

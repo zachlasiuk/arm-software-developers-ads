@@ -18,7 +18,7 @@ review:
             - "Simple loading"
             - "Shuffle loading"
             - "Scatter loading"
-        correct_answer: 2
+        correct_answer: 3
         explination: >
             The name derives from the idea that multiple memory regions are _scattered_ in the memory map at load and execution time.
 
@@ -29,7 +29,7 @@ review:
             - "__use_no_semihosting"
             - "__no_semihosting"
             - "__semihosting_false"
-        correct_answer: 0
+        correct_answer: 1
         explination: >
             At link time, an error will be thrown if there are any functions using semihosting.
 

@@ -17,7 +17,7 @@ review:
         answers:
             - "True"
             - "False"
-        correct_answer: 0
+        correct_answer: 1
         explination: >
             Streamline captures can be complicated for a new user. With Performance Analyzer you can generate an easy to understand report highlighting key areas to focus on.
 
@@ -27,7 +27,7 @@ review:
         answers:
             - "True"
             - "False"
-        correct_answer: 0
+        correct_answer: 1
         explination: >
             This is true, though you must have a Professional Edition license. JSON is particularly beneficial for use within a CI/CD workflow.
                
@@ -37,7 +37,7 @@ review:
         answers:
             - "True"
             - "False"
-        correct_answer: 1
+        correct_answer: 2
         explination: >
             You can compile OpenGL ES and Vulkan shader programs.
 

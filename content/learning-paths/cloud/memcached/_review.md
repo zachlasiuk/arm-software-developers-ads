@@ -17,7 +17,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                   
         explination: >
             Memcached is fully supported on 64-bit Arm servers running Linux.
 
@@ -27,7 +27,7 @@ review:
         answers:
             - "11211"
             - "22"
-        correct_answer: 0                     
+        correct_answer: 1                   
         explination: >
             By default, memcached exposes UDP 11211
                

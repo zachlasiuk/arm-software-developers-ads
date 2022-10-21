@@ -19,7 +19,7 @@ review:
             - "Arm Fast Models"
             - "Arm Fixed Virtual Platforms (FVPs)"
             - "Arm Streamline"
-        correct_answer: 1
+        correct_answer: 2
         explination: >
             Arm Fast Models is a separate tool, enabling you to build virtual representations of real hardware. The supplied FVPs are (pre-)built with Fast Model technology.
 
@@ -31,7 +31,7 @@ review:
             - "DSTREAM-PT"
             - "DSTREAM-HT"
             - "DSTREAM-XT"
-        correct_answer: 1
+        correct_answer: 2
         explination: >
             DSTREAM-PT supports 32-bit wide trace capture at up to 300 MHz DDR.
                
@@ -41,7 +41,7 @@ review:
         answers:
             - "True"
             - "False"
-        correct_answer: 1
+        correct_answer: 2
         explination: >
             Other compiler versions can be downloaded and installed for use with Development Studio.
 

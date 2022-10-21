@@ -17,7 +17,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 1                     
+        correct_answer: 2                  
         explination: >
             AWS CodeBuild will create all of the needed infrastructure automatically, there is no need for EC2.
 
@@ -27,7 +27,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 1                     
+        correct_answer: 2                    
         explination: >
             You can run Docker images created in AWS CodeBuild on any Arm machine with Docker installed.
                

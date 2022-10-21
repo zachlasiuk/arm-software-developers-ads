@@ -17,7 +17,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                 
         explination: >
             Docker buildx can create a multi-architecture image
 
@@ -27,7 +27,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                  
         explination: >
             Docker manifest can be used to create a multi-architecture image
                

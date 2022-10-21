@@ -18,7 +18,7 @@ review:
             - "AWS"
             - "Azure"
             - "OCI"
-        correct_answer: 1
+        correct_answer: 2
         explination: >
             Microsoft Azure is the umbrella name of their cloud based services.
 
@@ -29,7 +29,7 @@ review:
             - "Graviton"
             - "Groverton"
             - "Gallileo"
-        correct_answer: 0
+        correct_answer: 1
         explination: >
             AWS Graviton processors are used. The instances can be identified with a 'g' in their name.
                
@@ -43,7 +43,7 @@ review:
             - "Microsoft"
             - "Oracle"
             - "All the above"
-        correct_answer: 5
+        correct_answer: 6
         explination: >
             All major cloud service providers offer Arm-based solutions, at rapidly expanding availability.
 

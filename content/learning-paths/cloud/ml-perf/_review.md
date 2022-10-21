@@ -17,7 +17,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                    
         explination: >
             Yes, different backends are supported. Such as tensorflow, onnxruntime, pytorch and tflite
 
@@ -27,7 +27,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                   
         explination: >
             Yes, you can select the target device option.
                

@@ -17,7 +17,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                  
         explination: >
             Yes tests for F16 data type are included in the CMSIS DSP Test suite.
 
@@ -27,7 +27,7 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                     
         explination: >
             Yes. Use the post-processing script to understand the results.
                

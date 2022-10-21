@@ -48,9 +48,9 @@
                         <!-- div class is CORRECT only if it is noted in the metadata-->
                         <!-- id = q_num-a_num-->
                         <!-- name = question-q_num-->
-                        <div id="div-{{$q_num}}-{{$a_num}}" class="u-padding-left-1 answer {{if eq $q.questions.correct_answer $a_num}}correct{{end}}" >
-                            <input type="radio" class="u-margin-bottom-1/2" id="answer-{{$q_num}}-{{$a_num}}" name="question-{{$q_num}}">
-                            <label class="u-margin-left-1/2" for="answer-{{$q_num}}-{{$a_num}}">{{.}}</label>
+                        <div id="div-{{$q_num}}-{{add $a_num 1}}" class="u-padding-left-1 answer {{if eq $q.questions.correct_answer (add $a_num 1)}}correct{{end}}" >
+                            <input type="radio" class="u-margin-bottom-1/2" id="answer-{{$q_num}}-{{add $a_num 1}}" name="question-{{$q_num}}">
+                            <label class="u-margin-left-1/2" for="answer-{{$q_num}}-{{add $a_num 1}}">{{.}}</label>
                         </div>
                         {{end}}
 

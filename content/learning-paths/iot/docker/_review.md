@@ -17,7 +17,7 @@ review:
         answers:
             - "True"
             - "False"
-        correct_answer: 0                     
+        correct_answer: 1                    
         explination: >
             True. The format of the file is very easy to understand.
 
@@ -28,7 +28,7 @@ review:
             - "docker run -t <image_name> /bin/bash"
             - "docker run -i -t <image_name>"
             - "docker run -i -t <image_name> /bin/bash"
-        correct_answer: 2
+        correct_answer: 3
         explination: >
             The '-i' option is for interactive.
 

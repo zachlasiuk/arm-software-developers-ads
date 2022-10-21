@@ -17,9 +17,9 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                    
         explination: >
-            Yes, Vectorscan is a fork of Intel's Hyperscan regex library that is fully supported on 64-bit Arm servers
+            The answer is yes: Vectorscan is a fork of Intel's Hyperscan regex library that is fully supported on 64-bit Arm servers
 
     - questions:
         question: >
@@ -27,9 +27,9 @@ review:
         answers:
             - "Yes"
             - "No"
-        correct_answer: 0                     
+        correct_answer: 1                     
         explination: >
-            That's right! You can build and run Snort3 with hyperscan for Arm
+            You can build and run Snort3 with hyperscan for Arm
 
 
 # ================================================================================
