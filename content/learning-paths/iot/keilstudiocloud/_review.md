@@ -19,7 +19,7 @@ review:
             - "Arm Fast Models"
             - "Arm Fixed Virtual Platforms (FVPs)"
             - "A browser"
-        correct_answer: 4
+        correct_answer: 3
         explination: >
             Keil Studio Cloud is a zero-installation tool that runs out of your browser.
 
@@ -30,7 +30,7 @@ review:
             - "CMSIS"
             - "Mbed OS"
             - "both"
-        correct_answer: 3
+        correct_answer: 2
         explination: >
             Keil Studio Cloud supports both, CMSIS and Mbed OS based projects.
                
@@ -40,7 +40,7 @@ review:
         answers:
             - "True"
             - "False"
-        correct_answer: 1
+        correct_answer: 0
         explination: >
             Currently, you can only use the compiler version that is supplied with the tool.
 

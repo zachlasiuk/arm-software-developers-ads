@@ -1,2 +1,12 @@
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}" style="max-width: 100%; height: auto;" />
+<!-- Default for install-tools image routing from shared img folder -->
+{{$full_img_path := .Destination}}
 
+<!-- Read directory of the page the image is on -->
+{{$path_front := path.Dir (trim .Page.RelPermalink "/")}}
+
+<!-- Change routing to grab image in same directory as learning path if a learning path-->
+{{if in $path_front "learning-paths"}}
+    {{$full_img_path = printf "/%s/%s" $path_front  .Destination}}
+{{end}}
+
+<img src="{{ $full_img_path | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}" style="max-width: 100%; height: auto;" />

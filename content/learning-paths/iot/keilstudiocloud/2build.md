@@ -25,43 +25,46 @@ To work with development boards over USB, you must use Keil Studio in a desktop 
    You can either download or import example projects into Keil Studio from the **Projects** tab and get access to board details from the **Features** and **Documentation** tabs.
 
 1. Find the **Blinky** example in the **Projects** tab and click the **Open in Keil Studio** button.  
-   ![Find and import Blinky](/img/ksc_blinky_import.png "Find and import Blinky project")
+   ![Find and import Blinky](ksc_blinky_import.png "Find and import Blinky project")
 
 
 ## Import and build an example project
 
 1. Log into Keil Studio with your Arm or Mbed account if you are not already logged in. Keil Studio opens. Confirm the project name in the **Import Project** dialog box. Keil Studio sets the newly imported project as the active project by default.  
-![Import dialog](/img/ksc_import_project.png "Specify a name for the imported project")
+![Import dialog](ksc_import_project.png "Specify a name for the imported project")
 
 1. Click **Add project**.
    The project loads to your workspace and is the active project. The README.md file of the project displays. Review the file to learn more about project settings and board requirements.  
-   ![Project imported](/img/ksc_project_imported.png "First screen after project import")
+   ![Project imported](ksc_project_imported.png "First screen after project import")
 
 1. In the top-left corner, select the **Target hardware**. Set to **AVH (SSE-300-MPS3)**:  
-![Target selection](/img/ksc_target_selection.png "Select your target")
+![Target selection](ksc_target_selection.png "Select your target")
 
 1. Use the build button (1) to build the project:  
-![Build project](/img/ksc_build_run.png "Build the project for your target")
+![Build project](ksc_build_run.png "Build the project for your target")
 
 1. The **Output** window shows the success of the operation:
-![Output log](/img/ksc_build_output_log.png "Output window logs operational success")
+![Output log](ksc_build_output_log.png "Output window logs operational success")
 
 ## Run the example project
 
 1. Use the run button (2) to run the project on Arm Virtual Hardware in your browser:  
-![Build project](/img/ksc_build_run.png "Build the project for your target")
+![Build project](ksc_build_run.png "Build the project for your target")
 
 1. Again, the **Output** window shows the success of the operation:
-![Output log](/img/ksc_run_output_log.png "Output window logs operational success")  
+
+![Output log](ksc_run_output_log.png "Output window logs operational success")  
 To stop program execution, click the **Cancel** button.
 
 ## Manage Software Components
 
 If you want to review or change the software components that are used in the project, open the **Manage Software Components** view by clicking button (3):  
-![Build project](/img/ksc_build_run.png "Build the project for your target")
+
+![Build project](ksc_build_run.png "Build the project for your target")
 
 The view opens and shows the currently selected software components:
-![Manage Software Components](/img/ksc_manage_sw_comp.png "Manage Software Components View")
+
+![Manage Software Components](ksc_manage_sw_comp.png "Manage Software Components View")
 
 Using the **Show selected only** toggle, you can switch between this short view and the full list of components. In the full list, enable or disable components as required.
 
