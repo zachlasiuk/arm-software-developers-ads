@@ -76,51 +76,71 @@ def report(period):
                     "x": [],
                     "y": [],
                     "type": "bar",
-                    "name": "install-tools"
+                    "name": "install-tools",
+                    "xaxis": "x1"
                 },
                 {
                     "x": [],
                     "y": [],
                     "type": "bar",
-                    "name": "learning-paths/auto"
+                    "name": "learning-paths/auto",
+                    "xaxis": "x2"
                 },
                 {
                     "x": [],
                     "y": [],
                     "type": "bar",
-                    "name": "learning-paths/cloud"
+                    "name": "learning-paths/cloud",
+                    "xaxis": "x2"
                 },
                 {
                     "x": [],
                     "y": [],
                     "type": "bar",
-                    "name": "learning-paths/desktop_and_laptop"
+                    "name": "learning-paths/desktop_and_laptop",
+                    "xaxis": "x2"
                 },
                 {
                     "x": [],
                     "y": [],
                     "type": "bar",
-                    "name": "learning-paths/iot"
+                    "name": "learning-paths/iot",
+                    "xaxis": "x2"
                 },
                 {
                     "x": [],
                     "y": [],
                     "type": "bar",
-                    "name": "learning-paths/mobile"
-                },
-                {
-                    "x": [],
-                    "y": [],
-                    "name": "learning-paths/total"
+                    "name": "learning-paths/mobile",
+                    "xaxis": "x2"
                 }
             ],
-            "layout":
+            "layout": 
             {
-                "title": "Number of articles timeline",
-                "xaxis": {
-                    "tickangle": -45
-                    },
-                "barmode": "group"
+                "title": "Number of articles", 
+                "xaxis": 
+                {
+                    "tickangle": -45,
+                    "domain": [0, 0.45],
+                    "anchor": "x1"
+                }, 
+                "xaxis2": 
+                {
+                    "tickangle": -45,
+                    "domain": [0.55, 1],
+                    "anchor": "x2"
+                }, 
+                "barmode": "stack", 
+                "paper_bgcolor": "rgba(0,0,0,0)",
+                "plot_bgcolor": "rgba(0,0,0,0)",
+                "font": 
+                {
+                    "color": "rgba(130,130,130,1)"
+                },
+                "legend": 
+                {
+                    "bgcolor": "rgba(0,0,0,0)"
+                }
             }
         }
 
@@ -136,10 +156,6 @@ def report(period):
         total += count
 
     logging.info("Total number of articles is {}.".format(total))
-    # Day
-    data["data"][len(dname)]["x"].append(datetime.now().strftime("%Y-%b-%d %H:%M"))
-    # Articles counted in category
-    data["data"][len(dname)]["y"].append(total)
 
     # Save data in json file
     f = open('content/stats/data.json', 'w')
