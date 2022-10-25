@@ -13,37 +13,25 @@
 review:
     - questions:
         question: >
-            Enter your first question here?
+            The Arm Total Compute reference software stack is ____?
         answers:
-            - "Answer choice 0"
-            - "Answer choice 1"
-        correct_answer: 0                     
+            - "Open source"
+            - "Proprietary"
+        correct_answer: 1
         explination: >
-            Enter a brief explanation for the right answer.
+            The Total Compute reference software stack is a fully integrated open-source stack, from Firmware up to Android.
 
     - questions:
         question: >
-            Enter your second question here?
+            Which of the following is NOT a component of the software stack?
         answers:
-            - "Answer choice 0"
-            - "Answer choice 1"
-        correct_answer: 1                     
+            - "Trusted firmware"
+            - "Android"
+            - "CMSIS"
+            - "ArmNN"
+        correct_answer: 3
         explination: >
-            Enter a brief explanation for the right answer.
-               
-    - questions:
-        question: >
-            Enter your third question here?
-        answers:
-            - "Answer choice 0"
-            - "Answer choice 1"
-            - "Answer choice 2"
-            - "Answer choice 3"
-        correct_answer: 3                     
-        explination: >
-            Enter a brief explanation for the right answer.
-
-
+            The stack includes open-source code available from these upstream projects: SCP firmware, Trusted firmware, Linux kernel, Android, and ArmNN.
 
 
 # ================================================================================

@@ -56,7 +56,6 @@ tools:
 
 softwares:
     # Languages         (Python, Go, MongoDB, Assembly, Java)
-    - Add your tag
 
 operatingsystems:
     # OSes              (Linux, Windows, macOS, FreeRTOS, Bare-metal)
@@ -65,8 +64,8 @@ operatingsystems:
 
 subjects:
     # Unique list per main topic. Select from existing list.
-    - Databases
-    - Web Back-end
+#    - Databases
+#    - Web Back-end
 
 developerprograms:
     - Add your tag here

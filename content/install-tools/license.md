@@ -33,18 +33,21 @@ https://developer.arm.com/support/licensing/user-based
 ```
 ### License server set up
 
-UBL license server software is supported on the following host [operating systems](https://developer.arm.com/documentation/107573/latest/Getting-started-with-user-based-licensing/Hardware-and-software-requirements):
+UBL license server software is supported on the following host operating systems:
 * Red Hat Enterprise Linux / CentOS 7 and 8
 * Ubuntu 20.04 LTS
 
+The license server uses a number of standard Linux [utilities](https://developer.arm.com/documentation/107573/latest/Getting-started-with-user-based-licensing/Hardware-and-software-requirements), including Python and Java.
+```console
+sudo apt update
+sudo apt install -y openjdk-11-jre-headless python
+```
 ### Download and install server software
 
 The local license server (LLS) software can be downloaded from:
 ```url
 https://lm.arm.com/downloads
 ```
-The license server uses a number of standard Linux [utilities](https://developer.arm.com/documentation/107573/latest/Getting-started-with-user-based-licensing/Hardware-and-software-requirements), including Python and Java.
-
 Expand the tarball, and install the license server software.
 ```console
 tar -xf flexnetls-armlmd-<version>.tar.gz
@@ -72,7 +75,7 @@ The first time you install the LLS server, you must set an appropriate password 
 ```console
 armlm_change_admin_password
 ```
-### Verify server hostid (optional)
+### Verify server hostid
 
 The default `hostid` was selected by the license server installer. To view the selected hostid use:
 ```console
