@@ -4,10 +4,10 @@
 # ================================================================================
 
 next_step_guidance: >
-   Arm Virtual Hardware is a flexible execution target, and is designed to be used in a CI/CD workflow.
+   Arm Virtual Hardware is a flexible execution target, and is designed to be used in a CI/CD workflow. Find out more here:
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/iot/avh_cicd/"
+recommended_path: "/learning-paths/microcontroller/avh_cicd/"
 # Link to the next learning path being recommended(For example this could be /learning-paths/cloud/mongodb).
 
 
@@ -21,18 +21,7 @@ further_reading:
         title: AVH Virtual Interfaces
         link: https://arm-software.github.io/AVH/main/simulation/html/group__arm__cmvp.html
         type: documentation
-    - resource:
-        title: Enter title for resource 2 here
-        link: Enter link for resource 2 here
-        type: Enter type for resource 2 here
-    - resource:
-        title: Enter title for resource 3 here
-        link: Enter link for resource 3 here
-        type: Enter type for resource 3 here
-    - resource:
-        title: Enter title for resource 4 here
-        link: Enter link for resource 4 here
-        type: Enter type for resource 4 here
+
 
 
 # ================================================================================

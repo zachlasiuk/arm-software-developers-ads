@@ -7,7 +7,7 @@ next_step_guidance: >
    Machine learning is a key feature of IoT devices. Connected devices must also be secure.
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/iot/avh_tfm"
+recommended_path: "/learning-paths/microcontroller/avh_tfm"
 # Link to the next learning path being recommended(For example this could be /learning-paths/cloud/mongodb).
 
 

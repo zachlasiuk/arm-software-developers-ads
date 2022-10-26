@@ -4,10 +4,10 @@
 # ================================================================================
 
 next_step_guidance: >
-   Congratulations. You have built your first stand-alone embedded application.
+   You have built your first stand-alone embedded application. Why not explore these other embedded software learning paths.
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "Enter learning path relative link here"
+recommended_path: "/learning-paths/microcontroller"
 # Link to the next learning path being recommended(For example this could be /learning-paths/cloud/mongodb).
 
 

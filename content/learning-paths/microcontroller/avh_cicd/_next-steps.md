@@ -7,7 +7,7 @@ next_step_guidance: >
    You have successfully set up a basic CI/CD workflow based around one type of Arm Virtual Hardware. Have you tried Third Party Virtual Hardware yet?
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/iot/avh_matter/"
+recommended_path: "/learning-paths/microcontroller/avh_rpi/"
 # Link to the next learning path being recommended(For example this could be /learning-paths/cloud/mongodb).
 
 

@@ -4,10 +4,10 @@
 # ================================================================================
 
 next_step_guidance: >
-   You should now be familiar with the basic features of Arm Development Studio.
+   You should now be familiar with the basic features of Arm Development Studio. Do you know about Keil Studio Cloud?
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/iot/bare-metal/"
+recommended_path: "/learning-paths/microcontroller/keilstudiocloud/"
 # Link to the next learning path being recommended(For example this could be /learning-paths/cloud/mongodb).
 
 

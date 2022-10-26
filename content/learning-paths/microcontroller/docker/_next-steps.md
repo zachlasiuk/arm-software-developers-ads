@@ -7,7 +7,7 @@ next_step_guidance: >
    Your docker container is now ready for use. Why not try to build and run your first embedded image>
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/iot/bare-metal/"
+recommended_path: "/learning-paths/microcontroller/bare-metal/"
 # Link to the next learning path being recommended(For example this could be /learning-paths/cloud/mongodb).
 
 
