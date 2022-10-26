@@ -64,7 +64,7 @@
         <div class="c-row">
             <div class="c-col c-col-12">
                 <div class="u-display-grid u-gap-1 lg:u-grid-columns-1 xl:u-grid-columns-2 xxl:u-grid-columns-3 xxxl:u-grid-columns-4 u-margin-top-1">
-                    {{ range (.Pages).ByDate }}
+                    {{ range .Pages.ByLastmod.Reverse }}
                     <!-- This div does two things, iterating over each tag in the taxonomy:
                         1) Assign tags for filtering the learning path cards 
                         2) Keeps track of unique tags to generate the filter column  -->
