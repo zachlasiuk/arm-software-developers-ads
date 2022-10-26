@@ -31,6 +31,3 @@ oses_closed_schema:
     - Linux
     - Windows
 ---
-Laptop users increasingly demand a more mobile experience with always-on, always-connected 5G, and multiday battery life. Through engineering, technology, and security innovations, Arm-based laptops deliver the mobile experience users need in today’s constantly connected digital world.
-
-Learn how to port applications to Windows-on-Arm for best performance and lowest cost.

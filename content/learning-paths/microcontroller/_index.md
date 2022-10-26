@@ -33,6 +33,3 @@ oses_closed_schema:
     - Baremetal
     - RTOS
 ---
-IoT endpoints are computing devices that are connected to the edge of the network. They typically collect and serve data by communicating with central or cloud resources.
-
-Cortex-M and Cortex-A devices are used in IoT endpoints and there are numerous software building blocks which are useful for IoT software developers. The information below helps developers learn how to use existing software and development tools in IoT projects.

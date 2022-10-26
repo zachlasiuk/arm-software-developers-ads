@@ -37,6 +37,3 @@ oses_closed_schema:
     - RTOS
     - Baremetal
 ---
-Industrial modernization and the shift to smart manufacturing has sparked innovations in automation, robotics and the industrial internet of things (IIoT). Introducing artificial intelligence (AI), interoperability and secure connectivity enables real-time monitoring, control and optimization of processes, resources and systems – all of which can lead to greater productivity, increased safety and reduced costs.
-
-Arm’s scalable solutions and strong ecosystem of partners allow our customers to operate seamlessly across a single architecture from sensor to cloud, whilst addressing varied performance, real-time, functional safety and security needs.

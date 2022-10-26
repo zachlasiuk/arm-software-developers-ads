@@ -36,6 +36,3 @@ oses_closed_schema:
     - Android
     - Linux
 ---
-As mobile computing expands into every aspect of our lives, new, more compute-intensive use cases and visual experiences on top consumer devices are rising every year, performing tasks we could only dream of in the past.
-
-Learn how to develop and optimize Android applications using latest Arm technologies.
