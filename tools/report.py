@@ -150,7 +150,7 @@ def report(period):
         result.update(res)
         logging.info("Found {} articles in {}. {} of them are outdated.".format(count, d, len(res)))
         # Date
-        data["data"][d_idx]["x"].append(datetime.now().strftime("%Y-%b-%d %H:%M"))
+        data["data"][d_idx]["x"].append(datetime.now().strftime("%Y-%b-%d"))
         # Articles counted in category
         data["data"][d_idx]["y"].append(count)
         total += count
