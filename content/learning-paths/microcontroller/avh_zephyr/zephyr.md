@@ -67,9 +67,10 @@ cd zephyr-sdk-0.15.1
 
 ## Build the hello world sample application
 
-There are sample applications included with Zephyr source repo. We will build the hello world application for the AVH Corstone-300 target.
+There are sample applications included with Zephyr source repo. We will build the [hello world](https://docs.zephyrproject.org/latest/samples/hello_world/README.html) application for the AVH Corstone-300 target.
 
 ```console
+cd ~/zephyrproject/zephyr
 west build -p auto -b mps3_an547 samples/hello_world
 ```
 
@@ -91,4 +92,9 @@ Hello World! mps3_an547
 ```
 You have now successfully build a Zephyr application and run it on the AVH Corstone-300 target system. You can now try some of the other sample applications included or build your own.
 
+To build and run the [Dining Philosophers](https://docs.zephyrproject.org/latest/samples/philosophers/README.html) example, use:
 
+```console
+west build -p auto -b mps3_an547 samples/philisophers
+VHT_Corstone_SSE-300_Ethos-U55 -a build/zephyr/zephyr.elf
+```
