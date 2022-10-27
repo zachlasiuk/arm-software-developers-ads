@@ -52,11 +52,11 @@ def report(period):
     # chdir to the root folder
     os.chdir(os.path.dirname(os.path.abspath(__file__)) + "/..")
     dname = ["content/install-tools",
-             "content/learning-paths/auto",
-             "content/learning-paths/cloud",
-             "content/learning-paths/desktop_and_laptop",
-             "content/learning-paths/iot",
-             "content/learning-paths/mobile"]
+             "content/learning-paths/desktop-and-laptop",
+             "content/learning-paths/embedded",
+             "content/learning-paths/microcontroller",
+             "content/learning-paths/mobile",
+             "content/learning-paths/server-and-cloud"]
 
     result = {}
 
@@ -83,28 +83,21 @@ def report(period):
                     "x": [],
                     "y": [],
                     "type": "bar",
-                    "name": "learning-paths/auto",
+                    "name": "learning-paths/desktop-and-laptop",
                     "xaxis": "x2"
                 },
                 {
                     "x": [],
                     "y": [],
                     "type": "bar",
-                    "name": "learning-paths/cloud",
+                    "name": "learning-paths/embedded",
                     "xaxis": "x2"
                 },
                 {
                     "x": [],
                     "y": [],
                     "type": "bar",
-                    "name": "learning-paths/desktop_and_laptop",
-                    "xaxis": "x2"
-                },
-                {
-                    "x": [],
-                    "y": [],
-                    "type": "bar",
-                    "name": "learning-paths/iot",
+                    "name": "learning-paths/microcontroller",
                     "xaxis": "x2"
                 },
                 {
@@ -112,6 +105,13 @@ def report(period):
                     "y": [],
                     "type": "bar",
                     "name": "learning-paths/mobile",
+                    "xaxis": "x2"
+                },
+                {
+                    "x": [],
+                    "y": [],
+                    "type": "bar",
+                    "name": "learning-paths/server-and-cloud",
                     "xaxis": "x2"
                 }
             ],
