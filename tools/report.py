@@ -149,6 +149,10 @@ def report(period):
         res, count = content_parser(d, period)
         result.update(res)
         logging.info("Found {} articles in {}. {} of them are outdated.".format(count, d, len(res)))
+        # Sliding windows for data - remove data older than a year - 53 weeks
+        if len(data["data"][d_idx]["x"]) > 52:
+            data["data"][d_idx]["x"].pop(0)
+            data["data"][d_idx]["y"].pop(0)
         # Date
         data["data"][d_idx]["x"].append(datetime.now().strftime("%Y-%b-%d"))
         # Articles counted in category
