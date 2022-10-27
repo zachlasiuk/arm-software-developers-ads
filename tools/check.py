@@ -161,8 +161,12 @@ def check(json_file):
                     # create test case
                     test_cases[k].append(TestCase("{}_test-{}.{}".format(data["image"][k], i,j), c, 0, p.stdout.rstrip().decode("utf-8"), ''))
 
+                    ret_code = 0
+                    if "ret_code" in t.keys():
+                        ret_code = int(t["ret_code"])
+
                     # if success
-                    if p.returncode == 0:
+                    if p.returncode == ret_code:
                         # check with expected result if any
                         if "expected" in t.keys():
                             exp = t["{}".format(int(t["expected"])-1)]
@@ -176,7 +180,7 @@ def check(json_file):
                         else:
                             msg = "Test passed"
                     else:
-                        msg = "ERROR (command failed. Return code is {})".format(p.returncode)
+                        msg = "ERROR (command failed. Return code is {} but expected {})".format(p.returncode, ret_code)
                         test_cases[k][-1].add_failure_info(msg)
                         results[data["image"][k]] = results[data["image"][k]]+1
 

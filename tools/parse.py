@@ -77,6 +77,12 @@ def save(article, cmd):
         # if bash type, check fo arguments
         if "bash" in l[0]:
             content[i_idx] = {"type": "bash"}
+            # check if return code is specified
+            if "ret_code" in l[0]:
+                ret = l[0].split("ret_code=\"")[1].split("\"")[0]
+                content[i_idx].update({"ret_code": ret })
+            else:
+                content[i_idx].update({"ret_code": "0" })
             # check target
             if "target" in l[0]:
                 tgt = l[0].split("target=\"")[1].split("\"")[0]
