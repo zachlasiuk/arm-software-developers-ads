@@ -3,6 +3,9 @@
     <head>
         {{partial "head/head.html" .}}
         {{partial "head/favicons.html" .}}
+        <!-- Add opengraph metadata for social sharing -->
+        {{ template "_internal/opengraph.html" . }}
+        
     </head>
     <body>
         {{partial "header/global-nav.html" .}}
