@@ -21,6 +21,7 @@
     <!-- Top level context for this learning path-->
     <div class="c-col c-col-12">
         <header><h2>{{.Params.subtitle}}</h2></header>
+        <!-- 
         <div class="c-row">
             <div class="c-col c-col-12">
                 <div class="u-display-grid u-gap-1 lg:u-grid-columns-1 xl:u-grid-columns-2 xxl:u-grid-columns-2 xxxl:u-grid-columns-2 u-margin-top-1">
@@ -49,6 +50,7 @@
                 </div>
             </div>
         </div>
+        -->
     </div>
 </div>
 
@@ -62,7 +64,7 @@
             <!-- Operating Systems, CLOSED SCHEMA -->
             {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "OS" "routing" "operatingsystems" "tagnames" .Params.oses_closed_schema)}} 
             <!-- Skill level, CLOSED SCHEMA -->
-            {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Skill Level" "routing" "skilllevels" "tagnames" (slice "Getting Started" "Introductory" "Experienced"))}}
+            {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Skill Level" "routing" "skilllevels" "tagnames" (slice "Introductory" "Advanced"))}}
             <!-- Software -->
             {{ partial "filtering/open-expansion.html" (dict "context" . "displayname" "Software")}}
             <!-- Tools -->

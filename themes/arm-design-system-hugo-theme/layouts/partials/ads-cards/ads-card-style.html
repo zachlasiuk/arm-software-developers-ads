@@ -13,34 +13,29 @@
 
 
 
-    ads-tag.path-card-tag.Getting-Started {
+    ads-tag.path-card-tag.Introductory {
         --ads-tag-border-color: var(--arm-web-safe-green);
-        --ads-tag-background-color: var(--arm-web-safe-green);
-        --ads-tag-color: white;
+        --ads-tag-color: var(--arm-light-grey);
 
         --ads-tag-border-color-hover: var(--arm-web-safe-green);
-        --ads-tag-background-color-hover: var(--arm-web-safe-green);
         --ads-tag-color-hover: white;
     }
-    ads-tag.path-card-tag.Introductory {
-        --ads-tag-border-color: var(--arm-web-safe-blue);
-        --ads-tag-background-color: var(--arm-web-safe-blue);
-        --ads-tag-color: white;
+    html[theme='light'] ads-tag.path-card-tag.Introductory {
+        --ads-tag-color: var(--arm-black);
+        --ads-tag-color-hover: var(--arm-black);
+    }
 
-        --ads-tag-border-color-hover: var(--arm-web-safe-blue);
-        --ads-tag-background-color-hover: var(--arm-web-safe-blue);
-        --ads-tag-color-hover: white;
-    }
-    ads-tag.path-card-tag.Experienced  {
+    ads-tag.path-card-tag.Advanced {
         --ads-tag-border-color: var(--arm-web-safe-red);
-        --ads-tag-background-color: var(--arm-web-safe-red);
         --ads-tag-color: white;
 
         --ads-tag-border-color-hover: var(--arm-web-safe-red);
-        --ads-tag-background-color-hover: var(--arm-web-safe-red);
         --ads-tag-color-hover: white;
     }
-
+    html[theme='light'] ads-tag.path-card-tag.Advanced {
+        --ads-tag-color: var(--arm-black);
+        --ads-tag-color-hover: var(--arm-black);
+    }
 
 
 
