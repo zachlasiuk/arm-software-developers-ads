@@ -13,7 +13,7 @@ cloudFrontDistributionID = "E1KJFR5JSKYU64"
 
 
 [frontmatter]
-    lastmod = [ "lastmod", ":git", "date", "publishDate" ]
+    lastmod = [ ":git", "lastmod", "date", "publishDate" ]
 
 [taxonomies]
     skilllevel          = "skilllevels"
