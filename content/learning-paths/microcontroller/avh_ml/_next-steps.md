@@ -4,7 +4,7 @@
 # ================================================================================
 
 next_step_guidance: >
-   Machine learning is a key feature of IoT devices. Connected devices must also be secure.
+   Machine learning is a key feature of IoT devices. Connected devices must also be secure. Trusted Firmware-M is also integrated into the Open-IoT-SDK. Learn about this here.
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
 recommended_path: "/learning-paths/microcontroller/avh_tfm"
@@ -25,7 +25,14 @@ further_reading:
         title: Open-IoT-SDK
         link: https://github.com/ARM-software/open-iot-sdk
         type: website
-
+    - resource:
+        title: Arm Speech Recognition Total Solution example video, using the Arm Open IoT SDK, Corstone-310 and AVH
+        link: https://devsummit.arm.com/flow/arm/devsummit22/sessions-catalog/page/sessions/session/16600464346670018mPQ
+        type: website
+    - resource:
+        title: Creating ML applications for embedded devices on Arm Virtual Hardware
+        link: https://devsummit.arm.com/flow/arm/devsummit22/sessions-catalog/page/sessions/session/1656589322296001Tbrk
+        type: website
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

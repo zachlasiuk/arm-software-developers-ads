@@ -3,23 +3,24 @@
 #       Edit
 # ================================================================================
 
-title: "Build and run ML examples with Arm Virtual Hardware"
+title: "Get started with MLEK and Open-IoT-SDK"
 # Should start with a verb, have no adjectives (amazing, cool, etc.), and be as concise as possible.
 
 description: >
-    Learn how to build and run reference Machine Learning (ML) examples on Arm Virtual Hardware.
+    Learn how to build and run reference IoT software stack examples on Arm Virtual Hardware.
 # One sentance, is a quick summary of this learning path, viewable when searching through all learning paths. 
 
 minutes_to_complete: 30   
 # Always measured in minutes. Should be an integer, to complete the learning path (not just read it).
 
 who_is_this_for: >
-    Learning path for embedded software developers new to Arm Virtual Hardware to get familiar with main features.
+    Learning path for embedded software developers new to the examples get familiar with main features.
 # One sentence that should indicate exactly who the target audience is (developers in X industries using Y tools/software for Z use-case).
 
 learning_objectives: 
-    - Import and build example ML projects
-    - Introduce Open-IoT-SDK
+    - Build examples from Machine Learning Evaluation Kit (MLEK)
+    - Build examples from Open-IoT-SDK
+    - Run the examples on Arm Virtual Hardware
 # 2-5 bullet points, one sentance each. Should start with a verb (Deploy, Measure) and indicate the value of the objective if possible.
 
 prerequisites:

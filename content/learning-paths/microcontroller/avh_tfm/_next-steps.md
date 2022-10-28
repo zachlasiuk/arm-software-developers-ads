@@ -4,10 +4,10 @@
 # ================================================================================
 
 next_step_guidance: >
-   Further learning regarding Trusted Firmware-M can be found at the [project website](https://www.trustedfirmware.org/projects/tf-m/).
+   Further learning regarding Trusted Firmware-M can be found at the [project website](https://www.trustedfirmware.org/projects/tf-m/). See also the Open-IoT-SDK.
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "Enter learning path relative link here"
+recommended_path: "/learning-paths/microcontroller/avh_ml"
 # Link to the next learning path being recommended(For example this could be /learning-paths/cloud/mongodb).
 
 
