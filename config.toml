@@ -54,7 +54,6 @@ github_project_repo = "https://github.com/zachlas/arm-software-developers-ads"
 github_branch= "main"
 
 # For metadata posting on socials
-  title = 'My cool site'
-  description = 'Text about my cool site zzz'
-  image = '/img/icon.svg'
-    
+  #title = 'My cool site'
+  #description = 'Text about my cool site test'
+  #image = '/img/icon.svg'
