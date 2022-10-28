@@ -16,7 +16,7 @@ differentiating_info:
 weight: 2  # Decides order of main topics on homepage
 
 # Shown when listing learning paths in this category:
-subtitle: "Build secure, connected, smart IoT devices" # used as header for learning path to avoid duplicaiton
+subtitle: "Create and migrate apps for power efficient performance" 
 
 
 #####################################

@@ -15,7 +15,7 @@ learning_objectives:
 
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
-skilllevels: Getting-Started
+skilllevels: Introductory
 armips:
     - Neoverse
 tools:

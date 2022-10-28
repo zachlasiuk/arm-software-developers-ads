@@ -17,7 +17,7 @@ prerequisites:
     - An [AWS account](/learning-paths/cloud/providers/aws/) to use for accessing AWS services
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
-skilllevels: Experienced
+skilllevels: Advanced
 armips:
     - Neoverse
 tools:

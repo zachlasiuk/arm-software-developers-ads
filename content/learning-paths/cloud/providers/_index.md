@@ -13,7 +13,7 @@ learning_objectives:
     - Start an instance on an Arm-based cloud server.
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
-skilllevels: Getting-Started
+skilllevels: Introductory
 armips:
     - Neoverse
 tools:

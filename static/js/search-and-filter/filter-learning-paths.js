@@ -41,7 +41,7 @@ function removeFacet(tag) {
     // Apply search and filters to current parameters
         // deal with ads promise
         document.getElementById('search-box').value().then((value) => { 
-             results_to_hide = applySearchAndFiltersTo_LearningPaths(all_path_cards, value); // apply active search & filter terms to the specified divs
+             results_to_hide = applySearchAndFilters(all_path_cards, value); // apply active search & filter terms to the specified divs
              hideElements(all_path_cards,results_to_hide);
             },
         );
@@ -79,7 +79,7 @@ function addFacet(element) {
      // Apply search and filters to current parameters
         // deal with ads promise
         document.getElementById('search-box').value().then((value) => { 
-             results_to_hide = applySearchAndFiltersTo_LearningPaths(all_path_cards, value); // apply active search & filter terms to the specified divs
+             results_to_hide = applySearchAndFilters(all_path_cards, value); // apply active search & filter terms to the specified divs
              hideElements(all_path_cards,results_to_hide);
             },
         );

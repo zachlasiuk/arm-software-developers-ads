@@ -26,7 +26,7 @@ learning_objectives:
 ##### Tags
 # Don't enter whitespace. An underscore will be visually replaced with whitespace.
 
-skilllevels: Getting-Started
+skilllevels: Introductory
 # Options:
     # Getting-Started   (for a basic overview of certain tools/softwares/topics)
     # Introductory      (the next stage up from getting started)

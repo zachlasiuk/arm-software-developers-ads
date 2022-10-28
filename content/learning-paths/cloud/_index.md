@@ -16,7 +16,7 @@ differentiating_info:
 weight: 1  # Decides order of main topics on homepage
 
 # Shown when listing learning paths in this category:
-subtitle: "Create cloud native software" # used as header for learning path to avoid duplicaiton
+subtitle: "Optimize cloud native apps on Arm for performance and cost" 
 
 
 

@@ -13,6 +13,7 @@ function applySearchAndFilters(all_path_cards, search_string, page) {
     let results_to_hide = [];
 
     for (let card of all_path_cards) {
+
         ////////////////////////////////////////////////////////////////
         // SEARCH
         if (!skip_search) {
@@ -25,7 +26,6 @@ function applySearchAndFilters(all_path_cards, search_string, page) {
 
             // Tool-based search only
             if (page=='tools') {
-                                              
                 if (searchByTitle(card,search_word_array) && searchByAdditionalSearchTerm(card,search_word_array)) { 
                     results_to_hide.push(card); // set card to be hidden
                 }
@@ -34,7 +34,7 @@ function applySearchAndFilters(all_path_cards, search_string, page) {
 
         ////////////////////////////////////////////////////////////////
         // FILTER
-        if (page=='paths') {
+        if (page!='tools') { // page may be undefined, handel for that if coming from learning pahts area
             if (filter_LearningPath_card(card)) { // if we get back non-null from function, the card should be hidden
                 results_to_hide.push(card); // set card to be hidden
             }
@@ -53,6 +53,7 @@ function searchHandler_LearningPaths(search_string) {
     if (! (typeof search_string === 'string')) {
         search_string = search_string.value;
     }
+
 
     const all_path_cards = document.querySelectorAll('div.search-div');
     // Apply search and filters to current parameters

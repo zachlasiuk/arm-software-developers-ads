@@ -11,19 +11,20 @@ function searchByTitle(card,search_word_array) {
 }
 
 function searchByAdditionalSearchTerm(card,search_word_array) {
+    let result = true;
+
     let card_classes = card.classList;
     card_classes.forEach(function (term, i) {
-        console.log(term);
+        //console.log(term);
         if (term.startsWith('term-')) {
             // now iterate through this
-            var additional_search_match = search_word_array.every(item => term.includes(item));
+            var additional_search_match = search_word_array.every(item => (term.replace('term-','')==item));
             if (additional_search_match) {
-                console.log('keep shown!')
-                return false // show it
+                result=false; // show it
             }
         }
     });
-    return true
+    return result
 }
 
 
@@ -54,3 +55,6 @@ function hideElements(all_path_cards,results_to_hide) {
         }
     }
 }
+
+
+

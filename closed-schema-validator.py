@@ -77,7 +77,7 @@ for subdir, main_topics, files in os.walk(main_topic_dir):
         # Reset empty closed schema lists for this main topic
         subjects_OK_list = []
         operatingsystems_OK_list = []
-        skilllevels_OK_list = ["Getting Started","Introductory","Experienced"]
+        skilllevels_OK_list = ["Introductory","Advanced"]
 
         topic_index_file = os.path.join(main_topic_dir,topic,'_index.md')
         with open(topic_index_file, "r") as file:
