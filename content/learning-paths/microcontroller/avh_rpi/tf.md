@@ -21,7 +21,7 @@ sudo apt install python3-pip
 Next, install TensorFlow. 
 
 ```bash			
-pip install tensorflow-aarch64 tensorflow_io -y 
+pip install tensorflow-aarch64 tensorflow_io 
 ```
 				
 Run a [TensorFlow quickstart example](https://www.tensorflow.org/tutorials/quickstart/beginner) by following the instructions on both versions of the Raspberry Pi and compare the systems.

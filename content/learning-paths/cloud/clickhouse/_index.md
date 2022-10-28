@@ -23,7 +23,7 @@ softwares:
 operatingsystems:
     - Linux
 subjects:
-    - Databases	
+    - Databases
 developerprograms:
 
 # ================================================================================

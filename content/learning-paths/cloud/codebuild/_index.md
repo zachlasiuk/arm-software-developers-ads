@@ -21,7 +21,7 @@ skilllevels: Experienced
 armips:
     - Neoverse
 tools:
-    - Docker	
+    - Docker
 softwares:
     - AWS CodeBuild
 operatingsystems:

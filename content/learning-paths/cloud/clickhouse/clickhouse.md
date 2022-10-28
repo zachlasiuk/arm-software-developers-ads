@@ -1,12 +1,18 @@
 ---
 # User change
-title: "Run Clickhouse and measure its performance"
+title: Run Clickhouse and measure its performance
 
-weight: 2 # 1 is first, 2 is second, etc.
+test_maintenance: true
+test_images:
+- ubuntu:latest
 
-# Do not modify these elements
-layout: "learningpathall"
+weight: 2
+
+layout: learningpathall
 ---
+
+{{< test >}}
+
 [Clickhouse](https://clickhouse.com/docs/en/home) is a column-oriented database management system (DBMS) for online analytical processing of queries (OLAP).
 We will measure the processing time (query latency) of Clickhouse on Arm based servers.
 
@@ -25,20 +31,21 @@ To measure the query latency time of Clickhouse, we run ClickBench. ClickBench i
 
 Start by cloning the ClickBench repository
 
-```console
-git clone https://github.com/ClickHouse/ClickBench
+```bash
+sudo apt install -y git wget curl
+git clone https://github.com/ClickHouse/ClickBench.git
 ```
 Then navigate into the `clickhouse` directory and run the steps outlined in `benchmark.sh`. We will break each of these commands out
 
 First, install clickhouse if you haven't already done so through the standlone instructions
 
-```console
+```bash
 curl https://clickhouse.com/ | sh
 sudo DEBIAN_FRONTEND=noninteractive ./clickhouse install
 ```
 Then, set the compression method for clickhouse-server to use `zstd` and then start the server
 
-```console
+```bash
 echo "
 compression:
     case:
@@ -47,19 +54,26 @@ compression:
 
 sudo clickhouse start
 ```
-Now, create a table and load the data. It uses the [Anonymized Web Analytics dataset](https://clickhouse.com/docs/en/getting-started/example-datasets/metrica/)
+Now, create a table:
+
+```bash
+cd ClickBench/clickhouse
+clickhouse-client < create.sql
+```
+
+Let's load the data. It uses the [Anonymized Web Analytics dataset](https://clickhouse.com/docs/en/getting-started/example-datasets/metrica/).
 
 ```console
-clickhouse-client < create.sql
-
 wget --continue 'https://datasets.clickhouse.com/hits_compatible/hits.tsv.gz'
 gzip -d hits.tsv.gz
 
 clickhouse-client --time --query "INSERT INTO hits FORMAT TSV" < hits.tsv
 ```
+
 Finally, execute the run script. This script loops through each query three times. A total of 43 queries are run.
 
-```console
+```bash
+cd ClickBench/clickhouse
 ./run.sh
 ```
 
@@ -67,7 +81,7 @@ Finally, execute the run script. This script loops through each query three time
 
 On the execution of the `run.sh` script. the query processing time for each individual query is displayed on the console. It looks like the output shown below. The three comma separated values represent the query latency time for each of the three times the query is run.
 
-```
+```console
 [0.002, 0.001, 0.001],
 [0.028, 0.023, 0.022],
 [0.066, 0.052, 0.052],

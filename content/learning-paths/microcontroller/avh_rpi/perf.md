@@ -17,7 +17,7 @@ sudo apt-get install linux-perf	-y
 sudo su -
 ```
 
-Now as root:
+Now as root run the commands shown:
 
 ```bash
 echo -1 > /proc/sys/kernel/perf_event_paranoid

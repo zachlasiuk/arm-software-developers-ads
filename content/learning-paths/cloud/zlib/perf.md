@@ -1,12 +1,12 @@
 ---
-# User change
-title: "Use perf to analyze zlib performance"
+title: Use perf to analyze zlib performance
+
+test_maintenance: true
+test_images:
+- ubuntu:latest
 
 weight: 4
-
-layout: "learningpathall"
-
-
+layout: learningpathall
 ---
 
 
@@ -18,7 +18,7 @@ This learning path has been verified on AWS EC2 and Oracle cloud services, runni
 
 * Linux perf must be installed
 
-```console
+```bash
 sudo apt install linux-tools-common linux-tools-generic linux-tools-`uname -r` -y
 ```
 
@@ -38,7 +38,7 @@ Make sure to start with zip.py and largefile available.
 
 Confirm the application is working and largefile.gz is created when it is run.
 
-```console
+```bash
 python ./zip.py
 ```
 
@@ -64,7 +64,8 @@ Generate an image with the flame graph.
 
 Install the flame graph script. 
 
-```console
+```bash
+sudo apt install git -y
 git clone https://github.com/brendangregg/FlameGraph
 ```
 
@@ -107,4 +108,3 @@ perf script | ./FlameGraph/stackcollapse-perf.pl > out.perf-folded && ./FlameGra
 ```
 
 Copy the file flamegraph2.svg to your computer and open it in a browser or other image application and compare it to flamegraph1.svg
-
