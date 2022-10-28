@@ -48,7 +48,6 @@ def main():
         elif os.path.isdir(args.check):
             logging.info("Checking folder for _cmd.json files in " + args.check)
             l = [i for i in os.listdir(args.check) if i.endswith("_cmd.json")]
-            print(l)
             # Build dict with weight value for each article
             d = { i: parse.header(args.check + "/" + i.replace("_cmd.json",""))[2] for i in l }
             # Sort dict by value
