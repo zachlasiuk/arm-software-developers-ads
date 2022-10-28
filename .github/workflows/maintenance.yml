@@ -71,22 +71,27 @@ jobs:
     
       # Run tests on gfortran article for now
       # TODO change this and use outdated as the input of this script
-      - name: Parse gfortran and gcc installation tutorials for commands
+      - name: Parse articles for commands
         run: |
-          python3 tools/maintenance.py -p content/install-tools/gfortran.md
-          python3 tools/maintenance.py -p content/install-tools/gcc.md
+          for i in $(tree -i -f content | grep ".md$"); do
+            python3 tools/maintenance.py -p $i
+          done
            
       # Run tests
-      - name: Test gfortran and gcc installation tutorial commands and output reports
+      - name: Test commands and output reports
         run: |
-          python3 tools/maintenance.py -c content/install-tools/ -l ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          for i in $(tree -i -f | grep "_cmd.json"); do
+            python3 tools/maintenance.py -c $i -l ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          done
            
       # Upload test reports as artifact
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: results
-          path: content/install-tools/*_cmd.xml
+          path: |
+            content/install-tools/*_cmd.xml
+            content/learning-path/**/*_cmd.xml
            
       # Publish Junit reports
       - name: Publish Test Reports
@@ -94,7 +99,9 @@ jobs:
         uses: mikepenz/action-junit-report@v3
         if: always() # always run even if the previous step fails
         with:
-          report_paths: '**/content/install-tools/*_cmd.xml'
+          report_paths: |
+            '**/content/install-tools/*_cmd.xml'
+            '**/content/learning-path/**/*_cmd.xml'
           detailed_summary: true
           include_passed: true
 
