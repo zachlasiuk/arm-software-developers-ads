@@ -39,17 +39,6 @@ jobs:
           name: outdated
           path: outdated_files.csv
 
-      # Commit and push stats
-      - name: Update stats
-        run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add content/stats/data.json
-          git pull
-          if git commit -m "Update stats"; then
-            git push
-          fi
-
   # Test content of outdated articles
   test:
     # The type of runner that the job will run on
@@ -83,15 +72,21 @@ jobs:
           for i in $(tree -i -f | grep "_cmd.json"); do
             python3 tools/maintenance.py -c $i -l ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           done
+      
+      # Move reports to result folder
+      - name: Move reports
+        run: |
+          mkdir junit-reports
+          for i in $(tree -i -f | grep "_cmd.xml"); do
+            mv $i junit-reports/
+          done
            
       # Upload test reports as artifact
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
           name: results
-          path: |
-            content/install-tools/*_cmd.xml
-            content/learning-path/**/*_cmd.xml
+          path: junit-reports/*_cmd.xml
            
       # Publish Junit reports
       - name: Publish Test Reports
@@ -99,9 +94,7 @@ jobs:
         uses: mikepenz/action-junit-report@v3
         if: always() # always run even if the previous step fails
         with:
-          report_paths: |
-            '**/content/install-tools/*_cmd.xml'
-            '**/content/learning-path/**/*_cmd.xml'
+          report_paths: '**/junit-reports/*_cmd.xml'
           detailed_summary: true
           include_passed: true
 
@@ -110,7 +103,7 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add content/install-tools/*.md
+          git ls-files --modified | xargs git add
           git pull
           if git commit -m "Add test status"; then
             git push
