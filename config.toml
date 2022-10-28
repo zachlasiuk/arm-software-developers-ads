@@ -12,9 +12,6 @@ URL = "s3://armswdev.tk?region=us-east-1"
 cloudFrontDistributionID = "E1KJFR5JSKYU64"
 
 
-[frontmatter]
-    lastmod = [ ":git", "lastmod", "date", "publishDate" ]
-
 [taxonomies]
     skilllevel          = "skilllevels"
     armip               = "armips"
