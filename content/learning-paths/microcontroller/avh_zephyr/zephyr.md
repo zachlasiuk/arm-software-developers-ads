@@ -29,14 +29,14 @@ Then, install pre-requisites for Zephyr:
 
 ```console
 sudo apt update
-sudo apt install --no-install-recommends gperf ccache dfu-util device-tree-compiler python3-tk gcc-multilib g++-multilib
+sudo apt install -y --no-install-recommends gperf ccache dfu-util device-tree-compiler python3-tk gcc-multilib g++-multilib
 ```
 Some other pre-requisistes needed by Zephyr like python3 and cmake are already installed on your AVH AMI. 
 
 Next, install Python dependencies and activate a new virtual environment
 
 ```console
-sudo apt install python3-venv
+sudo apt install -y python3-venv
 python3 -m venv ~/zephyrproject/.venv
 source ~/zephyrproject/.venv/bin/activate
 pip install west
@@ -95,6 +95,6 @@ You have now successfully build a Zephyr application and run it on the AVH Corst
 To build and run the [Dining Philosophers](https://docs.zephyrproject.org/latest/samples/philosophers/README.html) example, use:
 
 ```console
-west build -p auto -b mps3_an547 samples/philisophers
+west build -p auto -b mps3_an547 samples/philosophers
 VHT_Corstone_SSE-300_Ethos-U55 -a build/zephyr/zephyr.elf
 ```
