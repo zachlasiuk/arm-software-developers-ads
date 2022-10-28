@@ -3,7 +3,7 @@
 #       Edit
 # ================================================================================
 
-title: "Get Started with the Arm Virtual Hardware Raspberry Pi4" 
+title: "Get Started with the Arm Virtual Hardware Raspberry Pi 4" 
 # Should start with a verb, have no adjectives (amazing, cool, etc.), and be as concise as possible.
 
 description: >
