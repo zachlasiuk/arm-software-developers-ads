@@ -42,20 +42,31 @@ def main():
     if args.check:
         if args.check.endswith("_cmd.json"):
             logging.info("Checking " + args.check)
-            res = check.check(args.check)
+            res = check.check(args.check, start=True, stop=True)
             logging.info("Patching " + args.check.replace("_cmd.json", "") + " with test results")
             check.patch(args.check.replace("_cmd.json", ""), res, args.link)
         elif os.path.isdir(args.check):
-            logging.info("Checking folder for _cmd.json files" + args.check)
-            l = os.listdir(args.check)
-            for i in l:
-                if i.endswith("_cmd.json"):
-                    logging.info("Found json. Checking " + i)
-                    res = check.check(args.check + "/" + i)
-                    logging.info("Patching " + args.check + "/" + i.replace("_cmd.json", "") + " with test results")
-                    check.patch(args.check + "/" + i.replace("_cmd.json", ""), res, args.link)
+            logging.info("Checking folder for _cmd.json files in " + args.check)
+            l = [i for i in os.listdir(args.check) if i.endswith("_cmd.json")]
+            print(l)
+            # Build dict with weight value for each article
+            d = { i: parse.header(args.check + "/" + i.replace("_cmd.json",""))[2] for i in l }
+            # Sort dict by value
+            for idx, i in enumerate(sorted(d.items(), key=lambda item: item[1])):
+                logging.info("Found json. Checking " + i[0])
+                # We want all the articles from the learning path to run in the same container
+                # Launch the instance at the beginning, and terminate it at the end
+                launch = True
+                terminate = True
+                if i[1] != -1 and idx != 0:
+                    launch = False
+                if i[1] != -1 and idx != len(d.keys())-1:
+                    terminate = False
+                res = check.check(args.check + "/" + i[0], start=launch, stop=terminate)
+                logging.info("Patching " + args.check + "/" + i[0].replace("_cmd.json", "") + " with test results")
+                check.patch(args.check + "/" + i[0].replace("_cmd.json", ""), res, args.link)
         else:
-            logging.error("Parsing expects a .md file or a .csv list of files")
+            logging.error("Checking expects a .json file or a directory")
     elif args.parse:
         # check if article is a csv file corresponding to a file list
         if args.parse.endswith(".csv"):

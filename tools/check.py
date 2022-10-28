@@ -21,7 +21,7 @@ def patch(article, results, lk):
     for i in content:
         start = content.find("---") + 3
         end = content.find("---", start)
-        
+
         if end == start-3:
             # No header
             logging.debug("No header found in {}".format(article))
@@ -62,47 +62,50 @@ def patch(article, results, lk):
 '''
 Read json file and run commands in Docker
 '''
-def check(json_file):
+def check(json_file, start, stop):
     with open(json_file) as jf:
         data = json.load(jf)
 
     # Start instances for all images
-    for i, img in enumerate(data["image"]):
-        # Launch
-        logging.info("Container instance test_{} is {}".format(i, img))
-        cmd = ["docker run --rm -t -d --name test_{} {}".format(i, img)]
-        logging.debug(cmd)
-        subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-
-        # Create user and configure
-        if "ubuntu" in img:
-            cmd = ["docker exec test_{} apt update".format(i)]
-            logging.debug(cmd)
-            subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-            cmd = ["docker exec test_{} apt install sudo".format(i)]
-            logging.debug(cmd)
-            subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-            cmd = ["docker exec test_{} useradd user -m -G sudo".format(i)]
-            logging.debug(cmd)
-            subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-            cmd = ["docker exec test_{} bash -c \"cat << EOF > /etc/sudoers.d/user\n user ALL=(ALL) NOPASSWD:ALL\nEOF\"".format(i)]
-            logging.debug(cmd)
-            subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-        elif "fedora" in img:
-            cmd = ["docker exec test_{} yum update".format(i)]
-            logging.debug(cmd)
-            subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-            cmd = ["docker exec test_{} yum install -y sudo".format(i)]
-            logging.debug(cmd)
-            subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-            cmd = ["docker exec test_{} useradd user -m -G wheel".format(i)]
-            logging.debug(cmd)
-            subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-            cmd = ["docker exec test_{} bash -c \"cat << EOF > /etc/sudoers.d/user\n user ALL=(ALL) NOPASSWD:ALL\nEOF\"".format(i)]
+    if start:
+        for i, img in enumerate(data["image"]):
+            # Launch
+            logging.info("Container instance test_{} is {}".format(i, img))
+            cmd = ["docker run --rm -t -d --name test_{} {}".format(i, img)]
             logging.debug(cmd)
             subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
 
-    logging.info("Container(s) initialization completed")
+            # Create user and configure
+            if "ubuntu" in img:
+                cmd = ["docker exec test_{} apt update".format(i)]
+                logging.debug(cmd)
+                subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+                cmd = ["docker exec test_{} apt install sudo".format(i)]
+                logging.debug(cmd)
+                subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+                cmd = ["docker exec test_{} useradd user -m -G sudo".format(i)]
+                logging.debug(cmd)
+                subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+                cmd = ["docker exec test_{} bash -c \"cat << EOF > /etc/sudoers.d/user\n user ALL=(ALL) NOPASSWD:ALL\nEOF\"".format(i)]
+                logging.debug(cmd)
+                subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+            elif "fedora" in img:
+                cmd = ["docker exec test_{} yum update".format(i)]
+                logging.debug(cmd)
+                subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+                cmd = ["docker exec test_{} yum install -y sudo".format(i)]
+                logging.debug(cmd)
+                subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+                cmd = ["docker exec test_{} useradd user -m -G wheel".format(i)]
+                logging.debug(cmd)
+                subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+                cmd = ["docker exec test_{} bash -c \"cat << EOF > /etc/sudoers.d/user\n user ALL=(ALL) NOPASSWD:ALL\nEOF\"".format(i)]
+                logging.debug(cmd)
+                subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+
+        logging.info("Container(s) initialization completed")
+    else:
+        logging.info("Skip container(s) launch")
 
     # Create 1 test suite for each image
     test_cases= []
@@ -192,7 +195,7 @@ def check(json_file):
                 logging.info("{:.0f}% of all tests completed on instance test_{}".format(i/data["ntests"]*100, k))
 
         # Remove file with list of commands
-        #os.remove(fn)
+        os.remove(fn)
 
     logging.info("100% of all tests completed")
 
@@ -207,10 +210,13 @@ def check(json_file):
         logging.info("Results written in {}".format(json_file.replace(".json", ".xml")))
 
     # Stop instance
-    logging.info("Terminating container(s)...")
-    for i, img in enumerate(data["image"]):
-        cmd = ["docker stop test_{}".format(i)]
-        logging.debug(cmd)
-        subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+    if stop:
+        logging.info("Terminating container(s)...")
+        for i, img in enumerate(data["image"]):
+            cmd = ["docker stop test_{}".format(i)]
+            logging.debug(cmd)
+            subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+    else:
+        logging.info("Skip container(s) termination...")
 
     return results
