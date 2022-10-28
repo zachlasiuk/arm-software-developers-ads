@@ -69,7 +69,7 @@ jobs:
       # Run tests
       - name: Test commands and output reports
         run: |
-          for i in $(tree -i -f | grep "_cmd.json"); do
+          for i in $(tree -i -f content | grep "_cmd.json" | xargs dirname | sort -u); do
             python3 tools/maintenance.py -c $i -l ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
           done
       
