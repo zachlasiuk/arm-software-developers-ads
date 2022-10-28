@@ -14,10 +14,21 @@ The first place to start is identifying the hardware.
 
 Both systems are running the 64-bit Raspberry Pi OS. I have set the hostname of the virtual board to be “pimodel” and the default hostname of “raspberry” for the physical board just to make it clear which one is being shown.
 
-To change the hostname use:
+To change the hostname edit the `/etc/hosts` file:
 
 ```bash
-sudo hostname pimodel
+sudo nano /etc/hosts
+```
+
+Change the hostname to `pimodel`
+
+```console
+127.0.0.1       localhost
+::1             localhost ip6-localhost ip6-loopback
+ff02::1         ip6-allnodes
+ff02::2         ip6-allrouters
+
+127.0.1.1       pimodel
 ```
 					
 The first command to try is uname. The output is identical on both machines. One of them is shown here. Your output may be slightly different depending on the version of the Linux kernel.

@@ -21,7 +21,7 @@ Run `bluetoothctl` on the command, the use the bluetooth prompt to enter help or
 bluetoothctl 
 ```
 
-This goes to the bluetooth prompt.
+This goes to the bluetooth prompt. Run `help` to see the commands
 
 ```console
 Agent registered
@@ -64,6 +64,11 @@ quit                                              Quit program
 exit                                              Quit program
 help                                              Display help about this program
 export                                            Print environment variables
+```
+
+Then run the scan command
+
+```console
 [bluetooth]# scan on 
 Discovery started
 [CHG] Controller 3E:A3:EC:15:18:E8 Discovering: yes

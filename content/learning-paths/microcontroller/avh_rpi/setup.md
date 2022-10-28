@@ -33,7 +33,7 @@ Click on `Create Device`.
 
 Select `Raspberry Pi 4` from the list of available devices.
 
-Select `Raspberry Pi OS Desktop` as the software image and finally `Create Device`.
+Select `Raspberry Pi OS Desktop` as the software image, enter a Device Name and finally select `Create Device`.
 
 ## Login to virtual Raspberry Pi instances
 
@@ -48,7 +48,11 @@ It is also possible to log in via the CLCD window view.
 
 The `Console` view within the browser will suffice to complete this learning path.
 
-If you wish to connect via `SSH` (rather than `Console`), it is easiest to download and install the appropriate [OpenVPN Community](https://openvpn.net/community-downloads) version for your host.
+If you wish to connect via `SSH` (rather than `Console`), you have two options.
+
+You can either use the Quick Connect option on the `Connect` tab without using VPN. Follow the instructions [here](https://intercom.help/arm-avh/en/articles/6347261-quick-connect).
+
+Alternatively, you can download and install the appropriate [OpenVPN Community](https://openvpn.net/community-downloads) version for your host.
 
 In the Arm Virtual Hardware `Connect` tab, Click on `DOWNLOAD OVPN FILE` within the `Connect via VPN` section.
 
