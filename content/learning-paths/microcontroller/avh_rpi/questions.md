@@ -22,7 +22,7 @@ The Anaconda installation of PyTorch works on the virtual Raspberry Pi 4 and the
 					
 As happens with software which uses architecture features newer than the Cortex-A72 the software stops with “Illegal instruction” and this happens on the physical Raspberry Pi 4.		
 
-The same thing will likely happen on any software compiled with instructions not included in the Cortex-A72 but present in the Neoverse-N1 processor. This may include dot product instructions or low-cost atomic instructions (also known as [Large System Extensions, LSE](/learning-paths/server-and-cloud/lse/)).	
+The same thing will likely happen on any software compiled with instructions not included in the Cortex-A72 but present in the Neoverse-N1 processor. This may include dot product instructions or low-cost atomic instructions (also known as [Large System Extensions, LSE](/learning-paths/cloud/lse/)).	
 				
 ### Can I create a program that works on the physical Raspberry Pi but not on the virtual Raspberry Pi?
 					

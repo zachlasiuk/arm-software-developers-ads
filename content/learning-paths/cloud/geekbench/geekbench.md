@@ -23,7 +23,7 @@ Additional features are available with a purchased [license](https://www.primate
 
 ## Pre-requisites
 
-You will need a local Arm platform or an [Arm based instance](/learning-paths/server-and-cloud/providers/) from your cloud service providers, running an appropriate operating system (at time of writing, `Ubuntu 16.04 LTS` or later).
+You will need a local Arm platform or an [Arm based instance](/learning-paths/cloud/providers/) from your cloud service providers, running an appropriate operating system (at time of writing, `Ubuntu 16.04 LTS` or later).
 
 ## Fetch pre-built binaries
 The binaries are available to download from the Geekbench website directly. Check the website for the latest link. The below is for the 5.4 preview build.

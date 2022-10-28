@@ -4,11 +4,11 @@
 # ================================================================================
 
 next_step_guidance: >
-   Now that you have your Arm-based instance up and running, why not test out its performance?
+   Now that you have done some basic benchmarking learn how to run specific applications and benchmark their performance. For example:
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/server-and-cloud/geekbench/"
-# Link to the next learning path being recommended(For example this could be /learning-paths/server-and-cloud/mongodb).
+recommended_path: "/learning-paths/cloud/mongodb/"
+# Link to the next learning path being recommended(For example this could be /learning-paths/cloud/mongodb).
 
 
 # further_reading links to references related to this path. Can be:
@@ -18,25 +18,13 @@ recommended_path: "/learning-paths/server-and-cloud/geekbench/"
 
 further_reading:
     - resource:
-        title: Alibaba ECS Learning Path
-        link: https://www.alibabacloud.com/getting-started/learningpath/ecs
-        type: website
+        title: Performance Analysis for Arm vs x86 CPUs in the Cloud
+        link: https://www.infoq.com/articles/arm-vs-x86-cloud-performance/
+        type: blog
     - resource:
-        title: Getting Started with AWS
-        link: https://aws.amazon.com/getting-started
-        type: website
-    - resource:
-        title: Google Cloud Training and tutorials
-        link: https://cloud.google.com/compute/docs#training-and-tutorials
-        type: website
-    - resource:
-        title: Microsoft Azure Developer resources
-        link: https://learn.microsoft.com/en-us/azure/developer
-        type: website
-    - resource:
-        title: Oracle Developer Resource Center
-        link: https://developer.oracle.com/arm/
-        type: website
+        title: GCP, AWS, and Azure ARM-based server performance comparison
+        link: https://apisix.apache.org/blog/2022/08/12/arm-performance-google-aws-azure-with-apisix/
+        type: blog
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
