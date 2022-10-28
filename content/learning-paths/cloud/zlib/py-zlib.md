@@ -2,6 +2,10 @@
 # User change
 title: "Improce python application performance using Cloudflare zlib"
 
+test_maintenance: true
+test_images:
+- ubuntu:latest
+
 weight: 3
 
 layout: "learningpathall"
@@ -18,7 +22,7 @@ This learning path has been verified on AWS EC2 and Oracle cloud services, runni
 
 * Make sure python3 is available when python is run. 
 
-```console
+```bash
 sudo apt install python-is-python3 -y
 ```
 
@@ -30,7 +34,7 @@ Let's use a Python example and measure the performance difference with zlib-clou
 
 Copy and save the file below as zip.py
 
-```python
+```python { file_name="zip.py" }
 import gzip
 
 size = 16384
@@ -49,7 +53,7 @@ The above Python code will read a file named **largefile** and write a compresse
 
 To create the input file use the dd command.
 
-```console
+```bash
 dd if=/dev/zero of=largefile count=1M bs=1024
 ```
 
@@ -57,7 +61,7 @@ dd if=/dev/zero of=largefile count=1M bs=1024
 
 Run with the default libz and time the execution.
 
-```console
+```bash
 time python ./zip.py
 ```
 
@@ -69,7 +73,7 @@ This time use LD_PRELOAD to change to zlib-cloudflare instead and check the perf
 
 Adjust the path to libz.so as needed. 
 
-```console
+```bash
 time LD_PRELOAD=/usr/local/lib/libz.so python ./zip.py
 ```
 
