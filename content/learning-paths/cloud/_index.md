@@ -24,15 +24,10 @@ subtitle: "Create cloud native software" # used as header for learning path to a
 pinned_modules:
     - module:
         name: Getting Started
-        subtitle: Curated learning paths for newcomers to developing On Arm in the cloud.
         paths:
             - providers
             - migration
-    - module:
-        name: Best Practices
-        subtitle: Curated learning paths highlighting suggested best ways of working.
-        paths:
-            - sve
+
 
 
 

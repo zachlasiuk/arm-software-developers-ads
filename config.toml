@@ -54,3 +54,7 @@ github_project_repo = "https://github.com/zachlas/arm-software-developers-ads"
 # or specify a new value if you want to reference another branch in your GitHub links
 github_branch= "main"
 
+# For metadata posting on socials
+  description = 'Text about my cool site'
+  images = ['icon.svg']
+  title = 'My cool site'
