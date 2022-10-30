@@ -29,7 +29,7 @@ If you are not familiar with SIMD instructions there are numerous tutorials avai
 
 Below is a small example which demonstrates an application with intrinsics in it. The source code comes from a [short course titled Efficient Vectorisation with C++](https://chryswoods.com/vector_c++/emmintrin.html) and is copyright (C) Christopher Woods, 2006-2015 and is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-We use this example to show how to get the example running on Arm neoverse.
+We use this example to show how to get the example running on Arm.
 
 ```cpp
 #include <iostream>
@@ -68,7 +68,7 @@ g++ -O2 -msse2 --std=c++14 sse.cpp -o sse
 ./sse
 ```
 
-The printed resuls should be:
+The printed results should be:
 ```console
 result equals 6,8,10,12
 ```

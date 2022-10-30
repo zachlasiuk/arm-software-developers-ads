@@ -237,4 +237,4 @@ The graphs below summarize the optimizations on the C version of the application
 
 ## Next Steps
 
-We have optimized the compute kernel of this example and we have new bottlenecks. Optimized versions of the application don't scale as we increase the number of processes. Data transfers and IO are now dominant in the application: using more processors to compute the workload doesn't reduce the execution time linearly. A [parallel profiler](https://youtu.be/zIITp7ZqZXI) can help optimize the code futher.
+We have optimized the compute kernel of this example and we have new bottlenecks. Optimized versions of the application don't scale as we increase the number of processes. Data transfers and IO are now dominant in the application: using more processors to compute the workload doesn't reduce the execution time linearly. A [parallel profiler](https://youtu.be/zIITp7ZqZXI) can help optimize the code further.

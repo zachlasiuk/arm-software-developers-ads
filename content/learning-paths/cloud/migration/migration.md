@@ -37,7 +37,7 @@ Remember that all software needs to be for the Arm architecture. While most appl
 With a general idea of what is needed on the development machine, look into application dependencies in more detail. 
 
 Common software dependencies include:
-- Operating systems: most Linux distributions run on Arm, but not all. Older versions of Linux distributions may not be availalbe on Arm. 
+- Operating systems: most Linux distributions run on Arm, but not all. Older versions of Linux distributions may not be available on Arm. 
 - Libraries: look for libraries that are not part of the operating system and are installed separately from the Linux package manager.
 - Runtimes and frameworks: analyze packages used in Python and Javascript to make sure they available.
 - Container dependencies: container applications rely on other containers. Many container images support multiple architectures, but some may not support Arm.
@@ -84,11 +84,11 @@ Here are a number of real-world migration scenarios. They cover migrations rangi
 |Pandoc (documentation tool) has a filter not available on Arm|Rebuild dependency library from source (and ask maintainers for Arm support)|
 |Encryption in a Java app is slow | Use  -XX:+UnlockDiagnosticVMOptions -XX:+UseAESCTRIntrinsics flags to improve Arm crypto performance|
 |Dependent container not available for Arm|Build the container yourself (and ask the maintainers for Arm support)|
-Benchmark results are mediocre on Arm|Rebuild C++ components with newer compiler and enable [Large System Extentions](/learning-paths/cloud/lse/)|
+Benchmark results are mediocre on Arm|Rebuild C++ components with newer compiler and enable [Large System Extensions](/learning-paths/cloud/lse/)|
 
 ## Summary
 
-Arm servers enable the best price performance for many applications. The majority of software is availble now to make it possible to migrate applications to Arm. 
+Arm servers enable the best price performance for many applications. The majority of software is available now to make it possible to migrate applications to Arm. 
 
 
 

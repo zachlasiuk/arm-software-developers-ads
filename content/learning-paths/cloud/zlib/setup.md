@@ -55,7 +55,7 @@ If the result is 0 then there is no crc32 instructions used in the library.
 
 ## Install Cloudflare libz
 
-If there are no crc32 instrucitons in libz then zlib-cloudflare may help application performance. 
+If there are no crc32 instructions in libz then zlib-cloudflare may help application performance. 
 
 To build and install zlib-cloudflare navigate to an empty directory and use these commands.
 

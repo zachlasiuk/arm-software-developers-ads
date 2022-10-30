@@ -71,7 +71,7 @@ The program output is:
 result equals 6,8,10,12
 ```
 
-The SIMDE_ENABLE_NATIVE_ALIASES macro is not recommaned for large projects. Instead, SIMDe recommends to change the intrinics and add "simde" in front of them.
+The SIMDE_ENABLE_NATIVE_ALIASES macro is not recommended for large projects. Instead, SIMDe recommends to change the intrinics and add "simde" in front of them.
 
 This means change _mm_set_ps to be simde_mm_set_ps. Using the simde prefix is recommended for new code.
 

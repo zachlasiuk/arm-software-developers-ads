@@ -163,7 +163,7 @@ The virtual Raspberry Pi is identical, just the MAC address and the IP address a
 
 The Ethernet networking interface is also the same, no differences are detected.
 					
-The initial survey shows the virtual board looks very close to a real Raspberry Pi. The virtual model of the Pi shows a 4 Gb RAM configuration. A physical Pi may have a differernt RAM size as there are also 2 Gb or 8 Gb RAM sizes available.
+The initial survey shows the virtual board looks very close to a real Raspberry Pi. The virtual model of the Pi shows a 4 Gb RAM configuration. A physical Pi may have a different RAM size as there are also 2 Gb or 8 Gb RAM sizes available.
 			
 The CPU model name is really the only clear sign that this is not a real Raspberry Pi 4.
 

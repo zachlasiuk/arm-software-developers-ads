@@ -62,7 +62,7 @@ The server will print a URL to access VS Code in a browser. The URL is localhost
 
 ### Option 1 
 
-Refer to [SSH](install-tools/ssh) for more info about SSH. 
+Refer to [SSH](/install-tools/ssh/) for more info about SSH. 
 
 Use the -L option of ssh to Forward port 3000.
 

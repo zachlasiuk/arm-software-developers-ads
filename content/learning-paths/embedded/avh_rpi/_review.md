@@ -19,7 +19,7 @@ review:
             - "False"
         correct_answer: 2                     
         explination: >
-            The AVH Rasbperry Pi is similar, but faster than the physical Raspberry Pi. 
+            The AVH Raspberry Pi is similar, but faster than the physical Raspberry Pi. 
 
 
     - questions:

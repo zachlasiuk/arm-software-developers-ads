@@ -80,5 +80,5 @@ The installation should also install the binfmt-support Linux package.
 
 Instruction emulation using qemu and the ability to run applications for different architectures is built into Docker Desktop.
 
-On Linux machies without Docker Desktop, qemu and binfmt can be added to provide the same multi-architecture support. 
+On Linux machines without Docker Desktop, qemu and binfmt can be added to provide the same multi-architecture support. 
 

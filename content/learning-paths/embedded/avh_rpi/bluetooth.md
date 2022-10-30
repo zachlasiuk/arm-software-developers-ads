@@ -79,6 +79,6 @@ Discovery started
 					
 Bluetooth works fine on the virtual Raspberry Pi and it can be used for testing software which relies on a working bluetooth hardware and software. 
 
-Arm Virtual Hardware also incldues a generic Android device which can be used to connect to the bluetooth of the Raspberry Pi. 
+Arm Virtual Hardware also includes a generic Android device which can be used to connect to the bluetooth of the Raspberry Pi. 
 
 

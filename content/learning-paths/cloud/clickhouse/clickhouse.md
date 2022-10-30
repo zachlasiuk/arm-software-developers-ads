@@ -18,9 +18,9 @@ We will measure the processing time (query latency) of Clickhouse on Arm based s
 
 ## Pre-requisites
 
-You will need a local Arm platform or an [Arm based instance](/learning-paths/cloud/providers/) from your cloud service providers, running an appropriate operating system (at time of writing, `Ubuntu 16.04 LTS` or later). You will also need suffient storage on the instance for the web-analytics dataset used for measuring Clickhouser performance. We used 50GB in our instances.
+You will need a local Arm platform or an [Arm based instance](/learning-paths/cloud/providers/) from your cloud service providers, running an appropriate operating system (at time of writing, `Ubuntu 16.04 LTS` or later). You will also need sufficient storage on the instance for the web-analytics dataset used for measuring Clickhouser performance. We used 50GB in our instances.
 
-You can either install both the clickhouse server and client standlone on your Arm instances, or skip this step as it is installed as part of the benchmark script we will run next.
+You can either install both the clickhouse server and client standalone on your Arm instances, or skip this step as it is installed as part of the benchmark script we will run next.
 
 ## Standalone Installation of clickouse-server and clickhouse-client
 You can install clickhouse-server and clickhouse-client on your Arm server instance, using the package manager on your Linux Distribution. The installation instructions are outlined [here](https://clickhouse.com/docs/en/install)
@@ -37,7 +37,7 @@ git clone https://github.com/ClickHouse/ClickBench.git
 ```
 Then navigate into the `clickhouse` directory and run the steps outlined in `benchmark.sh`. We will break each of these commands out
 
-First, install clickhouse if you haven't already done so through the standlone instructions
+First, install clickhouse if you haven't already done so through the standalone instructions
 
 ```bash
 curl https://clickhouse.com/ | sh

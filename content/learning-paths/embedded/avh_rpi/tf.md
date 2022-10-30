@@ -26,7 +26,7 @@ pip install tensorflow-aarch64 tensorflow_io
 				
 Run a [TensorFlow quickstart example](https://www.tensorflow.org/tutorials/quickstart/beginner) by following the instructions on both versions of the Raspberry Pi and compare the systems.
 
-The results below show the virtual Raspberry Pi 4 runs much faster than the physical oboard.
+The results below show the virtual Raspberry Pi 4 runs much faster than the physical board.
 
 | System | Time to complete              |
 |--------|------------------------------:|				

@@ -12,7 +12,7 @@ layout: "learningpathall"
 
 Modern CPUs have vector units that operate in a SIMD fashion. This greatly improves application performance, depending on the vector width.
 
-The Arm v7 ISA introduced Advanced SIMD or Arm NEON instructions. These instructions are supported on the latest Arm v8 and Arm v9 ISA. NEON registers are composed of 32 128-bit registers V0-V31 and support multiple data types: integrer, single-precision (SP) floating-point and double-precision (DP) floating-point.
+The Arm v7 ISA introduced Advanced SIMD or Arm NEON instructions. These instructions are supported on the latest Arm v8 and Arm v9 ISA. NEON registers are composed of 32 128-bit registers V0-V31 and support multiple data types: integer, single-precision (SP) floating-point and double-precision (DP) floating-point.
 
 ## Arm SVE
 

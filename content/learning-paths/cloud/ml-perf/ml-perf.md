@@ -125,7 +125,7 @@ For all other options, run help as shown below
 
 ## View Results
 
-At the end of the benchmark run, the aggrerated ML performance results are printed on the console. For example, using the command above, the output will be similar to:
+At the end of the benchmark run, the aggregated ML performance results are printed on the console. For example, using the command above, the output will be similar to:
 ```
 INFO:main:starting TestScenario.SingleStream
 TestScenario.SingleStream qps=13.88, mean=0.0719, time=600.153, queries=8333, tiles=50.0:0.0718,80.0:0.0731,90.0:0.0738,95.0:0.0743,99.0:0.0755,99.9:0.0771

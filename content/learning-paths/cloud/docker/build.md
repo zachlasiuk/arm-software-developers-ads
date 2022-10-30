@@ -110,7 +110,7 @@ This is not ideal because it means a user must change the details of retrieving 
 
 Another way is to create multi-architecture images. 
 
-With multi-architecture images the user can run the image on any architecture and Docker will autoamtically get the correct image.
+With multi-architecture images the user can run the image on any architecture and Docker will automatically get the correct image.
 
 Continue the learning path to learn about multi-architecture images. 
 

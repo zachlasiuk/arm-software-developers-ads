@@ -81,7 +81,7 @@ memtier_benchmark --help
 
 ## View Results
 
-At the end of the benchmark run, the aggrerated performance results are printed on the console. For example, using the command above, the output will be similar to:
+At the end of the benchmark run, the aggregated performance results are printed on the console. For example, using the command above, the output will be similar to:
 ```
 AGGREGATED AVERAGE RESULTS (20 runs)
 ============================================================================================================================
