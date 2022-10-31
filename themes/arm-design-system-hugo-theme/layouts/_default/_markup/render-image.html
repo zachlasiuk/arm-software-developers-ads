@@ -9,4 +9,9 @@
     {{$full_img_path = printf "/%s/%s" $path_front  .Destination}}
 {{end}}
 
+<!-- Change routing to grab image for the web for all locations -->
+{{if or (in $full_img_path "www.") (in $full_img_path "https://")}}
+    {{$full_img_path = .Destination}}
+{{end}}
+
 <img src="{{ $full_img_path | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}" style="max-width: 100%; height: auto;" />
