@@ -46,7 +46,7 @@
                 <ads-search theme="dark" has-search-button id="search-box-tools-global-nav" placeholder="Search by tool name" class="u-width-auto"></ads-search>
             </span>
             <span style="display:inline-block;" class="u-margin-left-1">
-                <ads-cta-link link='/install-tools'><span>See all</span></ads-cta-link>
+                <ads-cta-link theme="dark"  link='/install-tools'><span>See all</span></ads-cta-link>
             </span>
           </div>
         </div>
@@ -67,11 +67,9 @@
 
         <div class="c-row u-margin-top-1 u-margin-left-2">
           <div class="c-col">
-            <p theme="dark">
               {{with .Site.GetPage "/about"}}
-                {{.Content}}
+                {{ .Content | replaceRE "<p>" "<p theme=\"dark\">" | safeHTML }}
               {{end}}
-            </p>
           </div>
         </div>
       </div>
