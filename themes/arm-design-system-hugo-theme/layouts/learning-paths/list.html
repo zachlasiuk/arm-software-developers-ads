@@ -45,11 +45,20 @@
         <div id="current-tag-bar" class="c-row u-margin-top-1/2" style="min-height: 30px;">
             <!-- Filled dynamically by javascript & checkboxes-->
         </div>
-
+     
+        <!-- Current results bar -->
+        <div id="results-status-bar" class="c-row u-margin-top-1/2" style="min-height: 30px;">
+            Displaying&nbsp;
+            <span id="currently-shown-number" class="u-text-bold"> {{len $paths_to_list }} </span>
+            &nbsp;of&nbsp;
+            <span id="total-shown-number" class="u-text-bold"> {{len $paths_to_list }} </span>
+            &nbsp;learning paths
+        </div>
+     
         <!-- List of learning paths on right -->
         <div class="c-row">
             <div class="c-col c-col-12">
-                <div class="u-display-grid u-gap-1 lg:u-grid-columns-1 xl:u-grid-columns-2 xxl:u-grid-columns-3 xxxl:u-grid-columns-4 u-margin-top-1">
+                <div id='path-container' class="u-display-grid u-gap-1 lg:u-grid-columns-1 xl:u-grid-columns-2 xxl:u-grid-columns-3 xxxl:u-grid-columns-4 u-margin-top-1">
                     {{ range $paths_to_list.ByLastmod.Reverse }}
                     <!-- This div does two things, iterating over each tag in the taxonomy:
                         1) Assign tags for filtering the learning path cards 

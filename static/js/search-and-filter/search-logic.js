@@ -57,4 +57,13 @@ function hideElements(all_path_cards,results_to_hide) {
 }
 
 
+function updateShownNumber() {
+    // Update UI telling how many are displayed
+    let current_num = document.getElementById('currently-shown-number').innerHTML;
+    let total_num = document.getElementById('total-shown-number').innerHTML;
+    var hidden_paths = document.querySelectorAll('div.path-div[hidden]:not([hidden=""])');
+
+    document.getElementById('currently-shown-number').innerHTML = parseInt(total_num) - hidden_paths.length;
+}
+
 

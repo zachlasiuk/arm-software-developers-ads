@@ -43,6 +43,7 @@ function removeFacet(tag) {
         document.getElementById('search-box').value().then((value) => { 
              results_to_hide = applySearchAndFilters(all_path_cards, value); // apply active search & filter terms to the specified divs
              hideElements(all_path_cards,results_to_hide);
+             updateShownNumber();                  // Update UI telling how many are displayed
             },
         );
 
@@ -81,6 +82,7 @@ function addFacet(element) {
         document.getElementById('search-box').value().then((value) => { 
              results_to_hide = applySearchAndFilters(all_path_cards, value); // apply active search & filter terms to the specified divs
              hideElements(all_path_cards,results_to_hide);
+             updateShownNumber();                  // Update UI telling how many are displayed
             },
         );
 }
