@@ -80,6 +80,9 @@ function searchHandler_Tools(search_string) {
    
     // Hide specified elements
     hideElements(all_path_cards,results_to_hide);
+
+    // Update UI telling how many are displayed
+    updateShownNumber();
 }
 
 

@@ -1,13 +1,23 @@
 {{define "main"}}
 
+
+{{ $tools_to_list := where .Site.Pages "Params.tool_install" true}}
+
 <ads-search class="u-margin-top-2" has-search-button id="search-box" placeholder="Search by tool name"></ads-search>
 
-
+<!-- Current results bar -->
+<div id="results-status-bar" class="c-row u-margin-top-1/2" style="min-height: 30px;">
+    Displaying&nbsp;
+    <span id="currently-shown-number" class="u-text-bold"> {{len $tools_to_list }} </span>
+    &nbsp;of&nbsp;
+    <span id="total-shown-number" class="u-text-bold"> {{len $tools_to_list }} </span>
+    &nbsp;tools.
+</div>
 
 <div class="c-row">
     <div class="c-col">
         <div class="u-display-grid u-gap-1 xs:u-grid-columns-1 sm:u-grid-columns-2 md:u-grid-columns-3 lg:u-grid-columns-4 xl:u-grid-columns-5 u-margin-top-1">
-            {{ range where .Site.Pages "Params.tool_install" true}}
+            {{ range $tools_to_list}}
             <!-- Div used for search hiding-->
             <div class='search-div
                         {{ with .Params.additional_search_terms }}
