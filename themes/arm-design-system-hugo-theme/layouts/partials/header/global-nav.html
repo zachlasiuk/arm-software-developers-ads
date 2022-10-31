@@ -53,6 +53,36 @@
       </div>
     </div>
 
+
+
+    <!-- Slotted Flyout Content -->
+    <div slot="tab-content" id="category3" role="tabpanel" tabindex="1">
+      <div class="flyout-content-container c-container u-padding-top-2 u-padding-bottom-5">
+
+        <div class="c-row">
+          <div class="c-col c-col-12">
+            <h2 class="u-color-arm-light-grey u-font-weight-300 u-margin-top-0 u-margin-bottom-2">What is this site about?</h2>
+          </div>
+        </div>
+
+        <div class="c-row u-margin-top-1 u-margin-left-2">
+          <div class="c-col">
+            <p theme="dark">
+              {{with .Site.GetPage "/about"}}
+                {{.Content}}
+              {{end}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
   <div slot="top-bar-content-end">
     {{ $gh_repo := ($.Param "github_repo") -}}
     <ads-cta-button level="tertiary" theme="dark" size="small" text="Contribute" onclick="location.href={{$gh_repo}};"></ads-cta-button>
@@ -125,6 +155,12 @@
         label: 'Install Tools',
         link: '/install-tools/',
       },
+      {
+        id: 'category3',
+        slotId: 'category3',
+        label: 'About',
+        link: '/about',
+      },
     ];
 
     const data = [
@@ -134,22 +170,27 @@
         items: [
           {
             id: 'example-dropdown__item-1',
-            label: 'Discord Server',
-            link: 'https://www.arm.com',
+            label: 'Arm Developer Program',
+            link: 'https://www.arm.com/resources/developer-program',
           },
           {
             id: 'example-dropdown__item-2',
-            label: 'Other',
-            link: 'https://www.arm.com',
+            label: 'Twitter',
+            link: 'https://twitter.com/armsoftwaredev',
+          },
+          {
+            id: 'example-dropdown__item-3',
+            label: 'YouTube',
+            link: 'https://www.youtube.com/c/armsoftwaredevelopers',
+          },
+          {
+            id: 'example-dropdown__item-4',
+            label: 'Discord',
+            link: 'https://discord.com/channels/839248077487472640/1026578776055894067',
           },
         ],
       },
-      {
-        id: 'stats-link',
-        label: 'Stats',
-        link: '/stats/'
-      },
-      
+     
     ];
 
     const globalNav = document.getElementById('global-nav-example-default');
