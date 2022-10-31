@@ -1,8 +1,17 @@
 {{define "main"}}
 
 <!-- Dedicated area for top realestate content; hidden for now -->
-<!-- partial "learning-paths/list-top-learning-paths.html" -->
+<!-- {{ partial "learning-paths/list-top-learning-paths.html" . }} -->
 
+<!-- _shared learning path Hugo processing, include those paths as well -->
+{{ $paths_to_list :=   .Pages }}
+
+{{ $section_title := .Title}}
+{{ range where $.Site.Pages "Params.shared_path" true}}
+    {{ if in .Params.shared_between $section_title}}
+        {{ $paths_to_list = $paths_to_list | append . }}
+    {{end}}
+{{end}}
 
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1 u-padding-bottom-2-1/2">
     <!-- Filter bar on left -->
@@ -41,7 +50,7 @@
         <div class="c-row">
             <div class="c-col c-col-12">
                 <div class="u-display-grid u-gap-1 lg:u-grid-columns-1 xl:u-grid-columns-2 xxl:u-grid-columns-3 xxxl:u-grid-columns-4 u-margin-top-1">
-                    {{ range .Pages.ByLastmod.Reverse }}
+                    {{ range $paths_to_list.ByLastmod.Reverse }}
                     <!-- This div does two things, iterating over each tag in the taxonomy:
                         1) Assign tags for filtering the learning path cards 
                         2) Keeps track of unique tags to generate the filter column  -->

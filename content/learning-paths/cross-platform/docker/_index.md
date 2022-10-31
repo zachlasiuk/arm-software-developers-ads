@@ -31,6 +31,12 @@ subjects:
 developerprograms:
     - 
 
+## Sorting into multiple Learning Path top level categories. Only applicable for 'shared' paths in the _shared directory
+shared_path: true
+shared_between:
+    - Server and Cloud
+    - Mobile
+
 # ================================================================================
 #       FIXED, DO NOT MODIFY
 # ================================================================================
