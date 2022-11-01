@@ -58,7 +58,9 @@
         <!-- List of learning paths on right -->
         <div class="c-row">
             <div class="c-col c-col-12">
+                <!-- CARD vs LIST container-->
                 <div id='path-container' class="u-display-grid u-gap-1 lg:u-grid-columns-1 xl:u-grid-columns-2 xxl:u-grid-columns-3 xxxl:u-grid-columns-4 u-margin-top-1">
+                <!-- <div id='path-container' class="u-display-grid u-gap-0 lg:u-grid-columns-1 u-margin-top-1"> -->
                     {{ range $paths_to_list.ByLastmod.Reverse }}
                     <!-- This div does two things, iterating over each tag in the taxonomy:
                         1) Assign tags for filtering the learning path cards 
@@ -97,6 +99,28 @@
                                         tag-{{. | urlize}}
                                     {{ end }}
                                 {{ end }}'>
+                        <!-- CARD vs LIST container-->
+                        <!--
+                        <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card-list'>
+                            <ads-card-content slot="content" style="vertical-align: baseline;">
+                                <span>
+                                    {{ if eq .Params.skillLevels "Introductory"}}
+                                        <i style=" vertical-align:baseline; color: var(--arm-web-safe-green);" class="fa-solid fa-gauge-simple-min"></i>&nbsp;&nbsp;
+                                    {{else}}
+                                        <i style=" vertical-align:baseline; color: var(--arm-orange);" class="fa-solid fa-gauge-simple-max"></i>&nbsp;&nbsp;
+                                    {{end}}
+                                </span>
+                                <span>
+                                    <h5 style="display: inline-block; vertical-align:baseline; max-width: 60%;" class="search-title card-title-list u-margin-top-0 u-margin-bottom-0">{{.Title}}</h5>
+                                </span>
+                                <span>
+                                    <p style="display: inline-block; float: right; vertical-align:baseline;" class="card-date u-margin-top-0 u-margin-bottom-0">{{ .Lastmod.UTC.Format "2 January 2006" }}</p>
+                                </span>
+                            </ads-card-content>   
+                        </ads-card>
+                        <hr class="card-list-divider">
+                        -->
+                         
                         <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card'>
                             <ads-card-content slot="content">
                                 <ads-tag class="path-card-tag {{.Params.skillLevels}}" text="{{.Params.skillLevels}}"></ads-tag>
@@ -105,6 +129,7 @@
                                 <p class="card-description">{{.Description}}</p>
                             </ads-card-content>   
                         </ads-card>
+                        
                     </div>           
                     {{ end }}
                 </div>
