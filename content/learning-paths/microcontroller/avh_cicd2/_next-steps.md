@@ -4,10 +4,10 @@
 # ================================================================================
 
 next_step_guidance: >
-   You have successfully set up a basic CI/CD workflow based around Arm Virtual Hardware. Further automation is possible.
+   Congratulations you have now set up a complete CI/CD workflow. For another examples using a different flavor of Arm Virtual Hardware, see:
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/microcontroller/avh_cicd2/"
+recommended_path: "/learning-paths/microcontroller/avh_matter"
 # Link to the next learning path being recommended(For example this could be /learning-paths/cloud/mongodb).
 
 
@@ -25,6 +25,7 @@ further_reading:
         title: Arm Virtual Hardware
         link: https://arm-software.github.io/AVH/main/examples/html/GetStarted.html
         type: documentation
+
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
