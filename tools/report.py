@@ -44,7 +44,8 @@ def content_parser(d, period):
 
 
 '''
-List pages older than a period in days
+List pages older than a period in days and save result as CSV
+Generate JSON file with data
 '''
 def report(period):
     orig = os.path.abspath(os.getcwd())
