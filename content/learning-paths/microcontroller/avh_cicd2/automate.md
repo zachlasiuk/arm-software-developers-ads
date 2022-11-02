@@ -24,7 +24,6 @@ To find the value for `AWS_SUBNET_ID`, in your AWS console, navigate to `VPC` > 
 | `AWS_DEFAULT_REGION` | Must be same region as `CloudFormation Stack` was created in (e.g. `us-east-1`) |
 | `AWS_SUBNET_ID`      | Format `subnet-xxxxxxxxxxxxxxxxx` |
 
-
 ### Access Keys
 
 Navigate to your AWS `Security credentials` settings from the pull down menu of your account (Click on your name in the upper-right corner of the AWS console).
@@ -37,6 +36,8 @@ Create these secrets in your project repository with the appropriate key values.
 | ----------------------- |
 | `AWS_ACCESS_KEY_ID`     |
 | `AWS_SECRET_ACCESS_KEY` |
+
+For security reasons, it is recommended to set these key pairs as `inactive` when not in use.
 
 ### CloudFormation stack
 
@@ -82,12 +83,19 @@ An additional `AWS_INSTANCE_TYPE` variable is also defined. Use this if you wish
 
 Return to the `Actions` tab. If any changes were made to the above `basic.yml`, then a workflow run would have been automatically triggered. If not, select the `Arm Virtual Hardware basic example` action, and click `Run workflow` to manually trigger.
 
-Click on the workflow run, and the `ci-test` job therein to follow progress. In the `Run tests` step, you will observe an AWS instance is started, using the Arm Virtual Hardware AMI. In your AWS console, navigate to `EC2` > `Instances`, and you will see this instance listed.
+Click on the workflow run, and the `ci_test` job therein to follow progress. In the `Run tests` step, you will observe an AWS instance is started, using the Arm Virtual Hardware AMI. In your AWS console, navigate to `EC2` > `Instances`, and you will see this instance listed.
 
 The workflow takes a few minutes to complete. Observe that one of the tests fails by default.
-```console
-TO INVESTIGATE... BADGE STEP DOESN'T COMPLETE?
-```
+
+### Issues running workflow
+
+You may encounter minor issues running the workflow to completion. The `Publish test results` step of the `ci_test` fails to write the results, and so the subsequent `badge` job fails.
+
+This is due to restricted `GITHUB_TOKEN` permissions on forked repositories.
+
+For more information, see the GitHub Actions [documentation](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token).
+
+For the purposes of this example, this can be ignored.
 
 ## Fix the failing test
 

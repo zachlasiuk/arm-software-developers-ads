@@ -23,19 +23,25 @@ For documentation on the CI/CD workflow see [here](https://arm-software.github.i
 
 ## CloudFormation stack {#steps}
 
-Within this project, there is a file `Arm-AVH-CloudFormation-Template.yaml`, which can be used to help set up your AWS account appropriately.
+Within this project, there is a file:
+```
+    infrastructure/cloudformation/Arm-AVH-CloudFormation-Template.yaml
+```
+which can be used to help set up your AWS account appropriately.
 
 Navigate to `CloudFormation` area of your AWS console, and click on `Create stack`.
 
 Select `Template is ready`, and `Upload a template file`, and browse to the above `Arm-AVH-CloudFormation-Template.yaml`. Click Next.
 
-Enter an (arbirary) `Stack name` and `S3BucketName`, and select the `VpcId` (most likely only one default option present) from the pull down. Click Next.
+Enter an (arbirary) `Stack name` and `S3BucketName`, and select the `VpcId` (likely only one option present) from the pull down. Click Next.
 
 Leave `Configure stack options` as default for all. Click Next.
 
-Optionally make tag and other settings in the `Review stackname` page, else keep as defaults. Accept any acknowledgements presented. Click Submit. Your `CloudFormation stack` will be generated. The process takes a few minutes, click refresh to follow progress.
+Optionally make tag and other settings in the `Review stackname` page, else keep as defaults. Accept any acknowledgements presented. Click Submit.
 
-When complete, a list of parameter values will be given in the `Outputs` tab. We shall return to these later.
+Your `CloudFormation stack` will be generated. The process takes a few minutes, click refresh to follow progress.
+
+When complete, a list of key values will be shown in the `Outputs` tab. We shall return to these later.
 
 ### Stack generation issues
 
@@ -45,9 +51,9 @@ When complete, a list of parameter values will be given in the `Outputs` tab. We
 ```
 and repeat the [steps](#steps) to create the stack.
 
-## IAM Trust
+## IAM trust policy
 
-Navigate to `IAM` > `Roles`, and click on the Role Name `Proj-AVHRole`, which was created by the above CloudFormation stack.
+Navigate to `IAM` > `Roles`, and click on the Role Name `Proj-AVHRole`, which was created by the above `CloudFormation stack`.
 
 Navigate to the `Trust relationships` tab, and click on `Edit trust policy` to edit the JSON.
 
