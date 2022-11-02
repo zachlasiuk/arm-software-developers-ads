@@ -74,13 +74,33 @@ def main():
                 next(f)
                 for line in f:
                     fn = line.split(",")[0]
-                    logging.debug("Parsing " + fn)
-                    cmd = parse.parse(fn)
-                    parse.save(fn, cmd)
+                    # Check if this article is a learning path
+                    if "/learning-paths/" in fn:
+                        # If so, parse all article in folder to check them
+                        for k in os.listdir(os.path.dirname(fn)):
+                            if k.endswith(".md"):
+                                _k = os.path.dirname(fn) + "/" + k
+                                logging.info("Parsing " + _k)
+                                cmd = parse.parse(_k)
+                                parse.save(_k, cmd)
+                    else:
+                        logging.debug("Parsing " + fn)
+                        cmd = parse.parse(fn)
+                        parse.save(fn, cmd)
         elif args.parse.endswith(".md"):
-            logging.info("Parsing " + args.parse)
-            cmd = parse.parse(args.parse)
-            parse.save(args.parse, cmd)
+            # Check if this article is a learning path
+            if "/learning-paths/" in args.parse:
+                # If so, parse all article in folder to check them
+                for k in os.listdir(os.path.dirname(args.parse)):
+                    if k.endswith(".md"):
+                        _k = os.path.dirname(args.parse) + "/" + k
+                        logging.info("Parsing " + _k)
+                        cmd = parse.parse(_k)
+                        parse.save(_k, cmd)
+            else:
+                logging.info("Parsing " + args.parse)
+                cmd = parse.parse(args.parse)
+                parse.save(args.parse, cmd)
         else:
             logging.error("Parsing expects a .md file or a .csv list of files")
     elif args.report:
