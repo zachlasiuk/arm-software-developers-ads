@@ -12,7 +12,6 @@
     }
 
 
-
     ads-tag.path-card-tag.Introductory {
         --ads-tag-border-color: var(--arm-web-safe-green);
         --ads-tag-color: var(--arm-light-grey);
@@ -61,7 +60,10 @@
     }
 
 
-
+    .card-subject {
+        font-weight: lighter;
+        font-size: 0.75rem;
+    }
 
     .card-title {
         color: var(--arm-blue);
@@ -99,26 +101,13 @@
         color: var(--arm-orange);
     }
 
-    ads-card.path-card-list {
-        --ads-card-border-radius: 10px;
-        --ads-card-border-width: 2px;
-
-        --ads-card-background-color-hover: var(--arm-light-grey-alt);
-        --ads-card-box-shadow-hover: 0 1px 3px 3px rgba(0,0,0,0.25);
-    }
-    html[theme='dark'] ads-card.path-card-list {
-        --ads-card-background-color-hover: var(--black);
-        --ads-card-box-shadow-hover: 0 1px 3px 3px rgba(255, 255, 255, 0.25);
+    ads-card.path-card  .card-title {
+        font-size: 1.15em;
     }
 
-    ads-card.path-card-list:hover  .card-title-list {
-        transition: color 0.3s ease-in-out;
-        color: var(--arm-orange);
+    ads-card.path-card .card-title-div {
+        min-height: 75px;
     }
-
-    hr.card-list-divider                    { color: var(--arm-light-grey-alt); height:0.5px; width:90%; margin: auto;}
-    html[theme='dark'] hr.card-list-divider { color: var(--arm-black);          }
-
 
 
 

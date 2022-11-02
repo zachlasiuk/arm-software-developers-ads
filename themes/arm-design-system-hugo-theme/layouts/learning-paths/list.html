@@ -6,6 +6,7 @@
 <!-- _shared learning path Hugo processing, include those paths as well -->
 {{ $paths_to_list :=   .Pages }}
 
+
 {{ $section_title := .Title}}
 {{ range where $.Site.Pages "Params.shared_path" true}}
     {{ if in .Params.shared_between $section_title}}
@@ -59,7 +60,7 @@
         <div class="c-row">
             <div class="c-col c-col-12">
                 <!-- CARD vs LIST container-->
-                <div id='path-container' class="u-display-grid u-gap-1 lg:u-grid-columns-1 xl:u-grid-columns-2 xxl:u-grid-columns-3 xxxl:u-grid-columns-4 u-margin-top-1">
+                <div id='path-container' class="u-display-grid u-gap-1 sm:u-grid-columns-1 md:u-grid-columns-2 lg:u-grid-columns-2 xl:u-grid-columns-3 xxl:u-grid-columns-4 xxxl:u-grid-columns-4 u-margin-top-1">
                 <!-- <div id='path-container' class="u-display-grid u-gap-0 lg:u-grid-columns-1 u-margin-top-1"> -->
                     {{ range $paths_to_list.ByLastmod.Reverse }}
                     <!-- This div does two things, iterating over each tag in the taxonomy:
@@ -123,10 +124,35 @@
                          
                         <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card'>
                             <ads-card-content slot="content">
-                                <ads-tag class="path-card-tag {{.Params.skillLevels}}" text="{{.Params.skillLevels}}"></ads-tag>
-                                <h4 class="search-title card-title u-margin-top-1/2 u-margin-bottom-1/2">{{.Title}}</h4>
-                                <p class="card-date">Updated: {{ .Lastmod.UTC.Format "January 2, 2006" }}</p>
-                                <p class="card-description">{{.Description}}</p>
+                                <p class="card-subject u-margin-top-0 u-margin-bottom-1/2">
+                                    {{ with .Params.subjects }}
+                                        {{ $subjects := upper (delimit . " | ")}}
+                                        {{if eq (printf "%T" $subjects) "string"}}
+                                            {{ $subjects }}
+                                        {{else}}
+                                            --
+                                        {{end}}
+                                    {{ end }}
+                                </p>
+                                <div class="card-title-div">
+                                    <h6 class="search-title card-title u-margin-top-0 u-margin-bottom-1/2">{{.Title}}</h6>
+                                </div>
+                                <p class="card-date u-margin-bottom-0">
+                                    <span>
+                                        {{ if eq .Params.skillLevels "Introductory"}}
+                                            <i style=" vertical-align:baseline; color: var(--arm-web-safe-green);" class="fa-solid fa-gauge-simple-min"></i>&nbsp;&nbsp;
+                                        {{else}}
+                                            <i style=" vertical-align:baseline; color: var(--arm-orange);" class="fa-solid fa-gauge-simple-max"></i>&nbsp;&nbsp;
+                                        {{end}}
+                                    </span>
+                                    &nbsp;&nbsp;
+                                    <span><i class="fa-solid fa-calendar-days"></i></span>
+                                    &nbsp;{{ .Lastmod.UTC.Format "2 Jan 2006" }}
+                                    &nbsp;&nbsp;
+                                    <span><i class="fa-solid fa-clock"></i></span>&nbsp;{{.Params.minutes_to_complete}} minutes
+                                </p>
+                                <!-- <ads-tag class="path-card-tag {{.Params.skillLevels}}" text="{{.Params.skillLevels}}"></ads-tag> -->
+                                <!-- <p class="card-description">{{.Description}}</p> -->
                             </ads-card-content>   
                         </ads-card>
                         
