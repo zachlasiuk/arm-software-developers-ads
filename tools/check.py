@@ -166,7 +166,7 @@ def check(json_file, start, stop):
                 p = subprocess.run(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
                 # create test case
-                test_cases[k].append(TestCase("{}_test-{}".format(data["image"][k], i), c, 0, p.stdout.rstrip().decode("utf-8"), ''))
+                test_cases[k].append(TestCase("{}_{}_test-{}".format(json_file.replace("_cmd.json",""), data["image"][k], i), c, 0, p.stdout.rstrip().decode("utf-8"), ''))
 
                 ret_code = 0
                 if "ret_code" in t.keys():
