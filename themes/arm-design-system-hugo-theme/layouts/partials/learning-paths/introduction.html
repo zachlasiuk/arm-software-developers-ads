@@ -28,13 +28,11 @@
             </div>
             <div class="c-col u-flex-grow-1 u-margin-top-2">
                 <span>
-                    {{ range .Params.subjects }}
-                        <ads-tag    href='{{ "/" | relLangURL}}subjects/{{. | urlize}}'>
-                            <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
-                            <span class="fa-solid fa-tag"></span>
-                            {{ . }}
-                        </ads-tag>
-                    {{ end }}
+                    <ads-tag    href='{{ "/" | relLangURL}}subjects/{{.Params.subjects | urlize}}'>
+                        <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                        <span class="fa-solid fa-tag"></span>
+                        {{ .Params.subjects }}
+                    </ads-tag>
                     {{ range .Params.operatingsystems }}
                         <ads-tag    href='{{ "/" | relLangURL}}operatingsystems/{{. | urlize}}'>
                             <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">

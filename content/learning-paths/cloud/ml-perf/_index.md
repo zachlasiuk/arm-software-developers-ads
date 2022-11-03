@@ -15,6 +15,7 @@ learning_objectives:
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Introductory
+subjects: ML
 armips:
     - Neoverse
 tools:
@@ -22,10 +23,6 @@ softwaress:
     - tensorflow
 operatingsystems:
     - Linux
-subjects:
-    - ML
-developerprograms:
-    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

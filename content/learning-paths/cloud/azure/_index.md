@@ -39,10 +39,7 @@ prerequisites:
 # Don't enter whitespace. An underscore will be visually replaced with whitespace.
 
 skilllevels: Introductory
-# Options:
-    # Getting-Started   (for a basic overview of certain tools/softwares/topics)
-    # Introductory      (the next stage up from getting started)
-    # Experienced       (for topics that require a fair amount of background knowledge in tools/softwares/topics to complete)
+subjects: NONE
 
 armips:
     # Groups of IP      (Cortex-M, Cortex-A, Cortex-R, Neoverse, GPU, System IP, etc.)
@@ -64,12 +61,6 @@ softwares:
 operatingsystems:
     # OSes              (Linux, Windows, macOS, FreeRTOS, Bare-metal)
     - Linux
-
-subjects:
-    # Unique list per main topic. Select from existing list.
-
-developerprograms:
-    - Add your tag here
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

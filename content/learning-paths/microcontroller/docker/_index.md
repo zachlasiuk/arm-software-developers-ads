@@ -24,48 +24,23 @@ learning_objectives:
 # 2-5 bullet points, one sentance each. Should start with a verb (Deploy, Measure) and indicate the value of the objective if possible.
 
 ##### Tags
-# Don't enter whitespace. An underscore will be visually replaced with whitespace.
-
 skilllevels: Introductory
-# Options:
-    # Getting-Started   (for a basic overview of certain tools/softwares/topics)
-    # Introductory      (the next stage up from getting started)
-    # Experienced       (for topics that require a fair amount of background knowledge in tools/softwares/topics to complete)
-
+subjects: NONE
 armips:
-    # Groups of IP      (Cortex-M, Cortex-A, Cortex-R, Neoverse, GPU, System IP, etc.)
-    # or Specific IP    (Cortex-M7, Neoverse-N1, AHB_Cache, etc.)
     - Cortex-A
     - Cortex-R
     - Cortex-M
     - Neoverse
-
 tools:
-    # Environments      (AWS_EC2)
-    # Toolchains        (GCC, Arm_Compiler_for_Embedded)
-    # IDEs              (Arm Development Studio, VS_Code)
-    # Online tools      (GitHub, Jenkins)
-    # General tools     (cbuild)
     - Docker
-    - Arm_Development_Studio
-    - Arm_Compiler_for_Embedded
+    - Arm Development Studio
+    - Arm Compiler for Embedded
     - Arm Fast Models
-    
 softwares:
-    # Languages         (Python, Go, MongoDB, Assembly, Java)
     - C
     - Assembly
-
 operatingsystems:
-    # OSes              (Linux, Windows, macOS, FreeRTOS, Bare-metal)
     - Baremetal
-
-subjects:
-    # Unique list per main topic. Select from existing list.
-    - 
-
-developerprograms:
-    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

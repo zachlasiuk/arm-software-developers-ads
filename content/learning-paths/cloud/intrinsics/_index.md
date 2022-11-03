@@ -18,6 +18,7 @@ prerequisites:
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Advanced
+subjects: Performance and Architecture
 armips:
     - Neoverse
 tools:
@@ -25,10 +26,6 @@ softwares:
     - 
 operatingsystems:
     - Linux
-subjects:
-    - Performance and Architecture
-developerprograms:
-    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

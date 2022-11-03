@@ -19,6 +19,7 @@ prerequisites:
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Introductory
+subjects: Libraries
 armips:
     - Neoverse
 tools:
@@ -26,10 +27,6 @@ softwares:
     - x265
 operatingsystems:
     - Linux
-subjects:
-    - Libraries
-developerprograms:
-    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

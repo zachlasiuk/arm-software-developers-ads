@@ -16,16 +16,13 @@ learning_objectives:
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Introductory
+subjects: Databases
 armips:
     - Neoverse
 tools:
 softwares:
 operatingsystems:
     - Linux
-subjects:
-    - Databases
-developerprograms:
-
 # ================================================================================
 #       FIXED, DO NOT MODIFY
 # ================================================================================

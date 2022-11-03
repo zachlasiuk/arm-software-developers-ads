@@ -19,6 +19,7 @@ prerequisites:
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Introductory
+subjects: Networking
 armips:
     - Neoverse
 tools:
@@ -26,10 +27,6 @@ softwares:
     - Vectorscan
 operatingsystems:
     - Linux
-subjects:
-    - Networking
-developerprograms:
-    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

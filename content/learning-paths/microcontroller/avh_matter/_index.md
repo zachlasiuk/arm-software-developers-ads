@@ -33,44 +33,19 @@ prerequisites:
     # Particular tools/environments already being initialized   (An EC2 instance with AVH installed)
 
 ##### Tags
-# Don't enter whitespace. An underscore will be visually replaced with whitespace.
 
 skilllevels: Introductory
-# Options:
-    # Getting-Started   (for a basic overview of certain tools/softwares/topics)
-    # Introductory      (the next stage up from getting started)
-    # Experienced       (for topics that require a fair amount of background knowledge in tools/softwares/topics to complete)
-
+subjects: NONE
 armips:
-    # Groups of IP      (Cortex-M, Cortex-A, Cortex-R, Neoverse, GPU, System IP, etc.)
-    # or Specific IP    (Cortex-M7, Neoverse-N1, AHB_Cache, etc.)
     - Cortex-A
-
 tools:
-    # Environments      (AWS_EC2)
-    # Toolchains        (GCC, Arm_Compiler_for_Embedded)
-    # IDEs              (Arm Development Studio, VS_Code)
-    # Online tools      (GitHub, Jenkins)
-    # General tools     (cbuild)
-    - Arm_Virtual_Hardware
+    - Arm Virtual Hardware
     - GitHub
-
-
 softwares:
-    # Languages         (Python, Go, MongoDB, Assembly, Java)
     - C
     - JavaScript
-
 operatingsystems:
-    # OSes              (Linux, Windows, macOS, FreeRTOS, Bare-metal)
     - Linux
-
-subjects:
-    # Unique list per main topic. Select from existing list.
-    - 
-
-developerprograms:
-    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

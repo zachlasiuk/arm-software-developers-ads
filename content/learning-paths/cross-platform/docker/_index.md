@@ -19,6 +19,7 @@ learning_objectives:
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Introductory
+subjects: Containers and Virtualization
 armips:
     - Neoverse
 tools:
@@ -26,10 +27,6 @@ tools:
 softwares:
 operatingsystems:
     - Linux
-subjects:
-    - Containers and Virtualization
-developerprograms:
-    - 
 
 ## Sorting into multiple Learning Path top level categories. Only applicable for 'shared' paths in the _shared directory
 shared_path: true

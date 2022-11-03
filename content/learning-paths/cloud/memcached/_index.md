@@ -18,6 +18,7 @@ prerequisites:
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Introductory
+subjects: Web
 armips:
     - Neoverse
 tools:
@@ -25,10 +26,6 @@ softwares:
     - Memcached
 operatingsystems:
     - Linux
-subjects:
-    - Web 
-developerprograms:
-    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

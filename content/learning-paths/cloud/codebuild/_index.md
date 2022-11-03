@@ -18,6 +18,7 @@ prerequisites:
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Advanced
+subjects: Containers and Virtualization
 armips:
     - Neoverse
 tools:
@@ -26,10 +27,6 @@ softwares:
     - AWS CodeBuild
 operatingsystems:
     - Linux
-subjects:
-    - Containers and Virtualization
-developerprograms:
-    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

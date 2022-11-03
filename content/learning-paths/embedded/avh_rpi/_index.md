@@ -40,6 +40,8 @@ skilllevels: Introductory
     # Introductory      (the next stage up from getting started)
     # Experienced       (for topics that require a fair amount of background knowledge in tools/softwares/topics to complete)
 
+subjects: NONE
+
 armips:
     # Groups of IP      (Cortex-M, Cortex-A, Cortex-R, Neoverse, GPU, System IP, etc.)
     # or Specific IP    (Cortex-M7, Neoverse-N1, AHB_Cache, etc.)
@@ -63,12 +65,6 @@ operatingsystems:
     # OSes              (Linux, Windows, macOS, FreeRTOS, Bare-metal)
     - Linux
 
-subjects:
-    # Unique list per main topic. Select from existing list.
-    - 
-
-developerprograms:
-    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

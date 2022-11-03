@@ -18,6 +18,7 @@ learning_objectives:
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Introductory
+subjects: Libraries
 armips:
     - Neoverse
 tools:
@@ -25,10 +26,6 @@ softwares:
     - 
 operatingsystems:
     - Linux
-subjects:
-    - Libraries
-developerprograms:
-    - 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

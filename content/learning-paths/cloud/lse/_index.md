@@ -18,17 +18,14 @@ prerequisites:
 
 ## Tags. No whitespace. An underscore will be visually replaced with whitespace.
 skilllevels: Introductory
+subjects: Performance and Architecture
 armips:
     - Neoverse
 tools:
     - gcc
 softwares: 
 operatingsystems:
-    - Linux
-subjects:
-    - Performance and Architecture
-developerprograms:
-    - 
+    - Linux 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
