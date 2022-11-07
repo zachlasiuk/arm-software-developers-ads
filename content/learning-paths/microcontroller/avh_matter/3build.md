@@ -75,7 +75,7 @@ In the `lighting-app` instance, run that application.
 ```console
 ./out/debug/chip-lighting-app
 ```
-The application will initialize, and you will see boot log echoed in the console. You will eventually see in the log:
+The application will initialize, and you will see boot log echoed in the console. You will see in the log:
 ```
 [TIMESTAMP][INSTANCEID] CHIP:DL: PlatformBlueZInit init success
 ```
@@ -95,7 +95,7 @@ If you wish to confirm success, you can see this in the logs (you will need to s
 
 In `chip-tool`, you will see:
 ```
-[TIMESTAMP][INSTANCEID] CHIP:CTL: Successfully finished commissioning step 'SendComplete'
+[TIMESTAMP][INSTANCEID] CHIP:TOO: Device commissioning completed with success
 ```
 In `lighting-app`:
 ```

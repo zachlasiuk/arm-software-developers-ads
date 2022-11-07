@@ -7,9 +7,9 @@ weight: 2 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
-Arm has developed the [ML Evaluation Kit](https://review.mlplatform.org/plugins/gitiles/ml/ethos-u/ml-embedded-evaluation-kit), which includes ready-to-use ML applications. These allow you to investigate the embedded software stack and evaluate performance of the networks running on the Cortex-M55 and Ethos-U55 processors.
+The [Arm ML Evaluation Kit](https://review.mlplatform.org/plugins/gitiles/ml/ethos-u/ml-embedded-evaluation-kit) provides a number of ready-to-use ML applications. These allow you to investigate the embedded software stack and evaluate performance of the networks running on the Cortex-M55 and Ethos-U55 processors.
 
-The [Corstone-300](https://developer.arm.com/Processors/Corstone-300) Virtual Hardware is also a digital twin of the [MPS3](https://www.arm.com/products/development-tools/development-boards/mps3) FPGA image ([Application Note 547](https://developer.arm.com/downloads/-/download-fpga-images)). This enables easy code migration from a virtual to a physical platform, allowing for real-world trials of your application.
+In this learning path we will build and run these examples with [Arm Virtual Hardware](https://www.arm.com/products/development-tools/simulation/virtual-hardware).
 
 Full instructions are provided in the evaluation kit [documentation](https://review.mlplatform.org/plugins/gitiles/ml/ethos-u/ml-embedded-evaluation-kit/+/HEAD/docs/quick_start.md)
 

@@ -4,10 +4,10 @@
 # ================================================================================
 
 next_step_guidance: >
-   Your docker container is now ready for use. Why not try to build and run your first embedded image>
+   You have built your first stand-alone embedded application. Why not explore these other embedded software learning paths.
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/microcontroller/bare-metal/"
+recommended_path: "/learning-paths/embedded"
 # Link to the next learning path being recommended(For example this could be /learning-paths/cloud/mongodb).
 
 
@@ -18,22 +18,13 @@ recommended_path: "/learning-paths/microcontroller/bare-metal/"
 
 further_reading:
     - resource:
-        title: Docker documentation
-        link: https://docs.docker.com
+        title: Arm Compiler for Embedded User Guide
+        link: https://developer.arm.com/documentation/100748
         type: documentation
     - resource:
-        title: Enter title for resource 2 here
-        link: Enter link for resource 2 here
-        type: Enter type for resource 2 here
-    - resource:
-        title: Enter title for resource 3 here
-        link: Enter link for resource 3 here
-        type: Enter type for resource 3 here
-    - resource:
-        title: Enter title for resource 4 here
-        link: Enter link for resource 4 here
-        type: Enter type for resource 4 here
-
+        title: Arm Compiler for Embedded Reference Guide
+        link: https://developer.arm.com/documentation/101754
+        type: documentation
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

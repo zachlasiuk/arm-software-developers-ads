@@ -31,11 +31,12 @@ The secret name must be exactly `API_TOKEN`, as this is used by the workflow lat
 
 ## Modify the workflow
 
-To prevent spurious runs of the workflow, navigate to the `Actions` tab of your repository, select the `Matter_CICD_Demo` workflow, and `disable workflow` from the `...` pulldown (to the right of the `Filter workflow runs` textbox).
-
-Navigate to the `connectedhomeip/.github/workflows` folder and edit the `cicd_demo.yml` workflow (it is easiest to do this directly in the browser via the `pencil` icon).
-
-Append this `job` to the file:
+In the `lighting-app` instance console, edit the previously created workflow.
+```console
+cd ~/connectedhomeip
+nano .github/workflows/cicd_demo.yml
+```
+**Append** this `job` to the file:
 ```yml
   chip_tool:
     needs: rebuild_lighting_app
@@ -53,11 +54,15 @@ Append this `job` to the file:
           API_TOKEN: ${{ secrets.API_TOKEN }}
         run: node .github/workflows/chip_tool.js
 ```
-Commit change when done.
+Save and exit.
 
 This job invokes the following `JavaScript` which will transmit the `on/off` commands to the `chip-tool` instance via the `Websocket` interface.
 
-Create file `.github/workflows/chip_tool.js`, containing the below:
+Create a script:
+```console
+nano .github/workflows/chip_tool.js
+```
+containing the below:
 ```js
 const readline = require('readline')
 const { ArmApi, ApiClient } = require('@arm-avh/avh-api');
@@ -136,12 +141,16 @@ main().catch((err) => {
 ```
 Note that the JavaScript refers to instance name `chip-tool`, and `API_TOKEN` secret. The `job` refers to the script `chip_tool.js`, as well as the `API_TOKEN` secret. If these were named differently, you will need to update the script(s) appropriately.
 
-When all edits are complete and commited, return to the `Actions` tab, and enable the `Matter_CICD_Demo` workflow. The workflow contains:
-```yml
-on:
-  workflow_dispatch:
+When all edits are complete, push the changes back to GitHub:
+```console
+cd ~/connectedhomeip
+git add .
+git commit -m "added chip-tool automation"
+git push
 ```
-which allows the user to manually start a workflow run. Click on `Run workflow` to start a new workflow run.
+You will again be prompted for your GitHub username and Personal Access Token (password).
+
+A new run of the Action will be triggered.
 
 ## Follow progress in GitHub Actions
 

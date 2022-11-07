@@ -17,9 +17,10 @@ The Matter repository from where the examples are sourced contains very many wor
 
 In the `lighting-app` console, navigate to the `.github/workflows` directory, and delete all.
 ```console
-cd /home/pi/connectedhomeip/.github/workflows
+cd ~/connectedhomeip/.github/workflows
 rm -rf *.yaml
 rm -rf *.yml
+ls
 ```
 Create a `.yml` textfile, and copy the below to that file.
 ```yml
@@ -69,7 +70,7 @@ You will see a set of commands (unique to you) to download and configure the `ru
 
 In the `lighting-app` console, return to your home directory:
 ```console
-cd /home/pi
+cd ~
 ```
 Copy and paste the `Download` and `Configure` commands (from GitHub) for your `self-hosted runner`.
 
@@ -89,7 +90,7 @@ In the `lighting-app` console, make a code change, for example, editing the outp
 
 This is in a source file named `on-off-server.cpp`.
 ```console 
-cd /home/pi/connectedhomeip
+cd ~/connectedhomeip
 nano src/app/clusters/on-off-server/on-off-server.cpp
 ```
 Locate the `Toggle on/off` message (if using `nano`, use `Ctrl+_` to jump to line `137`):
@@ -120,6 +121,7 @@ git remote -v
 ```
 Commit the changes to your repository.
 ```console
+cd ~/connectedhomeip
 git add .
 git commit -m "delete other workflows, update output message"
 git push
