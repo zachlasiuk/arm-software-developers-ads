@@ -3,7 +3,7 @@
 #       Edit
 # ================================================================================
 
-title: "Build and run Matter examples with AVH 3rd Party platforms"
+title: "Develop for Matter with Arm Virtual Hardware"
 # Should start with a verb, have no adjectives (amazing, cool, etc.), and be as concise as possible.
 
 description: >
