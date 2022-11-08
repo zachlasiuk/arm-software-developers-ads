@@ -3,10 +3,16 @@
 
 {{ $tools_to_list := where .Site.Pages "Params.tool_install" true}}
 
-<ads-search class="u-margin-top-2" has-search-button id="search-box" placeholder="Search by tool name"></ads-search>
+
+<p class="u-margin-top-1 u-margin-left-1 u-margin-bottom-1/2 u-font-size-75%">
+    Don't know a tool by name to search for? Try these common search terms:  
+    <a href="/install-tools/?search=compiler">compiler</a>.
+</p>
+
+<ads-search class="u-margin-top-0" has-search-button id="search-box" placeholder="Search by tool name"></ads-search>
 
 <!-- Current results bar -->
-<div id="results-status-bar" class="c-row u-margin-top-1/2" style="min-height: 30px;">
+<div id="results-status-bar" class="c-row u-margin-left-1 u-margin-top-1/2" style="min-height: 30px;">
     Displaying&nbsp;
     <span id="currently-shown-number" class="u-text-bold"> {{len $tools_to_list }} </span>
     &nbsp;of&nbsp;
