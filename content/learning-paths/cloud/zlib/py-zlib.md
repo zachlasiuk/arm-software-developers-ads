@@ -1,6 +1,6 @@
 ---
 # User change
-title: "Improce python application performance using Cloudflare zlib"
+title: "Improve python application performance using Cloudflare zlib"
 
 test_maintenance: true
 test_images:
