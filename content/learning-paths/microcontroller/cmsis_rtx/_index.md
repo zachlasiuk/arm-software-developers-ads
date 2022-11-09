@@ -3,7 +3,7 @@
 #       Edit
 # ================================================================================
 
-title: "Build an RTOS in N easy steps"
+title: "Build an RTOS in 4 easy steps"
 # Should start with a verb (learn, build, etc.), have no adjectives (amazing, cool, etc.), and be as concise as possible.
 
 description: >
