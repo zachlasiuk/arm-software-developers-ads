@@ -95,5 +95,6 @@ learning_path_main_page: "yes"  # Indicates this should be surfaced when looking
 
 In this learning path, we will use one of the supplied Fixed Virtual Platforms with Keil MDK (or Arm Development Studio).
 
-The instructions are written for [Keil MDK](/install-tools/mdk), however the same steps can also be done with [Arm Development Studio](/install-tools/armds).
+The instructions are written for [Keil MDK](/install-tools/mdk).
 
+Much of the learning path can also be followed with [Arm Development Studio](/install-tools/armds). Comments provided at end of each step.

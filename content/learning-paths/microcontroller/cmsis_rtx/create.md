@@ -43,27 +43,22 @@ A project can contain many `targets`, which refer to the platform that a particu
 
 Click `Options for Target`, to open that dialog. This is where build and other settings can be made.
 
-### Compiler optimization options
-
-Navigate to `C/C++ (AC6)` tab, and change optimization level to `-O2` for high performance code.
-
-Disable `Link-time Optimization`, as this will generate objects not compatible with the scatter file.
-
-You may also wish to disable `Warnings` (or select `<unspecified>` from the pull-down).
-
 ### Set FVP as debug target
 
 Navigate to the `Debug` tab, and select `Models Cortex-M Debugger` from the `Use` pull-down list. Click `Settings`, then the `Command` browse (`...`) button, to locate the `Cortex-M4 FVP` within your Keil MDK installation (`ARM\FVP\MPS2_Cortex-M` folder). Click `OK`.
+
+### Compiler optimization options
+
+Navigate to `C/C++ (AC6)` tab, and (optionally) change optimization level to `-O2` for high performance code.
+You may also wish to disable `Warnings`, change language options or other settings.
 
 ### Define memory map
 
 We shall use [scatter-loading](https://developer.arm.com/documentation/101754/latest/armlink-Reference/Scatter-loading-Features/The-scatter-loading-mechanism/Overview-of-scatter-loading) to define the memory map.
 
-Navigate to the `Linker` tab, and de-select `Use Memory Layout from Target Dialog`. Click the browse (`...`) button and create a text file in the same folder as the project. Click `Edit` to open the file in the IDE.
-
 The memory map for the FVP is given in the [documentation](https://developer.arm.com/documentation/100964/latest/Microcontroller-Prototyping-System-2/MPS2---memory-maps/MPS2---memory-map-for-models-without-the-Armv8-M-additions).
 
-The following is a typical scatter file for the FVP. Copy this to your scatter file, and save.
+Navigate to the `Linker` tab, and de-select `Use Memory Layout from Target Dialog`. Click the browse (`...`) button and create a text file in the same folder as the project. Click `Edit` to open the file in the IDE. The following is a typical scatter file for the FVP.
 ```text
 LOAD 0x0 0x400000 {
 	ROOT 0x0 0x400000 {
@@ -83,3 +78,9 @@ For more on scatter-loading, see this [learning path](/learning-paths/embedded/b
 
 We are now ready to build our example.
 
+## Comments for Arm Development Studio users
+* Add required CMSIS-Packs via the `CMSIS Pack Manager` perspective.
+* When creating the project navigate the menu to `File` > `New` > `Project...` > `C/C++` > `C Project`, then select `CMSIS C/C++ Project`, using `Arm Compiler for Embedded 6`.
+* Run-time environment is managed by the `.rteconfig` file within the project.
+* Build settings are in the `Project Properties` (`Alt+Enter`), under `C/C++ Build` > `Settings`.
+* Debug configuration will be set later.
