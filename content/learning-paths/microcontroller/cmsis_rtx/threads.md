@@ -30,7 +30,7 @@ void app_main (void *argument) {
 ```
 ## Create threads
 
-We can now implement the functionality of the threads themselves. Let's start with a simple basic example... each thread will endlessly say hello, and then pause for a period.
+We can now implement the functionality of the threads themselves. Let's start with a simple example... each thread will say hello, and then pause for a period, forever.
 
 Right click on the `Source` folder under the `FVP` target, and `Add a new item`. Select `C file (.c)`, and create the following `threads.c`.
 ```C
@@ -58,8 +58,6 @@ void __attribute__((noreturn)) thread3(void *argument){
 	}
 }
 ```
-Note that two other threads, `osRtxIdleThread` and `osRtxTimerThread` will be automatically created.
-
 ## Build and run the example
 
 Save all files, and `build` (`F7`) the example.
@@ -70,7 +68,7 @@ Click `Debug` (`Ctrl+F5`) to launch the FVP, and put the IDE into debug mode.
 
 Click `Run` (`F5`) to start the application.
 
-Observe in the `RTX RTOS` view that our threads do exist and have run.
+Observe in the `RTX RTOS` view that the threads have been created. Two other threads, `osRtxIdleThread` and `osRtxTimerThread` will also be created.
 
 However no output is seen in the `printf viewer`. This is because semihosting is not supported by uVision.
 

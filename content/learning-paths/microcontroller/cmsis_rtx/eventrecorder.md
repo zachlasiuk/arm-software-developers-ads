@@ -7,19 +7,21 @@ weight: 5 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
-Event Recorder provides an API for annotations in the application code or software component libraries. These annotations are stored in an `event buffer`, which can also be used for `printf()` output.
+Event Recorder allows for annotations in the application code or software component libraries. These annotations are stored in an `event buffer`.
+
+I/O functions such as `printf()` can easily be retargeted to make use of this buffer.
 
 ## Manage run-time environment
 
 Open the `Manage run-time environment` dialog, and enable `Compiler` > `Event Recorder` (`DAP` variant).
 
-Enable `Compiler` > `I/O` > `STDOUT`, and set to `EVR` (Event recorder) mode. This will redirect printf() output to the event buffer.
+Enable `Compiler` > `I/O` > `STDOUT`, and set to `EVR` (Event recorder) mode.
 
 Click `OK` to save.
 
 ## Add Event Recorder to main
 
-Open `main.c` in the editor. We must add a function call to initialize the event recorder.
+We must add a function call to initialize the event recorder. Open `main.c` in the editor.
 
 Include the header file:
 ```C
@@ -31,7 +33,9 @@ Add this function call to `main()`, before `osKernelInitialize()`:
 ```
 ## Set the event buffer
 
-Edit the scatter file to locate the event buffer. Create a new execution region (after `ARM_LIB_STACK`):
+The event buffer must be located in an uninitialized region of writable memory.
+
+Edit the scatter file, creating a new execution region (after `ARM_LIB_STACK`):
 ```text
 	EVENT_BUFFER  0x20060000 UNINIT 0x10000 {
 		EventRecorder.o (+ZI)               }
@@ -113,7 +117,7 @@ Create a [Component Viewer Description File](https://www.keil.com/pack/doc/compi
  
 </component_viewer>
 ```
-Exit the debugger, and return to `Target Options` > `Debug` > `Models Cortex-M Debugger`, and then click on `Manage Component Viewer Description Files`.
+Exit the debugger, and return to `Target Options` > `Debug`, and click `Manage Component Viewer Description Files`.
 
 Click `Add Component Viewer Description File`, and browse for the above. Save the settings.
 
@@ -130,13 +134,15 @@ Logging		goodbye from thread 2
 ```
 ## Observe RTX events in the Event Viewer
 
-Finally, the RTX source contains many Event Recorder annotations. To see these events in the viewer, return to the IDE, and open the `Manage run-time environment` dialog.
+The RTX source contains many Event Recorder annotations. To see these events in the viewer, return to the IDE, and open the `Manage run-time environment` dialog.
 
 Enable `CMSIS` > `RTOS2 (API)` > `Keil RTX5`, but now select `Source` variant. Click `OK` to save. Rebuild the application.
 
 Click `Debug` (`Ctrl+F5`), then `Run` (`F5`) to start the application.
 
 Observe the events in the viewer, filtering as appropriate.
+
+If no RTOS events are visible, verify that they are enabled in `Target Options` > `Debug` > `Manage Component Viewer Description Files`.
 
 ## Comments for Arm Development Studio users
 * Event Recorder viewer functionality is not supported by Arm Debugger.
