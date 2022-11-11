@@ -14,7 +14,7 @@ minutes_to_complete: 30
 # Always measured in minutes. Should be an integer, to complete the learning path (not just read it).
 
 who_is_this_for: >
-    Embedded software developers new to CMSIS or RTOS development
+    Embedded software developers new to RTOS development
 # One sentence that should indicate exactly who the target audience is (developers in X industries using Y tools/software for Z use-case).
 
 learning_objectives: 
@@ -23,6 +23,7 @@ learning_objectives:
 
 prerequisites:
     - Keil MDK or Arm Development Studio is required (MDK recommended)
+    - Some familiarity with CMSIS is assumed
 
 # List any prereqs needed before this learning path can be completed. Can include:
     # Online service accounts                                   (An Amazon Web Services account)
@@ -91,9 +92,7 @@ learning_path_main_page: "yes"  # Indicates this should be surfaced when looking
         # Previous learning paths                                   (The Learning Path: Getting Started with Arm Virtual Hardware)
         # Particular tools/environments already being initialized   (An EC2 instance with AVH installed)
 ---
-[CMSIS](https://www.keil.com/pack/doc/CMSIS/General/html/index.html), is an open standard that enables platform vendors to provide all the necessary set up required for their platform. These are also integrated with other vendor tools, such as [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html) or [MCUXpresso](https://www.nxp.com/design/software/development-software/mcuxpresso-software-and-tools-/mcuxpresso-integrated-development-environment-ide:MCUXpresso-IDE).
 
-In this learning path, we will use one of the supplied Fixed Virtual Platforms with Keil MDK (or Arm Development Studio).
+These instructions are written for [Keil MDK](/install-tools/mdk).
 
-The instructions are written for [Keil MDK](/install-tools/mdk), however the same steps can also be done with [Arm Development Studio](/install-tools/armds).
-
+Much of the learning path can also be followed with [Arm Development Studio](/install-tools/armds). See the comments provided at end of each step where appropriate.
