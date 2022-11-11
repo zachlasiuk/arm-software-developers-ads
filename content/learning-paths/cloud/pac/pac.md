@@ -15,6 +15,8 @@ layout: "learningpathall"
 
 The instructions provided below have been tested on an Ubuntu 22.04 AWS 64-bit Arm EC2 instance (C7g.xlarge) and Ubuntu 20.04.
 
+On the AWS Graviton3 instance, install [GCC](/install-tools/gcc/#native)
+
 ## Basics of Pointer Authentication in Arm v8.3-A architecture
 
 Return Oriented Programming (ROP) is an instance of code reuse attacks where the attacker corrupts the return address stored in the stack to point it to a location with a useful sequence of instructions ending in a branch or return instruction. These sequences of instructions are known as gadgets. By chaining multiple gadgets, the attacker can mislead the program to perform actions that end up in a security compromise. An example of such a security comprimise is spawing an interative shell.
