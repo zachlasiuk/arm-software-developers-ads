@@ -1,5 +1,5 @@
 ---
-title: "Measure performance of Clickhosue on an Arm-based server" 
+title: "Measure performance of Clickhouse on an Arm-based server" 
 
 description: >
     Learn how to benchmark performance of Clickhouse on Arm-based server.
