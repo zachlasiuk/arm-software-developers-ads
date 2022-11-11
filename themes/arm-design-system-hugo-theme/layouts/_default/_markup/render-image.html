@@ -14,4 +14,6 @@
     {{$full_img_path = .Destination}}
 {{end}}
 
-<img src="{{ $full_img_path | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}" style="max-width: 100%; height: auto;" />
+<img src="{{ $full_img_path | safeURL }}" alt="{{ .Text }}" title="{{ .Title }}" 
+    style="max-width: 100%; height: auto;" />
+

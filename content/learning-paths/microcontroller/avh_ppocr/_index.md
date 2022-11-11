@@ -54,7 +54,7 @@ tools:
     # IDEs              (Arm Development Studio, VS_Code)
     # Online tools      (GitHub, Jenkins)
     # General tools     (cbuild)
-    - An EC2 instance with AVH installed
+    - AWS EC2
     - GCC
     - TVM
     - PaddleOCR
