@@ -1,61 +1,11 @@
-/*****************************************************************/
-/*
-*       Content styling                                                              
-*/                  
-/*****************************************************************/
-
-/* Box around content (learning paths and tools) */
-div.content-box {
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 16px;
-
-    margin-top: 16px;
-
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-
-    border-color: var(--arm-dark-grey);
-}
-
-/* Spacing for content, surrounded by markdown-content-div (learning paths and tools) */
-div.markdown-content-div p {
-    margin-left: 16px;
-}
-div.markdown-content-div ul {
-    margin-left: 32px;
-    margin-bottom: 16px;
-}
-div.markdown-content-div h1,
-div.markdown-content-div h2,
-div.markdown-content-div h3,
-div.markdown-content-div h4,
-div.markdown-content-div h5,
-div.markdown-content-div h6 {
-    margin-top: 32px;
-}
-/* Increase h3 font weight to normal to make more readable for regular reading */
-div.markdown-content-div h3 {
-    font-weight: 400;
-}
-
-/* Increase table font */
-table {
-    font-size: var(--ads-font-size-small);
-}
-@media (min-width: 576px) {
-    table {
-        font-size: var(--ads-font-size-large);
-    }
-}
 
 
-/*****************************************************************/
-/*
-*       Mobile styling                                                            
-*/                  
-/*****************************************************************/
+/*****************************************************************
+      
+        Mobile styling 
+
+*****************************************************************/
+
 
 /* List pages table of contents view */
 div.content-head-container-mobile {
