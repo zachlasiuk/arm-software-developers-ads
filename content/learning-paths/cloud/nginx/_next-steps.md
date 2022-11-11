@@ -18,11 +18,11 @@ recommended_path: "/learning-paths/cloud/mongodb/"
 
 further_reading:
     - resource:
-        title: Guidelines for Deploying NGINX Plus on Amazon Web Services
+        title: Guidelines for Deploying Nginx Plus on Amazon Web Services
         link: https://armkeil.blob.core.windows.net/developer/Files/pdf/white-paper/guidelines-for-deploying-nginx-plus-on-aws.pdf
         type: documentation
     - resource:
-        title: Optimize Your NGINX Plus Deployment with Arm-Based Amazon EC2 M6g Instances
+        title: Optimize Your Nginx Plus Deployment with Arm-Based Amazon EC2 M6g Instances
         link: https://www.nginx.com/blog/optimize-nginx-plus-deployment-arm-based-amazon-ec2-m6g-instances/
         type: blog
 
