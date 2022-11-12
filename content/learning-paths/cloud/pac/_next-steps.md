@@ -30,9 +30,9 @@ further_reading:
         link: https://docs.pwntools.com/en/stable/
         type: documentation
     - resource:
-	title: Pointer Authentication on Armv8.3
-	link: https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/pointer-auth-v7.pdf
-	type: documentation
+        title: Pointer Authentication on Armv8.3
+        link: https://www.qualcomm.com/content/dam/qcomm-martech/dm-assets/documents/pointer-auth-v7.pdf
+        type: documentation
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
