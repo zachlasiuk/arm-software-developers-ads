@@ -75,7 +75,7 @@ To enable the systemd service, create a file named **/lib/systemd/system/nginx.s
 
 ```console
 [Unit]
-Description=The NGINX HTTP and reverse proxy server
+Description=The Nginx HTTP and reverse proxy server
 After=syslog.target network-online.target remote-fs.target nss-lookup.target
 Wants=network-online.target
 
