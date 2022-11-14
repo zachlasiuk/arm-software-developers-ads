@@ -1,4 +1,4 @@
-❗️ Please note this repository is only for personal use. Please refer to  https://github.com/zachlas/arm-software-developers-ads for official one.
+❗️ Please note this repository is only for personal use. Please refer to  https://github.com/zachlas/arm-software-developers-ads for more information.
 
 # Arm Software Developers (prototype project)
 
