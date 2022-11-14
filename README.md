@@ -147,4 +147,10 @@ After adding a new learning path and completing your changes, you can run the we
 
 Commit your changes using git.
 
+Before submitting changes make sure `hugo` runs without errors on the command line. 
+
+```console
+hugo
+```
+
 To submit your changes for review, follow the GitHub Fork-and-Pull approach and submit the Pull request with your changes to be reviewed and merged.
