@@ -1,6 +1,28 @@
 /*********************************************************************            
-
         Fonts
+                Heading: Noi Grotesk
+                Subheading: Source Code
+                Body: Lato
+        Background colors
 
 **********************************************************************/
 
+/* Light Theme */
+/****************************************************/
+html[theme='light'] body {
+        background-color: var(--arm-light-grey-alt);
+        
+}
+
+/* Dark Theme */
+/****************************************************/
+html[theme='dark'] body {
+        background-color: var(--arm-color-surface);
+        
+}
+
+/* SW-Hub Theme */
+/****************************************************/
+html[theme='sw-hub'] body {
+        background-color: var(--arm-orange);        
+}
