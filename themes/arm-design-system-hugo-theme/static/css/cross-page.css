@@ -24,5 +24,11 @@ html[theme='dark'] body {
 /* SW-Hub Theme */
 /****************************************************/
 html[theme='sw-hub'] body {
-        background-color: var(--arm-orange);        
+        background-color: var(--arm-light-grey);        
 }
+
+html[theme='sw-hub'] h1,h2,h3,h4,h5,h6 {
+        /*font-family: "Noi Grotesk", sans-serif; */
+}
+
+
