@@ -4,7 +4,7 @@
 # ================================================================================
 
 next_step_guidance: >
-   Your docker container is now ready for use. Why not try to build and run your first embedded image>
+   Your docker container is now ready for use. Use it to build and run an embedded software image with Arm Compiler for Embedded. 
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
 recommended_path: "/learning-paths/embedded/bare-metal/"
@@ -22,18 +22,9 @@ further_reading:
         link: https://docs.docker.com
         type: documentation
     - resource:
-        title: Enter title for resource 2 here
-        link: Enter link for resource 2 here
-        type: Enter type for resource 2 here
-    - resource:
-        title: Enter title for resource 3 here
-        link: Enter link for resource 3 here
-        type: Enter type for resource 3 here
-    - resource:
-        title: Enter title for resource 4 here
-        link: Enter link for resource 4 here
-        type: Enter type for resource 4 here
-
+        title: Learn how to use Docker
+        link: /learning-paths/cross-platform/docker/
+        type: website
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
