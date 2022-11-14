@@ -1,3 +1,5 @@
+❗️ Please note this repository is only for personal use. Please refer to  https://github.com/zachlas/arm-software-developers-ads for more information.
+
 # Arm Software Developers (prototype project)
 
 This prototype site uses a custom Arm theme for [Hugo](https://gohugo.io/) to create a static website with easy navigation and structure for learning-based technical content for Arm software developers. The content is created in markdown and stored on GitHub. GitHub Actions are used to update the website automatically when changes are made.
