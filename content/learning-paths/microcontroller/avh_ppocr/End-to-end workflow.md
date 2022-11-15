@@ -10,7 +10,7 @@ layout: "learningpathall"
 
 # End-to-end workflow
 
-![End-to-end workflow](./Figure3.png#center "Figure 3. End-to-end workflow")
+![End-to-end workflow#center](./Figure3.png "Figure 3. End-to-end workflow")
 
 ## 1. Train an English text recognition model with PaddleOCR
 PaddleOCR provides many practical OCR tools that help users train models and apply them into practice. PaddleOCR uses configuration files(.yml) to control network training and evaluation parameters. In the configuration file, you can set the parameters for building the model, optimizer, loss function, and model pre- and post-processing. PaddleOCR reads these parameters from the configuration file, and then forms a complete training process to complete the model training. Fine-tuning can also be completed by modifying the parameters in the configuration file, which is simple and convenient. Refer to the [Configuration file](https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.5/doc/doc_en/config_en.md) for a more verbose description. 
@@ -88,7 +88,7 @@ python3 tools/infer/predict_rec.py --image_dir="path_to_image/word_116.png" \
 --rec_image_shape="3,32,320"
 ```
 
-![QBHOUSE](./Figure4.png#center "Figure 4. word_116.png (Image source: https://iapr.org/archives/icdar2015/index.html)")
+![QBHOUSE#center](./Figure4.png "Figure 4. word_116.png (Image source: https://iapr.org/archives/icdar2015/index.html)")
 
 We use Figure 4 as a single example of the kind of image you can use to verify the inference results. The recognition results can be seen as follows. It is consistent with the picture text content ‘QBHOUSE’ and has a high confidence score around 0.9867. This indicates that our inference model is ready for the next step.
 
@@ -99,7 +99,7 @@ Predicts of path_to_word_116.png:('QBHOUSE', 0.9867456555366516)
 ## 3. Compile Paddle inference model with TVMC
 We use the deep learning complier [TVM](https://tvm.apache.org/) for model conversion and adaptation. TVM is an open-source deep learning compiler, which is mainly used to solve the adaptability problem of deploying various Deep Learning frameworks on a wide range of hardware targets. Seen in Figure 5, the TVM compiler accepts models written by classic deep learning training frameworks such as PaddlePaddle and converts them into code that can run inference tasks on the target device.
 
-![Schematic diagram of compilation process](./Figure5.png#center "Figure 5. Schematic diagram of compilation process")
+![Schematic diagram of compilation process #center](./Figure5.png "Figure 5. Schematic diagram of compilation process")
 
 We use TVM’s Python application TVMC to compile the model. You can use the following command to compile the Paddle inference model. By specifying `--target=cmsis-nn,c`, the operators supported by Arm’s [CMSIS-NN](https://github.com/ARM-software/CMSIS_5/tree/develop/CMSIS/NN) library will be offloaded to a CMSIS-NN kernel. It can make the best use of underlying Arm hardware acceleration. Otherwise, it falls back to standard C library implementations. By specifying `--target-cmsis-nn-mcpu=cortex-m55` and `--target-c-mcpu=cortex-m55`, it compiles the code that is suitable for running on [Cortex-M55](https://www.arm.com/products/silicon-ip-cpu/cortex-m/cortex-m55) processor. For more specific descriptions of each parameter, you can use the command `tvmc compile --help` after you install the TVM Python package.
 
@@ -129,7 +129,7 @@ After compilation, the model file can be found at the directory specified by par
 ## 4. Deploy on the AVH Corstone-300 platform with Arm Cortex-M55
 Use the ssh command to connect to the AVH AMI instance you launched beforehand, and you can see the terminal interface below. It shows that you have logged in successfully.
 
-![Successfully login page](./Figure6.png#center "Figure 6. Successfully login page")
+![Successfully login page #center](./Figure6.png "Figure 6. Successfully login page")
 
 The steps of model training, exporting, and compiling described in 1-3 can be completed on the local machine or in the AVH AMI environment. Determine it according to your own needs. The complete [sample code](https://github.com/ArmDeveloperEcosystem/Paddle-examples-for-AVH/tree/main/OCR-example), that you can run from the command line, is available to download from [ArmDeveloperEcosystem](https://github.com/ArmDeveloperEcosystem/Paddle-examples-for-AVH) GitHub repository as well as [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR/tree/dygraph/deploy/avh)’s GitHub repository (under the dygraph branch). This makes it easier for developers to experience the whole workflow, especially the deployment.
 
@@ -151,4 +151,4 @@ The [run_demo.sh](https://github.com/ArmDeveloperEcosystem/Paddle-examples-for-A
 
 We can use the image in Figure 4 above (QBHOUSE) as an example to verify the inference results on the AVH Corstone-300 platform with Arm Cortex-M55. The results can be seen as Figure 7 which is highly consistent with the inference results of direct inference on server host. It shows we have successfully deployed PP-OCRv3 English recognition model directly on Arm Cortex-M.
 
-![AVH Corstone-300 with Cortex-M55 inference results](./Figure7.png#center "Figure 7. AVH Corstone-300 with Cortex-M55 inference results")
+![AVH Corstone-300 with Cortex-M55 inference results #center](./Figure7.png "Figure 7. AVH Corstone-300 with Cortex-M55 inference results")

@@ -15,10 +15,10 @@
 {{end}}
 
 <!-- Check if we should center the image and caption-->
-{{$centered := "#center"}}
+{{$center := "#center"}}
 
-<img src="{{ $full_img_path | safeURL }}" alt="Image Alt Text: {{ .Text }}" title="{{ .Title }}" class="content-uploaded-image {{if strings.HasSuffix .Destination $centered}}centered{{end}}" />
+<img src="{{ $full_img_path | safeURL }}" alt='Image Alt Text: {{ replace .Text $center "" }}' title="{{ .Title }}" class="content-uploaded-image {{if strings.HasSuffix .Text $center}}centered{{end}}" />
 {{if .Title}}
-    <p class="content-image-caption {{if strings.HasSuffix .Destination $centered}}centered{{end}}">{{.Title}}</p>
+    <p class="content-image-caption {{if strings.HasSuffix .Text $center}}centered{{end}}">{{.Title}}</p>
 {{end}}
 
