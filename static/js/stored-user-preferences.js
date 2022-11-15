@@ -6,12 +6,12 @@
     	//Check Storage. Keep user preference on page reload
 
 	if (localStorage.getItem('theme')=='dark') {
-    document.querySelector('html').setAttribute('theme', 'light');
-    document.getElementById('prism-code-theme').href='/css/prism-light.css';
+    document.querySelector('html').setAttribute('theme', 'dark');
+    document.getElementById('prism-code-theme').href='/css/prism-dark.css';
 	}
 	else if (localStorage.getItem('theme')=='light') {
     document.querySelector('html').setAttribute('theme', 'light');
-    document.getElementById('prism-code-theme').href='/css/prism-dark.css';
+    document.getElementById('prism-code-theme').href='/css/prism-light.css';
   }
 
 	else if (localStorage.getItem('theme')=='sw-hub') {
