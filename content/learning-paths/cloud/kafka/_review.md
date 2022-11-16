@@ -13,24 +13,28 @@
 review:
     - questions:
         question: >
-            Do most Linux distributions include a performance optimized zlib?
+            Does Kafka run on Arm servers?
         answers:
             - "Yes"
             - "No"
-        correct_answer: 1               
+        correct_answer: 1                    
         explination: >
-            Most Linux distributions include a generic zlib which is not optimized for Arm.
-
+            Kafka is fully supported on 64-bit Arm servers running Linux. 
+               
     - questions:
         question: >
-            What type of functionality may benefit from an optimized zlib?
+            What software is required to run Zookeeper and Kafka?
         answers:
-            - "Data compression"
-            - "Atomic operations"
-        correct_answer: 1                     
+            - "None"
+            - "Arm Assembly"
+            - "Go"
+            - "Java"
+        correct_answer: 4                    
         explination: >
-            Data compression functions in any application may benefit.
-               
+            You will need Java installed.
+
+
+
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

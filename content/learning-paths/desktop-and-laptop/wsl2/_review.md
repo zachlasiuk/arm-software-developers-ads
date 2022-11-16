@@ -13,24 +13,34 @@
 review:
     - questions:
         question: >
-            Do most Linux distributions include a performance optimized zlib?
+            WSL is a way to run Linux binaries for different architectures using instruction translation.
         answers:
-            - "Yes"
-            - "No"
-        correct_answer: 1               
+            - "True"
+            - "False"
+        correct_answer: 2               
         explination: >
-            Most Linux distributions include a generic zlib which is not optimized for Arm.
+            WSL is the Windows Subsystem for Linux and provides a way to run the Linux kernel and applications on computers running Windows.
 
     - questions:
         question: >
-            What type of functionality may benefit from an optimized zlib?
+            Does WSL require VNC to run graphical Linux applications?
         answers:
-            - "Data compression"
-            - "Atomic operations"
-        correct_answer: 1                     
+            - "Yes"
+            - "No"
+        correct_answer: 2                     
         explination: >
-            Data compression functions in any application may benefit.
+            Graphical Linux applications running in WSL automatically show up on the Windows desktop with Windows 11.
                
+    - questions:
+        question: >
+            What is the best way to back up your work in WSL?
+        answers:
+            - "Create a tar file of your home directory and scp it to another machine"
+            - "Use the wsl --export command"
+            - "Copy important files to a tape or CD-ROM"
+        correct_answer: 2                     
+        explination: >
+            The wsl export command will save the entire filesystem as a tar file which can easily be restored with the wsl import command.
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
