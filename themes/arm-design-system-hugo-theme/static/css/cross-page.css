@@ -7,11 +7,26 @@
 
 **********************************************************************/
 
+/* UNIVERSAL */
+/****************************************************/
+div.overlay-styling {
+        background-color: rgba(0,0,0,.75);
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 2;
+}
+
+
+
+
+
 /* Light Theme */
 /****************************************************/
 html[theme='light'] body {
         background-color: var(--arm-light-grey-alt);
-        
 }
 
 /* Dark Theme */

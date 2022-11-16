@@ -33,14 +33,34 @@
     <!-- Search & Results on Right -->
     <div class="c-col">
 
-        <!-- Search bar (and hidden filters on mobile)-->
-        <div class="c-row u-flex">
-            <ads-search id="search-box" class="u-width-100%"></ads-search>
-        </div>
+        <!-- Search (and filter for mobile)-->
+        <div class="u-flex u-justify-content-between c-col c-col-12 u-flex u-position-relative u-width-100% lg:u-width-auto u-margin-bottom-0">
+            <ads-search id="search-box" class="u-margin-top-0 u-width-100%" has-search-button="" placeholder="Search by name">
+            </ads-search>
+            <div>
+                <ads-button id="filter-button" level="tertiary" class="lg:u-hide u-position-relative" type="button" size="default" onclick="mobileFilterClicked(this)">
+                    <i class="fal fa-filter"></i>
+                </ads-button>
 
-        <ads-button level="tertiary" size="default" class="lg:u-hide u-position-relative">
-            <i class="fal fa-filter"></i>
-        </ads-button>
+                <div id="filters-container" class="u-hide"> <!-- on filter click, remove u-hide class -->
+                    <div id="filters-overlay" class="overlay-styling" tabindex="-1">
+                    </div>
+                    <div class="u-margin-top-1/2 u-padding-right-1 u-position-absolute u-width-100%" style="z-index: 5; right: 0px;">
+                        <div id="facets-background">
+                            {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Subjects" "routing" "subjects" "tagnames" .Params.subjects_closed_schema)}} 
+                            {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "OS" "routing" "operatingsystems" "tagnames" .Params.oses_closed_schema)}} 
+                            {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Skill Level" "routing" "skilllevels" "tagnames" (slice "Introductory" "Advanced"))}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Search (and filter for mobile) end-->
+
+
+
+
+
 
         <!-- Current tag bar -->
         <div id="current-tag-bar" class="c-row u-margin-top-1/2" style="min-height: 30px;">
@@ -159,6 +179,7 @@
 
 <!-- Include javascript to filter and search -->
 <script src="/js/search-and-filter/filter-learning-paths.js"></script>
+<script src="/js/search-and-filter/filter-mobile-behavior.js"></script>
 <script src="/js/search-and-filter/search-logic.js"></script>
 <script src="/js/search-and-filter/search-handling.js"></script>
 
