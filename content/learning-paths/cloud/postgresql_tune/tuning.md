@@ -10,6 +10,12 @@ layout: "learningpathall"
 
 In this section we will discuss PostgreSQL tuning parameters.
 
+##  Why Application Performance Tuning is Important
+
+Application tuning allows us to gain performance without scaling our deployment up or out. This also gives us the option to either use the gained performance or to trade it for cost savings by reducing the total amount of compute resources provisioned. Below is a graph that shows how big of a difference performance tuning on PostgreSQL can be.
+
+![Before and after Tuning](BeforeAndAfter.png)
+
 ##  A Note on Tuning
 
 Keep in mind that deployment configurations and the profile of SQL requests that are made by clients will be different. This means there is not a one size fits all set of parameters for PostgreSQL.
@@ -197,7 +203,7 @@ The effect to the planner/optimizer is similar to that of `effective_cache_size`
 
 ### Concurrency Configuration
 
-Increasing parallelism allow us to increase performance or trade that performance for money by reducing the amount of compute provisioned. It's always a good idea to look at parameters related to parallel execution.
+Increasing parallelism allow us to use our available resources more efficiently. It's always a good idea to look at parameters related to parallel execution.
 
 ```
 

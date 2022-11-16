@@ -19,7 +19,6 @@ who_is_this_for: >
 
 learning_objectives:
     - Learn to tune PostgreSQL
-    - Learn to explore performance metrics
 
 # 2-5 bullet points, one sentence each. Should start with a verb (Deploy, Measure) and indicate the value of the objective if possible.
 
