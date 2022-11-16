@@ -6,21 +6,35 @@
 
 *****************************************************************/
 
+/* Basic behavior of overlay and z-indexing components */
+ads-button#filter-button.is-open { z-index: 5;}
 
-/* List pages table of contents view */
+html[theme='dark']   div#facets-background { background-color: var(--arm-color-surface); }
+html[theme='light']  div#facets-background { background-color: var(--arm-light-grey-alt);}
+html[theme='sw-hub'] div#facets-background { background-color: var(--arm-light-grey-alt);}
+
+
+
+/************ 
+    Content pages only (non-list)
+*************/
+
+
+
+/* overall mobile container */
 div.content-head-container-mobile {
     position:sticky; 
     top:0px;
-    z-index: 1000;
+    z-index: 4;
     width: 100%;
 }
 
-div.content-head-container-mobile.open {
-    height:100vh;  /* to debug, could work */
-    overflow-y: scroll;
-}
+/* Sticky header div, not including expanded nav pane */
+div.content-head-mobile {
+    /* always give position  and high z-index as always prominient */
+    position: relative;
+    z-index: 4;
 
-div.content-header-mobile {
     display: flex;
 
     padding-left: 8px;
@@ -35,16 +49,27 @@ div.content-header-mobile {
 
     background-color: var(--arm-light-grey);
 }
-html[theme='dark'] div.content-header-mobile {
+html[theme='dark'] div.content-head-mobile {
     background-color: var(--arm-color-overlay-light);
 }
 
-.content-header-btn-mobile {
+/* sticky header icon and text styling */
+ads-button.content-header-btn-mobile {
     --ads-button-background-color-tertiary: var(--arm-blue);
     cursor: pointer;
+
 }
 .content-header-txt-mobile {
     font-weight: bold;
+}
+
+/* ensure dropdown menu appears in the right location and is visible */
+div.facets-positioning-container {
+    position: absolute;
+    width: 100%;
+    z-index: 5; 
+    
+    right: 0px;
 }
 
 .content-individual-mobile {

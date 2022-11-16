@@ -45,7 +45,7 @@
                 <div id="filters-container" class="u-hide"> <!-- on filter click, remove u-hide class -->
                     <div id="filters-overlay" class="overlay-styling" tabindex="-1">
                     </div>
-                    <div class="u-margin-top-1/2 u-padding-right-1 u-position-absolute u-width-100%" style="z-index: 5; right: 0px;">
+                    <div class="u-margin-top-1/2 facets-positioning-container">
                         <div id="facets-background">
                             {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Subjects" "routing" "subjects" "tagnames" .Params.subjects_closed_schema)}} 
                             {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "OS" "routing" "operatingsystems" "tagnames" .Params.oses_closed_schema)}} 
@@ -179,7 +179,7 @@
 
 <!-- Include javascript to filter and search -->
 <script src="/js/search-and-filter/filter-learning-paths.js"></script>
-<script src="/js/search-and-filter/filter-mobile-behavior.js"></script>
+<script src="/js/search-and-filter/filter-and-navigate-mobile-behavior.js"></script>
 <script src="/js/search-and-filter/search-logic.js"></script>
 <script src="/js/search-and-filter/search-handling.js"></script>
 

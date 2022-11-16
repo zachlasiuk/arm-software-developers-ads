@@ -1,5 +1,13 @@
 
 
+
+
+
+
+
+/* Used in learning path navigation view */
+/* Used in learning path list view */
+
 function mobileFilterClicked(btn_element) {
     if (btn_element.classList.contains('is-open')) {
         // Close filter options.
