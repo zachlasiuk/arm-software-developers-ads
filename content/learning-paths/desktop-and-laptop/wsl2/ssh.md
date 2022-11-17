@@ -1,7 +1,7 @@
 ---
 title: SSH to WSL
 
-weight: 4
+weight: 5
 layout: learningpathall
 ---
 
@@ -38,7 +38,7 @@ Start the SSH server.
 sudo /etc/init.d/ssh start
 ```
 
-The SSH server can also be started automatically using systemd. Refer to the [systemd](/learning-paths/desktop-and-laptop/wsl2/systemd/) information in the next section.
+The SSH server can also be started automatically using systemd. Refer to the [systemd](/learning-paths/desktop-and-laptop/wsl2/systemd/) information.
 
 Once the SSH server is started, it's possible to ssh from the Windows Command Prompt to WSL. 
 
@@ -63,13 +63,20 @@ Do the editing from the command line:
 sudo sed -i -E 's,^#?Port.*$,Port 2022,' /etc/ssh/sshd_config
 ```
 
+The SSH server must be restarted for the new port to be used.
+
+```bash
+sudo /etc/init.d/ssh stop
+sudo /etc/init.d/ssh start
+```
+
+Now use -p to set the new port. 
+
 ```cmd
 ssh user@localhost -p 2022
 ```
 
 There are two options to SSH from another machine on the local network.
-
-Both of these options need more information. 
 
 # Bridged networking
 
@@ -83,9 +90,36 @@ For more information refer to the [short WSL bridging and networking reference](
 
 Another way to connect to WSL via SSH is to forward or proxy the Windows port for SSH, such as 2022, to the WSL instance. 
 
-```console
-netsh interface portproxy add v4tov4 listenport=$port listenaddress=$addr connectport=$port connectaddress=$remoteport
+Before starting, find the IP address of the WSL instance.
+
+```cmd
+wsl hostname -I
 ```
+
+Save the IP address. 
+
+First, run this command at a PowerShell prompt with Administrator privilege to allow port 2022 from outside Windows.
+
+```cmd
+New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd) for WSL' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 2022
+```
+
+Next, run this command at a Windows Command Prompt with Administrator privilege. Substitute the IP address with the one found using the `wsl hostname` command above for the connectaddress. This forwards port 2022 to the WSL IP address.
+
+```console
+netsh interface portproxy add v4tov4 listenport=2022 listenaddress=0.0.0.0 connectport=2022 connectaddress=172.18.164.187
+```
+
+Try to ssh from another machine on the local network. 
+
+Get the IP address of Windows.
+
+```cmd
+ipconfig
+```
+
+From another local machine SSH to the Windows IP on port 2022 and it should forward to WSL running on that Windows computer. 
+
 
 
 
