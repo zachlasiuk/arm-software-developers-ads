@@ -32,7 +32,8 @@ operatingsystems:
 shared_path: true
 shared_between:
     - Server and Cloud
-    - Mobile
+    - Desktop and Laptop
+    - Embedded
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
