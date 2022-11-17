@@ -1,8 +1,8 @@
 ---
 # User change
-title: "Enter title for first How-to guide in Learning path"
+title: "Next Steps - complete the journey"
 
-weight: 3 # 1 is first, 2 is second, etc.
+weight: 5 # 1 is first, 2 is second, etc.
 
 # Do not modify these elements
 layout: "learningpathall"

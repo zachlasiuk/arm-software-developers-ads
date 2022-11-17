@@ -68,10 +68,7 @@ operatingsystems:
     # OSes              (Linux, Windows, macOS, FreeRTOS, Bare-metal)
     - Linux
 
-subjects:
-    # Unique list per main topic. Select from existing list.
-    - Databases
-    - Web Back-end
+subjects: Database
 
 developerprograms:
     - Add your tag here
