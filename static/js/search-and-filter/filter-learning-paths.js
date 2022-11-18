@@ -33,7 +33,8 @@ function removeFacet(tag) {
         const checkbox_element = document.querySelectorAll('ads-checkbox.'+tag)[0]
         checkbox_element.value().then((value) => { 
             if (value === true) {
-                // uncheck it. NOT WORKING EXACTLY, but close enough.
+                // uncheck it. NOT WORKING
+                //>>>>????????????????????????????????????????????????????? ADS issue
                 checkbox_element.removeAttribute('checked');
             }
         });
@@ -41,7 +42,7 @@ function removeFacet(tag) {
     // Apply search and filters to current parameters
         // deal with ads promise
         document.getElementById('search-box').value().then((value) => { 
-             results_to_hide = applySearchAndFilters(all_path_cards, value); // apply active search & filter terms to the specified divs
+             results_to_hide = applySearchAndFilters(all_path_cards, value, 'paths'); // apply active search & filter terms to the specified divs
              hideElements(all_path_cards,results_to_hide);
              updateShownNumber();                  // Update UI telling how many are displayed
             },
@@ -80,7 +81,7 @@ function addFacet(element) {
      // Apply search and filters to current parameters
         // deal with ads promise
         document.getElementById('search-box').value().then((value) => { 
-             results_to_hide = applySearchAndFilters(all_path_cards, value); // apply active search & filter terms to the specified divs
+             results_to_hide = applySearchAndFilters(all_path_cards, value, 'paths'); // apply active search & filter terms to the specified divs
              hideElements(all_path_cards,results_to_hide);
              updateShownNumber();                  // Update UI telling how many are displayed
             },
