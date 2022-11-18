@@ -9,8 +9,6 @@ layout: "learningpathall"
 
 ---
 
----
-
 ## Prerequisites
 
 * 7 Physical machines or 7 cloud nodes with Ubuntu/Debian installed. We need 3 Kafka nodes, 3 Zookeeper nodes, and 1 client node.
