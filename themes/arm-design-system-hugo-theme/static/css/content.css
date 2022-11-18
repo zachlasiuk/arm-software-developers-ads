@@ -9,7 +9,6 @@
             LP      normal content
             LP      review
             LP      next steps            
-            Tool/LP mobile headers
 */
 
 
@@ -31,7 +30,12 @@ div.content-box {
     border-color: var(--arm-dark-grey);
 }
 
+
+
 /* Spacing for content, surrounded by markdown-content-div (learning paths and tools) */
+div.markdown-content-div {
+    padding-top: 16px; /* padding at top by default */
+}
 div.markdown-content-div p {
     margin-left: 16px;
 }
@@ -39,12 +43,14 @@ div.markdown-content-div ul {
     margin-left: 32px;
     margin-bottom: 16px;
 }
-div.markdown-content-div h1,
-div.markdown-content-div h2,
-div.markdown-content-div h3,
-div.markdown-content-div h4,
-div.markdown-content-div h5,
-div.markdown-content-div h6 {
+
+/* If a header is the first child of markdown-content-div, it should add no extra padding (already done by markdown-content-div for all) */
+div.markdown-content-div h1:not(:first-child),
+div.markdown-content-div h2:not(:first-child),
+div.markdown-content-div h3:not(:first-child),
+div.markdown-content-div h4:not(:first-child),
+div.markdown-content-div h5:not(:first-child),
+div.markdown-content-div h6:not(:first-child) {
     margin-top: 32px;
 }
 /* Increase h3 font weight to normal to make more readable for regular reading */
