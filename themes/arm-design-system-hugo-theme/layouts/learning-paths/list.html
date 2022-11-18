@@ -16,7 +16,7 @@
 
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1 u-padding-bottom-2-1/2">
     <!-- Filter bar on left -->
-    <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="max-width: 320px;">
+    <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 320px; max-width: 320px;">
         <h3 class="u-margin-top-0">Filter</h3>
         <!-- Subjects, CLOSED SCHEMA -->
         {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Subjects" "routing" "subjects" "tagnames" .Params.subjects_closed_schema)}} 

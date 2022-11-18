@@ -6,6 +6,17 @@
 
 *****************************************************************/
 
+div.overlay-styling {
+    background-color: rgba(0,0,0,.75);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+
 /* Basic behavior of overlay and z-indexing components */
 ads-button#filter-button.is-open { z-index: 5;}
 
