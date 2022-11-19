@@ -41,3 +41,55 @@ echo ‘hello world’
 ```bash { command_line=“root@localhost | 2-5” }
 echo ‘hello world’
 ```
+
+&nbsp;  
+
+## Code Panes  
+
+
+Adding a code pane, for code dependent on OS, architecture, or similar. Code panes are incompatible with the other forms of code styling.
+
+Code pane example with language selector: (PROBLEM WITH NOT HAVING A SPACE HERE, LEADS TO ISSUES!!! IF TABPANE IS NEXT TO TEXT ABOVE IT WON'T WORK RIGHT.)
+
+{{< tabpane code=true >}}
+  {{< tab header="Python" lang="python">}}
+print('hello world')
+  {{< /tab >}}
+  {{< tab header="Bash" lang="bash">}}
+echo 'hello world'
+  {{< /tab >}}
+{{< /tabpane >}}
+
+&nbsp;  
+
+Example with line highlighting
+
+{{< tabpane code=true >}}
+  {{< tab header="Python" lang="python" highlight="2-3">}}
+print('hello world')
+print('higlight me')
+print('and also me')
+  {{< /tab >}}
+  {{< tab header="Bash" lang="bash">}}
+echo 'hello world'
+echo 'highlight me'
+echo 'not me'
+echo 'but me'
+  {{< /tab >}}
+{{< /tabpane >}}
+
+&nbsp;  
+
+
+{{< tabpane code=true >}}
+  {{< tab header="Ubuntu 22.04" >}}
+sudo apt-get install jq minicom make cmake gdb-multiarch automake autoconf libtool libftdi-dev libusb-1.0-0-dev pkg-config clang-format -y
+  {{< /tab >}}
+  {{< tab header="Ubuntu 20.04" >}}
+sudo apt-get install jq minicom make gdb-multiarch automake autoconf libtool libftdi-dev libusb-1.0-0-dev pkg-config clang-format -y
+sudo snap install cmake --classic
+  {{< /tab >}}
+  {{< tab header="Raspberry Pi OS" >}}
+Nothing more to install!
+  {{< /tab >}}
+{{< /tabpane >}}

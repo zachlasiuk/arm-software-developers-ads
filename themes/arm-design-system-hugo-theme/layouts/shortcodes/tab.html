@@ -14,7 +14,7 @@
 {{ $tab = merge $tab (dict "language" ($.Get "lang")) }}
 {{ end }}
 {{ with $.Get "highlight" }}
-{{ $tab = merge $tab (dict "highlight" ($.Get "highlight")) }}
+{{ $tab = merge $tab (dict "highlight_lines" ($.Get "highlight")) }}
 {{ end }}
 {{ with $.Inner }}
 <!-- Trim any leading and trailing newlines from .Inner, this avoids

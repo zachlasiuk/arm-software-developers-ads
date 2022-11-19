@@ -5,8 +5,8 @@
   {{- range $index, $element := $.Scratch.Get "tabs" -}}
     <div slot="content" data-id="tab-{{- $.Ordinal -}}-slot-{{$index}}">
       <div class="code-toolbar">
-        <pre class="language-en">
-          <code class="language-en">
+        <pre class="language-en" {{if $element.highlight_lines}} data-line={{$element.highlight_lines}} {{end}}>
+          <code class="{{if $element.language}}language-{{$element.language}}{{else}}language-en{{end}}">
             {{.content}}
           </code>
         </pre>
