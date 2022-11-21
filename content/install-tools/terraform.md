@@ -53,4 +53,10 @@ unzip terraform_${TER_VER}_linux_arm64.zip
 sudo cp terraform /usr/local/bin/
 ```
 
+Confirm the executable is available.
+
+```bash { target="ubuntu:latest" }
+terraform version
+```
+
 Visit the [Terraform documentation](https://developer.hashicorp.com/terraform/docs) for more information. 
