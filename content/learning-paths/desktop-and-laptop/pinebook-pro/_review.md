@@ -13,34 +13,33 @@
 review:
     - questions:
         question: >
-            WSL is a way to run Linux binaries for different architectures using instruction translation.
+            Arch is a rolling-release OS, or a long term support OS
         answers:
-            - "True"
-            - "False"
-        correct_answer: 2               
+            - "rolling-release OS"
+            - "long term support OS"
+        correct_answer: 1               
         explination: >
-            WSL is the Windows Subsystem for Linux and provides a way to run the Linux kernel and applications on computers running Windows.
+            Arch keeps up to date always using the latest available version of the kernel
 
     - questions:
         question: >
-            Does WSL require VNC to run graphical Linux applications?
+            i3 can be installed on a fresh Arch Linux ARM install without requiring any additional packages or software
         answers:
-            - "Yes"
-            - "No"
+            - "True"
+            - "False"
         correct_answer: 2                     
         explination: >
-            Graphical Linux applications running in WSL automatically show up on the Windows desktop with Windows 11.
+            For i3 to work on a fresh Arch Linux ARM install it requires display packages, a dynamic menu package, and a terminal emulator at a minimum
                
     - questions:
         question: >
-            What is the best way to back up your work in WSL?
+            Neovim is the only editor that is a good choice for the Pinebook Pro
         answers:
-            - "Create a tar file of your home directory and scp it to another machine"
-            - "Use the wsl --export command"
-            - "Copy important files to a tape or CD-ROM"
+            - "True"
+            - "False"
         correct_answer: 2                     
         explination: >
-            The wsl export command will save the entire filesystem as a tar file which can easily be restored with the wsl import command.
+            Neovim is only one choice out of many that can be used to develop on the Pinebook Pro, and it really comes down to personal preference
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

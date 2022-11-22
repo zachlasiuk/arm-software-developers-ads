@@ -66,7 +66,7 @@ pip3 install pynvim
 nvim init.vim
 ```
 
-* Copy the following and paste it into the file. Feel free to tweak any settings to your preferences
+* Copy the following and paste it into the file. Feel free to tweak any settings to your preferences. These were adapted from https://medium.com/geekculture/neovim-configuration-for-beginners-b2116dbbde84 
 ```
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
@@ -89,9 +89,6 @@ set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
-" set spell                 " enable spell check (may need to download language package)
-" set noswapfile            " disable creating swap file
-" set backupdir=~/.cache/vim " Directory to store backup files.
 
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
  Plug 'dracula/vim'
