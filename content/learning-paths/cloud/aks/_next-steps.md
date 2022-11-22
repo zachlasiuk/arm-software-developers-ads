@@ -4,11 +4,11 @@
 # ================================================================================
 
 next_step_guidance: >
-    We recommend you continue learning about porting cloud applications to the Arm architecture for increased performance and cost savings. The learning path on MongoDB is a great next step.
+    We recommend you continue learning about deploying applications on Arm. 
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/cloud/mongodb/"
-# Link to the next learning path being recommended.
+recommended_path: "/learning-paths/cloud/memcached/"
+# Link to the next learning path being recommended(For example this could be /learning-paths/cloud/mongodb).
 
 
 # further_reading links to references related to this path. Can be:
@@ -18,21 +18,26 @@ recommended_path: "/learning-paths/cloud/mongodb/"
 
 further_reading:
     - resource:
-        title: x265 Documentation
-        link: https://x265.readthedocs.io/en/master/
+        title: Azure Kubernetes Service on Arm based Ampere Altra processors
+        link: https://community.arm.com/arm-community-blogs/b/infrastructure-solutions-blog/posts/aks-on-arm-based-ampere
+        type: blog
+    - resource:
+        title: AKS documentation
+        link: https://docs.microsoft.com/en-us/azure/aks/
         type: documentation
     - resource:
-        title: Ampere Altra Max Delivers Sustainable High-Resolution H.265 Encoding
-        link: https://community.arm.com/arm-community-blogs/b/infrastructure-solutions-blog/posts/ampere-altra-max-delivers-sustainable-high-resolution-h-265-video-encoding-without-compromise
-        type: blog
+        title: Azure Developer documentation
+        link: https://docs.microsoft.com/en-us/azure/developer/
+        type: documentation
     - resource:
-        title: Optimized Video Encoding with FFmpeg on AWS Graviton Processors
-        link: https://aws.amazon.com/blogs/opensource/optimized-video-encoding-with-ffmpeg-on-aws-graviton-processors/
-        type: blog
+        title: Kubernetes documentation
+        link:  https://kubernetes.io/docs/home/
+        type: documentation
     - resource:
-        title: OCI Ampere A1 Compute instances can significantly reduce video encoding costs versus modern CPUs
-        link: https://community.arm.com/arm-community-blogs/b/operating-systems-blog/posts/oracle-cloud-infrastructure-arm-based-a1
-        type: blog
+        title: Terraform Azure Providers documentation
+        link: https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/
+        type: documentation
+
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

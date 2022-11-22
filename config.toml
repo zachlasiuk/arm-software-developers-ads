@@ -55,5 +55,5 @@ github_branch= "main"
 
 # For metadata posting on socials
   title = 'Arm Learning Paths'
-  description = 'Text about my cool site test'
+  description = 'Learn about software development and tools for all types of Arm platforms'
   image = '/img/logo.png'

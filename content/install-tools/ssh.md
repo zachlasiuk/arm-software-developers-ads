@@ -136,7 +136,7 @@ To use SSH without specifying -i <private_key> every time create an SSH configur
 Edit the file ~/.ssh/config on the local machine
 
 Pick a name for the remote machine, such as myserver, add the public IP address or DNS name as the Hostname.
-User is the username on the remote machien and IdentityFile is the path to the private key on the local machine. 
+User is the username on the remote machine and IdentityFile is the path to the private key on the local machine. 
 
 ```console
 Host myserver
