@@ -66,9 +66,9 @@
 
             </div>
 
-            <div class="content-box markdown-content-div">
-                <!-- Multi-tool easy routing to new pages, ONLY for main multi_install page -->
-                {{if .Params.multi_install}}
+            <!-- Multi-tool easy routing to new pages, ONLY for main multi_install page -->
+            {{if .Params.multi_install}}
+                <div class="content-box markdown-content-div">
                     <div class="c-row">
                         <div class="c-col">
                             <h3>Select a specific version of {{.Title}} to install:</h3>
@@ -86,9 +86,8 @@
                             </div>
                         </div>
                     </div>
-                {{end}}
-
-            </div>
+                </div>
+            {{end}}
 
 
         </div>

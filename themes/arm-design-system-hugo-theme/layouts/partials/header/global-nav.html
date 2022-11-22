@@ -159,40 +159,51 @@
         link: '/about',
       },
     ];
-
-    const data = [
+    
+    const contextualIcons = [
       {
-        id: 'example-dropdown',
-        label: 'Arm Developer Community Sites',
-        items: [
-          {
-            id: 'example-dropdown__item-1',
-            label: 'Arm Developer Program',
-            link: 'https://www.arm.com/resources/developer-program',
-          },
-          {
-            id: 'example-dropdown__item-2',
-            label: 'Twitter',
-            link: 'https://twitter.com/armsoftwaredev',
-          },
-          {
-            id: 'example-dropdown__item-3',
-            label: 'YouTube',
-            link: 'https://www.youtube.com/c/armsoftwaredevelopers',
-          },
-          {
-            id: 'example-dropdown__item-4',
-            label: 'Discord',
-            link: 'https://discord.com/channels/839248077487472640/1026578776055894067',
-          },
-        ],
+        id: 'icon-discord',
+        label: 'Discord',
+        icon: 'fab fa-discord',
+        link: {
+          href: 'https://discord.com/channels/839248077487472640/852241056275103785',
+          target: '_blank',
+        },
       },
-     
+      {
+        id: 'icon-github',
+        label: 'Github',
+        icon: 'fab fa-github',
+        link: {
+          href: 'https://github.com/ArmDeveloperEcosystem',
+          target: '_blank',
+        },
+      },
+      {
+        id: 'icon-twitter',
+        label: 'Twitter',
+        icon: 'fab fa-twitter',
+        link: {
+          href: 'https://twitter.com/armsoftwaredev?lang=en',
+          target: '_blank',
+        },
+      },
+      {
+        id: 'icon-youtube',
+        label: 'Youtube',
+        icon: 'fab fa-youtube',
+        link: {
+          href: 'https://www.youtube.com/c/armsoftwaredevelopers',
+          target: '_blank',
+        },
+      },
     ];
 
     const globalNav = document.getElementById('global-nav-example-default');
-    globalNav.globalData = data;
+    //globalNav.globalData = data;
     globalNav.contextualData = contextualData;
+    globalNav.contextualIcons = contextualIcons;
+
     globalNav.actions = actions;
     globalNav.logo = logo;
 
@@ -237,13 +248,16 @@
         if (navDisplaySetting === "none") {
           localStorage.removeItem('fullHeight');
           globalNav.contextualData = contextualData;  // Show seoncary nav on Global Nav         
+          globalNav.contextualIcons = contextualIcons;  // Show seoncary nav on Global Nav         
           document.getElementById("expanded-masthead").removeAttribute('hidden'); // Show title
           document.getElementById("arm-footer").removeAttribute('hidden');      // Show footer
           document.getElementById("only-breadcrumb-masthead").setAttribute('hidden',true); // Hide only breadcrumbs
         }
         else {
           localStorage.setItem('fullHeight', 'true');      //Save user preference in storage
-          globalNav.contextualData = [];  // Hide seoncary nav on Global Nav         
+          globalNav.contextualData = [];  // Hide seoncary nav on Global Nav     
+          globalNav.contextualIcons = [];  // Show seoncary nav on Global Nav         
+   
           document.getElementById("expanded-masthead").setAttribute('hidden',true); // Hide title
           document.getElementById("arm-footer").setAttribute('hidden',true);      // Hide footer
           document.getElementById("only-breadcrumb-masthead").removeAttribute('hidden'); // Show just breadcrumbs
@@ -268,3 +282,13 @@
           document.querySelector('#search-box-tools-global-nav').searchSubmitHandler = searchSubmit_Tools;
       })();
 </script>
+
+
+
+
+
+
+
+
+
+
