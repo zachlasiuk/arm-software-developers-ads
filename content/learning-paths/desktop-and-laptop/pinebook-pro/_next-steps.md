@@ -4,10 +4,10 @@
 # ================================================================================
 
 next_step_guidance: >
-    We recommend you continue learning about porting cloud applications to the Arm architecture for increased performance and cost savings. The learning path on MongoDB is a great next step.
+    Join the community of Arm Developers at https://discord.gg/armsoftwaredev, https://arm.com/developerprogram, https://www.reddit.com/r/ArmSoftwareDev/, https://twitter.com/ArmSoftwareDev, https://youtube.com/c/ArmSoftwareDevelopers, https://github.com/armdeveloperecosystem, https://developer.arm.com/, and http://community.arm.com/
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/cloud/geekbench/"
+recommended_path: "/learning-paths/microcontroller/rpi_pico/"
 # Link to the next learning path being recommended.
 
 
@@ -18,13 +18,17 @@ recommended_path: "/learning-paths/cloud/geekbench/"
 
 further_reading:
     - resource:
-        title: Learn about Windows on Arm
-        link: https://learn.microsoft.com/en-us/windows/arm/overview
+        title: Arch Linux ARM
+        link: https://archlinuxarm.org/
         type: documentation
     - resource:
-        title: Arm64 Visual Studio
-        link: https://devblogs.microsoft.com/visualstudio/arm64-visual-studio/
-        type: blog
+        title: i3 windows manager documentation
+        link: https://i3wm.org/docs/
+        type: documentation
+    - resource:
+        title: Pinebook Pro Wiki
+        link: https://wiki.pine64.org/wiki/Pinebook_Pro
+        type: documentation
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

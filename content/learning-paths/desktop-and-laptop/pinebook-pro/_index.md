@@ -7,7 +7,7 @@ description: >
 minutes_to_complete: 120 
 
 who_is_this_for: >
-    Anyone who wants to use the Pinebook Pro for development in a way that makes it feel faster than when using a desktop environment.
+    Anyone who wants to use the Pinebook Pro for development in a way that feels fast and snappy
 
 learning_objectives:
     - Install and configure Arch Linux ARM
