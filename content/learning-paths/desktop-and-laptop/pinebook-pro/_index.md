@@ -1,5 +1,5 @@
 ---
-title: "Setting up the Pinebook Pro with Arch and i3"
+title: "Setting up the Pinebook Pro with Arch and i3 for use as a development machine"
 
 description: >
     Learn the steps to setup the Pinebook Pro with Arch Linux ARM, i3 windows manager, and developer tools
