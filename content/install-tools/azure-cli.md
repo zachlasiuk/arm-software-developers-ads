@@ -12,6 +12,8 @@ tool_install: true              # DO NOT MODIFY. Always true for tool installs
 layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
 
+{{< test >}}
+
 [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/) is a cross-platform command-line tool that can be installed locally on development computers. Azure CLI is used to connect to Azure and execute administrative commands on Azure resources. 
 
 It is available for a variety of operating systems and Linux distributions and has multiple ways to install it. 
@@ -26,11 +28,10 @@ This article provides a quick solution to install Azure CLI for Ubuntu on Arm.
 
 Confirm you are using an Arm machine by running:
 
-```bash
+```bash { command_line="user@localhost | 2" }
 uname -m
+aarch64
 ```
-
-The result should be `aarch64` 
 
 ## Download and Install
 
