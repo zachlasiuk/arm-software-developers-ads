@@ -49,15 +49,10 @@ Download and install Azure CLI.
 pip install azure-cli
 ```
 
-The pip install updates $HOME/.profile with the path the `az` executable.
+The pip install updates $HOME/.profile with the path the `az` executable. Check the executable is available by printing the version.
 
 ```bash { target="ubuntu:latest" }
 source $HOME/.profile
-```
-
-Confirm the executable is available.
-
-```bash { target="ubuntu:latest" }
 az version
 ```
 

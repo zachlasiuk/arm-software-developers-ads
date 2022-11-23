@@ -52,10 +52,10 @@ Install the executable in a common location for all users.
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 
-Confirm the executable is available.
+Confirm the executable is available and get the version of the client:
 
 ```bash { target="ubuntu:latest" }
-kubectl version
+kubectl version -o json --client
 ```
 
 Visit the [kubectl documentation](https://kubernetes.io/docs/reference/kubectl/) for more information. 
