@@ -5,8 +5,6 @@ test_images:
 - ubuntu:latest
 test_link: null
 test_maintenance: true
-test_status:
-- failed
 title: Kubectl
 tool_install: true
 ---
