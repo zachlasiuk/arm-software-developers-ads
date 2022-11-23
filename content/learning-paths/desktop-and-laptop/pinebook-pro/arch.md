@@ -9,7 +9,7 @@ layout: "learningpathall"
 
 ## Pre-requisites
 
-You will need a Pinebook Pro and a microSD card of at least 8GB and class 10 or faster. If you are doing the initial microSD card setup on a second computer be aware the instructions are written for Linux. MacOs can be used, but the steps required to partition will be different as fdisk on MacOs is different and as such will be outside the scope of these instructions.
+You will need a Pinebook Pro and a microSD card of at least 8GB and class 10 or faster. If you are doing the initial microSD card setup on a second computer be aware the instructions are written for Linux. macOS can be used, but the steps required to partition will be different as fdisk on macOS is different and as such will be outside the scope of these instructions.
 
 Basic command line knowledge will be helpful, but the vast majority of commands are written in the instructions.
 

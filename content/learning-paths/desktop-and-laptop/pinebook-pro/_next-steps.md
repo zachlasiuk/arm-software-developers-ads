@@ -4,10 +4,10 @@
 # ================================================================================
 
 next_step_guidance: >
-    Join the community of Arm Developers at https://discord.gg/armsoftwaredev, https://arm.com/developerprogram, https://www.reddit.com/r/ArmSoftwareDev/, https://twitter.com/ArmSoftwareDev, https://youtube.com/c/ArmSoftwareDevelopers, https://github.com/armdeveloperecosystem, https://developer.arm.com/, and http://community.arm.com/
+Find out more about developing on Arm with Cloud Service Providers.
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/microcontroller/rpi_pico/"
+recommended_path: "/learning-paths/cloud/providers/"
 # Link to the next learning path being recommended.
 
 
