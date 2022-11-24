@@ -10,6 +10,7 @@ title: Use perf to analyze zlib performance
 weight: 4
 ---
 
+{{< test >}}
 
 ## Pre-requisites
 

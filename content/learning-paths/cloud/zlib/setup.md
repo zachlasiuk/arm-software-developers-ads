@@ -6,9 +6,16 @@ weight: 2
 
 layout: "learningpathall"
 
+test_maintenance: true
+test_images:
+- ubuntu:latest
+test_status:
+- passed
+test_link: null
 
 ---
 
+{{< test >}}
 
 ## Pre-requisites
 
@@ -27,7 +34,7 @@ Cloudflare zlib is one version which has optimizations included. There are other
 All recent Arm servers and most Armv8.0-A and above processors have support for CRC instructions. 
 
 To check if a Linux system has support use the lscpu command and look for crc32 in the listed flags.
-```console
+```bash { ret_code="0" }
 lscpu | grep crc32
 ```
 
@@ -37,18 +44,18 @@ If the machine is confirmed to include crc32 it may benefit from zlib-cloudflare
 
 Some Linux system may already make use of crc32 with the default library. If the default zlib is already optimized, then using zlib-cloudflare may not have any impact on performance. 
 
+If zlib is not installed, you can install it with the following command on Ubuntu, as well as additional packages for this learning path. 
+
+```bash
+sudo apt install -y libzstd1 build-essential git
+```
+
 Ubuntu and Debian Linux distributions put zlib in /usr/lib/aarch64-linux-gnu
 
 To check if there are any CRC instructions in a library use objdump to disassemble and look for crc32 instructions. 
 
-```console
+```bash
 objdump -d /usr/lib/aarch64-linux-gnu/libz.so.1 | awk -F" " '{print $3}' | grep crc32 | wc -l
-```
-
-If objdump is not found install it. 
-
-```console
-sudo apt install -y build-essential
 ```
 
 If the result is 0 then there is no crc32 instructions used in the library. 
@@ -59,7 +66,7 @@ If there are no crc32 instructions in libz then zlib-cloudflare may help applica
 
 To build and install zlib-cloudflare navigate to an empty directory and use these commands.
 
-```console
+```bash
 mkdir tmp ; pushd tmp
 git clone https://github.com/cloudflare/zlib.git
 cd zlib && ./configure 
@@ -82,7 +89,7 @@ Since zlib is a shared library there are different ways to configure its usage.
 
 Below is a simple C program to demonstrate zlib configuration.
 
-```C
+```C { file_name="test.c" }
 #include <stdio.h>
 #include <stdlib.h>
 #include "zlib.h"
@@ -106,13 +113,13 @@ int main()
 
 Save the text above as a file test.c and compile the example.
 
-```console
+```bash
 gcc test.c -o test -lz
 ```
 
 Run the program and see the version.
 
-```console
+```bash
 ./test
 ```
 
@@ -122,7 +129,7 @@ The printed version will be something like:
 ```
 
 Use ldd to see the location of the shared library.
-```console
+```bash
 ldd ./test
 ```
 
@@ -138,7 +145,7 @@ libc.so.6 => /lib/aarch64-linux-gnu/libc.so.6 (0x0000ffffab8df000)
 
 To run test with zlib-cloudflare instead of the default.
 
-```console
+```bash
 LD_PRELOAD=/usr/local/lib/libz.so ./test
 ```
 

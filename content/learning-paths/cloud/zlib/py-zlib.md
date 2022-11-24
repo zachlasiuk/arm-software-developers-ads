@@ -10,6 +10,7 @@ title: Improve python application performance using Cloudflare zlib
 weight: 3
 ---
 
+{{< test >}}
 
 ## Pre-requisites
 
