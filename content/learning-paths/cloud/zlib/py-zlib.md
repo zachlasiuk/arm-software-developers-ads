@@ -1,16 +1,13 @@
 ---
-# User change
-title: "Improve python application performance using Cloudflare zlib"
-
-test_maintenance: true
+layout: learningpathall
 test_images:
 - ubuntu:latest
-
+test_link: https://github.com/armflorentlebeau/arm-software-developers-ads/actions/runs/3540052189
+test_maintenance: true
+test_status:
+- passed
+title: Improve python application performance using Cloudflare zlib
 weight: 3
-
-layout: "learningpathall"
-
-
 ---
 
 
@@ -80,4 +77,3 @@ time LD_PRELOAD=/usr/local/lib/libz.so python ./zip.py
 Notice the time saved using zlib-cloudflare.
 
 The next section introduces how to use Linux perf to profile applications and look for zlib activity.
-

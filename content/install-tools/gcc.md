@@ -1,17 +1,17 @@
 ---
-title: "GCC"
-
 additional_search_terms:
-  - compiler
-
-# Maintenance settings
-test_maintenance: true          # Enables maintenance tests on article
-test_images:                    # List Docker images to run instructions on
-  - ubuntu:latest
-  - fedora:latest
-
-tool_install: true              # DO NOT MODIFY. Always true for tool installs
-layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
+- compiler
+layout: installtoolsall
+test_images:
+- ubuntu:latest
+- fedora:latest
+test_link: https://github.com/armflorentlebeau/arm-software-developers-ads/actions/runs/3540052189
+test_maintenance: true
+test_status:
+- passed
+- passed
+title: GCC
+tool_install: true
 ---
 {{< test >}}
 

@@ -1,15 +1,14 @@
 ---
-title: "Terraform"
-
-additional_search_terms:
-
-# Maintenance settings
-test_maintenance: true          # Enables maintenance tests on article
-test_images:                    # List Docker images to run instructions on
-  - ubuntu:latest
-
-tool_install: true              # DO NOT MODIFY. Always true for tool installs
-layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
+additional_search_terms: null
+layout: installtoolsall
+test_images:
+- ubuntu:latest
+test_link: https://github.com/armflorentlebeau/arm-software-developers-ads/actions/runs/3540052189
+test_maintenance: true
+test_status:
+- passed
+title: Terraform
+tool_install: true
 ---
 
 {{< test >}}
