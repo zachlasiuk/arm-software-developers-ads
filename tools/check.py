@@ -130,6 +130,11 @@ def check(json_file, start, stop):
         # Write series of commands in this file
         c = ""
         f = open(fn, "w")
+        # Check if cwd is specified
+        if "cwd" in t:
+            c = "cd " + t["cwd"]
+            logging.debug("Copying command to file {}: {}".format(fn, c))
+            f.write("{}\n".format(c))
         for j in range(0, t["ncmd"]):
             if "expected" in t.keys():
                 # Do not run output commands
