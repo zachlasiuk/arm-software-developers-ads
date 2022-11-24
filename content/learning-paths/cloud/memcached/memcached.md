@@ -1,14 +1,13 @@
 ---
-# User change
-title: "Run Memcached on Arm servers"
-
-test_maintenance: true
+layout: learningpathall
 test_images:
 - ubuntu:latest
-
+test_link: https://github.com/armflorentlebeau/arm-software-developers-ads/actions/runs/3540052189
+test_maintenance: true
+test_status:
+- passed
+title: Run Memcached on Arm servers
 weight: 2
-
-layout: "learningpathall"
 ---
 
 {{< test >}}

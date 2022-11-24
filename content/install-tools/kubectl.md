@@ -3,8 +3,10 @@ additional_search_terms: null
 layout: installtoolsall
 test_images:
 - ubuntu:latest
-test_link: null
+test_link: https://github.com/armflorentlebeau/arm-software-developers-ads/actions/runs/3540052189
 test_maintenance: true
+test_status:
+- passed
 title: Kubectl
 tool_install: true
 ---
@@ -56,4 +58,4 @@ Confirm the executable is available and get the version of the client:
 kubectl version -o json --client
 ```
 
-Visit the [kubectl documentation](https://kubernetes.io/docs/reference/kubectl/) for more information. 
+Visit the [kubectl documentation](https://kubernetes.io/docs/reference/kubectl/) for more information.

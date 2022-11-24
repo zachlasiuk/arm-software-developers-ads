@@ -1,14 +1,13 @@
 ---
-# User change
-title: Download and run Geekbench
-
-test_maintenance: true
+layout: learningpathall
 test_images:
 - ubuntu:latest
-
+test_link: https://github.com/armflorentlebeau/arm-software-developers-ads/actions/runs/3540052189
+test_maintenance: true
+test_status:
+- passed
+title: Download and run Geekbench
 weight: 2
-
-layout: learningpathall
 ---
 
 {{< test >}}
