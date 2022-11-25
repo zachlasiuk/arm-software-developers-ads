@@ -2,7 +2,7 @@
 layout: learningpathall
 test_images:
 - amd64/ubuntu:latest
-- ubuntu:latest
+- arm64v8/ubuntu:latest
 test_link: null
 test_maintenance: true
 test_status:
@@ -57,4 +57,4 @@ KasmVNC/common/rfb/scale_sse2.cxx:79 (SSE2_halve): architecture-specific intrins
 Use --output FILENAME.html to generate an HTML report.
 ```
 
-Porting Advisor scans the directory and immediately points out architecture specific extensions. Check out the usage instructions for more informat
+Porting Advisor scans the directory and immediately points out architecture specific extensions. Check out the usage instructions for more info

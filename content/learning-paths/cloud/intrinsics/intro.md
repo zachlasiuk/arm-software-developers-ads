@@ -2,7 +2,7 @@
 layout: learningpathall
 test_images:
 - amd64/ubuntu:latest
-- ubuntu:latest
+- arm64v8/ubuntu:latest
 test_link: null
 test_maintenance: true
 test_status:
@@ -83,4 +83,4 @@ Execute and check the printed results:
 result equals 6,8,10,12
 ```
 
-In the next sections will show how to migrate this application to Arm Neove
+In the next sections will show how to migrate this application to Arm N

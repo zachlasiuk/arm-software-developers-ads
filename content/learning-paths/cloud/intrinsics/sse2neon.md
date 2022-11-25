@@ -2,12 +2,12 @@
 layout: learningpathall
 test_images:
 - amd64/ubuntu:latest
-- ubuntu:latest
+- arm64v8/ubuntu:latest
 test_link: null
 test_maintenance: true
 test_status:
 - passed
-- failed
+- passed
 title: Using sse2neon to port intrinsics to Neoverse
 weight: 4
 ---
@@ -56,16 +56,17 @@ int main(int argc, char **argv)
 }
 ```
 
-Assuming the new file is renamed to be neon.cpp this version can be compiled and run on the Arm architecture using the commands below. The g++ options are those recommended for Neoverse-N1.
+Assuming the new file is renamed to be neon.cpp this version can be compiled and run on the Arm architecture using the commands below. Install wget, the g++ compiler and use these options recommended for Neoverse-N1.
 
-```bash { target="ubuntu:latest" }
+```bash { target="arm64v8/ubuntu:latest" }
+sudo apt install -y wget g++
 wget https://raw.githubusercontent.com/DLTcollab/sse2neon/master/sse2neon.h
-g++ -O2 -march=armv8.2-a+fp16+rcpc+dotprod+crypto --std=c++14 neon.cpp -o neon
+g++ -O2 -I. -march=armv8.2-a+fp16+rcpc+dotprod+crypto --std=c++14 neon.cpp -o neon
 ```
 
 Execute and check the program output:
 
-```bash { target="ubuntu:latest"; command_line="user@localhost | 2" }
+```bash { target="arm64v8/ubuntu:latest"; command_line="user@localhost | 2" }
 ./neon
 result equals 6,8,10,12
-```
+`
