@@ -1,12 +1,15 @@
 ---
-# User change
-title: "Using sse2neon to port intrinsics to Neoverse"
-
+layout: learningpathall
+test_images:
+- amd64/ubuntu:latest
+- ubuntu:latest
+test_link: null
+test_maintenance: true
+test_status:
+- passed
+- failed
+title: Using sse2neon to port intrinsics to Neoverse
 weight: 4
-
-layout: "learningpathall"
-
-
 ---
 
 ## Using sse2neon 
@@ -23,7 +26,7 @@ To make this application compile and run on Neoverse there are three steps.
 
 Here is the new program. The only change is related to the include files.
 
-```cpp
+```cpp { file_name="neon.cpp" }
 #include <iostream>
 
 #ifdef __SSE2__
@@ -55,15 +58,14 @@ int main(int argc, char **argv)
 
 Assuming the new file is renamed to be neon.cpp this version can be compiled and run on the Arm architecture using the commands below. The g++ options are those recommended for Neoverse-N1.
 
-```console
+```bash { target="ubuntu:latest" }
 wget https://raw.githubusercontent.com/DLTcollab/sse2neon/master/sse2neon.h
 g++ -O2 -march=armv8.2-a+fp16+rcpc+dotprod+crypto --std=c++14 neon.cpp -o neon
-./neon
 ```
-The program output is:
 
-```console
+Execute and check the program output:
+
+```bash { target="ubuntu:latest"; command_line="user@localhost | 2" }
+./neon
 result equals 6,8,10,12
 ```
-
-

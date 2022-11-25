@@ -1,12 +1,15 @@
 ---
-# User change
-title: "Using SIMD Everywhere to port intrinsics to Neoverse"
-
+layout: learningpathall
+test_images:
+- amd64/ubuntu:latest
+- ubuntu:latest
+test_link: null
+test_maintenance: true
+test_status:
+- passed
+- failed
+title: Using SIMD Everywhere to port intrinsics to Neoverse
 weight: 5
-
-layout: "learningpathall"
-
-
 ---
 
 ## Using SIMD Everywhere
@@ -26,7 +29,7 @@ The matching header file for emmintrin.h in SIMDe file is simde/x86/sse2.h
 
 Here is the new program. The only change is related to the include files.
 
-```cpp
+```cpp { file_name="neon.cpp" }
 #include <iostream>
 
 #define SIMDE_ENABLE_NATIVE_ALIASES
@@ -60,21 +63,21 @@ int main(int argc, char **argv)
 
 Assuming the new file is renamed to be neon.cpp this version can be compiled and run on the Arm architecture using the commands below. The g++ options are those recommended for Neoverse-N1.
 
-```console
+```bash { target="ubuntu:latest" }
 git clone https://github.com/simd-everywhere/simde.git
 g++ -O2 -I simde/ -march=armv8.2-a+fp16+rcpc+dotprod+crypto --std=c++14 neon.cpp -o neon
-./neon
 ```
-The program output is:
 
-```console
+Execute and check the program output:
+
+```bash { target="ubuntu:latest"; command_line="user@localhost | 2" }
+./neon
 result equals 6,8,10,12
 ```
 
 The SIMDE_ENABLE_NATIVE_ALIASES macro is not recommended for large projects. Instead, SIMDe recommends to change the intrinics and add "simde" in front of them.
 
 This means change _mm_set_ps to be simde_mm_set_ps. Using the simde prefix is recommended for new code.
-
 
 
 

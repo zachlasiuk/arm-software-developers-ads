@@ -1,11 +1,15 @@
 ---
-# User change
-title: "Introduction to Intrinsics"
-
+layout: learningpathall
+test_images:
+- amd64/ubuntu:latest
+- ubuntu:latest
+test_link: null
+test_maintenance: true
+test_status:
+- passed
+- passed
+title: Introduction to Intrinsics
 weight: 2
-
-layout: "learningpathall"
-
 ---
 
 ## Migration 
@@ -31,7 +35,7 @@ Below is a small example which demonstrates an application with intrinsics in it
 
 We use this example to show how to get the example running on Arm.
 
-```cpp
+```cpp { file_name="sse.cpp" }
 #include <iostream>
 
 #ifdef __SSE2__
@@ -61,18 +65,22 @@ First, we see a reference to the \_\_SSE2\_\_ preprocessor define and the emmint
 
 Copy the above source code into a file named sse.cpp 
 
-Compile the code on the x86_64 architecture using the commands: 
+If not already installed, install g++ with the following command for example on Ubuntu:
 
-```console
-g++ -O2 -msse2 --std=c++14 sse.cpp -o sse
-./sse
+```bash { target="amd64/ubuntu:latest" }
+sudo apt install -y g++
 ```
 
-The printed results should be:
-```console
+Compile the code on the x86_64 architecture using the commands: 
+
+```bash { target="amd64/ubuntu:latest" }
+g++ -O2 -msse2 --std=c++14 sse.cpp -o sse
+```
+
+Execute and check the printed results:
+```bash { target="amd64/ubuntu:latest"; command_line="user@localhost | 2" }
+./sse
 result equals 6,8,10,12
 ```
 
-In the next sections will show how to migrate this application to Arm Neoverse.
-
-
+In the next sections will show how to migrate this application to Arm Neove
