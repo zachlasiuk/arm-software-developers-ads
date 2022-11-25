@@ -7,6 +7,7 @@
 
 <!-- list folder content -->
 {{- $id := .Get "id" -}}
+{{- $height := .Get "height" | default "300" -}}
 {{- $pathURL := .Get "pathURL" -}}
 {{- $path := .Get "path" -}}
 {{- $content := "/content/" -}}
@@ -66,7 +67,8 @@
                             <tr>
                                 <td>{{ $aname }}</td>
                                 <td>{{ $lpname }}</td>
-                                <td><a href="{{ $pathURL }}/../{{ $fpath }}{{ $sname | relURL }}"> {{ $sname }}</a></td>
+                                {{ $tpath := replace $lppath "/content" "" }}
+                                <td><a href="{{ $pathURL }}/../{{ $tpath }}{{ $sname | relURL }}"> {{ $sname }}</a></td>
                                 {{ $c := readFile $fpath | transform.Unmarshal }}
 
                                 <!-- Test -->
@@ -170,27 +172,34 @@
 
 </details>
 
-<p>{{ $tested }}</p>
-<p>{{ $nottested }}</p>
-<p>{{ $passed }}</p>
-<p>{{ $failed }}</p>
-
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script>
 var data = [{
   type: "pie",
   values: [{{ $tested }}, {{ $nottested }}],
   labels: ["Tested", "Not tested"],
+  domain: {column: 0},
+  name: 'Coverage',
+  textinfo: "label+percent",
+  textposition: "outside",
+  automargin: true
+},{
+  type: "pie",
+  values: [{{ $passed }}, {{ $failed }}],
+  labels: ["Passed", "Failed"],
+  name: 'Results',
+  domain: {column: 1},
   textinfo: "label+percent",
   textposition: "outside",
   automargin: true
 }]
 
 var layout = {
-  height: 300,
-  width: 300,
+  title: "Test coverage and results",
+  height: {{ $height }},
   margin: {"t": 0, "b": 0, "l": 0, "r": 0},
   showlegend: false,
+  grid: {rows: 1, columns: 2},
   paper_bgcolor: 'rgba(0,0,0,0)',
   paper_bgcolor: 'rgba(0,0,0,0)', 
   plot_bgcolor: 'rgba(0,0,0,0)',
