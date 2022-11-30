@@ -1,16 +1,17 @@
 ---
-title: "Kubectl"
-
-additional_search_terms:
-
-# Maintenance settings
-test_maintenance: true          # Enables maintenance tests on article
-test_images:                    # List Docker images to run instructions on
-  - ubuntu:latest
-
-tool_install: true              # DO NOT MODIFY. Always true for tool installs
-layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
+additional_search_terms: null
+layout: installtoolsall
+test_images:
+- ubuntu:latest
+test_link: https://github.com/armflorentlebeau/arm-software-developers-ads/actions/runs/3540052189
+test_maintenance: true
+test_status:
+- passed
+title: Kubectl
+tool_install: true
 ---
+
+{{< test >}}
 
 Kubectl is the [Kubernetes](https://kubernetes.io/) command-line tool. 
 
@@ -24,17 +25,22 @@ This article provides a quick solution to install `kubectl` for Ubuntu on Arm.
 
 Confirm you are using an Arm machine by running:
 
-```bash
+```bash { command_line="user@localhost | 2" }
 uname -m
+aarch64
 ```
-
-The result should be `aarch64` 
 
 ## Download and Install
 
 The easiest way to install `kubectl` for Ubuntu on Arm is to use curl and copy the executable to a common location. 
 
-Download and install the latest version. There is just 1 executable to copy to the desired location.
+To install curl, for example on ubuntu:
+
+```bash { target="ubuntu:latest" }
+sudo apt install -y curl
+```
+
+Download and install the latest version of `kubctl`. There is just 1 executable to copy to the desired location.
 
 ```bash { target="ubuntu:latest" }
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl"
@@ -46,10 +52,10 @@ Install the executable in a common location for all users.
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 
-Confirm the executable is available.
+Confirm the executable is available and get the version of the client:
 
 ```bash { target="ubuntu:latest" }
-kubectl version
+kubectl version -o json --client
 ```
 
-Visit the [kubectl documentation](https://kubernetes.io/docs/reference/kubectl/) for more information. 
+Visit the [kubectl documentation](https://kubernetes.io/docs/reference/kubectl/) for more information.

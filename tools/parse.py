@@ -21,12 +21,12 @@ def parse(article):
         start = content.find("```") + 3
         end = content.find("```", start)
 
-        if end == start-3:
+        if start == -1 or end == -1:
             # No code section left
             return cmd
         else:
             cmd.append(content[start:end])
-            content = content[end+3:-1]
+            content = content[end+3:]
 
 
 '''
@@ -90,6 +90,10 @@ def save(article, cmd):
                 content[i_idx].update({"ret_code": ret })
             else:
                 content[i_idx].update({"ret_code": "0" })
+            # check if current directory is specified
+            if "cwd" in l[0]:
+                cwd = l[0].split("cwd=\"")[1].split("\"")[0]
+                content[i_idx].update({"cwd": cwd })
             # check target
             if "target" in l[0]:
                 tgt = l[0].split("target=\"")[1].split("\"")[0]

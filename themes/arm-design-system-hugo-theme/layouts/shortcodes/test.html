@@ -20,10 +20,11 @@
         {{ end }}
         {{ if $.Page.Params.test_status }}
             {{ $st := (index $.Page.Params.test_status $idx) }}
+            {{ $el_m := replace $el ":" "_"}}
             {{ if eq "passed" $st }}
-                <img alt="{{ $el }}" src="https://img.shields.io/badge/{{ $el }}-passed-green">
+                <img alt="{{ $el }} - passed" src="/img/badges/{{ $el_m }}-passed-green.svg">
             {{ else }}
-                <img alt="{{ $el }}" src="https://img.shields.io/badge/{{ $el }}-failed-red">
+                <img alt="{{ $el }} - FAILED" src="/img/badges/{{ $el_m }}-failed-red">
             {{ end }}
         {{ end }}
         {{if $.Page.Params.test_link }}

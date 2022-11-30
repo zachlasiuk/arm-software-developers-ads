@@ -1,16 +1,17 @@
 ---
-title: "Azure CLI"
-
-additional_search_terms:
-
-# Maintenance settings
-test_maintenance: true          # Enables maintenance tests on article
-test_images:                    # List Docker images to run instructions on
-  - ubuntu:latest
-
-tool_install: true              # DO NOT MODIFY. Always true for tool installs
-layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
+additional_search_terms: null
+layout: installtoolsall
+test_images:
+- ubuntu:latest
+test_link: https://github.com/armflorentlebeau/arm-software-developers-ads/actions/runs/3540052189
+test_maintenance: true
+test_status:
+- passed
+title: Azure CLI
+tool_install: true
 ---
+
+{{< test >}}
 
 [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/) is a cross-platform command-line tool that can be installed locally on development computers. Azure CLI is used to connect to Azure and execute administrative commands on Azure resources. 
 
@@ -26,11 +27,10 @@ This article provides a quick solution to install Azure CLI for Ubuntu on Arm.
 
 Confirm you are using an Arm machine by running:
 
-```bash
+```bash { command_line="user@localhost | 2" }
 uname -m
+aarch64
 ```
-
-The result should be `aarch64` 
 
 ## Download and Install
 
@@ -48,15 +48,10 @@ Download and install Azure CLI.
 pip install azure-cli
 ```
 
-The pip install updates $HOME/.profile with the path the `az` executable.
+The pip install updates $HOME/.profile with the path the `az` executable. Check the executable is available by printing the version.
 
 ```bash { target="ubuntu:latest" }
 source $HOME/.profile
-```
-
-Confirm the executable is available.
-
-```bash { target="ubuntu:latest" }
 az version
 ```
 

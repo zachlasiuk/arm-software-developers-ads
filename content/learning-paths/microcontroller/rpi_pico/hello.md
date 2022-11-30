@@ -112,7 +112,7 @@ The print statement with the hello string is directed to USB serial.
 
 Connect to USB serial using minicom. 
 
-For a Raspberry Pi development computer the USB device to connect to is /dev/ttyACM0
+For a Raspberry Pi or Ubuntu development computer the USB device to connect to is /dev/ttyACM0
 
 ```bash
 sudo minicom -b 115200 -o -D /dev/ttyACM0

@@ -1,21 +1,30 @@
 ---
-# User change
-title: "Finding Non-Portable Code"
-
+layout: learningpathall
+test_images:
+- amd64/ubuntu:latest
+- arm64v8/ubuntu:latest
+test_link: null
+test_maintenance: true
+test_status:
+- passed
+- passed
+title: Finding Non-Portable Code
 weight: 3
-
-layout: "learningpathall"
-
-
 ---
 
 ## Porting Advisor
 
 A tool which may be useful is [aarch64 Porting Advisor](https://github.com/arm-hpc/porting-advisor). It is a quick way to identify architecture specific code. Porting Advisor is not needed for the simple example presented above, but if there are architecture specific intrinsics hiding deep in a larger project it can help find them. 
 
+If necessary, install git, python3 and setuptools:
+
+```bash { target="amd64/ubuntu:latest" }
+sudo apt install -y git python3 python3-setuptools
+```
+
 To use Porting Advisor install it using the commands below.
 
-```console
+```bash { target="amd64/ubuntu:latest" }
 git clone https://github.com/arm-hpc/porting-advisor.git
 cd porting-advisor
 sudo python3 setup.py install
@@ -23,7 +32,7 @@ sudo python3 setup.py install
 
 Run Porting Advisor by supplying the directory with the source code to be analyzed. For example, to try it on the open source KasmVNC project use the commands below.
 
-```console
+```bash { target="amd64/ubuntu:latest" }
 git clone https://github.com/kasmtech/KasmVNC.git
 porting-advisor KasmVNC 
 ```
@@ -48,6 +57,4 @@ KasmVNC/common/rfb/scale_sse2.cxx:79 (SSE2_halve): architecture-specific intrins
 Use --output FILENAME.html to generate an HTML report.
 ```
 
-Porting Advisor scans the directory and immediately points out architecture specific extensions. Check out the usage instructions for more information.
-
-
+Porting Advisor scans the directory and immediately points out architecture specific extensions. Check out the usage instructions for more info
