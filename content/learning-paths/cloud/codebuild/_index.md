@@ -1,13 +1,11 @@
 ---
-title: "Build and share Docker images using AWS CodeBuild and Graviton" 
+title: Build and share Docker images using AWS CodeBuild and Graviton
 
-description: >
-    Learn how to build and share docker imsages using AWS CodeBuild on Arm servers.
+description: Learn how to build and share docker imsages using AWS CodeBuild on Arm servers.
 
 minutes_to_complete: 30
 
-who_is_this_for: >
-    Learning path for software developers interested in using AWS CodeBuild to automate container build tasks.
+who_is_this_for: Learning path for software developers interested in using AWS CodeBuild to automate container build tasks.
 
 learning_objectives:
     - Use a GitHub project and AWS CodeBuild to automate Docker image creation
@@ -16,7 +14,9 @@ learning_objectives:
 prerequisites:
     - An [AWS account](/learning-paths/cloud/providers/aws/) to use for accessing AWS services
 
-## Tags. No whitespace. An underscore will be visually replaced with whitespace.
+author_primary: Jason Andrews
+
+### Tags
 skilllevels: Advanced
 subjects: Containers and Virtualization
 armips:
@@ -28,12 +28,9 @@ softwares:
 operatingsystems:
     - Linux
 
-# ================================================================================
-#       FIXED, DO NOT MODIFY
+### FIXED, DO NOT MODIFY
 # ================================================================================
 weight: 1                       # _index.md always has weight of 1 to order correctly
 layout: "learningpathall"       # All files under learning paths have this same wrapper
-learning_path_main_page: "yes"  # Indicates this should be surfaced when looking for related content. Only set for _index.md of learning path content.
-# ================================================================================
-
+learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---

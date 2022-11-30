@@ -1,13 +1,11 @@
 ---
-title: "Porting Architecture Specific Intrinsics" 
+title: Porting Architecture Specific Intrinsics
 
-description: >
-    Learn how to port architecture intrinsics to Arm Neoverse processors.
+description: Learn how to port architecture intrinsics to Arm Neoverse processors.
 
 minutes_to_complete: 20
 
-who_is_this_for: >
-    Learning path for developers interesed in porting architecture specific intrinics to Arm Neoverse processors
+who_is_this_for: Learning path for developers interesed in porting architecture specific intrinics to Arm Neoverse processors.
 
 learning_objectives:
     - Understand what intrinsics are and how to find them in code
@@ -16,7 +14,9 @@ learning_objectives:
 prerequisites:
     - An [Arm based instance](/learning-paths/cloud/providers) from an appropriate cloud service provider.
 
-## Tags. No whitespace. An underscore will be visually replaced with whitespace.
+author_primary: Jason Andrews
+
+### Tags
 skilllevels: Advanced
 subjects: Performance and Architecture
 armips:
@@ -27,14 +27,9 @@ softwares:
 operatingsystems:
     - Linux
 
-# ================================================================================
-#       FIXED, DO NOT MODIFY
+### FIXED, DO NOT MODIFY
 # ================================================================================
 weight: 1                       # _index.md always has weight of 1 to order correctly
 layout: "learningpathall"       # All files under learning paths have this same wrapper
-learning_path_main_page: "yes"  # Indicates this should be surfaced when looking for related content. Only set for _index.md of learning path content.
-# ================================================================================
-
+learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---
-
-

@@ -1,13 +1,11 @@
 ---
-title: "Run x265 (H.265 codec) on Arm servers" 
+title: Run x265 (H.265 codec) on Arm servers
 
-description: >
-    Learn how to build and run x265 on Arm servers.
+description: Learn how to build and run x265 on Arm servers.
 
 minutes_to_complete: 10
 
-who_is_this_for: >
-    A guide for software developers to build and run x265 codec on Arm servers and measure performance
+who_is_this_for: A guide for software developers to build and run x265 codec on Arm servers and measure performance.
 
 learning_objectives:
     - Build x265 codec on Arm server
@@ -16,8 +14,9 @@ learning_objectives:
 prerequisites:
     - An [Arm based instance](/learning-paths/cloud/providers) from an appropriate cloud service provider.
 
+author_primary: Jason Andrews
 
-## Tags. No whitespace. An underscore will be visually replaced with whitespace.
+### Tags
 skilllevels: Introductory
 subjects: Libraries
 armips:
@@ -28,13 +27,9 @@ softwares:
 operatingsystems:
     - Linux
 
-# ================================================================================
-#       FIXED, DO NOT MODIFY
+### FIXED, DO NOT MODIFY
 # ================================================================================
 weight: 1                       # _index.md always has weight of 1 to order correctly
 layout: "learningpathall"       # All files under learning paths have this same wrapper
-learning_path_main_page: "yes"  # Indicates this should be surfaced when looking for related content. Only set for _index.md of learning path content.
-# ================================================================================
-
+learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---
-

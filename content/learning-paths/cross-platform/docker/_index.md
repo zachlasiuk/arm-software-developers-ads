@@ -1,13 +1,11 @@
 ---
-title: "Learn how to use Docker" 
+title: Learn how to use Docker
 
-description: >
-    Learn how to use Docker for single and multi-architecture use.
+description: Learn how to use Docker for single and multi-architecture use
 
 minutes_to_complete: 20
 
-who_is_this_for: >
-     Learning path for single and multi-architecture Docker commands.
+who_is_this_for: Learning path for single and multi-architecture Docker commands.
 
 learning_objectives:
     -  Run Docker build to build and run a container image on any computer supporting Docker
@@ -16,8 +14,12 @@ learning_objectives:
     -  Perform a remote docker build on an Arm server
     -  Utilize Docker manifest for multi-architecture builds
 
+prerequisites:
+    - Docker is installed on the machines being used. For information about the installation refer to [Installing Docker](/install-tools/docker/)
 
-## Tags. No whitespace. An underscore will be visually replaced with whitespace.
+author_primary: Jason Andrews
+
+### Tags
 skilllevels: Introductory
 subjects: Containers and Virtualization
 armips:
@@ -28,22 +30,16 @@ softwares:
 operatingsystems:
     - Linux
 
-## Sorting into multiple Learning Path top level categories. Only applicable for 'shared' paths in the _shared directory
+### Cross-platform metadata only
 shared_path: true
 shared_between:
     - Server and Cloud
     - Desktop and Laptop
     - Embedded
 
-# ================================================================================
-#       FIXED, DO NOT MODIFY
+### FIXED, DO NOT MODIFY
 # ================================================================================
 weight: 1                       # _index.md always has weight of 1 to order correctly
 layout: "learningpathall"       # All files under learning paths have this same wrapper
-learning_path_main_page: "yes"  # Indicates this should be surfaced when looking for related content. Only set for _index.md of learning path content.
-# ================================================================================
-
-# Prereqs
+learning_path_main_page: "yes"  # This should be surfaced when looking for related content. Only set for _index.md of learning path content.
 ---
-- Docker is installed on the machines being used. For information about the installation refer to [Installing Docker](/install-tools/docker/)
-
