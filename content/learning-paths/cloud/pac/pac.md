@@ -17,25 +17,23 @@ The instructions provided below have been tested on an Ubuntu 22.04 AWS 64-bit A
 
 On the AWS Graviton3 instance, install [GCC](/install-tools/gcc/#native)
 
+```bash
+sudo apt install make gcc -y
+```
+
 ## Basics of Pointer Authentication in Arm v8.3-A architecture
 
-Return Oriented Programming (ROP) is an instance of code reuse attacks where the attacker corrupts the return address stored in the stack to point it to a location with a useful sequence of instructions ending in a branch or return instruction. These sequences of instructions are known as gadgets. By chaining multiple gadgets, the attacker can mislead the program to perform actions that end up in a security compromise. An example of such a security comprimise is spawing an interative shell.
+Return Oriented Programming (ROP) is an instance of code reuse attacks where the attacker corrupts the return address stored in the stack to point it to a location with a useful sequence of instructions ending in a branch or return instruction. These sequences of instructions are known as gadgets. By chaining multiple gadgets, the attacker can mislead the program to perform actions that end up in a security compromise. An example of such a security compromise is spawning an interactive shell.
 
 Pointer Authentication is an Armv8.3-A architecture extension and provides some protection against such ROP attacks. Pointer authentication takes advantage of the fact that pointers are stored in a 64-bit format, and some of the unused top bits of the 64-bit address are used to store a cryptographic signature of the pointer itself. So you can sign code or data pointers that are written to memory and verify them before using them. With PAC, if attackers want to modify a protected pointer in memory they will have to compute the right signature for it. However, without knowledge of the secret key, this step becomes very hard. Using the ROP example, if the return address stored in the stack is signed and verified before returning to it, the attacker will not be able to control the program flow and an exception is raised.
 
-The AWS Graviton3 (c7g) instances are powered by the Arm Neoverse V1 CPU that provides the Pointer Authentication security feature. We will create a simple hello world type application on AWS Graviton3 instance and compile it with the appropriate compiler switches to understand the PAC instructions.
+The AWS C7g EC2 instances are powered by the AWS Graviton3 processor which includes Arm Neoverse-V1 and includes the Pointer Authentication security feature. We will create a simple hello world type application on AWS Graviton3 instance and compile it with the appropriate compiler switches to understand the PAC instructions.
 
 ## Compile a simple application with PAC instructions
 
 Start your AWS EC2 c7g type instance using the instructions in the pre-requisites section.
 
-Now create a simple `main.c` program using your editor of choice
-
-```console
-vi main.c
-```
-
-Add the following contents to `main.c`
+Use a text editor, such as nano or vim, to create the simple `main.c` program provided below.
 
 ```console
 #include <stdio.h>
@@ -44,33 +42,28 @@ Add the following contents to `main.c`
 
 void func1(char *s)
 {
-        char buffer[16];
-        strcpy(buffer, s);
+    char buffer[16];
+    strcpy(buffer, s);
 }
 
 void func2(void)
 {
-        system("/bin/sh");
+    system("/bin/sh");
 }
 
 int main(int argc, char **argv)
 {
-        if (argc > 1)
-        {
-                func1(argv[1]);
-                printf("Hello World!\n");
-        }
-        return 0;
+    if (argc > 1)
+    {
+        func1(argv[1]);
+        printf("Hello World!\n");
+    }
+
+    return 0;
 }
 ```
 
-Next, create a Makefile to build this application
-
-```console
-vi Makefile
-```
-
-Copy the content below into your Makefile
+Next, create a file named `Makefile` with the contents below.
 
 ```console
 CROSS_COMPILE ?= aarch64-linux-gnu-
@@ -87,7 +80,7 @@ PROJ_NOPAC := main_nopac
 all: none pac
 
 clean:
-        rm -f $(PROJ) $(PROJ_NOPAC)
+	rm -f $(PROJ) $(PROJ_NOPAC)
 
 none: CFLAGS+=-fno-stack-protector
 none: $(PROJ_NOPAC)
@@ -96,17 +89,17 @@ pac: CFLAGS+=-mbranch-protection=standard -fno-stack-protector
 pac: $(PROJ)
 
 $(PROJ): main.c
-        $(CC) $(CFLAGS) $(LDFLAGS) main.c -o $@
+	$(CC) $(CFLAGS) $(LDFLAGS) main.c -o $@
 
 $(PROJ_NOPAC): main.c
-        $(CC) $(CFLAGS) $(LDFLAGS) main.c -o $@
+	$(CC) $(CFLAGS) $(LDFLAGS) main.c -o $@
 
 dump_none: $(PROJ_NOPAC)
-        gdb-multiarch -batch -ex "disassemble main" $<
-        gdb-multiarch -batch -ex "disassemble func1" $<
+	gdb-multiarch -batch -ex "disassemble main" $<
+	gdb-multiarch -batch -ex "disassemble func1" $<
 dump_pac: $(PROJ)
-        gdb-multiarch -batch -ex "disassemble main" $<
-        gdb-multiarch -batch -ex "disassemble func1" $<
+	gdb-multiarch -batch -ex "disassemble main" $<
+	gdb-multiarch -batch -ex "disassemble func1" $<
 ```
 
 Next, we are going to use this Makefile to build `main.c` with and without PAC instructions.
@@ -232,6 +225,6 @@ See how in this case the instructions used at the entry and return from the func
 `paciasp` signs the link register(LR) with Stack Pointer(SP) as the modifier
 `retaa` is a function return with pointer authentication
 
-In the next section, we will write a program to exploit `main_nopac` and show you how the same exploitation does not work on `main_pac` as it is built with these pointer authentication instructions
+In the next section, we will write a program to exploit `main_nopac` and show you how the same exploitation does not work on `main_pac` as it is built with pointer authentication.
 
  
