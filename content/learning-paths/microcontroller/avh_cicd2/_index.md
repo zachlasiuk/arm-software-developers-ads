@@ -15,7 +15,7 @@ prerequisites:
     - This learning path builds on concepts introduced [here](../avh_cicd/).
     - Valid AWS and GitHub accounts are required
 
-author_primary: Jason Andrews
+author_primary: Pareena Verma
 
 ##### Tags
 skilllevels: Introductory

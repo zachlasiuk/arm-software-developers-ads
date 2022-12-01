@@ -14,7 +14,7 @@ learning_objectives:
 prerequisites:
     - Bare-metal host(s) or cloud node(s) with PostgreSQL installed
 
-author_primary: Jason Andrews
+author_primary: Julio Suarez
 
 ### Tags
 skilllevels: Advanced

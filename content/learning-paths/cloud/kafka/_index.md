@@ -15,7 +15,7 @@ learning_objectives:
 prerequisites:
     - 7 Physical machines or 7 cloud instances with Ubuntu/Debian installed. We need 3 Kafka nodes, 3 Zookeeper nodes, and 1 client node.
 
-author_primary: Jason Andrews
+author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Advanced

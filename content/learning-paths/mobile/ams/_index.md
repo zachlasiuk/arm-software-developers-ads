@@ -15,7 +15,7 @@ prerequisites:
     - Download and install Arm Mobile Studio from [Product Download Hub](https://developer.arm.com/downloads/view/MOBST-PRO0). It is supported on Windows, Linux, and macOS host platforms.
     - Download and install [Android SDK Platform tools](https://developer.android.com/studio/releases/platform-tools.html). Required for [Android Debug bridge (adb)](https://developer.android.com/studio/command-line/adb).
 
-author_primary: Jason Andrews
+author_primary: Ronan Synnott
 
 ### Tags
 skilllevels: Introductory
