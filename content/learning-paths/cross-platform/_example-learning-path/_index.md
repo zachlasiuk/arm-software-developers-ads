@@ -8,7 +8,7 @@ title: "Replace with your title"
 
 description: >
     Enter the description for the learning path here.
-# One sentance, is a quick summary of this learning path, viewable when searching through all learning paths. 
+# One sentence, is a quick summary of this learning path, viewable when searching through all learning paths. 
 
 minutes_to_complete: 20   
 # Always measured in minutes. Should be an integer, to complete the learning path (not just read it).
@@ -21,7 +21,7 @@ learning_objectives:
     - Enter learning objective 1
     - Enter learning objective 2
     - Enter learning objective 3
-# 2-5 bullet points, one sentance each. Should start with a verb (Deploy, Measure) and indicate the value of the objective if possible.
+# 2-5 bullet points, one sentence each. Should start with a verb (Deploy, Measure) and indicate the value of the objective if possible.
 
 prerequisites:
     - Enter pre-requisite 1

@@ -4,10 +4,10 @@
 # ================================================================================
 
 # Always 3 questions. Should try to test the reader's knowledge, and reinforce the key points you want them to remember.
-    # question:         A one sentance question
+    # question:         A one sentence question
     # answers:          The correct answers (from 2-4 answer options only). Should be surrounded by quotes.
     # correct_answer:   An integer indicating what answer is correct (index starts from 0)
-    # explination:      A short (1-3 sentance) explination of why the correct answer is correct. Can add aditional context if desired
+    # explanation:      A short (1-3 sentence) explanation of why the correct answer is correct. Can add aditional context if desired
 
 
 review:
@@ -18,7 +18,7 @@ review:
             - "True"
             - "False"
         correct_answer: 1
-        explination: >
+        explanation: >
             CI/CD automated workflows are the primary use case for Arm Virtual Hardware.
 
     - questions:
@@ -29,7 +29,7 @@ review:
             - "Arm Virtual Hardware must be directly licensed from Arm"
             - "As an AWS Machine Instance (AMI)"
         correct_answer: 3
-        explination: >
+        explanation: >
             Arm Virtual Hardware is provided as an AMI on AWS Marketplace.
 
 # ================================================================================

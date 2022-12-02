@@ -60,12 +60,12 @@ int fib1(int count)
 
 int fibonacci_series(int num)
 {
-    if ( num == 0 )
+    if (num == 0)
         return 0;
-    else if ( num == 1 )
+    else if (num == 1)
         return 1;
     else
-        return ( fibonacci_series(num-1) + fibonacci_series(num-2) );
+        return (fibonacci_series(num-1) + fibonacci_series(num-2));
 }
 
 int fib2(int count)

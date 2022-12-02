@@ -4,10 +4,10 @@
 # ================================================================================
 
 # Always 3 questions. Should try to test the reader's knowledge, and reinforce the key points you want them to remember.
-    # question:         A one sentance question
+    # question:         A one sentence question
     # answers:          The correct answers (from 2-4 answer options only). Should be surrounded by quotes.
     # correct_answer:   An integer indicating what answer is correct (index starts from 0)
-    # explination:      A short (1-3 sentance) explination of why the correct answer is correct. Can add aditional context if desired
+    # explanation:      A short (1-3 sentence) explanation of why the correct answer is correct. Can add aditional context if desired
 
 
 review:
@@ -18,7 +18,7 @@ review:
             - "Answer choice 0"
             - "Answer choice 1"
         correct_answer: 0                     
-        explination: >
+        explanation: >
             Enter a brief explanation for the right answer.
 
     - questions:
@@ -28,7 +28,7 @@ review:
             - "Answer choice 0"
             - "Answer choice 1"
         correct_answer: 1                     
-        explination: >
+        explanation: >
             Enter a brief explanation for the right answer.
                
     - questions:
@@ -40,7 +40,7 @@ review:
             - "Answer choice 2"
             - "Answer choice 3"
         correct_answer: 3                     
-        explination: >
+        explanation: >
             Enter a brief explanation for the right answer.
 
 

@@ -4,10 +4,10 @@
 # ================================================================================
 
 # Always 3 questions. Should try to test the reader's knowledge, and reinforce the key points you want them to remember.
-    # question:         A one sentance question
+    # question:         A one sentence question
     # answers:          The correct answers (from 2-4 answer options only). Should be surrounded by quotes.
     # correct_answer:   An integer indicating what answer is correct (index starts from 0)
-    # explination:      A short (1-3 sentance) explination of why the correct answer is correct. Can add aditional context if desired
+    # explanation:      A short (1-3 sentence) explanation of why the correct answer is correct. Can add aditional context if desired
 
 
 review:
@@ -18,7 +18,7 @@ review:
             - "Open source"
             - "Proprietary"
         correct_answer: 1
-        explination: >
+        explanation: >
             The Total Compute reference software stack is a fully integrated open-source stack, from Firmware up to Android.
 
     - questions:
@@ -30,7 +30,7 @@ review:
             - "CMSIS"
             - "ArmNN"
         correct_answer: 3
-        explination: >
+        explanation: >
             The stack includes open-source code available from these upstream projects: SCP firmware, Trusted firmware, Linux kernel, Android, and ArmNN.
 
 
