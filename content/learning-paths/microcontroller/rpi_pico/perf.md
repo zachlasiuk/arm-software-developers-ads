@@ -50,10 +50,10 @@ int fib1(int count)
             first_term = second_term;
             second_term = next_term;
         }
-        //printf("%d\n",next_term);
+        printf("%d\n",next_term);
     }
 
-    (void) stop_systick();
+    printf("First Fibonacci series complete: %d cycles\n",stop_systick());
 
     return 0;
 }
@@ -79,16 +79,16 @@ int fib2(int count)
     for (int i = 1; i <= count ; i++ )
     {
         fibonacci_series(c);
-        //printf("%d\n", fibonacci_series(c));
+        printf("%d\n", fibonacci_series(c));
         c++;
     }
 
-    (void) stop_systick();
+    printf("Second Fibonacci series complete: %d cycles\n",stop_systick());
 }
 
 int main()
 {
-    int count = 10;
+    int count = 25;
     int st;
 
     const uint LED_PIN = PICO_DEFAULT_LED_PIN;
@@ -149,7 +149,7 @@ Save the code below as systick.h
 #include <stdint.h>
 
 void start_systick(void);
-void stop_systick(void);
+uint32_t stop_systick(void);
 
 /* SysTick variables */
 #define SysTick_BASE          (0xE000E000UL +  0x0010UL)
@@ -174,19 +174,18 @@ void start_systick()
     SysTick_RVR = SysTick_START;
     SysTick_CVR = 0;
     SysTick_CSR |=  (SysTick_Enable | SysTick_ClockSource);
-    printf("Start\n");
 }
 
-void stop_systick()
+uint32_t stop_systick()
 {
     SysTick_CSR &= ~SysTick_Enable;
 
     uint32_t cycles = (SysTick_START - SysTick_CVR);
 
-    printf("complete in %u cycles\n", cycles);
     if (SysTick_CSR & 0x10000)
         printf("WARNING: counter has overflowed, more than 16,777,215 cycles");
 
+    return(cycles);
 }
 ```
 
@@ -218,7 +217,7 @@ After copying the file the Pico disappears as a storage device and the fib progr
 
 The LED on the Pico will start blinking as specified in fib.c. 
 
-The cycle counts will be printed to the USB serial. The printing of the fibonacci series values is commented out, but can be uncommented to see them. 
+The cycle counts will be printed to the USB serial.
 
 Connect to USB serial using minicom. 
 
@@ -232,22 +231,68 @@ The terminal will show the output of the hello string along with the cycle count
 
 ```console
 First Fibonacci series
-Start
-complete in 8863 cycles
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
+6765
+10946
+17711
+28657
+46368
+First Fibonacci series complete: 1181868 cycles
 Second Fibonacci series
-Start
-complete in 13488 cycles
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
+6765
+10946
+17711
+28657
+46368
+Second Fibonacci series complete: 12225226 cycles
 ```
 
 ## Summary 
 
 SysTick can be used as a cycle counter for Cortex-M0+.
 
-There are three things to learn from this example. 
+There are two things to learn from this example. 
 
 First, the SysTick code may be rearranged by the compiler. It doesn't have any dependencies on the code around it and the compiler may reorder the calls to start and stop the cycle count. If this happens it will not wrap around the intended code and the cycle counts will be very small. Look at the disassembly output in fib.dis to review the code.
 
-Second, the second version of the calculation is recursive and increasing the length of the series to 100 or 1000 will cause the program to fail. As a general rule, recursion is discouraged in embedded programming and this example demonstrates why. 
-
-Third, counting cycles for print statements is not advised. Printing to the UART takes a long time and cycle counts may be dominated by time spent in in print statements. 
+Second, counting cycles for print statements is not advised. Printing to the UART takes a long time and cycle counts may be dominated by time spent in in print statements. 
 
