@@ -12,7 +12,7 @@ layout: "learningpathall"
 
 * [An AKS cluster](/learning-paths/cloud/aks/cluster_deployment/)
 
-## Deploy the AKS cluster
+## Deploy WordPress Example
 
 The Kubernetes yaml files below are a modified version of the [Kubernetes WordPress Tutorial](https://kubernetes.io/docs/tutorials/stateful-application/mysql-wordpress-persistent-volume/) in the Kubernetes documentation. 
 
