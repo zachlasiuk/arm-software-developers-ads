@@ -1,8 +1,5 @@
 {{define "main"}}
 
-<!-- Dedicated area for top realestate content; hidden for now -->
-<!-- {{ partial "learning-paths/list-top-learning-paths.html" . }} -->
-
 <!-- _shared learning path Hugo processing, include those paths as well -->
 {{ $paths_to_list :=   .Pages }}
 
@@ -32,6 +29,9 @@
 
     <!-- Search & Results on Right -->
     <div class="c-col">
+
+        <!-- Dedicated area for top realestate content; hidden for now -->
+        <!-- {{ partial "learning-paths/list-top-learning-paths.html" . }}  -->
 
         <!-- Search (and filter for mobile)-->
         <div class="u-flex u-justify-content-between c-col c-col-12 u-flex u-position-relative u-width-100% lg:u-width-auto u-margin-bottom-0">
@@ -113,56 +113,93 @@
                                         tag-{{. | urlize}}
                                     {{ end }}
                                 {{ end }}'>
-                        <!-- CARD vs LIST container-->
-                        <!--
-                        <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card-list'>
-                            <ads-card-content slot="content" style="vertical-align: baseline;">
-                                <span>
-                                    {{ if eq .Params.skillLevels "Introductory"}}
-                                        <i style=" vertical-align:baseline; color: var(--arm-web-safe-green);" class="fa-solid fa-gauge-simple-min"></i>&nbsp;&nbsp;
-                                    {{else}}
-                                        <i style=" vertical-align:baseline; color: var(--arm-orange);" class="fa-solid fa-gauge-simple-max"></i>&nbsp;&nbsp;
-                                    {{end}}
-                                </span>
-                                <span>
-                                    <h5 style="display: inline-block; vertical-align:baseline; max-width: 60%;" class="search-title card-title-list u-margin-top-0 u-margin-bottom-0">{{.Title}}</h5>
-                                </span>
-                                <span>
-                                    <p style="display: inline-block; float: right; vertical-align:baseline;" class="card-date u-margin-top-0 u-margin-bottom-0">{{ .Lastmod.UTC.Format "2 January 2006" }}</p>
-                                </span>
-                            </ads-card-content>   
-                        </ads-card>
-                        <hr class="card-list-divider">
-                        -->
-                         
-                        <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card'>
-                            <ads-card-content slot="content">
-                                <p class="card-subject u-margin-top-0 u-margin-bottom-1/2">
-                                    {{ upper .Params.subjects }}
-                                </p>
-                                <div class="card-title-div">
-                                    <h6 class="search-title card-title u-margin-top-0 u-margin-bottom-1/2">{{.Title}}</h6>
-                                </div>
-                                <p class="card-date u-margin-bottom-0">
+
+                        {{if isset .Params "video_url"}}
+
+                            {{$thumbnail := path.Dir (trim .Page.RelPermalink "/")}}
+                            <!-- /learning-paths/microcontroller/video_example/thumbnail.png -->
+                            <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card'>
+                                <ads-card-image slot="image" style="height: 100px;" src="/{{$thumbnail}}/video_example/thumbnail.png" class="u-bg-position-center"></ads-card-image>
+                                <ads-card-content slot="content">
+                                    <p class="card-subject u-margin-top-0 u-margin-bottom-1/2">
+                                        {{ upper .Params.subjects }}
+                                    </p>
+                                    <div class="card-title-div">
+                                        <h6 class="search-title card-title u-margin-top-0 u-margin-bottom-1/2">{{.Title}}</h6>
+                                    </div>
+                                    <p class="card-date u-margin-bottom-0">
+                                        <span>
+                                            {{ if eq .Params.skillLevels "Introductory"}}
+                                                <!-- <i style=" vertical-align:baseline; --fa-primary-color: rgb(225,19,131); --fa-secondary-color: rgb(245,130,31);" class="fad fa-signal-bars-fair"></i>&nbsp;&nbsp; -->
+                                                <i style=" vertical-align:baseline; color: var(--arm-web-safe-green); " class="fa fa-signal-bars-fair"></i>&nbsp;&nbsp;
+                                            {{else}}
+                                            <i style=" vertical-align:baseline; color: var(--arm-orange);" class="fa fa-signal-bars-strong"></i>&nbsp;&nbsp;
+                                            {{end}}
+                                        </span>
+                                        &nbsp;&nbsp;
+                                        <span><i class="fa-solid fa-calendar-days"></i></span>
+                                        &nbsp;{{ .Lastmod.UTC.Format "2 Jan 2006" }}
+                                        &nbsp;&nbsp;
+                                        <span><i class="fa-solid fa-clock"></i></span>&nbsp;{{.Params.minutes_to_complete}} minutes
+                                    </p>
+                                    <!-- <ads-tag class="path-card-tag {{.Params.skillLevels}}" text="{{.Params.skillLevels}}"></ads-tag> -->
+                                    <!-- <p class="card-description">{{.Description}}</p> -->
+                                </ads-card-content>   
+                            </ads-card>
+
+
+                        {{else}}
+                            
+                            <!-- CARD vs LIST container-->
+                            <!--
+                            <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card-list'>
+                                <ads-card-content slot="content" style="vertical-align: baseline;">
                                     <span>
                                         {{ if eq .Params.skillLevels "Introductory"}}
-                                            <!-- <i style=" vertical-align:baseline; --fa-primary-color: rgb(225,19,131); --fa-secondary-color: rgb(245,130,31);" class="fad fa-signal-bars-fair"></i>&nbsp;&nbsp; -->
-                                            <i style=" vertical-align:baseline; color: var(--arm-web-safe-green); " class="fa fa-signal-bars-fair"></i>&nbsp;&nbsp;
+                                            <i style=" vertical-align:baseline; color: var(--arm-web-safe-green);" class="fa-solid fa-gauge-simple-min"></i>&nbsp;&nbsp;
                                         {{else}}
-                                        <i style=" vertical-align:baseline; color: var(--arm-orange);" class="fa fa-signal-bars-strong"></i>&nbsp;&nbsp;
+                                            <i style=" vertical-align:baseline; color: var(--arm-orange);" class="fa-solid fa-gauge-simple-max"></i>&nbsp;&nbsp;
                                         {{end}}
                                     </span>
-                                    &nbsp;&nbsp;
-                                    <span><i class="fa-solid fa-calendar-days"></i></span>
-                                    &nbsp;{{ .Lastmod.UTC.Format "2 Jan 2006" }}
-                                    &nbsp;&nbsp;
-                                    <span><i class="fa-solid fa-clock"></i></span>&nbsp;{{.Params.minutes_to_complete}} minutes
-                                </p>
-                                <!-- <ads-tag class="path-card-tag {{.Params.skillLevels}}" text="{{.Params.skillLevels}}"></ads-tag> -->
-                                <!-- <p class="card-description">{{.Description}}</p> -->
-                            </ads-card-content>   
-                        </ads-card>
-                        
+                                    <span>
+                                        <h5 style="display: inline-block; vertical-align:baseline; max-width: 60%;" class="search-title card-title-list u-margin-top-0 u-margin-bottom-0">{{.Title}}</h5>
+                                    </span>
+                                    <span>
+                                        <p style="display: inline-block; float: right; vertical-align:baseline;" class="card-date u-margin-top-0 u-margin-bottom-0">{{ .Lastmod.UTC.Format "2 January 2006" }}</p>
+                                    </span>
+                                </ads-card-content>   
+                            </ads-card>
+                            <hr class="card-list-divider">
+                            -->
+                            
+                            <ads-card has-hover-effect  link="{{.Permalink}}" class='path-card'>
+                                <ads-card-content slot="content">
+                                    <p class="card-subject u-margin-top-0 u-margin-bottom-1/2">
+                                        {{ upper .Params.subjects }}
+                                    </p>
+                                    <div class="card-title-div">
+                                        <h6 class="search-title card-title u-margin-top-0 u-margin-bottom-1/2">{{.Title}}</h6>
+                                    </div>
+                                    <p class="card-date u-margin-bottom-0">
+                                        <span>
+                                            {{ if eq .Params.skillLevels "Introductory"}}
+                                                <!-- <i style=" vertical-align:baseline; --fa-primary-color: rgb(225,19,131); --fa-secondary-color: rgb(245,130,31);" class="fad fa-signal-bars-fair"></i>&nbsp;&nbsp; -->
+                                                <i style=" vertical-align:baseline; color: var(--arm-web-safe-green); " class="fa fa-signal-bars-fair"></i>&nbsp;&nbsp;
+                                            {{else}}
+                                            <i style=" vertical-align:baseline; color: var(--arm-orange);" class="fa fa-signal-bars-strong"></i>&nbsp;&nbsp;
+                                            {{end}}
+                                        </span>
+                                        &nbsp;&nbsp;
+                                        <span><i class="fa-solid fa-calendar-days"></i></span>
+                                        &nbsp;{{ .Lastmod.UTC.Format "2 Jan 2006" }}
+                                        &nbsp;&nbsp;
+                                        <span><i class="fa-solid fa-clock"></i></span>&nbsp;{{.Params.minutes_to_complete}} minutes
+                                    </p>
+                                    <!-- <ads-tag class="path-card-tag {{.Params.skillLevels}}" text="{{.Params.skillLevels}}"></ads-tag> -->
+                                    <!-- <p class="card-description">{{.Description}}</p> -->
+                                </ads-card-content>   
+                            </ads-card>
+                        {{end}}
                     </div>           
                     {{ end }}
                 </div>

@@ -23,7 +23,7 @@ subtitle: "Optimize cloud native apps on Arm for performance and cost"
 ######## Pinned Cards for curated journeys
 pinned_modules:
     - module:
-        name: Getting Started
+        name: Recommended getting started learning paths
         paths:
             - providers
             - migration

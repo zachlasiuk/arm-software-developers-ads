@@ -1,31 +1,12 @@
 
-<!-- Hugo variable setting -->
-{{ $current_title := .Page.Title}}
-{{ $path_front    := path.Dir (trim .Page.RelPermalink "/") }}
-
-
-
-<div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap">
-
-    <!-- Category filter -->
-    <div class="c-col u-hide lg:u-display-block u-flex-shrink-0 u-margin-top-2" style="width: 320px;">
-        <div class="u-display-grid u-gap-1/2 lg:u-grid-columns-2">
-
-            <!-- Make range of just learning path pages 'cloud' 'iot' etc. -->
-            {{ range where .Site.Pages "Params.maintopic" true}}
-                {{ partial "ads-cards/main-topic-buttons.html" (dict "context" . "current_title" $current_title "link_to" .Permalink )}}
-            {{end}}
-        </div>
-
-    </div>
-    
     <!-- Top level context for this learning path-->
-    <div class="c-col c-col-12">
-        <header><h2>{{.Params.subtitle}}</h2></header>
-        <!-- 
+    {{if isset .Params "pinned_modules"}}
+    <div class="c-col c-col-12 u-margin-bottom-2">
+        <!-- <header><h2>{{.Params.subtitle}}</h2></header> -->
+        
         <div class="c-row">
             <div class="c-col c-col-12">
-                <div class="u-display-grid u-gap-1 lg:u-grid-columns-1 xl:u-grid-columns-2 xxl:u-grid-columns-2 xxxl:u-grid-columns-2 u-margin-top-1">
+                <div class="u-display-grid u-gap-1 lg:u-grid-columns-1 xl:u-grid-columns-1 xxl:u-grid-columns-1 xxxl:u-grid-columns-2 u-margin-top-1">
                     {{range .Params.pinned_modules}}
                         {{ with .module }}
                             <ads-card class='module-card'>
@@ -51,6 +32,6 @@
                 </div>
             </div>
         </div>
-        -->
+        
     </div>
-</div>
+    {{end}}
