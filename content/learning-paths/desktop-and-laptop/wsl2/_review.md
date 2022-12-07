@@ -4,10 +4,10 @@
 # ================================================================================
 
 # Always 3 questions. Should try to test the reader's knowledge, and reinforce the key points you want them to remember.
-    # question:         A one sentance question
+    # question:         A one sentence question
     # answers:          The correct answers (from 2-4 answer options only). Should be surrounded by quotes.
     # correct_answer:   An integer indicating what answer is correct (index starts from 0)
-    # explination:      A short (1-3 sentance) explination of why the correct answer is correct. Can add aditional context if desired
+    # explanation:      A short (1-3 sentence) explanation of why the correct answer is correct. Can add aditional context if desired
 
 
 review:
@@ -18,7 +18,7 @@ review:
             - "True"
             - "False"
         correct_answer: 2               
-        explination: >
+        explanation: >
             WSL is the Windows Subsystem for Linux and provides a way to run the Linux kernel and applications on computers running Windows.
 
     - questions:
@@ -28,7 +28,7 @@ review:
             - "Yes"
             - "No"
         correct_answer: 2                     
-        explination: >
+        explanation: >
             Graphical Linux applications running in WSL automatically show up on the Windows desktop with Windows 11.
                
     - questions:
@@ -39,7 +39,7 @@ review:
             - "Use the wsl --export command"
             - "Copy important files to a tape or CD-ROM"
         correct_answer: 2                     
-        explination: >
+        explanation: >
             The wsl export command will save the entire filesystem as a tar file which can easily be restored with the wsl import command.
 
 # ================================================================================

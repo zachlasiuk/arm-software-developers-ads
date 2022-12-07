@@ -18,7 +18,7 @@ prerequisites:
     - Version [TC1] (https://gitlab.arm.com/arm-reference-solutions/arm-reference-solutions-docs/-/blob/master/docs/totalcompute/tc1/user-guide.rst)
     - Version [TC2] (https://gitlab.arm.com/arm-reference-solutions/arm-reference-solutions-docs/-/blob/master/docs/totalcompute/tc2/user-guide.rst)
 
-author_primary: Jason Andrews
+author_primary: Ronan Synnott
 
 ##### Tags
 

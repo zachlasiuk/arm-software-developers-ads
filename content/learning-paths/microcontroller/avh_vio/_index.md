@@ -13,7 +13,7 @@ learning_objectives:
 prerequisites:
     - Some familiarity with Python
 
-author_primary: Jason Andrews
+author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Introductory

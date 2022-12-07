@@ -4,10 +4,10 @@
 # ================================================================================
 
 # Always 3 questions. Should try to test the reader's knowledge, and reinforce the key points you want them to remember.
-    # question:         A one sentance question
+    # question:         A one sentence question
     # answers:          The correct answers (from 2-4 answer options only). Should be surrounded by quotes.
     # correct_answer:   An integer indicating what answer is correct (index starts from 0)
-    # explination:      A short (1-3 sentance) explination of why the correct answer is correct. Can add aditional context if desired
+    # explanation:      A short (1-3 sentence) explanation of why the correct answer is correct. Can add aditional context if desired
 
 
 review:
@@ -19,7 +19,7 @@ review:
             - "Shuffle loading"
             - "Scatter loading"
         correct_answer: 3
-        explination: >
+        explanation: >
             The name derives from the idea that multiple memory regions are _scattered_ in the memory map at load and execution time.
 
     - questions:
@@ -30,7 +30,7 @@ review:
             - "__no_semihosting"
             - "__semihosting_false"
         correct_answer: 1
-        explination: >
+        explanation: >
             At link time, an error will be thrown if there are any functions using semihosting.
 
 

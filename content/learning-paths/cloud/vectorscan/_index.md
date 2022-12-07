@@ -15,7 +15,7 @@ learning_objectives:
 prerequisites:
     - An [Arm based instance](/learning-paths/cloud/providers) from an appropriate cloud service provider.
 
-author_primary: Jason Andrews
+author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Introductory

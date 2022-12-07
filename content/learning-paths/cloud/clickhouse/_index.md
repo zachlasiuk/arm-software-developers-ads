@@ -14,7 +14,7 @@ learning_objectives:
 prerequisites:
     - An account with the Arm-based cloud service [provider](../providers/) of choice.
 
-author_primary: Jason Andrews
+author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Introductory

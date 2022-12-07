@@ -15,7 +15,7 @@ learning_objectives:
 prerequisites:
     - General knowledge about SIMD processing, vectorization or Arm NEON.
 
-author_primary: Jason Andrews
+author_primary: Florent Lebeau
 
 ### Tags
 skilllevels: Introductory

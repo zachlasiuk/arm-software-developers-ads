@@ -14,7 +14,7 @@ learning_objectives:
 prerequisites:
     - Some familiarity with CI/CD concepts is assumed
 
-author_primary: Jason Andrews
+author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Introductory

@@ -4,10 +4,10 @@
 # ================================================================================
 
 # Always 3 questions. Should try to test the reader's knowledge, and reinforce the key points you want them to remember.
-    # question:         A one sentance question
+    # question:         A one sentence question
     # answers:          The correct answers (from 2-4 answer options only). Should be surrounded by quotes.
     # correct_answer:   An integer indicating what answer is correct (index starts from 0)
-    # explination:      A short (1-3 sentance) explination of why the correct answer is correct. Can add aditional context if desired
+    # explanation:      A short (1-3 sentence) explanation of why the correct answer is correct. Can add aditional context if desired
 
 
 review:
@@ -18,7 +18,7 @@ review:
             - "128 bits"
             - "Any vector length from 128 to 2048 bits"
         correct_answer: 2                   
-        explination: >
+        explanation: >
             SVE and SVE2 do not define the size of the vector registers, but constrains it to a range of possible values, from a minimum of 128 bits up to a maximum of 2048 in 128-bit wide units.
     - questions:
         question: >
@@ -28,7 +28,7 @@ review:
             - "the same as the vector register"
             - "128 bits"
         correct_answer: 1                    
-        explination: >
+        explanation: >
             SVE is vector-length agnostic and a predicate-centric architecture with vector registers and predicate registers. Predicate registers are 1/8th the size of SVE registers (1 bit/byte). 
     - questions:
         question: >
@@ -37,7 +37,7 @@ review:
             - "Yes"
             - "No"
         correct_answer: 2                
-        explination: >
+        explanation: >
             Not all Arm v8-A processors support SVE instructions. However, they can still run SVE applications using the Arm Instruction Emulator. Armv9-A builds on SVE with the SVE2 extension.
 
 

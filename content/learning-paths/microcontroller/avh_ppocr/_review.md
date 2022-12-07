@@ -4,10 +4,10 @@
 # ================================================================================
 
 # Always 3 questions. Should try to test the reader's knowledge, and reinforce the key points you want them to remember.
-    # question:         A one sentance question
+    # question:         A one sentence question
     # answers:          The correct answers (from 2-4 answer options only). Should be surrounded by quotes.
     # correct_answer:   An integer indicating what answer is correct (index starts from 0)
-    # explination:      A short (1-3 sentance) explination of why the correct answer is correct. Can add aditional context if desired
+    # explanation:      A short (1-3 sentence) explanation of why the correct answer is correct. Can add aditional context if desired
 
 
 review:
@@ -18,7 +18,7 @@ review:
             - "YES"
             - "NO"
         correct_answer: 1                     
-        explination: >
+        explanation: >
             PaddleOCR uses configuration files(.yml) to control network training and evaluation parameters. In the configuration file, you can set the parameters for building the model, optimizer, loss function, and model pre- and post-processing. PaddleOCR reads these parameters from the configuration file, and then forms a complete training process to complete the model training.
 
     - questions:
@@ -28,7 +28,7 @@ review:
             - "YES"
             - "NO"
         correct_answer: 2                     
-        explination: >
+        explanation: >
             You need to export the trained PaddlePaddle model to a Paddle inference model that TVM can compile to generate code which is suitable to run on a Cortex-M processor. 
                
     - questions:
@@ -39,7 +39,7 @@ review:
             - "Operators offload to CMSIS-NN library"
             - "Operators which is supported by Arm’s CMSISNN library will be offloaded to a CMSIS –NN kernel and the rest will fall back to standard C library."
         correct_answer: 3                    
-        explination: >
+        explanation: >
             By specifying --target=cmsis-nn,c, the operators supported by Arm’s CMSISNN library will be offloaded to a CMSIS –NN kernel which best makes use of underlying Arm hardware acceleration. Otherwise, it will fall back to standard C library implementations.
             
     - questions:
@@ -50,7 +50,7 @@ review:
             - "Cortex-M85"
             - "Cortex-M33"
         correct_answer: 1                    
-        explination: >
+        explanation: >
             Corstone-300 combines an example subsystem, complementary System IP, and software and tools to streamline SoC development. Corstone-300 leverages Cortex-M55, Arm's most AI capable Cortex-M CPU, and allows for straightforward integration of the Ethos-U55 NPU to build low-power, high-performance endpoint AI systems. For more, please check product specifications at https://developer.arm.com/Processors/Corstone-300. 
 
 

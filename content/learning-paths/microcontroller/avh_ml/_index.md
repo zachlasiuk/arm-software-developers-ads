@@ -15,7 +15,7 @@ learning_objectives:
 prerequisites:
     - Some familiarity with embedded programing is assumed
 
-author_primary: Jason Andrews
+author_primary: Ronan Synnott
 
 ### Tags
 skilllevels: Introductory

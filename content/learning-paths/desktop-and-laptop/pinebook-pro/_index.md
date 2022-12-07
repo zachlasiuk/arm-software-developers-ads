@@ -16,7 +16,7 @@ prerequisites:
     - A Pinebook Pro
     - A microSD card (8GB or greater; class 10 or faster)
 
-author_primary: Jason Andrews
+author_primary: Gabriel Peterson
 
 ### Tags
 skilllevels: Introductory
