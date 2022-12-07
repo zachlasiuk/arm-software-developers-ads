@@ -5,13 +5,7 @@
 
 title: How to create a Learning Path
 
-<<<<<<< HEAD
 description: Learn what type of content belongs as a learning path and how to properly format it.
-=======
-description: >
-    Enter the description for the learning path here.
-# One sentence, is a quick summary of this learning path, viewable when searching through all learning paths. 
->>>>>>> dea88e758e614a4a8a3460cc366a232a9293b0c4
 
 minutes_to_complete: 20
 
