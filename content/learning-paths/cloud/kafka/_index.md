@@ -19,7 +19,7 @@ author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Advanced
-subjects: Libraries
+subjects: Storage
 armips:
     - Neoverse
 tools:
