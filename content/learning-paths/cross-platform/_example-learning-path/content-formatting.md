@@ -1,8 +1,8 @@
 ---
 # User change
-title: "Content formatting - code, images, videos"
+title: "Content formatting - code, images, videos, markdown syntax"
 
-weight: 2 # 1 is first, 2 is second, etc.
+weight: 5 # 1 is first, 2 is second, etc.
 
 # Do not modify these elements
 layout: "learningpathall"
@@ -11,6 +11,11 @@ layout: "learningpathall"
 ## Table of Contents
 1. [Basic Markdown Syntax](#basic-markdown-syntax)
 2. [Code Snippets](#code-snippets)
+3. [Images](#images)
+4. [Videos](#videos)
+5. [Godbolt Compiler Explorer](#godbolt-compiler-explorer)
+
+
 
 
 
