@@ -14,7 +14,7 @@ There is a whole range of Arm Ecosystem Fixed Virtual Platforms (FVPs) available
 
 FVPs use binary translation technology to deliver fast, functional simulations of Arm-based systems, including processor, memory, and peripherals. They implement a programmer's view suitable for software development and enable execution of full software stacks, providing a widely available platform ahead of silicon.
 
-## Use Corstone-300 ecosystem FVP with Keil MDK {use}
+## Use Corstone-300 ecosystem FVP with Keil MDK
 
 Ecosystem FVPs are available without license control for direct download. They are supported by relevant Open Source Software projects. You can use the Corstone-300 Ecosystem FVP together with [MDK-Community](https://keil.arm.com/mdk-community) to develop software running on the Arm Cortex-M55 without requiring access to hardware.
 
