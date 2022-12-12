@@ -13,7 +13,8 @@ layout: "learningpathall"
 2. [Code Snippets](#code-snippets)
 3. [Images](#images)
 4. [Videos](#videos)
-5. [Godbolt Compiler Explorer](#godbolt-compiler-explorer)
+5. [Notice Callout](#notice-callout)
+6. [Godbolt Compiler Explorer](#godbolt-compiler-explorer)
 
 
 
@@ -218,3 +219,22 @@ Use the following format (note that the 'nocookie' wording prevents YouTube from
 Use the following format:
 {{< vimeo 146022717 >}}
 
+
+## Notice Callout
+Use this format to add a note / tip for a reader in a highlighted way. The format is:   
+
+{{%/* notice *optional_title* */%}}  
+Text inside  
+{{%/* /notice */%}}  
+
+Simple example:
+{{% notice  %}}Note that you can use `markdown` formatting in these notices as *well*.{{% /notice %}}
+
+You can add a custom title as well if you desire as so:
+
+{{% notice Important Note %}}
+You can also give a custom title as specified here.
+- Bullets
+- Also
+- Work
+{{% /notice %}}

@@ -77,7 +77,21 @@ table {
     }
 }
 
+/* Notice box */
+ads-card.notice-callout {
+    margin-left: 32px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    max-width: 750px;
 
+    --ads-card-border-color: var(--arm-web-safe-green);
+    --ads-card-border-color-hover: var(--arm-web-safe-green);
+    --ads-card-border-width: 3px;
+}
+html[theme='dark'] ads-card.notice-callout {
+    --ads-card-border-color: var(--arm-green);
+    --ads-card-border-color-hover: var(--arm-green);
+}
 
 /* Images */
 
