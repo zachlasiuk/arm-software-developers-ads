@@ -12,23 +12,23 @@ In this section we will discuss PostgreSQL tuning parameters.
 
 ##  Why Application Performance Tuning is Important
 
-Application tuning allows us to gain performance without scaling our deployment up or out. This also gives us the option to either use the gained performance or to trade it for cost savings by reducing the total amount of compute resources provisioned. Below is a graph that shows how big of a difference performance tuning on PostgreSQL can be.
+Application tuning allows us to gain performance without scaling our deployment up or out. This also gives us the option to either use the gained performance, or to trade it for cost savings by reducing the total amount of compute resources provisioned. Below is a graph that shows how big of a difference performance tuning on PostgreSQL can make.
 
 ![Before and after Tuning](BeforeAndAfter.png)
 
 ##  A Note on Tuning
 
-Keep in mind that deployment configurations and the profile of SQL requests that are made by clients will be different. This means there is not a one size fits all set of parameters for PostgreSQL.
+Keep in mind that deployment configurations and the profile of SQL requests that are made by clients will be different. This means there is not a one size fits all set of tuning parameters for PostgreSQL.  Use the below to get some ideas around how PostgreSQL can be tuned.
 
 ##  Storage Technology & File System Format
 
-The underlying storage technology and the file system format can impact performance significantly. In general, locally attached SSD storage will perform best. However, network based storage systems can perform very well too. As always, performance is dependent on the request profile coming from clients. We suggest that the reader spends some time studying and experimenting with different storage technology and configuration options.
+The underlying storage technology and the file system format can impact performance significantly. In general, locally attached SSD storage will perform best. However, network based storage systems can perform very well too. As always, performance is dependent on the request profile coming from clients. We suggest that the reader spends some time studying and experimenting with different storage technologies and configuration options.
 
-Aside from the storage technology, it is also worth testing different file system formats with PostgreSQL. That said, we've found that xfs is a good starting point (ext4 is probably fine too).
+Aside from the storage technology, it is also worth testing different file system formats with PostgreSQL. We've found that xfs is a good starting point (ext4 is probably fine too).
 
 ##  Kernel Configurations
 
-PostgreSQL can benefit from adjustments to kernel parameters. Below we list a few of the kernel parameters that can have a positive impact on performance.
+PostgreSQL can benefit from adjustments to kernel parameters. Below is a list of some kernel related settings that can have a positive impact on performance.
 
 ### Linux-PAM Limits
 
@@ -76,7 +76,7 @@ Hugepagesize:       2048 kB
 Hugetlb:               0 kB
 ```
 
-This tells us we are not using huge pages because `HugePages_Total` is set to 0 (this is the default). Also take note of what `Hugepagesize` is set to; in our case it's set to 2MB which is the typical default on Linux. This huge page size can be adjusted along with other parameters not discuss here. We leave learning about those other parameters up to the reader.
+This tells us we are not using huge pages because `HugePages_Total` is set to 0 (this is the default). Also take note of what `Hugepagesize` is set to; in our case it's set to 2MB which is the typical default for huge pages on Linux. This huge page size can be adjusted along with other parameters not discuss here. We leave learning about those other parameters up to the reader.
 
 The setting that enables huge pages is shown below:
 
@@ -87,7 +87,7 @@ vm.nr_hugepages
 
 This parameter sets the number of huge pages we want the kernel to make available to applications. The total amount of memory that will be used for huge pages will be this number (defaulted to 0) times the `Hugepagesize` we saw earlier (2MiB in our case). As an example, if we want a total of 1GB of huge page space, then we should set `vm.nr_hugepages` to 500 (500x2MB=1GB).
 
-*What should we set `vm.nr_hugepages` to for PostgrSQL?*
+*What should we set `vm.nr_hugepages` to for PostgreSQL?*
 
 We should set `vm.nr_hugepages` to a value that gives us a total huge page space of slightly bigger than the PostgreSQL shared buffer size (discussed later). The reason we need to make it slightly larger than the shared buffer is because PostgreSQL will use additional memory for other things like connection management.
 
@@ -123,7 +123,7 @@ max_connections = 1000    # Default 100
 max_prepared_transactions = 1000   # Default 0
 ```
 
-`max_connections` doesn't impact performance, but if a high client connection count is expected, it's a good idea to raise this in order to not reject request from clients. Keep in mind that more client connections means more resources will be consumed (especially memory).
+`max_connections` doesn't impact performance, but if a high client connection count is expected/required, it's a good idea to raise this in order to not reject request from clients. Keep in mind that more client connections means more resources will be consumed (especially memory). Setting this to something higher is completely dependent on use case and requirements.
 
 `max_prepared_transactions` is 0 by default. This means that stored procedures and functions cannot be used out of the box. It must be enabled by setting `max_prepared_transactions` to a value greater than 0. Using procedures and functions can greatly improve performance. We leave learning how to use stored procedures and functions with PostgreSQL as an exercise for the reader (there is plenty of information on this subject on the internet).
 
