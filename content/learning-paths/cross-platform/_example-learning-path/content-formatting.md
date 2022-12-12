@@ -228,6 +228,7 @@ Text inside
 {{%/* /notice */%}}  
 
 Simple example:
+
 {{% notice  %}}Note that you can use `markdown` formatting in these notices as *well*.{{% /notice %}}
 
 You can add a custom title as well if you desire as so:
