@@ -5,6 +5,8 @@ This README contains two things:
 1. 'How To Contribute' step-by-step guide
 2. Documentation on the website's architecture
 
+<br/>
+
 # How To Contribute, a step-by-step guide
 
 All contributions are welcome from individuals passionate about developing technology on Arm. 
@@ -22,7 +24,6 @@ This is the 3-step process to contribute:
 
 If you have questions about this process please reach out to Arm-Tool-Solutions@arm.com
 
-<br/>
 <br/>
 <br/>
 <br/>
