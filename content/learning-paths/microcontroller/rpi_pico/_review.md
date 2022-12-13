@@ -31,6 +31,15 @@ review:
         correct_answer: 2                  
         explanation: >
             The Pico SDK uses cmake for C/C++ applications
+    - questions:
+        question: >
+            Debugging with gdb requires connecting the SWD pins on the Raspberry Pi Pico using jumper wires.
+        answers:
+            - "True"
+            - "False"
+        correct_answer: 1                  
+        explanation: >
+            True, the SWD pins must be used for interactive debugging. This may require soldering headers to the Pico board if the board didn't arrive with headers installed on the SWD pins.
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

@@ -11,13 +11,13 @@ learning_objectives:
     - Install the Raspberry Pi Pico SDK
     - Run a hello world example
     - Measure application performance
-    - Debug applications
+    - Debug applications with gdb
 
 prerequisites:
-    - Familiar with microcontroller C programming
+    - Familiar with C programming on microcontrollers
     - Comfortable with the Linux terminal 
     - Raspberry Pi Pico board
-    - Raspberry Pi 3, 4, or 400 or other Linux computer running Ubuntu
+    - Raspberry Pi 3, 4, or 400 as a development computer
 
 author_primary: Jason Andrews
 
