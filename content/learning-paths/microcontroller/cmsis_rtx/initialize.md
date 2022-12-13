@@ -7,11 +7,11 @@ weight: 3 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
-[Keil RTX5](https://www2.keil.com/mdk5/cmsis/rtx) is quite a feature rich real-time operating system (RTOS). However with CMSIS and the [CMSIS-RTOS2](https://arm-software.github.io/CMSIS_5/RTOS2/html/index.html) API makes it very easy to work with.
+[Keil RTX5](https://www2.keil.com/mdk5/cmsis/rtx) is quite a feature rich real-time operating system (RTOS). CMSIS and the [CMSIS-RTOS2](https://arm-software.github.io/CMSIS_5/RTOS2/html/index.html) API makes it very easy to work with.
 
-when setting up the project `Run-time environment`, the appropriate system initialization code was provided.
+When setting up the project `Run-time environment`, the appropriate system initialization code (`C Startup`) was added.
 
-From there, the RTOS initialization code is always essentially the same, setting up the `SysTick` timer with the [SystemCoreClockUpdate()](https://www.keil.com/pack/doc/CMSIS/Core/html/group__system__init__gr.html#gae0c36a9591fe6e9c45ecb21a794f0f0f) function, then initializing and starting the RTOS.
+From there, the `RTX5` initialization code is always essentially the same, setting up the `SysTick` timer with the [SystemCoreClockUpdate()](https://www.keil.com/pack/doc/CMSIS/Core/html/group__system__init__gr.html#gae0c36a9591fe6e9c45ecb21a794f0f0f) function, then initializing and starting the RTOS.
 
 ## Create main()
 

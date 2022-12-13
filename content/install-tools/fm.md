@@ -43,11 +43,7 @@ To verify everything is working OK, you can build one of the many example projec
 
 ## Fixed Virtual Platforms {#fvp}
 
-Arm supplies a library of ready made [Fixed Virtual Platforms (FVP)](https://developer.arm.com/Tools%20and%20Software/Fixed%20Virtual%20Platforms) that can be used without Arm Fast Models installed. A number of these FVPs are also provided as components of [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio).
-
-The FVP library can also be downloaded from the [Product Download Hub](https://developer.arm.com/downloads/view/FM000A).
-
-Arm Fixed Virtual Platforms are [license managed](../license/).
+Arm supplies a selection of ready made [Fixed Virtual Platforms (FVPs)](https://developer.arm.com/Tools%20and%20Software/Fixed%20Virtual%20Platforms) that can be used without Arm Fast Models installed. See [this article](../fvp) for more information.
 
 ## Further Reading
 
