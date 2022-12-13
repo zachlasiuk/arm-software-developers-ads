@@ -25,8 +25,6 @@ This is the 3-step process to contribute:
 If you have questions about this process please reach out to Arm-Tool-Solutions@arm.com
 
 <br/>
-<br/>
-<br/>
 
 # Website documentation
 
