@@ -7,7 +7,7 @@ This README contains two things:
 
 <br/>
 
-# How To Contribute, a step-by-step guide
+# How To Contribute
 
 All contributions are welcome from individuals passionate about developing technology on Arm. 
 This is the 3-step process to contribute:
