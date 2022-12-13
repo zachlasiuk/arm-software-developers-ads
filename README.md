@@ -20,6 +20,13 @@ This is the 3-step process to contribute:
 ### 3) Submit a pull request
   - Your content will be reviewed and published shortly!
 
+If you have questions about this process please reach out to Arm-Tool-Solutions@arm.com
+
+  
+  
+
+  
+
 
 # Website documentation
 
