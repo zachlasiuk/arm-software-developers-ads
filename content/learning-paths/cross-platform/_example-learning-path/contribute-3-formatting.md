@@ -1,8 +1,8 @@
 ---
 # User change
-title: "Content formatting - code, images, videos, markdown syntax"
+title: "2c) Contribute: Formatting"
 
-weight: 5 # 1 is first, 2 is second, etc.
+weight: 6 # 1 is first, 2 is second, etc.
 
 # Do not modify these elements
 layout: "learningpathall"
