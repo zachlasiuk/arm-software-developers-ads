@@ -1,9 +1,5 @@
 # Arm Learning Paths (prototype project)
-
 GitHub source for the Arm Learning Paths static website, serving learning-based technical content for Arm software developers. 
-This README contains two things:
-1. 'How To Contribute' step-by-step guide
-2. Documentation on the website's architecture
 
 <br/>
 
