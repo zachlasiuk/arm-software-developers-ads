@@ -20,8 +20,8 @@ who_is_this_for: >
 
 learning_objectives: 
     - Configure and integrate an AXI-Lite peripheral with a Cortex-A9 Processing System.
-	- Modify a C code to program the Cortex-A9 processor so that it reads the state of switches and control the LEDs.
-	- Demonstrate a functional simple system that lights up the LEDs based on the status of the switches.  
+    - Modify a C code to program the Cortex-A9 processor so that it reads the state of switches and control the LEDs.
+    - Demonstrate a functional simple system that lights up the LEDs based on the status of the switches.  
 # 2-5 bullet points, one sentance each. Should start with a verb (Deploy, Measure) and indicate the value of the objective if possible.
 
 prerequisites:
