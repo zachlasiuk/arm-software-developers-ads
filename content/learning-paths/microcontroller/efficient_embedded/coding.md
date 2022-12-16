@@ -22,6 +22,8 @@ Now let's populate it with some code.
 
 We will program the board in C, but add assembly language subroutines to perform the string copy and capitalization operations. Some embedded systems are coded purely in assembly language, but most are coded in C and resort to assembly language only for time-critical processing. This is because the code development process is much faster (and hence much less expensive) when writing in C when compared to assembly language. Writing an assembly language function which can be called as a C function results in a modular program which gives us the best of both worlds: the fast, modular development of C and the fast performance of assembly language. It is also possible to add inline assembly code to C code, but this requires much greater knowledge of how the compiler generates code.
 
+The keyword used to allow assembly code within a wider section of C code is '__asm'. This will be shown as an example later in the exercise.
+
 ## 5.2 The Main Function
 
 First we will create the main C function. This function contains two variables (a and b) with character arrays.
