@@ -7,6 +7,8 @@ weight: 4 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
+![alt-text #center](2-contribution-process.PNG "Contribution process")
+
 
 # Adding a new Learning Path to the website
 

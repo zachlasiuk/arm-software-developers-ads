@@ -7,6 +7,7 @@ weight: 3 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
+![alt-text #center](1-machine-init-process.PNG "Machine init process")
 
 There are three ways to be set up to create new content or make changes to the existing content.
 1. A Gitpod instance with tools pre-installed (recommended)

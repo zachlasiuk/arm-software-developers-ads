@@ -7,6 +7,7 @@ weight: 6 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
+![alt-text #center](2-contribution-process.PNG "Contribution process")
 
 ## Table of Contents
 1. [Basic Markdown Syntax](#basic-markdown-syntax)

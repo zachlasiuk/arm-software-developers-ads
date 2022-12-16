@@ -7,6 +7,7 @@ weight: 7 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
+![alt-text #center](2-contribution-process.PNG "Contribution process")
 
 # 1) No first person
 Active voice is prefered. 

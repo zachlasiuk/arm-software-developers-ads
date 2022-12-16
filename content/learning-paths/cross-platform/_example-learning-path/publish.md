@@ -7,6 +7,7 @@ weight: 8 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
+![alt-text #center](3-publishing-process.PNG "Publishing process")
 
 # Submit your changes to the website
 

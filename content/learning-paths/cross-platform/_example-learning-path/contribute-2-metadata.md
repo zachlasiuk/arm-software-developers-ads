@@ -7,6 +7,7 @@ weight: 5 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
+![alt-text #center](2-contribution-process.PNG "Contribution process")
 
 This step will cover how to fill out Learning Path metadata over the three default files:
 1. Metadata and Tagging - **_index.md**

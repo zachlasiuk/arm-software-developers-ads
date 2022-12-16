@@ -18,7 +18,6 @@ learning_objectives:
     - Format code, pictures, videos and more
 
 prerequisites:
-    - View the [GitHub source project here](https://github.com/zachlas/arm-software-developers-ads)  which defines the contribution process.
 
 author_primary: Zach Lasiuk
 
