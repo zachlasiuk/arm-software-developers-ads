@@ -57,7 +57,7 @@ def report(period):
              "content/learning-paths/embedded",
              "content/learning-paths/microcontroller",
              "content/learning-paths/mobile",
-             "content/learning-paths/cloud"]
+             "content/learning-paths/server-and-cloud"]
 
     result = {}
 
@@ -112,7 +112,7 @@ def report(period):
                     "x": [],
                     "y": [],
                     "type": "bar",
-                    "name": "learning-paths/cloud",
+                    "name": "learning-paths/server-and-cloud",
                     "xaxis": "x2"
                 }
             ],

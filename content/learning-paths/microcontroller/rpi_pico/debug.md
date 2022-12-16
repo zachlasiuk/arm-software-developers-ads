@@ -174,7 +174,7 @@ All gdb commands are available to single step, inspect memory, display registers
 
 ## Summary 
 
-The Raspberry Pi Pico debug interface can be used to load programs and debug them with gdb and there is need to hold the BOOTSEL button and copy the .uf2 file to USB storage every time the program is changed. 
+The Raspberry Pi Pico debug interface can be used to load programs and debug them with gdb. There is need to hold the BOOTSEL button and copy the .uf2 file to USB storage every time the program is changed. 
 
 
 
