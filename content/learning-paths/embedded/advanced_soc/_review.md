@@ -18,7 +18,7 @@ review:
             - "switch = input wire [3:0]"
             - "input wire [3:0] switch"
             - "wire input [3:0] switch"
-        correct_answer: 1                     
+        correct_answer: 2
         explanation: >
             This option uses the correct Verilog syntax for adding a port for an input switch. The first operation is incorrect as it in improper Verilog syntax to creating an input wire using the '=' operator. The last option is incorrect as the ordering of the keywords is not correct.
 
@@ -29,7 +29,7 @@ review:
             - "ZYNQ7_Processing_System"
             - "axi_gpio_asoc"
             - "Processor System Reset"
-        correct_answer: 1                     
+        correct_answer: 2
         explanation: >
             We connected the switch and LED to our custom AXI GPIO peripheral. For the other two options, we did not connect the switch or LED ports to their corresponding blocks.
                
@@ -40,7 +40,7 @@ review:
             - "Generate Bitstream > Synthesis > Implementation"
             - "Implementation > Synthesis > Generate Bitstream"
             - "Synthesis > Implementation > Generate Bitstream"
-        correct_answer: 2                     
+        correct_answer: 3
         explanation: >
             Once the design has gone through synthesis, implementation and then had a bitstream generated, it can be deployed to an FPGA device. The others are in the wrong order - if you followed them, the generated bitstream would not be correct and the program deployed to the device may not act as expected.
 
