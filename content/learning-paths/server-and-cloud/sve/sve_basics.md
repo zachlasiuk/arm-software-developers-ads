@@ -23,6 +23,46 @@ Arm SVE is vector-length agnostic, allowing vector width from 128 up to 2048 bit
 SVE is not an extension of NEON but a separate, optional extension of Arm v8-A with a new set of instruction encodings.
 Initial focus is HPC and general-purpose server. SVE2 extends capabilities to enable more data-processing domains.
 
+## SVE Vector Length
+
+Even though SVE is vector length agnostic, developers are interested in vector length. Sometimes performance may differ between machines and vector length could be a factor. Operating systems and hypervisors may reduce the vector length for applications so it's a good idea to confirm the vector length during development and when investigating SVE performance. 
+
+To print the vector length copy the program below to file named sve.c 
+
+```c
+#include <stdio.h>
+#include <arm_sve.h>
+
+#ifndef __ARM_FEATURE_SVE
+#warning "Make sure to compile for SVE!"
+#endif
+
+int main()
+{
+    printf("SVE vector length is: %ld bytes\n", svcntb());
+}
+```
+
+Compile the program using the gcc SVE architecture flag for SVE. Without the SVE flag the code will not compile.
+
+```bash
+gcc -march=armv8-a+sve sve.c -o sve
+```
+
+Run the program. 
+
+```bash 
+./sve
+```
+
+For AWS Graviton3 processors the vector length is printed.
+
+```console
+SVE vector length is: 32 bytes
+```
+
+If the hardware doesn't support SVE the program will crash with an illegal instruction.
+
 ### SVE registers
 
 SVE is a predicate-centric architecture with:
