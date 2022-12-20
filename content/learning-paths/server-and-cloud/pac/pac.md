@@ -15,7 +15,7 @@ layout: "learningpathall"
 
 The instructions provided below have been tested on an Ubuntu 22.04 AWS 64-bit Arm EC2 instance (C7g.xlarge) and Ubuntu 20.04.
 
-On the AWS Graviton3 instance, install [GCC](/install-tools/gcc/#native)
+On the AWS Graviton3 instance, install [GCC](/install-tools/gcc/#native).
 
 ```bash
 sudo apt install make gcc -y
