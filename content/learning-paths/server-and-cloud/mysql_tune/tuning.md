@@ -109,6 +109,8 @@ Turning on `large_pages` can result in significant performance gains. Using larg
 
 `innodb_buffer_pool_size` is one of the most important configuration parameters that can be set. It determines how much memory can be used to store indexes and table data. It's a cache that improves read/write latency and relieves pressure on storage. The [MySQL documentation](https://dev.mysql.com/doc/refman/8.0/en/innodb-buffer-pool.html) suggests this be set to up to 80% of total system memory. Our testing is in agreement with this recommendation, but we also found that going lower (50%-70%) seemed sufficient too. In any case, going significantly larger than the default of 128MB is a good idea.
 
+Other memory related configurations that could be worth exploring are the [Buffer Pool Prefetching](https://dev.mysql.com/doc/refman/8.0/en/innodb-performance-read_ahead.html) configurations. In our experimentation, we found some modest performance gains by decreasing the `innodb_read_ahead_threshold` a little. The default is very conservative and will result in very little to no prefetching. Some workloads may benefit from being less conservative. Aside from that, we found that turning on random prefetch (`innodb_random_read_ahead`) doesn't seem to help, and in fact, hurts performance. In any case, it is up to the reader to experiment with these parameters under their use case. Results could be different from ours.
+
 ### Logging and Disk Flush Behavior
 
 ```
