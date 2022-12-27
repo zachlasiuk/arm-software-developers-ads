@@ -14,6 +14,7 @@
     document.getElementById('prism-code-theme').href='/css/prism-light.css';
   }
 
+  // Ignored for now, never set to sw-hub
 	else if (localStorage.getItem('theme')=='sw-hub') {
     document.querySelector('html').setAttribute('theme', 'sw-hub');
     document.getElementById('prism-code-theme').href='/css/prism-light.css';

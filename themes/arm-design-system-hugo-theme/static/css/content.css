@@ -29,43 +29,67 @@ div.content-box {
 
     border-color: var(--arm-dark-grey);
 }
-
+html[theme="light"] div.content-box {
+    background-color: white;
+}
 
 
 /* Spacing for content, surrounded by markdown-content-div (learning paths and tools) */
 div.markdown-content-div {
     padding-top: 16px; /* padding at top by default */
 }
-div.markdown-content-div p {
+div.markdown-content-div > p {      
     margin-left: 16px;
+    margin-top: 16px;       /* reverse top and bottom 16 and 0 to better flow text */
+    margin-bottom: 0px;
 }
-div.markdown-content-div ul {
+
+div.markdown-content-div > p.content-image-caption {
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 0px;
+}
+
+div.markdown-content-div > ul,
+div.markdown-content-div > ol {
     margin-left: 32px;
     margin-bottom: 16px;
+}
+
+div.markdown-content-div > table {
+    width: max-content;     /* No full-length tables unless there is a reason */
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-bottom: 24px;
+}
+html[theme="light"] div.markdown-content-div > table tbody { background-color: var(--arm-light-grey-alt); }
+html[theme="dark"]  div.markdown-content-div > table tbody { background-color: var(--arm-color-overlay-light); }
+
+
+div.markdown-content-div > div.code-toolbar {
+    margin-left: 16px;
 }
 
 /* If a header is the first child of markdown-content-div, it should add no extra padding (already done by markdown-content-div for all) */
 div.markdown-content-div h1,
 div.markdown-content-div h2,
-div.markdown-content-div h3,
+div.markdown-content-div h3 {
+    margin-top: 48px;
+}
 div.markdown-content-div h4,
 div.markdown-content-div h5,
 div.markdown-content-div h6 {
-    margin-top: 0px;
-}
-div.markdown-content-div h1:not(:first-child),
-div.markdown-content-div h2:not(:first-child),
-div.markdown-content-div h3:not(:first-child),
-div.markdown-content-div h4:not(:first-child),
-div.markdown-content-div h5:not(:first-child),
-div.markdown-content-div h6:not(:first-child) {
     margin-top: 32px;
 }
 
-/* Increase h3 font weight to normal to make more readable for regular reading */
-div.markdown-content-div h3 {
-    font-weight: 400;
+/* for first header, remove margin */
+div.markdown-content-div h1:first-of-type,
+div.markdown-content-div h2:first-of-type {
+    margin-top: 0px;
 }
+
+div.markdown-content-div h3 {   font-weight: 400; } /* Increase h3 font weight to normal to make more readable for regular reading */
+
 
 /* Increase table font */
 table {
@@ -79,10 +103,10 @@ table {
 
 /* Notice box */
 ads-card.notice-callout {
+    width: 80%;
     margin-left: 48px;
     margin-top: 8px;
     margin-bottom: 8px;
-    max-width: 750px;
 
     --ads-card-border-color: var(--arm-web-safe-green);
     --ads-card-border-color-hover: var(--arm-web-safe-green);
@@ -92,6 +116,11 @@ html[theme='dark'] ads-card.notice-callout {
     --ads-card-border-color: var(--arm-green);
     --ads-card-border-color-hover: var(--arm-green);
 }
+
+ads-card.notice-callout p {
+    margin: 8px 8px 4px 8px;    /* top right bottom left */
+}
+
 
 /* Images */
 

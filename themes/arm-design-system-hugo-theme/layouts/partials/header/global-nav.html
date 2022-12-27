@@ -217,10 +217,12 @@
             localStorage.setItem('theme', 'light');      
           }
           else if (currentTheme === "light") { // Turn to SW-Hub theme
-            document.querySelector('html').setAttribute('theme', 'sw-hub');
-            document.getElementById('prism-code-theme').href='/css/prism-light.css';
-            localStorage.setItem('theme', 'sw-hub');      
+            document.querySelector('html').setAttribute('theme', 'dark');
+            document.getElementById('prism-code-theme').href='/css/prism-dark.css';
+            localStorage.setItem('theme', 'dark');          
           }
+
+          // Ignored for now
           else if (currentTheme === "sw-hub") { // Turn to Dark theme
             document.querySelector('html').setAttribute('theme', 'dark');
             document.getElementById('prism-code-theme').href='/css/prism-dark.css';

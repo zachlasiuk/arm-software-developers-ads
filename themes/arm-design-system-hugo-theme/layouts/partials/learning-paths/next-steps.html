@@ -22,6 +22,13 @@
             <div class="content-box">
                 <h4>Similar Learning Paths</h4>
                 <p>To learn about topics related to this one.</p>
+                <ul>
+                    {{$related := (where (.context.Site.Pages.Related (index .learningpathfiles 0) ) "Params.learning_path_main_page" "yes") | first 2 }}
+                    {{range $related}}
+                        <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+                    {{end}}                            
+                </ul>
+                <!--
                 <div class="c-row">
                     <div class="c-col">
                         <div class="u-display-grid u-gap-1 u-grid-columns-1">
@@ -38,17 +45,18 @@
                         </div>
                     </div>
                 </div>
+                -->
             </div>
             <div class="content-box">
                 <h4>Explore Tags</h4>
                 <p>Look at more learning paths under these tags.</p>
+                <span>
                     {{ range (index .learningpathfiles 0).Params.armips }}
                         <ads-tag    href='{{ "/" | relLangURL}}armips/{{. | urlize}}'>
                             <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                             <span class="fa-solid fa-tag"></span>
                             {{ replace . "_" " " }}
                         </ads-tag>
-                        <br>
                     {{ end }}
                     {{ range (index .learningpathfiles 0).Params.softwares }}
                         <ads-tag    href='{{ "/" | relLangURL}}softwares/{{. | urlize}}'>
@@ -56,7 +64,6 @@
                             <span class="fa-solid fa-tag"></span>
                             {{ replace . "_" " " }}
                         </ads-tag>
-                        <br>
                     {{ end }}
                     {{ range (index .learningpathfiles 0).Params.tools }}
                         <ads-tag    href='{{ "/" | relLangURL}}tools/{{. | urlize}}'>
@@ -64,8 +71,8 @@
                             <span class="fa-solid fa-tag"></span>
                             {{ replace . "_" " " }}
                         </ads-tag>
-                        <br>
                     {{ end }}
+                </span>
             </div>
             <div class="content-box">
                 <h4>Further Readings</h4>

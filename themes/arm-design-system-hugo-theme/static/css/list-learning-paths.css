@@ -1,0 +1,84 @@
+
+html[theme="dark"]  ads-alert { --ads-alert-background-color: var(--arm-color-overlay-dark);   --ads-alert-color: white;}
+html[theme="light"] ads-alert { --ads-alert-background-color: var(--white);}
+ads-alert span {color: var(--arm-blue);}
+
+
+/*------------------------------------------------------------
+
+        Learning Path / Tool Install Features
+
+------------------------------------------------------------*/
+
+
+/*          Path Cards 
+***************************************************************/
+ads-card.path-card {
+    --ads-card-border-radius: 10px;
+    --ads-card-border-width: 2px;
+    --ads-card-border-color: var(--arm-light-grey-alt-2);
+    --ads-card-background-color: var(--white);
+
+    --ads-card-border-color-hover: var(--arm-orange);
+
+    --ads-card-background-color-hover: var(--arm-light-grey);
+    --ads-card-box-shadow-hover: 0 1px 3px 3px rgba(0,0,0,0.25);
+}
+html[theme='dark'] ads-card.path-card {
+    --ads-card-background-color: var(--arm-color-overlay-dark);
+    --ads-card-border-color: var(--arm-black);
+
+    --ads-card-background-color-hover: var(--black);
+    --ads-card-box-shadow-hover: 0 1px 3px 3px rgba(255, 255, 255, 0.25);
+}
+
+ads-card.path-card:hover  .card-title {
+    transition: color 0.3s ease-in-out;
+    color: var(--arm-orange);
+}
+
+ads-card.path-card  .card-title {
+    font-size: 1.15em;
+}
+
+ads-card.path-card .card-title-div {
+    min-height: 85px;
+}
+
+
+
+
+
+
+
+
+
+/*          Filters
+***************************************************************/
+    ads-expansion-panel.learning-path-filters {
+        --ads-expansion-panel-border-color: var(--arm-light-grey);
+
+        --ads-expansion-panel-content-background-color: var(--arm-light-grey-alt);
+
+        --ads-expansion-panel-toggle-background-color: var(--arm-light-grey-alt);
+        --ads-expansion-panel-toggle-background-color-hover: var(--arm-light-grey-alt);
+
+    }
+
+    html[theme='dark'] ads-expansion-panel.learning-path-filters {
+        --ads-expansion-panel-border-color: var(--arm-black);
+
+        --ads-expansion-panel-content-background-color: var(--arm-color-surface);
+
+        --ads-expansion-panel-toggle-background-color: var(--arm-color-surface);
+        --ads-expansion-panel-toggle-background-color-hover: var(--arm-color-surface);
+
+    }
+
+
+
+
+
+
+
+

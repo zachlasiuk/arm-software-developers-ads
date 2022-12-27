@@ -11,6 +11,13 @@
     {{end}}
 {{end}}
 
+
+
+<ads-alert>
+    <a href="/test"><span>New to {{.Title}}? Learn the basics here.</span></a>
+</ads-alert>
+
+
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-1 u-padding-bottom-2-1/2">
     <!-- Filter bar on left -->
     <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 320px; max-width: 320px;">
@@ -63,12 +70,12 @@
 
 
         <!-- Current tag bar -->
-        <div id="current-tag-bar" class="c-row u-margin-top-1/2" style="min-height: 30px;">
-            <!-- Filled dynamically by javascript & checkboxes-->
+        <div id="current-tag-bar" class="c-row u-margin-left-1/2">
+            <!-- Filled dynamically by javascript & checkboxes; margin applied to tags only-->
         </div>
      
         <!-- Current results bar -->
-        <div id="results-status-bar" class="c-row u-margin-top-1/2" style="min-height: 30px;">
+        <div id="results-status-bar" class="c-row u-margin-top-1/2 u-margin-left-1">
             Displaying&nbsp;
             <span id="currently-shown-number" class="u-text-bold"> {{len $paths_to_list }} </span>
             &nbsp;of&nbsp;
