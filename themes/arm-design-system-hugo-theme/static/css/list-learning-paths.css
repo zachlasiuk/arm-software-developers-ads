@@ -1,8 +1,7 @@
 
 html[theme="dark"]  ads-alert { --ads-alert-background-color: var(--arm-color-overlay-dark);   --ads-alert-color: white;}
 html[theme="light"] ads-alert { --ads-alert-background-color: var(--white);}
-ads-alert span {color: var(--arm-blue);}
-
+ads-alert a {color: var(--arm-blue); }
 
 /*------------------------------------------------------------
 
@@ -55,6 +54,7 @@ ads-card.path-card .card-title-div {
 
 /*          Filters
 ***************************************************************/
+
     ads-expansion-panel.learning-path-filters {
         --ads-expansion-panel-border-color: var(--arm-light-grey);
 

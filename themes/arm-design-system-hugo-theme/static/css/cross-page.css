@@ -27,6 +27,11 @@ padding-bottom: 8px;
 }
 
 
+/* Remove text decorations on all a links */
+a:hover {
+        text-decoration: none;
+}
+
 
 /* Light Theme */
 /****************************************************/
