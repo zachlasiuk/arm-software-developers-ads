@@ -1,7 +1,16 @@
 
-html[theme="dark"]  ads-alert { --ads-alert-background-color: var(--arm-color-overlay-dark);   --ads-alert-color: white;}
-html[theme="light"] ads-alert { --ads-alert-background-color: var(--white);}
-ads-alert a {color: var(--arm-blue); }
+html[theme="dark"]  ads-alert { 
+    /*--ads-alert-background-color: var(--arm-color-overlay-dark);*/
+    --ads-alert-background-color: var(--arm-color-surface);
+    --ads-alert-color: white;
+}
+html[theme="light"] ads-alert { 
+    /*--ads-alert-background-color: var(--white);*/
+    --ads-alert-background-color: var(--arm-light-grey-alt);
+}
+ads-alert a {
+    color: var(--arm-blue); 
+}
 
 /*------------------------------------------------------------
 

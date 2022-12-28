@@ -18,7 +18,7 @@ author_primary: Jason Andrews
 
 ### Tags
 skilllevels: Advanced
-subjects: CI/CD
+subjects: CI-CD
 armips:
     - Neoverse
 tools:

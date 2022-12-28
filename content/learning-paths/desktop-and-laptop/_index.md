@@ -1,33 +1,20 @@
 ---
-maintopic: true  # only true for main segmentation on homepage
-
-title: "Desktop and Laptop"
 cardimage: img/main-topic-backgrounds/desktop-and-laptop.jpg
-key_ip: 
-    - Cortex-A
-key_ip_icons:
-    - img/ip-icons/Arm_Cortex-A.png
-
 differentiating_info:
-    - Windows on Arm
-    - ChromeOS
-    - Linux
-
-weight: 2  # Decides order of main topics on homepage
-
-# Shown when listing learning paths in this category:
-subtitle: "Create and migrate apps for power efficient performance" 
-
-
-#####################################
-# CLOSED filters
-#####################################
-subjects_closed_schema:
-    - Windows on Arm
-    - Porting
-    - Performance and Architecture
-
-oses_closed_schema:
-    - Linux
-    - Windows
+- Windows on Arm
+- ChromeOS
+- Linux
+key_ip:
+- Cortex-A
+key_ip_icons:
+- img/ip-icons/Arm_Cortex-A.png
+maintopic: true
+operatingsystems_filter:
+- Linux
+- Windows
+subjects_filter:
+- Windows on Arm
+subtitle: Create and migrate apps for power efficient performance
+title: Desktop and Laptop
+weight: 2
 ---

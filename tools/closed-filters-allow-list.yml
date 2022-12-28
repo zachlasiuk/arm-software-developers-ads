@@ -1,0 +1,54 @@
+---
+operatingsystems:
+  - Linux
+  - Windows
+  - macOS
+
+  - iOS
+  - Android
+  
+  - RTOS
+  - Baremetal
+  
+  - other
+
+
+subjects:
+  server-and-cloud:
+    - ML
+    - CI-CD
+    - Performance and Architecture
+    - Containers and Virtualization
+    - Databases
+    - Networking
+    - Storage
+    - Web
+    - Libraries
+  desktop-and-laptop:
+    - Windows on Arm
+    - Porting
+    - Performance and Architecture
+  mobile:
+    - Gaming
+    - AR-VR
+    - Graphics
+    - ML
+    - CI-CD
+    - Performance and Architecture
+  embedded:
+    - ML
+    - CI-CD
+    - Performance and Architecture
+    - Automotive 
+    - Cloud Connection
+    - Storage
+    - Embedded Linux
+  microcontroller:
+    - ML
+    - CI-CD
+    - Performance and Architecture
+    - Cloud Connection
+    - Security
+    - Virtual Hardware
+  #cross-platform: # IGNORE FOR NOW
+    # Can be anything here, requires special processing to sort out in checker script.
