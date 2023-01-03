@@ -1,6 +1,6 @@
 ---
 # User change
-title: "1) Machine Initalization"
+title: "Machine Initialization"
 
 weight: 3 # 1 is first, 2 is second, etc.
 
@@ -9,59 +9,88 @@ layout: "learningpathall"
 ---
 ![alt-text #center](1-machine-init-process.PNG "Machine init process")
 
-There are three ways to be set up to create new content or make changes to the existing content.
-1. A Gitpod instance with tools pre-installed (recommended)
+There are multiple ways to setup a computer for Learning Path creation. Only three tools are mandatory:
+- A text editor to create and modify markdown files
+- [Hugo](https://gohugo.io/) static site generator to review content 
+- Git to access the repository and submit contributions
+
+## Fork the repository
+
+For any setup, the first step is to fork the GitHub repository into your own GitHub account. Go to the [repository in GitHub](https://github.com/zachlas/arm-software-developers-ads) and click `Fork` in the top right area. Follow the prompts to create a new fork. This provides your own copy for you to make changes without impacting the main repository. 
+
+## Setup a development machine 
+
+Three possible ways to setup a development machine are covered below. Select one that works for you.
+
+1. A Gitpod instance with tools pre-installed (easiest)
 2. A local computer (Linux, Mac, or Windows)
-3. A remote server via SSH (such as AWS EC2)
+3. A remote Linux server via SSH (such as AWS EC2)
 
-# 1) [Gitpod](https://www.gitpod.io/) setup
+## 1 Setup [Gitpod](https://www.gitpod.io/) 
 
-Instead of installing tools on your local machine, you can create and modify content directly in Gitpod. This repository is configured to initalize a Gitpod instance with all tools/software you need to start contributing right away like Hugo.
+Gitpod is a cloud development environment (CDE) which makes it easy to create software from any computer. 
 
-First, fork the repository to your GitHub account to work with it there.
+Instead of installing tools on your local computer, you can create and modify content directly in Gitpod. The repository is configured to initialize a Gitpod instance with all tools/software you need to start contributing right away. 
 
-Next, install the [Gitpod Chrome Extension](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki) which installs a Gitpod button in the GitHub project. You can also prefix the URL for the GitHub project (or your fork of the project) with gitpod.io/#
+Visit your fork of the GitHub project in your browser. 
 
-Finally, [open this repository in Gitpod](https://gitpod.io/#github.com/zachlas/arm-software-developers-ads). You can use your GitHub credentials to login to Gitpod and use the Free plan which offers up to 50 hours per month (the Free plan should be sufficient to add your content).
+Install the [Gitpod Chrome Extension](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki) which installs a Gitpod button in the GitHub project. 
 
+If you want to skip the browser extension, you can also prefix the URL for your fork of the GitHub project with gitpod.io/# to open the project in Gitpod.
 
-# 2)  Local computer setup
+Either way, open the repository in Gitpod. The URL looks like: https://gitpod.io/#github.com/zachlas/arm-software-developers-ads (replace with your fork).
 
-Make sure you have [git installed](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+You can use your GitHub credentials (or another authentication method) to login to Gitpod and use the Free plan which offers 500 credits (about 50 hours) per month. 
 
-Then fork the repository first to your GitHub account, and then clone your fork to your local machine (substitute your github account name in the command below):
+## 2 Setup a local computer
+
+To use a local computer install the required tools. 
+
+Any text editor can be used to create and modify the project markdown files. Many developers use [Visual Studio Code](https://code.visualstudio.com/), but any text editor can be used. 
+
+[Install git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) using the documentation for your operating system. 
+
+Clone your fork of the repository to your local machine (substitute your github account name in the command below):
 ```bash
 git clone https://github.com/<your-github-account-name>/arm-software-developers-ads
 ```
 
-Next, install Hugo to review how your changes look before submitting. The easiest way to download Hugo on Linux (Debian/Ubuntu) is through the package manager:
+Install Hugo to review how your changes look before submitting. The easiest way to download Hugo on Linux (Debian/Ubuntu) is using the package manager:
 ```bash
 sudo apt install hugo
 ```
-You can also download and install Hugo from the Hugo releases page [here](https://github.com/gohugoio/hugo/releases). Any recent version of Hugo will work. The **extended version of Hugo is not needed**. Hugo works on all major operating systems and architectures. For even more ways to install Hugo [check the documentation](https://gohugo.io/getting-started/installing).
+
+You can also download and install Hugo from the [releases page](https://github.com/gohugoio/hugo/releases). Any recent version of Hugo will work. The **extended version of Hugo is not needed**. Hugo works on all major operating systems and architectures. For even more ways to install Hugo [check the documentation](https://gohugo.io/getting-started/installing).
 
 Check Hugo is installed correctly and check the version by running this command:
 ```bash
 hugo version
 ```
 
-# 3)  Remove server setup 
+## 3 Setup a remote Linux server
 
-To use a remote machine like an AWS EC2 instance, first start up a custom EC2 instance and log into it over ssh. To access the Hugo server on your remote machine, make sure to connect over ssh using port forwarding (use port 1313):
+A remote Linux server, such as an AWS EC2 instance, can also be used. 
+
+Start an EC2 instance (or other cloud server) and log in using ssh. Install the same tools as in the local computer setup above, a text editor, git, and Hugo. 
+
+To access the Hugo server on the remote machine, use ssh port forwarding (use port 1313):
+
 ```bash
 ssh -L 1313:localhost:1313 user@ip-address
 ```
 
-Next, install Hugo to review how your changes look before submitting. See the '2) Local computer setup' section above for instructions on how to download and install Hugo.
+Clone your fork of the repository to the remote Linux server (substitute your github account name in the command below):
+```bash
+git clone https://github.com/<your-github-account-name>/arm-software-developers-ads
+```
 
+## Contribution process
 
+Regardless of what type of development machine you are using, with all the pre-requisites installed and the fork the repository cloned, you are new ready to start contributing content. 
 
+The content creation process consists of editing the markdown files for the Learning Paths of interest and viewing the changes on your computer using Hugo. 
 
-# Contribution process
-
-Regardless of what computer you are using, with all the pre-requisites installed you are new ready to start contributing content. The content contribution flow will look like this:
-
-With the pre-requisites installed, you can now run hugo to launch the website on your machine.
+Run hugo to launch a development version of website on your machine.
 
 ```bash
 hugo server
@@ -74,3 +103,7 @@ Web Server is available at //localhost:1313/ (bind address 127.0.0.1)
 ```
 
 Open a browser and go to http://localhost:1313 
+
+Iterate editing markdown files and viewing the results on the local Hugo server.
+
+The next section will cover how to create and format Learning Paths. 

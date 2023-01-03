@@ -1,6 +1,6 @@
 ---
 # User change
-title: "2c) Contribute: Formatting"
+title: "Contribute: Formatting"
 
 weight: 6 # 1 is first, 2 is second, etc.
 
@@ -9,8 +9,10 @@ layout: "learningpathall"
 ---
 ![alt-text #center](2-contribution-process.PNG "Contribution process")
 
-## Table of Contents
-1. [Basic Markdown Syntax](#basic-markdown-syntax)
+This section provides information about formatting different types of content. Use the quick links below to jump to the appropriate section for each type of formatting. 
+
+
+1. [Markdown Syntax](#basic-markdown-syntax)
 2. [Code Snippets](#code-snippets)
 3. [Images](#images)
 4. [Videos](#videos)
@@ -18,10 +20,7 @@ layout: "learningpathall"
 6. [Godbolt Compiler Explorer](#godbolt-compiler-explorer)
 
 
-
-
-
-## Basic Markdown Syntax
+## Markdown Syntax
 This site leverages core Markdown syntax. This picture converes 90% of common syntax needs:
 
 ![example image alt-text#center](arm-pic.png "Figure 1. Example image caption")
@@ -112,9 +111,7 @@ HelloWorld
 HelloWorld
 ```
 
-
 ### Code Panes  
-
 
 Adding a code pane, for code dependent on OS, architecture, or similar. Code panes are incompatible with the other forms of code styling.
 
@@ -179,7 +176,7 @@ These are the range of options to add an image:
     - Center-aligned
 
 ### Image Hosting (internal or external)
-Internal hosting is straightfoward. Add the picture (.png or .jpeg format) into the learning path directory alongside the *.md files, and refer to it by name. This example is using 'arm-pic.png' which you can find in this directory:
+Internal hosting is straightforward. Add the picture (.png or .jpeg format) into the Learning Path directory alongside the *.md files, and refer to it by name. This example is using 'arm-pic.png' which you can find in this directory:
 
 ![Arm sample pic](arm-pic.png "Figure 2. Local hosting example")
 

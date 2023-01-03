@@ -89,7 +89,7 @@ To tag the image for Docker Hub put a username for a Docker Hub account in front
 
 Change jasonrandrews to your Docker Hub username. 
 
-The tag of "latest" can be ommitted since it is the default value. 
+The tag of "latest" can be omitted since it is the default value. 
 
 ```console
 docker tag uname:latest jasonrandrews/uname:latest
@@ -112,5 +112,5 @@ Another way is to create multi-architecture images.
 
 With multi-architecture images the user can run the image on any architecture and Docker will automatically get the correct image.
 
-Continue the learning path to learn about multi-architecture images. 
+Continue the Learning Path to learn about multi-architecture images. 
 

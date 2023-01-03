@@ -1,6 +1,6 @@
 ---
 # User change
-title: "4) Updating expectations"
+title: "Update"
 
 weight: 9 # 1 is first, 2 is second, etc.
 
@@ -10,4 +10,4 @@ layout: "learningpathall"
 ![alt-text #center](4-updating-process.PNG "Updating process")
 
 
-every 6 months at least, or if something changes.
+All website content is automatically monitored for out of date material. We may contact you to confirm a Learning Path is still up to date or to request some modifications to a Learning Path that has become out of date. Community members may also submit feedback on Learning Paths so we appreciate any help on keeping content current. 

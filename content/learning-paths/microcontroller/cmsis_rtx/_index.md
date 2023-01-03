@@ -13,7 +13,7 @@ learning_objectives:
 prerequisites:
     - Keil MDK or Arm Development Studio is required (MDK recommended)
     - Some familiarity with CMSIS is assumed
-    - Much of the learning path can also be followed with [Arm Development Studio](/install-tools/armds). See the comments provided at end of each step where appropriate.
+    - Much of the Learning Path can also be followed with [Arm Development Studio](/install-tools/armds). See the comments provided at end of each step where appropriate.
 
 author_primary: Christopher Seidl 
 

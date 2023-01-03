@@ -9,7 +9,7 @@ layout: "learningpathall"
 ---
 The [Arm ML Evaluation Kit](https://review.mlplatform.org/plugins/gitiles/ml/ethos-u/ml-embedded-evaluation-kit) provides a number of ready-to-use ML applications. These allow you to investigate the embedded software stack and evaluate performance of the networks running on the Cortex-M55 and Ethos-U55 processors.
 
-In this learning path we will build and run these examples with [Arm Virtual Hardware](https://www.arm.com/products/development-tools/simulation/virtual-hardware).
+In this Learning Path we will build and run these examples with [Arm Virtual Hardware](https://www.arm.com/products/development-tools/simulation/virtual-hardware).
 
 Full instructions are provided in the evaluation kit [documentation](https://review.mlplatform.org/plugins/gitiles/ml/ethos-u/ml-embedded-evaluation-kit/+/HEAD/docs/quick_start.md)
 

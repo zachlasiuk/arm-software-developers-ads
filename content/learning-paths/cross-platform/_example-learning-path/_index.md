@@ -3,21 +3,22 @@
 #       Edit
 # ================================================================================
 
-title: How to create a Learning Path
+title: Create a Learning Path
 
-description: Learn what type of content belongs as a learning path and how to properly format it.
+description: Learn what type of content belongs in a Learning Path and how to format it.
 
 minutes_to_complete: 20
 
-who_is_this_for: Content creators for technology related to Arm, looking to share their work through a step-by-step guide.
+who_is_this_for: Content creators and software developers looking to share Arm related information as a step-by-step guide called a Learning Path.
 
 learning_objectives: 
-    - Understand what content belongs as a learning path
+    - Understand what type of content belongs in a Learning Path
     - View writing style guidelines
-    - Properly define tags and metadata
+    - Define tags and metadata
     - Format code, pictures, videos and more
 
 prerequisites:
+    - A GitHub account
 
 author_primary: Zach Lasiuk
 

@@ -1,6 +1,6 @@
 ---
 # User change
-title: "2a) Contribute: Directory creation"
+title: "Contribute: Directory creation"
 
 weight: 4 # 1 is first, 2 is second, etc.
 
@@ -10,11 +10,11 @@ layout: "learningpathall"
 ![alt-text #center](2-contribution-process.PNG "Contribution process")
 
 
-# Adding a new Learning Path to the website
+# Adding a new Learning Path
 
-To add new learning paths, navigate to the appropriate directory under content/learning-paths in your fork.
+To add a new Learning Path, navigate to the appropriate directory under content/learning-paths in your fork.
 
-There are 5 different categories into which you can contribute content:
+There are 5 categories into which you can contribute content:
 * server-and-cloud
 * desktop-and-laptop
 * embedded
@@ -22,18 +22,20 @@ There are 5 different categories into which you can contribute content:
 * mobile
 
 {{% notice Note%}}
-Your Learning Path should live in the category it is targeting software development for. For example, say you are writing a Learning Path about streamlining Embedded software development by using cloud-based Cortex-M virtualizing tools (like Arm Virtual Hardware). That Learning Path belongs under the 'Embedded' category as it is using cloud tools but is **targeting** embedded devices.
+Place your Learning Path in the category closest to the environment where the software runs. The tags on the [front page of the website](/) help explain the categories. Feel free to ask on GitHub if you are unsure which category best matches your Learning Path. 
 {{% /notice %}}
 
 
-Create a directory for your new learning path in the appropriate category. For example to create a new **server-and-cloud** based learning path:
+Create a directory for your new Learning Path in the appropriate category. 
+
+For example, to create a new **server-and-cloud** Learning Path:
 
 ```
 cd content/learning-paths/cloud
 mkdir <new-learning-path>
 ```
 
-Next, copy the files from the provided learning path template to modify with your metadata and content. The command is:
+Next, copy the files from the provided Learning Path template to modify with your metadata and content. The command is:
 ```bash
 cd <new-learning-path>
 cp -r cp -r ../../../../learning-path_templates/* .

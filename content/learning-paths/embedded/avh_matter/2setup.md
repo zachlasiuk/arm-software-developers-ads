@@ -57,7 +57,7 @@ It is also possible to log in via the CLCD window view. However it is easier to 
 
 ## (Optional) Connect via SSH
 
-The `Console` view within the browser will suffice to complete this learning path.
+The `Console` view within the browser will suffice to complete this Learning Path.
 
 If you wish to connect via `SSH` (rather than `Console`), it is easiest to download and install the appropriate [OpenVPN Community](https://openvpn.net/community-downloads) version for your host.
 

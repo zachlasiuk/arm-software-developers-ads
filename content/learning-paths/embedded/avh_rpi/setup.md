@@ -46,7 +46,7 @@ It is also possible to log in via the CLCD window view.
 
 ## (Optional) Connect via SSH
 
-The `Console` view within the browser will suffice to complete this learning path.
+The `Console` view within the browser will suffice to complete this Learning Path.
 
 If you wish to connect via `SSH` (rather than `Console`), you have two options.
 

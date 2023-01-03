@@ -1,6 +1,6 @@
 ---
 # User change
-title: "2b) Contribute: Metadata"
+title: "Contribute: Metadata"
 
 weight: 5 # 1 is first, 2 is second, etc.
 
@@ -9,42 +9,45 @@ layout: "learningpathall"
 ---
 ![alt-text #center](2-contribution-process.PNG "Contribution process")
 
-This step will cover how to fill out Learning Path metadata over the three default files:
-1. Metadata and Tagging - **_index.md**
-2. Review Questions - **_review.md**
-3. Next Steps - **_next-steps.md**
+Each Learning Path contains metadata which is used to create the Learning Path pages. The metadata is used by the website so all Learning Paths have the same information and look the same. 
 
-# Metadata and Tagging - _index.md
+This section explains how to add Learning Path metadata in three files:
+1. Metadata and Tagging information in **_index.md**
+2. Review Questions for comprehension provided in **_review.md**
+3. Next Steps for readers in **_next-steps.md**
+
+## Metadata and Tagging 
 
 The following metadata is defined in the _index.md file:
 
-| Learning Path Metadata | Explination |
+| Learning Path Metadata | Explanation |
 |---------------|----------|
-| title                 | Should start with a verb (learn, build, etc.), have no adjectives (amazing, cool, etc.), and be as concise as possible (limit one sentance).       |
-| description           | One sentance summary of the learning path. |
-| minutes_to_complete   | Time to reproduce a learning path from beginning to end (not just read it). |
-| who_is_this_for       | One sentence indicating the exact target audience (developers in X industries using Y tools/software to accomplish Z). |
-| learning_objectives   | 2-5 bullet points, one sentence each, describing what a reader will learn. Should start with a verb (Deploy, Measure). |
-| prerequisites         | Details anything needed before this learning path can be started. Can include online service accounts, prior knowledge, previous Learning Paths, or specific tools and software. Offers explanitory links where possible. |
+| title                 | Should start with a verb (learn, build), have no adjectives (amazing, cool), and be as concise as possible (limit one sentence).       |
+| description           | One sentence summary of the Learning Path. |
+| minutes_to_complete   | Time to perform the steps in the Learning Path (not just read it). |
+| who_is_this_for       | One sentence indicating the target audience (developers using tools or software to accomplish tasks). |
+| learning_objectives   | 2-5 bullet points, one sentence each, describing what a reader will learn. Should start with a verb (deploy, measure). |
+| prerequisites         | Details anything needed before this Learning Path can be started. Can include online service accounts, prior knowledge, previous Learning Paths, or specific tools and software. Offers explanatory links when possible. |
+| author_primary      | The name of the person who wrote the Learning Path in case there are questions about the material. |
 
 {{% notice Note%}}
-To specify a prerequisite Learning Path, do so with a relative path like so:
-* *The Learning Path on [Getting Started with Docker](../../docker) should be completed first.*
+To specify a prerequisite Learning Path, do so with a relative path.
+- *The Learning Path on [Getting Started with Docker](../../docker) should be completed first.*
 {{% /notice %}}
 
 ## Tags
-Tagging metadata is also expected to increase findability via filtering. Some tags are closed (select from a pre-defined list), some are open (enter anything). The tags are:
+Tagging metadata is also expected to increase visibility via filtering. Some tags are closed (you must select from a pre-defined list) and some are open (enter anything). The tags are:
 
 ### skilllevels (closed)
 Indicates the skill level needed as a developer to complete this Learning Path.
 
-| Option | Explination |
+| Option | Explanation |
 |--------------|--------------------|
-| Introductory | requires minimal experience in this field or previous knowledge about the tools/software involved |
-| Advanced     | requires experience with specific topics, tools, or software to properly understand this tutorial |
+| Introductory | Requires minimal experience in this field or previous knowledge about the tools/software involved |
+| Advanced     | Requires experience with specific topics, tools, or software to properly understand this tutorial |
 
 ### subjects (closed)
-Specifies the primary subject the learning path covers. Can only be one subject per learning path; if it spans multiple, pick the primary one. Select from the allowed list for each category, as defined here:
+Specifies the primary subject the Learning Path covers. Can only be one subject per Learning Path; if it spans multiple, pick the primary one. Select from the allowed list for each category, as defined here:
 
 | Server and Cloud | Desktop and Laptop | Embedded | Mobile | Microcontroller |
 |---------|---------|---------|---------|---------|
@@ -60,7 +63,7 @@ Specifies the primary subject the learning path covers. Can only be one subject 
 
 
 ### operatingsystems (closed)
-Specifies the OS (or OSes) this learning path can run on. Select from this closed list:
+Specifies the operating systems this Learning Path can run on. Select from this list:
 
 | OS Options    |
 |---------------|
@@ -73,15 +76,15 @@ Specifies the OS (or OSes) this learning path can run on. Select from this close
 
 
 ### arm_ips (open)
-Specifies the Arm IP this learning path involves, providing a quick link to IP information for developers interested in learning more. You can enter multiple specifi c or groups of IP. More information:
+Specifies the Arm IP this Learning Path involves, providing a quick link to IP information for developers interested in learning more. You can enter multiple specific or groups of IP.
 
 | Grouping Type | When to use | Examples |
 |--------------|-----|-----|
-| Specific IP | when a tutorial covers a specific board or similar with one (or a few) Arm IP | Cortex-M4, Neoverse-N1, Mali-G57 |
-| Group of IP | when a tutorial can be run across multiple Arm IP | Cortex-M, Cortex-A, Cortex-R, Neoverse, Mali |
+| Specific IP | The Learning Path covers a specific board with one (or a few) Arm IP | Cortex-M4, Neoverse-N1, Mali-G57 |
+| Group of IP | The Learning Path applies to a wider class of Arm IP | Cortex-M, Cortex-A, Cortex-R, Neoverse, Mali |
 
 ### tools (open)
-Specifies the tools this learning path leverages (or is about). Some examples below:
+Specifies the tools this Learning Path uses.
 
 | Tool Type     | Examples |
 |---------------|----------|
@@ -92,41 +95,42 @@ Specifies the tools this learning path leverages (or is about). Some examples be
 | Anything else | cbuild, Docker                    |
 
 ### softwares (open)
-Specifies the software and software stacks this learning path leverages (or is about). Some examples below:
+Specifies the software used in the Learning Path. 
 
 | Software Type | Examples |
 |---------------|----------|
 | Stack         | tinyML, CMSIS             |
 | Language      | Python, Java, Assembly    |
-| Libraries     | ????????????????????????  |
+| Libraries     | zlib, snappy  |
 
 
-# Review Questions - _review.md
+## Review Questions 
 
-Review questions both validate path comprehension and re-enforce specific learning ideas. At least two questions should be provided; three questions is most common. Each question is multiple choice. They are specified in the _review.md file as follows:
+Review questions both validate comprehension and re-enforce specific learning ideas. At least two questions should be provided; three questions is ideal. Each question is multiple choice. They are specified in the _review.md file as follows:
 
-| Review Metadata | Explination |
+| Review Metadata | Explanation |
 |---------------|----------|
-| question          | a one sentance question to the reader       |
-| answers           | the multiple choice answers  |
-| correct_answer    | integer indicating what answer is correct (1 for the first listed, etc.)  |
-| explination       | a short, 1-2 sentance explination of why the question has that answer.  |
+| question          | A one sentence question to the reader       |
+| answers           | The multiple choice answers  |
+| correct_answer    | An integer indicating what answer is correct (1 for the first listed, etc.)  |
+| explanation       | A short, 1-2 sentence explanation of why the question has that answer.  |
 
 For a great simple example of this concept see the [MongoDB Learning Path review](../../../server-and-cloud/mongodb/_review).
 
 {{% notice %}}
-The explination is displayed whether or not the reader selects the correct answer, so avoid phrases like "Correct! *This* is because..." and opt for phrasing like "*this* is correct because..."
+The explanation is displayed whether or not the reader selects the correct answer. Avoid phrases like "Correct! *This* is because..." and opt for phrasing like "*this* is correct because..."
 {{% /notice %}}
 
-# Next Steps - _next-steps.md
+## Next Steps
 
-This is where you can provide a specific next step for a reader, and provide further reading resources to dive deeper into topics you covered. The following metadata is defined in the _next-steps.md file:
+This is where you provide a specific next step for a reader, and provide further reading resources to dive deeper into the topics covered. The following metadata is defined in the _next-steps.md file:
 
-| Next Steps Metadata   | Explination |
+| Next Steps Metadata   | Explanation |
 |-----------------------|-------------|
-| next_step_guidance    | 1-3 sentence description of how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.   |
+| next_step_guidance    | A 1-3 sentence description of how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.   |
 | recommended_path      | Link to the next learning path being recommended (For example, this could be [Learn How to Use Docker](../../docker)) |
 | further_reading       | Links to references related to information covered |
 | resource > title      | The displayed title of the provided further_reading resource |
 | resource > link       | The website link to the specific resource |
 | resource > type       | Helps the reader understand what type of resource is being suggested.  Can be either: (1) Manuals for a tool / software (type: documentation). (2) Blog about related topics (type: blog). (3) General online references (type: website). |
+

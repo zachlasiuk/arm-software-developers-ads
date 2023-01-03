@@ -1,6 +1,6 @@
 ---
 # User change
-title: "3) Publish request"
+title: "Publish"
 
 weight: 8 # 1 is first, 2 is second, etc.
 
@@ -9,30 +9,28 @@ layout: "learningpathall"
 ---
 ![alt-text #center](3-publishing-process.PNG "Publishing process")
 
-# Submit your changes to the website
+## Submit your changes
 
-After adding a new learning path and completing your changes, you can run the website locally by running `hugo server` and check that everything looks good.
+Commit your changes to your GitHub fork using git. This can be done with a single commit or a series of commits. 
 
-Commit your changes using git.
-
-Before submitting changes make sure `hugo` runs without errors on the command line. 
+Before submitting a pull request, make sure `hugo` runs without errors on the command line. This should be run from the top level directory of the repository. 
 
 ```console
 hugo
 ```
 
-To submit your changes for review, follow the GitHub Fork-and-Pull approach and submit the Pull request with your changes to be reviewed and merged.
+If there are any errors, such as incorrect formatting of metadata, fix them and try again. 
 
+After you have reviewed the new material using `hugo server` and there are no issues running `hugo` submit a GitHub pull request. Search for a tutorial about how to create a pull request from a GitHub fork if you need guidance on creating the pull request. 
 
+## Publishing
 
-# Publishing - What to Expect
-
-After submitting a PR (Pull Request), automated checks will run to validate your metadata format and the Arm team will start reviewing your content, mostly for technical accuracy and a lookover of writing style/mistakes. You should expect to recieve a notification that (1) you need to tweak some information, or (2) your content has been accepted and published within a week.
+After submitting a pull request, automated checks will run to validate your metadata format and the Arm team will start reviewing your submission. This is done for technical accuracy and to review writing style. Watch the pull request for review comments and respond as needed. Once the pull request is merged, the website is automatically updated with the new contribution. 
 
 {{% notice Note 1 %}}
 If there are small typos or formatting issues, we will fix them before publishing. This is done to reduce the amount of back-and-forth overhead on small issues; you will always be able to view all changes through GitHub and let us know if you object to any changes.
 {{% /notice %}}
 
 {{% notice Note 2 %}}
-If there are large factual / reproducibility errors in your contribution, we will contact you to resolve them before publishing.
+If there are large factual or reproducibility errors in your contribution, we will contact you via the pull request to resolve them before publishing.
 {{% /notice %}}

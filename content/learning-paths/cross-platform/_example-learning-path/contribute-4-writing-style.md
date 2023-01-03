@@ -1,6 +1,6 @@
 ---
 # User change
-title: "2d) Contribute: Writing style"
+title: "Contribute: Writing style"
 
 weight: 7 # 1 is first, 2 is second, etc.
 
@@ -9,19 +9,19 @@ layout: "learningpathall"
 ---
 ![alt-text #center](2-contribution-process.PNG "Contribution process")
 
-# 1) No first person
-Active voice is prefered. 
+## Avoid first person
+Active voice is preferred. Tell readers what to do.
 * Great:&nbsp;	 	                        Implement this process to…
 * OK:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  	You can implement this process to…
 * OK:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   We can implement this process to…
 * Bad:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      	I implemented this process to…
 
-# 2) Get to the point
-Use short, crisp sentances. 
+## Give only required details
+Use short, crisp sentences. Avoid storytelling and excessive background. 
 * Bad:&nbsp;&nbsp;&nbsp; Due to the fact that we leveraged the CMSIS software library, issues with starting from scratch were avoided, and where you totally lacked the ability to implement optimized software before, you can now do so easily.
 * Good:&nbsp; The CMSIS library enables out-of-the-box software optimization.
 
-# 3) Be specific
-Use numbers and examples, not weasel words.
-* "almost always works" --> "works when on Linux and Windows 10 and above."
-* "significantly better performance" --> "30% performance improvement"
+## Be specific
+Use numbers and provide examples as much as possible. Avoid general statements and try to be as specific as possible.
+* Instead of "almost always works" use "works on Linux and Windows 10"
+* Instead of "significantly better performance" use "30% performance improvement"

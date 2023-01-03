@@ -4,7 +4,7 @@
 # ================================================================================
 
 next_step_guidance: >
-   You have built your first stand-alone embedded application. Why not explore these other embedded software learning paths.
+   You have built your first stand-alone embedded application. Why not explore these other embedded software Learning Paths.
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
 recommended_path: "/learning-paths/embedded"

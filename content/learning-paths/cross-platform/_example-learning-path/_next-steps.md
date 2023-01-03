@@ -7,7 +7,7 @@ next_step_guidance: >
    Add your recommendation for next steps here. 
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "Enter learning path relative link here"
+recommended_path: "Enter Learning Path relative link here"
 # Link to the next learning path being recommended(For example this could be /learning-paths/cloud/mongodb).
 
 

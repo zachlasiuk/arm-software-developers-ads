@@ -9,7 +9,7 @@ layout: "learningpathall"
 
 ## Pre-requisites
 
-This learning path assumes you have a  Windows on Arm computer such as [Windows Dev Kit 2023](https://learn.microsoft.com/en-us/windows/arm/dev-kit) or a Lenovo Thinkpad X13s laptop running Windows 11. 
+This Learning Path assumes you have a  Windows on Arm computer such as [Windows Dev Kit 2023](https://learn.microsoft.com/en-us/windows/arm/dev-kit) or a Lenovo Thinkpad X13s laptop running Windows 11. 
 
 All major cloud providers have introduced Arm virtual machine instances. For more information about how to get started refer to [Getting Started with Arm-based Cloud Services](/learning-paths/cloud/providers/). 
 
