@@ -11,7 +11,7 @@ learning_objectives:
     - Install the Keil MDK Tools
     - Run a hello world Trustzone example
     - Understand swtiching of security states
-    - Learn giw secure functions are called from a non-secure state
+    - Learn how secure functions are called from a non-secure state
 
 prerequisites:
     - Familiar with C programming on microcontrollers
@@ -22,7 +22,7 @@ author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Introductory
-subjects: Performance and Architecture
+subjects: Security 
 armips:
     - Cortex-M
 tools:

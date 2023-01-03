@@ -12,7 +12,7 @@ layout: "learningpathall"
 
 A Windows development computer with the Keil MDK [installed](/install-tools/mdk).
 
-Arm Compiler for Embedded
+Arm Compiler for Embedded [installed](/install-tools/armclang).
 
 A NXP LPCXpresso55S69 board
 
