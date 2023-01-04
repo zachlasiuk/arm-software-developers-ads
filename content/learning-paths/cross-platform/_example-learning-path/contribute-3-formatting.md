@@ -56,12 +56,12 @@ print(hello world)
 ### Line numbers
 Specify that line_numbers are true in the following way:
 
-\`\`\`bash { line_numbers = “true” } \
+\`\`\`bash { line_numbers = "true" } \
 echo 'hello world' \
 echo ‘I am line two’ \
 \`\`\` 
 
-```bash { line_numbers = “true” } 
+```bash { line_numbers = "true" } 
 echo ‘hello world’ 
 echo ‘I am line two’ 
 ``` 
