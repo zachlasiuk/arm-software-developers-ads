@@ -23,7 +23,6 @@ armips:
     - Neoverse
 tools:
 softwares:
-    - 
 operatingsystems:
     - Linux
 

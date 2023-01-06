@@ -22,7 +22,7 @@ subjects: ML
 armips:
     - Neoverse
 tools:
-softwaress:
+softwares:
     - tensorflow
 operatingsystems:
     - Linux

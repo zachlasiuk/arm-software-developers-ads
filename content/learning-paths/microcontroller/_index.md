@@ -14,6 +14,7 @@ operatingsystems_filter:
 - RTOS
 subjects_filter:
 - Performance and Architecture
+- Security
 - ML
 subtitle: Learn best practices for microcontroller development
 title: Microcontroller

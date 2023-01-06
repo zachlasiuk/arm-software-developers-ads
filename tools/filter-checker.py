@@ -25,7 +25,7 @@ def mdToMetadata(md_file_path):
 
 
 
-def updateCategoryFiltersInIndexMD(main_category):
+def updateClosedCategoryFiltersInIndexMD(main_category):
     category_index_md_file = dir_relative_of_learning_paths+main_category+"/_index.md"
 
     # Read in _index.md of Category as yml
@@ -58,6 +58,58 @@ def updateCategoryFiltersInIndexMD(main_category):
         f.write('---\n')
 
     return True
+
+
+
+
+
+
+
+
+def updateOpenFiltersInIndexMD():
+    crossplatform_index_md_file = dir_relative_of_learning_paths+"cross-platform/_index.md"
+
+    # Read in _index.md of Category as yml
+    metadata_dic = mdToMetadata(crossplatform_index_md_file)
+
+    # Define what to add
+    updated_category_filters = {'softwares_filter': [], 'tools_filter': []}
+
+    # Fill out filters dic
+    #   SOFTWARES
+    all_existing_sw = status_dic['softwares']
+    for sw in all_existing_sw:
+        # urlize and place them in the same area if needed
+        #sw = sw.lower().replace(' ','-')
+        #if sw not in updated_category_filters['softwares_filter']:
+        if sw != 'None':
+            updated_category_filters['softwares_filter'].append(sw)
+
+    #   OSes
+    all_existing_t = status_dic['tools']
+    for t in all_existing_t:
+        # urlize and place them in the same area if needed
+        #t = t.lower().replace(' ','-')
+        #if t not in updated_category_filters['tools_filter']:
+        if t != 'None':
+            updated_category_filters['tools_filter'].append(t)
+
+
+    # Replace category filters in existing metadata
+    metadata_dic['softwares_filter'] = updated_category_filters['softwares_filter']
+    metadata_dic['tools_filter'] = updated_category_filters['tools_filter']
+
+    # re-write the _index.md file, including '---' in the front and back of it
+    with open(crossplatform_index_md_file, "w") as f:
+        f.write('---\n')
+        yaml.dump(metadata_dic, f)
+        f.write('---\n')
+
+    return True
+
+
+
+
 
 
 def printSubjectReport():
@@ -122,12 +174,45 @@ def printOSesReport():
 
 
 
+def printSoftwaresReport():
+    print()
+    print()
+    print('='*50)
+    print('Softwares')
+    # sort by alphabetical order
+    sw_dic=  dict(sorted(status_dic['softwares'].items(), key=lambda x:x[0].lower()))
+    for sw in sw_dic:
+        print('    '+sw+' - '+str(sw_dic[sw]['count']))
+        for lp in sw_dic[sw]['learning-path-titles']:
+            print('        '+lp)
+
+    print('='*50)
+    print()
+    print() 
+
+def printToolsReport():
+    print()
+    print()
+    print('='*50)
+    print('Tools')
+    # sort by alphabetical order
+    t_dic=  dict(sorted(status_dic['tools'].items(), key=lambda x:x[0].lower()))
+    for t in t_dic:
+        print('    '+t+' - '+str(t_dic[t]['count']))
+        for lp in t_dic[t]['learning-path-titles']:
+            print('        '+lp)
+
+    print('='*50)
+    print()
+    print() 
+
+
 
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description='Program that validates the correct closed schema filters are being used, reports any errors, and optionally updates _index.md files for each learning path category to reflect the currently supported filters.')
     parser.add_argument('--report',  help="optional. When set to 'print' a report will be printed detailing the closed filter status", required=False, default=False)
-    parser.add_argument('--update-md-files', help='When set, this script will auto-update all category/_index.md files and overwrite the closed filter values based on what the current learning paths support', required=False, action=argparse.BooleanOptionalAction)
+    parser.add_argument('--update-md-files',  help="When set, this script will auto-update all category/_index.md files and overwrite the closed filter values based on what the current learning paths support", required=False, default=False)
     args = vars(parser.parse_args())
 
     #
@@ -154,7 +239,9 @@ if __name__ == "__main__":
 
     status_dic = {
         'subjects':{},
-        'operatingsystems':{}
+        'operatingsystems':{},
+        'softwares': {},
+        'tools': {}
         }
 
     # iterate over main categories as defined in the dic allow list (embedded, mobile, etc.)
@@ -204,21 +291,64 @@ if __name__ == "__main__":
                     status_dic['operatingsystems'][dir_main_category][opsys]['count']               += 1                # increase count by one
                     status_dic['operatingsystems'][dir_main_category][opsys]['learning-path-titles'].append(learning_path_metadata['title'])   # add title to list
 
+            # Analyze Learning Path software, update status_dic
+            softwares = learning_path_metadata['softwares']
+            if not softwares:
+                softwares = ['None']
+            for sw in softwares:
+                if sw not in status_dic['softwares']:
+                    # create subject key in dic
+                    status_dic['softwares'][sw] = {}            
+                    status_dic['softwares'][sw]['count']                = 1                # make count one
+                    status_dic['softwares'][sw]['learning-path-titles'] = [learning_path_metadata['title']]   # create list with title
+                else:
+                    status_dic['softwares'][sw]['count']               += 1                # increase count by one
+                    status_dic['softwares'][sw]['learning-path-titles'].append(learning_path_metadata['title'])   # add title to list
+
+            # Analyze Learning Path tools, update status_dic
+            tools = learning_path_metadata['tools']
+            if not tools:
+                tools = ['None']
+            for t in tools:
+                if t not in status_dic['tools']:
+                    # create subject key in dic
+                    status_dic['tools'][t] = {}            
+                    status_dic['tools'][t]['count']                = 1                # make count one
+                    status_dic['tools'][t]['learning-path-titles'] = [learning_path_metadata['title']]   # create list with title
+                else:
+                    status_dic['tools'][t]['count']               += 1                # increase count by one
+                    status_dic['tools'][t]['learning-path-titles'].append(learning_path_metadata['title'])   # add title to list
+
+
     #
     # 3
     # Report numbers
-    if args['report'] == 'print':
+    if args['report'] == 'all':
         printSubjectReport()
         printOSesReport()
-    
+    elif args['report'] == 'subjects':
+        printSubjectReport()
+    elif args['report'] == 'oses':
+        printOSesReport()
+    elif args['report'] == 'softwares':
+        printSoftwaresReport()
+    elif args['report'] == 'tools':
+        printToolsReport()
+
     #
     # 4
     # Overwrite filters.yml file with existing acceptable filters under each learning path
     if args['update_md_files']:
-        print('Overwriting md files now...')
+        print('CLOSED filter updates:')
+        print('    Overwriting category md files now...')
         for main_category in dic_allow_list["subjects"]:
-            status = updateCategoryFiltersInIndexMD(main_category)
-            print("     "+main_category+"/_index.md updating complete")
+            status = updateClosedCategoryFiltersInIndexMD(main_category)
+            print("         "+main_category+"/_index.md updating complete")
+
+        print('OPEN filter updates:')
+        print('    Overwriting cross-platform md file now...')
+        status = updateOpenFiltersInIndexMD()
+        print("     /cross-platform/_index.md updating complete")        
     else:
         print('No overwriting specifed with --update-md-files flag. Exiting.')
         print()
