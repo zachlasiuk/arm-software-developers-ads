@@ -68,7 +68,7 @@
                                 <td>{{ $aname }}</td>
                                 <td>{{ $lpname }}</td>
                                 {{ $tpath := replace $lppath "/content" "" }}
-                                <td><a href="{{ $pathURL }}/../{{ $tpath }}{{ $sname | relURL }}"> {{ $sname }}</a></td>
+                                <td><a href="{{ $pathURL }}{{ $tpath }}{{ $sname | relURL }}"> {{ $sname }}</a></td>
                                 {{ $c := readFile $fpath | transform.Unmarshal }}
 
                                 <!-- Test -->
@@ -124,7 +124,7 @@
             {{ $fpath := printf "%s" $name | printf "%s/%s" $contentpath | printf "%s" }}
             {{ $sname := replace .Name ".md" "" }}
             <tr>
-                <td><a href="{{ $pathURL }}/../{{ $path }}{{ $sname | relURL }}"> {{ $sname }}</a></td>
+                <td><a href="{{ $pathURL }}/{{ $path }}{{ $sname | relURL }}"> {{ $sname }}</a></td>
                 {{ $c := readFile $fpath | transform.Unmarshal }}
 
                 <!-- Test -->
