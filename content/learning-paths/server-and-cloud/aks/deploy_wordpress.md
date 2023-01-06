@@ -10,7 +10,7 @@ layout: "learningpathall"
 
 ## Prerequisites
 
-* [An AKS cluster](/learning-paths/cloud/aks/cluster_deployment/)
+* [An AKS cluster](/learning-paths/server-and-cloud/aks/cluster_deployment/)
 
 ## Deploy WordPress Example
 

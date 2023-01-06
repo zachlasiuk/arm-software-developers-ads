@@ -14,7 +14,7 @@ It is assumed you have installed Arm Development Studio and configured your lice
 
 Alternatively you can install [Arm Compiler for Embedded](/install-tools/armclang/) and [Arm Fixed Virtual Platforms (FVP)](/install-tools/fm#fvp) individually.
 
-See [Prepare Docker image for Arm embedded development](/learning-paths/microcontroller/docker/) for an example Docker image.
+See [Prepare Docker image for Arm embedded development](/learning-paths/cross-platform/docker/) for an example Docker image.
 
 We shall use the `FVP_Base_Cortex-A73x2-A53x4` platform, which is a complex FVP system, containing two processor clusters.
 

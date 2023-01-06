@@ -7,8 +7,8 @@ next_step_guidance: >
     We recommend you continue learning about migrating applications to Arm. 
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/cloud/mysql_tune/"
-# Link to the next learning path being recommended(For example this could be /learning-paths/cloud/mongodb).
+recommended_path: "/learning-paths/server-and-cloud/mysql_tune/"
+# Link to the next learning path being recommended(For example this could be /learning-paths/server-and-cloud/mongodb).
 
 # further_reading links to references related to this path. Can be:
     # Manuals for a tool / software mentioned   (type: documentation)

@@ -141,7 +141,7 @@ gcc hello.c -o hello
 ./hello
 ```
 
-You are now ready to get started with the [Server and Cloud learning paths](/learning-paths/cloud/).
+You are now ready to get started with the [Server and Cloud learning paths](/learning-paths/server-and-cloud/).
 
 ## Other resources
 

@@ -11,7 +11,7 @@ next_step_guidance: >
     - For profiling: [Arm Streamline](https://developer.arm.com/Tools%20and%20Software/Streamline%20Performance%20Analyzer) or [Arm MAP, part of Arm Forge](https://developer.arm.com/Tools%20and%20Software/Arm%20Forge)
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/cloud/"
+recommended_path: "/learning-paths/server-and-cloud/"
 # Link to the next learning path being recommended.
 
 
