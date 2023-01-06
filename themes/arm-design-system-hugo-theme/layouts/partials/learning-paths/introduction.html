@@ -54,8 +54,10 @@
                             {{ . }}
                         </ads-tag>
                     {{ end }}
-                    </span>
-                </h6>
+                </span>
+                {{ if .Params.test_maintenance}}
+                    {{ partial "test-maintenance/test-maintenance" . }}
+                {{end}}
             </div>
         </div>
     </div>            

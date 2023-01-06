@@ -50,37 +50,65 @@
                 {{partial "ads-cards/custom-content-navs-mobile.html" (dict "context" .    "thisfile" $thisfile    "thisdir" $thisdir    "filesindir" $toolfiles)  }}
             {{end}}
 
+
+
+
+
+                            <!-- Markdown metadata -->
+                            <div class="content-box">
+                                <h2>About this Tool Install</h2>
+                                <!-- First row of info-->
+                                <div class="c-row">
+                                    <div class="u-display-grid u-gap-1 md:u-grid-columns-2">
+                                        <div class="c-col">
+                                            {{ partial "ads-cards/ads-card-style.html" . }}
+                                            <p class="u-margin-top-1/2 u-margin-bottom-0">Reading time:
+                                                <span><i class="fa-solid fa-clock"></i></span>
+                                                {{.Params.minutes_to_complete}} minutes
+                                            </p>
+                                            <p class="u-margin-bottom-0">Last updated:
+                                                <span><i class="fa-solid fa-calendar-days"></i></span>
+                                                {{ .Lastmod.UTC.Format "Jan 2, 2006" }}
+                                            </p>                       
+                                        </div>
+                                        <div class="c-col u-flex-grow-1 u-margin-top-2">
+                                            <span>
+                                                <!-- provide tag ONLY if it is a valid tag -->
+                                                {{ $tool_tags := (.Site.GetPage "learning-paths/cross-platform").Params.tools_filter }}
+                                                {{ $urlized_tool_tags := apply $tool_tags "urlize" "." }}
+                                                {{ if in $urlized_tool_tags (.Title | urlize) }}
+                                                    <!-- Clickable tag -->
+                                                    <ads-tag    href='{{ "/" | relLangURL}}tools/{{.Title | urlize}}'>
+                                                        <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                                                        <span class="fa-solid fa-tag"></span>
+                                                        {{.Title}}
+                                                    </ads-tag>
+                                                {{end}}
+                                            </span>
+                                            <br>
+                                            {{ if .Params.test_maintenance}}
+                                                {{ partial "test-maintenance/test-maintenance" . }}
+                                            {{end}}
+                                        </div>
+                                    </div>
+                                </div>            
+                            </div>
+
+                            
             <!-- Main content display!-->
             <div class="content-box markdown-content-div">
-                <!-- provide tag ONLY if it is a valid tag -->
-                {{ $tool_tags := (.Site.GetPage "learning-paths/cross-platform").Params.tools_filter }}
-                {{ $urlized_tool_tags := apply $tool_tags "urlize" "." }}
-                {{ if in $urlized_tool_tags (.Title | urlize) }}
-                    <!-- Clickable tag -->
-                    <span>
-                    <ads-tag    href='{{ "/" | relLangURL}}tools/{{.Title | urlize}}' class="u-margin-bottom-1">
-                        <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
-                        <span class="fa-solid fa-tag"></span>
-                        {{.Title}}
-                    </ads-tag>
-                    &nbsp;click this tag to view all Learning Paths that use this tool.</span>
-                {{end}}
-
-
                 <!-- Content -->
                 {{ with .Content }}
                 {{ . }}
                 {{ end }}
-
             </div>
 
             <!-- Multi-tool easy routing to new pages, ONLY for main multi_install page -->
             {{if .Params.multi_install}}
                 <div class="content-box markdown-content-div">
+                    <h3>Select an installation:</h3> 
                     <div class="c-row">
                         <div class="c-col">
-                            <!-- <h3>Select {{.Title}} installation type</h3> -->
-                            <h3>Select an installation:</h3> 
                             <div class="u-display-grid u-gap-1 md:u-grid-columns-2 lg:u-grid-columns-2 xl:u-grid-columns-3 xxl:u-grid-columns-3 u-margin-top-1">
                                 {{range $index, $multi := $toolfiles}}
                                     {{ if ne .File.TranslationBaseName "_index" }} 

@@ -1,19 +1,22 @@
 <!-- Scratchpad gets populated through call to .Inner -->  
 {{- .Inner -}}
 
-<ads-horizontal-tabs id="tabs-{{- $.Ordinal -}}" alt-emphasis="yes">
-  {{- range $index, $element := $.Scratch.Get "tabs" -}}
-    <div slot="content" data-id="tab-{{- $.Ordinal -}}-slot-{{$index}}">
-      <div class="code-toolbar">
-        <pre class="language-en" {{if $element.highlight_lines}} data-line={{$element.highlight_lines}} {{end}}>
-          <code class="{{if $element.language}}language-{{$element.language}}{{else}}language-en{{end}}">
-            {{.content}}
-          </code>
-        </pre>
+<div class="code-tabpane">
+  <ads-horizontal-tabs id="tabs-{{- $.Ordinal -}}" alt-emphasis="yes">
+    {{- range $index, $element := $.Scratch.Get "tabs" -}}
+      <div slot="content" data-id="tab-{{- $.Ordinal -}}-slot-{{$index}}">
+        <div class="code-toolbar">
+          <pre class="language-en" {{if $element.highlight_lines}} data-line={{$element.highlight_lines}} {{end}}>
+            <code class="{{if $element.language}}language-{{$element.language}}{{else}}language-en{{end}}">
+              {{.content}}
+            </code>
+          </pre>
+        </div>
       </div>
-    </div>
-  {{end}}
-</ads-horizontal-tabs>
+    {{end}}
+  </ads-horizontal-tabs>
+</div>
+
 <script>
   (() => {
     const tabs = document.querySelector('#tabs-{{- $.Ordinal -}}');

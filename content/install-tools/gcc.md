@@ -13,7 +13,6 @@ test_status:
 title: GCC
 tool_install: true
 ---
-{{< test >}}
 
 ## GCC {#top}
 

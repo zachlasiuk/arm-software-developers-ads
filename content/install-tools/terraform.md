@@ -11,8 +11,6 @@ title: Terraform
 tool_install: true
 ---
 
-{{< test >}}
-
 [Terraform](https://www.terraform.io/) automates cloud infrastructure. It is an infrastructure as code tool. 
 
 Terraform is available for Windows, macOS, Linux and supports the Arm architecture. 

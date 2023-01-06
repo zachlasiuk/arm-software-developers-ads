@@ -11,8 +11,6 @@ title: Kubectl
 tool_install: true
 ---
 
-{{< test >}}
-
 Kubectl is the [Kubernetes](https://kubernetes.io/) command-line tool. 
 
 It is available for Linux, macOS, and Windows.

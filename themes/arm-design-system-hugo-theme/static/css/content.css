@@ -56,6 +56,17 @@ div.markdown-content-div > ol {
     margin-bottom: 16px;
 }
 
+div.markdown-content-div > div.code-tabpane {
+    box-sizing: border-box;
+    margin-left: 16px;
+    margin-top: 8px;
+}
+html[theme="dark"]  div.markdown-content-div > div.code-tabpane { 
+    --ads-horizontal-tabs-navigation-background-color: var(--arm-color-surface); 
+    --ads-horizontal-tabs-tab-content-background-color: var(--arm-color-surface); 
+}
+
+
 div.markdown-content-div > table {
     width: max-content;     /* No full-length tables unless there is a reason */
     margin-top: 16px;
@@ -82,12 +93,6 @@ div.markdown-content-div h6 {
     margin-top: 32px;
 }
 
-/* for first header, remove margin */
-div.markdown-content-div h1:first-of-type,
-div.markdown-content-div h2:first-of-type {
-    margin-top: 0px;
-}
-
 div.markdown-content-div h3 {   font-weight: 400; } /* Increase h3 font weight to normal to make more readable for regular reading */
 
 
@@ -100,6 +105,8 @@ table {
         font-size: var(--ads-font-size-large);
     }
 }
+
+
 
 /* Notice box */
 ads-card.notice-callout {
@@ -162,3 +169,14 @@ div.answer label {
 
 
 
+
+/* select every P and H1,2,3,4,5,6 that is the first child of markdown-content-div to have 0 top margin */
+div.markdown-content-div > h1:first-child,
+div.markdown-content-div > h2:first-child,
+div.markdown-content-div > h3:first-child,
+div.markdown-content-div > h4:first-child,
+div.markdown-content-div > h5:first-child,
+div.markdown-content-div > h6:first-child,
+div.markdown-content-div > p:first-child {
+    margin-top: 0px;
+}

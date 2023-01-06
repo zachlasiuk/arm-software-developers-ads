@@ -11,8 +11,6 @@ title: Azure CLI
 tool_install: true
 ---
 
-{{< test >}}
-
 [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/) is a cross-platform command-line tool that can be installed locally on development computers. Azure CLI is used to connect to Azure and execute administrative commands on Azure resources. 
 
 It is available for a variety of operating systems and Linux distributions and has multiple ways to install it. 

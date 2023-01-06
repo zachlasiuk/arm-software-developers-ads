@@ -37,8 +37,6 @@ uname -m
 ```
 Depending on the version of the Arm architecture, the results are shown below. Both Armv8-A and Armv7-A are supported. 
 
-&nbsp;
-
 {{< tabpane code=true >}}
   {{< tab header="Armv8-A">}}
 aarch64
@@ -55,8 +53,6 @@ Download either the CLI version or the desktop version of VS Code. The desktop v
 ### Download CLI version of VS Code (tunnel only)
 
 Download a command line (CLI) release of VS Code from the Downloads page. 
-
-&nbsp;
 
 {{< tabpane code=true >}}
   {{< tab header="Armv8-A">}}
