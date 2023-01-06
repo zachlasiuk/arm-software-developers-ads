@@ -12,7 +12,7 @@ learning_objectives:
     - Pull and run the created Docker images on any Arm computer with Docker installed
 
 prerequisites:
-    - An [AWS account](/learning-paths/cloud/providers/aws/) to use for accessing AWS services
+    - An [AWS account](/learning-paths/server-and-cloud/providers/aws/) to use for accessing AWS services
 
 author_primary: Jason Andrews
 

@@ -8,7 +8,7 @@ next_step_guidance: >
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
 recommended_path: "Enter Learning Path relative link here"
-# Link to the next learning path being recommended(For example this could be /learning-paths/cloud/mongodb).
+# Link to the next learning path being recommended(For example this could be /learning-paths/server-and-cloud/mongodb).
 
 
 # further_reading links to references related to this path. Can be:
@@ -18,22 +18,9 @@ recommended_path: "Enter Learning Path relative link here"
 
 further_reading:
     - resource:
-        title: Enter title for resource 1 here
-        link: Enter link for resource 1 here
-        type: Enter type for resource 1 here
-    - resource:
-        title: Enter title for resource 2 here
-        link: Enter link for resource 2 here
-        type: Enter type for resource 2 here
-    - resource:
-        title: Enter title for resource 3 here
-        link: Enter link for resource 3 here
-        type: Enter type for resource 3 here
-    - resource:
-        title: Enter title for resource 4 here
-        link: Enter link for resource 4 here
-        type: Enter type for resource 4 here
-
+        title: GitHub Project Repository
+        link: https://github.com/zachlas/arm-software-developers-ads
+        type: website
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

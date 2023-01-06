@@ -6,7 +6,7 @@ layout: learningpathall
 
 ## Prerequisites
 
-* [An EKS cluster](/content/en/cloud/eks/cluster_deployment.md)
+* [An EKS cluster](/learning-paths/server-and-cloud/eks/cluster_deployment/)
 
 ## WordPress Deployment Files
 We use three yaml files to deploy WordPress: kustomization.yaml, mysql-deployment.yaml, and wordpress-deployment.yaml.

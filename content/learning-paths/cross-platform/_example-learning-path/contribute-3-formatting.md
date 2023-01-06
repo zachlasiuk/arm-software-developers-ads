@@ -12,7 +12,7 @@ layout: "learningpathall"
 This section provides information about formatting different types of content. Use the quick links below to jump to the appropriate section for each type of formatting. 
 
 
-1. [Markdown Syntax](#basic-markdown-syntax)
+1. [Markdown Syntax](#markdown-syntax)
 2. [Code Snippets](#code-snippets)
 3. [Images](#images)
 4. [Videos](#videos)
@@ -237,3 +237,8 @@ You can also give a custom title as specified here.
 - Also
 - Work
 {{% /notice %}}
+
+## Godbolt Compiler Explorer
+
+To be written
+

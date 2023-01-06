@@ -31,7 +31,7 @@ Create a directory for your new Learning Path in the appropriate category.
 For example, to create a new **server-and-cloud** Learning Path:
 
 ```
-cd content/learning-paths/cloud
+cd content/learning-paths/server-and-cloud
 mkdir <new-learning-path>
 ```
 

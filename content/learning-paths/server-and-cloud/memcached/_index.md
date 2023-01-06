@@ -12,7 +12,7 @@ learning_objectives:
     - Use an open-sourced benchmark to test memcached performance on your instance
 
 prerequisites:
-    - An [Arm based instance](/learning-paths/cloud/providers) from an appropriate cloud service provider.
+    - An [Arm based instance](/learning-paths/server-and-cloud/providers) from an appropriate cloud service provider.
 
 author_primary: Pareena Verma
 

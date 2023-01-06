@@ -11,7 +11,7 @@ layout: "learningpathall"
 
 ## Pre-requisites
 
-* An [Arm based Linux machine](/learning-paths/cloud/providers) from a cloud service provider to use as a development machine.
+* An [Arm based Linux machine](/learning-paths/server-and-cloud/providers) from a cloud service provider to use as a development machine.
 
 
 ## Development machine
@@ -80,11 +80,11 @@ Here are a number of real-world migration scenarios. They cover migrations rangi
 | Application migration | Migration results |
 |-----------------------|--------------------|
 |Node.js application    | Just works! nothing special for Arm |
-|C++ application has some x86_64 intrinsics | [Migrate to NEON](/learning-paths/cloud/intrinsics/) using sse2neon or SIMDe|
+|C++ application has some x86_64 intrinsics | [Migrate to NEON](/learning-paths/server-and-cloud/intrinsics/) using sse2neon or SIMDe|
 |Pandoc (documentation tool) has a filter not available on Arm|Rebuild dependency library from source (and ask maintainers for Arm support)|
 |Encryption in a Java app is slow | Use  -XX:+UnlockDiagnosticVMOptions -XX:+UseAESCTRIntrinsics flags to improve Arm crypto performance|
 |Dependent container not available for Arm|Build the container yourself (and ask the maintainers for Arm support)|
-Benchmark results are mediocre on Arm|Rebuild C++ components with newer compiler and enable [Large System Extensions](/learning-paths/cloud/lse/)|
+Benchmark results are mediocre on Arm|Rebuild C++ components with newer compiler and enable [Large System Extensions](/learning-paths/server-and-cloud/lse/)|
 
 ## Summary
 
