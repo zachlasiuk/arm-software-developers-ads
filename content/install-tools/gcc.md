@@ -242,14 +242,14 @@ aarch64-linux-gnu-gcc hello-world-embedded.c -o hello-world.elf
 
 ## Introduction
 
-Arm GNU Toolchain is a community supported pre-built GNU compiler toolchain for Arm based CPUs.
-There are many versions of the [Arm GNU Toolchain](https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain) available for use. In general, the latest version is recommended for use, as this will contain the latest optimization improvements, as well as support for the latest Arm IP. However there are reasons you may wish to use earlier compiler versions, when a specific compiler version is often mandated. 
+Arm GNU Toolchain is a community supported, pre-built GNU compiler toolchain for Arm based CPUs.
+There are many versions of the [Arm GNU Toolchain](https://developer.arm.com/Tools%20and%20Software/GNU%20Toolchain) available. In general, the latest version is recommended for use, as this will contain the latest optimization improvements, as well as support for the latest Arm IP. However there are reasons you may wish to use earlier compiler versions, so older versions are also available.
 
 ## Download toolchain
 
-Arm GNU Toolchain releases consists of cross toolchains for the following host operating systems:
+Arm GNU Toolchain releases consist of cross toolchains for the following host operating systems:
     
-GNU/Linux    
+Linux    
   * Available for x86_64 and AArch64 host architectures
   * Available for bare-metal and Linux targets      
     
@@ -258,37 +258,96 @@ Windows
   * Available for bare-metal and Linux targets
                       
 macOS    
-  * Available for x86_64 host architecture only
+  * Available for x86_64 and Apple silicon (beta) host architectures
   * Available for bare-metal targets only
     
 Download the correct toolchain variant for your development needs from the [Arm Developer website](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/downloads).
 
 ## Installation
 
-### Installing executables on Linux
+### Installing on Linux
 
-Unpack the tarball to the install directory, and add the `bin` directory to `PATH`
+Unpack the downloaded file to the install directory.
+
+{{< tabpane code=true >}}
+  {{< tab header="x86_64">}}
+tar xJf arm-gnu-toolchain-12.2.rel1-x86_64-<TRIPLE>.tar.xz -C /path/to/install/dir
+  {{< /tab >}}
+  {{< tab header="aarch64">}}
+tar xJf arm-gnu-toolchain-12.2.rel1-aarch64-<TRIPLE>.tar.xz -C /path/to/install/dir
+  {{< /tab >}}
+{{< /tabpane >}}
+
+Add the `bin` directory to the `PATH` environment variable (bash).
+
 ```console
-cd ${install_dir} && tar xjf gcc-arm-none-eabi-_version_-linux.tar.bz2
-export PATH=${install_dir}/bin:$PATH
+export PATH=/path/to/install/dir/bin:$PATH
 ```
-If you want to use `gdb python build` (`arm-none-eabi-gdb-py`), then
-install `python2.7`.
 
-For some Ubuntu releases, the toolchain can also be installed via
-[Launchpad PPA](https://launchpad.net/~team-gcc-arm-embedded/+archive/ubuntu/ppa).
+Here is a specific example for an Arm Linux host and the AArch32 bare-metal target.
 
-### Installing executables on Mac OS X
-Unpack the tarball to the install directory
-```console
-cd ${install_dir} && tar xjf gcc-arm-none-eabi-_version_-mac.tar.bz2
+```bash { target="ubuntu:latest" }
+wget https://developer.arm.com/-/media/Files/downloads/gnu/12.2.rel1/binrel/arm-gnu-toolchain-12.2.rel1-aarch64-arm-none-eabi.tar.xz
+tar xJf arm-gnu-toolchain-12.2.rel1-aarch64-arm-none-eabi.tar.xz -C $HOME
+echo 'export PATH="$PATH:$HOME/arm-gnu-toolchain-12.2.rel1-aarch64-arm-none-eabi/bin"' >> ~/.bashrc
+source ~/.bashrc
 ```
-Add `bin` directory to `$PATH` by editing the `/etc/paths` file with an appropriate editor, for example:
+
+### Installing on macOS
+
+Downloads for macOS are available as tar files (`.tar.xz`) and package files (`.pkg`). 
+
+For `.tar.xz` files, unpack the downloaded file to the install directory.
+
+{{< tabpane code=true >}}
+  {{< tab header="x86_64">}}
+tar xJf arm-gnu-toolchain-12.2.rel1-darwin-x86_64-<TRIPLE>.tar.xz -C /path/to/install/dir
+  {{< /tab >}}
+  {{< tab header="aarch64">}}
+tar xJf arm-gnu-toolchain-12.2.rel1-darwin-arm64-<TRIPLE>.tar.xz -C /path/to/install/dir
+  {{< /tab >}}
+{{< /tabpane >}}
+
+For `.pkg` files use the installer. 
+
+{{< tabpane code=true >}}
+  {{< tab header="x86_64">}}
+sudo installer -pkg arm-gnu-toolchain-12.2.rel1-darwin-x86_64-<TRIPLE>.pkg -target /
+  {{< /tab >}}
+  {{< tab header="aarch64">}}
+sudo installer -pkg arm-gnu-toolchain-12.2.rel1-darwin-arm64-<TRIPLE>.pkg -target /
+  {{< /tab >}}
+{{< /tabpane >}}
+
+Use a text editor to add the `bin` directory as a new line in `/etc/paths`.
+
 ```console
 sudo nano /etc/paths
 ```
 
-### Installing executables on Windows
+For example the path could be: `/Applications/ArmGNUToolchain/12.2.rel1/arm-none-eabi/bin`
+
+The `/etc/paths` file is a list of paths to search.
+
+```console
+/usr/local/bin
+/System/Cryptexes/App/usr/bin
+/usr/bin
+/bin
+/usr/sbin
+/sbin
+/Applications/ArmGNUToolchain/12.2.rel1/arm-none-eabi/bin
+```
+
+Here is a specific example for macOS with Apple Silicon and the AArch32 bare-metal target. 
+
+```console
+wget https://developer.arm.com/-/media/Files/downloads/gnu/12.2.rel1/binrel/arm-gnu-toolchain-12.2.rel1-darwin-arm64-arm-none-eabi.pkg
+sudo installer -pkg arm-gnu-toolchain-12.2.rel1-darwin-arm64-arm-none-eabi.pkg -target /
+echo '/Applications/ArmGNUToolchain/12.2.rel1/arm-none-eabi/bin' | sudo tee -a /etc/paths
+```
+
+### Installing on Windows
 Double-click on the installer (e.g. `gcc-arm-_version_--mingw-w64-i686-arm-none-eabi.exe`) and follow on-screen instructions.
 
 The installer can also be run on the command line. When run on
@@ -302,11 +361,7 @@ For example, to install the tools silently, amend users `PATH` and add registry 
 gcc-arm-_version_--mingw-w64-i686-arm-none-eabi.exe /S /P /R
 ```
 
-The zip package is a backup to Windows installer for those who cannot run the installer. You can unzip the package and then invoke it following instructions in the next section.
-
-To use `gdb python build` (`arm-none-eabi-gdb-py`), you must install 32 bit
-`python2.7` irrespective of 32 or 64 bit Windows. You can get the package from [here](https://www.python.org/download/).
-
+The zip package is a backup to Windows installer for those who cannot run the installer. You can unzip the package and then invoke the tools directly. 
 
 ## Setting up product license 
 
