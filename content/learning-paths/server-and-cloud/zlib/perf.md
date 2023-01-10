@@ -1,16 +1,8 @@
 ---
 layout: learningpathall
-test_images:
-- ubuntu:latest
-test_link: https://github.com/armflorentlebeau/arm-software-developers-ads/actions/runs/3540052189
-test_maintenance: true
-test_status:
-- passed
 title: Use perf to analyze zlib performance
 weight: 4
 ---
-
-{{< test >}}
 
 ## Pre-requisites
 

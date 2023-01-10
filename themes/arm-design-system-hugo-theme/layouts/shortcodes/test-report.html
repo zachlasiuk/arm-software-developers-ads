@@ -40,7 +40,6 @@
 <table>
     <th>Area</th>
     <th>Learning-path</th>
-    <th>Name</th>
     <th>Test</th>
     <th>Targets</th>
     <th>Status</th>
@@ -57,54 +56,50 @@
                 {{ if (not (in .Name "_index") ) }}
                     {{ $lpname := .Name }}
                     {{ $lppath := printf "%s" $lpname | printf "%s/%s" $apath | printf "%s" }}
-                    {{- $files := readDir $lppath -}}
-                    {{- range $files -}}
-                    <!-- level 3: file -->
-                        {{ if and (in .Name ".md") (not (in .Name "_index") ) (not (in .Name "_next-steps") ) (not (in .Name "_review") )}}
-                        {{ $name := .Name }}
-                            {{ $fpath := printf "%s" $name | printf "%s/%s" $lppath | printf "%s" }}
-                            {{ $sname := replace .Name ".md" "" }}
-                            <tr>
-                                <td>{{ $aname }}</td>
-                                <td>{{ $lpname }}</td>
-                                {{ $tpath := replace $lppath "/content" "" }}
-                                <td><a href="{{ $pathURL }}{{ $tpath }}{{ $sname | relURL }}"> {{ $sname }}</a></td>
-                                {{ $c := readFile $fpath | transform.Unmarshal }}
+                    <!-- level 3: _index.md -->
+                    {{ if not (in $lppath "_example-learning-path") }}
+                        <tr>
+                            <td>{{ $aname }}</td>
+                            {{ $tpath := replace $lppath "/content" "" }}
+                            {{ $idxpath := printf "%s" "_index.md" | printf "%s/%s" $tpath | printf "%s" }}
+                            <td><a href="{{ $pathURL }}{{ $tpath | relURL | urlize }}">{{ $lpname }}</a></td>
+                            
+                            {{ $c := readFile $idxpath | transform.Unmarshal }}
 
-                                <!-- Test -->
-                                {{ if $c.test_maintenance }}
-                                {{ $.Scratch.Set "tested" ( add 1 ( $.Scratch.Get "tested" ) ) }}
-                                <td>ON</td>
+                            <!-- Test -->
+                            {{ if $c.test_maintenance }}
+                            {{ $.Scratch.Set "tested" ( add 1 ( $.Scratch.Get "tested" ) ) }}
+                            <td>ON</td>
 
-                                <!-- Targets -->
-                                <td>
-                                    {{ range $c.test_images }}
-                                    <p>{{ . }}</p>
-                                    {{ end }}
-                                </td>
-
-                                <!-- Status -->
-                                <td>
-                                    {{ range $c.test_status }}
-                                        {{ if in "passed" .}}
-                                        {{ $.Scratch.Set "passed" ( add 1 ( $.Scratch.Get "passed" ) ) }}
-                                        <p style="background-color:green;">{{.}}</p>
-                                        {{ else }}
-                                        {{ $.Scratch.Set "failed" ( add 1 ( $.Scratch.Get "failed" ) ) }}
-                                        <p style="background-color:red;">{{.}}</p>
-                                        {{ end }}
-                                    {{ end }}
-                                </td>
-
-                                {{ else }}
-                                {{ $.Scratch.Set "nottested" ( add 1 ( $.Scratch.Get "nottested" ) ) }}
-                                <td><i>off</i></td>
-                                <td></td>
-                                <td></td>
+                            <!-- Targets -->
+                            <td>
+                                {{ range $c.test_images }}
+                                <p>{{ . }}</p>
                                 {{ end }}
-                            </tr>
-                        {{ end }} 
-                    {{- end -}} <!-- level 3: file -->
+                            </td>
+
+                            <!-- Status -->
+                            <td>
+                                {{ range $c.test_status }}
+                                    {{ if in "passed" .}}
+                                    {{ $.Scratch.Set "passed" ( add 1 ( $.Scratch.Get "passed" ) ) }}
+                                    <p style="background-color:green;">{{.}}</p>
+                                    {{ else }}
+                                    {{ $.Scratch.Set "failed" ( add 1 ( $.Scratch.Get "failed" ) ) }}
+                                    <p style="background-color:red;">{{.}}</p>
+                                    {{ end }}
+                                {{ end }}
+                            </td>
+
+                            {{ else }}
+                            {{ $.Scratch.Set "nottested" ( add 1 ( $.Scratch.Get "nottested" ) ) }}
+                            <td><i>off</i></td>
+                            <td></td>
+                            <td></td>
+                            {{ end }}
+                        </tr>
+                    {{ end }}
+                    <!-- level 3: _index.md -->
                 {{ end }}            
             {{- end -}} <!-- level 2: learning-path -->
     {{- end -}} <!-- level 1: area -->
@@ -124,7 +119,7 @@
             {{ $fpath := printf "%s" $name | printf "%s/%s" $contentpath | printf "%s" }}
             {{ $sname := replace .Name ".md" "" }}
             <tr>
-                <td><a href="{{ $pathURL }}/{{ $path }}{{ $sname | relURL }}"> {{ $sname }}</a></td>
+                <td><a href="{{ $pathURL }}/{{ $path }}{{ $sname | relURL | urlize }}"> {{ $sname }}</a></td>
                 {{ $c := readFile $fpath | transform.Unmarshal }}
 
                 <!-- Test -->

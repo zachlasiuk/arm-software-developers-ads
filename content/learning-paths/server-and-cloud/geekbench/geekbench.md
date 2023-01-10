@@ -1,16 +1,8 @@
 ---
 layout: learningpathall
-test_images:
-- ubuntu:latest
-test_link: https://github.com/armflorentlebeau/arm-software-developers-ads/actions/runs/3540052189
-test_maintenance: true
-test_status:
-- passed
 title: Download and run Geekbench
 weight: 2
 ---
-
-{{< test >}}
 
 When creating a cloud instance, users may struggle to select an appropriate configuration for their workloads. Simple benchmarking runs on different configurations is a good idea to help you decide.
 

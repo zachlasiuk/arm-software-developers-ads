@@ -1,8 +1,4 @@
 ---
-# ================================================================================
-#       Edit
-# ================================================================================
-
 title: "Processing Text in Mixed C/Assembly Language" 
 # Should start with a verb, have no adjectives (amazing, cool, etc.), and be as concise as possible.
 

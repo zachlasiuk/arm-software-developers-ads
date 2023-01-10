@@ -33,13 +33,29 @@ def patch(article, results, lk):
 
     # Update status or create section
     arr = []
-    for res in data['test_images']:
-        if results[res] == 0:
-            logging.debug("Status on {}: passed".format(res))
-            arr.append("passed")
-        else:
-            logging.debug("Status on {}: FAILED".format(res))
-            arr.append("failed")
+    
+    # Check if this is a learning path
+    if isinstance(results, list):
+        for res in data['test_images']:
+            failed = False
+            for el in (results):
+                if el[res] != 0:
+                    logging.debug("Status on {}: FAILED".format(res))
+                    arr.append("failed")
+                    failed = True
+                    break
+
+            if not failed:
+                logging.debug("Status on {}: passed".format(res))
+                arr.append("passed")
+    else:
+        for res in data['test_images']:
+            if results[res] != 0:
+                logging.debug("Status on {}: FAILED".format(res))
+                arr.append("failed")
+            else:
+                logging.debug("Status on {}: passed".format(res))
+                arr.append("passed")    
 
     data["test_status"] = arr
 
@@ -105,7 +121,7 @@ def check(json_file, start, stop):
 
         logging.info("Container(s) initialization completed")
     else:
-        logging.info("Skip container(s) launch")
+        logging.debug("Skip container(s) launch")
 
     # Create 1 test suite for each image
     test_cases= []
@@ -222,6 +238,6 @@ def check(json_file, start, stop):
             logging.debug(cmd)
             subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
     else:
-        logging.info("Skip container(s) termination...")
+        logging.debug("Skip container(s) termination...")
 
     return results

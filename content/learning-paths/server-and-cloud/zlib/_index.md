@@ -28,6 +28,14 @@ softwares:
 operatingsystems:
     - Linux
 
+### Test
+test_images:
+- ubuntu:latest
+test_link: https://github.com/armflorentlebeau/arm-software-developers-ads/actions/runs/3540052189
+test_maintenance: true
+test_status:
+- passed
+
 ### FIXED, DO NOT MODIFY
 # ================================================================================
 weight: 1                       # _index.md always has weight of 1 to order correctly
