@@ -80,10 +80,10 @@ def main():
     arg_parser = argparse.ArgumentParser(description='Maintenance tool.', prefix_chars='-')
     arg_parser.add_argument('-v', '--version', action='version', version='Maintenance toolkit version 0.1', help='Display software version')
     arg_parser.add_argument('-d', '--debug', action='store_true', help='Enable debugging messages')
-    arg_parser.add_argument('-l', '--link', metavar='URL', action='store', type=str, help='Specify URL to github actions report. Added wen patching sources files with --check')
+    arg_parser.add_argument('-l', '--link', metavar='URL', action='store', type=str, help='Specify URL to github actions report. Added wen patching sources files with --instructions')
 
     arg_group = arg_parser.add_mutually_exclusive_group()
-    arg_group.add_argument('-i', '--instructions', metavar='FILE', action='store', type=str, help='Parse instruction from Learning Path(s) and test them. FILE can be a CSV file with the list of Learning Paths or a single .md file. Test results are stored in Junit XML file.')
+    arg_group.add_argument('-i', '--instructions', metavar='INPUT', action='store', type=str, help='Parse instruction from Learning Path(s) and test them. INPUT can be a CSV file with the list of Learning Paths, a single .md file or the Learning Path folder. Test results are stored in Junit XML file. A summary is also added to the Learning Path _index.md page.')
     arg_group.add_argument('-r', '--report', metavar='DAYS', action='store', type=int, default=1, help='List articles older than a period in days (default is 1). Output a CSV file. This option is used by default.')
 
     args = arg_parser.parse_args()
@@ -130,8 +130,10 @@ def main():
                 check.patch(args.instructions, res, args.link)
                 if not args.debug:
                     os.remove(args.instructions+"_cmd.json")
+        elif os.path.isdir(args.instructions) and "/learning-paths/" in os.path.abspath(args.instructions):
+            check_lp(args.instructions, args.link, args.debug)
         else:
-            logging.error("Parsing expects a .md file or a .csv list of files")
+            logging.error("Parsing expects a .md file, a .csv list of files or the Learning Path directory")
     elif args.report:
         logging.info("Creating report of articles older than {} days".format(args.report))
         report.report(args.report)
