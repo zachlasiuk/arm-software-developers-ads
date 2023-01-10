@@ -31,12 +31,13 @@ def parse(article):
 
 '''
 Parse header to check file or not
-Returns list with the following elements:
-    0: bool value to check the article
-    1: int value with number of targets supported
-    2: int value with weight of article when in a learning path
+Returns dict with the following elements:
+    test_maintenance: bool value to check the article
+    test_images: list of targets supported
+    weight: int value with weight of article when in a learning path
 '''
 def header(article):
+    dict = {"maintain": False, "img": None, "weight": -1}
     with open(article) as file:
         content = file.read()
         header = []
@@ -46,36 +47,36 @@ def header(article):
             if end == start-3:
                 # No header
                 logging.debug("No header found in {}".format(article))
-                return [False, -1, -1]
+                return dict
             else:
                 header = content[start:end]
                 data = yaml.safe_load(header, )
-                # Should we test this file?
-                if "test_maintenance" in data.keys() and "test_images" in data.keys() and "weight" in data.keys():
-                    return [data["test_maintenance"], data["test_images"], data["weight"]]
-                if "test_maintenance" in data.keys() and "test_images" in data.keys() and not "weight" in data.keys():
-                    # This is not a learning path
-                    return [data["test_maintenance"], data["test_images"], -1]
-                elif "test_maintenance" in data.keys() and not "test_images" in data.keys():
-                    logging.error("\"test_maintenance: true\" requires a list of test_images to run on")
-                    return [False, -1, -1]
-                elif not "test_maintenance" in data.keys():
-                    logging.debug("File {} maintenance is turned off. Add or set \"test_maintenance: true\" otherwise.".format(article))
-                    return [False, -1, -1]
+                if "test_maintenance" in data.keys():
+                    dict.update(maintain=data["test_maintenance"])
+                if "test_images" in data.keys():
+                    dict.update(img= data["test_images"])
+                if "weight" in data.keys():
+                    dict.update(wght=data["weight"])
+                    
+    return dict
 
 
 '''
 Save list of command in json file
 '''
-def save(article, cmd):
+def save(article, cmd, learningpath=False, img=None):
+    
     # Parse file header
-    maintain, img, wght = header(article)
+    hdr = header(article)
 
-    if not maintain:
+    if not hdr["maintain"] and not learningpath:
         logging.info("File {} settings don't enable parsing.".format(article))
         return
 
-    content = { "image": img, "weight": wght}
+    if not img:
+        img = hdr["img"]
+
+    content = { "image": img, "weight": hdr["weight"]}
 
     logging.debug(content)
 
@@ -119,7 +120,7 @@ def save(article, cmd):
         logging.debug(content[i_idx])
 
     fn = article + "_cmd.json"
-    logging.info("Saving commands to " + fn)
+    logging.debug("Saving commands to " + fn)
 
     with open(fn, 'w') as f:
         json.dump(content, f)
