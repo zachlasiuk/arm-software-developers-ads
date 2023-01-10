@@ -13,9 +13,9 @@ This is a summary of native tooling available for [Windows on Arm](https://learn
 
 # Visual Studio
 
-[Visual Studio 2022 17.3 Preview 2](https://learn.microsoft.com/en-us/visualstudio/install/visual-studio-on-arm-devices) (and higher) natively supports Windows on Arm.
+[Visual Studio 2022 17.4](https://learn.microsoft.com/en-us/visualstudio/install/visual-studio-on-arm-devices) (and higher) natively supports Windows on Arm.
 
-For more information, see [this announcement blog](https://devblogs.microsoft.com/visualstudio/arm64-visual-studio/) from Microsoft.
+For more information, see [this announcement blog](https://devblogs.microsoft.com/visualstudio/arm64-visual-studio-is-officially-here/) from Microsoft.
 
 Previous releases required WoA applications to be cross-compiled on other hosts. When run on an Arm platform with x86 emulation, some features were not supported and performance was poor.
 
@@ -43,3 +43,14 @@ You can download the latest LLVM builds from [here](https://releases.llvm.org/do
 ## Compatibility with existing Visual Studio / MSVC projects
 
 LLVM supports `clang-cl`, a compatibility layer for Microsoft Visual C++ (MSVC). This means that most developers can use `clang-cl` to compile their C/C++ applications on Visual Studio/MSBuild on the Windows on Arm device, without needing to change the command line. This allows you to easily modify legacy projects that use MSVC to use native compilation.
+
+# WindowsPerf
+
+WindowsPerf is an open-source tool for performance analysis. The WindowsPerf project consists of a kernel mode driver `wperf-driver` and a user-space command line tool `wperf`. It can instrument Arm CPU performance counters. 	
+
+To get started with WindowsPerf on your Windows on Arm machine, go to https://gitlab.com/Linaro/WindowsPerf/windowsperf/-/releases/1.0.1
+
+Then download `windowsperf-bin-1.0.1.zip` under Assets->Packages. Unzip the package. Under the wperf-driver directory, select `wperf-driver.inf`. Right click and install. This will install wperf-driver. You can now count events on your Windows on Arm machine. 
+
+For more about the usage of `wperf` refer to the repository with examples [here](https://gitlab.com/Linaro/WindowsPerf/windowsperf/-/blob/main/wperf/README.md#usage-of-wperf).
+
