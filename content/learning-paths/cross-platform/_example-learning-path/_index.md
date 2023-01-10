@@ -1,8 +1,4 @@
 ---
-# ================================================================================
-#       Edit
-# ================================================================================
-
 title: Create a Learning Path
 
 description: Learn what type of content belongs in a Learning Path and how to format it.

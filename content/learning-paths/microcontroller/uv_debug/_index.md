@@ -1,8 +1,4 @@
 ---
-# ================================================================================
-#       Edit
-# ================================================================================
-
 title: "Start Debugging with µVision"
 # Should start with a verb, have no adjectives (amazing, cool, etc.), and be as concise as possible.
 

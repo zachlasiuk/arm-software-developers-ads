@@ -1,21 +1,9 @@
 ---
 # User change
 title: "Build and install Cloudflare zlib on Arm servers"
-
 weight: 2
-
 layout: "learningpathall"
-
-test_maintenance: true
-test_images:
-- ubuntu:latest
-test_status:
-- passed
-test_link: null
-
 ---
-
-{{< test >}}
 
 ## Pre-requisites
 
