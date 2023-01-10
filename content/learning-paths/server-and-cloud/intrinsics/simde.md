@@ -1,13 +1,5 @@
 ---
 layout: learningpathall
-test_images:
-- amd64/ubuntu:latest
-- arm64v8/ubuntu:latest
-test_link: null
-test_maintenance: true
-test_status:
-- passed
-- passed
 title: Using SIMD Everywhere to port intrinsics to Neoverse
 weight: 5
 ---

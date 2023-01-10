@@ -1,16 +1,8 @@
 ---
 layout: learningpathall
-test_images:
-- ubuntu:latest
-test_link: https://github.com/armflorentlebeau/arm-software-developers-ads/actions/runs/3540052189
-test_maintenance: true
-test_status:
-- passed
 title: Run Clickhouse and measure its performance
 weight: 2
 ---
-
-{{< test >}}
 
 [Clickhouse](https://clickhouse.com/docs/en/home) is a column-oriented database management system (DBMS) for online analytical processing of queries (OLAP).
 We will measure the processing time (query latency) of Clickhouse on Arm based servers.
