@@ -109,12 +109,12 @@ def main():
                         logging.debug("Parsing " + fn)
                         cmd = parse.parse(fn)
                         parse.save(fn, cmd)
-                        logging.info("Checking " + args.check)
-                        res = check.check(args.check, start=True, stop=True)
-                        logging.info("Patching " + args.check.replace("_cmd.json", "") + " with test results")
-                        check.patch(args.check.replace("_cmd.json", ""), res, args.link)
+                        logging.info("Checking " + fn)
+                        res = check.check(fn+"_cmd.json", start=True, stop=True)
+                        logging.info("Patching " + fn + " with test results")
+                        check.patch(fn, res, args.link)
                         if not args.debug:
-                            os.remove(args.instructions+"_cmd.json")
+                            os.remove(fn+"_cmd.json")
                     else:
                         logging.error("Unknown type " + fn)
         elif args.instructions.endswith(".md"):
