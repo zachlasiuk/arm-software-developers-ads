@@ -1,12 +1,18 @@
 ---
-title: "Arm Compiler for Embedded"
-
 additional_search_terms:
-  - armclang
-  - compiler
-
-tool_install: true              # DO NOT MODIFY. Always true for tool installs
-layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
+- armclang
+- compiler
+layout: installtoolsall
+test_images:
+- ubuntu:latest
+- fedora:latest
+test_link: null
+test_maintenance: true
+test_status:
+- passed
+- passed
+title: Arm Compiler for Embedded
+tool_install: true
 ---
 [Arm Compiler for Embedded](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Embedded) is a mature toolchain tailored to the development of bare-metal software, firmware, and Real-Time Operating System (RTOS) applications for Arm.
 
