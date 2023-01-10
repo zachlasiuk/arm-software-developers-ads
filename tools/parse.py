@@ -41,22 +41,21 @@ def header(article):
     with open(article) as file:
         content = file.read()
         header = []
-        for i in content:
-            start = content.find("---") + 3
-            end = content.find("---", start)
-            if end == start-3:
-                # No header
-                logging.debug("No header found in {}".format(article))
-                return dict
-            else:
-                header = content[start:end]
-                data = yaml.safe_load(header, )
-                if "test_maintenance" in data.keys():
-                    dict.update(maintain=data["test_maintenance"])
-                if "test_images" in data.keys():
-                    dict.update(img= data["test_images"])
-                if "weight" in data.keys():
-                    dict.update(wght=data["weight"])
+        start = content.find("---") + 3
+        end = content.find("---", start)
+        if end == start-3:
+            # No header
+            logging.debug("No header found in {}".format(article))
+            return dict
+        else:
+            header = content[start:end]
+            data = yaml.safe_load(header, )
+            if "test_maintenance" in data.keys():
+                dict.update(maintain=data["test_maintenance"])
+            if "test_images" in data.keys():
+                dict.update(img= data["test_images"])
+            if "weight" in data.keys():
+                dict.update(wght=data["weight"])
                     
     return dict
 
