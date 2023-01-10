@@ -197,9 +197,15 @@ From the project root folder, run:
 
 If the Learning Path contains sub-articles, the framework will run their instructions in order, depending on the sub-articles weight.
 
+Specify the `.md` file directly for single file tool install articles.
+
+```bash
+./tools/maintenance.py -i content/install-tools/mytool.md
+```
+
 ## Result summary
 
-The framework patches the metadata in the Learning Path's `_index.md` file to add a summary of the test status.
+The framework patches the metadata in the Learning Path's `_index.md` file or the .md file of the tool install to add a summary of the test status.
 
 ```yaml
 test_maintenance: true
