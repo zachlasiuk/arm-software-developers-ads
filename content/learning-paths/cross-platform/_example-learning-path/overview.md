@@ -14,7 +14,7 @@ Developers prefer different ways of learning. Learning Paths provide one way for
 
 Ways of learning include:
 
-* [Product Documentation and reference manuals](https://www.developer.arm.com/docs) are the trusted source of detailed information for developing on the Arm architecture.
+* [Product Documentation and reference manuals](https://developer.arm.com/documentation) are the trusted source of detailed information for developing on the Arm architecture.
 
 * [Blogs](https://www.community.arm.com) offer news and announcements for recent and upcoming Arm activities.
 

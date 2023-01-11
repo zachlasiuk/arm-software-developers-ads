@@ -8,7 +8,7 @@ layout: "learningpathall"
 ## Prerequisites
 
 Two [web servers](../basic_static_file_server)
-A [Reverse Proxy and API gateway](../reverse_proxy_and_API_gateway)
+A [Reverse Proxy and API gateway](../reverse_proxy_and_api_gateway)
 
 ## To wget a file from the server
 

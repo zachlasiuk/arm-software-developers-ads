@@ -15,7 +15,7 @@ The Total Compute reference stack is built to run on the Total Compute Fixed Vir
 
 At time of writing, only the `TC0` FVP is publicly available from the [Arm Ecosystem FVPs](https://developer.arm.com/downloads/-/arm-ecosystem-fvps) page.
 
-For access to later Total Compute FVPs, contact the Arm support team by [opening a support case](https://support.developer.arm.com/my-cases/open-case/). Access may be restricted depending on your organization.
+For access to later Total Compute FVPs, contact the Arm support team by [opening a support case](https://developer.arm.com/All%20Support%20Services). Access may be restricted depending on your organization.
 
 You can download directly from the above Ecosystem FVP page, else with a command such as:
 ```console
