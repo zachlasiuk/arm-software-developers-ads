@@ -1,13 +1,14 @@
 ---
-title: "Arm Compiler for Linux"
-
 additional_search_terms:
-  - armclang
-  - compiler
-
-
-tool_install: true              # DO NOT MODIFY. Always true for tool installs
-layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
+- armclang
+- compiler
+layout: installtoolsall
+test_images:
+- ubuntu:latest
+- fedora:latest
+test_maintenance: true
+title: Arm Compiler for Linux
+tool_install: true
 ---
 [Arm Compiler for Linux](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Linux) is a suite of tools containing Arm C/C++ Compiler (armclang), Arm Fortran Compiler (armflang), and Arm Performance Libraries (ArmPL). It is tailored to the development of High Performance Computing (HPC) applications.
 
@@ -66,7 +67,7 @@ Each command sequence includes accepting the license agreement to automate the i
 tar -xvf arm-compiler-for-linux_22.1_Ubuntu-20.04_aarch64.tar 
 cd arm-compiler-for-linux_22.1_Ubuntu-20.04
 sudo ./arm-compiler-for-linux_22.1_Ubuntu-20.04.sh --accept
-sudo apt-get install environment-modules -y
+sudo apt-get -y install environment-modules python3
 ```
 
 `Red Hat`:
@@ -74,33 +75,35 @@ sudo apt-get install environment-modules -y
 ```bash { target="fedora:latest" }
 tar -xvf arm-compiler-for-linux_22.1_RHEL-8_aarch64.tar
 cd arm-compiler-for-linux_22.1_RHEL-8.sh
-sudo ./arm-compiler-for-linux_22.1_RHEL-8.sh --accept
-sudo yum -y install environment-modules
+sudo ./arm-compiler-for-linux_22.1_RHEL-8.sh --accept -i /opt/arm/acfl
+sudo yum -y install environment-modules python3
 ```
 
 Arm Compiler for Linux uses environment modules to dynamically modify your user environment on Linux. If needed, refer to the [Environment Modules documentation](https://lmod.readthedocs.io/en/latest/#id) for more information.
 
-Add module files to the `MODULEPATH` environment variable. 
+Set up the environment for example in your .bashrc and add module files. 
 
 ```bash
-export MODULEPATH=$MODULEPATH:/opt/arm/modulefiles
+echo "source /usr/share/{m|M}odules/init/bash" >> ~/.bashrc
+echo "module use /opt/arm/modulefiles" >> ~/.bashrc
+source ~/.bashrc
 ```
 
 To list available modules:
 
-```console
+```bash { env_source="~/.bashrc" }
 module avail
 ```
 
 To configure Arm Compiler for Linux:
 
-```bash
+```bash { env_source="~/.bashrc" }
 module load acfl/22.1
 ```
 
 To configure GCC:
 
-```bash
+```bash { env_source="~/.bashrc" }
 module load gnu/11.2.0
 ```
 
@@ -115,7 +118,7 @@ You do not require a license to use Arm Compiler for Linux.
 To get started with the Arm C/C++ Compiler and compile a simple application follow the steps below. 
 
 Check that the correct compiler version is being used:
-```bash
+```bash { env_source="~/.bashrc", pre_cmd="module load acfl/22.1" }
 armclang --version
 ```
 
@@ -133,13 +136,13 @@ int main()
 
 To compile the hello-world program use:
 
-```console
+```console { env_source="~/.bashrc", pre_cmd="module load acfl/22.1" }
 armclang hello.c -o hello
 ```
 
 Run the application.
 
-```bash 
+```bash { env_source="~/.bashrc", pre_cmd="module load acfl/22.1" }
 ./hello
 ```
 
@@ -151,7 +154,7 @@ To get started with the Arm Fortran Compiler and compile a simple application fo
 
 To confirm the installation is complete run:
 
-```bash
+```bash { env_source="~/.bashrc", pre_cmd="module load acfl/22.1" }
 armflang --version
 ```
 
@@ -166,13 +169,13 @@ end program hello
 
 To compile the hello-world program use:
 
-```bash
+```bash { env_source="~/.bashrc", pre_cmd="module load acfl/22.1" }
 armflang hello.f90 -o hello
 ```
 
 To run the application enter:
 
-```bash 
+```bash { env_source="~/.bashrc", pre_cmd="module load acfl/22.1" }
 ./hello
 ```
 

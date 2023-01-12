@@ -96,7 +96,7 @@ def check(json_file, start, stop):
                 cmd = ["docker exec test_{} apt update".format(i)]
                 logging.debug(cmd)
                 subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-                cmd = ["docker exec test_{} apt install sudo".format(i)]
+                cmd = ["docker exec test_{} apt install -y sudo wget".format(i)]
                 logging.debug(cmd)
                 subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
                 cmd = ["docker exec test_{} useradd user -m -G sudo".format(i)]
@@ -109,7 +109,7 @@ def check(json_file, start, stop):
                 cmd = ["docker exec test_{} yum update".format(i)]
                 logging.debug(cmd)
                 subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-                cmd = ["docker exec test_{} yum install -y sudo".format(i)]
+                cmd = ["docker exec test_{} yum install -y sudo wget".format(i)]
                 logging.debug(cmd)
                 subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
                 cmd = ["docker exec test_{} useradd user -m -G wheel".format(i)]
@@ -146,6 +146,25 @@ def check(json_file, start, stop):
         # Write series of commands in this file
         c = ""
         f = open(fn, "w")
+        # Check if a file needs to be sourced
+        if "env_source" in t:
+            env_source = t["env_source"]
+            c = "source " + env_source
+            logging.debug("Copying command to file to file {}: {}".format(fn, c))
+            f.write("{}\n".format(c))
+        # Check if env var are specified
+        if "env" in t:
+            env = t["env"]
+            for el in env:
+                c = "export " + el
+                logging.debug("Copying command to file to file {}: {}".format(fn, c))
+                f.write("{}\n".format(c))
+        # Check if commands need to be run beforehand
+        if "pre_cmd" in t:
+            pre_cmd = t["pre_cmd"]
+            c = pre_cmd
+            logging.debug("Copying command to file to file {}: {}".format(fn, c))
+            f.write("{}\n".format(c))
         # Check if cwd is specified
         if "cwd" in t:
             c = "cd " + t["cwd"]
@@ -212,7 +231,7 @@ def check(json_file, start, stop):
                     test_cases[k][-1].add_failure_info(msg)
                     results[data["image"][k]] = results[data["image"][k]]+1
 
-                logging.debug(msg)
+                logging.debug("Test {}: {}".format(i, msg))
                 logging.info("{:.0f}% of all tests completed on instance test_{}".format(i/data["ntests"]*100, k))
 
         # Remove file with list of commands
