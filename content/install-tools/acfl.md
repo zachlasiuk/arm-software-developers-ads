@@ -63,28 +63,38 @@ Each command sequence includes accepting the license agreement to automate the i
 
 `Ubuntu`:
 
-```bash { target="ubuntu:latest" }
+```bash { target="ubuntu:latest", env="DEBIAN_FRONTEND=noninteractive" }
+sudo apt-get -y install environment-modules python3 libc6-dev
 tar -xvf arm-compiler-for-linux_22.1_Ubuntu-20.04_aarch64.tar 
 cd arm-compiler-for-linux_22.1_Ubuntu-20.04
 sudo ./arm-compiler-for-linux_22.1_Ubuntu-20.04.sh --accept
-sudo apt-get -y install environment-modules python3
 ```
 
 `Red Hat`:
 
 ```bash { target="fedora:latest" }
+sudo yum -y install environment-modules python3 glibc-devel
 tar -xvf arm-compiler-for-linux_22.1_RHEL-8_aarch64.tar
-cd arm-compiler-for-linux_22.1_RHEL-8.sh
-sudo ./arm-compiler-for-linux_22.1_RHEL-8.sh --accept -i /opt/arm/acfl
-sudo yum -y install environment-modules python3
+cd arm-compiler-for-linux_22.1_RHEL-8
+sudo ./arm-compiler-for-linux_22.1_RHEL-8.sh --accept
 ```
 
 Arm Compiler for Linux uses environment modules to dynamically modify your user environment on Linux. If needed, refer to the [Environment Modules documentation](https://lmod.readthedocs.io/en/latest/#id) for more information.
 
 Set up the environment for example in your .bashrc and add module files. 
 
-```bash
-echo "source /usr/share/{m|M}odules/init/bash" >> ~/.bashrc
+`Ubuntu`:
+
+```bash { target="ubuntu:latest" }
+echo "source /usr/share/modules/init/bash" >> ~/.bashrc
+echo "module use /opt/arm/modulefiles" >> ~/.bashrc
+source ~/.bashrc
+```
+
+`Red Hat`:
+
+```bash { target="fedora:latest" }
+echo "source /usr/share/Modules/init/bash" >> ~/.bashrc
 echo "module use /opt/arm/modulefiles" >> ~/.bashrc
 source ~/.bashrc
 ```

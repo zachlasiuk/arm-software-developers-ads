@@ -95,7 +95,7 @@ def save(article, cmd, learningpath=False, img=None):
                 env = l[0].split("env_source=\"")[1].split("\"")[0]
                 content[i_idx].update({"env_source": env })
             # check if env var are specified
-            if "env" in l[0]:
+            if "env=" in l[0]:
                 env = l[0].split("env=\"")[1].split("\"")[0]
                 env = env.split(";")
                 content[i_idx].update({"env": env })

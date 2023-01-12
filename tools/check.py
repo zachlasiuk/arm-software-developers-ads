@@ -28,7 +28,7 @@ def patch(article, results, lk):
             return
         else:
             header = content[start:end]
-            markdown = content[end+3:-1]
+            markdown = content[end+3:]
             data = yaml.safe_load(header, )
 
     # Update status or create section
