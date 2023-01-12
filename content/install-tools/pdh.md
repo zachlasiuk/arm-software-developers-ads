@@ -10,7 +10,9 @@ The [Arm Product Download Hub](https://developer.arm.com/downloads) (PDH) is the
 
 PDH can be freely browsed, but an Arm account is required to download any packages.
 
-Clicking on the persona button in the upper-right corner will allow you to login to PDH. New users should use the `Register` option to create their free account.
+Clicking on the persona button in the upper-right corner will allow you to login to PDH.
+
+New users should use the `Register` option to create their free account.
 
 ## Search for products
 
@@ -32,6 +34,6 @@ It is also possible to download without the use of Aspera if you prefer, but thi
 
 You will automatically be notified by the system when updates become available for any products that you have downloaded.
 
-## Further Reading
+## Documentation
 
    [Product Download Hub Getting Started Guide](https://developer.arm.com/documentation/107572)

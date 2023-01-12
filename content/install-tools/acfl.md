@@ -9,24 +9,14 @@ additional_search_terms:
 tool_install: true              # DO NOT MODIFY. Always true for tool installs
 layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
-[Arm Compiler for Linux](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Linux) is tailored to the development of High Performance Computing (HPC) applications. Arm Compiler for Linux is a combination of Arm C/C++ Compiler (armclang), Arm Fortran Compiler (armflang), and Arm Performance Libraries (ArmPL).
+[Arm Compiler for Linux](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Linux) is a suite of tools containing Arm C/C++ Compiler (armclang), Arm Fortran Compiler (armflang), and Arm Performance Libraries (ArmPL). It is tailored to the development of High Performance Computing (HPC) applications.
+
+Arm Compiler for Linux runs on 64-bit Arm computers, it is not a cross-compiler.
 
 ## Prerequisites
 
-[Arm Compiler for Linux](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Linux) runs on 64-bit Arm computers, it is not a cross-compiler.
-
-You need 64-bit Arm hardware running one of the following Linux distributions:
-  * Ubuntu (18.04 or 20.04)
-  * Red Hat Enterprise Linux (RHEL7 or RHEL8) 
-  * SUSE Linux Enterprise Server (SLES-15)
-
-If any of the following tools are not already installed by your Linux distribution, you must install them before installing Arm Compiler for Linux:
-
-* Python (version 2.7 or later)
-* C Libraries:
-  - SUSE and RHEL: glibc-devel
-  - Ubuntu: libc6-dev
-
+Arm Compiler for Linux supports all 64-bit Arm based server-class hardware.
+* [Supported Linux Distributions](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Linux#Supported-Devices)
 
 Confirm you are using an Arm machine by running:
 
@@ -35,6 +25,15 @@ uname -m
 aarch64
 ```
 
+If any of the following are not already installed by your Linux distribution, you must install them before installing Arm Compiler for Linux:
+
+* Python (version 2.7 or later)
+* C Libraries:
+  - SUSE and RHEL
+    - `glibc-devel`
+  - Ubuntu
+    - `libc6-dev`
+
 ## Download  {#download}
 
 Visit [Download Arm Compiler for Linux](https://developer.arm.com/downloads/-/arm-compiler-for-linux) and select the package for your Linux distribution. 
@@ -42,15 +41,15 @@ The packages contain the C/C++ and Fortran Compilers and Arm Performance Librari
 
 Individual packages with only the Arm Performance Libraries (ArmPL) are also available for download.
 
-Download releases from the command line using wget.
+Download releases from the command line using `wget`.
 
-For Ubuntu:
+`Ubuntu`:
 
 ```bash { target="ubuntu:latest" }
 wget  https://developer.arm.com/-/media/Files/downloads/hpc/arm-compiler-for-linux/22-1/arm-compiler-for-linux_22.1_Ubuntu-20.04_aarch64.tar
 ```
 
-For Red Hat:
+`Red Hat`:
 ```bash { target="fedora:latest" }
 wget https://developer.arm.com/-/media/Files/downloads/hpc/arm-compiler-for-linux/22-1/arm-compiler-for-linux_22.1_RHEL-8_aarch64.tar
 ```
@@ -61,7 +60,7 @@ To install the Arm Compiler for Linux package on your 64-bit Linux Arm machine e
 
 Each command sequence includes accepting the license agreement to automate the installation and installing the `modules` software.
 
-For Ubuntu:
+`Ubuntu`:
 
 ```bash { target="ubuntu:latest" }
 tar -xvf arm-compiler-for-linux_22.1_Ubuntu-20.04_aarch64.tar 
@@ -70,7 +69,7 @@ sudo ./arm-compiler-for-linux_22.1_Ubuntu-20.04.sh --accept
 sudo apt-get install environment-modules -y
 ```
 
-For Red Hat:
+`Red Hat`:
 
 ```bash { target="fedora:latest" }
 tar -xvf arm-compiler-for-linux_22.1_RHEL-8_aarch64.tar
@@ -111,7 +110,7 @@ Refer to the [installation instructions](https://developer.arm.com/documentation
 
 You do not require a license to use Arm Compiler for Linux.
 
-## Get started
+## Get started with Arm C/C++ compiler {#armclang}
 
 To get started with the Arm C/C++ Compiler and compile a simple application follow the steps below. 
 
@@ -120,7 +119,7 @@ Check that the correct compiler version is being used:
 armclang --version
 ```
 
-To compile an example program, create a text file named hello.c with the contents below.
+To compile an example program, create a text file named `hello.c` with the contents below.
 
 ```C { file_name="hello.c" }
 #include <stdio.h>
@@ -145,6 +144,8 @@ Run the application.
 ```
 
 The hello-world program will print the string specified in the print statement.
+
+## Get started with Arm Fortran compiler {#fortran}
 
 To get started with the Arm Fortran Compiler and compile a simple application follow the steps below. 
 
@@ -177,4 +178,10 @@ To run the application enter:
 
 The hello-world program will print the string specified in the print statement.
 
-To get started with the [Arm Performance Libraries](https://developer.arm.com/Tools%20and%20Software/Arm%20Performance%20Libraries) and learn how to select the optimal library for your system, follow the guide [here](https://developer.arm.com/documentation/102574/0100).
+## Get started with Arm Performance Libraries
+
+To get started with the [Arm Performance Libraries](https://developer.arm.com/Tools%20and%20Software/Arm%20Performance%20Libraries) and learn how to select the optimal library for your system, follow the [Get started with Arm Performance Libraries](https://developer.arm.com/documentation/102574) guide.
+
+## Documentation
+
+[Install Arm Compiler for Linux](https://developer.arm.com/documentation/102621)

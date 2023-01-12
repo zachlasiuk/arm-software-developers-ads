@@ -10,7 +10,7 @@ additional_search_terms:
 tool_install: true              # DO NOT MODIFY. Always true for tool installs
 layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
-There is a whole range of Arm Ecosystem Fixed Virtual Platforms (FVPs) available, which model hardware subsystems targeting different market segments and applications.
+Arm provides a range of free-of-charge [Ecosystem Fixed Virtual Platforms (FVPs)](https://developer.arm.com/downloads/-/arm-ecosystem-fvps), which model hardware subsystems targeting different market segments and applications.
 
 FVPs use binary translation technology to deliver fast, functional simulations of Arm-based systems, including processor, memory, and peripherals. They implement a programmer's view suitable for software development and enable execution of full software stacks, providing a widely available platform ahead of silicon.
 
@@ -20,7 +20,7 @@ Ecosystem FVPs are available without license control for direct download. They a
 
 It is assumed that you have downloaded and installed [Arm Keil MDK](/install-tools/mdk) in the default directory (`C:\Keil_v5`). To get full aceess to the Arm Compiler without code size restrictions, cut a free-of-charge (non-commercial) MDK-Community license.
 
-## Download the Ecosystem FVP {#download}
+## Corstone-300 Ecosystem FVP
 
 The Corstone-300 model is aligned with the Arm MPS3 development platform. It is based on the Cortex-M55 processor and offers a choice of the Ethos-U55 and Ethos-U65 processors. This FVP is provided free of charge for the limited development and validation of open-source software on the Corstone-300 platform.
 
@@ -29,7 +29,7 @@ The Corstone-300 model can be downloaded from [Arm Ecosystem FVPs](https://devel
 ![Download Corstone-300 Ecosystem FVP](/install-tools/_images/download_ecosys_fvp.png)
 
 1. Click the plus sign next to "Corstone-300 Ecosystem FVPs".
-1. Click the "Download Windows" button. The download of a ZIP compressed file starts immediately.
+2. Click the "Download Windows" button. The download of a ZIP compressed file starts immediately.
 
 ## Install the Ecosystem FVP {#install}
 

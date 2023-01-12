@@ -12,7 +12,7 @@ Arm Instruction Emulator is an executable that runs on your Linux host. It runs 
 
 You must ensure that either [Environment Modules](https://modules.readthedocs.io/en/latest/index.html) or the [Lmod Environment Module System](https://lmod.readthedocs.io/en/latest/) are installed on your host Linux machine.
 
-On the supported Linux hosts, use gcc 7.1.0 or higher
+On the supported Linux hosts, use `gcc 7.1.0` or higher
 
 ## Download installer packages
 

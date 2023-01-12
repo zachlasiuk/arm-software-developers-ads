@@ -45,6 +45,6 @@ To verify everything is working OK, you can build one of the many example projec
 
 Arm supplies a selection of ready made [Fixed Virtual Platforms (FVPs)](https://developer.arm.com/Tools%20and%20Software/Fixed%20Virtual%20Platforms) that can be used without Arm Fast Models installed. See [this article](../fvp) for more information.
 
-## Further Reading
+## Documentation
 
    [Get started with Arm Fast Models](https://developer.arm.com/documentation/102441)

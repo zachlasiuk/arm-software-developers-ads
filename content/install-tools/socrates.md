@@ -41,3 +41,8 @@ They are available on the [Arm YouTube channel](https://www.youtube.com/c/arm):
  * [Getting Started](https://youtube.com/playlist?list=PLgyFKd2HIZlY_y7b5OTtyrso45q-eCM_s)
  * [NIC-400 Configuration](https://youtube.com/playlist?list=PLgyFKd2HIZlaQBfd8YEMwSQX_cWIxODgG)
  * [NI-700 Configuration](https://youtube.com/playlist?list=PLgyFKd2HIZlahIsHSSw7ViwiFxeBYc36b)
+
+ # Documentation
+
+ [Arm Socrates User Guide](https://developer.arm.com/documentation/101399)\
+ [Arm Socrates Installation Guide](https://developer.arm.com/documentation/101400)

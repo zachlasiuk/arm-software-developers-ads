@@ -18,4 +18,6 @@ layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page o
 
 ## Get started
 
-Check out the [documentation](https://developer.arm.com/documentation/102497/latest/Arm-Keil-Studio) for one of the many tutorials available. A simple [Blinky example](https://developer.arm.com/documentation/102497/latest/Tutorials/Get-started-with-a-CMSIS-Blinky-example) is a good way to start.
+Check out the [documentation](https://developer.arm.com/documentation/102497/latest/Arm-Keil-Studio) for one of the many tutorials available.
+
+A simple [Blinky](https://developer.arm.com/documentation/102497/latest/Tutorials/Get-started-with-a-CMSIS-Blinky-example) example is a good way to start.

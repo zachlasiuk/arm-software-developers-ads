@@ -13,11 +13,16 @@ tool_install: true              # DO NOT MODIFY. Always true for tool installs
 layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
 
-[Arm Forge](https://developer.arm.com/Tools%20and%20Software/Arm%20Forge) combines Arm DDT for parallel high-performace application debugging, Arm MAP for performance profiling and optimization advice, and Arm Performance Reports for summarizing and characterizing both scalar and MPI application performance.
+[Arm Forge](https://developer.arm.com/Tools%20and%20Software/Arm%20Forge) is a server and HPC development tool suite for C, C++, Fortran, and Python high performance code on Linux.
+
+Arm Forge consists of
+* [Arm DDT](https://developer.arm.com/Tools%20and%20Software/Arm%20Forge#Components) for parallel high-performace application debugging
+* [Arm MAP](https://developer.arm.com/Tools%20and%20Software/Arm%20Forge#Components) for performance profiling and optimization advice, and
+* [Arm Performance Reports](https://developer.arm.com/Tools%20and%20Software/Arm%20Forge#Components) for summarizing and characterizing both scalar and MPI application performance.
 
 ## Supported platforms
 
-[Arm Forge](https://developer.arm.com/Tools%20and%20Software/Arm%20Forge) runs on Linux and multiple architectures.
+Arm Forge runs on Linux and multiple architectures.
 
 | Architecture | Operating systems | MPI | Compilers | Accelerators |
 | ------------ | ----------------- | --- | --------- | ------------ |
@@ -25,12 +30,12 @@ layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page o
 | Intel and AMD (x86_64) | Red Hat Enterprise Linux/CentOS 7 and 8 <br />SuSE Linux Enterprise Server 12 and 15 <br />Ubuntu 16.04 to 20.04 | Cray MPT <br />HPE MPI <br />Intel MPI <br />MPICH <br />MVAPICH2 <br />Open MPI 3 to 4 | Cray Compiling Environment <br />GNU C/C++/Fortran Compiler <br />Intel Parallel Studio <br />NVIDIA HPC (PGI) Compiler | Nvidia CUDA Toolkit 9.0 to 11.1 |
 | IBM Power (ppc64le) | Red Hat Enterprise Linux/CentOS 7 and 8 | IBM Spectrum MPI <br />Open MPI 3 to 4 | GNU C/C++/Fortran Compiler <br />IBM XL Compiler <br />NVIDIA HPC (PGI) Compiler | Nvidia CUDA Toolkit 9.2 to 11.1 |
 
-[Arm Forge](https://developer.arm.com/Tools%20and%20Software/Arm%20Forge) provides native remote clients for other OSes to connect to your cluster where you can run, debug, profile, edit, and compile your application files.
+Arm Forge provides native remote clients for other OSes to connect to your cluster where you can run, debug, profile, edit, and compile your application files.
 
 | Architecture | Operating systems |
 | ------------ | ----------------- |
-| Armv8 (AArch64) | MacOS 10.13 (High Sierra), and above. <br /> Any of the Linux platforms listed above |
-| Intel and AMD (x86_64) | MacOS 10.13 (High Sierra), and above. <br />Any of the Linux platforms listed above <br /> Windows 7, and above. |
+| Armv8 (AArch64) | MacOS 10.13 (High Sierra), and above. <br /> Any of the Linux platforms listed above. |
+| Intel and AMD (x86_64) | MacOS 10.13 (High Sierra), and above. <br />Any of the Linux platforms listed above. <br /> Windows 7 and above. |
 
 ## Download  {#download}
 
@@ -64,7 +69,7 @@ or, to proceed with the text-mode installer, run:
 
 ## Setting up product license
 
-You must install a license file on a machine running Arm Forge tools to debug or profile. Setup instructions can be found [on this page](https://developer.arm.com/documentation/101136/2103/Arm-Forge/Licensing?lang=en)
+You must install a license file on a machine running Arm Forge tools to debug or profile. Setup instructions can be found [on this page](https://developer.arm.com/documentation/101136/latest/Arm-Forge/Licensing).
 
 You do not need to install a license file on a machine running Arm Forge Remote Client for connecting remotely to Arm Forge tools on a remote system.
 
@@ -144,3 +149,6 @@ perf-report -n 128 myapp
 ```
 
 Two files `myapp_128p_<timestamp>.html` and `myapp_128p_<timestamp>.txt` will be created in the current directory.
+
+## Documentation
+[Arm Forge User Guide](https://developer.arm.com/documentation/101136)

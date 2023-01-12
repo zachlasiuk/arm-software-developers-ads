@@ -4,11 +4,13 @@ title: "Arm Streamline"
 tool_install: true              # DO NOT MODIFY. Always true for tool installs
 layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
 ---
-[Arm Streamline Performance Analyzer](https://developer.arm.com/Tools%20and%20Software/Streamline%20Performance%20Analyzer) is an application profiler for Android, Linux and bare-metal applications. This tool helps you optimize your software written for devices with Arm processors.
+[Arm Streamline Performance Analyzer](https://developer.arm.com/Tools%20and%20Software/Streamline%20Performance%20Analyzer) is an application profiler for Android, Linux and bare-metal applications.
 
 Streamline is available as a component of [Arm Mobile Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Mobile%20Studio) or [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio).
 
-The version of Streamline provided with Arm Mobile Studio supports [certain Android targets](https://developer.arm.com/Tools%20and%20Software/Arm%20Mobile%20Studio#Supported-Devices) only. For other use cases, use the version of Streamline provided with Arm Development Studio.
+The version of Streamline provided with Arm Mobile Studio supports [certain Android targets](https://developer.arm.com/Tools%20and%20Software/Arm%20Mobile%20Studio#Supported-Devices) only.
+
+For other use cases, use the version of Streamline provided with Arm Development Studio.
 
 ## Download installer packages
 
@@ -23,11 +25,15 @@ Install Arm Mobile Studio using these [instructions](https://developer.arm.com/d
 
 Install Arm Development Studio using the instructions in the [Arm Development Studio Getting Started Guide](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio). See also [this article](../armds/).
 
-If using an Android target, you must install Android Debug Bridge(adb) available with [Android SDK platform tools](https://developer.android.com/studio/releases/platform-tools). Add the path to the downloaded Android SDK platform tools directory to your `PATH` environment variable.
+If using an Android target, you must install Android Debug Bridge(adb) available with [Android SDK platform tools](https://developer.android.com/studio/releases/platform-tools).
+
+Add the path to the downloaded Android SDK platform tools directory to your `PATH` environment variable.
 
 ## Setting up product license
 
-Arm Mobile Studio is available as a free starter edition which is not license managed. If using [Professional Edition](https://developer.arm.com/Tools%20and%20Software/Arm%20Mobile%20Studio#Editions), see the supplied readme for license setup instructions.
+Arm Mobile Studio is available as a free starter edition which is not license managed.
+
+If using [Mobile Studio Professional Edition](https://developer.arm.com/Tools%20and%20Software/Arm%20Mobile%20Studio#Editions), see the supplied readme for license setup instructions.
 
 Arm Development Studio is license managed. License setup instructions are available [here](../license/).
 
@@ -44,3 +50,7 @@ Depending on your type of application, choose the appropriate guide below to get
 - [Profile your Android Application](https://developer.arm.com/documentation/101816/latest/Getting-started-with-Streamline/Profile-your-Android-application)
 - [Profile your Linux Application](https://developer.arm.com/documentation/101816/latest/Getting-started-with-Streamline/Profile-your-Linux-application)
 - [Profile your bare-metal Application](https://developer.arm.com/documentation/101816/latest/Getting-started-with-Streamline/Profile-your-bare-metal-application)
+
+## Documentation
+
+[Arm Streamline User Guide](https://developer.arm.com/documentation/101816/latest)

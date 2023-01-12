@@ -102,3 +102,6 @@ int main() {
 ```console
 armclang --target=aarch64-arm-none-eabi hello.c
 ```
+## Full documentation
+
+[Arm Compiler for Embedded User Guide](https://developer.arm.com/documentation/100748/0619/Getting-Started/Installing-Arm-Compiler-for-Embedded)
