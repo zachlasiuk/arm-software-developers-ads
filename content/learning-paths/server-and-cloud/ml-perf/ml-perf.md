@@ -23,10 +23,11 @@ Launch an Arm-based instance running `Ubuntu 20.04`.
 
 Install build-essential and Python3 package dependencies
 
-```console
+```bash
 sudo apt-get update
-sudo apt-get install build-essential
-sudo apt-get install python3-pip
+sudo apt-get install -y build-essential
+sudo apt-get install -y python3-pip
+sudo apt-get install -y git
 sudo pip install opencv-python-headless
 sudo pip install Cython
 sudo pip install pycotools
@@ -37,7 +38,7 @@ sudo pip install pybind11
 We use the MLPerf Inference benchmark suite from MLCommons to benchmark models for a widely used ML use-case such as Image classification and Object detection. 
 Start by cloning the repository below.
 
-```console
+```bash
 git clone --recurse-submodules https://github.com/mlcommons/inference.git mlperf_inference
 ```
 
@@ -45,7 +46,7 @@ git clone --recurse-submodules https://github.com/mlcommons/inference.git mlperf
 
 Next, build and install the MLPerf Inference Benchmark for the image classification and object detection use case using the steps below.
 
-```console
+```bash
 cd mlperf_inference/loadgen/
 CFLAGS="-std=c++14" sudo python3 setup.py develop --user
 cd ../vision/classification_and_detection/
@@ -56,7 +57,7 @@ sudo python3 setup.py develop
 
 MLPerf Inference Benchmark suite can use different backends such as onnx or tensorflow. We will install Tensorflow as the backend. Install tensorflow using the commands below.
 
-```console
+```bash
 pip install tensorflow
 pip install tensorflow-io
 ```
@@ -64,7 +65,7 @@ We set 2 environment variables:
 * Enable oneDNN, an open-source cross-platform performance library for deep learning applications
 * Use 16-bit floating-point storage format (BF16) to accelerate performance
 
-```console
+```bash
 export TF_ENABLE_ONEDNN_OPTS=1
 export ONEDNN_DEFAULT_FPMATH_MODE=BF16
 ```
@@ -74,7 +75,7 @@ AWS Graviton3 instances are the first instances with BF16 support.
 
 Next, download the ML model you want to run the benchmark with. In this example, we download the resnet50-v1.5 model.
 
-```console
+```bash { cwd="~/mlperf_inference/vision/classification_and_detection/" }
 wget -q https://zenodo.org/record/2535873/files/resnet50_v1.pb
 ```
 
@@ -84,7 +85,7 @@ You will also need to download a dataset for the ML model you want to benchmark.
 
 For this example, we will generate a fake image dataset using the tooling included in the repo. Use the command below
 
-```console
+```bash { cwd="~/mlperf_inference/vision/classification_and_detection/" }
 tools/make_fake_imagenet.sh
 ```
 
@@ -92,7 +93,7 @@ tools/make_fake_imagenet.sh
 
 Finally, before you run the benchmark you will need to setup the environment variables below to point to the location of the ML model and dataset.
 
-```console
+```bash
 export MODEL_DIR=`pwd`
 export DATA_DIR=`pwd`/fake_imagenet
 ```
@@ -101,7 +102,7 @@ export DATA_DIR=`pwd`/fake_imagenet
 
 You can now launch the benchmark on your Arm machine, using the command below. 
 
-```console
+```bash { env="TF_ENABLE_ONEDNN_OPTS=1;ONEDNN_DEFAULT_FPMATH_MODE=BF16;MODEL_DIR=~/mlperf_inference/vision/classification_and_detection/;DATA_DIR=~/mlperf_inference/vision/classification_and_detection/fake_imagenet", cwd="~/mlperf_inference/vision/classification_and_detection/" }
 ./run_local.sh tf resnet50 cpu
 ```
 
@@ -109,7 +110,7 @@ This command runs the benchmark with the "tf" tensorflow backend on the "resnet5
 
 The minimal arguments that you need to pass to the benchmark are shown below
 
-```
+```console
 ./run_local.sh backend model device
 
 backend is one of [tf|onnxruntime|pytorch|tflite]
@@ -119,7 +120,7 @@ device is one of [cpu|gpu]
 
 For all other options, run help as shown below
 
-```console
+```bash { env="TF_ENABLE_ONEDNN_OPTS=1;ONEDNN_DEFAULT_FPMATH_MODE=BF16;MODEL_DIR=~/mlperf_inference/vision/classification_and_detection/;DATA_DIR=~/mlperf_inference/vision/classification_and_detection/fake_imagenet", cwd="~/mlperf_inference/vision/classification_and_detection/" }
 ./run_local.sh --help
 ```
 
