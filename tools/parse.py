@@ -90,6 +90,19 @@ def save(article, cmd, learningpath=False, img=None):
                 content[i_idx].update({"ret_code": ret })
             else:
                 content[i_idx].update({"ret_code": "0" })
+            # check if a file needs to be sourced
+            if "env_source" in l[0]:
+                env = l[0].split("env_source=\"")[1].split("\"")[0]
+                content[i_idx].update({"env_source": env })
+            # check if env var are specified
+            if "env=" in l[0]:
+                env = l[0].split("env=\"")[1].split("\"")[0]
+                env = env.split(";")
+                content[i_idx].update({"env": env })
+            # check if commands need to be run beforehand
+            if "pre_cmd" in l[0]:
+                env = l[0].split("pre_cmd=\"")[1].split("\"")[0]
+                content[i_idx].update({"pre_cmd": env })
             # check if current directory is specified
             if "cwd" in l[0]:
                 cwd = l[0].split("cwd=\"")[1].split("\"")[0]
