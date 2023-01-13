@@ -126,6 +126,31 @@ But the framework does run each code block as a separate terminal session. As su
     ```
 ```
 
+For a command block, it is possible to specify multiple environment variables separated by `;`:
+
+```
+    ```bash { env="VAR1=hello;VAR2=world" }
+    echo $VAR1 $VAR2
+    ```
+```
+
+To make environment variables persistent, it is possible to store them in the .bashrc and load them for the command block with `env_source`:
+
+```
+    ```bash { env_source="~/.bashrc" }
+    env
+    ```
+```
+
+If you want to manage the environement with a tool such as [environment modules](https://modules.sourceforge.net/) to load the enviroment, you can couple `env_source` with `pre_cmd` which will silently run a command before instructions in the code block:
+
+```
+    ```bash { env_source="/usr/share/modules/init/bash", pre_cmd="module load gcc-12" }
+    gcc-12 --version
+    ```
+```
+
+
 #### Ignore instructions
 
 ```markdown
