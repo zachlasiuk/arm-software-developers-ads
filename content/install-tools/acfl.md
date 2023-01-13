@@ -6,7 +6,11 @@ layout: installtoolsall
 test_images:
 - ubuntu:latest
 - fedora:latest
+test_link: null
 test_maintenance: true
+test_status:
+- passed
+- passed
 title: Arm Compiler for Linux
 tool_install: true
 ---
