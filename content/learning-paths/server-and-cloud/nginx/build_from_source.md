@@ -10,13 +10,13 @@ A physical machine or cloud instance with Ubuntu installed.
 
 Update the Ubuntu repository information.
 
-```console
+```bash
 sudo apt-get update
 ```
 
 Install the needed tools and libraries to build from source.
 
-```console
+```bash
 sudo apt-get install wget unzip mercurial gcc libssl-dev make -y
 
 ```
@@ -31,28 +31,28 @@ Follow these steps to build Nginx from source.
 
 Download and extract the latest source code of PCRE from [here](http://www.pcre.org/), the example shows version 10.40. 
 
-```console
+```bash { pre_cmd="sudo apt remove -y nginx" }
 wget https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.40/pcre2-10.40.zip
 unzip pcre2-10.40.zip
 ```
 
 The zlib library distribution (version 1.1.3 - 1.2.11) needs to be downloaded from the [zlib](https://zlib.net/fossils/) site and extracted. 
 
-```console
+```bash
 wget https://zlib.net/fossils/zlib-1.2.11.tar.gz
 tar -xvf zlib-1.2.11.tar.gz
 ```
 
 Clone the Nginx source code:
 
-```console
+```bash
 hg clone http://hg.nginx.org/nginx
 cd nginx/
 ```
 
 The build is configured using the **configure** command. It defines various aspects of the system, including the methods Nginx is allowed to use for connection processing. In the end, it creates a Makefile.
 
-```console
+```bash { cwd="./nginx" }
 ./auto/configure --prefix=/usr/share/nginx --sbin-path=/usr/sbin/nginx --conf-path=/etc/nginx/nginx.conf --http-log-path=/var/log/nginx/access.log --error-log-path=/var/log/nginx/error.log --lock-path=/var/lock/nginx.lock --pid-path=/run/nginx.pid --with-http_ssl_module --modules-path=/etc/nginx/modules --with-stream=dynamic --with-pcre=../pcre2-10.40 --with-zlib=../zlib-1.2.11
 ```
 
@@ -60,14 +60,14 @@ There are many configuration options available in Nginx. To find all the configu
 
 After configuration, Nginx is compiled and installed using make:
 
-```console
+```bash { cwd="./nginx" }
 make
 sudo make install
 ```
 
 To verify if Nginx is installed or not check its version by using the command:
 
-```console
+```bash { pre_cmd="sudo mkdir /var/log/nginx" }
 nginx -v
 ```
 
