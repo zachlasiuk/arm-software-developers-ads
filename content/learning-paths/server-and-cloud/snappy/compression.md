@@ -14,7 +14,7 @@ layout: "learningpathall"
 * An Arm-based instance from your preferred cloud service [provider](/learning-paths/server-and-cloud/providers). See the supported operating systems below.
 * GCC for your Arm Linux distribution. Install using the steps [here](/install-tools/gcc/#native).
 * Unzip and make utilities
-```console
+```bash { pre_cmd="sudo apt install -y gcc g++" }
 sudo apt install -y unzip make
 ```
 
@@ -36,7 +36,7 @@ This benchmark also contains the source files for the snappy and zstd compressio
 
 On your running EC2 instance, run the following command
 
-```console
+```bash
 git clone https://github.com/inikep/lzbench && cd lzbench
 make
 ```
@@ -46,7 +46,7 @@ make
 To benchmark the data compression algorithms, you will need a data set to run the compression and decompression algorithms on. In this how-to guide we will use the [Silesia corpus](https://sun.aei.polsl.pl//~sdeor/index.php?page=silesia) data set, which is a data set of files that covers the typical data types used nowadays.
 
 Download and unpack the data set:
-```console
+```bash { cwd="lzbench" }
 cd ..
 wget https://sun.aei.polsl.pl//~sdeor/corpus/silesia.zip
 mkdir silesia && cd silesia
@@ -58,13 +58,13 @@ cd ../lzbench
 
 To benchmark the standalone performance of `snappy` with `lzbench`, using one of the files(`dickens`) from the Silesia corpus data set we installed run the following command:
 
-```console
+```bash { cwd="lzbench" }
 ./lzbench -esnappy ../silesia/dickens
 ```
 
 To benchmark the standalone performance of `zstd` with `lzbench`, using one of the files(`dickens`) from the Silesia corpus data set we installed run the following command:
 
-```console
+```bash { cwd="lzbench" }
 ./lzbench -ezstd ../silesia/dickens
 ```
 
@@ -72,7 +72,7 @@ The value passed to `-e` in the command above is the compression algorithm.
 
 For full usage and viewing all the arguments you can pass to lzbench run the command below
 
-```console
+```bash { cwd="lzbench" }
 ./lzbench --help
 ```
 You can repeat with other file
