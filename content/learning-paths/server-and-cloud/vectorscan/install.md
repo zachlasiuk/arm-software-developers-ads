@@ -20,28 +20,28 @@ The instructions provided below have been tested on an Ubuntu 22.04 AWS 64-bit A
 
 * GCC for your Arm Linux distribution. Install using the steps [here](/install-tools/gcc/#native).
 * [cmake](https://cmake.org/) - used here as the build system:
-```console
-sudo apt install cmake
+```bash { pre_cmd="sudo apt install -y g++" }
+sudo apt install -y cmake
 ```
 * [Boost](https://www.boost.org/) C++ libraries
-```console
-sudo apt install libboost-all-dev
+```bash
+sudo apt install -y libboost-all-dev
 ```
 * [Ragel](https://packages.ubuntu.com/bionic/ragel)
-```console
-sudo apt install ragel
+```bash
+sudo apt install -y ragel
 ```
 * [PkgConfig](https://en.wikipedia.org/wiki/Pkg-config)
-```console
-sudo apt install pkg-config
+```bash
+sudo apt install -y pkg-config
 ```
 * [Sqlite3](https://www.sqlite.org/index.html)
-```console
-sudo apt install libsqlite3-dev
+```bash
+sudo apt install -y libsqlite3-dev
 ```
 * [libpcap](https://www.tcpdump.org/) - Package for capturing network packets
-```console
-sudo apt install libpcap-dev
+```bash
+sudo apt install -y libpcap-dev
 ```
 
 ## Install Vectorscan
@@ -49,7 +49,7 @@ sudo apt install libpcap-dev
 [Vectorscan](https://github.com/VectorCamp/vectorscan) is an architecture-inclusive fork of [Hyperscan](https://github.com/intel/hyperscan), that preserves the support for x86 and modifies the framework to allow for Arm architectures and vector engine implementations.
 
 Start by cloning the git repository for Vectorscan.
-```console
+```bash
 git clone https://github.com/VectorCamp/vectorscan.git
 cd vectorscan
 ```
@@ -66,7 +66,7 @@ Change `https://ftp.pcre.org/pub/pcre/pcre-8.41.tar.bz2` to `https://sourceforge
 In the same file, now set the environment variables to match the location of your `GCC compiler`, `Boost libraries` and `PCRE` installation.
 
 The snippet below is an example with the default installation locations.
-```console
+```text { file_name="setenv-arm64-cross.sh" }
 export BOOST_VERSION=1_57_0
 export BOOST_DOT_VERSION=${BOOST_VERSION//_/.}
 export CROSS=/usr/bin/aarch64-linux-gnu-
@@ -87,7 +87,7 @@ fi
 export BOOST_PATH=/usr/include
 ```
 After closing and saving, `source` this file:
-```console
+```bash { cwd="./vectorscan", pre_cmd="mv ~/setenv-arm64-cross.sh ~/vectorscan/cmake" }
 source cmake/setenv-arm64-cross.sh
 ```
 
@@ -101,7 +101,7 @@ For now, workaround this issue by making the changes to `STACK_SIZE` as mentione
 
 Create build directory and configure cmake to build vectorscan. 
 
-```console
+```bash { cwd="./vectorscan" }
 mkdir vectorscan-build
 cd vectorscan-build
 cmake -DCROSS_COMPILE_AARCH64=1 ../ -DCMAKE_TOOLCHAIN_FILE=../cmake/arm64-cross.cmake
@@ -123,11 +123,9 @@ cmake -DCROSS_COMPILE_AARCH64=1 ../ -DCMAKE_TOOLCHAIN_FILE=../cmake/arm64-cross.
 
 In the final step, use `make` to build the vectorscan library
 
-```console
-make -jT
+```bash { cwd="./vectorscan/vectorscan-build" }
+make -j$(nproc)
 ```
-
-Where `T` specifies the number of threads used to build.
 
 The executables from the build will be created in the `bin` directory.
 
@@ -135,7 +133,7 @@ The executables from the build will be created in the `bin` directory.
 
 Run a check to validate that `Vectorscan` is built and running correctly:
 
-```console
+```bash { cwd="./vectorscan/vectorscan-build" }
 ./bin/unit-hyperscan
 ```
 
