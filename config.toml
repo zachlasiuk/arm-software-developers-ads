@@ -5,6 +5,8 @@ theme = "arm-design-system-hugo-theme"
 
 enableGitInfo = true
 
+enableRobotsTXT = true
+
 [deployment]
 [[deployment.targets]]
 name = "aws"
