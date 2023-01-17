@@ -67,7 +67,7 @@ sudo make install
 
 To verify if Nginx is installed or not check its version by using the command:
 
-```bash { pre_cmd="sudo mkdir /var/log/nginx" }
+```bash
 nginx -v
 ```
 
