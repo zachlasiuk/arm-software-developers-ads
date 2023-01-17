@@ -20,18 +20,18 @@ Follow these steps to quickly install Nginx.
 
 Update the Ubuntu repository information.
 
-```console
+```bash
 sudo apt-get update
 ```
 
 Install the package.
 
-```console
+```bash
 sudo apt-get install nginx -y 
 ```
 
 Verify the installation.
 
-```console
+```bash
 nginx -v
 ```

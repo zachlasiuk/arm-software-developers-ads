@@ -5,75 +5,6 @@ weight: 3 # 1 is first, 2 is second, etc.
 
 # Do not modify these elements
 layout: "learningpathall"
-
-############################
-#   Code instructions
-############################
-#
-#
-#
-##### Basics
-# ```bash
-# echo 'hello world'
-# ```
-#
-#
-#
-##### Language select
-# Select a language from this list: https://lucidar.me/en/web-dev/list-of-supported-languages-by-prism/
-#
-##### Line numbers display
-#--------------------------
-# ```bash  { line_numbers = "true" }
-# echo 'hello world'
-# ```
-#
-#
-#
-###### Line highlighting 
-#--------------------------
-# Not recommended to use with line numbers, view can look a bit strange.
-### Just line 5:
-# ```bash  { highlight_lines = 5 }
-# echo 'hello world'
-# ```
-### Lines 1 through 2, line 5, lines 9 through 20:
-# ```bash  { highlight_lines = "1-2, 5, 9-20" }
-# echo 'hello world'
-# ```
-#
-#
-#
-###### Command line prompt (and optional output)
-#-----------------------------------------------
-# Not recommended to use with line numbers, view can look a bit strange.
-### from prompt me@localhost
-# ```bash  {  command_line="me@localhost"  }
-# echo 'hello world'
-# ```
-#
-### from root user prompt, with line 2 as output
-# ```bash {  command_line="root@localhost | 2"  }
-# echo 'hello world'
-# hello world
-# ```
-#
-#
-#
-###### Tree structure
-#---------------------
-#```treeview
-#   root_folder/
-#   |-- a first folder/
-#   |   |-- c-file.c
-#   |   `-- some_picture.jpg
-#   |-- empty_folder/
-#   |-- going deeper/
-#   |   |-- going deeper/
-#   |   |   `-- .secret_file
-#   |   |-- style.css
-#   |   `-- index.html
-#```
 ---
 To measure the performance of MongoDB, we use the [MongoDB performance test tool](https://github.com/idealo/mongodb-performance-test).
 
@@ -98,16 +29,15 @@ For more information see the [OpenJDK](https://openjdk.org/install/) website.
 
 On your instance running MongoDB (you may need to start a new terminal), clone the `MongoDB performance test tool` project:
 
-```console
+```bash { pre_cmd="sudo apt-get install -y openjdk-8-jre git" }
 git clone https://github.com/idealo/mongodb-performance-test.git
 ```
 
 Now `cd` into project folder and execute the `jar` file
 
-```console
+```bash { ret_code="1" }
 cd mongodb-performance-test
 java -jar ./latest-version/mongodb-performance-test.jar
-
 ```
 This will print a description of how to use the java application
 
@@ -116,11 +46,9 @@ This will print a description of how to use the java application
 
 To insert 1 million documents on localhost:27017 (default) where MongoDB is running by 10 threads into database `test`, collection `perf` run the following commands:
 
-```console
-jarfile=./latest-version/mongodb-performance-test.jar
-
+```bash { cwd="./mongodb-performance-test" }
+export jarfile=./latest-version/mongodb-performance-test.jar
 java -jar $jarfile -m insert -o 1000000 -t 10 -db test -c perf
-
 ```
 
 As the test runs, the count will be printed periodically. It will increase until it reaches 1 million and then the test will end. It takes about two minutes to complete.

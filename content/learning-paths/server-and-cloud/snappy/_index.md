@@ -27,6 +27,14 @@ softwares:
 operatingsystems:
     - Linux
 
+### Test
+test_maintenance: true
+test_images:
+- ubuntu:latest
+test_link: null
+test_status:
+- passed
+
 ### FIXED, DO NOT MODIFY
 # ================================================================================
 weight: 1                       # _index.md always has weight of 1 to order correctly

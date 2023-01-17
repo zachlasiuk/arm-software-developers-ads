@@ -17,7 +17,7 @@ To run YCSB, additional software packages are required, [Apache Maven](https://m
 
 Apache Maven:
 
-```console
+```bash
    wget http://ftp.heanet.ie/mirrors/www.apache.org/dist/maven/maven-3/3.1.1/binaries/apache-maven-3.1.1-bin.tar.gz
    sudo tar xzf apache-maven-*-bin.tar.gz -C /usr/local
    cd /usr/local
@@ -43,18 +43,17 @@ sudo yum install python
 
 Download the latest released YCSB zip file and uncompress
 
-```console
-mkdir ~/ycsb && cd ~/ycsb
+```bash { pre_cmd="sudo apt install -y python" }
+mkdir ycsb && cd ycsb
 curl -O --location https://github.com/brianfrankcooper/YCSB/releases/download/0.17.0/ycsb-0.17.0.tar.gz
 tar xfvz ycsb-0.17.0.tar.gz
 ```
 
 Now `cd` into project folder and run the executable to print a description of how to use the benchmark.
 
-```console
+```bash { env="M2_HOME=/usr/local/maven; PATH=/usr/local/maven/bin:${PATH}" cwd="./ycsb" ret_code="2" }
 cd ycsb-0.17.0
 bin/ycsb
-
 ```
 
 
@@ -64,7 +63,6 @@ To test the performance of loading data(INSERT) into default database `ycsb` at 
 
 ```console
 ./bin/ycsb load mongodb-async -s -P workloads/workloada -p mongodb.url=mongodb://localhost:27017/ycsb?w=0 -threads 10
-
 ```
 The "-P" parameter is used to load property files. In this example, we used it load the workloada parameter file which sets the recordcount to 1000 in addition to other parameters. The "-threads" parameter indicates the number of threads and is set to 1 by default.
 
@@ -129,3 +127,4 @@ At the end of each test, statistics are printed to the console. Shown below is t
 For instructions on running any other tests or more details on the metrics reported, refer to the [github project for the YCSB](https://github.com/brianfrankcooper/YCSB/wiki/).
 
 To view performance results of MongoDB on AWS Graviton2-based Amazon EC2 R6g instance and how it compares to Intel Xeon-based R5 instances read the [blog here](https://community.arm.com/arm-community-blogs/b/operating-systems-blog/posts/mongodb-performance-on-aws-with-the-arm-graviton2).
+
