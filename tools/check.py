@@ -96,7 +96,7 @@ def check(json_file, start, stop):
                 cmd = ["docker exec test_{} apt update".format(i)]
                 logging.debug(cmd)
                 subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-                cmd = ["docker exec test_{} apt install -y sudo wget curl".format(i)]
+                cmd = ["docker exec test_{} apt install -y sudo wget curl git".format(i)]
                 logging.debug(cmd)
                 subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
                 cmd = ["docker exec test_{} useradd user -m -G sudo".format(i)]
@@ -113,7 +113,7 @@ def check(json_file, start, stop):
                 cmd = ["docker exec test_{} yum update".format(i)]
                 logging.debug(cmd)
                 subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
-                cmd = ["docker exec test_{} yum install -y sudo wget curl".format(i)]
+                cmd = ["docker exec test_{} yum install -y sudo wget curl git".format(i)]
                 logging.debug(cmd)
                 subprocess.run(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
                 cmd = ["docker exec test_{} useradd user -m -G wheel".format(i)]
