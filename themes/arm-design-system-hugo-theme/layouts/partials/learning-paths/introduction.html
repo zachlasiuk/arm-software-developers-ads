@@ -71,10 +71,12 @@
     <h2>Who is this for?</h2>
         <p class="u-margin-left-1">{{ .Params.who_is_this_for }}</p>
     <h2 class="u-margin-top-2">What will you learn?</h2>
+        <p class="u-margin-left-1">Upon completion of this learning path, you will be able to:</p>
         {{ range .Params.learning_objectives }}
             <li class="u-margin-left-2">{{.}}</li>
         {{ end }}  
     <h2 class="u-margin-top-2">Prerequisites</h2>
+        <p class="u-margin-left-1">Before starting, you will need the following:</p>
     	{{ range .Params.prerequisites }}
             <li class="u-margin-left-2">{{. | markdownify}}</li>
         {{ end }}
