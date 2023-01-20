@@ -59,6 +59,34 @@ uname        latest    f0a8125a81d3   5 days ago   69.2MB
 
 The Docker image can be run on any computer with the same architecture it was created on. 
 
+| Operating System and Architecture | Console Output |
+| ----------- | ----------- |
+| Any OS on Intel | Architecture is x64_86|
+| Linux on Arm 64-bit | Architecture is aarch64 |
+| Linux on Arm 32-bit | Architecture is armv7l |
+| macOS on Apple Silicon | Architecture is arm64 |
+
+{{< tabpane code=true >}}
+  {{< tab header="Intel" lang="console">}}
+Architecture is x64_86
+  {{< /tab >}}
+  {{< tab header="Arm 64-bit" lang="console">}}
+Architecture is aarch64
+  {{< /tab >}}
+  {{< tab header="Arm 32-bit" lang="console">}}
+Architecture is armv7l
+  {{< /tab >}}
+  {{< tab header="macOS on Apple Silicon" lang="console">}}
+Architecture is arm64
+  {{< /tab >}}
+{{< /tabpane >}}
+
+
+&nbsp;  
+&nbsp;  
+&nbsp;  
+
+
 If the machine uses the Intel architecture the output will be:
 ```console
 Architecture is x64_86
