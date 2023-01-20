@@ -66,48 +66,7 @@ The Docker image can be run on any computer with the same architecture it was cr
 | Linux on Arm 32-bit | Architecture is armv7l |
 | macOS on Apple Silicon | Architecture is arm64 |
 
-{{< tabpane code=true >}}
-  {{< tab header="Intel" lang="console">}}
-Architecture is x64_86
-  {{< /tab >}}
-  {{< tab header="Arm 64-bit" lang="console">}}
-Architecture is aarch64
-  {{< /tab >}}
-  {{< tab header="Arm 32-bit" lang="console">}}
-Architecture is armv7l
-  {{< /tab >}}
-  {{< tab header="macOS on Apple Silicon" lang="console">}}
-Architecture is arm64
-  {{< /tab >}}
-{{< /tabpane >}}
 
-
-&nbsp;  
-&nbsp;  
-&nbsp;  
-
-
-If the machine uses the Intel architecture the output will be:
-```console
-Architecture is x64_86
-```
-
-If the machine uses the Arm architecture the output will be:
-```console
-Architecture is aarch64
-```
-
-Other architecture values are possible. 
-
-Arm 32-bit Linux will print:
-```console
-Architecture is armv7l
-```
-
-On macOS with Apple Silicon the output will be:
-```console
-Architecture is arm64
-```
 
 Docker image names have the form **repository/image-name:tag** 
 

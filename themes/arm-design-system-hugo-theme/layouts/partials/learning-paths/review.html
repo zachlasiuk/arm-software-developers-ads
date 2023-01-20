@@ -38,7 +38,7 @@
                 {{$q_num := (add $index 1)}}
                 {{ with $q.questions}}
                         <!-- Questions -->
-                        <h5>{{.question}}</h5>
+                        <p class="u-margin-bottom-0 u-margin-top-1">{{.question}}</p>
                         <div id="Q{{$q_num}}-explanation" class="info_text" hidden>
                                 <p class="u-margin-left-2 info_text_paragraph">-> {{.explanation}}</p>
                         </div>
