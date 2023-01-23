@@ -40,6 +40,19 @@ html[theme='dark'] ads-card.path-card {
     --ads-card-box-shadow-hover: 0 1px 3px 3px rgba(255, 255, 255, 0.25);
 }
 
+
+.basics-title:hover {
+    transition: color 0.3s ease-in-out;
+    color: var(--arm-orange);
+    cursor: pointer;
+}
+.basics-title {
+    font-size: 1.15em;
+    margin: 0;
+    color: var(--arm-blue);
+    font-weight: bold;
+}
+
 ads-card.path-card:hover  .card-title {
     transition: color 0.3s ease-in-out;
     color: var(--arm-orange);

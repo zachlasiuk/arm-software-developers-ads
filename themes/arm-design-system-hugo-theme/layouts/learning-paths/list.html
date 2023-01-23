@@ -12,9 +12,9 @@
 {{end}}
 
 
-
-<ads-alert animation="down" animationDelay=100>
-    <a><span>New to {{.Title}}? Click here to learn the basics.</span></a>
+<!-- <ads-alert animation="down" animationDelay=100></ads-alert> -->
+<ads-alert id="new-to-category-alert">
+    <a><h6 class="basics-title">New to {{.Title}}? Click here to learn the basics.</h6></a>
 </ads-alert>
 
 
@@ -235,6 +235,8 @@
 
 <script>
     (() => {
+        ////////// Search 
+
         // Assign inputChangeHandler to search box
         const search_box = document.getElementById('search-box');
         search_box.inputChangeHandler = searchHandler_LearningPaths;
