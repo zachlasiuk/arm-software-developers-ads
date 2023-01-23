@@ -19,24 +19,24 @@ tool_install: true
 A safety qualified branch of Arm Compiler for Embedded, known as [Arm Compiler for Embedded FuSa](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Embedded%20FuSa), is available for safety critical applications.
 
 
-## Use compiler supplied with Arm Development Studio / Keil MDK
+## Use as supplied with Arm Development Studio or Keil MDK
 
 The easiest way to access the Arm Compiler for Embedded is to use the version provided with [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio). A given Development Studio version will contain the latest compiler version available at the time of release, and is generally up to date.
 
 Cortex-M users can also use the compiler as provided with [Keil MDK](https://www2.keil.com/mdk5).
 
-Note that Arm Compiler for Embedded FuSa is not _installed_ as part of Arm Development Studio or Keil MDK, and must be downloaded separately.
+Alternative versions can be [downloaded separately](#download).
 
-## Download standalone compiler packages {#download}
+Arm Compiler for Embedded FuSa must also be [downloaded separately](#download).
+
+## Standalone compiler packages {#download}
 
 Individual compiler packages for all supported host platforms can be downloaded from the [Arm Product Download Hub](../pdh).
 
 - [Arm Compiler for Embedded](https://developer.arm.com/downloads/view/ACOMPE)
 - [Arm Compiler for Embedded FuSa](https://developer.arm.com/downloads/view/ACOMP616)
 
-[What should I do if I want to download a legacy release of Arm Compiler?](https://developer.arm.com/documentation/ka005184)
-
-These can either be used standalone or integrated into your Arm Development Studio installation. For the latter, you must first [register](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio/Register-a-compiler-toolchain) your new compiler installation with Development Studio, before then [configuring](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio/Register-a-compiler-toolchain/Configure-a-compiler-toolchain-for-the-Arm-DS-command-prompt) the environment to use that version.
+These can either be used standalone or [integrated](#armds) into your Arm Development Studio installation.
 
 To install on Windows, unzip the downloaded package, launch the installer, and follow on-screen prompts.
 ```console
@@ -78,13 +78,17 @@ set path=(/home/$USER/ArmCompilerforEmbedded6.19/bin $path)
 {{< /tab >}}
 {{< /tabpane >}}
 
-Further installation instructions are given in the [documentation](https://developer.arm.com/documentation/100748/latest/Getting-Started/Installing-Arm-Compiler-for-Embedded).
+## Integrate with Arm Development Studio {#armds}
+
+To integrate this compiler with Arm Development Studio, [register](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio/Register-a-compiler-toolchain) the installation before then [configuring](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio/Register-a-compiler-toolchain/Configure-a-compiler-toolchain-for-the-Arm-DS-command-prompt) the environment to use that version.
+
+Full installation instructions are given in the [documentation](https://developer.arm.com/documentation/100748/latest/Getting-Started/Installing-Arm-Compiler-for-Embedded).
 
 ## Setting up product license
 
 Arm Compiler for Embedded and Arm Compiler for Embedded FuSa are license managed. License setup instructions are available [here](../license/).
 
-## Get started
+## Verify installation
 
 Check that the correct compiler version is being used:
 ```console
@@ -92,7 +96,7 @@ armclang --version
 ```
 To verify everything is working, build a simple `Hello World` example as described [here](https://developer.arm.com/documentation/100748/latest/Getting-Started/Compiling-a-Hello-World-example).
 ```C
-// Hello.c
+// hello.c
 #include <stdio.h>
 int main() {
   printf("Hello World\n");
@@ -105,3 +109,5 @@ armclang --target=aarch64-arm-none-eabi hello.c
 ## Full documentation
 
 [Arm Compiler for Embedded User Guide](https://developer.arm.com/documentation/100748/0619/Getting-Started/Installing-Arm-Compiler-for-Embedded)
+
+[What should I do if I want to download a legacy release of Arm Compiler?](https://developer.arm.com/documentation/ka005184)

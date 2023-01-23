@@ -30,7 +30,7 @@ Windows users, once installed, open the System Canvas IDE, and select File > Pre
 
 Arm Fast Models are license managed. License setup instructions are available [here](../license/).
 
-## Get started
+## Verify installation
 
 To verify everything is working OK, you can build one of the many example projects provided.
 
