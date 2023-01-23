@@ -8,12 +8,12 @@ weight: 2 # 1 is first, 2 is second, etc.
 layout: "learningpathall"
 ---
 
-In this learning path, we will build a neural network model with TensorFlow and deploy the model on the STM32 B-L475E-IOT01A2 board. We will implement a letter recognition model which takes accelerometer data from the board and predicts the letter based on the accelerometer data. 
+In this learning path, we will build a neural network model with TensorFlow and deploy the model on the [STM32 B-L475E-IOT01A2 board](https://www.st.com/en/evaluation-tools/b-l475e-iot01a.html). This board has an MCU based on the Arm Cortex-M4 core. We will implement a letter recognition model which takes accelerometer data from the board and predicts the letter based on the accelerometer data. 
 
 ## Get Setup
 
 On your Windows 10 development machine, start by downloading all the project files you'll need to run the example in this learning path.
-The zipped contents are available [here](/Project_Files/tf_stm32.zip)
+The zipped contents are available [here](tflow_nn_stcube/Project_Files/tf_stm32.zip)
 
 start by installing Anaconda. Anaconda is a distribution of Python language for data science and machine learning. With Anaconda, you can easily install open-source machine learning packages. Here are the steps to install Anaconda on your machine.
 
