@@ -27,9 +27,3 @@ Both Windows and Chrome OS have a Linux subsystem which can be used for software
 
 Some single board computers have enough performance to implement Linux based desktop computers. The [Pinebook](https://www.pine64.org/pinebook/) and [Pinebook Pro](https://www.pine64.org/pinebook-pro/) are good examples of these. The [Raspberry Pi 400](https://www.raspberrypi.com/products/raspberry-pi-400/) is powered by a [Raspberry Pi 4b](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/) module.
 
-### TBD move to Embedded / Server paths?
-
-A good example is the [Khadas Edge2](https://www.khadas.com/edge2). 
-
-The [Honeycomb LX2 workstation](https://www.solid-run.com/arm-servers-networking-platforms/honeycomb-servers-workstation/#honeycomb-workstation) is another example of an Arm computer built for developers. 
-

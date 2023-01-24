@@ -29,17 +29,13 @@ Free tier offers are currently available.
 
 [Arm SystemReady](https://www.arm.com/architecture/system-architectures/systemready-certification-program) is a program that certifies that systems meet the SystemReady standards, giving confidence that operating systems (OS) and subsequent layers of software just work.
 
-Hardware vendors also offer Arm servers for purchase.
-- [GIGABYTE](https://www.gigabyte.com/us/Enterprise/ARM-Server)
-- [Avantek](https://store.avantek.co.uk/arm-servers.html)
-
-You can find a full list of SystemReady SR Certified Systems on the [Arm website](https://www.arm.com/architecture/system-architectures/systemready-certification-program/sr).
+You can find a full list of SystemReady SR Certified Systems on the [Arm website](https://www.arm.com/architecture/system-architectures/systemready-certification-program/sr) along with links to purchase Arm servers.
 
 More developer hardware options are available from the [Works on Arm initiative](https://www.arm.com/markets/computing-infrastructure/works-on-arm). 
 
 ## Server software development
 
-Servers typically run, and are provided with, the Linux operating system. Popular distributions for servers include Ubuntu, Red Hat, SUSE Linux, and Debian. Vendor specific distributions, such as  Amazon Linux and Oracle Linux are also available.
+Servers typically run, and are provided with, the Linux operating system. Popular distributions for servers include Ubuntu, Red Hat, SUSE Linux, and Debian. Vendor specific distributions, such as Amazon Linux and Oracle Linux are also available.
 
 If `gcc` is not pre-installed with your distribution, you can [install using a package manager](/install-tools/gcc/#native).
 
