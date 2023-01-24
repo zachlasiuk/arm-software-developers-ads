@@ -19,6 +19,10 @@ further_reading:
         title: Windows Dev Kit 2023
         link: https://learn.microsoft.com/en-us/windows/arm/dev-kit/ 
         type: website
+    - resource:
+        title: All Chromebooks with Arm Processors in 2023
+        link: https://www.linuxmadesimple.info/2019/08/all-chromebooks-with-arm-processors-in.html
+        type: website
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

@@ -4,43 +4,32 @@ title: Find Arm hardware
 weight: 2
 ---
 
-## Find Arm Hardware 
+## Find your Arm Hardware 
 
-Microcontroller hardware, based on Arm Cortex-M processors, is available from various Arm partners. 
+Evaluation boards (also known as starter kits, or similar) for are available from various Arm partners to support their devices. They are used for early software development, prototyping, and demonstration. They come in a wide variety of feature sets and price points. They are typically used stand-alone as provided.
 
-Many microcontroller vendors offer Arm devices. 
+Other boards, often refered to as edge computing boards or modules, or as single board computers (SBCs), can be directly used in a final product. These boards typically have a small form-factor so as to be easily designed into commercial products. Debug interfaces, and other features beneficial for early software may not be available.
 
-- NXP
-- Infineon
-- STMicroelectronics
-- Nordic Semiconductor
-- Raspberry Pi
-- Nuvoton
-- Renesas
-- Silicon Labs
-- Analog Devices
-- Dialog Semiconductor
+Microcontrollers based on Arm Cortex-M processors are available from various Arm partners. The selection is very broad. The [Keil MDK device database](https://www.keil.com/dd2/) lists 9000+ such devices that are supported by this toolchain.
 
-Development boards are also by distributors around the world. 
+Arm Keil also provides a [database of Cortex-M boards and devices](https://www.keil.arm.com/boards/) along with example software projects.
 
-Some distributors include:
+## Purchase development boards
 
-- [Arrow](https://www.arrow.com/)
+Boards can be purchased from the vendors directly, or more commonly from their distribution networks. Some such distributors include:
+
 - [DigiKey](https://www.digikey.com/)
+- [Mouser](https://www.mouser.com/)
+- [Arrow](https://www.arrow.com/)
+- [Avnet](https://www.avnet.com/)
+
+Other vendors providing such boards include:
+- [Adafruit](https://www.adafruit.com/)
+- [Sparkfun](https://www.sparkfun.com/)
 - [Arduino](https://www.arduino.cc/)
 - [CanaKit](https://www.canakit.com/)
-- [Mouser](https://www.mouser.com/)
-- [Adafruit](https://www.adafruit.com/)
+- [Switch Science (Japan only)](https://www.switch-science.com/)
 
 Popular boards may even be available from Amazon or Newegg. 
 
-Please add your favorite vendors and distributors to the lists. 
-
-Arm Keil provides a [database of Cortex-M boards and devices](https://www.keil.arm.com/boards/) along with example software projects. This is a good place to start to find boards paired with software projects. 
-
-## Next Steps
-
-Visit [Get Started with Keil Studio Cloud](/learning-paths/microcontroller/keilstudiocloud/) or [Get started with Raspberry Pi Pico](/learning-paths/microcontroller/rpi_pico/) to try out an introductory software example on a development board. 
-
-
-
+Please add your favorite vendors and distributors to the lists.

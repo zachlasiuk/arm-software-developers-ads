@@ -4,10 +4,10 @@
 # ================================================================================
 
 next_step_guidance: >
-   Now that you have a basic understanding of Arm hardware for embedded, try out some development tasks for the Raspberry Pi.
+   Now that you have a selected your development board, learn how to get started with Keil Studio Cloud to build an application and run it on the board.
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/embedded/avh_rpi/"
+recommended_path: "/learning-paths/microcontroller/keilstudiocloud/"
 
 
 # further_reading links to references related to this path. Can be:

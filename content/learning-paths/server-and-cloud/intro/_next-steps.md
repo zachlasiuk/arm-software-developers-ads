@@ -17,9 +17,9 @@ recommended_path: "/learning-paths/server-and-cloud/providers/"
 
 further_reading:
     - resource:
-        title: Where to Buy
+        title: Where to Buy (Ampere Computing)
         link: https://amperecomputing.com/where-to-buy
-        type: blog
+        type: website
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY
