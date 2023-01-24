@@ -20,7 +20,7 @@ author_primary: Gabriel Peterson
 
 ### Tags
 skilllevels: Introductory
-subjects: NONE
+subjects: Performance and Architecture
 armips:
     - Cortex-A72
     - Cortex-A53

@@ -19,7 +19,7 @@ author_primary: Ronan Synnott
 
 ### Tags
 skilllevels: Introductory
-subjects: NONE
+subjects: Performance and Architecture
 armips:
     - Cortex-A
     - Cortex-R

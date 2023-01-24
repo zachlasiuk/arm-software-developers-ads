@@ -20,7 +20,7 @@ author_primary: Ronan Synnott
 
 ### Tags
 skilllevels: Introductory
-subjects: NONE
+subjects: Embedded Linux
 armips:
     - Cortex-A
 tools:

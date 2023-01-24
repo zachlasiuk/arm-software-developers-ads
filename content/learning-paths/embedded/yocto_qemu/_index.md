@@ -19,7 +19,7 @@ author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Introductory
-subjects: NONE
+subjects: Embedded Linux
 armips:
     - Cortex-A
 tools:

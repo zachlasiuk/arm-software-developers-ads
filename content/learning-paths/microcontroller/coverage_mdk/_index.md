@@ -18,7 +18,7 @@ author_primary: Ronan Synnott
 
 ### Tags
 skilllevels: Introductory
-subjects: Performance
+subjects: CI-CD
 armips:
     - Cortex-M
 tools:

@@ -20,7 +20,7 @@ author_primary: Christopher Seidl
 
 ##### Tags
 skilllevels: Introductory
-subjects: NONE
+subjects: Virtual Hardware
 armips:
     - Cortex-M
 tools:

@@ -17,7 +17,7 @@ author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Introductory
-subjects: NONE
+subjects: Security
 armips:
     - Cortex-M
 tools:

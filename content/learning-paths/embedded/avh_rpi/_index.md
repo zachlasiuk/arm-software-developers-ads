@@ -19,7 +19,7 @@ author_primary: Jason Andrews
 
 ### Tags
 skilllevels: Introductory
-subjects: NONE
+subjects: Embedded Linux
 armips:
     - Cortex-A
 tools:

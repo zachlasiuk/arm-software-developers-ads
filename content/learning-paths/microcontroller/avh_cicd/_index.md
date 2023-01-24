@@ -18,7 +18,7 @@ author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Introductory
-subjects: NONE
+subjects: CI-CD
 armips:
     - Cortex-M
 tools:

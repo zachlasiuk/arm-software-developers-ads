@@ -22,7 +22,7 @@ author_primary: Liliya Yu
 
 ### Tags
 skilllevels: Introductory
-subjects: NONE
+subjects: ML
 armips:
     - Cortex-M
 tools:

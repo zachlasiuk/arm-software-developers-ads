@@ -19,7 +19,7 @@ author_primary: Ronan Synnott
 
 ### Tags
 skilllevels: Introductory
-subjects: NONE
+subjects: ML
 armips:
     - Cortex-M
 tools:
