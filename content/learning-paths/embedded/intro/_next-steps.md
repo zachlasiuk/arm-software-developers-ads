@@ -4,10 +4,10 @@
 # ================================================================================
 
 next_step_guidance: >
-   Now that you have a selected your development board, learn how to get started with Keil Studio Cloud to build an application and run it on the board.
+   Now that you have a selected your development board, learn how to get started with Arm Development Studio to build an application and run it on the board.
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/microcontroller/keilstudiocloud/"
+recommended_path: "/learning-paths/embedded/armds/"
 
 
 # further_reading links to references related to this path. Can be:
