@@ -9,7 +9,6 @@ next_step_guidance: >
 
 recommended_path: "/learning-paths/server-and-cloud/providers/"
 
-
 # further_reading links to references related to this path. Can be:
     # Manuals for a tool / software mentioned   (type: documentation)
     # Blog about related topics                 (type: blog)

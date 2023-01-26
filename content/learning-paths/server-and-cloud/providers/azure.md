@@ -51,9 +51,9 @@ This are reliability and security setting. See the documentation for details. Th
 
 ### Image
 
-This is the operating system that will run on your VM. Select the appropriate one from the pull down. Some will have additional pricing associated with them. Not all images are available for Arm VMs.
+This is the operating system that will run on your VM. Select the appropriate one from the pull down. Some will have additional pricing associated with them. Not all are available for Arm VMs. To filter, click on `See all images`, and then select `Arm64` from the `Image Type` filter. You can then select a particular version of your preferred OS from the `Select` pulldown of that OS tab.
 
-In this tutorial `Ubuntu Server 20.04 LTS - Gen2` is used.
+In this tutorial `Ubuntu Server 20.04 LTS` is used.
 
 ### VM architecture
 
