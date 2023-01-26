@@ -1,7 +1,7 @@
 ---
-title: Create Azure Arm virtual machines
+title: Automate creation of Azure Arm virtual machines
 
-description: Introduction to Azure Arm virtual machines 
+description: Learn how to automate the creation of Azure Arm virtual machines using Terraform
 
 minutes_to_complete: 60   
 
