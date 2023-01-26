@@ -21,7 +21,7 @@ author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Introductory
-subjects: Machine Learning
+subjects: ML
 armips:
     - Cortex-M
 tools:
