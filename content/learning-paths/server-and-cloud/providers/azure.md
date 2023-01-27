@@ -53,15 +53,15 @@ This are reliability and security setting. See the documentation for details. Th
 
 This is the operating system that will run on your VM. Select the appropriate one from the pull down. Some will have additional pricing associated with them. Not all are available for Arm VMs. To filter, click on `See all images`, and then select `Arm64` from the `Image Type` filter. You can then select a particular version of your preferred OS from the `Select` pulldown of that OS tab.
 
-In this tutorial `Ubuntu Server 20.04 LTS` is used.
+Note that if a `Windows` operating system is selected, the user must have an appropriate license. See the [Azure documentation](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/windows-desktop-multitenant-hosting-deployment) for information.
 
 ### VM architecture
 
-Select `Arm64` for an Arm-based operating system. This will update the `Size` pulldown (see below) to present Arm based servers.
+If not enabled automatically based on the above image, select `Arm64` for an Arm-based operating system. This will update the `Size` pulldown (see below) to present Arm based servers.
 
 ### Run with Azure Spot discount
 
-This is a low cost pricing option. See documentation for details.
+This is a low cost pricing option. See Azure documentation for details. This does not affect the deployment of the virtual machine.
 
 ### Size
 
@@ -71,21 +71,25 @@ Select an appropriate [size](https://learn.microsoft.com/en-us/azure/virtual-mac
 
 This section defines how users [connect](https://learn.microsoft.com/en-us/azure/virtual-machines/linux-vm-connect) to the VM instance.
 
-### Authentication type
+### Authentication type (Linux systems)
 
  `SSH public key` is the most common and recommended choice.
 
  ### Username
 
- Create an appropriate user name (default is `azureuser`).
+ Create an appropriate user name (default is `azureuser`). Windows VMs will also require a password to be set.
 
- ### SSH public key resource / Key pair name
+ ### SSH public key resource / Key pair name (Linux systems)
 
  Use an existing key pair or generate a new one, as defined by `Key pair name`. If `Generate new key pair` is selected, your private key will be generated during the [Create](#create-instance) step.
 
 ## Inbound port rules
 
-These settings can be used to limit access to your VM. See the documentation for more info. This can be left as default.
+These settings can be used to limit access to your VM. See the documentation for more info. This can generally be left as default. Linux systems will be connected to by SSH. Windows by Remote Desktop Protocol (RDP).
+
+## Licensing (Windows only)
+
+Tick the box to confirm you have an appropriate license to deploy a Windows virtual machine. See the [Azure documentation](https://learn.microsoft.com/en-us/azure/virtual-machines/windows/windows-desktop-multitenant-hosting-deployment) for information.
 
 ## Other settings
 
@@ -97,7 +101,9 @@ When the VM settings are to your liking, click on `Review + create`. Your settin
 
 After a short time, the VM will be created. Click on `Go to resource` to see various parameters, notably the `Public IP address`.
 
-## Connect to your VM instance
+## Connect to your VM instance (Linux)
+
+These instructions are for Linux-based virtual machines. If using a Windows-based virtual machine, please jump to [here](#windows)
 
 You can connect to the instance with your preferred SSH client. For example if using default `azureuser` username:
 ```console
@@ -107,9 +113,7 @@ You will also see this command under the `Connect` > `SSH` tab.
 
 Terminal applications such as [PuTTY](https://www.putty.org/), [MobaXterm](https://mobaxterm.mobatek.net/) and similar can be used.
 
-## Explore your instance
-
-### uname
+### Explore your instance
 
 Use the [uname](https://en.wikipedia.org/wiki/Uname) utility to verify that you are using an Arm-based server. For example:
 ```console
@@ -117,29 +121,19 @@ uname -m
 ```
 will identify the host machine as `aarch64`.
 
-### hello world
+You are now ready to get started with the [Server and Cloud learning paths](/learning-paths/server-and-cloud/).
 
-Install the `gcc` compiler. Assuming you are using `Ubuntu`, use the following, else see [here](/install-tools/gcc):
-```console
-sudo apt-get update
-sudo apt install -y gcc
-```
-Create a simple source file:
-```console
-nano hello.c
-```
-```C
-#include <stdio.h>
-int main(){
-    printf("hello world\n");
-    return 0;
-}
-```
-Build and run the application:
-```console
-gcc hello.c -o hello
-./hello
-```
+## Connect to your VM instance (Windows) {#windows}
+
+On your local host PC, launch the `Remote Desktop Connection` application.
+
+Enter the `Public IP Address` of the Windows VM as the `Computer` to be connected to. Username can also be specified.
+
+You will be prompted for the user password (set earlier), and you will connect. You can interact with the VM in the same way as you would a local desktop.
+
+### Explore your instance
+
+Open `Control Panel` > `System`, and verify that `Device` > `System Type` identifies as an ARM-based processor.
 
 You are now ready to get started with the [Server and Cloud learning paths](/learning-paths/server-and-cloud/).
 
