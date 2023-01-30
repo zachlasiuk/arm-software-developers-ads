@@ -155,5 +155,5 @@ use {name_of_your_database};
 ```
 ![Screenshot (333)](https://user-images.githubusercontent.com/92315883/213410009-1149699d-a643-452d-b28b-cb69d95413e9.png)
 
-To create and access a table, follow this [document](https://github.com/zachlas/arm-software-developers-ads/blob/main/content/learning-paths/server-and-cloud/mysql/ec2_deployment.md#access-database-and-create-table).
+To create and access a table, follow this [document](/learning-paths/server-and-cloud/mysql/ec2_deployment.md#access-database-and-create-table).
 
