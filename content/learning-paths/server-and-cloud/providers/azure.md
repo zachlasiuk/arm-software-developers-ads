@@ -103,7 +103,7 @@ After a short time, the VM will be created. Click on `Go to resource` to see var
 
 ## Connect to your VM instance (Linux)
 
-These instructions are for Linux-based virtual machines. If using a Windows-based virtual machine, please jump to [here](#windows)
+These instructions are for Linux-based virtual machines. If using a Windows-based virtual machine, please jump to [here](#windows).
 
 You can connect to the instance with your preferred SSH client. For example if using default `azureuser` username:
 ```console
