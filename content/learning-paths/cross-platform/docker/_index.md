@@ -1,21 +1,21 @@
 ---
 title: Learn how to use Docker
 
-description: Learn how to use Docker for single and multi-architecture use
+description: Build, share, and run for multi-architecture use cases.
 
-minutes_to_complete: 20
+minutes_to_complete: 30
 
-who_is_this_for: Learning path for single and multi-architecture Docker commands.
+who_is_this_for: Software developers who want to learn about Docker for the Arm architecture.
 
 learning_objectives:
-    -  Run Docker build to build and run a container image on any computer supporting Docker
-    -  Use Docker buildx for multi-architecture image builds
-    -  Install binfmt on Linux to add multi-architecture support for buildx
-    -  Perform a remote docker build on an Arm server
-    -  Utilize Docker manifest for multi-architecture builds
+    -  Build, run, and share Docker images
+    -  Perform multi-architecture builds using Docker buildx
+    -  Use a remote server to build a Docker image for the Arm architecture
+    -  Use Docker manifest for multi-architecture builds
 
 prerequisites:
-    - Docker is installed on the machines being used. For information about the installation refer to [Installing Docker](/install-tools/docker/)
+    - A computer with Docker installed. This can be Windows, macOS, or Linux. Any architecture can be used. 
+    - An Arm server running Linux with Docker installed. For information about installation refer to [Installing Docker](/install-tools/docker/).
 
 author_primary: Jason Andrews
 

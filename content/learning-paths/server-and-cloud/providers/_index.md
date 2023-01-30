@@ -1,11 +1,11 @@
 ---
-title: Get started with Arm-based cloud service platforms
+title: Get started with Arm-based cloud service providers
 
-description: Learn how to get started with Arm-based cloud service platforms
+description: Learn how to get started with Arm-based cloud service providers
 
 minutes_to_complete: 30
 
-who_is_this_for: Software developers new to using cloud service platforms.
+who_is_this_for: Software developers new to using cloud service providers.
 
 learning_objectives:
     - Start an instance on an Arm-based cloud server.

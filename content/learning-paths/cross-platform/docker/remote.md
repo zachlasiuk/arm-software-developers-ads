@@ -1,72 +1,83 @@
 ---
 # User change
-title: "Remote Docker builds on an Arm server"
+title: "Perform remote Docker builds on an Arm server"
 
-weight: 5
+weight: 4
 
 layout: "learningpathall"
 
 
 ---
 
-## Pre-requisites
+## Before you begin
 
-* Docker should be installed before starting. To install Docker follow refer to [Installing Docker](/install-tools/docker).
-* Test docker using the hello-world image
-```console
-docker run hello-world
-```
-* Use the uname command to know your machine architecture
-```console
-uname -m 
-```
+Building Docker images for the Arm architecture on the non-Arm machine on your desk using emulation may be slow. 
 
-Docker should also be installed on a remote machine of a different architecture which can be reached via ssh without password. 
+This section explains how to use the `docker context` command to build an image for the Arm architecture using a remote machine accessible via ssh. 
+
+Docker should also be installed on a remote Arm machine which can be reached via ssh without password. 
 
 For more information about ssh configuration refer to [SSH](/install-tools/ssh/).
 
-## Detailed Steps
+To learn how to create an Arm virtual machine using a cloud service provider refer to [Get started with Arm-based cloud service providers](/learning-paths/server-and-cloud/providers/).
 
-This a simple introduction to using the docker context command to build an image for another architecture using a remote machine accessible via ssh. 
+## Build a Docker image from a Dockerfile
 
-## Build a simple Dockerfile to print the machine architecture
+This section contrasts a local build for the x86_64 architecture and a remote build for the Arm architecture. 
 
-Create a new directory and save the two lines below into a file named Dockerfile, or re-use the same file from the previous How-To.
+On your local computer, create a new directory and save the two lines below into a file named Dockerfile, or re-use the same file from the previous section.
+
 ```dockerfile
 FROM ubuntu:latest
 CMD echo -n "Architecture is " && uname -m
 ```
 
-Build the docker image using docker build. This creates an image for the local machine architecture.
+Build the Docker image using `docker build`. This creates an image for the local machine architecture.
 
 ```console 
 docker build -t uname .
 ```
 
-If the build is complex and requires long execution time using a remote builder may provide better performance than using buildx and architecture emulation. For example, building a large C++ project may have significant slowdown with buildx. 
+Run the Docker image using `docker run`. 
+
+```console
+docker run --rm uname 
+```
+
+The output prints the architecture of the local machine. 
+
+The previous section explained how to use `docker buildx` to create a multi-architecture image which included the Arm support. This was done using instruction emulation. 
+
+If the build process is complex, emulation will take too long. A different way to build for the Arm architecture is to use a remote builder. A remote builder provides better performance compared to local buildx with emulation. For example, building a large C++ project may have significant slowdown with buildx. 
+
+Using the same Dockerfile, an image for the Arm architecture can be created from the local machine by using the remote machine. 
+
+To use the remote machine to build, create a remote context using the `docker context` command. 
+
+Substitute the username and IP address of the remote Arm Linux machine.
 
 ```console
 docker context create remote --docker "host=ssh://username@IP"
 docker context use remote
 ```
 
-As soon as the remote context is set, commands like **docker images** show the images on the remote machine, not the local images. 
+As soon as the remote context is set, commands like `docker images` show the images on the remote machine, not the local images. Somewhat mysteriously, all of the Docker commands will be applied to the remote machine.  
 
-To build an image on the remote machine use docker build.
+To build an image on the remote machine use `docker build`.
 
 ```console
 docker build -t jasonrandrews/uname  .
 ```
 
-If you manually ssh to the remote machine and use **docker images** the list should be the same as on the local machine with the remote context set. 
+If you manually ssh to the remote machine and use `docker images` the results is the same as running `docker images` on the local machine with the remote context set. 
 
-Run the image, this runs on the remote machine.
+With the remote context, the run command will also execute on the remote machine. 
 
 ```console
 docker run --rm jasonrandrews/uname
 ```
 
-The output is the architecture of the remote machine. 
+The output is the architecture of the remote Arm machine. 
 
 Push the image to Docker Hub. It will go directly from the remote machine to Docker Hub. 
 
@@ -74,21 +85,13 @@ Push the image to Docker Hub. It will go directly from the remote machine to Doc
 docker push jasonrandrews/uname
 ```
 
-To run the image on the local machine change the context back to default. 
+To restore the local machine context use the `docker context` command set the context back to `default`.
 
 ```console
 docker context use default
 ```
 
-The **docker images** command shows the image is not on the local machine. 
+A remote context is a powerful concept, but it can be tricky to manage, especially if you forget about it. 
 
-Run the image on the local machine. It will pull from Docker Hub and run. 
-
-If the architecture is different, use the platform flag to set the architecture matching the remote machine.
-
-```console
-docker run --rm --platform linux/amd64 jasonrandrews/uname
-```
-
-A remote docker daemon is a powerful concept, but it can be tricky to manage the context and remember which machine is being used. 
+The next sections covers another way to build multi-architecture images by joining images from different architectures together to form a new multi-architecture image.
 
