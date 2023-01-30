@@ -1,5 +1,5 @@
 ---
-title: Generate the vulnerability report using Clair on Arm
+title: Learn how to generate vulnerability reports using Clair on Arm servers
 
 description: Learn how to run Clair in the combined and the distributed mode, submit the containers to Clair and generate the Vulnerability report that can affect the content.
 
