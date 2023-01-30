@@ -8,7 +8,7 @@ minutes_to_complete: 60
 who_is_this_for: Developers looking to check the vulnerabilities that can affect their containers.
 
 learning_objectives:
-    - Install and run Clair in both "combined" and "distributed" mode.
+    - Install and run Clair in both combined and distributed mode.
     - Submit the containers to Clair using clairctl and generate the vulnerability report.
 
 prerequisites:
