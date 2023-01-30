@@ -12,7 +12,7 @@ layout: "learningpathall"
 * An [AWS account](https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=default&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation#/start)
 * [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 * [AWS IAM authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html)
-* [Terraform](https://github.com/zachlas/arm-software-developers-ads/blob/main/content/install-tools/terraform.md)
+* [Terraform](/install-tools/terraform)
 
 ## Deploy MySQL RDS instances
 
@@ -155,5 +155,5 @@ use {name_of_your_database};
 ```
 ![Screenshot (333)](https://user-images.githubusercontent.com/92315883/213410009-1149699d-a643-452d-b28b-cb69d95413e9.png)
 
-To create and access a table, follow this [document](/learning-paths/server-and-cloud/mysql/ec2_deployment.md#access-database-and-create-table).
+To create and access a table, follow this [document](/learning-paths/server-and-cloud/mysql/ec2_deployment#access-database-and-create-table).
 
