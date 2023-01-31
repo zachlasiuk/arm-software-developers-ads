@@ -1,18 +1,18 @@
 ---
-title: Get started with Arm-based cloud service providers
+title: Get started with Arm-based cloud compute instances
 
-description: Learn how to get started with Arm-based cloud service providers
+description: Learn how to get started with Arm-based cloud compute instances from a number of service providers
 
-minutes_to_complete: 30
+minutes_to_complete: 15
 
-who_is_this_for: Software developers new to using cloud service providers.
+who_is_this_for: Software developers new to using Arm-based cloud compute instances.
 
 learning_objectives:
-    - Start an instance on an Arm-based cloud server.
+    - Start an Arm-based compute instance in the cloud
+    - Verify that the instance is Arm-based
 
 prerequisites:
-    - An account with the Arm-based cloud service provider of choice.
-
+    - An account with the cloud service provider of choice.
 
 ### Tags
 skilllevels: Introductory
