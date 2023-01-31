@@ -7,14 +7,16 @@ weight: 5 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
-![alt-text #center](2-contribution-process.PNG "Contribution process")
+<!-- ![alt-text #center](2-contribution-process.PNG "Contribution process") -->
+## Learning Path Metadata
 
 Each Learning Path contains metadata which is used to create the Learning Path pages. The metadata is used by the website so all Learning Paths have the same information and look the same. 
 
 This section explains how to add Learning Path metadata in three files:
-1. Metadata and Tagging information in **_index.md**
-2. Review Questions for comprehension provided in **_review.md**
-3. Next Steps for readers in **_next-steps.md**
+
+1. Metadata and Tagging information in **`_index.md`**
+2. Review Questions for comprehension provided in **`_review.md`**
+3. Next Steps for readers in **`_next-steps.md`**
 
 ## Metadata and Tagging 
 

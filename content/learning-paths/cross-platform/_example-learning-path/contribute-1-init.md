@@ -7,12 +7,12 @@ weight: 4 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
-![alt-text #center](2-contribution-process.PNG "Contribution process")
+<!-- ![alt-text #center](2-contribution-process.PNG "Contribution process") -->
 
 
 # Adding a new Learning Path
 
-To add a new Learning Path, navigate to the appropriate directory under content/learning-paths in your fork.
+To add a new Learning Path, navigate to the appropriate directory under `content/learning-paths` in your fork.
 
 There are 5 categories into which you can contribute content:
 * server-and-cloud
@@ -38,7 +38,7 @@ mkdir <new-learning-path>
 Next, copy the files from the provided Learning Path template to modify with your metadata and content. The command is:
 ```bash
 cd <new-learning-path>
-cp -r cp -r ../../../../learning-path_templates/* .
+cp -r ../../../../learning-path_templates/* .
 ```
 
 This will then add the following markdown files in the **new-learning-path** directory:
