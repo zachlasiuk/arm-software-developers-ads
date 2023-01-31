@@ -12,19 +12,7 @@ layout: "learningpathall"
 
 [Clair](https://github.com/quay/clair) is an application for parsing image contents and reporting vulnerabilities affecting the contents. This is done via static analysis and not at runtime.
 
-Clair supports the extraction of contents and assignment of vulnerabilities from the following official base containers:
-
-* Ubuntu
-* Debian
-* RHEL
-* Suse
-* Oracle
-* Alpine
-* AWS Linux
-* VMWare Photon
-* Python
-
-The above list defines Clair's current support matrix.
+Clair supports the extraction of contents and assignment of vulnerabilities from [these official base containers](https://quay.github.io/clair/whatis.html#what-is-clair).
 
 ## How Clair Works
 
