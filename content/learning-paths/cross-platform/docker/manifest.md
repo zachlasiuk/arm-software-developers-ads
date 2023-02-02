@@ -30,11 +30,11 @@ CMD echo -n "Architecture is " && uname -m
 
 Build the Docker image using `docker build` on each of the two machines. To keep them straight you can attach the current architecture as the tag of the image. This will identify which architecture the image was created on.
 
-Run the commands below on each of the two machines. SSH to remote machines as needed. Substitute your Docker Hub username instead of jasonrandrews.
+Run the commands below on each of the two machines. SSH to remote machines as needed. Substitute your Docker Hub username for `username`.
 
 ```console 
 arch=`uname -m` 
-docker build -t jasonrandrews/uname:$arch .
+docker build -t username/uname:$arch .
 ```
 
 You now have two different docker images, one on each machine. 
@@ -50,7 +50,7 @@ docker run --rm uname:$arch
 Push the image for each architecture to Docker Hub by running `docker push` on each machine. This results in two separate images in your Docker Hub account, each called `uname` but with the architecture included in the tag name. 
 
 ```console
-docker push jasonrandrews/uname:$arch
+docker push username/uname:$arch
 ```
 
 Use a browser to look in Docker Hub to see the two images. 
@@ -62,11 +62,11 @@ The last step is to join the two tags into a single multi-architecture image nam
 The two machines have architectures of aaarch64 and x86_64. Use the `docker manifest` command to join them. This only needs to be done once, and can be done on either machine. 
 
 ```console
-docker manifest create jasonrandrews/uname:latest \
---amend jasonrandrews/uname:aarch64 \
---amend jasonrandrews/uname:x86_64
+docker manifest create username/uname:latest \
+--amend username/uname:aarch64 \
+--amend username/uname:x86_64
 
-docker manifest push --purge jasonrandrews/uname:latest
+docker manifest push --purge username/uname:latest
 ```
 
 The `--purge` option is not needed the first time, but to update one of the images and update the multi-arch image it is needed. It doesn't hurt to always use it. 

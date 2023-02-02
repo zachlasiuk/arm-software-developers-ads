@@ -24,6 +24,8 @@ The result should be the usage message from buildx. It starts with the the text 
 Usage:  docker buildx [OPTIONS] COMMAND
 ```
 
+If any other output is shown return to [Installing Docker](/install-tools/docker/) and install the most recent version.
+
 ### Note for Docker Engine
 
 Docker Desktop provides the ability to build and run multi-architecture images using instruction emulation. If you are running Docker Engine on Linux, there is an extra step to enable emulation for multi-architecture images. 
@@ -50,11 +52,11 @@ FROM ubuntu:latest
 CMD echo -n "Architecture is " && uname -m
 ```
 
-Build the docker image using `docker buildx`.
+Build the docker image using `docker buildx`. Replace `username` with your Docker Hub username. 
 
 ```console 
 docker buildx create --use --name mybuilder
-docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t jasonrandrews/uname-x --push .
+docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t username/uname-x --push .
 ```
 
 Docker buildx must push the multi-architecture image to a registry. The docker daemon cannot save the image locally. This will change with the future transition from dockerd to containerd, so stay tuned. 
@@ -68,7 +70,7 @@ From any computer pull and run the multi-architecture image. Because support for
 A pull is required because the image is not present on the local machine.
 
 ```console
-docker run --rm jasonrandrews/uname-x
+docker run --rm username/uname-x
 ```
 
 It's also possible to run the image for a different architecture than the current machine by adding `--platform`.
@@ -76,15 +78,15 @@ It's also possible to run the image for a different architecture than the curren
 Depending on the architecture of the machine, pick a different platform and run the image using one of the commands.
 
 ```console
-docker run --rm  --platform linux/arm64 jasonrandrews/uname-x
-docker run --rm  --platform linux/arm/v7 jasonrandrews/uname-x
-docker run --rm  --platform linux/amd64 jasonrandrews/uname-x
+docker run --rm  --platform linux/arm64 username/uname-x
+docker run --rm  --platform linux/arm/v7 username/uname-x
+docker run --rm  --platform linux/amd64 username/uname-x
 ```
 
 For example, on a machine with a uname of aarch64, run the amd64 image.
 
 ```console
-docker run --rm  --platform linux/amd64 jasonrandrews/uname-x
+docker run --rm  --platform linux/amd64 username/uname-x
 ```
 
 The output will be:
@@ -101,7 +103,7 @@ The `docker run` command will use the local image. It will NOT pull the new vers
 To remove the local copy use the `docker rmi` command.
 
 ```console
-docker rmi jasonrandrews/uname-x
+docker rmi username/uname-x
 ```
 
 Now the new image will be downloaded from Docker Hub. 

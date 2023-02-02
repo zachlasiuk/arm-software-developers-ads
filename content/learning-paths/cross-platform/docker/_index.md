@@ -5,7 +5,7 @@ description: Build, share, and run for multi-architecture use cases.
 
 minutes_to_complete: 30
 
-who_is_this_for: Software developers who want to learn about Docker for the Arm architecture.
+who_is_this_for: This is an introductory topic for software developers who want to learn about Docker for the Arm architecture.
 
 learning_objectives:
     -  Build, run, and share Docker images

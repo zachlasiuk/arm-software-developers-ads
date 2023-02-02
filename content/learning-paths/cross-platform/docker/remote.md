@@ -54,7 +54,7 @@ Using the same Dockerfile, an image for the Arm architecture can be created from
 
 To use the remote machine to build, create a remote context using the `docker context` command. 
 
-Substitute the username and IP address of the remote Arm Linux machine.
+Substitute the `username` and IP address of the remote Arm Linux machine.
 
 ```console
 docker context create remote --docker "host=ssh://username@IP"
@@ -63,10 +63,10 @@ docker context use remote
 
 As soon as the remote context is set, commands like `docker images` show the images on the remote machine, not the local images. Somewhat mysteriously, all of the Docker commands will be applied to the remote machine.  
 
-To build an image on the remote machine use `docker build`.
+To build an image on the remote machine use `docker build`. Replace `username` with your Docker Hub username.
 
 ```console
-docker build -t jasonrandrews/uname  .
+docker build -t username/uname  .
 ```
 
 If you manually ssh to the remote machine and use `docker images` the results is the same as running `docker images` on the local machine with the remote context set. 
@@ -74,7 +74,7 @@ If you manually ssh to the remote machine and use `docker images` the results is
 With the remote context, the run command will also execute on the remote machine. 
 
 ```console
-docker run --rm jasonrandrews/uname
+docker run --rm username/uname
 ```
 
 The output is the architecture of the remote Arm machine. 
@@ -82,7 +82,7 @@ The output is the architecture of the remote Arm machine.
 Push the image to Docker Hub. It will go directly from the remote machine to Docker Hub. 
 
 ```console
-docker push jasonrandrews/uname
+docker push username/uname
 ```
 
 To restore the local machine context use the `docker context` command set the context back to `default`.
