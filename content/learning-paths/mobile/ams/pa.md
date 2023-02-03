@@ -9,7 +9,7 @@ layout: "learningpathall"
 ---
 Performance Advisor is a tool that provides a report showing how your Android application performs on a mobile device.
 
-## Pre-requisites
+## Prerequisites
 
 Performance Advisor uses a Python script to connect to your device. You will need `Python 3.5` or later installed on your host machine.
 

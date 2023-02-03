@@ -7,7 +7,7 @@ weight: 2
 layout: "learningpathall"
 ---
 
-## Pre-requisites
+## Prerequisites
 
 This Learning Path assumes you have a  Windows on Arm computer such as [Windows Dev Kit 2023](https://learn.microsoft.com/en-us/windows/arm/dev-kit) or a Lenovo Thinkpad X13s laptop running Windows 11. 
 

@@ -13,7 +13,7 @@ The Zephyr RTOS is based on a small-footprint kernel designed for use on resourc
 
 We will get the Zephyr source, install the Zephyr SDK, build sample applications, and run them on [Arm Virtual Hardware](https://www.arm.com/products/development-tools/simulation/virtual-hardware) Corstone-300 FVP.
 
-## Pre-requisites
+## Prerequisites
 
 A valid [AWS](https://aws.amazon.com/) account is required.
 
@@ -25,7 +25,7 @@ wget https://apt.kitware.com/kitware-archive.sh
 sudo bash kitware-archive.sh
 ```
 
-Then, install pre-requisites for Zephyr:
+Then, install prerequisites for Zephyr:
 
 ```console
 sudo apt update

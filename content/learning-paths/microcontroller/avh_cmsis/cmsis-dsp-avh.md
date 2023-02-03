@@ -9,13 +9,13 @@ layout: "learningpathall"
 ---
 
 
-## Pre-requisites
+## Prerequisites
 
 * AWS EC2 instance running AVH AMI. Use the instructions [here](/install-tools/avh#corstone)
 
 ## Build the CMSIS-DSP tests
 
-On the launched EC2 instance running the AVH AMI, install python 3 pre-requisites for CMSIS-DSP
+On the launched EC2 instance running the AVH AMI, install python 3 prerequisites for CMSIS-DSP
 
 ```console
 sudo apt update

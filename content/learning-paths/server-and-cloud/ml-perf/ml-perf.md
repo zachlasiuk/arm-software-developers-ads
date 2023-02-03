@@ -10,7 +10,7 @@ layout: "learningpathall"
 ---
 
 
-## Pre-requisites
+## Prerequisites
 
 * An [Arm based instance](/learning-paths/server-and-cloud/providers) from an appropriate cloud service provider running `Ubuntu Linux 20.04`.
 

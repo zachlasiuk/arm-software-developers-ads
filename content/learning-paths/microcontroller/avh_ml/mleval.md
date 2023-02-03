@@ -13,7 +13,7 @@ In this Learning Path we will build and run these examples with [Arm Virtual Har
 
 Full instructions are provided in the evaluation kit [documentation](https://review.mlplatform.org/plugins/gitiles/ml/ethos-u/ml-embedded-evaluation-kit/+/HEAD/docs/quick_start.md)
 
-## Pre-requisites
+## Prerequisites
 
 A valid [AWS](https://aws.amazon.com/) account is required.
 

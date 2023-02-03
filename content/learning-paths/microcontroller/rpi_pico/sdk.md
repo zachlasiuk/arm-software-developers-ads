@@ -12,7 +12,7 @@ The [Raspberry Pi Pico](https://www.raspberrypi.com/products/raspberry-pi-pico/)
 
 The Pico is a low cost board and a good way to get started learning programming for Arm Cortex-M.
 
-## Pre-requisites
+## Prerequisites
 
 - Raspberry Pi Pico board
 - A development computer such as a Raspberry Pi 3, 4 or 400 running Raspberry Pi OS or other Linux computer running Ubuntu 

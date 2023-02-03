@@ -15,7 +15,7 @@ layout: "learningpathall"
 
 In this article we will detail the steps to install Snort3 on an Ubuntu Linux Arm-based platform, and run it with Vectorscan.
 
-## Pre-requisites
+## Prerequisites
 
 First, ensure you system is up to date with the latest packages:
 
@@ -34,7 +34,7 @@ mkdir ~/snort_src
 cd ~/snort_src
 ```
 
-Install the `Snort3` pre-requisites to this directory
+Install the `Snort3` prerequisites to this directory
 
 ```bash
 sudo apt-get install -y build-essential autotools-dev libdumbnet-dev libluajit-5.1-dev libpcap-dev \

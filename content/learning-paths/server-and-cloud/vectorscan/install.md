@@ -9,7 +9,7 @@ layout: "learningpathall"
 ---
 
 
-## Pre-requisites
+## Prerequisites
 
 * An [Arm based instance](/learning-paths/server-and-cloud/providers) from an appropriate cloud service provider
 * Vectorscan is known to work on the following Linux distributions. 

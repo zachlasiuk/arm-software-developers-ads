@@ -4,7 +4,7 @@ title: Use perf to analyze zlib performance
 weight: 4
 ---
 
-## Pre-requisites
+## Prerequisites
 
 * An [Arm based instance](/learning-paths/server-and-cloud/providers) from an appropriate cloud service provider.
 

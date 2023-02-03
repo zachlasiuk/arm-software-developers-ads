@@ -11,13 +11,13 @@ layout: "learningpathall"
 
 We shall build reference examples, and run them on [Arm Virtual Hardware](https://www.arm.com/products/development-tools/simulation/virtual-hardware).
 
-## Pre-requisites
+## Prerequisites
 
 A valid [AWS](https://aws.amazon.com/) account is required.
 
 Launch the Arm Virtual Hardware AMI. For full instructions see [here](/install-tools/avh#corstone).
 
-Install `python 3` pre-requisites for TF-M:
+Install `python 3` prerequisites for TF-M:
 ```console
 sudo apt update
 sudo apt install python3.8-venv

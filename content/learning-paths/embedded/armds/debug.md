@@ -11,7 +11,7 @@ layout: "learningpathall"
 
 You can connect the [Arm Development Studio](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio) debugger to your virtual platform and interact with it as if were real hardware.
 
-## Pre-requisites
+## Prerequisites
 
 It is assumed you have installed Arm Development Studio and configured your license. For full instructions see [here](/install-tools/armds/).
 

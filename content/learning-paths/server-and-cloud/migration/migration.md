@@ -9,7 +9,7 @@ layout: "learningpathall"
 
 ---
 
-## Pre-requisites
+## Prerequisites
 
 * An [Arm based Linux machine](/learning-paths/server-and-cloud/providers) from a cloud service provider to use as a development machine.
 

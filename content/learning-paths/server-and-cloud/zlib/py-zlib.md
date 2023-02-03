@@ -4,7 +4,7 @@ title: Improve python application performance using Cloudflare zlib
 weight: 3
 ---
 
-## Pre-requisites
+## Prerequisites
 
 * An [Arm based instance](/learning-paths/server-and-cloud/providers) from an appropriate cloud service provider.
 

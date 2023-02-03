@@ -7,7 +7,7 @@ weight: 2
 [Clickhouse](https://clickhouse.com/docs/en/home) is a column-oriented database management system (DBMS) for online analytical processing of queries (OLAP).
 We will measure the processing time (query latency) of Clickhouse on Arm based servers.
 
-## Pre-requisites
+## Prerequisites
 
 You will need a local Arm platform or an [Arm based instance](/learning-paths/server-and-cloud/providers/) from your cloud service providers, running an appropriate operating system (at time of writing, `Ubuntu 16.04 LTS` or later). You will also need sufficient storage on the instance for the web-analytics dataset used for measuring Clickhouser performance. We used 50GB in our instances.
 

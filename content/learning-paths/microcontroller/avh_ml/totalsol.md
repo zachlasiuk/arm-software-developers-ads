@@ -11,7 +11,7 @@ Developing IoT systems is incredibly complex. To fulfil the potential of IoT, we
 
 The [Arm Open-IoT-SDK](https://github.com/ARM-software/open-iot-sdk) provides a growing number of complete software stack examples for developers to use as the basis of their own IoT applications. The examples can be built and run on [Arm Virtual Hardware](https://avh.arm.com/).
 
-## Pre-requisites
+## Prerequisites
 
 A valid [AWS](https://aws.amazon.com/) account is required.
 

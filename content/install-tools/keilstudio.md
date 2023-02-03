@@ -8,7 +8,7 @@ layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page o
 
 It supports more than 9,500 devices and is easy to learn and use.
 
-## Pre-requisites
+## Prerequisites
 
 - Install an appropriate compiler toolchain.
     * [Install Arm Compiler for Embedded toolchain](/install-tools/armclang/)

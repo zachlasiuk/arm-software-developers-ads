@@ -9,7 +9,7 @@ layout: "learningpathall"
 
 ---
 
-## Pre-requisites
+## Prerequisites
 
 * An Arm-based instance from your preferred cloud service [provider](/learning-paths/server-and-cloud/providers). See the supported operating systems below.
 * GCC for your Arm Linux distribution. Install using the steps [here](/install-tools/gcc/#native).

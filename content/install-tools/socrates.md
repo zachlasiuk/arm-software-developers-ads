@@ -6,7 +6,7 @@ layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page o
 ---
 [Arm Socrates](https://developer.arm.com/Tools%20and%20Software/Socrates) is a tool used to select, configure and create Arm IP for easy and error free integration into a System on Chip(SoC). 
 
-## Pre-requisites
+## Prerequisites
 
 Arm Socrates tooling requires a Linux host machine. Full specifications are given in section 3.2 of the [Installation Guide](https://developer.arm.com/documentation/101400)
 

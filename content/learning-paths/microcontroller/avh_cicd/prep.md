@@ -9,7 +9,7 @@ layout: "learningpathall"
 ---
 You will learn how to prepare a GitHub repository to be used in a CI/CD development flow.
 
-## Pre-requisites
+## Prerequisites
 
 A valid [GitHub](https://github.com) account.
 

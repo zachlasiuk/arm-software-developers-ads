@@ -10,7 +10,7 @@ layout: "learningpathall"
 
 ##  Deploy Graviton based EC2 instances with Terraform 
 
-## Pre-requisites
+## Prerequisites
 
 * An AWS account
 * An [installation of Terraform](https://www.terraform.io/cli/install/apt)

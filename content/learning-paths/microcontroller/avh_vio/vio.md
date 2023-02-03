@@ -9,7 +9,7 @@ layout: "learningpathall"
 ---
 Arm Virtual Hardware (AVH) supports [Virtual Interfaces](https://arm-software.github.io/AVH/main/simulation/html/group__arm__cmvp.html) which can be used to simulate real world peripherals and stimuli.
 
-## Pre-requisites
+## Prerequisites
 
 A valid [AWS](https://aws.amazon.com/) account is required.
 

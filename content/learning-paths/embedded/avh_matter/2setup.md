@@ -7,7 +7,7 @@ weight: 2 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
-## Pre-requisites
+## Prerequisites
 
 A user account for [Arm Virtual Hardware 3rd Party Hardware](https://avh.arm.com/). Refer to [Arm Virtual Hardware](/install-tools/avh#thirdparty) in the install tools area.
 

@@ -8,7 +8,7 @@ weight: 2 # 1 is first, 2 is second, etc.
 layout: "learningpathall"
 ---
 
-## Pre-requisites
+## Prerequisites
 
 It is assumed you have installed Arm Development Studio and configured your license. For full instructions see [here](/install-tools/armds/).
 
