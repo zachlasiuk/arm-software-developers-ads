@@ -111,7 +111,7 @@ This mode is called *Reverse Connect*. A window will appear in the GUI when the 
 
 ### Profiling
 
-In most cases, if your program is already compiled with debugging symbols (`-g`), you do not need to recompile your program to profile it with Arm Forge. However, in some cases it might need to be relinked (see the [Linking](https://developer.arm.com/documentation/101136/2103/MAP/Get-started-with-MAP/Prepare-a-program-for-profiling?lang=en)).
+In most cases, if your program is already compiled with debugging symbols (`-g`), you do not need to recompile your program to profile it with Arm Forge. However, in some cases it might need to be relinked (see the [Linking](https://developer.arm.com/documentation/101136/latest/MAP/Get-started-with-MAP/Prepare-a-program-for-profiling)).
 
 Typically you should keep optimization flags enabled when profiling (rather than profiling a debug build). This will give more representative results.
 
@@ -134,7 +134,7 @@ map myapp_128p_<timestamp>.map
 
 ### Reporting
 
-Arm Forge's reporting tool Arm Performance Reports is designed to run on unmodified production executables, so in general no preparation step is necessary. However, there is one important exception: statically linked applications require additional libraries at the linking step (see [user guide](https://developer.arm.com/documentation/101136/2103/Performance-Reports/Run-real-programs?lang=en)).
+Arm Forge's reporting tool Arm Performance Reports is designed to run on unmodified production executables, so in general no preparation step is necessary. However, there is one important exception: statically linked applications require additional libraries at the linking step (see [user guide](https://developer.arm.com/documentation/101136/latest/Performance-Reports/Run-real-programs)).
 
 Arm Performance Reports does not use a GUI. Instead, it produces HTML and TXT files when the application terminates to summarize the application behavior. Here is how to use the tool on MPI applications
 

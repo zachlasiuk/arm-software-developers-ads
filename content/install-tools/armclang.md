@@ -108,6 +108,6 @@ armclang --target=aarch64-arm-none-eabi hello.c
 ```
 ## Full documentation
 
-[Arm Compiler for Embedded User Guide](https://developer.arm.com/documentation/100748/0619/Getting-Started/Installing-Arm-Compiler-for-Embedded)
+[Arm Compiler for Embedded User Guide](https://developer.arm.com/documentation/100748/latest/Getting-Started/Installing-Arm-Compiler-for-Embedded)
 
 [What should I do if I want to download a legacy release of Arm Compiler?](https://developer.arm.com/documentation/ka005184)

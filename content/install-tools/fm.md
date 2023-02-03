@@ -16,7 +16,7 @@ For Linux hosts, use `gcc 9.3.0`.
 
 For Windows hosts use [Visual Studio 2019](https://visualstudio.microsoft.com/vs/older-downloads/) 16.7.3 (or later). Express or Community editions can NOT be used.
 
-More information is given in [the documentation](https://developer.arm.com/documentation/100965/1117/Installing-Fast-Models/Requirements-for-Fast-Models).
+More information is given in [the documentation](https://developer.arm.com/documentation/100965/latest/Installing-Fast-Models/Requirements-for-Fast-Models).
 
 ## Download installer packages
 

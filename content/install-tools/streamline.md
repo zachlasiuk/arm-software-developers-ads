@@ -53,4 +53,4 @@ Depending on your type of application, choose the appropriate guide below to get
 
 ## Documentation
 
-[Arm Streamline User Guide](https://developer.arm.com/documentation/101816/latest)
+[Arm Streamline User Guide](https://developer.arm.com/documentation/101816)

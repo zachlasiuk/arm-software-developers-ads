@@ -10,13 +10,13 @@ layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page o
 
 Arm Development Studio can be installed on Windows and Linux hosts.
 
-Full host platform requirements are given in the [Getting Started Guide](https://developer.arm.com/documentation/101469/2022-0/Installing-and-configuring-Arm-Development-Studio/Hardware-and-host-platform-requirements).
+Full host platform requirements are given in the [Getting Started Guide](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio/Hardware-and-host-platform-requirements).
 
 ## Download installer packages
 
 The installer will depend on the [edition](https://developer.arm.com/Tools%20and%20Software/Arm%20Development%20Studio#Editions) of Development Studio that you are entitled to. 
 
-Gold, Silver, and Bronze editions are one installer, with available features defined by the license. The version is denoted by `year.index`, where `index` is a number (for example `2022.2`).
+Gold, Silver, and Bronze editions are one installer, with available features defined by the license. The version is denoted by `year.index`, where `index` is a number (for example `2022.2`). You can also generate an Evaluation license from this installation (`Help` > `Arm License Manager`), with capabilities broadly similar to the Gold Edition.
 
 Development Studio Platinum Edition has its own installation package. The version is denoted by `year.index`, where `index` is a letter (for example `2022.c`).
 

@@ -122,7 +122,7 @@ To configure GCC:
 module load gnu/11.2.0
 ```
 
-Refer to the [installation instructions](https://developer.arm.com/documentation/102621/0100/Install) for more details.
+Refer to the [installation instructions](https://developer.arm.com/documentation/102621) for more details.
 
 ## Setting up product license
 
