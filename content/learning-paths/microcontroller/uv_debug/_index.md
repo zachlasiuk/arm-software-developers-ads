@@ -34,7 +34,7 @@ prerequisites:
 
 ##### Tags
 skilllevels: Advanced
-subjects: DEBUGGING
+subjects: Performance and Architecture
 armips:
     - Cortex-M
 tools:

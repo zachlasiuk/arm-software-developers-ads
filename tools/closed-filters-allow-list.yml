@@ -3,6 +3,7 @@ operatingsystems:
   - Linux
   - Windows
   - macOS
+  - ChromeOS
 
   - iOS
   - Android
@@ -20,14 +21,14 @@ subjects:
     - Performance and Architecture
     - Containers and Virtualization
     - Databases
-    - Networking
     - Storage
     - Web
     - Libraries
   desktop-and-laptop:
-    - Windows on Arm
-    - Porting
+    - Migration to Arm
+    - CI-CD
     - Performance and Architecture
+    - Containers and Virtualization
   mobile:
     - Gaming
     - AR-VR
@@ -39,16 +40,17 @@ subjects:
     - ML
     - CI-CD
     - Performance and Architecture
+    - Containers and Virtualization
     - Automotive 
-    - Cloud Connection
     - Storage
     - Embedded Linux
   microcontroller:
     - ML
     - CI-CD
     - Performance and Architecture
-    - Cloud Connection
     - Security
+    - RTOS
+    - Libraries
     - Virtual Hardware
   #cross-platform: # IGNORE FOR NOW
     # Can be anything here, requires special processing to sort out in checker script.

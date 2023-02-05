@@ -15,7 +15,8 @@ maintopic: true
 operatingsystems_filter:
 - Android
 - Linux
-subjects_filter: []
+subjects_filter:
+- Performance and Architecture
 subtitle: Optimize Android apps and build faster games using cutting-edge Arm tech
 title: Mobile
 weight: 3

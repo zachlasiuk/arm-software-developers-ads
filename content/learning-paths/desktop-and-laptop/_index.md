@@ -12,8 +12,10 @@ maintopic: true
 operatingsystems_filter:
 - Linux
 - Windows
+- macOS
 subjects_filter:
-- Windows on Arm
+- Performance and Architecture
+- Migration to Arm
 subtitle: Create and migrate apps for power efficient performance
 title: Desktop and Laptop
 weight: 2

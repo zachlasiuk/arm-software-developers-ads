@@ -15,7 +15,10 @@ operatingsystems_filter:
 - Windows
 - Baremetal
 - Linux
-subjects_filter: []
+subjects_filter:
+- Performance and Architecture
+- Embedded Linux
+- Containers and Virtualization
 subtitle: Build secure, connected, smart IoT devices
 title: Embedded
 weight: 4

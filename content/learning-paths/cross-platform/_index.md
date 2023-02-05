@@ -15,6 +15,7 @@ softwares_filter:
 - InnoDB
 - Pointer Authentication
 - PostgreSQL
+- ArmRAL
 - snappy
 - Assembly
 - Vectorscan
@@ -31,10 +32,13 @@ softwares_filter:
 - JavaScript
 - TensorFlow
 - Docker
+- Yocto Linux
 - yml
 title: Cross Platform
 tools_filter:
 - Terraform
+- docker and docker-compose
+- go
 - Docker
 - gcc
 - AWS EC2
@@ -44,6 +48,7 @@ tools_filter:
 - Armclang
 - Arm Forge
 - gdb
+- Ansible
 - Arm Mobile Studio
 - Xilinx Vivado
 - Xilinx Vitis
@@ -53,13 +58,16 @@ tools_filter:
 - DSTREAM
 - Arm Virtual Hardware
 - GitHub
+- Qemu
 - TVM
 - PaddleOCR
 - Keil MDK
+- MDK
 - Keil Studio Cloud
 - CMSIS-DAP
 - cmake
+- Tensorflow
+- STM Cube AI
 - Arm Ecosystem FVP
 - ULINK
-- uVision
 ---

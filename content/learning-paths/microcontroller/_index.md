@@ -10,12 +10,16 @@ key_ip_icons:
 maintopic: true
 operatingsystems_filter:
 - Baremetal
-- Windows
 - RTOS
+- Windows
 subjects_filter:
-- Performance and Architecture
-- Security
+- CI-CD
+- Libraries
 - ML
+- Security
+- Virtual Hardware
+- RTOS
+- Performance and Architecture
 subtitle: Learn best practices for microcontroller development
 title: Microcontroller
 weight: 5

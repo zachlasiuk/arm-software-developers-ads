@@ -26,7 +26,6 @@ subjects_filter:
 - Storage
 - Web
 - ML
-- Networking
 subtitle: Optimize cloud native apps on Arm for performance and cost
 title: Server and Cloud
 weight: 1
