@@ -29,7 +29,7 @@ review:
             - "False"
         correct_answer: 1
         explanation: >
-            This is true, though you must have a Professional Edition license. JSON is particularly beneficial for use within a CI/CD workflow.
+            True. JSON is particularly beneficial for use within a CI/CD workflow.
                
     - questions:
         question: >

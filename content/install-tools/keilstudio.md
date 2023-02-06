@@ -20,14 +20,22 @@ It supports more than 9,500 devices and is easy to learn and use.
 
 ## Install the extensions
 
-1. In VS Code, go to the **Extensions** view.
+The [Keil Studio VS Code extensions](https://github.com/ARM-software/vscode-keil-studio-pack/blob/main/extension-pack-web/README.md) are available for [Desktop](https://marketplace.visualstudio.com/items?itemName=Arm.keil-studio-pack) and [Web-based](https://marketplace.visualstudio.com/items?itemName=Arm.keil-studio-pack-web) instances.
 
-1. Search for **Keil Studio Pack**.
+1. In VS Code, go to the `Extensions` view.
+2. Search for `Keil Studio Pack`.
+3. Click the `Install` button for the appropriate extension pack.
 
-1. Click the **Install** button for the extension pack.
-
-    Visual Studio Code installs the extensions. All recommended extensions are now available in the **Extensions** view.
+Visual Studio Code installs the extensions. All recommended extensions are now available in the `Extensions` view.
 
 ## Get started
 
-In the **Extensions** view, select the **Keil Studio Pack** extension and follow the supplied **Tutorial** to verify everything is installed correctly.
+In the `Extensions` view, select the `Keil Studio Pack` extension and follow the supplied tutorial to verify everything is installed correctly.
+
+For more information on the extensions, see the links below.
+
+| Extension | Description |
+|-----------|-------------|
+| [Arm Device Manager](https://github.com/ARM-software/vscode-device-manager/blob/main/README.md) | allows you to manage device connections for Arm Cortex-M based microcontrollers, development boards and debug probes.|
+| [Arm Embedded Debugger](https://github.com/ARM-software/vscode-embedded-debug/blob/main/README.md) | allows you to do flashing and debugging on Arm Cortex-M targets implementing the Microsoft Debug Adapter Protocol (DAP). |
+| [Arm Remote Build](https://github.com/ARM-software/vscode-cmsis-csolution/blob/main/README.md) | allows you to undertake remote builds of projects for Arm Cortex-M targets. |

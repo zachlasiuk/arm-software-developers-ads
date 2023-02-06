@@ -63,7 +63,7 @@ You can specify a performance budget which will be reflected in the Performance 
 
 ## Generate a JSON performance report
 
-This feature is only available with [Arm Mobile Studio Professional Edition](https://developer.arm.com/Tools%20and%20Software/Arm%20Mobile%20Studio#Editions), and is particularly useful when used within a [CI workflow](https://developer.arm.com/documentation/102543).
+This feature is particularly useful when used within a [CI workflow](https://developer.arm.com/documentation/102543).
 
 In the terminal window, navigate to the stored data folder. List contents with `dir` or `ls` depending on host. The Streamline data will be in a `.apc` directory.
 
