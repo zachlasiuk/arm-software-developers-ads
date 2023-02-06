@@ -13,7 +13,7 @@ learning_objectives:
     - Exploit the applications with and without Pointer Authentication to demonstrate how Pointer Authentication instructions enhance security.
 
 prerequisites:
-    - An [AWS Graviton3 instance](/learning-paths/server-and-cloud/providers/aws) of instance type C7g which is Graviton3.
+    - An [AWS Graviton3 instance](/learning-paths/server-and-cloud/csp/aws) of instance type C7g which is Graviton3.
 
 author_primary: Pareena Verma
 

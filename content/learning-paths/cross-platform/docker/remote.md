@@ -19,7 +19,7 @@ Docker should also be installed on a remote Arm machine which can be reached via
 
 For more information about ssh configuration refer to [SSH](/install-tools/ssh/).
 
-To learn how to create an Arm virtual machine using a cloud service provider refer to [Get started with Arm-based cloud service providers](/learning-paths/server-and-cloud/providers/).
+To learn how to create an Arm virtual machine using a cloud service provider refer to [Get started with Arm-based cloud service csp](/learning-paths/server-and-cloud/csp/).
 
 ## Build a Docker image from a Dockerfile
 

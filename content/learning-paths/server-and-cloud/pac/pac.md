@@ -11,7 +11,7 @@ layout: "learningpathall"
 
 ## Prerequisites
 
-* An [AWS Graviton3](/learning-paths/server-and-cloud/providers/aws) instance. The instance type is c7g for Graviton3 instances.
+* An [AWS Graviton3](/learning-paths/server-and-cloud/csp/aws) instance. The instance type is c7g for Graviton3 instances.
 
 The instructions provided below have been tested on an Ubuntu 22.04 AWS 64-bit Arm EC2 instance (C7g.xlarge) and Ubuntu 20.04.
 

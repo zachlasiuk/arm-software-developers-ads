@@ -5,7 +5,7 @@ description: Learn how to get started migrating applications to Arm servers
 
 minutes_to_complete: 5
 
-who_is_this_for: A guide for software developers looking to migrate applications to Arm servers
+who_is_this_for: This is an introductory topic for software developers looking to migrate applications to Arm servers.
 
 learning_objectives:
     - Set up an Arm development machine
@@ -14,7 +14,7 @@ learning_objectives:
     - Review common migration scenarios
 
 prerequisites:
-    - An [Arm based instance](/learning-paths/server-and-cloud/providers) from an appropriate cloud service provider.
+    - An [Arm based instance](/learning-paths/server-and-cloud/csp/) from an appropriate cloud service provider.
 
 author_primary: Jason Andrews
 

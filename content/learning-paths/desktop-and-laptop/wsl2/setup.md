@@ -11,7 +11,7 @@ layout: "learningpathall"
 
 This Learning Path assumes you have a  Windows on Arm computer such as [Windows Dev Kit 2023](https://learn.microsoft.com/en-us/windows/arm/dev-kit) or a Lenovo Thinkpad X13s laptop running Windows 11. 
 
-All major cloud providers have introduced Arm virtual machine instances. For more information about how to get started refer to [Getting Started with Arm-based Cloud Services](/learning-paths/server-and-cloud/providers/). 
+All major cloud csp have introduced Arm virtual machine instances. For more information about how to get started refer to [Getting Started with Arm-based Cloud Services](/learning-paths/server-and-cloud/csp/). 
 
 Using the same Arm architecture on a local development machine and on the cloud provides interoperability, consistency, and saves time. 
 

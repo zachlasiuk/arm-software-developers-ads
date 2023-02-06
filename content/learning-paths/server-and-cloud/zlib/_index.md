@@ -13,7 +13,7 @@ learning_objectives:
     - Measure and analyze performance to see improvements
 
 prerequisites:
-    - An [Arm based instance](/learning-paths/server-and-cloud/providers) from an appropriate cloud service provider running `Ubuntu 20.04` or `Ubuntu 22.04`.
+    - An [Arm based instance](/learning-paths/server-and-cloud/csp/) from an appropriate cloud service provider running `Ubuntu 20.04` or `Ubuntu 22.04`.
 
 author_primary: Jason Andrews
 

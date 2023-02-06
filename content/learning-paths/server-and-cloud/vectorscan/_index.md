@@ -13,7 +13,7 @@ learning_objectives:
     - Run Snort3 with Vectorscan on capture files and and measure performance.
 
 prerequisites:
-    - An [Arm based instance](/learning-paths/server-and-cloud/providers) from an appropriate cloud service provider.
+    - An [Arm based instance](/learning-paths/server-and-cloud/csp/) from an appropriate cloud service provider.
 
 author_primary: Pareena Verma
 

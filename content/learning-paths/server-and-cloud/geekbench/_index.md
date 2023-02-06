@@ -12,7 +12,7 @@ learning_objectives:
     - Determine the appropriate instance configuration needed for your workloads.
 
 prerequisites:
-    - An account with the Arm-based cloud service [provider](../providers/) of choice.
+    - An account with the Arm-based cloud service [provider](../csp/) of choice.
 
 author_primary: Ronan Synnott
 
