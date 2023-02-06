@@ -1,16 +1,16 @@
 ---
-title: Learn how to build and run a letter recognition NN model on an STM32L4 Discovery board
+title: Learn how to build and run an image classification NN model on an STM32L4 Discovery board
 
-description: Build a letter recognition neural network model using Tensorflow and deploy it on an STM32 B-L475E-IOT01A2 board.
+description: Develop a image classification neural network model and deploy it on an STM32 B-L475E-IOT01A2 board.
 
 minutes_to_complete: 45
 
-who_is_this_for: Embedded software developers new to building network models.
+who_is_this_for: Embedded software developers new to building neural network models for microcontrollers.
 
 learning_objectives: 
 
-    - Build a letter recognition neural network(NN) model using Tensorflow framework
-    - Run the NN model on an STM32 B-L475E-IOT01A2 board using STM Cube AI
+    - Build a convolution neural network(CNN) model for image classfication.
+    - Run the CNN model on an STM32 B-L475E-IOT01A2 board using STM Cube AI
 
 prerequisites:
     - Familiar with C programming on microcontrollers
@@ -20,7 +20,7 @@ prerequisites:
 author_primary: Pareena Verma
 
 ### Tags
-skilllevels: Introductory
+skilllevels: Advanced
 subjects: ML
 armips:
     - Cortex-M
