@@ -12,7 +12,10 @@ In this learning path, we will build a convolution neural network model for imag
 
 ## Get Setup
 
-On your Windows 10 development machine, start by installing Anaconda. Anaconda is a distribution of Python language for data science and machine learning. With Anaconda, you can easily install open-source machine learning packages. Here are the steps to install Anaconda on your machine.
+On your Windows 10 development machine,  start by downloading all the project files you'll need to run the example in this learning path.
+The zipped contents are available [here](https://github.com/zachlas/arm-software-developers-ads/blob/main/content/learning-paths/microcontroller/img_nn_stcube/Project_Files/img_class_stcube.zip)
+
+Then install Anaconda. Anaconda is a distribution of Python language for data science and machine learning. With Anaconda, you can easily install open-source machine learning packages. Here are the steps to install Anaconda on your machine.
 
 ### Install Anaconda
 
@@ -41,7 +44,7 @@ conda config --add channels conda-forge
 ```
 5. Then install python packages:
 ```console
-conda install jupyter pandas tensorflow matplotlib numpy opencv-python protobuf tqdm
+conda install jupyter pandas tensorflow matplotlib numpy 
 ```
 
 ### Data Pre-processing
@@ -54,7 +57,7 @@ First, open the Jupyter Notebook through an Anaconda Prompt.
 jupyter notebook
 ```
 
-Now, open img_lab.pynb on the notebook. Then, execute the first code block to import the required packages
+Now, open lab.ipynb from the extracted project files folder on the notebook. Then, execute the first code block to import the required packages
 
 ```console
 import tensorflow as tf

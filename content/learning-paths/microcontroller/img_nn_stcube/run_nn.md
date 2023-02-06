@@ -58,7 +58,7 @@ For testing, we are going to use a custom tool for sending images to the board. 
 ```console
  python -m pip install -U opencv-python protobuf tqdm==4.50.2
 ```
-Navigate to the lab4 folder. Enter [Misc] folder. Then you can execute the tool by typing the following command
+Navigate to the extracted img_class_stcube folder. Enter [Misc] folder. Then you can execute the tool by typing the following command
 
 ```
 cd ~/Documents/lab4/Misc
