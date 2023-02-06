@@ -5,7 +5,7 @@ description: Learn how to import, build, and debug your first Arm Development St
 
 minutes_to_complete: 30   
 
-who_is_this_for: Embedded software developers new to Arm Development Studio to get familiar with main features.
+who_is_this_for: This is an introductory topic for Embedded software developers new to Arm Development Studio.
 
 learning_objectives: 
     - Import and build an example project

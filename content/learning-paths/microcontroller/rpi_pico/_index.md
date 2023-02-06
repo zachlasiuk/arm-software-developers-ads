@@ -5,7 +5,7 @@ description: Setup tools and start programming with Raspberry Pi Pico
 
 minutes_to_complete: 45
 
-who_is_this_for: Embedded software developers new to Raspberry Pi Pico.
+who_is_this_for: This is an introductory topic for embedded software developers new to Raspberry Pi Pico.
 
 learning_objectives: 
     - Install the Raspberry Pi Pico SDK

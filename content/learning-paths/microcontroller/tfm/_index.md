@@ -5,7 +5,7 @@ description: Build TF-M tests and run on Corstone-300 FVP
 
 minutes_to_complete: 15
 
-who_is_this_for: Embedded software developers new to Trusted Firmware-M.
+who_is_this_for: This is an introductory topic for software developers new to Trusted Firmware-M.
 
 learning_objectives: 
     - Build and run the reference TF-M tests.

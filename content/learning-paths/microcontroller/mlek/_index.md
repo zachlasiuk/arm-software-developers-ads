@@ -5,7 +5,7 @@ description: Learn how to build and run reference IoT software stack examples on
 
 minutes_to_complete: 30   
 
-who_is_this_for: Learning path for embedded software developers new to the examples get familiar with main features.
+who_is_this_for: This is an introductory topic for embedded software developers interested in using the reference IoT software examples on Arm Corstone-300 FVP.
 
 learning_objectives: 
     - Build examples from Machine Learning Evaluation Kit (MLEK)

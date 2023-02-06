@@ -5,7 +5,7 @@ description: Build CMSIS-DSP tests and run on Arm Virtual Hardware
 
 minutes_to_complete: 15
 
-who_is_this_for: Learning path for embedded software developers new to CMSIS-DSP.
+who_is_this_for: This is an introductory topic for software developers new to CMSIS-DSP.
 
 learning_objectives: 
     - Build CMSIS-DSP tests for the Corstone-300 AVH FVP

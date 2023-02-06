@@ -5,7 +5,7 @@ description: Learn how to use CMSIS-RTOS and other CMSIS features to build an RT
 
 minutes_to_complete: 30
 
-who_is_this_for: Embedded software developers new to RTOS development.
+who_is_this_for: This is an introductory topic for software developers new to RTOS development.
 
 learning_objectives: 
     - Learn how to implement a basic RTOS-based application

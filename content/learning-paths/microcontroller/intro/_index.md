@@ -5,7 +5,7 @@ description: The place to start for developers new to Arm microcontrollers
 
 minutes_to_complete: 5
 
-who_is_this_for: Developers new to the Arm architecture and looking for microcontroller hardware.
+who_is_this_for: This is an introductory topic for software developers new to the Arm architecture and looking for microcontroller hardware.
 
 learning_objectives:
     - Find microcontroller hardware to use for software development

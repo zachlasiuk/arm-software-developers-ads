@@ -11,7 +11,7 @@ minutes_to_complete: 60
 # Always measured in minutes. Should be an integer, to complete the learning path (not just read it).
 
 who_is_this_for: >
-    Learning path for software developers interested in efficiently programming microcontrollers with C/Assembly.
+    This is an introductory topic for software developers interested in efficiently programming microcontrollers with C/Assembly.
 # One sentence that should indicate exactly who the target audience is (developers in X industries using Y tools/software for Z use-case).
 
 learning_objectives: 

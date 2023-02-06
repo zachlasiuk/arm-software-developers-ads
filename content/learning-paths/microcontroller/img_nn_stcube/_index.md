@@ -5,7 +5,7 @@ description: Develop a image classification neural network model and deploy it o
 
 minutes_to_complete: 45
 
-who_is_this_for: Embedded software developers new to building neural network models for microcontrollers.
+who_is_this_for: This is an advanced topic for embedded software developers interested in building neural network models for microcontrollers.
 
 learning_objectives: 
 

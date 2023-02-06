@@ -5,7 +5,7 @@ description: Build a letter recognition neural network model using Tensorflow an
 
 minutes_to_complete: 45
 
-who_is_this_for: Embedded software developers new to building network models.
+who_is_this_for: This is an advanced topic for software developers interested in building network models for microcontrollers.
 
 learning_objectives: 
 

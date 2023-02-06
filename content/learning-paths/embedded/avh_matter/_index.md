@@ -5,7 +5,7 @@ description: Learn how to build reference Matter examples and run on Arm Virtual
 
 minutes_to_complete: 60
 
-who_is_this_for: Learning path for embedded software developers new to Arm Virtual Hardware to get familiar with main features.
+who_is_this_for: This is an introductory topic for embedded software developers new to Arm Virtual Hardware.
 
 learning_objectives: 
     - Instantiate Arm Virtual Hardware instances

@@ -5,7 +5,7 @@ description: Learn how to prepare a Docker image for Arm embedded development
 
 minutes_to_complete: 30   
 
-who_is_this_for: Embedded software developers new to Docker.
+who_is_this_for: This is an introductory topic for embedded software developers new to Docker.
 
 learning_objectives: 
     - Create and understand a Dockerfile
