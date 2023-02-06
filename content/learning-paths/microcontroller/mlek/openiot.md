@@ -9,17 +9,11 @@ layout: "learningpathall"
 ---
 Developing IoT systems is incredibly complex. To fulfil the potential of IoT, we need to simplify and accelerate development for the entire value chain. [Arm Total Solutions for IoT](https://www.arm.com/solutions/iot/total-solutions-iot) is an industry first, bringing together specialized processing capabilities with standardized, secure software, and innovative approaches to tooling and development.
 
-The [Arm Open-IoT-SDK](https://github.com/ARM-software/open-iot-sdk) provides a growing number of complete software stack examples for developers to use as the basis of their own IoT applications. The examples can be built and run on [Arm Virtual Hardware](https://avh.arm.com/).
-
-## Prerequisites
-
-A valid [AWS](https://aws.amazon.com/) account is required.
-
-Launch the Arm Virtual Hardware AMI. For full instructions see [here](/install-tools/avh/#corstone).
+The [Arm Open-IoT-SDK](https://github.com/ARM-software/open-iot-sdk) provides a growing number of complete software stack examples for developers to use as the basis of their own IoT applications. The SDK is designed for use with Arm Virtual Hardware.
 
 ## Clone the example repository
 
-In your AVH terminal, clone the example repository, and navigate to the examples folder.
+Clone the example repository, and navigate to the examples folder.
 ```console
 git clone https://github.com/ARM-software/open-iot-sdk
 cd open-iot-sdk/examples

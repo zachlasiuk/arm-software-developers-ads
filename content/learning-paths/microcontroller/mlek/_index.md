@@ -10,7 +10,7 @@ who_is_this_for: Learning path for embedded software developers new to the examp
 learning_objectives: 
     - Build examples from Machine Learning Evaluation Kit (MLEK)
     - Build examples from Open-IoT-SDK
-    - Run the examples on Arm Virtual Hardware
+    - Run the examples on Corstone-300
 
 prerequisites:
     - Some familiarity with embedded programing is assumed
