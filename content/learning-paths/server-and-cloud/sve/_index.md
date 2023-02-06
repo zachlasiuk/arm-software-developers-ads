@@ -5,7 +5,7 @@ description: Learning path for porting code from Arm NEON to the Scalable Vector
 
 minutes_to_complete: 20   
 
-who_is_this_for: Learning path for software developers using SIMD instructions for High-Performance Computing, Machine Learning, Digital Signal Processing, Audio and Video Codec applications.
+who_is_this_for: This is an introductory topic for software developers using SIMD instructions for High-Performance Computing, Machine Learning, Digital Signal Processing, Audio and Video Codec applications.
 
 learning_objectives: 
     - Understand the differences between SVE and NEON for vectorization
@@ -14,6 +14,7 @@ learning_objectives:
 
 prerequisites:
     - General knowledge about SIMD processing, vectorization or Arm NEON.
+    - An Arm computer running Linux. Cloud instances can be used, refer to the list of [Arm cloud service providers](/learning-paths/server-and-cloud/csp/).
 
 author_primary: Florent Lebeau
 

@@ -5,7 +5,7 @@ description: Learn what type of content belongs in a Learning Path and how to fo
 
 minutes_to_complete: 20
 
-who_is_this_for: Content creators and software developers looking to share Arm related information as a step-by-step guide called a Learning Path.
+who_is_this_for: This topic is for content creators and software developers who want to share Arm related information as a step-by-step guide called a Learning Path.
 
 learning_objectives: 
     - Understand what type of content belongs in a Learning Path

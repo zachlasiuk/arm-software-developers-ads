@@ -3,9 +3,9 @@ title: Measure performance of compression libraries on Arm servers
 
 description: Learn how to install and measure the performance of compression libraries on Arm servers
 
-minutes_to_complete: 10
+minutes_to_complete: 30
 
-who_is_this_for: Learning path for software developers using compression libraries running on Arm servers.
+who_is_this_for: This is an introductory topic for software developers using compression libraries on Arm servers.
 
 learning_objectives:
     - Install and run lzbench with snappy and zstd

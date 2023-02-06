@@ -5,16 +5,14 @@ description: Learn how to run Clair in the combined and the distributed mode, su
 
 minutes_to_complete: 60
 
-who_is_this_for: Developers looking to check the vulnerabilities that can affect their containers.
+who_is_this_for: This is an advanced topic for software developers interested in checking container images for vulnerabilities.
 
 learning_objectives:
-    - Install and run Clair in both combined and distributed mode.
-    - Submit the containers to Clair using clairctl and generate the vulnerability report.
+    - Install and run Clair in both combined and distributed mode
+    - Submit container images to Clair using clairctl and generate a vulnerability report
 
 prerequisites:
-    - Cloud node or a physical machine.
-    - docker and docker-compose (latest version preferred).
-    - go (latest version preferred).
+    - A computer with the latest versions of docker, docker-compose, and go installed.
 
 author_primary: Jason Andrews
 

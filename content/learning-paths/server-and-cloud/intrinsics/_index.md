@@ -5,7 +5,7 @@ description: Learn how to port architecture intrinsics to Arm Neoverse processor
 
 minutes_to_complete: 20
 
-who_is_this_for: Learning path for developers interesed in porting architecture specific intrinics to Arm Neoverse processors.
+who_is_this_for: This is an advanced topic for software developers interested in porting architecture specific intrinics to Arm Neoverse processors.
 
 learning_objectives:
     - Understand what intrinsics are and how to find them in code

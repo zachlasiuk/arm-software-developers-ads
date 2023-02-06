@@ -5,11 +5,11 @@ description: Learn how to install and measure the performance of memcached on Ar
 
 minutes_to_complete: 10
 
-who_is_this_for: Learning path for software developers using memcached as their in-memory key-value store for mobile, web, gaming or e-Commerce applications running on Arm servers.
+who_is_this_for: This is an introductory topic for software developers who want to use memcached as their in-memory key-value store for mobile, web, gaming or e-Commerce applications.
 
 learning_objectives:
     - Install and run memcached on your Arm-based cloud server
-    - Use an open-sourced benchmark to test memcached performance on your instance
+    - Use an open-source benchmark to test memcached performance
 
 prerequisites:
     - An [Arm based instance](/learning-paths/server-and-cloud/csp/) from an appropriate cloud service provider.

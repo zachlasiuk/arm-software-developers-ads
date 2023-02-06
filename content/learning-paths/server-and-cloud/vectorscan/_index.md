@@ -5,7 +5,7 @@ description: Learn how to install Vectorscan on Arm servers and use it with Snor
 
 minutes_to_complete: 15
 
-who_is_this_for: Learning path for software developers using Hyperscan optimized for Arm with deep packet inspection applications like Snort on Arm servers.
+who_is_this_for: This is an introductory topic for software developers using Hyperscan optimized for Arm with deep packet inspection applications like Snort on Arm servers.
 
 learning_objectives:
     - Install and run Vectorscan on an Arm-based instance

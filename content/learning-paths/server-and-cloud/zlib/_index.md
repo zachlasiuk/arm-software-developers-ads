@@ -5,7 +5,7 @@ description: Learn how to build and use Cloudflare zlib on on Arm servers
 
 minutes_to_complete: 10
 
-who_is_this_for: A guide for software developers to build and use Cloudflare zlib on Arm servers.
+who_is_this_for: This is an introductory topic for software developers to learn how to to build and use Cloudflare zlib on Arm servers.
 
 learning_objectives:
     - Build zlib-cloudflare on an Arm server

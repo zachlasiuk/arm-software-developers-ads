@@ -5,7 +5,7 @@ description: Configure Nginx as a web server, reverse proxy, and API gateway
 
 minutes_to_complete: 90
 
-who_is_this_for: A guide for software developers to install, build, and use Nginx on Arm
+who_is_this_for: This is an introductory topic for software developers who want to learn how to install, build, and use Nginx on Arm.
 
 learning_objectives:
     - Install and run Nginx on Arm

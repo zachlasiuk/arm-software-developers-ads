@@ -5,7 +5,7 @@ description: Introduction to Arm virtual machines on GCP
 
 minutes_to_complete: 60
 
-who_is_this_for: Developers new to Arm virtual machines on GCP
+who_is_this_for: This is an introductory topic for software developers new to Arm virtual machines in the Google Computer Platform (GCP)
 
 learning_objectives:
     - Deploy Arm virtual machines using the Google Cloud Console
@@ -13,7 +13,7 @@ learning_objectives:
 
 prerequisites:
     - A Google Cloud account
-    - Terraform
+    - A computer with Terraform installed
 
 author_primary: Jason Andrews
 

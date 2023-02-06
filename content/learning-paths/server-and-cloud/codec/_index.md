@@ -5,7 +5,7 @@ description: Learn how to build and run x265 on Arm servers.
 
 minutes_to_complete: 10
 
-who_is_this_for: A guide for software developers to build and run x265 codec on Arm servers and measure performance.
+who_is_this_for: This is an introductory topic for software developers who want to build and run an x265 codec on Arm servers and measure performance.
 
 learning_objectives:
     - Build x265 codec on Arm server

@@ -5,7 +5,7 @@ description: Learn how to measure machine learning inference performance on Arm 
 
 minutes_to_complete: 20
 
-who_is_this_for: Learning path for software developers interesed in benchmarking machine learning workloads running on Arm servers.
+who_is_this_for: This is an introductory topic for software developers interested in benchmarking machine learning workloads on Arm servers.
 
 learning_objectives:
     - Install and run tensorflow on your Arm-based cloud server

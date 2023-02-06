@@ -3,9 +3,9 @@ title: Get Started with parallel application development
 
 description: Learning path for building and running parallel applications on Arm and tips to debug and optimize them.
 
-minutes_to_complete: 20   
+minutes_to_complete: 30   
 
-who_is_this_for: Learning path for HPC software developers writing MPI applications.
+who_is_this_for: This is an advanced topic for HPC software developers writing MPI applications.
 
 learning_objectives: 
     - Debug and fix a parallel application
@@ -13,7 +13,7 @@ learning_objectives:
     - Use optimized routines for common math operations
 
 prerequisites:
-    - General knowledge about distibuted parallelism (MPI)
+    - General knowledge about distributed parallelism (MPI)
     - A C and Fortran compiler. Tested ![c_compiler](https://raw.githubusercontent.com/armflorentlebeau/arm_hpc_tools_trial/master/.github/badges/gcc.svg) ![f_compiler](https://raw.githubusercontent.com/armflorentlebeau/arm_hpc_tools_trial/master/.github/badges/gfortran.svg)
     - MPI framework. Tested ![openmpi](https://raw.githubusercontent.com/armflorentlebeau/arm_hpc_tools_trial/master/.github/badges/openmpi.svg)
     - BLAS library. Tested ![blas](https://raw.githubusercontent.com/armflorentlebeau/arm_hpc_tools_trial/master/.github/badges/blas.svg)

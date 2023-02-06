@@ -5,14 +5,14 @@ description: Learn how to build and share docker imsages using AWS CodeBuild on 
 
 minutes_to_complete: 30
 
-who_is_this_for: Learning path for software developers interested in using AWS CodeBuild to automate container build tasks.
+who_is_this_for: This is an advanced topic for software developers interested in using AWS CodeBuild to automate container build tasks.
 
 learning_objectives:
     - Use a GitHub project and AWS CodeBuild to automate Docker image creation
     - Pull and run the created Docker images on any Arm computer with Docker installed
 
 prerequisites:
-    - An [AWS account](/learning-paths/server-and-cloud/csp/aws/) to use for accessing AWS services
+    - An [AWS account](/learning-paths/server-and-cloud/csp/aws/) for accessing AWS cloud services.
 
 author_primary: Jason Andrews
 
