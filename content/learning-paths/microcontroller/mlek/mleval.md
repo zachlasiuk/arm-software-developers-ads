@@ -11,7 +11,7 @@ The [Arm ML Evaluation Kit (MLEK)](https://review.mlplatform.org/plugins/gitiles
 
 We will get the MLEK source, build sample applications, and run them on the [Corstone-300](https://developer.arm.com/Processors/Corstone-300) Fixed Virtual Platform (FVP).
 
-These instructions assume an Ubuntu Linux host machine, or use of Arm Virtual Hardware.
+These instructions assume an Ubuntu Linux host machine, or use of [Arm Virtual Hardware](https://www.arm.com/products/development-tools/simulation/virtual-hardware).
 
 Full instructions are provided in the evaluation kit [documentation](https://review.mlplatform.org/plugins/gitiles/ml/ethos-u/ml-embedded-evaluation-kit/+/HEAD/docs/quick_start.md).
 

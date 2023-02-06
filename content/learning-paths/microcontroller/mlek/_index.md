@@ -1,7 +1,7 @@
 ---
 title: Get started with MLEK and Open-IoT-SDK
 
-description: Learn how to build and run reference IoT software stack examples on Arm Virtual Hardware
+description: Learn how to build and run reference IoT software stack examples on Arm Corstone-300 FVP.
 
 minutes_to_complete: 30   
 
@@ -23,6 +23,7 @@ subjects: ML
 armips:
     - Cortex-M
 tools:
+    - Corstone-300 FVP
     - Arm Virtual Hardware
     - Arm Compiler for Embedded
     - AWS EC2

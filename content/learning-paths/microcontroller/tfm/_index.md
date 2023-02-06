@@ -1,7 +1,7 @@
 ---
 title: Get started with Trusted Firmware-M
 
-description: Build TF-M tests and run on Arm Virtual Hardware
+description: Build TF-M tests and run on Corstone-300 FVP
 
 minutes_to_complete: 15
 
@@ -21,6 +21,7 @@ subjects: Security
 armips:
     - Cortex-M
 tools:
+    - Corstone-300 FVP
     - Arm Virtual Hardware
     - AWS EC2
 softwares:

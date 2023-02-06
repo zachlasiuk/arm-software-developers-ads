@@ -1,7 +1,7 @@
 ---
 title: Run Zephyr RTOS on Arm Corstone-300
 
-description: Build Zephyr and run on Arm Corstone-300 Fixed Virtual Platform or other
+description: Build Zephyr and run on Arm Corstone-300 Fixed Virtual Platform
 
 minutes_to_complete: 20
 
@@ -21,7 +21,7 @@ subjects: RTOS
 armips:
     - Cortex-M
 tools:
-    - Fixed Virtual Platform
+    - Corstone-300 FVP
     - Arm Virtual Hardware
     - AWS EC2
 softwares:

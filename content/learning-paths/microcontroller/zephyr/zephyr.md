@@ -13,7 +13,7 @@ The Zephyr RTOS is based on a small-footprint kernel designed for use on resourc
 
 We will get the Zephyr source, install the Zephyr SDK, build sample applications, and run them on the [Corstone-300](https://developer.arm.com/Processors/Corstone-300) Fixed Virtual Platform (FVP).
 
-These instructions assume an Ubuntu Linux host machine, or use of Arm Virtual Hardware.
+These instructions assume an Ubuntu Linux host machine, or use of [Arm Virtual Hardware](https://www.arm.com/products/development-tools/simulation/virtual-hardware).
 
 ## Corstone-300 FVP {#fvp}
 
