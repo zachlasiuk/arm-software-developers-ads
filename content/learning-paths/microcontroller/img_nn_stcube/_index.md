@@ -1,5 +1,5 @@
 ---
-title: Learn how to build and run a convolution neural network model for image classification on an STM32L4 Discovery board
+title: Learn how to build and run an image classification NN model on an STM32L4 Discovery board
 
 description: Develop a image classification neural network model and deploy it on an STM32 B-L475E-IOT01A2 board.
 
