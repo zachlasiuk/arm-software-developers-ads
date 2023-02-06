@@ -1,14 +1,14 @@
 ---
-title: Run Zephyr RTOS on Arm Virtual Hardware
+title: Run Zephyr RTOS on Arm Corstone-300
 
-description: Build Zephyr and run on Arm Virtual Hardware
+description: Build Zephyr and run on Arm Corstone-300 Fixed Virtual Platform or other
 
 minutes_to_complete: 20
 
-who_is_this_for: Embedded software developers interested in running Zephyr RTOS.
+who_is_this_for: Embedded software developers getting started with Zephyr RTOS.
 
 learning_objectives: 
-    - Build and run Zephyr applications on AVH Corstone-300.
+    - Build and run Zephyr applications on Corstone-300.
 
 prerequisites:
     - Some familiarity with embedded C programming
@@ -21,6 +21,7 @@ subjects: RTOS
 armips:
     - Cortex-M
 tools:
+    - Fixed Virtual Platform
     - Arm Virtual Hardware
     - AWS EC2
 softwares:
