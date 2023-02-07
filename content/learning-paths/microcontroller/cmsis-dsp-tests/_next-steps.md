@@ -4,10 +4,10 @@
 # ================================================================================
 
 next_step_guidance: >
-    We recommend you continue learning about other embedded applications that are available for out-of-the-box use on AVH FVPs. The Learning Path on running TF-M tests on AVH FVPs is a great next step.
+    We recommend you continue learning about other embedded applications that are available for out-of-the-box use on Arm FVPs. The Learning Path on running TF-M tests is a great next step.
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/microcontroller/avh_tfm/"
+recommended_path: "/learning-paths/microcontroller/tfm/"
 # Link to the next learning path being recommended.
 
 

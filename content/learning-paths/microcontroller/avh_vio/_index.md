@@ -1,5 +1,5 @@
 ---
-title: Investigate example Virtual Peripheral implementation
+title: Investigate an example Virtual Peripheral with Arm Virtual Hardware
 
 description: Explore an example Python implementation of a Virtual Peripheral with Arm Virtual Hardware and Virtual IO
 
