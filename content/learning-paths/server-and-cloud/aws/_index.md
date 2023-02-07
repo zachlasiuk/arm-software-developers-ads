@@ -5,15 +5,15 @@ description: Introduction to AWS EC2 deployment of Graviton processors
 
 minutes_to_complete: 60   
 
-who_is_this_for: Developers new to AWS EC2 and AWS Graviton processors
+who_is_this_for: This is an introductory topic for software developers new to AWS EC2 and AWS Graviton processors.
 
 learning_objectives: 
-    - Deploy AWS Graviton processors in EC2 instances from the AWS Console
+    - Deploy AWS EC2 instances based on AWS Graviton processors from the AWS console
     - Automate AWS EC2 instance creation using Terraform
 
 prerequisites:
     - An Amazon Web Services (AWS) account
-    - Terraform
+    - A computer with Terraform installed
 
 author_primary: Jason Andrews
 

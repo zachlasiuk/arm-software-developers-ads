@@ -23,7 +23,7 @@ Free tier offers are currently available.
 - [Oracle free tier includes up to 4 instances of ARM Ampere A1 Compute which are always free](https://www.oracle.com/cloud/free/)
 - [Until April 5, 2023 Tau T2A VMs in Google Cloud are available for a free trial](https://cloud.google.com/compute/docs/instances/create-arm-vm-instance#t2afreetrial)
 
-[Get started with Arm-based cloud service platforms](/learning-paths/server-and-cloud/providers/) explains how to create an account and start an Arm virtual machine using the cloud service providers listed above.
+[Get started with Arm-based cloud service platforms](/learning-paths/server-and-cloud/csp/) explains how to create an account and start an Arm virtual machine using the cloud service providers listed above.
 
 ##  Arm SystemReady Certified hardware
 

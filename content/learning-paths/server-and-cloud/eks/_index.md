@@ -7,11 +7,11 @@ description: >
 minutes_to_complete: 80
 
 who_is_this_for: >
-    Developers new to AWS EC2 and Kubernetes
+    This is an introductory topic for software developers new to AWS EC2, EKS, and Kubernetes.
 
 learning_objectives:
-    - Provision EKS cluster on Arm-based instance
-    - Deploy Wordpress(with Mysql) on Elastic Kubernetes Service
+    - Provision an EKS cluster on an Arm-based instance
+    - Deploy Wordpress (with Mysql) on AWS Elastic Kubernetes Service
 
 prerequisites:
     - An Amazon Web Services (AWS) account

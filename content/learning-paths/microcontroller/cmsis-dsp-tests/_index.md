@@ -1,23 +1,24 @@
 ---
-title: Run Zephyr RTOS on Arm Virtual Hardware
+title: Learn how to build and run CMSIS-DSP tests on Corstone-300
 
-description: Build Zephyr and run on Arm Virtual Hardware
+description: Build CMSIS-DSP tests and run on the Corstone-300 locally or with Arm Virtual Hardware.
 
-minutes_to_complete: 20
+minutes_to_complete: 15
 
-who_is_this_for: Embedded software developers interested in running Zephyr RTOS.
+who_is_this_for: This is an introductory topic for software developers new to CMSIS-DSP.
 
 learning_objectives: 
-    - Build and run Zephyr applications on AVH Corstone-300.
+    - Build CMSIS-DSP tests for the Corstone-300 FVP
+    - Run CMSIS-DSP tests on the Corstone-300 FVP
 
 prerequisites:
-    - Some familiarity with embedded C programming
+    - Some familiarity with embedded programing is assumed
 
 author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Introductory
-subjects: RTOS
+subjects: Libraries
 armips:
     - Cortex-M
 tools:
@@ -26,7 +27,7 @@ tools:
 softwares:
     - C
 operatingsystems:
-    - Zephyr RTOS
+    - Bare-metal
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

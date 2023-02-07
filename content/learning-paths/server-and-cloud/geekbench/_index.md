@@ -1,18 +1,18 @@
 ---
-title: Get started with benchmarking on an Arm-based server
+title: Get started with Geekbench on Arm
 
-description: Learn how to run Geekbench 5 benchmark on Arm-based server.
+description: Learn how to run Geekbench 5 benchmark on Arm computers.
 
 minutes_to_complete: 15
 
-who_is_this_for: Developers interested comparing performance of Arm-based cloud instances.
+who_is_this_for: This is an introductory topic for software developers interested comparing performance of Arm-based computers using Geekbench.
 
 learning_objectives:
-    - Learn how to install and run Geekbench benchmark.
-    - Determine the appropriate instance configuration needed for your workloads.
+    - Learn how to install and run Geekbench benchmark
+    - Determine the appropriate instance configuration needed for your workloads
 
 prerequisites:
-    - An account with the Arm-based cloud service [provider](../providers/) of choice.
+    - An Arm computer running Linux. Cloud instances can be used, refer to the list of [Arm cloud service providers](/learning-paths/server-and-cloud/csp/).
 
 author_primary: Ronan Synnott
 

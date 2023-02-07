@@ -5,7 +5,7 @@ description: Introduction to building a minimal Yocto Linux image and running it
 
 minutes_to_complete: 20
 
-who_is_this_for: Learning path for software developers interested in learning the basics of building Yocto Linux for embedded Arm targets.
+who_is_this_for: This is an introductory topic for software developers interested in learning the basics of building Yocto Linux for embedded Arm targets.
 
 learning_objectives: 
     - Build a minimal Yocto Linux image for generic 64-bit Arm target

@@ -8,7 +8,7 @@ weight: 4 # 1 is first, 2 is second, etc.
 layout: "learningpathall"
 ---
 
-## Pre-requisites
+## Prerequisites
 
 - Linux development computer with the Raspberry Pi Pico SDK installed.
 - Raspberry Pi Pico to run applications

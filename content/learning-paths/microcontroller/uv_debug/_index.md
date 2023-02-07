@@ -10,7 +10,7 @@ minutes_to_complete: 90
 # Always measured in minutes. Should be an integer, to complete the learning path (not just read it).
 
 who_is_this_for: >
-    Software developers who want to master embedded microcontroller debugging using µVision.
+    This is an advanced topic for Software developers who want to master embedded microcontroller debugging using µVision.
 # One sentence that should indicate exactly who the target audience is (developers in X industries using Y tools/software for Z use-case).
 
 learning_objectives: 

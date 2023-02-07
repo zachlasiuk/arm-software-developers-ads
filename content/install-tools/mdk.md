@@ -6,7 +6,7 @@ layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page o
 ---
 [Arm Keil MDK](https://developer.arm.com/Tools%20and%20Software/Keil%20MDK) is the complete software development environment for a range of Arm Cortex-M based microcontroller devices. MDK includes the µVision IDE and debugger, Arm C/C++ compiler, and essential middleware components. It supports more than 9,500 devices and is easy to learn and use.
 
-## Pre-requisites
+## Prerequisites
 
 Full host platform requirements are given in the [System Requirements](https://developer.arm.com/Tools%20and%20Software/Keil%20MDK#Editions) section.
 

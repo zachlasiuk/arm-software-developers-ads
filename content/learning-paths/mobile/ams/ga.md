@@ -11,7 +11,7 @@ Graphics Analyzer is a tool to help `OpenGL ES` and `Vulkan` developers get the 
 
 The tool allows you to observe API call arguments and return values, and interact with a running target application to investigate the effect of individual API calls. It highlights attempted misuse of the API, and gives recommendations for improvements.
 
-## Pre-requisites
+## Prerequisites
 
 Build your application, and setup Android device as per Streamline instructions.
 

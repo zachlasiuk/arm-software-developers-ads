@@ -21,7 +21,7 @@ DSTREAM-ST provides full debug capability over JTAG and SWD interfaces, as well 
  - DSTREAM-HT adds the capability to support (up to) 6 lanes of High-Speed Serial Trace (HSST)
  - DSTREAM-XT adds the capability to support (debug and) trace over PCIe interface.
 
-## Pre-requisites
+## Prerequisites
 
 It is assumed you have installed Arm Development Studio and configured your license. For full instructions see [here](/install-tools/armds/).
 

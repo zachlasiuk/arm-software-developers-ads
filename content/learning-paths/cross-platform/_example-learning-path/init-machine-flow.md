@@ -107,7 +107,7 @@ To use Visual Studio Code in the browser on your remote Linux server check the i
 
 ## Contribution process
 
-Regardless of what type of development machine you are using, with all the pre-requisites installed and the fork the repository cloned, you are new ready to start contributing content. 
+Regardless of what type of development machine you are using, with all the prerequisites installed and the fork the repository cloned, you are new ready to start contributing content. 
 
 The content creation process consists of editing the markdown files for the Learning Paths of interest and viewing the changes on your computer using Hugo. 
 

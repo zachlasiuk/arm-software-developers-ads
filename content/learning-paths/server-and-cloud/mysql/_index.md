@@ -5,16 +5,15 @@ description: Deploy single instance of MySQL through Docker, RDS and EC2 instanc
 
 minutes_to_complete: 60   
 
-who_is_this_for: Anyone that wants to deploy MySQL on AWS
+who_is_this_for: This is an introductory topic for software developers who want to deploy MySQL on AWS.
 
 learning_objectives: 
-    - Deploy single instance of MySQL through Docker, RDS and EC2 instance
+    - Deploy single instance of MySQL through Docker, RDS and an AWS EC2
     - Automate MySQL EC2 instance creation using Terraform and Ansible
 
 prerequisites:
     - An Amazon Web Services (AWS) account
-    - Terraform
-    - Ansible
+    - A computer with Terraform and Ansible installed
 
 author_primary: Jason Andrews
 ### Tags

@@ -3,9 +3,9 @@ title: Learn about MongoDB on Arm servers
 
 description: Learn how to install and run MongoDB Community Edition on differet flavors of AWS EC2 instances powered by Arm64 achitecture
 
-minutes_to_complete: 20   
+minutes_to_complete: 30   
 
-who_is_this_for: Learning path for software developers using MongoDB as their database for mobile, IoT applications, content management or real-time analytics running on Arm servers.
+who_is_this_for: This is an introductory topic for software developers using MongoDB as their database for mobile, IoT applications, content management, or real-time analytics on Arm servers.
 
 learning_objectives: 
     - Install and run MongoDB on your 64-bit Arm AWS EC2 instance
@@ -13,7 +13,7 @@ learning_objectives:
     - Measure and compare the performance of MongoDB on Arm versus other architectures with Yahoo Cloud Serving Benchmark (YCSB)
 
 prerequisites:
-    - An [Arm based instance](/learning-paths/server-and-cloud/providers) from an appropriate cloud service provider.
+    - An [Arm based instance](/learning-paths/server-and-cloud/csp/) from an appropriate cloud service provider.
 
 author_primary: Pareena Verma
 

@@ -8,9 +8,9 @@ weight: 3 # 1 is first, 2 is second, etc.
 layout: "learningpathall"
 ---
 
-## Pre-requisites
+## Prerequisites
 
-The following pre-requisites are needed to try the steps yourself:
+The following prerequisites are needed to try the steps yourself:
 
 - Physical Raspberry Pi 3 or 4 (optional)
 - A user account for [Arm Virtual Hardware 3rd Party Hardware](https://avh.arm.com/). 

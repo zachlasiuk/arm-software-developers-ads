@@ -5,7 +5,7 @@ description: Setup and make use of code coverage functionality of Keil MDK
 
 minutes_to_complete: 15
 
-who_is_this_for: Embedded software developers new to this feature.
+who_is_this_for: This is an introductory topic for embedded software developers new to the code-coverage feature in Keil MDK.
 
 learning_objectives: 
     - Set up project execution on FVP

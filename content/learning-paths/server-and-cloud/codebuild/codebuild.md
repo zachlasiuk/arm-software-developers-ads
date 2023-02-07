@@ -8,10 +8,10 @@ weight: 2 # 1 is first, 2 is second, etc.
 layout: "learningpathall"
 ---
 
-## Pre-requisites
+## Prerequisites
 
-* An [AWS account](/learning-paths/server-and-cloud/providers/aws/) to access AWS CodeBuild
-* An [Arm based instance](/learning-paths/server-and-cloud/providers) from an appropriate cloud service provider or any Arm server, laptop, or single-board computer running [Docker](/install-tools/docker/) used to run the created images
+* An [AWS account](/learning-paths/server-and-cloud/csp/aws/) to access AWS CodeBuild
+* An [Arm based instance](/learning-paths/server-and-cloud/csp/) from an appropriate cloud service provider or any Arm server, laptop, or single-board computer running [Docker](/install-tools/docker/) used to run the created images
 
 This learning path is specific to AWS services, but the resulting Docker images can be run on any Arm machine.
 

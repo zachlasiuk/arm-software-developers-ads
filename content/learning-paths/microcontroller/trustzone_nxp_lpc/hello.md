@@ -8,7 +8,7 @@ weight: 2 # 1 is first, 2 is second, etc.
 layout: "learningpathall"
 ---
 
-## Pre-requisites
+## Prerequisites
 
 A Windows development computer with the Keil MDK [installed](/install-tools/mdk).
 

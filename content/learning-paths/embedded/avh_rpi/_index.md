@@ -5,7 +5,7 @@ description: Introduction to the virtual Raspberry Pi 4 in Arm Virtual Hardware
 
 minutes_to_complete: 90
 
-who_is_this_for: Learning path for software developers interested in using the Raspberry Pi 4 available on Arm Virtual Hardware.
+who_is_this_for: This is an introductory topic for software developers interested in using the Raspberry Pi 4 available on Arm Virtual Hardware.
 
 learning_objectives: 
     - Compare and contrast a physical Raspbery Pi 4 with the virtual Raspberry Pi in AVH

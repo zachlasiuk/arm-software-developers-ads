@@ -8,9 +8,9 @@ weight: 3 # 1 is first, 2 is second, etc.
 layout: "learningpathall"
 ---
 
-## Pre-requisites
+## Prerequisites
 
-The following pre-requisites are needed to try the steps yourself:
+The following prerequisites are needed to try the steps yourself:
 
 - A Linux machine running Ubuntu 22.04 with atleast 60 GB of disk space
 

@@ -13,7 +13,7 @@ The OS of the docker image is `Ubuntu`, though the host machine could be Windows
 
 Linux users may need to preceed the `docker` commands below with `sudo`, as the docker daemon always runs as the root user.
 
-## Pre-requisites
+## Prerequisites
 
 Download and [install](/install-tools/docker/) the appropriate Docker environment for your host platform.
 

@@ -10,7 +10,7 @@ layout: "learningpathall"
 
 ##  Deploy a Arm based virtual machine using Terraform.
 
-## Pre-requisites
+## Prerequisites
 
 * An Azure portal account
 * An [installation of Terraform](https://www.terraform.io/cli/install/apt)

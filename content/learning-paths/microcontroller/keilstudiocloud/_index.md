@@ -5,7 +5,7 @@ description: Learn how to import, build, and debug your first Keil Studio Cloud 
 
 minutes_to_complete: 30   
 
-who_is_this_for: Embedded software developers new to Keil Studio Cloud to get familiar with main features.
+who_is_this_for: This is an introductory topic for embedded software developers new to Keil Studio Cloud.
 
 learning_objectives: 
     - Import and build an example project

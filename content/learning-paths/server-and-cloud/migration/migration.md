@@ -9,9 +9,9 @@ layout: "learningpathall"
 
 ---
 
-## Pre-requisites
+## Prerequisites
 
-* An [Arm based Linux machine](/learning-paths/server-and-cloud/providers) from a cloud service provider to use as a development machine.
+* An [Arm based Linux machine](/learning-paths/server-and-cloud/csp/) from a cloud service provider to use as a development machine.
 
 
 ## Development machine

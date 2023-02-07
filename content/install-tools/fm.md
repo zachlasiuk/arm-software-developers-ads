@@ -8,7 +8,7 @@ layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page o
 
 This article discusses the stand alone use case. If using as part of an EDA partner's environment, please contact the relevant vendor for guidance.
 
-## Pre-requisites
+## Prerequisites
 
 A Fast Model based virtual platform is an executable that runs on your Linux or Windows host. To **build** such an executable, you must ensure that the appropriate host toolchain is installed.
 

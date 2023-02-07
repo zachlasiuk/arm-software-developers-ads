@@ -8,7 +8,7 @@ weight: 5 # 1 is first, 2 is second, etc.
 layout: "learningpathall"
 ---
 
-## Pre-requisites
+## Prerequisites
 
 - Raspberry Pi Pico with debug interface pins
 - Raspberry Pi 3, 4, or 400 development computer with the Raspberry Pi Pico SDK installed

@@ -5,7 +5,7 @@ description: The place to start for developers new to Arm in server and cloud
 
 minutes_to_complete: 5
 
-who_is_this_for: Developers new to the Arm architecture and looking for server and cloud hardware.
+who_is_this_for: This is an introductory topic for software developers new to the Arm architecture and looking for server and cloud hardware.
 
 learning_objectives:
     - Find server and cloud hardware to use for software development

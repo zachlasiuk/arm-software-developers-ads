@@ -1,14 +1,14 @@
 ---
-title: Get started with Trusted Firmware-M
+title: Run Zephyr RTOS on Arm Corstone-300
 
-description: Build TF-M tests and run on Arm Virtual Hardware
+description: Build Zephyr and run on Arm Corstone-300 Fixed Virtual Platform
 
-minutes_to_complete: 15
+minutes_to_complete: 20
 
-who_is_this_for: Embedded software developers new to Trusted Firmware-M.
+who_is_this_for: This is an introductory topic for software developers getting started with Zephyr RTOS.
 
 learning_objectives: 
-    - Build and run the reference TF-M tests.
+    - Build and run Zephyr applications on Corstone-300.
 
 prerequisites:
     - Some familiarity with embedded C programming
@@ -17,16 +17,17 @@ author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Introductory
-subjects: Security
+subjects: RTOS
 armips:
     - Cortex-M
 tools:
+    - Corstone-300 FVP
     - Arm Virtual Hardware
     - AWS EC2
 softwares:
     - C
 operatingsystems:
-    - Bare-metal
+    - Zephyr RTOS
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

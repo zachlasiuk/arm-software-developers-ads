@@ -6,13 +6,13 @@ description: This learning path presents some ideas on how to tune PostgreSQL
 minutes_to_complete: 60
 
 
-who_is_this_for: DevOps professionals and anyone else interested in optimizing their PostgreSQL deployment.
+who_is_this_for: This is an advanced topic for software developers and DevOps professionals interested in optimizing PostgreSQL performance.
 
 learning_objectives:
     - Learn to tune PostgreSQL
 
 prerequisites:
-    - Bare-metal host(s) or cloud node(s) with PostgreSQL installed
+    - Bare-metal or cloud installation of PostgreSQL
 
 author_primary: Julio Suarez
 

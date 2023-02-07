@@ -10,9 +10,9 @@ layout: "learningpathall"
 ---
 
 
-## Pre-requisites
+## Prerequisites
 
-* An [Arm based instance](/learning-paths/server-and-cloud/providers) from an appropriate cloud service provider running `Ubuntu Linux 20.04`.
+* An [Arm based instance](/learning-paths/server-and-cloud/csp/) from an appropriate cloud service provider running `Ubuntu Linux 20.04`.
 
 This learning path has been tested on AWS and Oracle platforms.
 

@@ -5,14 +5,14 @@ description: Learn how to benchmark performance of Clickhouse on Arm-based serve
 
 minutes_to_complete: 30
 
-who_is_this_for: Developers interested in using Clickhouse on Arm-based cloud instances.
+who_is_this_for: This is an introductory topic for software developers who want to use Clickhouse on Arm-based cloud instances.
 
 learning_objectives:
-    - Learn how to install and measure Clickhouse performance.
-    - Determine the appropriate instance configuration needed for your workloads.
+    - Learn how to install and measure Clickhouse performance
+    - Determine the appropriate instance configuration needed for your workloads
 
 prerequisites:
-    - An account with the Arm-based cloud service [provider](../providers/) of choice.
+    - An [Arm based instance](/learning-paths/server-and-cloud/csp/) from an appropriate cloud service provider.
 
 author_primary: Pareena Verma
 

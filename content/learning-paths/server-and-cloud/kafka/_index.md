@@ -3,9 +3,9 @@ title: Installing Kafka, Zookeeper, and setting up a 3 node Kafka Cluster
 
 description: Learn how to setup a 3 node Kafka cluster, configure Zookeeper, and test write/read events into the cluster
 
-minutes_to_complete: 10
+minutes_to_complete: 90
 
-who_is_this_for: A guide for software developers interested in learning how to use Kafka and Zookeeper to setup a 3 node Kafka cluster.
+who_is_this_for: This is an advanced topic for software developers who want to learn how to use Kafka and Zookeeper.
 
 learning_objectives:
     - Install Zookeeper and Kafka
@@ -13,7 +13,7 @@ learning_objectives:
     - Test write/read events into the Kafka cluster
 
 prerequisites:
-    - 7 Physical machines or 7 cloud instances with Ubuntu/Debian installed. We need 3 Kafka nodes, 3 Zookeeper nodes, and 1 client node.
+    - Seven physical machines or seven cloud instances with Ubuntu or Debian installed to create three Kafka nodes, three Zookeeper nodes, and one client node.
 
 author_primary: Pareena Verma
 

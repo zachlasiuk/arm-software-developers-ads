@@ -9,9 +9,9 @@ layout: "learningpathall"
 ---
 
 
-## Pre-requisites
+## Prerequisites
 
-* An [AWS Graviton3](/learning-paths/server-and-cloud/providers/aws) instance. The instance type is c7g for Graviton3 instances.
+* An [AWS Graviton3](/learning-paths/server-and-cloud/csp/aws) instance. The instance type is c7g for Graviton3 instances.
 
 The instructions provided below have been tested on an Ubuntu 22.04 AWS 64-bit Arm EC2 instance (C7g.xlarge) and Ubuntu 20.04.
 
@@ -31,7 +31,7 @@ The AWS C7g EC2 instances are powered by the AWS Graviton3 processor which inclu
 
 ## Compile a simple application with PAC instructions
 
-Start your AWS EC2 c7g type instance using the instructions in the pre-requisites section.
+Start your AWS EC2 c7g type instance using the instructions in the prerequisites section.
 
 Use a text editor, such as nano or vim, to create the simple `main.c` program provided below.
 

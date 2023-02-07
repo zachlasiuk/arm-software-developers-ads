@@ -5,15 +5,14 @@ description: Learn to install the Arm RAN Acceleration library and build the sup
 
 minutes_to_complete: 30  
 
-who_is_this_for: Anyone new to using the ArmRAL Library.
+who_is_this_for: This is an introductory topic for software developers new to the Arm RAN Acceleration Library (ArmRAL).
 
 learning_objectives: 
-    - Build and install the library
-    - Test capabilities of your platform
+    - Build and install the Arm RAN Acceleration Library
+    - Test the capabilities of your platform
 
 prerequisites:
-    - Access to appropriate hardware, else
-    - An account with the cloud service provider of choice.
+    - An Arm computer running Linux. Cloud instances can be used, refer to the list of [Arm cloud service providers](/learning-paths/server-and-cloud/csp/).
 
 author_primary: Ronan Synnott
 

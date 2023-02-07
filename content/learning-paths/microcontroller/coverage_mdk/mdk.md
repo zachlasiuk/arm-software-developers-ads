@@ -7,7 +7,7 @@ weight: 3 # 1 is first, 2 is second, etc.
 # Do not modify these elements
 layout: "learningpathall"
 ---
-## Pre-requisites
+## Prerequisites
 
 You must have [Keil MDK](/install-tools/mdk/) installed.
 

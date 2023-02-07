@@ -1,28 +1,31 @@
 ---
-title: Learn how to build and run CMSIS-DSP tests on AVH Corstone-300
+title: Get started with MLEK and Open-IoT-SDK
 
-description: Build CMSIS-DSP tests and run on Arm Virtual Hardware
+description: Learn how to build and run reference IoT software stack examples on Arm Corstone-300 FVP.
 
-minutes_to_complete: 15
+minutes_to_complete: 30   
 
-who_is_this_for: Learning path for embedded software developers new to CMSIS-DSP.
+who_is_this_for: This is an introductory topic for embedded software developers interested in using the reference IoT software examples on Arm Corstone-300 FVP.
 
 learning_objectives: 
-    - Build CMSIS-DSP tests for the Corstone-300 AVH FVP
-    - Run CMSIS-DSP tests on the Corstone-300 AVH FVP
+    - Build examples from Machine Learning Evaluation Kit (MLEK)
+    - Build examples from Open-IoT-SDK
+    - Run the examples on Corstone-300
 
 prerequisites:
     - Some familiarity with embedded programing is assumed
 
-author_primary: Pareena Verma
+author_primary: Ronan Synnott
 
 ### Tags
 skilllevels: Introductory
-subjects: Libraries
+subjects: ML
 armips:
     - Cortex-M
 tools:
+    - Corstone-300 FVP
     - Arm Virtual Hardware
+    - Arm Compiler for Embedded
     - AWS EC2
 softwares:
     - C

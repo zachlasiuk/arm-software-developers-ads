@@ -1,30 +1,28 @@
 ---
-title: Get started with MLEK and Open-IoT-SDK
+title: Get started with Trusted Firmware-M
 
-description: Learn how to build and run reference IoT software stack examples on Arm Virtual Hardware
+description: Build TF-M tests and run on Corstone-300 FVP
 
-minutes_to_complete: 30   
+minutes_to_complete: 15
 
-who_is_this_for: Learning path for embedded software developers new to the examples get familiar with main features.
+who_is_this_for: This is an introductory topic for software developers new to Trusted Firmware-M.
 
 learning_objectives: 
-    - Build examples from Machine Learning Evaluation Kit (MLEK)
-    - Build examples from Open-IoT-SDK
-    - Run the examples on Arm Virtual Hardware
+    - Build and run the reference TF-M tests.
 
 prerequisites:
-    - Some familiarity with embedded programing is assumed
+    - Some familiarity with embedded C programming
 
-author_primary: Ronan Synnott
+author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Introductory
-subjects: ML
+subjects: Security
 armips:
     - Cortex-M
 tools:
+    - Corstone-300 FVP
     - Arm Virtual Hardware
-    - Arm Compiler for Embedded
     - AWS EC2
 softwares:
     - C

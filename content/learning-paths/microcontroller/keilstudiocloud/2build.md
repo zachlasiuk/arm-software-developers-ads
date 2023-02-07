@@ -8,7 +8,7 @@ weight: 2 # 1 is first, 2 is second, etc.
 layout: "learningpathall"
 ---
 
-## Pre-requisites
+## Prerequisites
 
 To access Keil Studio Cloud, you need an [Arm Account](https://developer.arm.com/register). If you already have an Mbed account, you can use it to access Keil Studio.
 
