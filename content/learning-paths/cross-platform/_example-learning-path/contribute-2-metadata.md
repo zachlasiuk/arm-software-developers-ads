@@ -1,8 +1,8 @@
 ---
 # User change
-title: "Contribute: Metadata"
+title: "2b) Modify Metadata"
 
-weight: 5 # 1 is first, 2 is second, etc.
+weight: 6 # 1 is first, 2 is second, etc.
 
 # Do not modify these elements
 layout: "learningpathall"
@@ -14,13 +14,13 @@ Each Learning Path contains metadata which is used to create the Learning Path p
 
 This section explains how to add Learning Path metadata in three files:
 
-1. Metadata and Tagging information in **`_index.md`**
-2. Review Questions for comprehension provided in **`_review.md`**
-3. Next Steps for readers in **`_next-steps.md`**
+1. Metadata and Tagging information in `_index.md`
+2. Review Questions for comprehension provided in `_review.md`
+3. Next Steps for readers in `_next-steps.md`
 
 ## Metadata and Tagging 
 
-The following metadata is defined in the _index.md file:
+The following metadata is defined in the `_index.md` file:
 
 | Learning Path Metadata | Explanation |
 |---------------|----------|
@@ -33,8 +33,8 @@ The following metadata is defined in the _index.md file:
 | author_primary      | The name of the person who wrote the Learning Path in case there are questions about the material. |
 
 {{% notice Note%}}
-To specify a prerequisite Learning Path, do so with a relative path.
-- *The Learning Path on [Getting Started with Docker](../../docker) should be completed first.*
+To specify a prerequisite Learning Path, do so with a relative path. An example:
+- *The Learning Path on [Getting Started with Docker](../../docker) should be completed first.* was specified with this link: (../../docker) 
 {{% /notice %}}
 
 ## Tags
@@ -53,15 +53,15 @@ Specifies the primary subject the Learning Path covers. Can only be one subject 
 
 | Server and Cloud | Desktop and Laptop | Embedded | Mobile | Microcontroller |
 |---------|---------|---------|---------|---------|
-| ML | Windows on Arm| ML | ML | ML |
-| CI-CD | Porting | CI-CD| CI-CD | CI-CD |
+| CI-CD | CI-CD | CI-CD| CI-CD | CI-CD |
 | Performance and Architecture | Performance and Architecture | Performance and Architecture | Performance and Architecture | Performance and Architecture |
-| Containers and Virtualization | | Automotive | Gaming | Security |
-| Databases | | Cloud Connection | Graphics | Cloud Connection  |
-| Networking | | AR-VR | | Virtual Hardware |
-| Storage | | Storage | | |
-| Web | | Embedded Linux | | |
-| Libraries | | | | |
+| ML | Migration to Arm | ML | ML | ML |
+| Containers and Virtualization | Containers and Virtualization | Containers and Virtualization | Gaming | Security |
+| Storage | | Storage | AR-VR | Virtual Hardware |
+| Databases | | Automotive | Graphics | RTOS  |
+| Libraries | | Embedded Linux | | Libraries |
+| Web | | | | |
+| Networking | | | | |
 
 
 ### operatingsystems (closed)
@@ -72,6 +72,8 @@ Specifies the operating systems this Learning Path can run on. Select from this 
 | Linux         |
 | Windows       |
 | MacOS         |
+| ChromeOS      |
+| iOS           |
 | Android       |
 | RTOS          |
 | Baremetal     |

@@ -1,17 +1,17 @@
 ---
-title: Create a Learning Path
+title: Creating a new Learning Path
 
 description: Learn what type of content belongs in a Learning Path and how to format it.
 
-minutes_to_complete: 20
+minutes_to_complete: 60
 
 who_is_this_for: This topic is for content creators and software developers who want to share Arm related information as a step-by-step guide called a Learning Path.
 
 learning_objectives: 
     - Understand what type of content belongs in a Learning Path
-    - View writing style guidelines
-    - Define tags and metadata
-    - Format code, pictures, videos and more
+    - Create your own Learning Path
+    - Properly fill out the metadata
+    - Properly format code, pictures, videos and more
 
 prerequisites:
     - A GitHub account

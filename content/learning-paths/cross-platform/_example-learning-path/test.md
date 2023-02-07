@@ -1,8 +1,8 @@
 ---
 # User change
-title: "Test"
+title: "2e) How to test your code (optional)"
 
-weight: 8 # 1 is first, 2 is second, etc.
+weight: 9 # 1 is first, 2 is second, etc.
 
 # Do not modify these elements
 layout: "learningpathall"

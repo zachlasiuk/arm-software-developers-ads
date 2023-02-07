@@ -1,8 +1,8 @@
 ---
 # User change
-title: "Publish"
+title: "3) Submit for publishing"
 
-weight: 9 # 1 is first, 2 is second, etc.
+weight: 10 # 1 is first, 2 is second, etc.
 
 # Do not modify these elements
 layout: "learningpathall"

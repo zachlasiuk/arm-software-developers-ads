@@ -1,17 +1,17 @@
 ---
 # User change
-title: "Contribute: Formatting"
+title: "2c) Add formatted content"
 
-weight: 6 # 1 is first, 2 is second, etc.
+weight: 7 # 1 is first, 2 is second, etc.
 
 # Do not modify these elements
 layout: "learningpathall"
 ---
 <!-- ![alt-text #center](2-contribution-process.PNG "Contribution process") -->
 
-## Learning Path Formatting
+Refer to this section when you are have questions how to format your content correctly.
 
-This section provides information about formatting different types of content. 
+## Learning Path Formatting
 
 Use the quick links below to jump to the appropriate section for each type of formatting. 
 
