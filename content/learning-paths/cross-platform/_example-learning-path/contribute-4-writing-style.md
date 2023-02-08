@@ -9,7 +9,7 @@ layout: "learningpathall"
 ---
 <!-- ![alt-text #center](2-contribution-process.PNG "Contribution process") -->
 
-Read this section to effectivly write in a style consistent with the rest of the tutorials. Content that deviates too much from these guidelines will have to be revised accordingly. 
+Read this section to effectively write in a style consistent with the rest of the tutorials. Content that deviates too much from these guidelines will have to be revised accordingly. 
 
 ## Voice
 
@@ -158,4 +158,19 @@ Too nebulous:
 Recommended:
 - The library works on Linux and Windows 11.
 {{% /notice %}}
+
+## Expected skills of your target audience
+
+The learning paths are intended for software developers with differing experience levels (Introductory and advanced). The intended audience are expected to have some domain specific knowledge, examples of which are listed below:
+
+| Software Development Areas                 | Skills |
+|-------------------------------------       |----------|
+| Embedded                                   | <ul> <li> Understanding of programming languages such as C, C++ and assembly. </li> <li>Basic awareness of Linux OS, RTOSes. </li> <li>Fundamental knowledge of hardware and software architecture (Not necessarily Arm) </li> </ul> |
+| Server and Cloud                           | <ul> <li> Understanding of web services and Linux. </li> <li> Basic awareness of containerization and orchestration technologies such as Docker and Kubernetes. </li> <li> Proficienct in programming languages such as Python and Java. </li></ul> | 
+| Mobile				     | <ul> <li> Experience with software development on mobile platforms like Android. </li> <li> Experience with mobile development and testing frameworks. </li> </ul> |
+| Desktop and Laptop                         | <ul> <li> Experience with operating systems such as Windows and macOS. </li> <li> Experience with popular development frameworks such as .NET and Electron. </li> Proficient in programming languages such as C++, Java and Python </li> </ul> |
+ 
+
+
+
 
