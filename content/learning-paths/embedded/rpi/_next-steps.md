@@ -4,10 +4,10 @@
 # ================================================================================
 
 next_step_guidance: >
-   As a next step, try the Matter examples. For the latest Matter updates, go to [buildwithmatter.com](https://buildwithmatter.com)
+   As a next step, Learn how to use Docker
 # 1-3 sentence recommendation outlining how the reader can generally keep learning about these topics, and a specific explanation of why the next step is being recommended.
 
-recommended_path: "/learning-paths/microcontroller/avh_matter/"
+recommended_path: "/learning-paths/cross-platform/docker/"
 # Link to the next learning path being recommended(For example this could be /learning-paths/server-and-cloud/mongodb).
 
 # further_reading links to references related to this path. Can be:
@@ -19,6 +19,10 @@ further_reading:
     - resource:
         title: Raspberry Pi OS documentation
         link: https://www.raspberrypi.com/documentation/computers/os.html
+        type: documentation
+    - resource:
+        title: Image Classification with MobilenetV2, Arm NN, and TensorFlow Lite Delegate pre-built binaries Tutorial
+        link: https://developer.arm.com/documentation/102561
         type: documentation
 
 # ================================================================================

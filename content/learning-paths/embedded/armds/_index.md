@@ -1,5 +1,5 @@
 ---
-title: Get Started with Arm Development Studio
+title: Get started with Arm Development Studio
 
 description: Learn how to import, build, and debug your first Arm Development Studio project
 

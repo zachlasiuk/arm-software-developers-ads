@@ -10,43 +10,27 @@ layout: "learningpathall"
 
 ## TensorFlow for machine learning	
 				
-To see if TensorFlow can run on both the real Raspberry Pi 4 and the virtual Raspberry Pi 4 install it using:
+To compare TensorFlow on the Raspberry Pi 4 and the Arm cloud server install it and run an example. 
 		
-If pip is not installed, it can be installed with:
+Install `pip` and confirm `python` is `python3`. 
 
 ```bash
-sudo apt install python3-pip
+sudo apt install python-is-python3 python3-pip -y
 ```
 
-Next, install TensorFlow. 
+Install TensorFlow. 
 
 ```bash			
 pip install tensorflow-aarch64 tensorflow_io 
 ```
 				
-Run a [TensorFlow quickstart example](https://www.tensorflow.org/tutorials/quickstart/beginner) by following the instructions on both versions of the Raspberry Pi and compare the systems.
-
-The results below show the virtual Raspberry Pi 4 runs much faster than the physical board.
-
-| System | Time to complete              |
-|--------|------------------------------:|				
-| Physical Raspberry Pi 4 | 1 min 9 sec	|	
-| Virtual Raspberry Pi 4  | 22 sec      |
-
-## Summary 
-
-Both systems produced the same results, and the virtual Pi is significantly faster.
-
+Run a [TensorFlow quickstart example](https://www.tensorflow.org/tutorials/quickstart/beginner) by following the instructions. 
 
 ## Quickstart example
 
-To save time of entering all of the commands from the TensorFlow example, the code is shared here. Save it in a file named example.py.
+To save time entering the commands from the TensorFlow example, the code is shared below. 
 
-```bash
-python ./example.py
-```
-
-Here is the example code:
+Copy it and save it in a file named example.py.
 
 ```python
 import tensorflow as tf
@@ -87,3 +71,18 @@ probability_model = tf.keras.Sequential([
 probability_model(x_test[:5])
 
 ```
+
+Run the example using `python`.
+
+```bash
+time python ./example.py
+```
+
+## Results 
+
+The results below show the performance of the Raspberry Pi and the Arm server.
+
+| System | Time to complete              |
+|--------|------------------------------:|				
+| Raspberry Pi 4 | 1 min 46 sec	|	
+| Arm server (4 vCPU)  | 22 sec      |

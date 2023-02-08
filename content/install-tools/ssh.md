@@ -13,19 +13,19 @@ Feel free to seek out additional SSH tutorials or add more information to this p
 
 ## SSH 
 
-SSH is a client server application. An SSH server, also called the SSH deamon, runs on a remote machine.  An SSH client runs on the local machine and connects to the remote daemon. 
+SSH is a client server application. An SSH server, also called the SSH deamon, runs on a remote machine.  An SSH client runs on the local machine (the one you are typing on) and connects to the remote daemon. 
 
 ### Decide if the SSH daemon is already running
 
 For SSH to work, the SSH deamon must be running on the remote machine. Many Linux distributions install and run the SSH daemon automatically.
 
-To find out if the SSH daemon is already running running use the ps command.
+To find out if the SSH daemon is already running running use the `ps` command.
 
 ```console
 ps -ef | grep ssh
 ```
 
-If the result includes a line with sshd the daemon is running.
+If the result includes a line with `sshd` the daemon is running.
 
 
 ```console
@@ -46,17 +46,18 @@ Active: active (running) since Tue 2022-09-27 01:04:44 UTC; 17h ago
 
 ### Install SSH server
 
-If the SSH daemon is not running on the remote Linux machine, install it using the pacakge manager.
+If the SSH daemon is not running on the remote Linux machine, install it using the package manager.
 
-{{< tabpane code=true >}}
-  {{< tab header="Ubuntu/Debian" >}}
+For Ubuntu/Debian distributions:
+```bash
 sudo apt-get install openssh-server 
-  {{< /tab >}}
-  {{< tab header="Red Hat/Amazon Linux" >}}
-sudo yum install openssh-server 
-  {{< /tab >}}
-{{< /tabpane >}}
+```
 
+For Red Hat and Amazon Linux distributions.
+
+```bash
+sudo yum install openssh-server 
+```
 
 ### Start and Stop the SSH daemon
 
@@ -82,13 +83,14 @@ sudo systemctl restart ssh
 
 ### Use a password with SSH
 
-For security resons, cloud instances don’t enable password logins and there is no password set for the user accounts (such as ubuntu or ec2-user).
+For security reasons, cloud instances don’t enable password logins and there is no password set for the user accounts (such as ubuntu or ec2-user).
 
 Password access is useful to connect when the private key is not available. 
 
-To enable passwords edit the file /etc/sshd_config and set PasswordAuthentication to yes
+To enable passwords edit the file `/etc/sshd_config` and set `PasswordAuthentication` to yes
 
-To enable it in a script use:
+To enable it from the command line, run this command:
+
 ```console
 sudo sed -i '/PasswordAuthentication no/c\PasswordAuthentication yes' /etc/ssh/sshd_config
 ```
@@ -102,8 +104,6 @@ To create a password for the user ubuntu:
 ```console
 sudo passwd ubuntu
 ```
-
-Substitute the username as needed to set the password. 
 
 For improved security, set the security group of the cloud instance to allow port 22 traffic (SSH) from a minimal set of IP addresses, not anywhere on the internet. Use password access with caution. 
 
@@ -119,11 +119,11 @@ ssh-keygen
 
 Answer the questions. Pressing enter to accept all defaults works fine. 
 
-By default, the keys are created in ~/.ssh/id_rsa.pub (public key) and ~/.ssh/id_rsa (private key)
+By default, the keys are created in `~/.ssh/id_rsa.pub` (public key) and `~/.ssh/id_rsa` (private key)
 
 Cloud service providers have different ways to manage key pairs. They may also provide ways to generate keys and download them from the web console.
 
-AWS creates a key pair and provides a .pem file which is downloaded to the local machine to access AWS EC2 instances. The .pem file is the private key.
+AWS creates a key pair and provides a `.pem` file which is downloaded to the local machine to access AWS EC2 instances. The `.pem` file is the private key.
 
 Accessing an AWS EC2 instance running Ubuntu using:
 
@@ -131,11 +131,12 @@ Accessing an AWS EC2 instance running Ubuntu using:
 ssh -i <private_key> ubuntu@<public_ip_address>
 ```
 
-To use SSH without specifying -i <private_key> every time create an SSH configuration for the remote machine. 
+To use SSH without specifying `-i <private_key>` every time create an SSH configuration for the remote machine. 
 
-Edit the file ~/.ssh/config on the local machine
+Edit the file `~/.ssh/config` on the local machine. 
 
 Pick a name for the remote machine, such as myserver, add the public IP address or DNS name as the Hostname.
+
 User is the username on the remote machine and IdentityFile is the path to the private key on the local machine. 
 
 ```console
@@ -150,6 +151,18 @@ With a config file SSH can be used with only the Hostname and no arguments.
 ```console
 ssh myserver
 ```
+
+### Add a new key pair
+
+If you want to give access to somebody else without enabling password access or sharing your private key, you can add another key pair to the remote machine. You may also want to change the key pair used when the remote machine was created. 
+
+To add or change the key pair edit the file `~/.ssh/authorized_keys` on the remote machine. 
+
+Add a new public key to `authorized_keys`. You can also delete the current public key and just use the new one. 
+
+If you ran `ssh-keygen` on your local machine, the public key is at `~/.ssh/id_rsa.pub` 
+
+Use the new private key on the local machine to connect. If you have `~/.ssh/id_rsa` on your local machine it will be used automatically and you can SSH to the remote machine.
 
 
 
