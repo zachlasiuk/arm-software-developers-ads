@@ -12,7 +12,7 @@ layout: "learningpathall"
 
 Architecture compatibility between the Raspberry Pi and Arm server is a benefit for Docker users. Container images can be created using an Arm server and deployed to a Raspberry Pi with no need to worry about multi-architecture images or cross-compiling. Container repositories like Docker Hub also make sharing easy. 
 
-For complete information about Docker refer to [Learn how to use Docker](/cross-platform/docker/).
+For complete information about Docker refer to [Learn how to use Docker](/learning-paths/cross-platform/docker/).
 
 Install Docker using the universal Linux instructions and check it works by running the hello-world image:
 

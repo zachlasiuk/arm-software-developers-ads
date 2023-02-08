@@ -1,5 +1,5 @@
 ---
-title: Get Started with parallel application development
+title: Get started with parallel application development
 
 description: Learning path for building and running parallel applications on Arm and tips to debug and optimize them.
 

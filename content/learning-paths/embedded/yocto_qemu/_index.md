@@ -1,5 +1,5 @@
 ---
-title: Get Started with Yocto Linux on Qemu
+title: Get started with Yocto Linux on Qemu
 
 description: Introduction to building a minimal Yocto Linux image and running it on 64-bit Qemu Arm target
 
