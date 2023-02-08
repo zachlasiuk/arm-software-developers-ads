@@ -165,7 +165,7 @@ The learning paths are intended for software developers with differing experienc
 
 | Software Development Areas                 | Skills |
 |-------------------------------------       |----------|
-| Embedded                                   | <ul> <li> Understanding of programming languages such as C, C++ and assembly. </li> <li>Basic awareness of Linux OS, RTOSes. </li> <li>Fundamental knowledge of hardware and software architecture (Not necessarily Arm) </li> </ul> |
+| Embedded and Microcontroller               | Understanding of programming languages such as C, C++ and assembly. <br> <br> Basic awareness of Linux OS, RTOSes. <br> Fundamental knowledge of hardware and software architecture (Not necessarily Arm) |
 | Server and Cloud                           | <ul> <li> Understanding of web services and Linux. </li> <li> Basic awareness of containerization and orchestration technologies such as Docker and Kubernetes. </li> <li> Proficienct in programming languages such as Python and Java. </li></ul> | 
 | Mobile				     | <ul> <li> Experience with software development on mobile platforms like Android. </li> <li> Experience with mobile development and testing frameworks. </li> </ul> |
 | Desktop and Laptop                         | <ul> <li> Experience with operating systems such as Windows and macOS. </li> <li> Experience with popular development frameworks such as .NET and Electron. </li> Proficient in programming languages such as C++, Java and Python </li> </ul> |
