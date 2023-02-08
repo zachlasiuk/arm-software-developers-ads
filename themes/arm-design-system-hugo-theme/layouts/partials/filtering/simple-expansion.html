@@ -1,14 +1,22 @@
+{{$input_type := .type}}
+{{$group_name := .displayname | urlize}}
 <ads-expansion-panel is-default-expanded class="learning-path-filters u-padding-bottom-1">
     <span slot="toggle">{{.displayname}}</span>
     <div slot="content">
         <div class="u-flex u-flex-column">
             {{- range $name, $link := .dict_of_name_links -}}
-                    <ads-checkbox class=" tag-{{$name | urlize}}" id="{{$name}}" onclick="filterHandler_LearningPaths(this)">
-                        <a href="{{ $link }}">
+                {{if eq $input_type "radio"}}
+                    <div class="form-group ads-radio-style">
+                        <input type="radio" class="tag-{{$name | urlize}} radio-group-{{$group_name}}" id="{{$name | urlize}}" name="{{$group_name}}" onchange="filterHandler_radio_LearningPaths(this)"></input>
+                        <label for="{{$name | urlize}}">{{$name}}</label>
+                    </div>
+                {{else}}
+                    <ads-checkbox class="is-small tag-{{$name | urlize}}" id="{{$name | urlize}}" onclick="filterHandler_LearningPaths(this)">
                             {{ $name }}
-                        </a>
                     </ads-checkbox>
+                {{end}}
             {{end}}
         </div>
     </div>
 </ads-expansion-panel>
+

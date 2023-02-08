@@ -4,16 +4,14 @@
     <h2>About this Learning Path</h2>
     <!-- First row of info-->
     <div class="c-row">
-        <div class="u-display-grid u-gap-1 md:u-grid-columns-2">
+        <div class="u-display-grid lg:u-grid-columns-2">
 
             <div class="c-col">
                 <!-- Tags to the left, essential -->
+                <!--
                 <ads-tag class="path-card-tag {{.Params.skillLevels}}" text="{{.Params.skillLevels}}"></ads-tag>
-                <!-- <ads-tag class="path-card-section" text="{{.Parent.Title}}"></ads-tag> -->
-                {{ partial "ads-cards/ads-card-style.html" . }}
-
-
-                <p class="u-margin-top-1/2 u-margin-bottom-0">Reading time:
+                <ads-tag class="path-card-section" text="{{.Parent.Title}}"></ads-tag> 
+                            <p class="u-margin-top-1/2 u-margin-bottom-0">Reading time:
                     <span><i class="fa-solid fa-clock"></i></span>
                     {{.Params.minutes_to_complete}} minutes
                 </p>
@@ -24,40 +22,86 @@
                 <p class="u-font-style-light">Arm IP: 
                     <span><i class="fa-solid fa-microchip"></i></span>
                     {{ range .Params.armips }}<span><a href="https://developer.arm.com/Processors#q={{.}}" target="_blank" style="text-decoration: none;">{{.}}&nbsp;&nbsp;&nbsp;</a></span>{{end}}    
-                </p>                
+                </p>       
+                -->
+                
+                <table style="width: max-content;">
+                    <tr>
+                      <th colspan="2" style="text-align:left; height: fit-content; padding: 0px; margin: 0px;"><h4>Relevant Context</h4></th>
+                    </tr>
+                    <tr>
+                        <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Skill level:</td>
+                        <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >{{.Params.skillLevels}}</td>
+                      </tr>
+                    <tr>
+                      <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Reading time:</td>
+                      <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >
+                        <span><i class="fa-solid fa-clock fa-sm"></i></span> &nbsp; {{.Params.minutes_to_complete}} minutes
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Last updated:</td>
+                      <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;">                    
+                        <span><i class="fa-solid fa-calendar-days fa-sm"></i></span> &nbsp; {{ .Lastmod.UTC.Format "2 Jan 2006" }}
+                      </td>
+                    </tr>
+                    <tr>
+                        <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Test status:</td>
+                        <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;">
+                            {{ if .Params.test_maintenance}}
+                                {{ partial "test-maintenance/test-maintenance" . }}
+                            {{else}}
+                                <p style="font-style: italic;">-no tests initalized-</p>
+                            {{end}}
+                        </td>
+                      </tr>
+                  </table>          
             </div>
-            <div class="c-col u-flex-grow-1 u-margin-top-2">
-                <span>
-                    <ads-tag    href='{{ "/" | relLangURL}}subjects/{{.Params.subjects | urlize}}'>
-                        <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
-                        <span class="fa-solid fa-tag"></span>
-                        {{ .Params.subjects }}
-                    </ads-tag>
-                    {{ range .Params.operatingsystems }}
-                        <ads-tag    href='{{ "/" | relLangURL}}operatingsystems/{{. | urlize}}'>
-                            <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
-                            <span class="fa-solid fa-tag"></span>
-                            {{ . }}
-                        </ads-tag>
-                    {{ end }}
-                    {{ range .Params.softwares }}
-                        <ads-tag    href='{{ "/" | relLangURL}}softwares/{{. | urlize}}'>
-                            <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
-                            <span class="fa-solid fa-tag"></span>
-                            {{ . }}
-                        </ads-tag>
-                    {{ end }}
-                    {{ range .Params.tools }}
-                        <ads-tag    href='{{ "/" | relLangURL}}tools/{{. | urlize}}'>
-                            <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
-                            <span class="fa-solid fa-tag"></span>
-                            {{ . }}
-                        </ads-tag>
-                    {{ end }}
-                </span>
-                {{ if .Params.test_maintenance}}
-                    {{ partial "test-maintenance/test-maintenance" . }}
-                {{end}}
+            <div class="c-col">
+                <table>
+                    <tr>
+                      <th colspan="2" style="text-align:left; height: fit-content; padding: 0px; margin: 0px;"><h4>Find Related Content</h4></th>
+                    </tr>
+                    <tr>
+                        <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top; white-space: nowrap;">Arm IP:</td>
+                        <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >
+                            {{ range .Params.armips }}<span><a href="https://developer.arm.com/Processors#q={{.}}" target="_blank" style="text-decoration: none;">{{.}}&nbsp;<i class="fa-light fa-external-link fa-2xs" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;</a></span>{{end}}    
+                        </td>
+                      </tr>
+                    <tr>
+                      <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Tags:</td>
+                      <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >
+                        <span>
+                            <ads-tag    href='{{ "/" | relLangURL}}subjects/{{.Params.subjects | urlize}}'>
+                                <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                                <span class="fa-solid fa-tag"></span>
+                                {{ .Params.subjects }}
+                            </ads-tag>
+                            {{ range .Params.operatingsystems }}
+                                <ads-tag    href='{{ "/" | relLangURL}}operatingsystems/{{. | urlize}}'>
+                                    <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                                    <span class="fa-solid fa-tag"></span>
+                                    {{ . }}
+                                </ads-tag>
+                            {{ end }}
+                            {{ range .Params.softwares }}
+                                <ads-tag    href='{{ "/" | relLangURL}}softwares/{{. | urlize}}'>
+                                    <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                                    <span class="fa-solid fa-tag"></span>
+                                    {{ . }}
+                                </ads-tag>
+                            {{ end }}
+                            {{ range .Params.tools }}
+                                <ads-tag    href='{{ "/" | relLangURL}}tools/{{. | urlize}}'>
+                                    <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                                    <span class="fa-solid fa-tag"></span>
+                                    {{ . }}
+                                </ads-tag>
+                            {{ end }}
+                        </span>  
+                      </td>
+                    </tr>
+                  </table>   
             </div>
         </div>
     </div>            

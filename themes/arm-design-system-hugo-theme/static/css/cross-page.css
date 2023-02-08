@@ -9,6 +9,18 @@
 
 /* UNIVERSAL */
 /****************************************************/
+
+/* NOT WORKING, get Jo to help: Make font-size standard */
+/*body {
+        font-size: var(--ads-font-size-small);
+    }
+    @media (max-width: 576px) {
+        body {
+            font-size: var(--ads-font-size-large);
+        }
+    }
+*/    
+
 /* Hide breadcrumb when small screen. */
 @media (max-width: 576px) {
         #breadcrumb-element {

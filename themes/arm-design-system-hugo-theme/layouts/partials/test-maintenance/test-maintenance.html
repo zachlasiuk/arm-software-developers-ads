@@ -23,9 +23,9 @@
             {{ $el_m := replace $el ":" "_"}}
             {{ $el_m := replace $el_m "/" "_"}}
             {{ if eq "passed" $st }}
-                <img alt="{{ $el }} - passed" src="/img/badges/{{ $el_m }}-passed-green.svg">
+                <img alt="{{ $el }} - passed" src="/img/badges/{{ $el_m }}-passed-green.svg" style="padding-top: 6px;">
             {{ else }}
-                <img alt="{{ $el }} - FAILED" src="/img/badges/{{ $el_m }}-failed-red.svg">
+                <img alt="{{ $el }} - FAILED" src="/img/badges/{{ $el_m }}-failed-red.svg" style="padding-top: 6px;">
             {{ end }}
         {{ end }}
         {{if $.Page.Params.test_link }}

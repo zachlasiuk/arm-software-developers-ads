@@ -121,7 +121,30 @@ function filterHandler_LearningPaths(element) {
                         break;
                     }
                 };
+                console.log(tag)
                removeFacet(tag);
             }
         });
     }
+
+    function filterHandler_radio_LearningPaths(element) {
+        /*      Called from 'input' components themselves, triggered from a user press on radio
+                    Add Facet for correct one
+                    Remove all other facets
+        */
+            const all_path_cards = document.querySelectorAll('div.search-div');
+            
+            // Add facet
+            addFacet(element,all_path_cards);
+
+            // Remove all other subject facets
+            const all_radio_btns_with_same_group = document.querySelectorAll('input.radio-group-'+element.name);
+            for (let radio_btn of all_radio_btns_with_same_group) {
+                if (radio_btn.id != element.id) {
+                    let tag = 'tag-'+radio_btn.id;
+                    if (document.getElementById('filter-'+tag)) {
+                        removeFacet('tag-'+radio_btn.id);
+                    }
+                }
+            }
+        }

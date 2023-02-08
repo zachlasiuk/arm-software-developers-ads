@@ -10,7 +10,7 @@
 {{end}}
 
 <!-- Send in names from previous file and links generated from the routing name and the tag -->
-{{ partial "filtering/simple-expansion.html" (dict "dict_of_name_links" $dict_of_name_links "displayname" .displayname)}}
+{{ partial "filtering/simple-expansion.html" (dict "dict_of_name_links" $dict_of_name_links "displayname" .displayname "type" .type)}}
 
 
 
