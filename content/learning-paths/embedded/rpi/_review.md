@@ -13,34 +13,34 @@
 review:
     - questions:
         question: >
-            Arm Virtual Hardware provides a virtual Raspberry Pi which is similar, but slower than a real Raspberry Pi.
+            Raspberry Pi 4 hardware is similar, but slightly faster than an Arm server from a cloud service provider
         answers:
             - "True"
             - "False"
         correct_answer: 2                     
         explanation: >
-            The AVH Raspberry Pi is similar, but faster than the physical Raspberry Pi. 
+            The Raspberry Pi is similar, but slower than an Arm server
 
 
     - questions:
         question: >
-            The Arm Virtual Hardware Raspberry Pi supports Bluetooth connections with other devices in AVH
+            The Raspberry Pi supports peripherals such as USB and Bluetooth, which are also present on an Arm server
         answers:
             - "True"
             - "False"
-        correct_answer: 1                     
+        correct_answer: 2
         explanation: >
-            It is possible to use Bluetooth to connect to other devices in AVH
+            Arm servers do not have peripherals such as USB and Bluetooth, but in many cases can run the same software as a Raspberry Pi 
 
     - questions:
         question: >
-            Raspberry Pi OS is the only Linux distribution which can be run on the virtual Raspberry Pi in AVH
+            Raspberry Pi OS is the only Linux distribution which can be run on a Raspberry Pi 4
         answers:
             - "True"
             - "False"
         correct_answer: 2                     
         explanation: >
-            Other operating systems, such as Ubuntu, can be installed. 
+            Other operating systems, such as Ubuntu, can be installed on the Raspberry Pi. 
 
 # ================================================================================
 #       FIXED, DO NOT MODIFY

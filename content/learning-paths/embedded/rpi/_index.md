@@ -1,19 +1,20 @@
 ---
-title: Get Started with the Arm Virtual Hardware Raspberry Pi 4
+title: Get started with the Raspberry Pi 4
 
-description: Introduction to the virtual Raspberry Pi 4 in Arm Virtual Hardware
+description: comparing the Raspberry Pi 4 with an Arm cloud server
 
 minutes_to_complete: 90
 
-who_is_this_for: This is an introductory topic for software developers interested in using the Raspberry Pi 4 available on Arm Virtual Hardware.
+who_is_this_for: This is an introductory topic for software developers interested in the Raspberry Pi 4.
 
 learning_objectives: 
-    - Compare and contrast a physical Raspbery Pi 4 with the virtual Raspberry Pi in AVH
-    - Build and run multiple software examples on the virtual Raspberry Pi 
+    - Build and run multiple software examples on the Raspberry Pi 4
+    - Compare and contrast the Raspberry Pi 4 to an Arm cloud server
 
 prerequisites:
     - Some familiarity with embedded Linux is assumed
-    - Experience with single board computers, such as Raspberry Pi 
+    - A Raspberry Pi 4 board
+    - An [Arm based instance](/learning-paths/server-and-cloud/csp/) from an appropriate cloud service provider.
 
 author_primary: Jason Andrews
 
@@ -22,8 +23,8 @@ skilllevels: Introductory
 subjects: Embedded Linux
 armips:
     - Cortex-A
+    - Neoverse
 tools:
-    - Arm Virtual Hardware
 softwares:
     - TensorFlow
     - Docker
