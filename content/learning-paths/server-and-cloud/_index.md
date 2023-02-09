@@ -11,6 +11,8 @@ key_ip_icons:
 maintopic: true
 operatingsystems_filter:
 - Linux
+- Windows
+- macOS
 pinned_modules:
 - module:
     name: Recommended getting started learning paths

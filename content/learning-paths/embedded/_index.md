@@ -15,10 +15,12 @@ operatingsystems_filter:
 - Windows
 - Baremetal
 - Linux
+- macOS
 subjects_filter:
 - Performance and Architecture
 - Embedded Linux
 - Containers and Virtualization
+- CI-CD
 subtitle: Build secure, connected, smart IoT devices
 title: Embedded
 weight: 4

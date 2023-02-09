@@ -207,6 +207,45 @@ def printToolsReport():
     print() 
 
 
+def addSubjectsToStatusDict():
+    subject = learning_path_metadata['subjects']
+    if subject not in status_dic['subjects'][dir_main_category]:
+        # create subject key in dic
+        status_dic['subjects'][dir_main_category][subject] = {}
+        # check if in allow list
+        if subject in dic_allow_list["subjects"][dir_main_category]:
+            status_dic['subjects'][dir_main_category][subject]['allowed']          = True              
+        else:
+            status_dic['subjects'][dir_main_category][subject]['allowed']          = False              
+        status_dic['subjects'][dir_main_category][subject]['count']                = 1                # make count one
+        status_dic['subjects'][dir_main_category][subject]['learning-path-titles'] = [learning_path_metadata['title']]   # create list with title
+    else:
+        status_dic['subjects'][dir_main_category][subject]['count']               += 1                # increase count by one
+        status_dic['subjects'][dir_main_category][subject]['learning-path-titles'].append(learning_path_metadata['title'])   # add title to list
+
+    return status_dic
+
+def addOperatingSystemsToStatusDict():
+    operatingsystems = learning_path_metadata['operatingsystems']
+    if not operatingsystems:
+        operatingsystems = ['None']
+    for opsys in operatingsystems:
+        if opsys not in status_dic['operatingsystems'][dir_main_category]:
+            # create subject key in dic
+            status_dic['operatingsystems'][dir_main_category][opsys] = {}
+            # check if in allow list
+            if opsys in dic_allow_list["operatingsystems"]:
+                status_dic['operatingsystems'][dir_main_category][opsys]['allowed']          = True              
+            else:
+                status_dic['operatingsystems'][dir_main_category][opsys]['allowed']          = False              
+            status_dic['operatingsystems'][dir_main_category][opsys]['count']                = 1                # make count one
+            status_dic['operatingsystems'][dir_main_category][opsys]['learning-path-titles'] = [learning_path_metadata['title']]   # create list with title
+        else:
+            status_dic['operatingsystems'][dir_main_category][opsys]['count']               += 1                # increase count by one
+            status_dic['operatingsystems'][dir_main_category][opsys]['learning-path-titles'].append(learning_path_metadata['title'])   # add title to list
+
+    return status_dic
+
 
 if __name__ == "__main__":
 
@@ -225,6 +264,10 @@ if __name__ == "__main__":
     # 1
     # Load allow list dictionary
     dic_allow_list = yaml.safe_load(Path(file_yml_allow_list_filters).read_text())
+
+    #
+    # 1.5
+    # Modify dic_allow_list to include cross-platform tags at the right point
 
     #
     # 2
@@ -256,41 +299,10 @@ if __name__ == "__main__":
         for learning_path_index_file in learning_paths_in_category:
             learning_path_metadata = mdToMetadata(learning_path_index_file)
 
-            # Analyze Learning Path subjects, update status_dic
-            subject = learning_path_metadata['subjects']
-            if subject not in status_dic['subjects'][dir_main_category]:
-                # create subject key in dic
-                status_dic['subjects'][dir_main_category][subject] = {}
-                # check if in allow list
-                if subject in dic_allow_list["subjects"][dir_main_category]:
-                    status_dic['subjects'][dir_main_category][subject]['allowed']          = True              
-                else:
-                    status_dic['subjects'][dir_main_category][subject]['allowed']          = False              
-                status_dic['subjects'][dir_main_category][subject]['count']                = 1                # make count one
-                status_dic['subjects'][dir_main_category][subject]['learning-path-titles'] = [learning_path_metadata['title']]   # create list with title
-            else:
-                status_dic['subjects'][dir_main_category][subject]['count']               += 1                # increase count by one
-                status_dic['subjects'][dir_main_category][subject]['learning-path-titles'].append(learning_path_metadata['title'])   # add title to list
-
-            # Analyze Learning Path operatingsystems, update status_dic
-            operatingsystems = learning_path_metadata['operatingsystems']
-            if not operatingsystems:
-                operatingsystems = ['None']
-            for opsys in operatingsystems:
-                if opsys not in status_dic['operatingsystems'][dir_main_category]:
-                    # create subject key in dic
-                    status_dic['operatingsystems'][dir_main_category][opsys] = {}
-                    # check if in allow list
-                    if opsys in dic_allow_list["operatingsystems"]:
-                        status_dic['operatingsystems'][dir_main_category][opsys]['allowed']          = True              
-                    else:
-                        status_dic['operatingsystems'][dir_main_category][opsys]['allowed']          = False              
-                    status_dic['operatingsystems'][dir_main_category][opsys]['count']                = 1                # make count one
-                    status_dic['operatingsystems'][dir_main_category][opsys]['learning-path-titles'] = [learning_path_metadata['title']]   # create list with title
-                else:
-                    status_dic['operatingsystems'][dir_main_category][opsys]['count']               += 1                # increase count by one
-                    status_dic['operatingsystems'][dir_main_category][opsys]['learning-path-titles'].append(learning_path_metadata['title'])   # add title to list
-
+            # Update filters
+            status_dic = addSubjectsToStatusDict()
+            status_dic = addOperatingSystemsToStatusDict()
+            
             # Analyze Learning Path software, update status_dic
             softwares = learning_path_metadata['softwares']
             if not softwares:
@@ -318,6 +330,27 @@ if __name__ == "__main__":
                 else:
                     status_dic['tools'][t]['count']               += 1                # increase count by one
                     status_dic['tools'][t]['learning-path-titles'].append(learning_path_metadata['title'])   # add title to list
+
+
+    #
+    # 2.5
+    # Add cross-platform filters
+
+
+    # Iterate through each LP in cross-platform
+    dir_main_category = 'cross-platform'
+    learning_paths_in_category = [ Path(f.path+"/_index.md") for f in os.scandir(dir_relative_of_learning_paths+dir_main_category) if f.is_dir() ]
+    for learning_path_index_file in learning_paths_in_category:
+        # parse into metadata, excluding paths that start with an _ (such as the example learning path)
+        if not "_" == os.path.basename(os.path.dirname(learning_path_index_file))[0]:
+            learning_path_metadata = mdToMetadata(learning_path_index_file)
+            # Iterate over the categories the LP needs to fit into (shared_between list)
+            for dir_main_category in learning_path_metadata['shared_between']:
+                status_dic = addSubjectsToStatusDict()
+                status_dic = addOperatingSystemsToStatusDict()
+                # TBD on tools-software-languages
+
+
 
 
     #

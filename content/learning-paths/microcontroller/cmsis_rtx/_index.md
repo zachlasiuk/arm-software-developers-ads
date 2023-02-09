@@ -20,7 +20,7 @@ author_primary: Christopher Seidl
 
 ### Tags
 skilllevels: Introductory
-subjects: RTOS
+subjects: RTOS Fundamentals
 armips:
     - Cortex-M
 tools:
@@ -28,8 +28,9 @@ tools:
     - Arm Development Studio
 softwares:
     - C
-operatingsystems:
     - RTX
+operatingsystems:
+    - RTOS
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

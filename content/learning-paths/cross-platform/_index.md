@@ -63,11 +63,12 @@ tools_filter:
 - PaddleOCR
 - Keil MDK
 - MDK
-- Keil Studio Cloud
-- CMSIS-DAP
-- cmake
 - Tensorflow
 - STM Cube AI
+- Keil Studio Cloud
+- CMSIS-DAP
+- Corstone-300 FVP
+- cmake
 - Arm Ecosystem FVP
 - ULINK
 ---

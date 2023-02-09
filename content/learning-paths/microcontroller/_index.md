@@ -14,12 +14,12 @@ operatingsystems_filter:
 - Windows
 subjects_filter:
 - CI-CD
-- Libraries
 - ML
-- Security
 - Virtual Hardware
-- RTOS
+- Libraries
+- RTOS Fundamentals
 - Performance and Architecture
+- Security
 subtitle: Learn best practices for microcontroller development
 title: Microcontroller
 weight: 5

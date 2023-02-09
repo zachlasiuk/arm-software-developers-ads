@@ -17,7 +17,7 @@ author_primary: Pareena Verma
 
 ### Tags
 skilllevels: Introductory
-subjects: RTOS
+subjects: RTOS Fundamentals
 armips:
     - Cortex-M
 tools:
@@ -26,8 +26,9 @@ tools:
     - AWS EC2
 softwares:
     - C
+    - Zephyr
 operatingsystems:
-    - Zephyr RTOS
+    - RTOS
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

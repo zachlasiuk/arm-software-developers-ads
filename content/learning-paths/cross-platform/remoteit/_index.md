@@ -40,9 +40,9 @@ test_maintenance: false
 ### Cross-platform metadata only
 shared_path: true
 shared_between:
-    - Server and Cloud
-    - Desktop and Laptop
-    - Embedded
+    - server-and-cloud
+    - desktop-and-laptop
+    - embedded
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

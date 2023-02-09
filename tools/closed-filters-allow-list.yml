@@ -49,8 +49,6 @@ subjects:
     - CI-CD
     - Performance and Architecture
     - Security
-    - RTOS
+    - RTOS Fundamentals
     - Libraries
     - Virtual Hardware
-  #cross-platform: # IGNORE FOR NOW
-    # Can be anything here, requires special processing to sort out in checker script.

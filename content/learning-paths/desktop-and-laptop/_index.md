@@ -16,6 +16,8 @@ operatingsystems_filter:
 subjects_filter:
 - Performance and Architecture
 - Migration to Arm
+- Containers and Virtualization
+- CI-CD
 subtitle: Create and migrate apps for power efficient performance
 title: Desktop and Laptop
 weight: 2

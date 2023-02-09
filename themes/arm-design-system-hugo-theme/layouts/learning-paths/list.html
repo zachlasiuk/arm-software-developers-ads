@@ -4,7 +4,8 @@
 {{ $paths_to_list :=   .Pages }}
 
 
-{{ $section_title := .Title}}
+<!-- This assumes that the directory name of a learning path is the same as the .Title | urlize. If this IS NOT true, change '.TITLE | urilze' to get the name of the directory-->
+{{ $section_title := .Title | urlize}}
 {{ range where $.Site.Pages "Params.shared_path" true}}
     {{ if in .Params.shared_between $section_title}}
         {{ $paths_to_list = $paths_to_list | append . }}
