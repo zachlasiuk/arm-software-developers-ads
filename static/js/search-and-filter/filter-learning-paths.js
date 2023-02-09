@@ -1,21 +1,66 @@
 function filter_LearningPath_card(card) {
-    let to_hide = true;             // set as true by default; change to false if ALL filters apply
+    let to_hide = true;             // set as true by default; change to false if conditions apply
 
     // iterate over all active filters in the dom area; if this card matches ALL of the tags, keep shown
     const active_tags = document.getElementsByClassName('filter-facet');
     if (active_tags.length==0) { return false }        // Return already if no tags...no filtering neccecary 
 
+    // create dictionary, grouping together tags by group
+    // gropued_active_tags = {'group-subjects': [tag1,tag2], 'group-skill-level': [tag3]}
+    // group_status        = {'group-subjects': true, 'group-skill-level': true}
+    let grouped_active_tags = {};
+    let group_status = {};
+
     for (tag of active_tags) {
-        let active_tag_name = tag.id.replace('filter-',''); // tag.id = filter-tag-databases   strip off 'tag-'
+        let all_tag_classes = tag.classList;
+        for (c of all_tag_classes) {
+            if (c.includes('group-')) {
+                let group_name = c;
+                if (group_name in grouped_active_tags) {
+                    // add tag to existing dict list
+                    grouped_active_tags[group_name].push(tag);
+                }
+                else {
+                    // create new dict list (and initalize group_status)
+                    grouped_active_tags[group_name] = [tag];
+                    group_status[group_name] = true;
+                }
+            }
+        }
+    }
+    for (let group_name in grouped_active_tags) {
+        // iterate over tags in this group
+        for (tag of grouped_active_tags[group_name]){
+            // If card's classList contains any tag in this group (OR behavior), then don't hide
+            let active_tag_name   = tag.id.replace('filter-',''); // tag.id = filter-tag-databases   strip off 'filter-'
+            if (card.classList.contains(active_tag_name)) {
+                // Don't hide, it matches a tag in this category (and we can break as we already know we're set in this group)
+                group_status[group_name] = false;
+                break
+            }
+        }
+      }
+    
+    // If there are any trues, that means that this path should be hidden. If all falses, then it should be shown (to_hide = false)
+    if(!Object.values(group_status).includes(true)){ to_hide = false; }
+
+    /* OLD implementation of ANDS only
+    for (tag of active_tags) {
+        let active_tag_name   = tag.id.replace('filter-',''); // tag.id = filter-tag-databases   strip off 'filter-'
         if (card.classList.contains(active_tag_name)) {
             // DO NOT hide this card as it matches an active tag!
             to_hide = false;
         }        
-        else {
-            // If here, at least one tag doesn't match. Return true, meaning hide it
+        else { // If here, this tag isn't in the card's classlist (not a match)
+            // If the same group is present, OR behavior applies, so don't hide it.
+                // CARD:   tag-ci-cd   tag-web        tag-linux
+                // TAG:    tag-ci-cd   group-subjects
+            
+            //Return true, meaning hide it
             return true
         }
     }
+    */
 
     return to_hide
 }
@@ -54,8 +99,10 @@ function addFacet(element) {
     const all_path_cards = document.querySelectorAll('div.search-div');
 
      //////// Add Facet
-     // Get 'tag' and 'display_tag'
+     // Get 'tag' and 'display_tag' and filter_group
      let tag = null;
+     let filter_group = null;
+
      const tags = element.classList.values();
      for (let t of tags) {
          if (t.includes('tag')) {
@@ -63,11 +110,19 @@ function addFacet(element) {
              break;
          }
      };
-     display_tag = element.id;
+     for (let t of tags) {
+        if (t.includes('group')) {
+            filter_group = t;
+            break;
+        }
+    };
+
+     display_tag = element.name;
+     
      document.querySelector('#current-tag-bar').insertAdjacentHTML(
          'beforeend',
          `
-         <ads-tag href="#" class="filter-facet u-margin-left-1/2 u-margin-top-1/2 u-margin-bottom-1/2" id="filter-${tag}">
+         <ads-tag href="#" class="filter-facet u-margin-left-1/2 u-margin-top-1/2 u-margin-bottom-1/2 `+filter_group+`" id="filter-${tag}">
              <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                  ${display_tag}
                  <a onclick="removeFacet('${tag}')">

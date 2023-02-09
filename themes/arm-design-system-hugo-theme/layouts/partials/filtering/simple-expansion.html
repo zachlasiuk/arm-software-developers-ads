@@ -7,11 +7,11 @@
             {{- range $name, $link := .dict_of_name_links -}}
                 {{if eq $input_type "radio"}}
                     <div class="form-group ads-radio-style">
-                        <input type="radio" class="tag-{{$name | urlize}} radio-group-{{$group_name}}" id="{{$name | urlize}}" name="{{$group_name}}" onchange="filterHandler_radio_LearningPaths(this)"></input>
+                        <input type="radio" class="tag-{{$name | urlize}} group-{{$group_name}}" id="{{$name | urlize}}" name="{{$group_name}}" onchange="filterHandler_radio_LearningPaths(this)"></input>
                         <label for="{{$name | urlize}}">{{$name}}</label>
                     </div>
                 {{else}}
-                    <ads-checkbox class="is-small tag-{{$name | urlize}}" id="{{$name | urlize}}" onclick="filterHandler_LearningPaths(this)">
+                    <ads-checkbox class="is-small tag-{{$name | urlize}} group-{{$group_name}}" id="{{$name | urlize}}" name="{{$name}}" onclick="filterHandler_LearningPaths(this)">
                             {{ $name }}
                     </ads-checkbox>
                 {{end}}

@@ -23,11 +23,11 @@
     <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 320px; max-width: 320px;">
         <h3 class="u-margin-top-0">Filter</h3>
         <!-- Subjects, CLOSED SCHEMA -->
-        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Subjects" "routing" "subjects" "tagnames" .Params.subjects_filter "type" "radio")}}  
+        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Subjects" "routing" "subjects" "tagnames" .Params.subjects_filter)}}  
         <!-- Operating Systems, CLOSED SCHEMA -->
         {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "OS" "routing" "operatingsystems" "tagnames" .Params.operatingsystems_filter)}} 
         <!-- Skill level, CLOSED SCHEMA -->
-        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Skill Level" "routing" "skilllevels" "tagnames" (slice "Introductory" "Advanced") "type" "radio")}}  
+        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Skill Level" "routing" "skilllevels" "tagnames" (slice "Introductory" "Advanced"))}}  
         <!-- Software -->
         {{ partial "filtering/open-expansion.html" (dict "context" . "displayname" "Software")}}
         <!-- Tools -->
