@@ -22,12 +22,11 @@ skilllevels: Introductory
 subjects: Embedded Linux
 armips:
     - Cortex-A
-tools:
-    - Qemu
-softwares:
-    - Yocto Linux
 operatingsystems:
     - Linux
+tools_software_languages:
+    - Yocto Linux
+    - QEMU
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

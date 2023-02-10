@@ -21,12 +21,11 @@ skilllevels: Introductory
 subjects: Performance and Architecture
 armips:
     - Neoverse
-tools:
-    - gcc
-softwares:
-    - ArmRAL
 operatingsystems:
     - Linux
+tools_software_languages:
+    - ArmRAL
+    - GCC
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

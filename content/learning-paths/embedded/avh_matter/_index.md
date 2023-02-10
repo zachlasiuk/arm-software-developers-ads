@@ -23,14 +23,13 @@ skilllevels: Introductory
 subjects: Embedded Linux
 armips:
     - Cortex-A
-tools:
-    - Arm Virtual Hardware
-    - GitHub
-softwares:
-    - C
-    - JavaScript
 operatingsystems:
     - Linux
+tools_software_languages:
+    - C
+    - JavaScript
+    - Arm Virtual Hardware
+    - GitHub
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

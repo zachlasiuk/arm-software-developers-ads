@@ -21,11 +21,10 @@ skilllevels: Introductory
 subjects: Libraries
 armips:
     - Neoverse
-tools:
-softwares:
-    - snappy
 operatingsystems:
     - Linux
+tools_software_languages:
+    - snappy
 
 ### Test
 test_maintenance: true

@@ -25,12 +25,14 @@ subjects: CI-CD
 armips:
     - Neoverse
     - Cortex-A
-tools:
-softwares:
 operatingsystems:
     - Linux
     - Windows
     - macOS
+tools_software_languages:
+    - remote.it
+    - SSH
+    - VNC
 
 ### Test
 test_images:

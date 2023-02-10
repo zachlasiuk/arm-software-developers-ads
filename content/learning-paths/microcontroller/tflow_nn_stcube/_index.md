@@ -24,13 +24,12 @@ skilllevels: Introductory
 subjects: ML
 armips:
     - Cortex-M
-tools:
-    - Tensorflow
-    - STM Cube AI
-softwares:
-    - C
 operatingsystems:
     - Bare-metal
+tools_software_languages:
+    - C
+    - Tensorflow
+    - STM Cube AI
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

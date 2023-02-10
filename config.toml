@@ -17,13 +17,18 @@ cloudFrontDistributionID = "E1KJFR5JSKYU64"
     lastmod = [ "lastmod", ":git", "date", "publishDate" ]
 
 [taxonomies]
-    skilllevel          = "skilllevels"
-    armip               = "armips"
-    tool                = "tools"
-    software            = "softwares"
-    subject             = "subjects"
-    developerprogram   = "developerprograms"
-    operatingsystem    = "operatingsystems"
+    subject                 = "subjects"
+    operatingsystem         = "operatingsystems"
+    skilllevel              = "skilllevels"
+    tool_software_language  = "tools_software_languages"
+    armip                   = "armips"
+
+[permalinks]
+    tools_software_languages = "/tag/:slug/"
+    operatingsystem = "/tag/:slug/"
+    subjects = "/tag/:slug/"
+
+
 
 [related]
     threshold = 0 

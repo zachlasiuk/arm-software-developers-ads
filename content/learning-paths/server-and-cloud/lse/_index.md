@@ -20,13 +20,12 @@ author_primary: Jason Andrews
 skilllevels: Introductory
 subjects: Performance and Architecture
 armips:
-    - Neoverse
-tools:
-    - gcc
-softwares: 
+    - Neoverse 
 operatingsystems:
     - Linux 
-
+tools_software_languages:
+    - GCC
+    
 ### FIXED, DO NOT MODIFY
 # ================================================================================
 weight: 1                       # _index.md always has weight of 1 to order correctly

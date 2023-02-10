@@ -25,13 +25,12 @@ skilllevels: Introductory
 subjects: Security 
 armips:
     - Cortex-M
-tools:
-    - Arm Compiler for Embedded
-    - Keil MDK
-softwares:
-    - C
 operatingsystems:
     - Bare-metal
+tools_software_languages:
+    - Arm Compiler for Embedded
+    - Keil MDK
+    - C
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

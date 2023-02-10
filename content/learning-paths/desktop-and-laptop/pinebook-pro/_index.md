@@ -24,13 +24,12 @@ subjects: Performance and Architecture
 armips:
     - Cortex-A72
     - Cortex-A53
-tools:
-softwares:
+operatingsystems:
+    - Linux
+tools_software_languages:
     - i3
     - Alacritty
     - NeoVim
-operatingsystems:
-    - Linux
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

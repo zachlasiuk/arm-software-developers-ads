@@ -24,11 +24,10 @@ skilllevels: Introductory
 subjects: Containers and Virtualization
 armips:
     - Neoverse
-tools:
-    - Docker
-softwares:
 operatingsystems:
     - Linux
+tools_software_languages:
+    - Docker
 
 ### Cross-platform metadata only
 shared_path: true

@@ -22,15 +22,14 @@ skilllevels: Introductory
 subjects: ML
 armips:
     - Cortex-M
-tools:
+operatingsystems:
+    - Baremetal
+tools_software_languages:
+    - C
     - Corstone-300 FVP
     - Arm Virtual Hardware
     - Arm Compiler for Embedded
     - AWS EC2
-softwares:
-    - C
-operatingsystems:
-    - Bare-metal
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

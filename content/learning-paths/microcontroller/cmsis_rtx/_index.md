@@ -23,14 +23,13 @@ skilllevels: Introductory
 subjects: RTOS Fundamentals
 armips:
     - Cortex-M
-tools:
-    - Keil MDK
-    - Arm Development Studio
-softwares:
-    - C
-    - RTX
 operatingsystems:
     - RTOS
+tools_software_languages:
+    - C
+    - RTX
+    - Keil MDK
+    - Arm Development Studio
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

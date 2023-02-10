@@ -27,13 +27,9 @@ subjects: Performance and Architecture
 armips:
     - Cortex-A
     - GPU
-tools:
-    - GCC
-softwares:
 operatingsystems:
     - Linux
     - Android
-
 tools_software_languages:
     - GCC
 

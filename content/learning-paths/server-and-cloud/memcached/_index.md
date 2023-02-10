@@ -21,11 +21,10 @@ skilllevels: Introductory
 subjects: Web
 armips:
     - Neoverse
-tools:
-softwares:
-    - Memcached
 operatingsystems:
     - Linux
+tools_software_languages:
+    - Memcached
 
 ### Test
 test_images:

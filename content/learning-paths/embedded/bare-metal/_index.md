@@ -23,15 +23,15 @@ skilllevels: Introductory
 subjects: Performance and Architecture
 armips:
     - Cortex-A
-tools:
+operatingsystems:
+    - Baremetal
+tools_software_languages:
+    - C
+    - Assembly
     - Arm Development Studio
     - Arm Compiler for Embedded
     - Arm Fast Models   
-softwares:
-    - C
-    - Assembly
-operatingsystems:
-    - Baremetal
+
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

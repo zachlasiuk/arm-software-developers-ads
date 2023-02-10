@@ -25,14 +25,13 @@ armips:
     - Neoverse
     - Cortex-A75
     - Cortex-A55
-tools:
-    - GCC
-    - Armclang
-softwares:
-    - C
-    - Assembly
 operatingsystems:
     - Linux
+tools_software_languages:
+    - C
+    - Assembly
+    - GCC
+    - Armclang
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

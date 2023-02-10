@@ -21,13 +21,12 @@ skilllevels: Advanced
 subjects: Databases
 armips:
     - Neoverse
-tools:
-softwares:
+operatingsystems:
+    - Linux
+tools_software_languages:
     - SQL
     - MySQL
     - InnoDB
-operatingsystems:
-    - Linux
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

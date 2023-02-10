@@ -21,11 +21,11 @@ skilllevels: Introductory
 subjects: Libraries
 armips:
     - Neoverse
-tools:
-softwares:
-    - x265
 operatingsystems:
     - Linux
+tools_software_languages:
+    - x265
+
 
 ### Test
 test_images:

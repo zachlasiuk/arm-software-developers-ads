@@ -26,14 +26,13 @@ skilllevels: Advanced
 subjects: Migration to Arm
 armips:
     - Cortex-A
-tools:
-softwares:
-    - SSH
-    - VS Code
-    - VNC
 operatingsystems:
     - Windows
     - Linux
+tools_software_languages:
+    - SSH
+    - VS Code
+    - VNC
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

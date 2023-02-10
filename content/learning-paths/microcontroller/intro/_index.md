@@ -20,10 +20,9 @@ skilllevels: Introductory
 subjects: Performance and Architecture 
 armips:
     - Cortex-M
-tools:
-softwares:
 operatingsystems:
     - RTOS
+tools_software_languages:
 
 
 ### FIXED, DO NOT MODIFY

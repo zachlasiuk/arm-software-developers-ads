@@ -21,12 +21,11 @@ skilllevels: Advanced
 subjects: Databases
 armips:
     - Neoverse
-tools:
-softwares:
-    - SQL
-    - PostgreSQL
 operatingsystems:
     - Linux
+tools_software_languages:
+    - SQL
+    - PostgreSQL
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

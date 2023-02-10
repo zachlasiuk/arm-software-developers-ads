@@ -21,12 +21,11 @@ skilllevels: Introductory
 subjects: Databases
 armips:
     - Neoverse
-tools:
-    - Terraform
-    - Ansible
-softwares:
 operatingsystems:
     - Linux
+tools_software_languages:
+    - Terraform
+    - Ansible
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

@@ -22,11 +22,10 @@ skilllevels: Introductory
 subjects: Performance and Architecture
 armips:
     - Neoverse
-tools:
-softwares:
-    - Pointer Authentication
 operatingsystems:
     - Linux
+tools_software_languages:
+    - Pointer Authentication
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

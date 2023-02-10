@@ -22,11 +22,10 @@ skilllevels: Introductory
 subjects: Libraries
 armips:
     - Neoverse
-tools:
-softwares:
-    - zlib
 operatingsystems:
     - Linux
+tools_software_languages:
+    - zlib
 
 ### Test
 test_images:

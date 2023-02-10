@@ -21,12 +21,12 @@ skilllevels: Advanced
 subjects: CI-CD
 armips:
     - Neoverse
-tools:
-    - Docker
-softwares:
-    - AWS CodeBuild
 operatingsystems:
     - Linux
+tools_software_languages:
+    - AWS CodeBuild
+    - Docker
+
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

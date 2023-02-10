@@ -22,11 +22,10 @@ skilllevels: Introductory
 subjects: Libraries
 armips:
     - Neoverse
-tools:
-softwares:
-    - Vectorscan
 operatingsystems:
     - Linux
+tools_software_languages:
+    - Vectorscan
 
 ### Test
 test_maintenance: true

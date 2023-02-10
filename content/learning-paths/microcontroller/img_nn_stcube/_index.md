@@ -24,13 +24,12 @@ skilllevels: Advanced
 subjects: ML
 armips:
     - Cortex-M
-tools:
+operatingsystems:
+    - Baremetal
+tools_software_languages:
+    - C
     - Tensorflow
     - STM Cube AI
-softwares:
-    - C
-operatingsystems:
-    - Bare-metal
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

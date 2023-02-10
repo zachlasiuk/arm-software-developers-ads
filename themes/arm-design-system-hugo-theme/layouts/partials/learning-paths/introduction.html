@@ -64,20 +64,20 @@
                       <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Tags:</td>
                       <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >
                         <span>
-                            <ads-tag    href='{{ "/" | relLangURL}}subjects/{{.Params.subjects | urlize}}'>
+                            <ads-tag    href='{{ "/" | relLangURL}}tag/{{.Params.subjects | urlize}}'>
                                 <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                                 <span class="fa-solid fa-tag"></span>
                                 {{ .Params.subjects }}
                             </ads-tag>
                             {{ range .Params.operatingsystems }}
-                                <ads-tag    href='{{ "/" | relLangURL}}operatingsystems/{{. | urlize}}'>
+                                <ads-tag    href='{{ "/" | relLangURL}}tag/{{. | urlize}}'>
                                     <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                                     <span class="fa-solid fa-tag"></span>
                                     {{ . }}
                                 </ads-tag>
                             {{ end }}
                             {{ range .Params.tools_software_languages }}
-                                <ads-tag    href='{{ "/" | relLangURL}}tools_software_languages/{{. | urlize}}'>
+                                <ads-tag    href='{{ "/" | relLangURL}}tag/{{. | urlize}}'>
                                     <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                                     <span class="fa-solid fa-tag"></span>
                                     {{ . }}

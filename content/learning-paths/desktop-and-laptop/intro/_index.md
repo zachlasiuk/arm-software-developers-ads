@@ -19,12 +19,11 @@ author_primary: Jason Andrews
 skilllevels: Introductory
 subjects: Performance and Architecture
 armips:
-tools:
-softwares:
 operatingsystems:
     - Linux
     - Windows
     - macOS
+tools_software_languages:
 
 
 ### FIXED, DO NOT MODIFY

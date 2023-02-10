@@ -26,13 +26,12 @@ skilllevels: Introductory
 subjects: Performance and Architecture
 armips:
     - Cortex-M
-tools:
+operatingsystems:
+    - Baremetal
+tools_software_languages:
+    - C
     - GCC
     - cmake
-softwares:
-    - C
-operatingsystems:
-    - Bare-metal
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

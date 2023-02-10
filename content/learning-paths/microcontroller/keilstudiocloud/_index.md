@@ -23,16 +23,14 @@ skilllevels: Introductory
 subjects: Virtual Hardware
 armips:
     - Cortex-M
-tools:
+operatingsystems:
+    - Bare-metal
+tools_software_languages:
+    - C
     - Keil Studio Cloud
     - Arm Compiler for Embedded
     - Arm Virtual Hardware
     - CMSIS-DAP
-softwares:
-    - C
-
-operatingsystems:
-    - Bare-metal
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

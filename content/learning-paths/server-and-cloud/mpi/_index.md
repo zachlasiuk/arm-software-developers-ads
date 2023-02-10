@@ -26,17 +26,16 @@ skilllevels: Advanced
 subjects: Performance and Architecture
 armips:
     - Neoverse
-tools:
+operatingsystems:
+    - Linux
+tools_software_languages:
+    - C
+    - Fortran
+    - Python
     - GCC
     - Armclang
     - Arm Forge
     - gdb
-softwares:
-    - C
-    - Fortran
-    - Python
-operatingsystems:
-    - Linux
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

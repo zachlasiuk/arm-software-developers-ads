@@ -37,16 +37,14 @@ skilllevels: Advanced
 subjects: Performance and Architecture
 armips:
     - Cortex-M
-tools:
+operatingsystems:
+    - RTOS
+tools_software_languages:
+    - C
     - Keil MDK
     - Arm Ecosystem FVP
     - ULINK
-softwares:
-    - C
 
-operatingsystems:
-    - RTOS
-    
 # ================================================================================
 #       FIXED, DO NOT MODIFY
 # ================================================================================

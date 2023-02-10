@@ -21,11 +21,10 @@ skilllevels: Introductory
 subjects: ML
 armips:
     - Neoverse
-tools:
-softwares:
-    - tensorflow
 operatingsystems:
     - Linux
+tools_software_languages:
+    - Tensorflow
 
 ### Test
 test_maintenance: true

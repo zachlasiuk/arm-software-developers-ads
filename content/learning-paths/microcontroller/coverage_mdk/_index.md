@@ -21,13 +21,12 @@ skilllevels: Introductory
 subjects: CI-CD
 armips:
     - Cortex-M
-tools:
-    - MDK
-softwares:
-    - C
 operatingsystems:
-    - Bare-metal
+    - Baremetal
     - RTOS
+tools_software_languages:
+    - C
+    - MDK
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

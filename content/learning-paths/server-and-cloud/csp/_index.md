@@ -19,10 +19,9 @@ skilllevels: Introductory
 subjects: Containers and Virtualization
 armips:
     - Neoverse
-tools:
-softwares:
 operatingsystems:
     - Linux
+tools_software_languages:
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

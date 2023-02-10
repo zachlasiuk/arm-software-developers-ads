@@ -22,13 +22,12 @@ skilllevels: Introductory
 subjects: CI-CD
 armips:
     - Cortex-M
-tools:
+operatingsystems:
+tools_software_languages:
+    - yml
     - Arm Virtual Hardware
     - GitHub
     - AWS EC2 
-softwares:
-    - yml
-operatingsystems:
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

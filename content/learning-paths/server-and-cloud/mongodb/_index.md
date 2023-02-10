@@ -22,15 +22,14 @@ skilllevels: Introductory
 subjects: Databases
 armips:
     - Neoverse
-tools:
+operatingsystems:
+    - Linux
+tools_software_languages:
+    - MongoDB
     - AWS EC2
     - cbuild
     - GCC
     - Snort
-softwares:
-    - MongoDB
-operatingsystems:
-    - Linux
 
 ### Test
 test_maintenance: true

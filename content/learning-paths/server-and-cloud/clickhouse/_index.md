@@ -21,10 +21,10 @@ skilllevels: Introductory
 subjects: Databases
 armips:
     - Neoverse
-tools:
-softwares:
 operatingsystems:
     - Linux
+tools_software_languages:
+
 
 ### Test
 test_maintenance: true

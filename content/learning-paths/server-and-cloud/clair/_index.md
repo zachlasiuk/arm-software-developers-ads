@@ -21,12 +21,13 @@ skilllevels: Advanced
 subjects: Containers and Virtualization
 armips:
     - Neoverse
-tools:
-    - docker and docker-compose
-    - go
-softwares:
 operatingsystems:
     - Linux
+tools_software_languages:
+    - Docker
+    - Docker Compose
+    - Go 
+    - Clair
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

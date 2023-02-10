@@ -21,10 +21,9 @@ skilllevels: Advanced
 subjects: Performance and Architecture
 armips:
     - Neoverse
-tools:
-softwares:
 operatingsystems:
     - Linux
+tools_software_languages:
 
 ### Test
 test_images:

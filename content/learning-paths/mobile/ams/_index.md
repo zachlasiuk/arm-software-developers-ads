@@ -24,14 +24,8 @@ armips:
     - Cortex-A
     - Mali
     - Immortalis
-tools:
-    - Arm Mobile Studio
-softwares:
-    - C++
-    - Java
 operatingsystems:
     - Android
-
 tools_software_languages:
     - Arm Mobile Studio
     - C++

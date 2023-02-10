@@ -21,10 +21,9 @@ subjects: Performance and Architecture
 armips:
     - Cortex-A
     - Cortex-R
-tools:
-softwares:
 operatingsystems:
     - Linux
+tools_software_languages:
 
 
 ### FIXED, DO NOT MODIFY

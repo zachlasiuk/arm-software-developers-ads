@@ -20,15 +20,14 @@ skilllevels: Introductory
 subjects: RTOS Fundamentals
 armips:
     - Cortex-M
-tools:
+operatingsystems:
+    - RTOS
+tools_software_languages:
     - Corstone-300 FVP
     - Arm Virtual Hardware
     - AWS EC2
-softwares:
     - C
     - Zephyr
-operatingsystems:
-    - RTOS
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

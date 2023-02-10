@@ -25,15 +25,14 @@ armips:
     - Cortex-R
     - Cortex-M
     - Neoverse
-tools:
+operatingsystems:
+    - Baremetal
+tools_software_languages:
     - Arm Development Studio
     - Arm Compiler for Embedded
     - Arm Fast Models
     - DSTREAM
-softwares:
     - C
-operatingsystems:
-    - Baremetal
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

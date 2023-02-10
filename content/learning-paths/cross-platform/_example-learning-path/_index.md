@@ -23,9 +23,8 @@ skilllevels: Introductory
 subjects: NONE
 armips:
     - All
-tools:
-softwares:
 operatingsystems:
+tools_software_languages:
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

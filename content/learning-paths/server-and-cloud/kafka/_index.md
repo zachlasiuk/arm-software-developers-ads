@@ -22,12 +22,11 @@ skilllevels: Advanced
 subjects: Storage
 armips:
     - Neoverse
-tools:
-softwares:
-    - Kafka
-    - Zookeeper
 operatingsystems:
     - Linux
+tools_software_languages:
+    - Kafka
+    - Zookeeper
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

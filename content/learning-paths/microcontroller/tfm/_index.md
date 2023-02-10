@@ -20,14 +20,14 @@ skilllevels: Introductory
 subjects: Security
 armips:
     - Cortex-M
-tools:
+operatingsystems:
+    - Bare-metal
+tools_software_languages:
     - Corstone-300 FVP
     - Arm Virtual Hardware
     - AWS EC2
-softwares:
     - C
-operatingsystems:
-    - Bare-metal
+
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

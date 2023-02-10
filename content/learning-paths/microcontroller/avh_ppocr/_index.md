@@ -25,16 +25,15 @@ skilllevels: Introductory
 subjects: ML
 armips:
     - Cortex-M
-tools:
+operatingsystems:
+    - Baremetal
+tools_software_languages:
+    - C
+    - Python
     - AWS EC2
     - GCC
     - TVM
     - PaddleOCR
-softwares:
-    - C
-    - Python
-operatingsystems:
-    - Bare-metal
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

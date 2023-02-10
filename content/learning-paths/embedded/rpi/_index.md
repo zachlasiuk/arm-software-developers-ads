@@ -24,12 +24,11 @@ subjects: Embedded Linux
 armips:
     - Cortex-A
     - Neoverse
-tools:
-softwares:
-    - TensorFlow
-    - Docker
 operatingsystems:
     - Linux
+tools_software_languages:
+    - TensorFlow
+    - Docker
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

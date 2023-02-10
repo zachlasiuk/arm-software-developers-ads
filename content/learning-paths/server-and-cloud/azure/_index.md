@@ -22,11 +22,11 @@ skilllevels: Introductory
 subjects: Containers and Virtualization
 armips:
     - Neoverse
-tools:
-    - Terraform
-softwares:
 operatingsystems:
     - Linux
+tools_software_languages:
+    - Terraform
+    - Azure
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

@@ -22,10 +22,10 @@ skilllevels: Introductory
 subjects: Web
 armips:
     - Neoverse
-tools:
-softwares:
 operatingsystems:
     - Linux
+tools_software_languages:
+    - Nginx
 
 ### Test
 test_maintenance: true

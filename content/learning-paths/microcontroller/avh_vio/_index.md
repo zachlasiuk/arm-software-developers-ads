@@ -20,14 +20,13 @@ skilllevels: Introductory
 subjects: Virtual Hardware
 armips:
     - Cortex-M
-tools:
-    - Arm Virtual Hardware
-    - AWS EC2
-softwares:
+operatingsystems:
+    - Baremetal
+tools_software_languages:
     - Python
     - C
-operatingsystems:
-    - Bare-metal
+    - Arm Virtual Hardware
+    - AWS EC2
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================
