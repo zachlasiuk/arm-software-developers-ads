@@ -94,7 +94,8 @@
                                     <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top; white-space: nowrap;">Official docs:</td>
                                     <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >
                                         {{ if .Params.official_docs}}
-                                            docs exist!
+                                            <!-- docs exist! -->
+                                            <a href="{{.Params.official_docs}}">{{.Params.official_docs}}</a>
                                         {{else}}
                                             <p style="font-style: italic;">-no documentation link-</p>
                                         {{end}}
