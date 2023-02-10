@@ -18,19 +18,18 @@
                 &nbsp;filters.
             </div>
 
-            
-            
+            <div style="max-height: 300px;   overflow:auto; margin-right: -16px">
+                {{ range $x, $y := .tagnames }}
+                    {{range $name, $count := $y}}
 
-            {{ range $x, $y := .tagnames }}
-                {{range $name, $count := $y}}
-
-                    <div class="openfilter-search-div">
-                        <ads-checkbox class="is-small tag-{{$name | urlize}} group-{{$group_name}}" id="{{$name | urlize}}" name="{{$name}}" onclick="filterHandler_LearningPaths(this)">
-                            <div class="search-title">{{$name}} {{$count}}</div>
-                        </ads-checkbox>
-                    </div>
+                        <div class="openfilter-search-div">
+                            <ads-checkbox class="is-small tag-{{$name | urlize}} group-{{$group_name}}" id="{{$name | urlize}}" name="{{$name}}" onclick="filterHandler_LearningPaths(this)">
+                                <div class="search-title">{{$name}}</div>
+                            </ads-checkbox>
+                        </div>
+                    {{end}}
                 {{end}}
-            {{end}}
+            </div>
         </div>
     </div>
 </ads-expansion-panel>
