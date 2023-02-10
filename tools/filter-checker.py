@@ -30,6 +30,11 @@ def byCount(element):
     # return the only value in dict, which is the count
     return element[next(iter(element))]
     
+def Alphabetical(element):
+    # return the only value in dict, which is the name
+    return next(iter(element)).lower()
+
+
 def updateFiltersInIndexMD(main_category):
     category_index_md_file = dir_relative_of_learning_paths+main_category+"/_index.md"
 
@@ -80,7 +85,8 @@ def updateFiltersInIndexMD(main_category):
                 final_filter_with_counts.append({f_option:all_existing_filters[f_option]['count']})
 
         # Order the filters by count, high to low (not working, don't know why.)
-        final_filter_with_counts.sort(reverse=True, key=byCount)
+        final_filter_with_counts.sort(key=Alphabetical)   # key=Alphabetical or (reverse=True,key=byCount)
+
             # code when it was a dict: #final_filter_with_counts =  dict(sorted(final_filter_with_counts.items(), key=lambda x:x[1][1], reverse=True))
         
         # Replace category filters in existing metadata, ordering at the same time

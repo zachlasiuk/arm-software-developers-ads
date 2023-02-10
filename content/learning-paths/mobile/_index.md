@@ -22,7 +22,7 @@ title: Mobile
 tools_software_languages_filter:
 - Arm Mobile Studio: 1
 - C++: 1
-- Java: 1
 - GCC: 1
+- Java: 1
 weight: 3
 ---

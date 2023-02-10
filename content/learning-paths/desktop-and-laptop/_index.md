@@ -11,27 +11,27 @@ key_ip_icons:
 maintopic: true
 operatingsystems_filter:
 - Linux: 5
-- Windows: 4
 - macOS: 2
+- Windows: 4
 subjects_filter:
-- Performance and Architecture: 2
 - CI-CD: 2
-- Migration to Arm: 1
 - Containers and Virtualization: 1
+- Migration to Arm: 1
+- Performance and Architecture: 2
 subtitle: Create and migrate apps for power efficient performance
 title: Desktop and Laptop
 tools_software_languages_filter:
+- Alacritty: 1
+- Azure: 1
+- C: 1
+- Docker: 1
+- GitHub: 1
+- i3: 1
+- NeoVim: 1
+- remote.it: 1
 - SSH: 2
 - VNC: 2
-- i3: 1
-- Alacritty: 1
-- NeoVim: 1
-- C: 1
-- yml: 1
-- GitHub: 1
-- Azure: 1
 - VS Code: 1
-- Docker: 1
-- remote.it: 1
+- yml: 1
 weight: 2
 ---
