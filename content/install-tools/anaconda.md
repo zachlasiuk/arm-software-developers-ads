@@ -1,26 +1,22 @@
 ---
-### Title the install tools article with the name of the tool to be installed
-### Include vendor name where appropriate
-title: Anaconda
-
-### Optional additional search terms (one per line) to assist in finding the article
 additional_search_terms:
-  - Python
-  - TensorFlow
-  - Pytorch
-
-### Estimated completion time in minutes (please use integer multiple of 5)
+- Python
+- TensorFlow
+- Pytorch
+layout: installtoolsall
 minutes_to_complete: 30
-
-### Link to official documentation
+multi_install: false
+multitool_install_part: false
 official_docs: https://docs.anaconda.com/
-
-### PAGE SETUP
-weight: 1                       # Defines page ordering. Must be 1 for first (or only) page.
-tool_install: true              # Set to true to be listed in main selection page, else false
-multi_install: false            # Set to true if first page of multi-page article, else false
-multitool_install_part: false   # Set to true if a sub-page of a multi-page article, else false
-layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
+test_images:
+- ubuntu:latest
+test_link: null
+test_maintenance: true
+test_status:
+- passed
+title: Anaconda
+tool_install: true
+weight: 1
 ---
 
 [Anaconda Distribution](https://www.anaconda.com/products/distribution) is a popular open-source Python distribution. 
@@ -35,7 +31,7 @@ Follow the instructions below to install and use Anaconda Distribution on an Arm
 
 Confirm you are using an Arm machine by running:
 
-```console
+```bash
 uname -m
 ```
 
@@ -47,49 +43,46 @@ aarch64
 
 The installer requires some desktop related libraries. The dependencies can be met by installing a desktop environment. 
 
-{{< tabpane code=true >}}
-  {{< tab header="Ubuntu/Debian" >}}
+For Ubuntu/Debian run the command:
+
+```bash
 sudo apt install xfce4 -y
-  {{< /tab >}}
-  {{< tab header="Amazon Linux" >}}
+```
+
+For Amazon Linux run the command:
+
+```console
 sudo amazon-linux-extras install mate-desktop1.x
-  {{< /tab >}}
-{{< /tabpane >}}
+```
 
 ## Download 
 
 Download the latest Anaconda Distribution.
 
-```console
+```bash
 wget -O - https://www.anaconda.com/distribution/ 2>/dev/null | sed -ne 's@.*\(https:\/\/repo\.anaconda\.com\/archive\/Anaconda3-.*-Linux-aarch64\.sh\)\">64-Bit (AWS Graviton2 / ARM64) Installer.*@\1@p' | xargs wget
 ```
 
-Depending on the latest version, the download will be of the form **Anaconda3-202X.0X-Linux-x86_64.sh** where the X values represent the year and month of the latest release.
+Depending on the latest version, the download will be of the form `Anaconda3-202X.0X-Linux-x86_64.sh` where the X values represent the year and month of the latest release.
 
 ## Installation {#install}
 
 Run the downloaded install script. It will review the license agreement and ask to accept the terms. 
 
-The default installation directory is $HOME/anconda3. Change the installation directory as needed.
+The default installation directory is `$HOME/anconda3`. Change the installation directory as needed using the `-p` option to the install script.
 
-```console
-sh ./Anaconda3-2022.05-Linux-aarch64.sh
+```bash
+sh ./Anaconda3-2022.10-Linux-aarch64.sh -b
 ```
 
 The install will take a couple of minutes to complete.
 
-Near the end of the installer, answer yes to the question below to add the Anaconda setup to .bashrc
+The batch installation will not setup the shell. 
 
-```console
-Do you wish the installer to initialize Anaconda3
-by running conda init? [yes|no]
-[no] >>> yes
-```
+To setup the shell run.
 
-To complete the installation source the .bashrc which was updated by the installer.
-
-```console
-. ~/.bashrc
+```bash
+eval "$($HOME/anaconda3/bin/conda shell.bash hook)"
 ```
 
 ## Setting up product license {#license}
@@ -122,22 +115,26 @@ The shell prompt will now show the tf environment.
 
 Run a simple check to make sure TensorFlow is working.
 
+Using a text editor copy and paste the code below into a text file named `tf.py`
+
 ```console
-python
+import tensorflow as tf
+print(tf.__version__)
+print(tf.reduce_sum(tf.random.normal([1000,1000])))
+exit()
 ```
 
-Enter the four commmands below shown at the right of the Python prompt, **\>\>\>**
+Run the example code:
 
 ```console
-Python 3.7.13 (default, Mar 28 2022, 12:46:38)
-[GCC 10.2.0] :: Anaconda, Inc. on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> import tensorflow as tf
->>> print(tf.__version__)
-2.9.1
->>> print(tf.reduce_sum(tf.random.normal([1000,1000])))
-tf.Tensor(-545.09094, shape=(), dtype=float32)
->>> exit()
+python ./tf.py
+```
+
+The expected output is below. Your version may be slightly different. 
+
+```console
+2.10.0
+tf.Tensor(342.34387, shape=(), dtype=float32)
 ```
 
 ### Pytorch
@@ -152,26 +149,31 @@ conda create -n torch pytorch -y
 conda activate torch
 ```
 
-Run a simple check to make sure TensorFlow is working.
-```console
-python
-```
-
-Enter the four commmands below shown at the right of the Python prompt, **\>\>\>**
+Using a text editor copy and paste the code below into a text file named `pytorch.py`
 
 ```console
-Python 3.10.4 (main, Mar 31 2022, 08:35:17) [GCC 10.2.0] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> import torch
->>> x = torch.rand(5,3)
->>> print(x)
-tensor([[0.1940, 0.9709, 0.6611],
-        [0.8440, 0.1421, 0.3442],
-        [0.7958, 0.6730, 0.1843],
-        [0.9762, 0.6765, 0.6456],
-        [0.6913, 0.4201, 0.4174]])
->>> exit()
+import torch
+x = torch.rand(5,3)
+print(x)
+exit()
 ```
+
+Run the example code:
+
+```console
+python ./pytorch.py
+```
+
+The expected output is:
+
+```console
+tensor([[0.9825, 0.4797, 0.0978],
+        [0.2175, 0.8025, 0.9663],
+        [0.6342, 0.5408, 0.4781],
+        [0.0655, 0.7505, 0.9290],
+        [0.7643, 0.6878, 0.0993]])
+```
+
 
 There are many machine learning articles and examples using TensorFlow and Pytorch on Arm servers.
 
