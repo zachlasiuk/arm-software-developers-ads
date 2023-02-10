@@ -1,4 +1,4 @@
-function searchByTitle(card,search_word_array) {
+function searchByTitle(card,search_word_array) {   
     // Title of learning path --> title must include ALL search terms (any order or case)
     let card_title = card.querySelector('.search-title').innerHTML.toLowerCase();
     var title_serach_match = search_word_array.every(item => card_title.includes(item));
@@ -43,6 +43,7 @@ function parseParamsFromURL(url_str) {
 
 
 function hideElements(all_path_cards,results_to_hide) {
+
     // Hide elements in array (and actively show all OTHER elements)
     for (let card of all_path_cards) {
         if (results_to_hide.includes(card)) { 
@@ -57,13 +58,18 @@ function hideElements(all_path_cards,results_to_hide) {
 }
 
 
-function updateShownNumber(card_type) {
-    // Update UI telling how many are displayed
-    let current_num = document.getElementById('currently-shown-number').innerHTML;
-    let total_num = document.getElementById('total-shown-number').innerHTML;
-    var hidden_paths = document.querySelectorAll('div.search-div[hidden]:not([hidden=""])');
+function updateShownNumber(prepend_id_string) {
+    // prepend_id_string helps handle when there are 2 or more of these components on the same screen; can route to the correct place.
+    if (prepend_id_string == null){     // if null or undefined, as with most situations (not openfilter)
+        prepend_id_string = ''
+    }
 
-    document.getElementById('currently-shown-number').innerHTML = parseInt(total_num) - hidden_paths.length;
+    // Update UI telling how many are displayed
+    let current_num = document.getElementById(prepend_id_string+'currently-shown-number').innerHTML;
+    let total_num = document.getElementById(prepend_id_string+'total-shown-number').innerHTML;
+    var hidden_paths = document.querySelectorAll('div.'+prepend_id_string+'search-div[hidden]:not([hidden=""])');
+
+    document.getElementById(prepend_id_string+'currently-shown-number').innerHTML = parseInt(total_num) - hidden_paths.length;
 }
 
 

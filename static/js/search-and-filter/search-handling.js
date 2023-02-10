@@ -23,6 +23,11 @@ function applySearchAndFilters(all_path_cards, search_string, page) {
                 }
             }
 
+            if (page=='openfilter') {
+                if (searchByTitle(card,search_word_array)) { 
+                    results_to_hide.push(card); // set card to be hidden
+                }
+            }
 
             // Tool-based search only
             if (page=='tools') {
@@ -34,7 +39,7 @@ function applySearchAndFilters(all_path_cards, search_string, page) {
 
         ////////////////////////////////////////////////////////////////
         // FILTER
-        if (page!='tools') { // page may be undefined, handel for that if coming from learning pahts area
+        if (page=='paths' | null) { // page may be undefined, handel for that if coming from learning pahts area
             if (filter_LearningPath_card(card)) { // if we get back non-null from function, the card should be hidden
                 results_to_hide.push(card); // set card to be hidden
             }
@@ -83,6 +88,26 @@ function searchHandler_Tools(search_string) {
 
     // Update UI telling how many are displayed
     updateShownNumber();
+}
+
+
+function searchHandler_OpenFilter(search_string) {
+    // HANDLE if coming from ads search box (event.value) or URL (string)
+    if (! (typeof search_string === 'string')) {
+        search_string = search_string.value;
+    }
+
+    const all_filter_boxes = document.querySelectorAll('div.openfilter-search-div'); 
+
+    // Apply search and filters to current parameters
+    results_to_hide = applySearchAndFilters(all_filter_boxes, search_string,'openfilter'); // apply active search & filter terms to the specified divs
+   
+    // Hide specified elements
+    hideElements(all_filter_boxes,results_to_hide);
+
+    // Update UI telling how many are displayed
+    updateShownNumber('openfilter-');
+    
 }
 
 

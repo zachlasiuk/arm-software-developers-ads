@@ -17,6 +17,11 @@ operatingsystems_filter:
 - Linux
 subjects_filter:
 - Performance and Architecture
+tools_software_languages_filter:
+- GCC
+- Arm Mobile Studio
+- C++
+- Java
 subtitle: Optimize Android apps and build faster games using cutting-edge Arm tech
 title: Mobile
 weight: 3

@@ -1,14 +1,52 @@
 {{ $counter := 0 }}
-{{ range .tags}}
+{{ range .tagnames}}
     {{$counter = add $counter 1}}
-    {{.}}
 {{end}}
+
+{{$group_name := .displayname | urlize}}
 
 <ads-expansion-panel is-default-expanded class="learning-path-filters u-padding-bottom-1">
     <span slot="toggle">{{.displayname}}</span>
     <div slot="content">
         <div class="u-flex u-flex-column">
-            <p>Use the search bar to search these numerous entries.</p>
+            <ads-search id="openfilter-search-box" class="u-margin-top-0 u-width-100%" has-search-button="" placeholder="Search"></ads-search>
+            <div id="openfilter-results-status-bar" class="u-margin-bottom-1/2">
+                Displaying&nbsp;
+                <span id="openfilter-currently-shown-number" class="u-text-bold"> {{$counter }} </span>
+                &nbsp;of&nbsp;
+                <span id="openfilter-total-shown-number" class="u-text-bold"> {{$counter }} </span>
+                &nbsp;filters.
+            </div>
+
+            {{- range $name := .tagnames -}}
+            <div class="openfilter-search-div">
+                <ads-checkbox class="is-small tag-{{$name | urlize}} group-{{$group_name}}" id="{{$name | urlize}}" name="{{$name}}" onclick="filterHandler_LearningPaths(this)">
+                    <div class="search-title">{{$name}}</div>
+                </ads-checkbox>
+            </div>
+            {{end}}
         </div>
     </div>
 </ads-expansion-panel>
+
+
+
+<script>
+    (() => {
+        ////////// Search 
+
+        // Assign inputChangeHandler to search box
+        const search_box = document.getElementById('openfilter-search-box');
+        search_box.inputChangeHandler = searchHandler_OpenFilter;
+
+        // Handle search term from URL
+        let url_str = window.location.search;
+        if (url_str.includes('search=')) {
+            let search_string = parseParamsFromURL(url_str);
+
+            // Call search handler to execute
+            search_box.setAttribute('search-value',search_string);
+            searchHandler_OpenFilter(search_string);
+        }
+    })();
+</script>

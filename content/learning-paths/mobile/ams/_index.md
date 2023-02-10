@@ -32,6 +32,11 @@ softwares:
 operatingsystems:
     - Android
 
+tools_software_languages:
+    - Arm Mobile Studio
+    - C++
+    - Java
+
 ### FIXED, DO NOT MODIFY
 # ================================================================================
 weight: 1                       # _index.md always has weight of 1 to order correctly

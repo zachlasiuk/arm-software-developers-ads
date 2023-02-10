@@ -176,7 +176,6 @@ function filterHandler_LearningPaths(element) {
                         break;
                     }
                 };
-                console.log(tag)
                removeFacet(tag);
             }
         });

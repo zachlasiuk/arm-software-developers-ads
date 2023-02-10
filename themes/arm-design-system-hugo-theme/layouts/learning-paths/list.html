@@ -24,15 +24,14 @@
     <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 320px; max-width: 320px;">
         <h3 class="u-margin-top-0">Filter</h3>
         <!-- Subjects, CLOSED SCHEMA -->
-        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Subjects" "routing" "subjects" "tagnames" .Params.subjects_filter)}}  
+        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Subject" "routing" "subjects" "tagnames" .Params.subjects_filter)}}  
         <!-- Operating Systems, CLOSED SCHEMA -->
-        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "OS" "routing" "operatingsystems" "tagnames" .Params.operatingsystems_filter)}} 
+        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Operating System" "routing" "operatingsystems" "tagnames" .Params.operatingsystems_filter)}} 
         <!-- Skill level, CLOSED SCHEMA -->
         {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Skill Level" "routing" "skilllevels" "tagnames" (slice "Introductory" "Advanced"))}}  
-        <!-- Software -->
-        {{ partial "filtering/open-expansion.html" (dict "context" . "displayname" "Software")}}
-        <!-- Tools -->
-        {{ partial "filtering/open-expansion.html" (dict "context" . "displayname" "Tools")}}
+        <!-- Tools Software Languages -->
+        {{ partial "filtering/open-expansion.html" (dict "context" . "displayname" "Tools, Software, and Languages" "routing" "tools_software_languages" "tagnames" .Params.tools_software_languages_filter)}}
+
     </div>
 
     <!-- Search & Results on Right -->
@@ -43,8 +42,7 @@
 
         <!-- Search (and filter for mobile)-->
         <div class="u-flex u-justify-content-between c-col c-col-12 u-flex u-position-relative u-width-100% lg:u-width-auto u-margin-bottom-0">
-            <ads-search id="search-box" class="u-margin-top-0 u-width-100%" has-search-button="" placeholder="Search by name">
-            </ads-search>
+            <ads-search id="search-box" class="u-margin-top-0 u-width-100%" has-search-button="" placeholder="Search by name"></ads-search>
             <div>
                 <ads-button id="filter-button" level="tertiary" class="lg:u-hide u-position-relative" type="button" size="default" onclick="mobileFilterClicked(this)">
                     <i class="fal fa-filter"></i>
