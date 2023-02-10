@@ -5,17 +5,21 @@ description: a developers guide
 
 minutes_to_complete: 45
 
-who_is_this_for: This is an introductory topic for software developers who want to use remote.it to access computers providing services such as SSH and VNC.
+who_is_this_for: This is an introductory topic for software developers who want to use Remote.It to establish private network connections between users and devices.  Devices can be on-premise, IoT, or cloud-hosted such as within Arm Virtual Hardware or within AWS.
+
+Remote.It removes the requirement for a global public IP address or port forwarding which is used by legacy VPN solutions.  Enabling connections to devices that cannot be supported by VPNs such as devices connecting over CGNAT 5G mobile or Starlink satellite networks.  Eliminating VPN hardware cost and license while removing time spent planning, maintaining, and debugging IP allow lists, IP addresses, subnet collisions, route tables, and VLAN  tags.
+
+By removing the use of public IP addresses, your devices remain invisible to the public and eliminate external attack surfaces from bots and malicious actors.
 
 learning_objectives:
-    - Install the target device software and create proxy connections
-    - Understand and install desktop, mobile, and CLI software packages
-    - Create peer to peer connections 
-    - Automate tasks with the command line interface (CLI)
+    - Install Remote.It on target devices (devices you would like to access remotely)
+    - Understand the different types of network connections (proxy vs. peer-to-peer)
+    - Access your Remote.It enabled devices from anywhere
 
 prerequisites:
-    - A Windows, macOS, or Linux desktop or laptop computer 
-    - A second computer running Linux and sharing services such as SSH and VNC
+    - A Windows, macOS, or Linux computer which you will use to configure your devices as well as connect to your remote devices.
+    - A device/computer to which you would like remote access. A device can be a Windows, Mac, or Linux computer including development kits such as Raspberry Pi. You will need a method to control this device before Remote.It is deployed which can be local access or access via another remote connectivity solution (Remote Desktop, VPN, etc.)
+
 
 author_primary: Jason Andrews
 
