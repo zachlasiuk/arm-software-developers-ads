@@ -12,36 +12,36 @@ key_ip_icons:
 - img/ip-icons/Arm_Cortex-R.png
 maintopic: true
 operatingsystems_filter:
-- Windows
-- Baremetal
-- Linux
-- macOS
+- Linux: 6
+- Baremetal: 3
+- Windows: 2
+- macOS: 1
 subjects_filter:
-- Performance and Architecture
-- Embedded Linux
-- Containers and Virtualization
-- CI-CD
+- Performance and Architecture: 4
+- Embedded Linux: 3
+- Containers and Virtualization: 2
+- CI-CD: 1
 subtitle: Build secure, connected, smart IoT devices
 title: Embedded
 tools_software_languages_filter:
-- Verilog
-- Xilinx Vivado
-- Xilinx Vitis
-- Arm Development Studio
-- Arm Compiler for Embedded
-- Arm Fast Models
-- DSTREAM
-- C
-- JavaScript
-- Arm Virtual Hardware
-- GitHub
-- Assembly
-- Docker
-- TensorFlow
-- Yocto Linux
-- QEMU
-- remote.it
-- SSH
-- VNC
+- C: 4
+- Arm Development Studio: 3
+- Arm Compiler for Embedded: 3
+- Arm Fast Models: 3
+- Docker: 3
+- Assembly: 2
+- Verilog: 1
+- Xilinx Vivado: 1
+- Xilinx Vitis: 1
+- DSTREAM: 1
+- JavaScript: 1
+- Arm Virtual Hardware: 1
+- GitHub: 1
+- TensorFlow: 1
+- Yocto Linux: 1
+- QEMU: 1
+- remote.it: 1
+- SSH: 1
+- VNC: 1
 weight: 4
 ---

@@ -25,12 +25,19 @@ def mdToMetadata(md_file_path):
 
 
 
+
+def byCount(element):
+    # return the only value in dict, which is the count
+    return element[next(iter(element))]
+    
 def updateFiltersInIndexMD(main_category):
     category_index_md_file = dir_relative_of_learning_paths+main_category+"/_index.md"
 
     # Read in _index.md of Category as yml
     metadata_dic = mdToMetadata(category_index_md_file)
 
+
+    '''
     # Define what to add
     updated_category_filters = {'subjects_filter': [], 'operatingsystems_filter': [], 'tools_software_languages_filter': []}
     
@@ -49,17 +56,41 @@ def updateFiltersInIndexMD(main_category):
     all_existing_TSLs = status_dic['tools_software_languages'][main_category]
     for tsl in all_existing_TSLs:
         updated_category_filters['tools_software_languages_filter'].append(tsl)       
-
-
     # Replace category filters in existing metadata
     metadata_dic['subjects_filter'] = updated_category_filters['subjects_filter']
     metadata_dic['operatingsystems_filter'] = updated_category_filters['operatingsystems_filter']
     metadata_dic['tools_software_languages_filter'] = updated_category_filters['tools_software_languages_filter']
+    '''
+
+    '''
+    subjects_filter:  
+        - ["CI-CD", 8]
+    '''
+
+    to_iterate = ['subjects','operatingsystems','tools_software_languages']
+    for filter_name in to_iterate:
+        all_existing_filters = status_dic[filter_name][main_category]
+        final_filter_with_counts = []
+        # Fill out options in filters
+        for f_option in all_existing_filters:
+            if 'allowed' in all_existing_filters[f_option]: 
+                if all_existing_filters[f_option]['allowed']:
+                    final_filter_with_counts.append({f_option:all_existing_filters[f_option]['count']})
+            else:
+                final_filter_with_counts.append({f_option:all_existing_filters[f_option]['count']})
+
+        # Order the filters by count, high to low (not working, don't know why.)
+        final_filter_with_counts.sort(reverse=True, key=byCount)
+            # code when it was a dict: #final_filter_with_counts =  dict(sorted(final_filter_with_counts.items(), key=lambda x:x[1][1], reverse=True))
+        
+        # Replace category filters in existing metadata, ordering at the same time
+        metadata_dic[filter_name+'_filter'] = final_filter_with_counts
+
 
     # re-write the _index.md file, including '---' in the front and back of it
     with open(category_index_md_file, "w") as f:
         f.write('---\n')
-        yaml.dump(metadata_dic, f)
+        yaml.dump(metadata_dic, f, sort_keys=False) # dump, keeping order that we specified (sort_keys=False)
         f.write('---\n')
 
     return True
@@ -207,9 +238,6 @@ def addToolsSoftwareLanguagesToStatusDict():
                 status_dic['tools_software_languages'][dir_main_category][tsl]['learning-path-titles'].append(learning_path_metadata['title'])   # add title to list
 
     return status_dic
-
-
-
 
 
 if __name__ == "__main__":

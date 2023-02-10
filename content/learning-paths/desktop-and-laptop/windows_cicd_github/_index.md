@@ -21,14 +21,13 @@ skilllevels: Introductory
 subjects: CI-CD
 armips:
     - Neoverse
-tools:
-    - GitHub
-    - Azure
-softwares:
-    - C
-    - yml
 operatingsystems:
     - Windows
+tools_software_languages:
+    - C
+    - yml
+    - GitHub
+    - Azure
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

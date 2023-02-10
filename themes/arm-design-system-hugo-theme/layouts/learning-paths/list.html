@@ -24,13 +24,13 @@
     <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 320px; max-width: 320px;">
         <h3 class="u-margin-top-0">Filter</h3>
         <!-- Subjects, CLOSED SCHEMA -->
-        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Subject" "routing" "subjects" "tagnames" .Params.subjects_filter)}}  
+        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Subject" "tagnames" .Params.subjects_filter)}}  
         <!-- Operating Systems, CLOSED SCHEMA -->
-        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Operating System" "routing" "operatingsystems" "tagnames" .Params.operatingsystems_filter)}} 
+        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Operating System" "tagnames" .Params.operatingsystems_filter)}} 
         <!-- Skill level, CLOSED SCHEMA -->
-        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Skill Level" "routing" "skilllevels" "tagnames" (slice "Introductory" "Advanced"))}}  
+        {{ partial "filtering/closed-expansion.html" (dict "context" . "displayname" "Skill Level" "tagnames" (slice "Introductory" "Advanced"))}}  
         <!-- Tools Software Languages -->
-        {{ partial "filtering/open-expansion.html" (dict "context" . "displayname" "Tools, Software, and Languages" "routing" "tools_software_languages" "tagnames" .Params.tools_software_languages_filter)}}
+        {{ partial "filtering/open-expansion.html" (dict "context" . "displayname" "Tools, Software, and Languages"  "tagnames" .Params.tools_software_languages_filter)}}
 
     </div>
 

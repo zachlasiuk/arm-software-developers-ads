@@ -13,16 +13,16 @@ key_ip_icons:
 - img/ip-icons/Arm_Mali_GPU.png
 maintopic: true
 operatingsystems_filter:
-- Android
-- Linux
+- Android: 3
+- Linux: 1
 subjects_filter:
-- Performance and Architecture
+- Performance and Architecture: 3
 subtitle: Optimize Android apps and build faster games using cutting-edge Arm tech
 title: Mobile
 tools_software_languages_filter:
-- Arm Mobile Studio
-- C++
-- Java
-- GCC
+- Arm Mobile Studio: 1
+- C++: 1
+- Java: 1
+- GCC: 1
 weight: 3
 ---
