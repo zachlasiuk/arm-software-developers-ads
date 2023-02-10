@@ -95,7 +95,7 @@
                                     <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >
                                         {{ if .Params.official_docs}}
                                             <!-- docs exist! -->
-                                            <a href="{{.Params.official_docs}}">{{.Params.official_docs}}</a>
+                                            <a href="{{.Params.official_docs}}">View Documentation {{ partial "general-formatting/external-link.html"}} </a>
                                         {{else}}
                                             <p style="font-style: italic;">-no documentation link-</p>
                                         {{end}}

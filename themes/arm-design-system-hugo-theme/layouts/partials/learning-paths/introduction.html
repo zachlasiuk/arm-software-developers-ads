@@ -65,7 +65,7 @@
                     <tr>
                         <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top; white-space: nowrap;">Arm IP:</td>
                         <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >
-                            {{ range .Params.armips }}<span><a href="https://developer.arm.com/Processors#q={{.}}" target="_blank" style="text-decoration: none;">{{.}}&nbsp;<i class="fa-light fa-external-link fa-2xs" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;&nbsp;</a></span>{{end}}    
+                            {{ range .Params.armips }}<span><a href="https://developer.arm.com/Processors#q={{.}}" target="_blank" style="text-decoration: none;">{{.}} {{ partial "general-formatting/external-link.html"}} &nbsp;&nbsp;&nbsp;&nbsp;</a></span>{{end}}    
                         </td>
                       </tr>
                     <tr>
@@ -84,15 +84,8 @@
                                     {{ . }}
                                 </ads-tag>
                             {{ end }}
-                            {{ range .Params.softwares }}
-                                <ads-tag    href='{{ "/" | relLangURL}}softwares/{{. | urlize}}'>
-                                    <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
-                                    <span class="fa-solid fa-tag"></span>
-                                    {{ . }}
-                                </ads-tag>
-                            {{ end }}
-                            {{ range .Params.tools }}
-                                <ads-tag    href='{{ "/" | relLangURL}}tools/{{. | urlize}}'>
+                            {{ range .Params.tools_software_languages }}
+                                <ads-tag    href='{{ "/" | relLangURL}}tools_software_languages/{{. | urlize}}'>
                                     <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
                                     <span class="fa-solid fa-tag"></span>
                                     {{ . }}

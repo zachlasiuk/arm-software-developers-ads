@@ -104,21 +104,17 @@
                                         tag-{{. | urlize}}
                                     {{end}}
                                 {{ end }}
-                                {{ with .Params.tools }}
-                                    {{ range .}}
-                                        tag-{{. | urlize}}
-                                    {{end}}
-                                {{ end }}
-                                {{ with .Params.softwares }}
-                                    {{ range .}}
-                                        tag-{{. | urlize}}
-                                    {{end}}
-                                {{ end }}
                                 {{ with .Params.operatingsystems }}
                                     {{ range .}}
                                         tag-{{. | urlize}}
                                     {{ end }}
-                                {{ end }}'>
+                                {{ end }}
+                                {{ with .Params.tools_software_languages }}
+                                    {{ range .}}
+                                        tag-{{. | urlize}}
+                                    {{end}}
+                                {{ end }}
+                                '>
 
                         {{if isset .Params "video_url"}}
 
