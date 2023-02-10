@@ -1,17 +1,29 @@
 ---
 ### Title the install tools article with the name of the tool to be installed
 ### Include vendor name where appropriate
-title: Arm IP Explorer
+title: Tool to be installed
 
 ### Optional additional search terms (one per line) to assist in finding the article
 additional_search_terms:
-- architect
+- search_term_1
+- search_term_2
+- add_as_many_as_needed
 
 ### Estimated completion time in minutes (please use integer multiple of 5)
-minutes_to_complete: 10
+minutes_to_complete: time
 
 ### Link to official documentation
-official_docs:
+official_docs: https://tool.website.com/docs
+
+### TEST SETTINGS (IF APPROPRIATE)
+test_images:
+- ubuntu:latest
+- fedora:latest
+test_link: https://your.test.com
+test_maintenance: true
+test_status:
+- passed
+- passed
 
 ### PAGE SETUP
 weight: 1                       # Defines page ordering. Must be 1 for first (or only) page.
@@ -20,20 +32,6 @@ multi_install: false            # Set to true if first page of multi-page articl
 multitool_install_part: false   # Set to true if a sub-page of a multi-page article, else false
 layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
-[Arm IP Explorer](https://ipexplorer.arm.com/) is a cloud-based tool used to accelerate IP selection and SoC design. 
+## Your content starts here
 
-An Arm account is required to access Arm IP Explorer. To create an Arm account, register [here](https://www.arm.com/register).
-
-## Installation
-
-Arm IP Explorer is a cloud based tool and does not require any local installtion.
-
-It can be accessed [here](https://ipexplorer.arm.com/) using any browser of your choice.
-
-## Licensing
-
-Arm IP Explorer does not require additional licenses to be setup for use. 
-
-## Getting started
-
-There are several [Tutorials](https://ipexplorer.arm.com/support) available to help you get started quickly with the Arm IP Explorer tool.
+Fill in as appropriate

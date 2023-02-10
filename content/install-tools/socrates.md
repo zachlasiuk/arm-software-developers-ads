@@ -1,8 +1,25 @@
 ---
-title: "Arm Socrates"
+### Title the install tools article with the name of the tool to be installed
+### Include vendor name where appropriate
+title: Arm Socrates
 
-tool_install: true              # DO NOT MODIFY. Always true for tool installs
-layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
+### Optional additional search terms (one per line) to assist in finding the article
+additional_search_terms:
+- arctitecture
+- soc_design
+
+### Estimated completion time in minutes (please use integer multiple of 5)
+minutes_to_complete: 30
+
+### Link to official documentation
+official_docs: https://developer.arm.com/documentation/101399
+
+### PAGE SETUP
+weight: 1                       # Defines page ordering. Must be 1 for first (or only) page.
+tool_install: true              # Set to true to be listed in main selection page, else false
+multi_install: false            # Set to true if first page of multi-page article, else false
+multitool_install_part: false   # Set to true if a sub-page of a multi-page article, else false
+layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
 [Arm Socrates](https://developer.arm.com/Tools%20and%20Software/Socrates) is a tool used to select, configure and create Arm IP for easy and error free integration into a System on Chip(SoC). 
 
@@ -41,8 +58,3 @@ They are available on the [Arm YouTube channel](https://www.youtube.com/c/arm):
  * [Getting Started](https://youtube.com/playlist?list=PLgyFKd2HIZlY_y7b5OTtyrso45q-eCM_s)
  * [NIC-400 Configuration](https://youtube.com/playlist?list=PLgyFKd2HIZlaQBfd8YEMwSQX_cWIxODgG)
  * [NI-700 Configuration](https://youtube.com/playlist?list=PLgyFKd2HIZlahIsHSSw7ViwiFxeBYc36b)
-
- # Documentation
-
- [Arm Socrates User Guide](https://developer.arm.com/documentation/101399)\
- [Arm Socrates Installation Guide](https://developer.arm.com/documentation/101400)

@@ -1,16 +1,28 @@
 ---
-title: "Arm Forge"
+### Title the install tools article with the name of the tool to be installed
+### Include vendor name where appropriate
+title: Arm Forge
 
+### Optional additional search terms (one per line) to assist in finding the article
 additional_search_terms:
   - forge
   - ddt
   - map
   - performance_reports
   - allinea_studio
-  
 
-tool_install: true              # DO NOT MODIFY. Always true for tool installs
-layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
+### Estimated completion time in minutes (please use integer multiple of 5)
+minutes_to_complete: 15
+
+### Link to official documentation
+official_docs: https://developer.arm.com/documentation/101136
+
+### PAGE SETUP
+weight: 1                       # Defines page ordering. Must be 1 for first (or only) page.
+tool_install: true              # Set to true to be listed in main selection page, else false
+multi_install: false            # Set to true if first page of multi-page article, else false
+multitool_install_part: false   # Set to true if a sub-page of a multi-page article, else false
+layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
 
 [Arm Forge](https://developer.arm.com/Tools%20and%20Software/Arm%20Forge) is a server and HPC development tool suite for C, C++, Fortran, and Python high performance code on Linux.
@@ -147,8 +159,4 @@ Without *Express Launch*:
 ```bash
 perf-report -n 128 myapp
 ```
-
 Two files `myapp_128p_<timestamp>.html` and `myapp_128p_<timestamp>.txt` will be created in the current directory.
-
-## Documentation
-[Arm Forge User Guide](https://developer.arm.com/documentation/101136)

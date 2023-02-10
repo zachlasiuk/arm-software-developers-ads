@@ -1,9 +1,24 @@
 ---
-title: "Docker for Windows on Arm"
-weight: 4 # (intro is 1), 2 is first, 3 is second, etc.
+### Title the install tools article with the name of the tool to be installed
+### Include vendor name where appropriate
+title: Docker for Windows on Arm
 
-multitool_install_part: true    # DO NOT MODIFY. Must be true for parts of multi-tools to ensure correct navigation
-layout: "installtoolsall"  # DO NOT MODIFY
+### Optional additional search terms (one per line) to assist in finding the article
+additional_search_terms:
+- containers
+- virtual machines
+
+### Estimated completion time in minutes (please use integer multiple of 5)
+minutes_to_complete: 30
+
+### Link to official documentation
+official_docs: 
+
+weight: 4                       # Defines page ordering. Must be 1 for first (or only) page.
+tool_install: false             # Set to true to be listed in main selection page, else false
+multi_install: false            # Set to true if first page of multi-page article, else false
+multitool_install_part: true    # Set to true if a sub-page of a multi-page article, else false
+layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
 
 ## Install Docker on Windows on Arm {#docker-woa}
@@ -88,4 +103,3 @@ For more examples and ideas, visit:
 There are numerous Linux distribution options from the Microsoft Store including [Ubuntu on Windows](https://apps.microsoft.com/store/detail/ubuntu-on-windows/9NBLGGH4MSV6?hl=en-us&gl=us).
 
 For more information about [installing WSL 2](https://docs.microsoft.com/en-us/windows/wsl/install)
-

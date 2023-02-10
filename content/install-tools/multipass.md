@@ -1,7 +1,24 @@
 ---
-title: Multipass 
-layout: installtoolsall
-tool_install: true
+### Title the install tools article with the name of the tool to be installed
+### Include vendor name where appropriate
+title: Multipass
+
+### Optional additional search terms (one per line) to assist in finding the article
+additional_search_terms:
+- cloud
+
+### Estimated completion time in minutes (please use integer multiple of 5)
+minutes_to_complete: 30
+
+### Link to official documentation
+official_docs: https://multipass.run/docs
+
+### PAGE SETUP
+weight: 1                       # Defines page ordering. Must be 1 for first (or only) page.
+tool_install: true              # Set to true to be listed in main selection page, else false
+multi_install: false            # Set to true if first page of multi-page article, else false
+multitool_install_part: false   # Set to true if a sub-page of a multi-page article, else false
+layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
 
 [Multipass](https://multipass.run/) provides cloud style virtual machines (VMs). Multipass is popular among developers for efficient, local testing. When run on macOS with Apple Silicon, Multipass provides a similar experience to cloud instances.
@@ -223,9 +240,3 @@ To completely delete use the `purge` command; all deleted instances are permanen
 ```console
 multipass purge 
 ```
-
-## Documentation
-
-Multipass is a useful companion to cloud instances and makes it easy to run Ubuntu Linux on macOS with Apple Silicon.
-
-Refer to the [Multipass documentation](https://multipass.run/docs) for more details about the commands introduced and to find new commands. 

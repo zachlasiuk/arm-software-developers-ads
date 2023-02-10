@@ -1,8 +1,20 @@
 ---
+### Title the install tools article with the name of the tool to be installed
+### Include vendor name where appropriate
+title: Arm Compiler for Linux
+
+### Optional additional search terms (one per line) to assist in finding the article
 additional_search_terms:
 - armclang
 - compiler
-layout: installtoolsall
+
+### Estimated completion time in minutes (please use integer multiple of 5)
+minutes_to_complete: 15
+
+### Link to official documentation
+official_docs: https://developer.arm.com/documentation/102621
+
+### TEST SETTINGS
 test_images:
 - ubuntu:latest
 - fedora:latest
@@ -11,8 +23,13 @@ test_maintenance: true
 test_status:
 - passed
 - passed
-title: Arm Compiler for Linux
-tool_install: true
+
+## PAGE SETUP
+weight: 1                       # Defines page ordering. Must be 1 for first (or only) page.
+tool_install: true              # Set to true to be listed in main selection page, else false
+multi_install: false            # Set to true if first page of multi-page article, else false
+multitool_install_part: false   # Set to true if a sub-page of a multi-page article, else false
+layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
 [Arm Compiler for Linux](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Linux) is a suite of tools containing Arm C/C++ Compiler (armclang), Arm Fortran Compiler (armflang), and Arm Performance Libraries (ArmPL). It is tailored to the development of High Performance Computing (HPC) applications.
 
@@ -199,7 +216,3 @@ The hello-world program will print the string specified in the print statement.
 ## Get started with Arm Performance Libraries
 
 To get started with the [Arm Performance Libraries](https://developer.arm.com/Tools%20and%20Software/Arm%20Performance%20Libraries) and learn how to select the optimal library for your system, follow the [Get started with Arm Performance Libraries](https://developer.arm.com/documentation/102574) guide.
-
-## Documentation
-
-[Install Arm Compiler for Linux](https://developer.arm.com/documentation/102621)

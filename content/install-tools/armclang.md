@@ -1,8 +1,20 @@
 ---
+### Title the install tools article with the name of the tool to be installed
+### Include vendor name where appropriate
+title: Arm Compiler for Embedded
+
+### Optional additional search terms (one per line) to assist in finding the article
 additional_search_terms:
 - armclang
 - compiler
-layout: installtoolsall
+
+### Estimated completion time in minutes (please use integer multiple of 5)
+minutes_to_complete: 15
+
+### Link to official documentation
+official_docs: https://developer.arm.com/documentation/100748
+
+### TEST SETTINGS
 test_images:
 - ubuntu:latest
 - fedora:latest
@@ -11,8 +23,13 @@ test_maintenance: true
 test_status:
 - passed
 - passed
-title: Arm Compiler for Embedded
-tool_install: true
+
+### PAGE SETUP
+weight: 1                       # Defines page ordering. Must be 1 for first (or only) page.
+tool_install: true              # Set to true to be listed in main selection page, else false
+multi_install: false            # Set to true if first page of multi-page article, else false
+multitool_install_part: false   # Set to true if a sub-page of a multi-page article, else false
+layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
 [Arm Compiler for Embedded](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Embedded) is a mature toolchain tailored to the development of bare-metal software, firmware, and Real-Time Operating System (RTOS) applications for Arm.
 
@@ -78,6 +95,8 @@ set path=(/home/$USER/ArmCompilerforEmbedded6.19/bin $path)
 {{< /tab >}}
 {{< /tabpane >}}
 
+See also: [What should I do if I want to download a legacy release of Arm Compiler?](https://developer.arm.com/documentation/ka005184)
+
 ## Integrate with Arm Development Studio {#armds}
 
 To integrate this compiler with Arm Development Studio, [register](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio/Register-a-compiler-toolchain) the installation before then [configuring](https://developer.arm.com/documentation/101469/latest/Installing-and-configuring-Arm-Development-Studio/Register-a-compiler-toolchain/Configure-a-compiler-toolchain-for-the-Arm-DS-command-prompt) the environment to use that version.
@@ -106,8 +125,3 @@ int main() {
 ```console
 armclang --target=aarch64-arm-none-eabi hello.c
 ```
-## Full documentation
-
-[Arm Compiler for Embedded User Guide](https://developer.arm.com/documentation/100748/latest/Getting-Started/Installing-Arm-Compiler-for-Embedded)
-
-[What should I do if I want to download a legacy release of Arm Compiler?](https://developer.arm.com/documentation/ka005184)

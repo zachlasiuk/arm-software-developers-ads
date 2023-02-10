@@ -1,24 +1,36 @@
 ---
-title: "Docker Desktop"
-weight: 3 # (intro is 1), 2 is first, 3 is second, etc.
+### Title the install tools article with the name of the tool to be installed
+### Include vendor name where appropriate
+title: Docker Desktop
 
-multitool_install_part: true    # DO NOT MODIFY. Must be true for parts of multi-tools to ensure correct navigation
-layout: "installtoolsall"  # DO NOT MODIFY
+### Optional additional search terms (one per line) to assist in finding the article
+additional_search_terms:
+- containers
+- virtual machines
+
+### Estimated completion time in minutes (please use integer multiple of 5)
+minutes_to_complete: 30
+
+### Link to official documentation
+official_docs: https://docs.docker.com/desktop/
+
+weight: 3                       # Defines page ordering. Must be 1 for first (or only) page.
+tool_install: false             # Set to true to be listed in main selection page, else false
+multi_install: false            # Set to true if first page of multi-page article, else false
+multitool_install_part: true    # Set to true if a sub-page of a multi-page article, else false
+layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
 ## Install and test Docker Desktop
 
 All of the download files are available on the 
 [Docker Desktop product page](https://www.docker.com/products/docker-desktop/).
 
-Use the links below for more information
-
-[Install Docker Desktop on Mac](https://docs.docker.com/desktop/install/mac-install) 
-
-[Install Docker Desktop on Apple Silicon](https://docs.docker.com/desktop/mac/apple-silicon/) 
-
-[Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/) 
-
-[Docker Desktop for Linux](https://docs.docker.com/desktop/install/linux-install/) 
+| Installation instructions |
+|-------|
+| [Windows](https://docs.docker.com/desktop/install/windows-install/) |
+| [Linux](https://docs.docker.com/desktop/install/linux-install/) |
+| [Mac OS](https://docs.docker.com/desktop/install/mac-install) |
+| [Apple Silicon](https://docs.docker.com/desktop/mac/apple-silicon/) |
 
 All of the Docker Desktop products use the x86_64 / amd64 architecture except macOS on Apple Silicon.
 
@@ -59,14 +71,10 @@ To identify the architecture for macOS use the uname command.
 ```console
 uname -m
 ```
-Apple Silicon will be reported as arm64
-
-
+Apple Silicon will be reported as `arm64`.
 
 Share images, automate workflows, and more with a free Docker ID:
  https://hub.docker.com/
 
 For more examples and ideas, visit:
  https://docs.docker.com/get-started/
-
-```

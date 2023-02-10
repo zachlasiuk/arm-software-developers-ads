@@ -1,9 +1,28 @@
 ---
-title: "Arm Virtual Hardware"
+### Title the install tools article with the name of the tool to be installed
+### Include vendor name where appropriate
+title: Arm Virtual Hardware
 
-tool_install: true              # DO NOT MODIFY. Always true for tool installs
-layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
+### Optional additional search terms (one per line) to assist in finding the article
+additional_search_terms:
+- CI/CD
+- virtual platforms
+- FVP
+
+### Estimated completion time in minutes (please use integer multiple of 5)
+minutes_to_complete: 15
+
+### Link to official documentation
+official_docs: https://arm-software.github.io/AVH/main/overview/html/index.html
+
+### PAGE SETUP
+weight: 1                       # Defines page ordering. Must be 1 for first (or only) page.
+tool_install: true              # Set to true to be listed in main selection page, else false
+multi_install: false            # Set to true if first page of multi-page article, else false
+multitool_install_part: false   # Set to true if a sub-page of a multi-page article, else false
+layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
+
 [Arm Virtual Hardware](https://avh.arm.com/) delivers test platforms for developers to verify and validate embedded and IoT applications during the complete software design cycle. Multiple modeling technologies are provided that remove the complexity of building and configuring board farms. This enables modern, agile, cloud native software development practices, such as continuous integration and continuous development CI/CD (DevOps) and MLOps workflows.
 
 There are currently two families of Arm Virtual Hardware. Click the link, or scroll down, for info on how to get started.
@@ -72,7 +91,3 @@ A number of [Example](https://arm-software.github.io/AVH/main/examples/html/inde
 A valid [Arm AVH account](https://www.arm.com/resources/contact-us/virtual-hardware-boards) is required.
 
 When you login to the [AVH Dashboard](https://app.avh.arm.com) you can create virtual devices based on a growing library of real boards from Arm partners. To get started, a selection of [Quickstart Guides](https://intercom.help/arm-avh/en/collections/3380338-getting-started#quickstart) are provided to launch the particular platforms with ready made example images.
-
-## Documentation
-
-[Arm Virtual Hardware](https://arm-software.github.io/AVH/main/overview/html/index.html)
