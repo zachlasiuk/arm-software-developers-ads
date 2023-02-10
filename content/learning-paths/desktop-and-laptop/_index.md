@@ -20,5 +20,14 @@ subjects_filter:
 - CI-CD
 subtitle: Create and migrate apps for power efficient performance
 title: Desktop and Laptop
+tools_software_languages_filter:
+- i3
+- Alacritty
+- NeoVim
+- SSH
+- VS Code
+- VNC
+- Docker
+- remote.it
 weight: 2
 ---

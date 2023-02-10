@@ -23,5 +23,25 @@ subjects_filter:
 - CI-CD
 subtitle: Build secure, connected, smart IoT devices
 title: Embedded
+tools_software_languages_filter:
+- Verilog
+- Xilinx Vivado
+- Xilinx Vitis
+- Arm Development Studio
+- Arm Compiler for Embedded
+- Arm Fast Models
+- DSTREAM
+- C
+- JavaScript
+- Arm Virtual Hardware
+- GitHub
+- Assembly
+- Docker
+- TensorFlow
+- Yocto Linux
+- QEMU
+- remote.it
+- SSH
+- VNC
 weight: 4
 ---

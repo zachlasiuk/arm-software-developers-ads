@@ -30,5 +30,46 @@ subjects_filter:
 - ML
 subtitle: Optimize cloud native apps on Arm for performance and cost
 title: Server and Cloud
+tools_software_languages_filter:
+- Terraform
+- Kubernetes
+- Azure
+- AWS EC2
+- Docker
+- Docker Compose
+- Go
+- Clair
+- AWS CodeBuild
+- x265
+- Geekbench 5
+- Kafka
+- Zookeeper
+- GCC
+- Memcached
+- Tensorflow
+- MongoDB
+- cbuild
+- Snort
+- C
+- Fortran
+- Python
+- Armclang
+- Arm Forge
+- gdb
+- Ansible
+- SQL
+- MySQL
+- InnoDB
+- Nginx
+- Pointer Authentication
+- PostgreSQL
+- ArmRAL
+- snappy
+- Assembly
+- Vectorscan
+- zlib
+- remote.it
+- SSH
+- VNC
 weight: 1
 ---
