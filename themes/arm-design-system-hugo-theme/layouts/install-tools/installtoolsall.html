@@ -59,9 +59,6 @@
                         <div class="c-col">
                             <table style="width: max-content;">
                                 <tr>
-                                  <th colspan="2" style="text-align:left; height: fit-content; padding: 0px; margin: 0px;"><h4>Relevant Context</h4></th>
-                                </tr>
-                                <tr>
                                   <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Reading time:</td>
                                   <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >
                                     <span><i class="fa-solid fa-clock fa-sm"></i></span> &nbsp; {{.Params.minutes_to_complete}} minutes
@@ -73,53 +70,44 @@
                                     <span><i class="fa-solid fa-calendar-days fa-sm"></i></span> &nbsp; {{ .Lastmod.UTC.Format "2 Jan 2006" }}
                                   </td>
                                 </tr>
-                                <tr>
-                                    <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Test status:</td>
-                                    <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;">
-                                        {{ if .Params.test_maintenance}}
+                                {{ if .Params.test_maintenance}}
+                                    <tr>
+                                        <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Test status:</td>
+                                        <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;">
                                             {{ partial "test-maintenance/test-maintenance" . }}
-                                        {{else}}
-                                            <p style="font-style: italic;">-no tests initalized-</p>
-                                        {{end}}
-                                    </td>
-                                  </tr>
-                              </table>                          
-                        </div>
-                        <div class="c-col">
-                            <table>
-                                <tr>
-                                  <th colspan="2" style="text-align:left; height: fit-content; padding: 0px; margin: 0px;"><h4>Find Related Content</h4></th>
-                                </tr>
-                                <tr>
-                                    <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top; white-space: nowrap;">Official docs:</td>
-                                    <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >
-                                        {{ if .Params.official_docs}}
+                                        </td>
+                                    </tr>
+                                {{end}}
+                                {{ if .Params.official_docs}}
+                                    <tr>
+                                        <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top; white-space: nowrap;">Official docs:</td>
+                                        <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >
                                             <!-- docs exist! -->
                                             <a href="{{.Params.official_docs}}">View Documentation {{ partial "general-formatting/external-link.html"}} </a>
-                                        {{else}}
-                                            <p style="font-style: italic;">-no documentation link-</p>
-                                        {{end}}
-                                    </td>
-                                  </tr>
-                                <tr>
-                                  <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Tags:</td>
-                                  <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >
-                                    <span>
-                                        <!-- provide tag ONLY if it is a valid tag -->
-                                        {{ $tool_tags := (.Site.GetPage "learning-paths/cross-platform").Params.tools_filter }}
-                                        {{ $urlized_tool_tags := apply $tool_tags "urlize" "." }}
-                                        {{ if in $urlized_tool_tags (.Title | urlize) }}
-                                            <!-- Clickable tag -->
-                                            <ads-tag    href='{{ "/" | relLangURL}}tools/{{.Title | urlize}}'>
-                                                <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
-                                                <span class="fa-solid fa-tag"></span>
-                                                {{.Title}}
-                                            </ads-tag>
-                                        {{end}}
-                                    </span>                             
-                                  </td>
-                                </tr>
-                              </table>   
+                                        </td>
+                                    </tr>
+                                {{end}}
+                                
+                                {{ $tool_tags := (.Site.GetPage "learning-paths/cross-platform").Params.tools_filter }}
+                                {{ $urlized_tool_tags := apply $tool_tags "urlize" "." }}
+                                {{ if in $urlized_tool_tags (.Title | urlize) }}
+                                    <tr>
+                                        <td  colspan="2" style="height: fit-content; padding: 0px; margin: 0px; padding-top: 16px;vertical-align:top;">View Learning Paths that use this tool:</td>
+                                    </tr>
+                                    <tr>
+                                        <td  colspan="2" style="height: fit-content; padding: 0px; margin: 0px;" >
+                                            <span>
+                                                    <!-- Clickable tag -->
+                                                    <ads-tag    href='{{ "/" | relLangURL}}tools/{{.Title | urlize}}'>
+                                                        <span class="u-flex u-flex-row u-align-items-center u-gap-1/2">
+                                                        <span class="fa-solid fa-tag"></span>
+                                                        {{.Title}}
+                                                    </ads-tag>
+                                            </span>                             
+                                        </td>
+                                    </tr>
+                                {{end}}
+                              </table>                          
                         </div>
                     </div>
                     <p style="margin-top: 24px; margin-left: 16px;">This guide is intended to get you up and running with this tool quickly with the most common settings. For a thorough review of all options, refer to the official documentation.</p>

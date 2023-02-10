@@ -27,9 +27,6 @@
                 
                 <table style="width: max-content;">
                     <tr>
-                      <th colspan="2" style="text-align:left; height: fit-content; padding: 0px; margin: 0px;"><h4>Relevant Context</h4></th>
-                    </tr>
-                    <tr>
                         <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Skill level:</td>
                         <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >{{.Params.skillLevels}}</td>
                       </tr>
@@ -45,23 +42,18 @@
                         <span><i class="fa-solid fa-calendar-days fa-sm"></i></span> &nbsp; {{ .Lastmod.UTC.Format "2 Jan 2006" }}
                       </td>
                     </tr>
+                    {{ if .Params.test_maintenance}}
                     <tr>
                         <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Test status:</td>
                         <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;">
-                            {{ if .Params.test_maintenance}}
-                                {{ partial "test-maintenance/test-maintenance" . }}
-                            {{else}}
-                                <p style="font-style: italic;">-no tests initalized-</p>
-                            {{end}}
+                            {{ partial "test-maintenance/test-maintenance" . }}
                         </td>
-                      </tr>
+                    </tr>
+                    {{end}}
                   </table>          
             </div>
             <div class="c-col">
                 <table>
-                    <tr>
-                      <th colspan="2" style="text-align:left; height: fit-content; padding: 0px; margin: 0px;"><h4>Find Related Content</h4></th>
-                    </tr>
                     <tr>
                         <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top; white-space: nowrap;">Arm IP:</td>
                         <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >
