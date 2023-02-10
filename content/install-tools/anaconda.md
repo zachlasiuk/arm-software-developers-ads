@@ -1,13 +1,26 @@
 ---
-title: "Anaconda"
+### Title the install tools article with the name of the tool to be installed
+### Include vendor name where appropriate
+title: Anaconda
 
+### Optional additional search terms (one per line) to assist in finding the article
 additional_search_terms:
   - Python
   - TensorFlow
   - Pytorch
 
-tool_install: true              # DO NOT MODIFY. Always true for tool installs
-layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
+### Estimated completion time in minutes (please use integer multiple of 5)
+minutes_to_complete: 30
+
+### Link to official documentation
+official_docs: https://docs.anaconda.com/
+
+### PAGE SETUP
+weight: 1                       # Defines page ordering. Must be 1 for first (or only) page.
+tool_install: true              # Set to true to be listed in main selection page, else false
+multi_install: false            # Set to true if first page of multi-page article, else false
+multitool_install_part: false   # Set to true if a sub-page of a multi-page article, else false
+layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
 
 [Anaconda Distribution](https://www.anaconda.com/products/distribution) is a popular open-source Python distribution. 

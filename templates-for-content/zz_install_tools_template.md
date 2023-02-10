@@ -15,21 +15,23 @@ minutes_to_complete: time
 ### Link to official documentation
 official_docs: https://tool.website.com/docs
 
-### TEST SETTINGS
+### TEST SETTINGS (IF APPROPRIATE)
 test_images:
 - ubuntu:latest
 - fedora:latest
-test_link: null
+test_link: https://your.test.com
 test_maintenance: true
 test_status:
 - passed
 - passed
 
-### DO NOT EDIT
-tool_install: true
-layout: installtoolsall
+## PAGE SETUP
+weight: 1                       # Defines page ordering. Must be 1 for first (or only) page.
+tool_install: true              # Set to true to be listed in main selection page, else false
+multi_install: false            # Set to true if first page of multi-page article, else false
+multitool_install_part: false   # Set to true if a sub-page of a multi-page article, else false
+layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
-## Content starts here
+## Your content starts here
 
 Fill in as appropriate
-

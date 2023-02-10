@@ -1,9 +1,24 @@
 ---
-title: "Docker Engine"
-weight: 2 # (intro is 1), 2 is first, 3 is second, etc.
+### Title the install tools article with the name of the tool to be installed
+### Include vendor name where appropriate
+title: Docker Engine
 
-multitool_install_part: true    # DO NOT MODIFY. Must be true for parts of multi-tools to ensure correct navigation
-layout: "installtoolsall"  # DO NOT MODIFY
+### Optional additional search terms (one per line) to assist in finding the article
+additional_search_terms:
+- containers
+- virtual machines
+
+### Estimated completion time in minutes (please use integer multiple of 5)
+minutes_to_complete: 30
+
+### Link to official documentation
+official_docs: https://docs.docker.com/engine/
+
+weight: 2                       # Defines page ordering. Must be 1 for first (or only) page.
+tool_install: false             # Set to true to be listed in main selection page, else false
+multi_install: false            # Set to true if first page of multi-page article, else false
+multitool_install_part: true    # Set to true if a sub-page of a multi-page article, else false
+layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
 
 ## Install Docker Engine on Linux

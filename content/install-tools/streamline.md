@@ -1,8 +1,24 @@
 ---
-title: "Arm Streamline"
+### Title the install tools article with the name of the tool to be installed
+### Include vendor name where appropriate
+title: Arm Streamline
 
-tool_install: true              # DO NOT MODIFY. Always true for tool installs
-layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
+### Optional additional search terms (one per line) to assist in finding the article
+additional_search_terms:
+- profiler
+
+### Estimated completion time in minutes (please use integer multiple of 5)
+minutes_to_complete: 10
+
+### Link to official documentation
+official_docs: https://developer.arm.com/documentation/101816
+
+### PAGE SETUP
+weight: 1                       # Defines page ordering. Must be 1 for first (or only) page.
+tool_install: true              # Set to true to be listed in main selection page, else false
+multi_install: false            # Set to true if first page of multi-page article, else false
+multitool_install_part: false   # Set to true if a sub-page of a multi-page article, else false
+layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
 [Arm Streamline Performance Analyzer](https://developer.arm.com/Tools%20and%20Software/Streamline%20Performance%20Analyzer) is an application profiler for Android, Linux and bare-metal applications.
 
@@ -50,7 +66,3 @@ Depending on your type of application, choose the appropriate guide below to get
 - [Profile your Android Application](https://developer.arm.com/documentation/101816/latest/Getting-started-with-Streamline/Profile-your-Android-application)
 - [Profile your Linux Application](https://developer.arm.com/documentation/101816/latest/Getting-started-with-Streamline/Profile-your-Linux-application)
 - [Profile your bare-metal Application](https://developer.arm.com/documentation/101816/latest/Getting-started-with-Streamline/Profile-your-bare-metal-application)
-
-## Documentation
-
-[Arm Streamline User Guide](https://developer.arm.com/documentation/101816)

@@ -1,11 +1,24 @@
 ---
-title: "VS Code Tunnels"
+### Title the install tools article with the name of the tool to be installed
+### Include vendor name where appropriate
+title: VS Code Tunnels
 
+### Optional additional search terms (one per line) to assist in finding the article
 additional_search_terms:
-  - ide
+- ide
 
-tool_install: true              # DO NOT MODIFY. Always true for tool installs
-layout: "installtoolsall"       # DO NOT MODIFY. Always true for the main page of tool installs
+### Estimated completion time in minutes (please use integer multiple of 5)
+minutes_to_complete: 15
+
+### Link to official documentation
+official_docs: https://code.visualstudio.com/docs/remote/vscode-server
+
+### PAGE SETUP
+weight: 1                       # Defines page ordering. Must be 1 for first (or only) page.
+tool_install: true              # Set to true to be listed in main selection page, else false
+multi_install: false            # Set to true if first page of multi-page article, else false
+multitool_install_part: false   # Set to true if a sub-page of a multi-page article, else false
+layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
 
 The Arm architecture is well supported by the popular [Visual Studio Code](https://code.visualstudio.com/) development tool. The [Download page](https://code.visualstudio.com/download) has binaries for all popular Arm architectures and operating systems. Desktop installation is straightforward and there are plenty of tutorials.
@@ -168,4 +181,5 @@ On both browser and desktop, click the lower left (which now shows the name of t
 
 ## Summary 
 
-VS Code tunnels and your GitHub account make it easy to connect to Arm machines running Linux for terminal access or to do development on a remote machine with VS Code. This is done without any open ports or SSH port forwarding. View the [VS Code documentation](https://code.visualstudio.com/docs/remote/vscode-server) for more details.
+VS Code tunnels and your GitHub account make it easy to connect to Arm machines running Linux for terminal access or to do development on a remote machine with VS Code. This is done without any open ports or SSH port forwarding.
+
