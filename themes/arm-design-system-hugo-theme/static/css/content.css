@@ -52,6 +52,7 @@ div.markdown-content-div > p.content-image-caption {
 
 div.markdown-content-div > ul,
 div.markdown-content-div > ol {
+    margin-top: 16px;
     margin-left: 32px;
     margin-bottom: 16px;
 }
@@ -105,6 +106,13 @@ table {
         font-size: var(--ads-font-size-large);
     }
 }
+
+/* Fix codeblock spacing in content when only direct decendent of paragraph (not including formatted code blocks, which are in a 'pre' element) (add space before and after, not done right) */
+p > code {
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
 
 
 

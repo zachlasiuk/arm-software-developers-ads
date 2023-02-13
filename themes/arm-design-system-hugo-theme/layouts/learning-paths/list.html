@@ -12,13 +12,6 @@
     {{end}}
 {{end}}
 
-
-<!-- <ads-alert animation="down" animationDelay=100></ads-alert> -->
-<ads-alert id="new-to-category-alert" has-close-button="false">
-    <a href="intro"><h6 class="basics-title">New to {{.Title}}? Click here to learn the basics.</h6></a>
-</ads-alert>
-
-
 <div class="c-row md:is-collapsed u-gap-1-1/2 u-flex-nowrap u-padding-top-2 u-padding-bottom-2-1/2">
     <!-- Filter bar on left -->
     <div class="c-col u-hide lg:u-display-block u-flex-shrink-0" style="width: 320px; max-width: 320px;">
@@ -39,6 +32,12 @@
 
         <!-- Dedicated area for top realestate content; hidden for now -->
         <!-- {{ partial "learning-paths/list-top-learning-paths.html" . }}  -->
+
+        <!-- <ads-alert animation="down" animationDelay=100></ads-alert> -->
+        <ads-alert id="new-to-category-alert" has-close-button="false">
+            <a href="intro"><h6 class="basics-title">New to {{.Title}}? Click here to learn the basics.</h6></a>
+        </ads-alert>
+
 
         <!-- Search (and filter for mobile)-->
         <div class="u-flex u-justify-content-between c-col c-col-12 u-flex u-position-relative u-width-100% lg:u-width-auto u-margin-bottom-0">
@@ -111,7 +110,7 @@
                                 {{ end }}
                                 {{ with .Params.tools_software_languages }}
                                     {{ range .}}
-                                        tag-{{. | urlize}}
+                                        tag-{{replace (. | urlize) "+" "plus"}}
                                     {{end}}
                                 {{ end }}
                                 '>

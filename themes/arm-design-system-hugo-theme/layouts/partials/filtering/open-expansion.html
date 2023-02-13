@@ -23,7 +23,8 @@
                     {{range $name, $count := $y}}
 
                         <div class="openfilter-search-div">
-                            <ads-checkbox class="is-small tag-{{$name | urlize}} group-{{$group_name}}" id="{{$name | urlize}}" name="{{$name}}" onclick="filterHandler_LearningPaths(this)">
+                            <!-- Make the ID safe; change + to 'plus' and urlize removing spaces & capitalizations-->
+                            <ads-checkbox class='is-small tag-{{replace ($name | urlize) "+" "plus"}} group-{{$group_name}}' id='{{replace ($name | urlize) "+" "plus"}}' name="{{$name}}" onclick="filterHandler_LearningPaths(this)">
                                 <div class="search-title">{{$name}}</div>
                             </ads-checkbox>
                         </div>

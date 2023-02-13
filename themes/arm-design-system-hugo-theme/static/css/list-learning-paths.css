@@ -1,4 +1,9 @@
 
+
+ads-alert {
+    margin-top: -32px;
+    z-index: 1; /* mandate lower z-index to enable filter button to grey out this alert as well; non essentaial */
+}
 html[theme="dark"]  ads-alert { 
     /*--ads-alert-background-color: var(--arm-color-overlay-dark);*/
     --ads-alert-background-color: var(--arm-color-surface);
@@ -10,6 +15,7 @@ html[theme="light"] ads-alert {
 }
 ads-alert a {
     color: var(--arm-blue); 
+    text-decoration: none;
 }
 
 /*------------------------------------------------------------

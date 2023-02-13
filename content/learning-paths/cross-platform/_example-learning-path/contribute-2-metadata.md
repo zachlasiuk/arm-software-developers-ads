@@ -79,33 +79,29 @@ Specifies the operating systems this Learning Path can run on. Select from this 
 | Baremetal     |
 
 
+### tools_software_languages (open)
+Specifies the tools, softwares, or languages this Learning Path uses. Please list out any key tools, software, or languages your learning path uses.
+
+| Tag Type     | Examples |
+|---------------|----------|
+| Environments  | AWS EC2, GCP                      |
+| Toolchains    | GCC, Arm Compiler for Embedded    |
+| IDEs          | Arm Development Studio, VS Code   |
+| Online Tools  | GitHub, Jenkins                   |
+| Assorted      | cbuild, Docker                    |
+| Stack         | tinyML, CMSIS             |
+| Language      | Python, Java, Assembly    |
+| Libraries     | zlib, snappy  |
+
+
 ### arm_ips (open)
-Specifies the Arm IP this Learning Path involves, providing a quick link to IP information for developers interested in learning more. You can enter multiple specific or groups of IP.
+Specifies the Arm IP this Learning Path involves, providing a quick link to IP information for developers interested in learning more. You can enter multiple specific or groups of IP. Note that this is not used for filtering content, but is clickable for readers to find more information about these IPs through seaching automatically on developer.arm.com.
 
 | Grouping Type | When to use | Examples |
 |--------------|-----|-----|
 | Specific IP | The Learning Path covers a specific board with one (or a few) Arm IP | Cortex-M4, Neoverse-N1, Mali-G57 |
 | Group of IP | The Learning Path applies to a wider class of Arm IP | Cortex-M, Cortex-A, Cortex-R, Neoverse, Mali |
 
-### tools (open)
-Specifies the tools this Learning Path uses.
-
-| Tool Type     | Examples |
-|---------------|----------|
-| Environments  | AWS EC2, GCP                      |
-| Toolchains    | GCC, Arm Compiler for Embedded    |
-| IDEs          | Arm Development Studio, VS Code   |
-| Online Tools  | GitHub, Jenkins                   |
-| Anything else | cbuild, Docker                    |
-
-### softwares (open)
-Specifies the software used in the Learning Path. 
-
-| Software Type | Examples |
-|---------------|----------|
-| Stack         | tinyML, CMSIS             |
-| Language      | Python, Java, Assembly    |
-| Libraries     | zlib, snappy  |
 
 
 ## Review Questions 

@@ -23,19 +23,16 @@
                 {{end}}
 
                 <!-- If Multi_install, create dynamic nav menu, content ordered by weight-->
+                <!-- REMOVED, not helpful 
                 {{if or (.Params.multi_install) (.Params.multitool_install_part)}}
                     {{ range .Site.Pages.ByWeight }}
                         {{ if (eq .File.Dir $thisdir)}}
-
                             {{ $toolfiles = $toolfiles | append . }}
-
-                            <!-- Call partial to fill out navigation tabs -->
                             {{partial "ads-cards/custom-content-navs.html" (dict "context" . "thisfile" $thisfile)  }}
-
                         {{ end }}
                     {{end}} 
                 {{end}}
-
+                -->
 
                 <!-- GitHub links to edit / log an issue -->
                 {{partial "github/github-links.html" .  }}
