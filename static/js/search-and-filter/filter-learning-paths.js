@@ -148,7 +148,19 @@ function addFacet(element) {
 
 
 
-
+function scrollToTopIfApplicable(element) {
+    // If OPEN expansion (has group tag) then scroll up to the top of the page softly
+    for (c of element.className.split(' ')) {
+        if (c == 'to-page-top') {
+            // soft scroll up to the top of the page
+            //document.body.scrollTop = 0; // For Safari
+            //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            window.scrollTo({top: 0, behavior: 'smooth'});
+            console.log(c)
+            break
+        }
+    }
+}
 
 
 function filterHandler_LearningPaths(element) {
@@ -157,12 +169,17 @@ function filterHandler_LearningPaths(element) {
                 Apply only updated filter to search results (show what isn't that matches & vice versa)
     */
         const all_path_cards = document.querySelectorAll('div.search-div');
+       
+
     
         // get status of checkbox (true for checked, false for unchecked)
         element.value().then((value) => {
             if (value === true) {
                 // add 'checked' value to html
                addFacet(element,all_path_cards);
+
+               // scroll to page top if applicable
+               scrollToTopIfApplicable(element);
             }
             else {
                 //?????????????????????????????????????????????????????????????????????????

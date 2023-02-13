@@ -24,7 +24,7 @@
 
                         <div class="openfilter-search-div">
                             <!-- Make the ID safe; change + to 'plus' and urlize removing spaces & capitalizations-->
-                            <ads-checkbox class='is-small tag-{{replace ($name | urlize) "+" "plus"}} group-{{$group_name}}' id='{{replace ($name | urlize) "+" "plus"}}' name="{{$name}}" onclick="filterHandler_LearningPaths(this)">
+                            <ads-checkbox class='is-small tag-{{replace ($name | urlize) "+" "plus"}} group-{{$group_name}} to-page-top' id='{{replace ($name | urlize) "+" "plus"}}' name="{{$name}}" onclick="filterHandler_LearningPaths(this)">
                                 <div class="search-title">{{$name}}</div>
                             </ads-checkbox>
                         </div>
