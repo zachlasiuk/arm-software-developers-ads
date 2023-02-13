@@ -52,44 +52,53 @@
                 <h2>About this Tool Install</h2>
                 <!-- First row of info-->
                 <div class="c-row">
-                    <div class="u-display-grid lg:u-grid-columns-2">
                         <div class="c-col">
-                            <table style="width: max-content;">
+                            <table style="table-layout: fixed">
                                 <tr>
-                                  <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Reading time:</td>
-                                  <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >
-                                    <span><i class="fa-solid fa-clock fa-sm"></i></span> &nbsp; {{.Params.minutes_to_complete}} minutes
+                                  <td style="height: fit-content; width: max-content; padding: 0px; margin: 0px; vertical-align:top;">Reading time:</td>
+                                  <td style="height: fit-content; width: fit-content; padding: 0px; margin: 0px; padding-left: 8px;" >
+                                    <span><i class="fa-solid fa-clock fa-sm"></i></span>&nbsp; {{.Params.minutes_to_complete}} minutes
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Last updated:</td>
-                                  <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;">                    
-                                    <span><i class="fa-solid fa-calendar-days fa-sm"></i></span> &nbsp; {{ .Lastmod.UTC.Format "2 Jan 2006" }}
+                                  <td style="height: fit-content; width: max-content; padding: 0px; margin: 0px; vertical-align:top;">Last updated:</td>
+                                  <td style="height: fit-content; width: fit-content; padding: 0px; margin: 0px; padding-left: 8px;">                    
+                                    <span><i class="fa-solid fa-calendar-days fa-sm"></i></span>&nbsp; {{ .Lastmod.UTC.Format "2 Jan 2006" }}
                                   </td>
                                 </tr>
-                                {{ if .Params.test_maintenance}}
-                                    <tr>
-                                        <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Test status:</td>
-                                        <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;">
-                                            {{ partial "test-maintenance/test-maintenance" . }}
-                                        </td>
-                                    </tr>
-                                {{end}}
                                 {{ if .Params.official_docs}}
                                     <tr>
-                                        <td style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top; white-space: nowrap;">Official docs:</td>
-                                        <td style="height: fit-content; padding: 0px; margin: 0px; padding-left: 16px;" >
+                                        <td style="height: fit-content; width: max-content; padding: 0px; margin: 0px; vertical-align:top; white-space: nowrap;">Official docs:</td>
+                                        <td style="height: fit-content; width: fit-content; padding: 0px; margin: 0px; padding-left: 8px;" >
                                             <!-- docs exist! -->
-                                            <a href="{{.Params.official_docs}}">View Documentation {{ partial "general-formatting/external-link.html"}} </a>
+                                            <a href="{{.Params.official_docs}}">View {{ partial "general-formatting/external-link.html"}} </a>
                                         </td>
                                     </tr>
                                 {{end}}
-                                
+                                {{ if .Params.test_maintenance}}
+                                    <!-- Desktop Row View -->
+                                        <tr class="u-hide md:u-display-table-row u-flex-shrink-0">
+                                            <td style="height: fit-content; width: max-content; padding: 0px; margin: 0px; vertical-align:top;">Test status:</td>
+                                            <td style="height: fit-content; width: fit-content; padding: 0px; margin: 0px; padding-left: 8px;">
+                                                {{ partial "test-maintenance/test-maintenance" . }}
+                                            </td>
+                                        </tr>
+                                    <!-- Mobile Row View -->
+                                        <tr class="md:u-hide u-display-table-row">
+                                            <td style="height: fit-content; width: max-content; padding: 0px; margin: 0px; vertical-align:top;">Test status:</td>
+                                        </tr>
+                                        <tr class="md:u-hide u-display-table-row">
+                                            <td style="height: fit-content; width: fit-content; padding: 0px; margin: 0px; padding-left: 8px;">
+                                                {{ partial "test-maintenance/test-maintenance" . }}
+                                            </td>
+                                        </tr>
+                                {{end}}
+                               
                                 {{ $tool_tags := (.Site.GetPage "learning-paths/cross-platform").Params.tools_filter }}
                                 {{ $urlized_tool_tags := apply $tool_tags "urlize" "." }}
                                 {{ if in $urlized_tool_tags (.Title | urlize) }}
                                     <tr>
-                                        <td  colspan="2" style="height: fit-content; padding: 0px; margin: 0px; padding-top: 16px;vertical-align:top;">View Learning Paths that use this tool:</td>
+                                        <td  colspan="2" style="height: fit-content; padding: 0px; margin: 0px; vertical-align:top;">Learning Paths using this tool:</td>
                                     </tr>
                                     <tr>
                                         <td  colspan="2" style="height: fit-content; padding: 0px; margin: 0px;" >
@@ -105,7 +114,6 @@
                                     </tr>
                                 {{end}}
                               </table>                          
-                        </div>
                     </div>
                     <p style="margin-top: 24px; margin-left: 16px;">This guide is intended to get you up and running with this tool quickly with the most common settings. For a thorough review of all options, refer to the official documentation.</p>
                 </div>            
