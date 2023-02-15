@@ -9,12 +9,16 @@ layout: "learningpathall"
 ---
 
 
-## Prerequisites
+## Before you begin
 
-* A [GCP account](https://console.cloud.google.com/)
-* [Terraform](https://github.com/zachlas/arm-software-developers-ads/blob/main/content/install-tools/terraform.md)
-* [Kubectl](https://kubernetes.io/docs/tasks/tools/)
-* A configured [gcloud SDK](https://cloud.google.com/sdk/docs/install-sdk)
+Any computer which has the required tools installed can be used for this section. 
+
+You will need a [Google Cloud account](https://console.cloud.google.com/). Create an account if needed. 
+
+Three tools are required on the computer you are using. Follow the links to install the required tools.
+* [Terraform](/install-tools/terraform)
+* [Kubectl](/install-tools/kubectl/)
+* [Google Cloud CLI](/install-tools/gcloud)
 
 ## Create a GKE cluster using Terraform
 

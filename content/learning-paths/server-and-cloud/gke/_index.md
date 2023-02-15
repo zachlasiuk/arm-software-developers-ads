@@ -1,20 +1,18 @@
 ---
-title: Create Arm based GKE cluster on GCP
+title: Create an Arm based Kubernetes cluster on Google Cloud
  
 description: Learn how to deploy Arm based GKE using terraform.
 
 minutes_to_complete: 60   
 
-who_is_this_for: Anyone who wants to deploy an Arm based GKE cluster 
+who_is_this_for: This is an introductory topic for software developers who want to deploy an Arm based Kubernetes cluster using Google Kubernetes Engine (GKE).
 
 learning_objectives:
-    - Automate Arm GKE cluster creation using Terraform
+    - Automate the deployment of an Arm GKE cluster using Terraform
 
 prerequisites:
-    - Google Cloud account
-    - Terraform
-    - gcloud SDK
-    - kubectl
+    - A Google Cloud account
+    - A computer with the following tools installed`:` Terraform, Google Cloud CLI (gcloud), Kubernetes CLI (kubectl)
 
 author_primary: Jason Andrews
 
@@ -25,11 +23,13 @@ subjects: Containers and Virtualization
 armips:
     - Neoverse
 
-
 tools:
     - Terraform
+    - Kubernetes
 
 softwares:
+    - kubectl
+    - gcloud
 
 operatingsystems:
     - Linux
