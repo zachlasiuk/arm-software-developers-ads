@@ -1,5 +1,10 @@
 # Arm Learning Paths 
 
+## NEW REPOSITORY LOCATION
+PLEASE NOTE THIS REPOSITORY HAS MOVED to the official location https://github.com/ArmDeveloperEcosystem/arm-learning-paths
+
+For any new contributions, please refer to the new location.
+
 THIS IS A PROOF OF CONCEPT PROJECT, the repository location and URL are temporary. 
 
 This repository contains the source files for the [Arm Learning Paths static website](https://www.armswdev.tk/), serving learning-based technical content for Arm software developers. 
