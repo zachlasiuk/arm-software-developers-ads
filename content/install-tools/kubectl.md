@@ -1,37 +1,25 @@
 ---
-### Title the install tools article with the name of the tool to be installed
-### Include vendor name where appropriate
-title: Kubectl
-
-### Optional additional search terms (one per line) to assist in finding the article
 additional_search_terms:
 - Kubernetes
-
-### Estimated completion time in minutes (please use integer multiple of 5)
+layout: installtoolsall
 minutes_to_complete: 30
-
-### Link to official documentation
+multi_install: false
+multitool_install_part: false
 official_docs: https://kubernetes.io/docs/reference/kubectl
-
-### TEST SETTINGS
 test_images:
 - ubuntu:latest
-test_link: https://github.com/armflorentlebeau/arm-software-developers-ads/actions/runs/3540052189
+test_link: null
 test_maintenance: true
 test_status:
 - passed
-
-### PAGE SETUP
-weight: 1                       # Defines page ordering. Must be 1 for first (or only) page.
-tool_install: true              # Set to true to be listed in main selection page, else false
-multi_install: false            # Set to true if first page of multi-page article, else false
-multitool_install_part: false   # Set to true if a sub-page of a multi-page article, else false
-layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
+title: Kubectl
+tool_install: true
+weight: 1
 ---
 
-Kubectl is the [Kubernetes](https://kubernetes.io/) command-line tool. 
+The Kubernetes command-line tool, [kubectl](https://kubernetes.io/docs/reference/kubectl/kubectl/), allows you to run commands against Kubernetes clusters.
 
-It is available for Linux, macOS, and Windows.
+`kubectl` is available for Windows, macOS, Linux and supports the Arm architecture.
 
 ## Introduction
 
@@ -62,10 +50,16 @@ Download and install the latest version of `kubctl`. There is just 1 executable 
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/arm64/kubectl"
 ```
 
-Install the executable in a common location for all users. 
+If you have sudo or root access, install the executable in a common location for all users. 
 
 ```bash { target="ubuntu:latest" }
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+```
+If you do not have sudo or root permission, add executble permission and add the location to the `$PATH` environment variable.
+
+```console
+chmod +x kubectl
+export PATH=$PATH:$HOME
 ```
 
 Confirm the executable is available and get the version of the client:
