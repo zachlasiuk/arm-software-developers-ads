@@ -6,7 +6,7 @@ weight: 4
 
 ## Install CLI
 
-You can use the remote.it CLI application to create connections without the Desktop software installation. This is useful when the initiator computer doesn’t have a desktop or automated scripting is needed. Visit the [download page](https://link.remote.it/download/cli) and install a CLI binary for the initiator device you are using. If you installed the Desktop software the CLI binary is already included.
+You can use the Remote.It CLI application to create connections without the Desktop software installation. This is useful when the initiator computer doesn’t have a desktop or automated scripting is needed. Visit the [download page](https://link.remote.it/download/cli) and install a CLI binary for the initiator device you are using. If you installed the Desktop software the CLI binary is already included.
 
 The CLI downloads are single binary applications and ready to run.
 

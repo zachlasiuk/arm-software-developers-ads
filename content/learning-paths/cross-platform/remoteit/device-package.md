@@ -38,7 +38,7 @@ If you use a key pair for security and not a password, you can modify your ssh c
 
 ## Install Remote.It during creation of a new AWS EC2 instance
 
-For a new virtual machines from cloud service providers, the previous instructions would require you to open port 22 for SSH, setup remote.it, and then close port 22. Although this works, there is a way to automatically install remote.it during virtual machine initialization. This example covers AWS.
+For a new virtual machines from cloud service providers, the previous instructions would require you to open port 22 for SSH, setup Remote.It, and then close port 22. Although this works, there is a way to automatically install Remote.It during virtual machine initialization. This example covers AWS.
 
 In AWS, customizing a new virtual machine is done using **user data**. Other cloud service providers have similar ways to run commands during the initial machine setup.
 

@@ -1,26 +1,25 @@
 ---
-title: Access remote computers with remote.it
+title: Access remote computers with Remote.It
 
 description: a developers guide
 
 minutes_to_complete: 45
 
-who_is_this_for: This is an introductory topic for software developers who want to use Remote.It to establish private network connections between users and devices or devices to device.  Devices can be on-premise, IoT, or cloud-hosted such as within Arm Virtual Hardware or within AWS.
+who_is_this_for: "This is an introductory topic for software developers who want to use Remote.It to establish private network connections between users and devices or devices to device.  Devices can be on-premise, IoT, or cloud-hosted such as within Arm Virtual Hardware or within AWS.
 
 Remote.It removes the requirement for a global public IP address or port forwarding which is used by legacy VPN solutions.  Enabling connections to devices that cannot be supported by VPNs such as devices connecting over CGNAT 5G mobile or Starlink satellite networks.  Eliminating VPN hardware cost and license while removing time spent planning, maintaining, and debugging IP allow lists, IP addresses, subnet collisions, route tables, and VLAN  tags.
 
-By removing the use of public IP addresses, your devices remain invisible to the public and eliminate external attack surfaces from bots and malicious actors.
+By removing the use of public IP addresses, your devices remain invisible to the public and eliminate external attack surfaces from bots and malicious actors."
 
 learning_objectives:
     - Install Remote.It on target devices (devices you would like to access remotely)
     - Access your Remote.It enabled devices from anywhere
-    - Understand the different types of network connections (proxy vs. peer-to-peer)
+    - Understand the different types of network connections (proxy vs. Peer to peer)
 
 prerequisites:
     - A Windows, macOS, or Linux computer which you will use to configure your devices as well as connect to your remote devices.
     - A device/computer to which you would like remote access. A device can be a Windows, Mac, or Linux computer including development kits such as Raspberry Pi or cloud-hosted such as within Arm Virtual Hardware or within AWS. You will need a method to control this device before Remote.It is deployed which can be local access or access via another remote connectivity solution (Remote Desktop, VPN, etc.)
     - Determine if your device that you would like to access remotely also needs to make connections to other Remote.It devices.
-
 
 author_primary: Jason Andrews
 
