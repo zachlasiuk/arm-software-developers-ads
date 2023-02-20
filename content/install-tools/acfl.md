@@ -24,7 +24,7 @@ test_status:
 - passed
 - passed
 
-## PAGE SETUP
+### PAGE SETUP
 weight: 1                       # Defines page ordering. Must be 1 for first (or only) page.
 tool_install: true              # Set to true to be listed in main selection page, else false
 multi_install: false            # Set to true if first page of multi-page article, else false
